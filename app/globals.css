@@ -1,107 +1,2973 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+/* 
+  Primary site-wide color:  
+  border: 0.1rem solid #d1d5db;
+  border-radius: 0.5rem;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+ */
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+ * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  /* font-size: 62.5%; */
+  font-size: 62.5%;
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  line-height: 2.6rem;
+  color: #000;
+  font-family: 'Nunito Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100, 'YTLC' 500;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* body * {
+  border: 1px solid orange;
+} */
+/* ----------------------- Style for all Images Parent Div------------ */
+/* ----------------------- Style for all Images Parent Div------------ */
+/* ----------------------- Style for all Images Parent Div------------ */
+/* ----------------------- Style for all Images Parent Div------------ */
+/* ----------------------- Style for all Images Parent Div------------ */
+
+.basic-information-images {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-a {
-  color: inherit;
+.first-entity-map-pages-comparison,
+.first-entity-flag-pages-comparison,
+.second-entity-map-pages-comparison,
+.second-entity-flag-pages-comparison,
+.right-indicator,
+.left-indicator,
+.first-entity-flag-population-comparison,
+.first-entity-map-population-comparison,
+.second-entity-map-population-comparison,
+.second-entity-flag-population-comparison {
+  width: 8rem;
+  height: 5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.three-tabs-links-image {
+  width: 3.5rem;
+  height: 3.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.continent-map,
+.individual-country-emblem-image,
+.individual-country-flag-image,
+.individual-country-globe-image,
+.individual-country-map-image {
+  width: 50rem;
+  height: 50rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.age-distribution-images,
+.country-flag,
+.country-map {
+  width: 6rem;
+  height: 6rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual-country-first-entity-map,
+.individual-country-second-entity-map {
+  width: 8rem;
+  height: 6rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.individual-country-first-entity-map img,
+.individual-country-second-entity-map img {
+  width: 6rem;
+  height: 6rem;
+  margin: auto auto;
+}
+
+.logo {
+  width: 30rem;
+  height: 5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-second {
+  width: 30rem;
+  height: 15rem;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-entity-map-compare-section,
+.second-entity-map-compare-section {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ads-header-banner,
+.all-ads-formats,
+.in-content-banner-ads {
+  width: 90rem;
+  height: 18rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  width: 50rem;
+  height: 8.33rem;
+  position: relative;
+  margin: auto auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.nav-menus ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5rem;
+}
+
+.nav-menus ul li {
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.next-link-header {
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.next-link-header:hover {
+  text-decoration: underline;
+}
+.next-link-footer {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.hero-section-index-page {
+  margin: 7rem auto 0 auto;
+  padding: 3rem 0 0 0;
+
+  text-align: center;
+}
+
+.hero-section-index-page h1 {
+  font-size: 4.4rem;
+  padding: 0 3rem 7rem 3rem;
+  line-height: 2.6rem;
+}
+
+.hero-section-index-page p {
+  max-width: 60%;
+  margin: 1rem auto 4rem auto;
+  padding: 1rem 2rem;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+
+.comparedoo-compare-main {
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  padding: 4rem 0 1rem 0;
+}
+
+.compare-first-entity,
+.compare-third-entity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-direction: column;
+}
+
+.first-entity-name {
+  width: 30rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.second-entity-name {
+  width: 30rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.down-arrow {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.down-arrow svg {
+  fill: #9d9c9c;
+  transition: 0.1s all;
+
+  line-height: 2.5rem;
+}
+
+.down-arrow svg:hover {
+  fill: #6d6c6c;
+}
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 40rem;
+  background-color: #fff;
+}
+
+.dropdown-toggle {
+  padding: 2rem 1rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  cursor: pointer;
+
+  width: 100%;
+  border: 0.1rem solid #999ca0;
+  border-radius: 0.5rem;
+}
+
+.dropdown-toggle:hover {
+  border: 0.1rem solid #6d6c6c;
+}
+
+.dropdown-toggle::placeholder {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 100%;
+  z-index: 1;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-item:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.popular-comparisons-heading-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular-comparisons-heading-title h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 8rem;
+  padding: 2rem 0;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+/* ................................................. Pages.html code starts here ................... */
+/* ................................................. Pages.html code starts here ................... */
+/* ................................................. Pages.html code starts here ................... */
+/* ................................................. Pages.html code starts here ................... */
+/* ................................................. Pages.html code starts here ................... */
+/* ................................................. Pages.html code starts here ................... */
+/* ................................................. Pages.html code starts here ................... */
+/* ................................................. Pages.html code starts here ................... */
+/* ................................................. Pages.html code starts here ................... */
+/* ................................................. Pages.html code starts here ................... */
+
+.meta-title-primary-heading h1 {
+  width: 80%;
+  margin: auto auto;
+  font-size: 5rem;
+  text-align: center;
+  padding: 6rem 5rem 5rem 5rem;
+  line-height: 6rem;
+}
+
+.published {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.updated {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.comparedoo-compare-main-for-pages {
+  padding: 10rem 0 6rem 0;
+
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+}
+
+.popular-comparison-heading-title,
+.geographical-map,
+.pictorial-representation,
+.size-comparison,
+.time-differences-comparison,
+.population-comparison,
+.age-distribution-of-population-comparison,
+.health-factors,
+.geographical-factors,
+.weather-comparison,
+.environmental-factors-comparison,
+.national-symbols-comparison,
+.economic-factors-comparison,
+.geographical-map-continents-pages,
+.countries-list-continents-pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pages-h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 8rem 0;
+  padding: 2rem 0;
+  text-align: center;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.size-comparison h2,
+.population-comparison h2 {
+  margin: 4rem 0 1rem 0;
+}
+
+.map-section {
+  width: 90rem;
+  height: 50rem;
+  margin: auto auto;
+
+  background-color: #008000;
+}
+
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+/* ........................ Reused Codes Here, Mainly for all Tables................. */
+
+.three-tabs-links {
+  width: 85%;
+  margin: auto auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: space-evenly;
+  gap: 2rem;
+  font-size: 2.4rem;
+  margin-top: 6rem;
+}
+
+.three-tabs-links-image img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.three-tabs-links-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 2rem 2rem;
+}
+
+.three-tabs-links-flex:hover {
+  box-shadow: inset 0px 0px 0px 0.09rem #cf711f;
+  transition: ease-in-out 0.3s;
+
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.three-tabs-links-text {
+  color: blue;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.active-link {
+  box-shadow: inset 0px 0px 0px 0.15rem #cf711f;
+
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.active-link:hover {
+  box-shadow: inset 0px 0px 0px 0.15rem #cf711f;
+
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.basic-information-comparison-div1,
+.size-factors-comparison-div1,
+.geographical-factors-comparison-div1,
+.geographical-factors-comparison-div2,
+.time-factors-comparison,
+.environment-factors-comparison,
+.national-symbols-factors-comparison,
+.weather-factors-comparison,
+.age-distribution-of-population,
+.health-factors-comparison-div1,
+.health-factors-comparison-div2,
+.health-factors-comparison-div3,
+.economic-factors-comparison-div1,
+.economic-factors-comparison-div2,
+.government-expenditure-factors-comparison-div1,
+.business-registration-comparison-div1,
+.import-export-factors-comparison-div1,
+.import-export-factors-comparison-div2,
+.tax-factors-comparison-div1 {
+  background-color: #f7f7f7;
+
+  width: 95%;
+  overflow-x: auto;
+  margin: 1rem auto 3rem auto;
+
+  padding: 4rem 2rem;
+}
+
+.indicators-first-entity-and-second-entity-div1,
+.indicators-first-entity-and-second-entity-div2 {
+  width: 95%;
+
+  min-width: 900px;
+  margin: auto auto;
+  table-layout: fixed;
+
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: white;
+
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-collapse: collapse;
+}
+
+.indicators-single-country-divs {
+  width: 80%;
+
+  min-width: 900px;
+  margin: auto auto;
+  table-layout: fixed;
+
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: white;
+
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-collapse: collapse;
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 2rem;
+}
+
+tr:first-child th:last-child {
+  border-top-right-radius: 2rem;
+}
+
+.indicators-first-entity-and-second-entity-div1 td,
+.indicators-first-entity-and-second-entity-div2 td,
+.indicators-single-country-divs td {
+  box-shadow: 0px 0px 0px 0.04rem #ccc inset;
+
+  padding: 1rem 1rem;
+  height: 8rem;
+  /* height: auto; */
+}
+td.narrow-table-row {
+  height: 2rem;
+}
+
+td.four-rem-height-td {
+  height: 2rem;
+}
+
+.basic-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.basic-info-knowledgebase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basic-information-images img {
+  width: 5rem !important;
+  height: 5rem;
+
+  display: block;
+}
+
+.indicators-first-entity-and-second-entity-div1 tr:hover,
+.indicators-first-entity-and-second-entity-div2 tr:hover,
+.indicators-single-country-divs tr:hover {
+  background-color: #eee;
+}
+
+.indicators-first-entity-and-second-entity-div1 th:first-child,
+.indicators-first-entity-and-second-entity-div1 th:nth-child(2),
+.indicators-first-entity-and-second-entity-div2 th:first-child,
+.indicators-first-entity-and-second-entity-div2 th:nth-child(2),
+.indicators-single-country-divs th:first-child {
+  border-right: 0.1rem solid #ccc;
+}
+
+.all-indicators {
+  font-weight: 600;
+  width: 60%;
+}
+
+.all-indicators-knowledgebase {
+  font-weight: 600;
+  width: 60%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amount-in-dollar {
+  font-size: 1.4rem;
+}
+
+.indicators-first-entity-and-second-entity-div1 th,
+.indicators-first-entity-and-second-entity-div2 th,
+.indicators-single-country-divs th {
+  background-color: #008000;
+
+  font-size: 2rem;
+  padding: 2rem 2rem;
+  /* flex: 1; */
+}
+
+.horizontal-line {
+  height: 0.1rem;
+  width: 100%;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+.heading-map-name-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  color: black;
+  padding: 0.5rem 1rem;
+}
+
+.first-entity-name-pages-comparison,
+.second-entity-name-pages-comparison,
+.indicator-text {
+  width: 100%;
+  color: #004aad;
+}
+
+.first-entity-map-pages-comparison img,
+.second-entity-map-pages-comparison img,
+.right-indicator img,
+.left-indicator img {
+  width: 5rem !important;
+  height: 5rem;
+  margin: auto auto;
+}
+
+.first-entity-flag-pages-comparison img,
+.second-entity-flag-pages-comparison img {
+  width: 5rem !important;
+  height: 3.28rem;
+  margin: auto auto;
+}
+
+.indicators-first-entity-and-second-entity-div1 tr:last-child,
+.indicators-first-entity-and-second-entity-div2 tr:last-child,
+.indicators-single-country-divs tr:last-child {
+  border-bottom: 0.2rem solid #008000;
+}
+
+.first-paragraph-of-the-page,
+.last-paragraph-of-the-page,
+.paragraph-for-pages-below-table {
+  width: 95%;
+  margin: 3rem auto;
+  background-color: #f7f7f7;
+  padding: 4rem 1rem;
+}
+
+.first-para-single-div,
+.last-para-single-div,
+.para-for-pages-single-div {
+  width: 70%;
+  background-color: #fff;
+  padding: 3rem 3rem;
+  margin: auto auto;
+  font-size: 2.2rem;
+  line-height: 4rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.para-for-pages-single-div h3 {
+  padding-bottom: 3rem;
+}
+
+.antarctica-paragraph-of-the-page {
+  width: 95%;
+  margin: 3rem auto;
+  background-color: #f7f7f7;
+  padding: 4rem 1rem;
+}
+
+.antarctica-para-single-div {
+  width: 80%;
+  background-color: #fff;
+  padding: 3rem 3rem;
+  margin: 3rem auto;
+  font-size: 2.2rem;
+  line-height: 4rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.age-teenage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.age-distribution-images img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.emailAddress {
+  background-color: greenyellow;
+  color: black;
+  padding: 0rem 1.3rem;
+}
+
+/* ...................................... Pictorial Representation ........................ */
+/* ...................................... Pictorial Representation ........................ */
+/* ...................................... Pictorial Representation ........................ */
+/* ...................................... Pictorial Representation ........................ */
+/* ...................................... Pictorial Representation ........................ */
+/* ...................................... Pictorial Representation ........................ */
+/* ...................................... Pictorial Representation ........................ */
+
+.maps-flags-emblem {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 2.4rem;
+  background-color: #f7f7f7;
+
+  margin: auto;
+  padding: 6rem 0;
+}
+
+.globe-globe-text,
+.map-map-text,
+.flag-flag-text,
+.coat-arms-coat-arms-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.globe-text,
+.map-text,
+.flag-text,
+.emblem-text {
+  border-bottom: 0.1rem solid black;
+  border-top: 0.1rem solid black;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.maps-flags-emblem img {
+  width: 30rem;
+  height: 30rem;
+}
+
+.first-entity-map-flag-emblem-pictorial,
+.second-entity-map-flag-emblem-pictorial {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  background-color: white;
+  width: 97%;
+  height: auto;
+}
+
+.first-entity-map-flag-emblem-pictorial-country-state,
+.second-entity-map-flag-emblem-pictorial-country-state {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  background-color: white;
+  width: 85%;
+  height: auto;
+}
+
+.globe-map-flag-emblem-first-entity,
+.globe-map-flag-emblem-second-entity {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 3rem 2rem 2rem 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+
+  font-weight: 700;
+}
+
+.map-flag-emblem-country-state-first-entity,
+.map-flag-emblem-country-state-second-entity {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 3rem 2rem 2rem 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+
+  font-weight: 700;
+}
+
+.first-entity-globe,
+.first-entity-map,
+.first-entity-flag,
+.first-entity-emblem,
+.second-entity-globe,
+.second-entity-map,
+.second-entity-flag,
+.second-entity-emblem {
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.first-entity-name-maps-flags-emblem,
+.second-entity-name-maps-flags-emblem {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0;
+  font-weight: 700;
+  width: 100%;
+}
+
+/* //////////////////////////////// POPULATION COMPARISON //////////////////////////// */
+/* //////////////////////////////// POPULATION COMPARISON //////////////////////////// */
+/* //////////////////////////////// POPULATION COMPARISON //////////////////////////// */
+/* //////////////////////////////// POPULATION COMPARISON //////////////////////////// */
+/* //////////////////////////////// POPULATION COMPARISON //////////////////////////// */
+/* //////////////////////////////// POPULATION COMPARISON //////////////////////////// */
+/* //////////////////////////////// POPULATION COMPARISON //////////////////////////// */
+/* //////////////////////////////// POPULATION COMPARISON //////////////////////////// */
+
+.population-comparison-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2.4rem;
+  background-color: #f7f7f7;
+  width: 95%;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.first-entity-population-comparison,
+.second-entity-population-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  background-color: white;
+
+  /* width: 65%; */
+  width: 50%;
+
+  height: auto;
+  padding: 2rem 0;
+}
+
+.first-entity-map-text-flag-population-comparison,
+.second-entity-map-text-flag-population-comparison {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 0 0 2rem 0;
+}
+
+.first-entity-name-population-comparison,
+.second-entity-name-population-comparison {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  white-space: normal;
+  color: #004aad;
+  font-weight: 700;
+}
+
+.first-entity-map-population-comparison img,
+.second-entity-map-population-comparison img {
+  width: 5rem !important;
+  height: 5rem;
+  margin: auto auto;
+}
+
+.first-entity-flag-population-comparison img,
+.second-entity-flag-population-comparison img {
+  width: 5rem !important;
+  height: 3.28rem;
+  margin: auto auto;
+}
+
+.population-graph-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13rem;
+
+  font-size: 1.8rem;
+  padding: 2rem 0;
+  font-weight: 700;
+}
+
+/* .population-growth-graph img {
+  width: 30rem;
+  padding: 2rem 1rem;
+} */
+
+/* //////////////////////////// Basic Info Comparison //////////////////////////// */
+
+/* //////////////////////////// Size Comparison //////////////////////////// */
+
+/* //////////////////////////// Geographical Factors Comparison //////////////////////////// */
+
+/* //////////////////////////// National Symbols Comparison //////////////////////////// */
+
+/* //////////////////////////////// TIME DIFFERENCES COMPARISON //////////////////////////// */
+
+/* //////////////////////////////// Age Distribution of Population //////////////////////////// */
+
+/* //////////////////////////////// Weather Comparison //////////////////////////// */
+
+/* ///////////////////////// HEALTH FACTORS COMPARISON ///////////////////// */
+
+/* //////////////////////////////// Environmental Factors Comparison //////////////////////////// */
+
+/* ///////////////////////// Economic Factors Comparison ///////////////////// */
+
+/* /////////////////////////////////////// Continents Pages CSS //////////////////////////// */
+/* /////////////////////////////////////// Continents Pages CSS //////////////////////////// */
+/* /////////////////////////////////////// Continents Pages CSS //////////////////////////// */
+/* /////////////////////////////////////// Continents Pages CSS //////////////////////////// */
+/* /////////////////////////////////////// Continents Pages CSS //////////////////////////// */
+/* /////////////////////////////////////// Continents Pages CSS //////////////////////////// */
+/* /////////////////////////////////////// Continents Pages CSS //////////////////////////// */
+/* /////////////////////////////////////// Continents Pages CSS //////////////////////////// */
+/* /////////////////////////////////////// Continents Pages CSS //////////////////////////// */
+.continent-table {
+  width: 100%;
+  table-layout: fixed;
+
+  border-collapse: collapse;
+
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: white;
+}
+
+.continent-table tr:last-child {
+  border-bottom: 0.2rem solid darkcyan;
+}
+
+.continent-table td {
+  box-shadow: 0px 0px 0px 0.04rem #ccc inset;
+
+  padding: 1rem 1rem;
+}
+
+.continent-table tr:hover {
+  background-color: #eee;
+}
+
+.continent-table th:first-child {
+  border-right: 0.1rem solid #ccc;
+}
+
+.continent-indicators {
+  font-weight: 600;
+}
+
+.continent-table th {
+  background-color: darkcyan;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.5rem 1rem;
+}
+
+.continent-table th:first-child {
+  border-top-left-radius: 2rem;
+}
+
+.continent-table th:last-child {
+  border-top-right-radius: 2rem;
+}
+
+.first-entity-map-for-pages img,
+.first-entity-flag-for-pages img {
+  width: 5rem;
+}
+
+.map-of-continent-and-ads-section {
+  width: 95%;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;
+  background-color: #f7f7f7;
+  padding: 5rem 2rem;
+}
+
+.continent-map img {
+  width: 100%;
+}
+
+.continents-description {
+  padding: 0 3rem;
+}
+
+.countries-list-boxes-grids {
+  width: 95%;
+  margin: auto auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+  row-gap: 3rem;
+  background-color: #f7f7f7;
+  margin: auto;
+  padding: 5rem 5rem;
+}
+
+.country-map-name-flag {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  border: 0.1rem solid #d1d5db;
+  padding: 2rem 2rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.country-map-name-flag img {
+  width: 6rem;
+}
+
+.country-map-name-flag:hover {
+  border: 0.1rem solid #999ca0;
+}
+
+.country-name {
+  width: 70%;
+  text-align: center;
+  font-size: 2rem;
+  white-space: normal;
+}
+
+.individual-country-globe-map-flag-emblem {
+  width: 95%;
+  margin: auto auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+
+  background-color: #f7f7f7;
+
+  padding: 5rem 5rem;
+}
+
+.individual-country-four-divs {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+
+  row-gap: 5rem;
+
+  border-radius: 0.5rem;
+  border: 0.1rem solid #d1d5db;
+  background-color: #fff;
+  padding: 4rem 0 2rem 0;
+}
+
+.individual-country-globe-map-flag-emblem img {
+  width: 40rem;
+}
+
+.individual-country-globe,
+.individual-country-map,
+.individual-country-flag,
+.individual-country-emblem {
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+.individual-country-flag {
+  height: 50rem;
+  gap: 12rem;
+}
+
+.individual-country-globe-text,
+.individual-country-map-text,
+.individual-country-flag-text,
+.individual-country-emblem-text {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.individual-country-vs-others-list-boxes-grids {
+  width: 95%;
+  margin: auto auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+
+  gap: 2rem;
+  row-gap: 2.5rem;
+  background-color: #f7f7f7;
+  padding: 5rem 5rem;
+}
+
+.individual-country-vs-others-map-name-flag {
+  width: 62rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  border: 0.1rem solid #d1d5db;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.individual-country-vs-others-map-name-flag:hover {
+  border: 0.1rem solid #999ca0;
+}
+
+.individual-country-vs-others-map-name-flag img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.individual-country-vs-another-country-name {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.individual-country-first-entity-name {
+  font-weight: 300;
+}
+
+.versus-between-individual-country-and-another-country {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.comparison-links-bottom {
+  text-decoration: none;
+  color: black;
+}
+
+/* //////////////////////////// PRIVACY AND OTHER MAIN PAGE ///////////////// */
+/* //////////////////////////// PRIVACY AND OTHER MAIN PAGE ///////////////// */
+/* //////////////////////////// PRIVACY AND OTHER MAIN PAGE ///////////////// */
+/* //////////////////////////// PRIVACY AND OTHER MAIN PAGE ///////////////// */
+/* //////////////////////////// PRIVACY AND OTHER MAIN PAGE ///////////////// */
+/* //////////////////////////// PRIVACY AND OTHER MAIN PAGE ///////////////// */
+/* //////////////////////////// PRIVACY AND OTHER MAIN PAGE ///////////////// */
+/* //////////////////////////// PRIVACY AND OTHER MAIN PAGE ///////////////// */
+/* //////////////////////////// PRIVACY AND OTHER MAIN PAGE ///////////////// */
+
+.content-for-privacy-policy-page {
+  width: 60%;
+  margin: auto auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5rem;
+
+  line-height: 3.5rem;
+  padding: 5rem 0rem;
+}
+
+.content-for-privacy-policy-page h2 {
+  font-size: 3.4rem;
+  line-height: 3.5rem;
+}
+
+.content-for-privacy-policy-page h3 {
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+}
+
+.content-for-privacy-policy-page p {
+  font-size: 2.2rem;
+  line-height: 4rem;
+}
+
+.content-for-privacy-policy-page ul {
+  font-size: 2.2rem;
+  line-height: 4rem;
+  padding: 0rem 3rem;
+}
+
+/* ................................... All Ads Formats Here ....................... */
+/* ................................... All Ads Formats Here ....................... */
+/* ................................... All Ads Formats Here ....................... */
+/* ................................... All Ads Formats Here ....................... */
+/* ................................... All Ads Formats Here ....................... */
+/* ................................... All Ads Formats Here ....................... */
+/* ................................... All Ads Formats Here ....................... */
+
+.all-ads-formats {
+  text-align: center;
+  padding: 2rem 0;
+  display: none;
+}
+
+/* -------------------- Knowledgebase Articles Here --------------- */
+/* -------------------- Knowledgebase Articles Here --------------- */
+/* -------------------- Knowledgebase Articles Here --------------- */
+/* -------------------- Knowledgebase Articles Here --------------- */
+/* -------------------- Knowledgebase Articles Here --------------- */
+
+.knowledgebase-container {
+  width: 90%;
+  margin: auto auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  row-gap: 7rem;
+  align-items: center;
+  justify-items: center;
+  margin-top: 6rem;
+}
+
+.knowledgebase-div {
+  /* box-shadow: 0 1.4rem 2.8rem rgba(0, 0, 0, 0.15); */
+  box-shadow: 0 0.5rem 2.2rem rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+}
+
+.knowledgebase-div:hover {
+  box-shadow: 0 0.5rem 2.2rem #00000040;
+}
+
+.knowledgebase-thumbnail-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0 0 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.knowledgebase-link h2 {
+  font-size: 2.6rem;
+  padding: 1.5rem 3rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.read-here-link {
+  font-size: 1.8rem;
+  padding: 0.5rem 3rem 2rem 3rem;
+
+  font-weight: 500;
+  line-height: 1.2;
+  color: blue;
+  cursor: pointer;
+}
+
+/* ....................................... Footer Here .................................. */
+/* ....................................... Footer Here .................................. */
+/* ....................................... Footer Here .................................. */
+/* ....................................... Footer Here .................................. */
+/* ....................................... Footer Here .................................. */
+/* ....................................... Footer Here .................................. */
+/* ....................................... Footer Here .................................. */
+/* ....................................... Footer Here .................................. */
+
+.primary-footer {
+  background-color: #000;
+  text-align: center;
+  color: white;
+  padding: 5rem 1rem;
+
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 6rem;
+}
+
+.footer-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  padding: 5rem 0;
+  list-style-type: none;
+}
+
+.footer-links ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.secondary-footer {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+/* ================================== */
+/* ================================== */
+/* ================================== */
+/* ================================== */
+/* ================================== */
+/* ================================== */
+/* ================================== */
+/* ================================== */
+/* ================================== */
+/* ================================== */
+/* ================================== */
+/* ================================== */
+
+@media (max-width: 1130px) {
+  .nav-menus {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .nav-menus ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Open state styling */
+  .nav-menus.open {
+    display: flex;
+  }
+
+  /* Turn the hamburger lines into an "X" */
+  .hamburger-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(0.8rem, 0.8rem);
+  }
+
+  .hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(0.8rem, -0.8rem);
+  }
+}
+
+/* ................................................. index.html code starts here ................... */
+/* ................................................. index.html code starts here ................... */
+/* ................................................. index.html code starts here ................... */
+/* ................................................. index.html code starts here ................... */
+/* ................................................. index.html code starts here ................... */
+/* ................................................. index.html code starts here ................... */
+/* ................................................. index.html code starts here ................... */
+/* ................................................. index.html code starts here ................... */
+/* ................................................. index.html code starts here ................... */
+/* ................................................. index.html code starts here ................... */
+
+@media screen and (max-width: 1250px) {
+  .hero-section-index-page h1 {
+    font-size: 4.4rem;
+    padding: 0 3rem 7rem 3rem;
+    line-height: 5rem;
+  }
+
+  .hero-section-index-page p {
+    max-width: 70%;
+    margin: 1rem auto 4rem auto;
+    padding: 1rem 2rem;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-section-index-page h1 {
+    font-size: 4rem;
+    padding: 0 3rem 7rem 3rem;
+    line-height: 5rem;
+  }
+
+  .hero-section-index-page p {
+    max-width: 90%;
+    margin: 1rem auto 4rem auto;
+    padding: 1rem 2rem;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero-section-index-page p {
+    font-size: 2rem;
+    line-height: 3.1rem;
+  }
+}
+
+/* ////////////////// Responsive code for Privacy Policy, Terms and Conditions, About Us, Contact Us, and Cookie Policy */
+
+@media screen and (max-width: 1375px) {
+  .map-of-continent-and-ads-section {
+    width: 98%;
+    padding: 4rem 2rem;
+  }
+
+  .asia-continent-data {
+    gap: 2rem;
+    row-gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .total-countries-text,
+  .continent-demonym-text,
+  .continent-area-km-text,
+  .continent-area-mile-text,
+  .continent-population-text,
+  .continent-population-density-text,
+  .continent-timezone-text,
+  .continent-biggest-country-text,
+  .continent-smallest-country-text,
+  .continent-gdp-text,
+  .continent-internet-tld-text {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    font-size: 1.6rem;
+  }
+
+  .total-countries-answer-first-entity,
+  .continent-demonym-answer-first-entity,
+  .continent-area-km-answer-first-entity,
+  .continent-area-mile-answer-first-entity,
+  .continent-population-answer-first-entity,
+  .continent-population-density-answer-first-entity,
+  .continent-timezone-answer-first-entity,
+  .continent-biggest-country-answer-first-entity,
+  .continent-smallest-country-answer-first-entity,
+  .continent-gdp-answer-first-entity,
+  .continent-internet-tld-answer-first-entity {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
+
+  .nav-menus ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .nav-menus ul li {
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  .comparedoo-compare-main {
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem;
+  }
+
+  .comparedoo-compare-main-for-pages {
+    padding: 10rem 0 6rem 0;
+
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .content-for-privacy-policy-page {
+    width: 70%;
+    margin: auto auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5rem;
+
+    padding: 5rem 0rem;
+  }
+
+  .meta-title-primary-heading h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .comparedoo-compare-main {
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2rem;
+  }
+
+  .comparedoo-compare-main-for-pages {
+    padding: 7rem 0 3rem 0;
+
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .heading-second img {
+    width: 25rem;
+  }
+
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 35rem;
+    background-color: #fff;
+  }
+
+  .all-ads-formats {
+    display: none;
+  }
+
+  .individual-country-four-divs {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    /* gap: 1rem; */
+    row-gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .asia-continent-data {
+    gap: 1rem;
+    row-gap: 2rem;
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .nav-menus ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .nav-menus ul li {
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  .logo img {
+    width: 25rem;
+  }
+
+  .content-for-privacy-policy-page {
+    width: 80%;
+    margin: auto auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5rem;
+
+    padding: 5rem 0rem;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .nav-menus ul {
+    display: none;
+  }
+
+  .logo {
+    margin: auto auto;
+  }
+
+  .logo img {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .comparedoo-compare-main,
+  .comparedoo-compare-main-for-pages {
+    padding: 7rem 0 3rem 0;
+
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .heading-second img {
+    width: 20rem;
+  }
+
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 30rem;
+    background-color: #fff;
+  }
+
+  .meta-title-primary-heading h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 6rem 3rem 2rem 3rem;
+    line-height: 6rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .individual-country-globe-map-flag-emblem {
+    width: 95%;
+  }
+
+  .individual-country-four-divs {
+    width: 100%;
+  }
+
+  .map-of-continent-and-ads-section {
+    width: 95%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+    background-color: #f7f7f7;
+    padding: 5rem 2rem;
+  }
+
+  .continent-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+  }
+
+  .continent-map img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .asia-continent-data {
+    row-gap: 1rem;
+
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .country-name {
+    width: 70%;
+    text-align: center;
+    font-size: 1.8rem;
+    white-space: normal;
+  }
+
+  .country-map-name-flag img {
+    width: 5rem;
+  }
+
+  .countries-list-boxes-grids {
+    padding: 5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 60rem;
+    background-color: #fff;
+  }
+
+  .meta-title-primary-heading h1 {
+    font-size: 3.5rem;
+  }
+
+  .content-for-privacy-policy-page {
+    width: 90%;
+    margin: auto auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5rem;
+
+    padding: 5rem 0rem;
+  }
+
+  .footer-logo {
+    width: 30rem;
+    height: auto;
+    position: relative;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    width: 30rem;
+  }
+
+  .footer-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 5rem 0;
+    list-style-type: none;
+  }
+
+  .individual-country-globe-map-flag-emblem img {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 900px) {
+  .meta-title-primary-heading h1 {
+    line-height: 5rem;
+  }
+
+  .individual-country-globe-map-flag-emblem img {
+    width: 40rem;
+  }
+
+  .paragraph-for-pages {
+    width: 80%;
+    margin: auto;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    padding: 0 0 5rem 0;
+  }
+
+  .countries-list-boxes-grids {
+    width: 98%;
+
+    padding: 5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+}
+
+@media screen and (max-width: 800px) {
+  .footer-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 5rem 0;
+    list-style-type: none;
+  }
+
+  .content-for-privacy-policy-page h2,
+  .content-for-privacy-policy-page h3 {
+    line-height: 4.5rem;
+  }
+
+  .individual-country-four-divs {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .individual-country-globe-text,
+  .individual-country-map-text,
+  .individual-country-flag-text,
+  .individual-country-emblem-text {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    border-bottom: 0.1rem solid #000;
+    padding-bottom: 1rem;
+  }
+
+  .individual-country-globe,
+  .individual-country-map,
+  .individual-country-flag,
+  .individual-country-emblem {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .individual-country-flag {
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .individual-country-vs-others-list-boxes-grids {
+    width: 95%;
+    padding: 5rem 1rem;
+  }
+
+  .countries-list-boxes-grids {
+    width: 98%;
+
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+
+    padding: 5rem 2rem;
+  }
+
+  .map-of-continent-and-ads-section {
+    width: 98%;
+
+    padding: 3rem 1rem;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .individual-country-vs-others-map-name-flag {
+    width: 100%;
+
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 50rem;
+    background-color: #fff;
+  }
+
+  .meta-title-primary-heading h1 {
+    font-size: 3.5rem;
+    line-height: 5rem;
+    padding: 4rem 1rem 2rem 1rem;
+  }
+
+  .content-for-privacy-policy-page {
+    width: 90%;
+    margin: auto auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5rem;
+
+    padding: 5rem 0rem;
+  }
+
+  .content-for-privacy-policy-page ul li {
+    padding-bottom: 1rem;
+  }
+
+  .content-for-privacy-policy-page p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+
+  .pages-h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 5rem 0;
+    padding: 2rem 0;
+    line-height: 4rem;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+
+  .individual-country-globe-map-flag-emblem {
+    width: 100%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+
+    background-color: #f7f7f7;
+
+    padding: 5rem 2rem;
+  }
+
+  .individual-country-four-divs {
+    width: 100%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .individual-country-vs-others-map-name-flag {
+    padding: 1rem 1rem;
+  }
+
+  .countries-list-boxes-grids {
+    width: 98%;
+
+    grid-template-columns: 1fr;
+
+    padding: 5rem 2rem;
+  }
+
+  .country-map-name-flag img {
+    width: 4rem;
+  }
+
+  .country-map-name-flag {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 45rem;
+    background-color: #fff;
+  }
+
+  .pages-h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 5rem 0;
+    padding: 1.5rem 0;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+
+  .individual-country-vs-others-map-name-flag {
+    gap: 1rem;
+    padding: 0.1rem 1rem;
+
+    font-size: 1.8rem;
+  }
+
+  .individual-country-vs-others-map-name-flag img {
+    width: 4rem;
+  }
+
+  .individual-country-vs-another-country-name {
+    row-gap: 0.1rem;
+  }
+
+  .individual-country-emblem-image,
+  .individual-country-flag-image,
+  .individual-country-globe-image,
+  .individual-country-map-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pages-h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+
+    margin: 5rem 0;
+    padding: 1.5rem 2rem;
+
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 90%;
+  }
+
+  .individual-country-four-divs {
+    width: 100%;
+    padding: 4rem 1rem;
+  }
+
+  .individual-country-globe-map-flag-emblem img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 40rem;
+    background-color: #fff;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 35rem;
+    background-color: #fff;
+  }
+
+  .meta-title-primary-heading h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .individual-country-globe-map-flag-emblem img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 30rem;
+    background-color: #fff;
+  }
+
+  .dropdown-toggle::placeholder {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+
+  .individual-country-globe-map-flag-emblem img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 28rem;
+    background-color: #fff;
+  }
+
+  .individual-country-globe-map-flag-emblem img {
+    width: 100%;
+  }
+}
+
+/*  .............................. Three Links DIVS Media Query Here .............................. */
+/*  .............................. Three Links DIVS Media Query Here .............................. */
+/*  .............................. Three Links DIVS Media Query Here .............................. */
+/*  .............................. Three Links DIVS Media Query Here .............................. */
+/*  .............................. Three Links DIVS Media Query Here .............................. */
+
+@media screen and (max-width: 1160px) {
+  .three-tabs-links {
+    width: 95%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: space-evenly;
+    gap: 2rem;
+    font-size: 2.4rem;
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .three-tabs-links {
+    gap: 1rem;
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .three-tabs-links {
+    width: 50%;
+    grid-template-columns: 1fr;
+  }
+
+  .three-tabs-links-flex {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .three-tabs-links {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .three-tabs-links {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .three-tabs-links {
+    font-size: 2rem;
+    margin-top: 6rem;
+  }
+
+  .three-tabs-links-flex {
+    display: flex;
+    align-items: center;
+    justify-items: space-evenly;
+    gap: 2rem;
+
+    padding: 1.5rem 1rem;
+  }
+}
+/* ------------------------------------- Single Pages Indicators --------------------- */
+/* ------------------------------------- Single Pages Indicators --------------------- */
+/* ------------------------------------- Single Pages Indicators --------------------- */
+/* ------------------------------------- Single Pages Indicators --------------------- */
+/* ------------------------------------- Single Pages Indicators --------------------- */
+
+@media screen and (max-width: 1400px) {
+  .basic-information-comparison-div1,
+  .size-factors-comparison-div1,
+  .geographical-factors-comparison-div1,
+  .geographical-factors-comparison-div2,
+  .time-factors-comparison,
+  .environment-factors-comparison,
+  .national-symbols-factors-comparison,
+  .weather-factors-comparison,
+  .age-distribution-of-population,
+  .health-factors-comparison-div1,
+  .health-factors-comparison-div2,
+  .health-factors-comparison-div3,
+  .economic-factors-comparison-div1,
+  .economic-factors-comparison-div2 {
+    background-color: #f7f7f7;
+
+    width: 99%;
+    margin: 1rem auto 3rem auto;
+
+    padding: 4rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .indicators-single-country-divs th {
+    background-color: #008000;
+
+    font-size: 2rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .indicators-single-country-divs th {
+    background-color: #008000;
+
+    font-size: 1.8rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 905px) {
+  .indicators-single-country-divs {
+    /* width: 100%; */
+
+    min-width: 500px;
+    margin: auto auto;
+    table-layout: auto;
+
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: white;
+
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-collapse: collapse;
+  }
+
+  .indicators-single-country-divs td {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ------------------- Knwoledgebase Page ---------------- */
+/* ------------------- Knwoledgebase Page ---------------- */
+/* ------------------- Knwoledgebase Page ---------------- */
+/* ------------------- Knwoledgebase Page ---------------- */
+/* ------------------- Knwoledgebase Page ---------------- */
+
+@media screen and (max-width: 1230px) {
+  .knowledgebase-container {
+    width: 95%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    row-gap: 7rem;
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .knowledgebase-container {
+    width: 90%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    row-gap: 7rem;
+    margin-top: 6rem;
+  }
+
+  .knowledgebase-link h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .knowledgebase-link h2 {
+    font-size: 2rem;
+  }
+  .knowledgebase-container {
+    width: 90%;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    row-gap: 7rem;
+    margin-top: 6rem;
+  }
+
+  .knowledgebase-div {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .knowledgebase-div {
+    width: 97%;
+  }
+  .knowledgebase-thumbnail-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .knowledgebase-thumbnail-image img {
+    width: 100%;
+  }
+}
+
+/* ------------------ Header and Footer Logo -------- */
+/* ------------------ Header and Footer Logo -------- */
+/* ------------------ Header and Footer Logo -------- */
+/* ------------------ Header and Footer Logo -------- */
+/* ------------------ Header and Footer Logo -------- */
+
+@media screen and (max-width: 350px) {
+  .logo {
+    width: 25rem;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 25rem;
+  }
+
+  .footer-logo {
+    width: 25rem;
+    height: auto;
+    position: relative;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    width: 25rem;
+  }
+}
+
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+
+/* ................. First Paragraph of the Page and Last Paragraph of the Page..................... */
+/* ................. First Paragraph of the Page and Last Paragraph of the Page..................... */
+/* ................. First Paragraph of the Page and Last Paragraph of the Page..................... */
+/* ................. First Paragraph of the Page and Last Paragraph of the Page..................... */
+/* ................. First Paragraph of the Page and Last Paragraph of the Page..................... */
+
+@media screen and (max-width: 1300px) {
+  .first-paragraph-of-the-page,
+  .last-paragraph-of-the-page,
+  .paragraph-for-pages-below-table {
+    width: 95%;
+    margin: 3rem auto 3rem auto;
+    background-color: #f7f7f7;
+    padding: 4rem 1rem;
+  }
+
+  .first-para-single-div,
+  .last-para-single-div,
+  .para-for-pages-single-div {
+    width: 90%;
+    background-color: #fff;
+    padding: 3rem 3rem;
+    margin: auto auto;
+    font-size: 2.2rem;
+    line-height: 4rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .first-paragraph-of-the-page,
+  .last-paragraph-of-the-page,
+  .paragraph-for-pages-below-table {
+    width: 95%;
+    margin: 3rem auto 3rem auto;
+    background-color: #f7f7f7;
+    padding: 3rem 1rem;
+  }
+
+  .first-para-single-div,
+  .last-para-single-div,
+  .para-for-pages-single-div {
+    width: 95%;
+    background-color: #fff;
+    padding: 3rem 2rem;
+    margin: auto auto;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .first-paragraph-of-the-page,
+  .last-paragraph-of-the-page,
+  .paragraph-for-pages-below-table {
+    width: 98%;
+    margin: 3rem auto 3rem auto;
+    background-color: #f7f7f7;
+    padding: 3rem 1rem;
+  }
+
+  .first-para-single-div,
+  .last-para-single-div,
+  .para-for-pages-single-div {
+    width: 95%;
+    background-color: #fff;
+    padding: 3rem 2rem;
+    margin: auto auto;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+}
+
+/* ................. Para of the Page for : Antarctica ..................... */
+/* ................. Para of the Page for : Antarctica ..................... */
+/* ................. Para of the Page for : Antarctica ..................... */
+/* ................. Para of the Page for : Antarctica ..................... */
+/* ................. Para of the Page for : Antarctica ..................... */
+
+@media screen and (max-width: 1200px) {
+  .antarctica-para-single-div {
+    width: 90%;
+    background-color: #fff;
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    font-size: 2.2rem;
+    line-height: 4rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .antarctica-para-single-div {
+    width: 98%;
+    background-color: #fff;
+    padding: 2rem 1rem 2rem 2rem;
+    margin: 2rem auto;
+    font-size: 2rem;
+    line-height: 4rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+}
+
+/* ........................... Leaflet Map Section CSS Here ........................... */
+/* ........................... Leaflet Map Section CSS Here ........................... */
+/* ........................... Leaflet Map Section CSS Here ........................... */
+/* ........................... Leaflet Map Section CSS Here ........................... */
+/* ........................... Leaflet Map Section CSS Here ........................... */
+/* ........................... Leaflet Map Section CSS Here ........................... */
+
+@media screen and (max-width: 1000px) {
+  .map-section {
+    width: 90%;
+    height: 40rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .map-section {
+    width: 95%;
+  }
+}
+
+/* ........................... Pictorial Representation (Globe, Map, Flag, Coat of Arms) ........................... */
+/* ........................... Pictorial Representation (Globe, Map, Flag, Coat of Arms) ........................... */
+/* ........................... Pictorial Representation (Globe, Map, Flag, Coat of Arms) ........................... */
+/* ........................... Pictorial Representation (Globe, Map, Flag, Coat of Arms) ........................... */
+/* ........................... Pictorial Representation (Globe, Map, Flag, Coat of Arms) ........................... */
+/* ........................... Pictorial Representation (Globe, Map, Flag, Coat of Arms) ........................... */
+
+@media screen and (max-width: 1400px) {
+  .maps-flags-emblem img {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .globe-map-flag-emblem-first-entity,
+  .globe-map-flag-emblem-second-entity {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: space-between;
+    row-gap: 5rem;
+
+    padding: 3rem 2rem 2rem 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+
+    font-weight: 700;
+  }
+
+  .maps-flags-emblem img {
+    width: 30rem;
+  }
+
+  .map-flag-emblem-country-state-first-entity {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: space-between;
+    row-gap: 5rem;
+
+    padding: 3rem 2rem 2rem 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+
+    font-weight: 700;
+  }
+
+  .first-entity-map-flag-emblem-pictorial-country-state,
+  .second-entity-map-flag-emblem-pictorial-country-state {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .map-flag-emblem-country-state-first-entity,
+  .map-flag-emblem-country-state-second-entity {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: space-between;
+    row-gap: 5rem;
+
+    padding: 3rem 2rem 2rem 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .map-section {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .maps-flags-emblem img {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .globe-map-flag-emblem-first-entity,
+  .globe-map-flag-emblem-second-entity {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: space-between;
+    row-gap: 7rem;
+  }
+
+  .globe-globe-text,
+  .map-map-text,
+  .flag-flag-text,
+  .coat-arms-coat-arms-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .maps-flags-emblem img {
+    width: 33rem;
+  }
+
+  .first-entity-globe,
+  .first-entity-map,
+  .first-entity-flag,
+  .first-entity-emblem,
+  .second-entity-globe,
+  .second-entity-map,
+  .second-entity-flag,
+  .second-entity-emblem {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .globe-map-flag-emblem-first-entity,
+  .globe-map-flag-emblem-second-entity {
+    row-gap: 8rem;
+    padding: 3rem 1rem;
+  }
+
+  .maps-flags-emblem img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .globe-map-flag-emblem-first-entity,
+  .globe-map-flag-emblem-second-entity {
+    row-gap: 7rem;
+    padding: 3rem 1rem;
+  }
+
+  .maps-flags-emblem img {
+    width: 100%;
+  }
+}
+
+/* ...................................... All Tables Responsive CSS Code Here ..................... */
+/* ...................................... All Tables Responsive CSS Code Here ..................... */
+/* ...................................... All Tables Responsive CSS Code Here ..................... */
+/* ...................................... All Tables Responsive CSS Code Here ..................... */
+/* ...................................... All Tables Responsive CSS Code Here ..................... */
+/* ...................................... All Tables Responsive CSS Code Here ..................... */
+
+@media screen and (max-width: 1400px) {
+  .basic-information-comparison-div1,
+  .size-factors-comparison-div1,
+  .geographical-factors-comparison-div1,
+  .geographical-factors-comparison-div2,
+  .time-factors-comparison,
+  .environment-factors-comparison,
+  .national-symbols-factors-comparison,
+  .weather-factors-comparison,
+  .age-distribution-of-population,
+  .health-factors-comparison-div1,
+  .health-factors-comparison-div2,
+  .health-factors-comparison-div3,
+  .economic-factors-comparison-div1,
+  .economic-factors-comparison-div2 {
+    background-color: #f7f7f7;
+
+    width: 99%;
+    margin: 1rem auto 3rem auto;
+
+    padding: 4rem 0.5rem;
+  }
+
+  .indicators-first-entity-and-second-entity-div1,
+  .indicators-first-entity-and-second-entity-div2 {
+    width: 100%;
+    margin: auto auto;
+    table-layout: fixed;
+
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: white;
+
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-collapse: collapse;
+  }
+
+  .indicators-first-entity-and-second-entity-div1 td,
+  .indicators-first-entity-and-second-entity-div2 td {
+    height: 9rem;
+  }
+
+  td.narrow-table-row {
+    height: 2rem;
+  }
+
+  td.four-rem-height-td {
+    height: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .indicators-first-entity-and-second-entity-div1 th,
+  .indicators-first-entity-and-second-entity-div2 th {
+    background-color: #008000;
+
+    font-size: 2rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .indicators-first-entity-and-second-entity-div1 th,
+  .indicators-first-entity-and-second-entity-div2 th {
+    background-color: #008000;
+
+    font-size: 1.8rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .first-entity-name-pages-comparison,
+  .second-entity-name-pages-comparison,
+  .indicator-text {
+    width: 25rem;
+
+    color: #004aad;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .first-entity-map-pages-comparison img,
+  .first-entity-flag-pages-comparison img,
+  .second-entity-map-pages-comparison img,
+  .second-entity-flag-pages-comparison img,
+  .right-indicator img,
+  .left-indicator img {
+    width: 4rem !important;
+  }
+
+  .age-distribution-images img {
+    width: 6rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .first-entity-map-pages-comparison img,
+  .first-entity-flag-pages-comparison img,
+  .second-entity-map-pages-comparison img,
+  .second-entity-flag-pages-comparison img,
+  .right-indicator img,
+  .left-indicator img {
+    width: 3rem !important;
+  }
+
+  .indicators-first-entity-and-second-entity-div1 td,
+  .indicators-first-entity-and-second-entity-div2 td {
+    padding: 0.5rem 1rem;
+  }
+
+  .basic-information-images img {
+    width: 3rem;
+  }
+
+  .all-indicators,
+  .all-indicator-answers {
+    font-size: 1.6rem;
+  }
+}
+
+/*  .............................. Population Comparison .............................. */
+/*  .............................. Population Comparison .............................. */
+/*  .............................. Population Comparison .............................. */
+/*  .............................. Population Comparison .............................. */
+/*  .............................. Population Comparison .............................. */
+/*  .............................. Population Comparison .............................. */
+/*  .............................. Population Comparison .............................. */
+
+@media screen and (max-width: 1200px) {
+  .population-comparison-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 2.4rem;
+    background-color: #f7f7f7;
+    width: 95%;
+    margin-top: 3rem;
+    padding: 6rem 0;
+  }
+
+  .first-entity-population-comparison,
+  .second-entity-population-comparison {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    background-color: white;
+    /* width: 60rem; */
+    width: 45%;
+
+    height: auto;
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .population-comparison-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 3rem;
+    font-size: 2.4rem;
+    background-color: #f7f7f7;
+    width: 95%;
+    margin-top: 3rem;
+    padding: 6rem 0;
+  }
+
+  .first-entity-population-comparison,
+  .second-entity-population-comparison {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    background-color: white;
+    /* width: 60rem; */
+    width: 95%;
+
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .population-growth-graph img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .first-entity-map-population-comparison img,
+  .first-entity-flag-population-comparison img,
+  .second-entity-map-population-comparison img,
+  .second-entity-flag-population-comparison img {
+    width: 4rem !important;
+  }
+
+  .first-entity-name-population-comparison,
+  .second-entity-name-population-comparison {
+    font-size: 1.8rem;
   }
 }

@@ -1,0 +1,189 @@
+import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
+import { formatNumberWithCommas } from "@/lib/format/format"
+import Image from "next/image"
+
+function FruitsAndVegetables({ costInfo, stateLowerCase }) {
+    const state = costInfo.state
+    const apples1Kg = costInfo.apples1Kg
+    const bananas1Kg = costInfo.bananas1Kg
+    const oranges1Kg = costInfo.oranges1Kg
+    const tomatoes1Kg = costInfo.tomatoes1Kg
+    const potatoes1Kg = costInfo.potatoes1Kg
+    const lemons1Kg = costInfo.lemons1Kg
+    const onions1Kg = costInfo.onions1Kg
+    const lentils1Kg = costInfo.lentils1Kg
+
+    return (
+        <>
+            <AdsHeaderBanner />
+
+            <div className="geographical-map">
+                <h2 className="pages-h2">Fruits and Vegetables Cost</h2>
+            </div>
+
+            <div className="basic-information-comparison-div1">
+                <table className="indicators-single-country-divs">
+                    <thead>
+                        <tr className="first-tr">
+                            <th>
+                                <div className="heading-map-name-flag">
+                                    <div className="right-indicator">
+                                        <Image
+                                            src="/images/indicators-right-image.png"
+                                            fill alt="Image representing an indicator" />
+                                    </div>
+
+                                    <div className="indicator-text">Indicators</div>
+
+                                    <div className="left-indicator">
+                                        <Image
+                                            src="/images/indicators-left-image.png"
+                                            fill alt="Image illustrating an indicator" />
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th>
+                                <div className="heading-map-name-flag">
+                                    <div className="first-entity-map-pages-comparison">
+                                        <Image src={`/images/${stateLowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${stateLowerCase}`} />
+                                    </div>
+
+                                    <div className="first-entity-name-pages-comparison">{state}</div>
+
+                                    <div className="first-entity-flag-pages-comparison">
+                                        <Image src={`/images/${stateLowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${stateLowerCase}`} />
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td className="basic-info">
+                                <div className="all-indicators">Apples (1 KG)</div>
+                                <div className="basic-information-images">
+                                    <Image
+                                        src="/images/apples-1-kg-image.png"
+                                        fill alt="Image Describing apples cost per month" />
+                                </div>
+                            </td>
+
+                            <td className="apples-1-kg-first-entity all-indicator-answers">
+                                {apples1Kg ? `${formatNumberWithCommas(apples1Kg)} USD` : 'Yet to Update'}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td className="basic-info">
+                                <div className="all-indicators">Bananas (1 KG)</div>
+                                <div className="basic-information-images">
+                                    <Image
+                                        src="/images/bananas-1-kg-image.png"
+                                        fill alt="Image Describing bananas cost per month" />
+                                </div>
+                            </td>
+
+                            <td className="bananas-1-kg-first-entity all-indicator-answers">
+                                {bananas1Kg ? `${formatNumberWithCommas(bananas1Kg)} USD` : 'Yet to Update'}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td className="basic-info">
+                                <div className="all-indicators">Oranges (1 KG)</div>
+                                <div className="basic-information-images">
+                                    <Image
+                                        src="/images/oranges-1-kg-image.png"
+                                        fill alt="Image Describing oranges cost per month" />
+                                </div>
+                            </td>
+
+                            <td className="oranges-1-kg-first-entity all-indicator-answers">
+                                {oranges1Kg ? `${formatNumberWithCommas(oranges1Kg)} USD` : 'Yet to Update'}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td className="basic-info">
+                                <div className="all-indicators">Tomatoes (1 KG)</div>
+                                <div className="basic-information-images">
+                                    <Image
+                                        src="/images/tomatoes-1-kg-image.png"
+                                        fill alt="Image Describing tomatoes cost per month" />
+                                </div>
+                            </td>
+
+                            <td className="tomatoes-1-kg-first-entity all-indicator-answers">
+                                {tomatoes1Kg ? `${formatNumberWithCommas(tomatoes1Kg)} USD` : 'Yet to Update'}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td className="basic-info">
+                                <div className="all-indicators">Potatoes (1 KG)</div>
+                                <div className="basic-information-images">
+                                    <Image
+                                        src="/images/potatoes-1-kg-image.png"
+                                        fill alt="Image Describing potatoes cost per month" />
+                                </div>
+                            </td>
+
+                            <td className="potatoes-1-kg-first-entity all-indicator-answers">
+                                {potatoes1Kg ? `${formatNumberWithCommas(potatoes1Kg)} USD` : 'Yet to Update'}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td className="basic-info">
+                                <div className="all-indicators">Lemons (1 KG)</div>
+                                <div className="basic-information-images">
+                                    <Image
+                                        src="/images/lemons-1-kg-image.png"
+                                        fill alt="Image Describing lemons cost per month" />
+                                </div>
+                            </td>
+
+                            <td className="lemons-1-kg-first-entity all-indicator-answers">
+                                {lemons1Kg ? `${formatNumberWithCommas(lemons1Kg)} USD` : 'Yet to Update'}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td className="basic-info">
+                                <div className="all-indicators">Onions (1 KG)</div>
+                                <div className="basic-information-images">
+                                    <Image
+                                        src="/images/onions-1-kg-image.png"
+                                        fill alt="Image Describing onions cost per month" />
+                                </div>
+                            </td>
+
+                            <td className="onions-1-kg-first-entity all-indicator-answers">
+                                {onions1Kg ? `${formatNumberWithCommas(onions1Kg)} USD` : 'Yet to Update'}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td className="basic-info">
+                                <div className="all-indicators">Lentils (1 KG)</div>
+                                <div className="basic-information-images">
+                                    <Image
+                                        src="/images/lentils-1-kg-image.png"
+                                        fill alt="Image Describing lentils cost per month" />
+                                </div>
+                            </td>
+
+                            <td className="lentils-1-kg-first-entity all-indicator-answers">
+                                {lentils1Kg ? `${formatNumberWithCommas(lentils1Kg)} USD` : 'Yet to Update'}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </>
+    )
+}
+
+export default FruitsAndVegetables

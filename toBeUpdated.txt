@@ -1,0 +1,56 @@
+==> convertToNumber function for database
+
+- .toFixed returns 0.0
+
+***** .env.local                              +++++++++++++**************
+
+- h1: Geographical factors (absent in single state general info page )
+
+- href="/contact-us"
+
+- hamburger menu                              ////////////////////////////
+
+- search box
+
+- <Image />(search box and header img tag not changed)+++++++++++++**************
+
+- unique indicators of country or state(knowledgebase)+++++++++++++**************
+
+- Taxes on Exports(India)(Standard) is Yet to Update coz it is 0.00493119659888326
+
+- Failed to find font override values for font `Nunito Sans`+++++++++++++**************
+
+- entry-title                                   ////////////////////////////
+
+- Schema Markup                                 ////////////////////////////
+
+- rain and cloud put image in the answer
+
+- 172
+
+- 18,000 QAR
+4,860 USD(bracket missing, cost)
+
+- http://localhost:3000/cost-of-living/qatar/cyprus
+  - Special Education Services(Yet to Update
+0 USD)
+
+Gross Domestic Product (GDP)
+(2023)
+standard of living country vs country
+
+-International Tourism Expenditure (2023) put amount in millions
+
+-Imports of Goods and Services
+(2023) fix markup
+
+-Exports of Goods and Services
+(2023)
+
+- Standard of living(top description calculation)     +++++++++++++**************
+
+- check all country names                             +++++++++++++**************
+
+- two Georgia                                         +++++++++++++**************
+
+- Threetabs sticky on back scroll                    ............................
