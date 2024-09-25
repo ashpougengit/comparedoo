@@ -54,3 +54,5 @@ standard of living country vs country
 - two Georgia                                         +++++++++++++**************
 
 - Threetabs sticky on back scroll                    ............................
+
+-weather images, sunny, cloudy, rainy
