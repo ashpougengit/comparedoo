@@ -21,32 +21,44 @@ async function PopularComparison({ userCountry }) {
                             const urlCasedEntity = toURLFormat(entity)
 
                             return (
-                                <Link href={`/comparison/${urlCasedCountry}/${urlCasedEntity}`} key={index}>
-                                    <div className="individual-country-vs-others-map-name-flag">
-                                        <div className="individual-country-first-entity-map">
-                                            <Image src={`/images/${urlCasedCountry}-map-small.png`} fill alt={`Pictorial representation of map of ${userCountry}`} />
-                                        </div>
+                              <Link
+                                href={`/comparison/${urlCasedCountry}/${urlCasedEntity}`}
+                                key={index}
+                                className="comparison-links-bottom"
+                              >
+                                <div className="individual-country-vs-others-map-name-flag">
+                                  <div className="individual-country-first-entity-map">
+                                    <Image
+                                      src={`/images/${urlCasedCountry}-map-small.png`}
+                                      fill
+                                      alt={`Pictorial representation of map of ${userCountry}`}
+                                    />
+                                  </div>
 
-                                        <div className="individual-country-vs-another-country-name">
-                                            <div className="individual-country-first-entity-name">
-                                                {userCountry}
-                                            </div>
-
-                                            <div className="versus-between-individual-country-and-another-country">
-                                                v/s
-                                            </div>
-
-                                            <div className="individual-country-another-country-name">
-                                                {entity}
-                                            </div>
-                                        </div>
-
-                                        <div className="individual-country-second-entity-map">
-                                            <Image src={`/images/${urlCasedEntity}-map-small.png`} fill alt={`Pictorial representation of map of ${entity}`} />
-                                        </div>
+                                  <div className="individual-country-vs-another-country-name">
+                                    <div className="individual-country-first-entity-name">
+                                      {userCountry}
                                     </div>
-                                </Link>
-                            )
+
+                                    <div className="versus-between-individual-country-and-another-country">
+                                      v/s
+                                    </div>
+
+                                    <div className="individual-country-another-country-name">
+                                      {entity}
+                                    </div>
+                                  </div>
+
+                                  <div className="individual-country-second-entity-map">
+                                    <Image
+                                      src={`/images/${urlCasedEntity}-map-small.png`}
+                                      fill
+                                      alt={`Pictorial representation of map of ${entity}`}
+                                    />
+                                  </div>
+                                </div>
+                              </Link>
+                            );
                         })
                 }
             </div>

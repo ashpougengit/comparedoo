@@ -138,81 +138,185 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
     };
 
     return (
-        <>
-            {loading ? <Loading /> : (
-                <div className="comparedoo-compare-main">
-                    <div className="compare-first-entity" ref={input1Ref}>
-                        <div className="first-entity-map-compare-section">
-                            {isSlug2 ? (
-                                <img src={`/images/${value1}-map-small.png`} alt={`Image illustrating the map of ${titleCased(value1)}`} width="80" />
-                            ) : ''}
-                        </div>
-                        <input
-                            type="text"
-                            placeholder="Search for a country or a us-state"
-                            value={tempInput1}
-                            onChange={(e) => handleInputChange(e, setTempInput1, setFilteredCountries1, input2)}
-                            onFocus={() => {
-                                handleInputFocusWithRestoration(setTempInput1, previousInput1, tempInput1, setDropdown1Visible, input2, setDropdown2Visible, setTempInput2);
-                            }}
-                        />
-                        <div className="down-arrow" onClick={() => handleArrowClick(setDropdown1Visible, dropdown1Visible, setDropdown2Visible, input1, setTempInput1, previousInput1)}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                                <path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z" />
-                            </svg>
-                        </div>
-                        {dropdown1Visible && (
-                            <div className="dropdown-menu">
-                                {filteredCountries1.map((entity, index) => (
-                                    <div key={index} className="dropdown-item" onClick={() => handleItemClick(entity, setInput1, setTempInput1, setDropdown1Visible, previousInput1)}>
-                                        {entity}
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-
-                    <div className="compare-second-entity">
-                        <div className='heading-second'>
-                            <img src="/images/comparedoo-logo-for-comparison.png" width='300px' alt="Comparedoo" />
-                        </div>
-                    </div>
-
-                    <div className="compare-third-entity" ref={input2Ref}>
-                        <div className="second-entity-map-compare-section">
-                            {isSlug2 ? (
-                                <img src={`/images/${value2}-map-small.png`} alt={`Image illustrating the map of ${titleCased(value2)}`} width="80" />
-                            ) : ''}
-                        </div>
-                        <input
-                            type="text"
-                            placeholder="Search for a country or a us-state"
-                            value={tempInput2}
-                            onChange={(e) => handleInputChange(e, setTempInput2, setFilteredCountries2, input1)}
-                            onFocus={() => {
-                                handleInputFocusWithRestoration(setTempInput2, previousInput2, tempInput2, setDropdown2Visible, input1, setDropdown1Visible, setTempInput1);
-                            }}
-                        />
-                        <div className="down-arrow" onClick={() => handleArrowClick(setDropdown2Visible, dropdown2Visible, setDropdown1Visible, input2, setTempInput2, previousInput2)}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                                <path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z" />
-                            </svg>
-                        </div>
-                        {dropdown2Visible && (
-                            <div className="dropdown-menu">
-                                {filteredCountries2.map((entity, index) => (
-                                    <div key={index} className="dropdown-item" onClick={() => handleItemClick(entity, setInput2, setTempInput2, setDropdown2Visible, previousInput2)}>
-                                        {entity}
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </div>
+      <>
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className="comparedoo-compare-main">
+            <div className="compare-first-entity" ref={input1Ref}>
+              <div className="first-entity-map-compare-section">
+                {isSlug2 ? (
+                  <img
+                    src={`/images/${value1}-map-small.png`}
+                    alt={`Image illustrating the map of ${titleCased(value1)}`}
+                    width="80"
+                  />
+                ) : (
+                  ''
+                )}
+              </div>
+              <div className="arrow-position-center-input">
+                <input
+                  type="text"
+                  placeholder="Search for a country, state or a city"
+                  value={tempInput1}
+                  onChange={(e) =>
+                    handleInputChange(
+                      e,
+                      setTempInput1,
+                      setFilteredCountries1,
+                      input2
+                    )
+                  }
+                  onFocus={() => {
+                    handleInputFocusWithRestoration(
+                      setTempInput1,
+                      previousInput1,
+                      tempInput1,
+                      setDropdown1Visible,
+                      input2,
+                      setDropdown2Visible,
+                      setTempInput2
+                    );
+                  }}
+                />
+                <div
+                  className="down-arrow"
+                  onClick={() =>
+                    handleArrowClick(
+                      setDropdown1Visible,
+                      dropdown1Visible,
+                      setDropdown2Visible,
+                      input1,
+                      setTempInput1,
+                      previousInput1
+                    )
+                  }
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 -960 960 960"
+                  >
+                    <path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z" />
+                  </svg>
                 </div>
-            )
+              </div>
 
-            }
-        </>
+              {dropdown1Visible && (
+                <div className="dropdown-menu">
+                  {filteredCountries1.map((entity, index) => (
+                    <div
+                      key={index}
+                      className="dropdown-item"
+                      onClick={() =>
+                        handleItemClick(
+                          entity,
+                          setInput1,
+                          setTempInput1,
+                          setDropdown1Visible,
+                          previousInput1
+                        )
+                      }
+                    >
+                      {entity}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
 
+            <div className="compare-second-entity">
+              <div className="heading-second">
+                <img
+                  src="/images/comparedoo-logo-for-comparison.png"
+                  width="300px"
+                  alt="Comparedoo"
+                />
+              </div>
+            </div>
+
+            <div className="compare-third-entity" ref={input2Ref}>
+              <div className="second-entity-map-compare-section">
+                {isSlug2 ? (
+                  <img
+                    src={`/images/${value2}-map-small.png`}
+                    alt={`Image illustrating the map of ${titleCased(value2)}`}
+                    width="80"
+                  />
+                ) : (
+                  ''
+                )}
+              </div>
+              <div className="arrow-position-center-input">
+                <input
+                  type="text"
+                  placeholder="Search for a country, state or a city"
+                  value={tempInput2}
+                  onChange={(e) =>
+                    handleInputChange(
+                      e,
+                      setTempInput2,
+                      setFilteredCountries2,
+                      input1
+                    )
+                  }
+                  onFocus={() => {
+                    handleInputFocusWithRestoration(
+                      setTempInput2,
+                      previousInput2,
+                      tempInput2,
+                      setDropdown2Visible,
+                      input1,
+                      setDropdown1Visible,
+                      setTempInput1
+                    );
+                  }}
+                />
+                <div
+                  className="down-arrow"
+                  onClick={() =>
+                    handleArrowClick(
+                      setDropdown2Visible,
+                      dropdown2Visible,
+                      setDropdown1Visible,
+                      input2,
+                      setTempInput2,
+                      previousInput2
+                    )
+                  }
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 -960 960 960"
+                  >
+                    <path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z" />
+                  </svg>
+                </div>
+              </div>
+              {dropdown2Visible && (
+                <div className="dropdown-menu">
+                  {filteredCountries2.map((entity, index) => (
+                    <div
+                      key={index}
+                      className="dropdown-item"
+                      onClick={() =>
+                        handleItemClick(
+                          entity,
+                          setInput2,
+                          setTempInput2,
+                          setDropdown2Visible,
+                          previousInput2
+                        )
+                      }
+                    >
+                      {entity}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </>
     );
 }

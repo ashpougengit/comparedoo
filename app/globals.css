@@ -121,8 +121,10 @@ body {
 }
 
 .logo {
-  width: 30rem;
-  height: 5rem;
+  /* width: 30rem;
+  height: 5rem; */
+  width: 25rem;
+  height: 4.167rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -176,6 +178,18 @@ body {
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 
+.hamburger-icon{
+  display: none;
+}
+
+
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
 .navigation-bar {
   display: flex;
   align-items: center;
@@ -186,9 +200,18 @@ body {
 .nav-menus ul {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 5rem;
+  justify-content: center;
+  gap: 4rem;
 }
+
+@media (max-width: 1260px) {
+  .nav-menus ul {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }}
+
 
 .nav-menus ul li {
   font-size: 2rem;
@@ -235,13 +258,26 @@ body {
   line-height: 3.6rem;
 }
 
+/* --------------- Search Box Home Page --------------- */
+/* --------------- Search Box Home Page --------------- */
+/* --------------- Search Box Home Page --------------- */
+/* --------------- Search Box Home Page --------------- */
+/* --------------- Search Box Home Page --------------- */
+
 .comparedoo-compare-main {
-  font-size: 2.4rem;
-  display: flex;
+
+  display: flex; 
   align-items: center;
   justify-content: center;
   gap: 7rem;
-  padding: 4rem 0 1rem 0;
+  width: 100%;
+  /* max-width: 1200px; Keeps the component centered and not stretched to the edges */
+  margin: 6rem auto 4rem auto;
+
+ 
+  /* border: 3px solid red; */
+  font-size: 2.4rem;
+  /* padding: 4rem 0 1rem 0; */
 }
 
 .compare-first-entity,
@@ -251,6 +287,25 @@ body {
   justify-content: center;
   gap: 4rem;
   flex-direction: column;
+
+  position: relative;
+  width: 27%; 
+  
+  
+}
+
+
+
+.compare-first-entity input,
+.compare-third-entity input {
+  width: 100%; /* Make input take up the full width of its container */
+  padding: 1.8rem;
+  padding-right: 4rem; /* Add space for the arrow */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .first-entity-name {
@@ -258,6 +313,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+
 }
 
 .second-entity-name {
@@ -265,6 +321,53 @@ body {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 30rem;
+  overflow-y: auto;
+  background-color: white;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  z-index: 1000;
+
+ 
+  
+ 
+}
+
+.dropdown-item {
+  padding: 1rem;
+ 
+  cursor: pointer;
+ 
+  text-align: center;
+  font-size: 2rem;
+  /* transition: 0.5s ease-in-out; */
+}
+
+.dropdown-item:hover {
+  /* background-color: #007bff; */
+  /* background-color: #48cae4; */
+  background-color: #fcb23a;
+  color: #fff;
+}
+
+.arrow-position-center-input{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-direction: column;
+
+  position: relative;
+  width: 100%; /* Adjust width as per your design */
+
 }
 
 .down-arrow {
@@ -289,57 +392,6 @@ body {
   fill: #6d6c6c;
 }
 
-.custom-dropdown {
-  position: relative;
-  display: inline-block;
-  width: 40rem;
-  background-color: #fff;
-}
-
-.dropdown-toggle {
-  padding: 2rem 1rem;
-  border: 0.1rem solid #ccc;
-  border-radius: 0.5rem;
-  background-color: #fff;
-  cursor: pointer;
-
-  width: 100%;
-  border: 0.1rem solid #999ca0;
-  border-radius: 0.5rem;
-}
-
-.dropdown-toggle:hover {
-  border: 0.1rem solid #6d6c6c;
-}
-
-.dropdown-toggle::placeholder {
-  text-align: center;
-  font-size: 1.4rem;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  margin-top: 5px;
-  width: 100%;
-  z-index: 1;
-  max-height: 350px;
-  overflow-y: auto;
-}
-
-.dropdown-item {
-  padding: 1rem 2rem;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.dropdown-item:hover {
-  background-color: #007bff;
-  color: #fff;
-}
 
 .dropdown-menu.show {
   display: block;
@@ -1200,21 +1252,59 @@ td.four-rem-height-td {
 }
 
 .individual-country-vs-others-list-boxes-grids {
-  width: 95%;
+  width: 90%;
   margin: auto auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
 
-  gap: 2rem;
   row-gap: 2.5rem;
   background-color: #f7f7f7;
-  padding: 5rem 5rem;
+  padding: 5rem 2rem;
+}
+
+
+
+@media screen and (max-width: 1300px) {
+  .individual-country-vs-others-list-boxes-grids {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .individual-country-vs-others-list-boxes-grids {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  
+  }
+
+  .individual-country-vs-others-map-name-flag {
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  
+    border: 0.1rem solid #d1d5db;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #fff;
+  }
 }
 
 .individual-country-vs-others-map-name-flag {
-  width: 62rem;
+  width: 55rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1430,8 +1520,8 @@ td.four-rem-height-td {
 /* ================================== */
 
 @media (max-width: 1130px) {
-  .nav-menus {
-    display: none;
+  /* .nav-menus {
+    display: block;
     position: fixed;
     top: 0;
     right: 0;
@@ -1440,9 +1530,9 @@ td.four-rem-height-td {
     background-color: black;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
-  .hamburger-menu {
+  /* .hamburger-menu {
     display: flex;
     position: absolute;
     top: 2rem;
@@ -1452,7 +1542,7 @@ td.four-rem-height-td {
   .nav-menus ul {
     flex-direction: column;
     gap: 2rem;
-  }
+  } */
 
   /* Open state styling */
   .nav-menus.open {
@@ -1688,22 +1778,11 @@ td.four-rem-height-td {
 }
 
 @media screen and (max-width: 1130px) {
-  .nav-menus ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .nav-menus ul li {
-    font-size: 2rem;
-    color: black;
-    text-decoration: none;
-    list-style-type: none;
-  }
+ 
 
   .logo img {
     width: 25rem;
+  height: 4.167rem;
   }
 
   .content-for-privacy-policy-page {
@@ -1900,8 +1979,7 @@ td.four-rem-height-td {
   }
 }
 
-@media screen and (max-width: 850px) {
-}
+
 
 @media screen and (max-width: 800px) {
   .footer-links ul {
@@ -1957,10 +2035,7 @@ td.four-rem-height-td {
     gap: 3rem;
   }
 
-  .individual-country-vs-others-list-boxes-grids {
-    width: 95%;
-    padding: 5rem 1rem;
-  }
+ 
 
   .countries-list-boxes-grids {
     width: 98%;
@@ -1979,11 +2054,8 @@ td.four-rem-height-td {
 }
 
 @media screen and (max-width: 730px) {
-  .individual-country-vs-others-map-name-flag {
-    width: 100%;
-
-    padding: 1rem 2rem;
-  }
+ 
+ 
 }
 
 @media screen and (max-width: 700px) {
@@ -2055,10 +2127,7 @@ td.four-rem-height-td {
   }
 }
 
-@media screen and (max-width: 590px) {
-  .individual-country-vs-others-map-name-flag {
-    padding: 1rem 1rem;
-  }
+
 
   .countries-list-boxes-grids {
     width: 98%;
@@ -2076,7 +2145,6 @@ td.four-rem-height-td {
     padding: 2rem 1rem;
     gap: 2rem;
   }
-}
 
 @media screen and (max-width: 550px) {
   .custom-dropdown {

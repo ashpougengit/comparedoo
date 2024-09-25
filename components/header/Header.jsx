@@ -22,13 +22,18 @@ function Header() {
             <div className="nav-menus">
               <ul>
                 <li>
+                  <Link className="next-link-header" href="/knowledgebase">
+                    Knowledgebase
+                  </Link>
+                </li>
+                <li>
                   <Link className="next-link-header" href="/north-america">
-                    N.America
+                    North America
                   </Link>
                 </li>
                 <li>
                   <Link className="next-link-header" href="/south-america">
-                    S.America
+                    South America
                   </Link>
                 </li>
                 <li>
@@ -57,18 +62,15 @@ function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="next-link-header" href="/knowledgebase">
+                  <Link className="next-link-header" href="/antartica">
                     Knowledgebase
                   </Link>
                 </li>
               </ul>
             </div>
-
-            {/* <Link href='/menu-bar' className="hamburger-icon" >
-                        ☰
-                    </Link> */}
-            <HamburgerIcon />
           </div>
+
+          <HamburgerIcon />
         </div>
       </header>
     );
