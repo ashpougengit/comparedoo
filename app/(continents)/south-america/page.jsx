@@ -2,6 +2,7 @@ import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner'
 import CountriesListSouthAmerica from '@/components/pages/continents/south-america/CountriesListSouthAmerica'
 import MapAndDescriptionSouthAmerica from '@/components/pages/continents/south-america/MapAndDescriptionSouthAmerica'
 import SearchBox from '@/components/search-box/SearchBox';
+import { getCountryByIP } from '@/lib/array-list/allCountriesList';
 import { currentYear, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 
 // generateMetadata function
@@ -15,11 +16,13 @@ export async function generateMetadata() {
   };
 }
 
-function SouthAmerica() {
+async function SouthAmerica() {
   const formattedDate = getFormattedDate()
+  const userCountry = await getCountryByIP()
+
   return (
-    <>
-      <SearchBox />
+      <>
+          <SearchBox userCountry={userCountry} />
 
       <AdsHeaderBanner />
 

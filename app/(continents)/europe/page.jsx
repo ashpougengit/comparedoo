@@ -2,6 +2,7 @@ import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner'
 import CountriesListEurope from '@/components/pages/continents/europe/CountriesListEurope'
 import MapAndDescriptionEurope from '@/components/pages/continents/europe/MapAndDescriptionEurope'
 import SearchBox from '@/components/search-box/SearchBox';
+import { getCountryByIP } from '@/lib/array-list/allCountriesList';
 import { currentYear, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 
 // generateMetadata function
@@ -15,11 +16,13 @@ export async function generateMetadata() {
   };
 }
 
-function Europe() {
+async function Europe() {
   const formattedDate = getFormattedDate()
-  return (
-    <>
-      <SearchBox />
+  const userCountry = await getCountryByIP()
+
+    return (
+        <>
+            <SearchBox userCountry={userCountry} />
       
       <AdsHeaderBanner />
 

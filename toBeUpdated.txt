@@ -6,7 +6,7 @@
 
 - h1: Geographical factors (absent in single state general info page )
 
-- href="/contact-us"
+- href="/contact-us"                          ////////////////////////////
 
 - hamburger menu                              ////////////////////////////
 
@@ -54,3 +54,13 @@ standard of living country vs country
 - two Georgia                                         +++++++++++++**************
 
 - Threetabs sticky on back scroll                    ............................
+
+- ui for error handling pages
+
+- transition in search box
+
+- search-box-second-div-image.png
+
+- fav icon
+
+- "unemploymentRate", "employmentRate"(knowledgebase)

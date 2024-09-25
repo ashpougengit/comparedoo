@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { allEntities } from '@/lib/array-list/allEntitiesList';
 import { allCountries } from '@/lib/array-list/allCountriesList';
 import { USStates } from '@/lib/array-list/allUSStates';
-import { titleCased } from '@/lib/format/format';
+import { titleCased, toURLFormat } from '@/lib/format/format';
 import Loading from '../loading/Loading';
 
 export default function SearchBox({ userCountry, slug1, slug2 = null }) {
@@ -41,7 +41,7 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
     useEffect(() => {
         if (input1 && input2) {
             setLoading(true);
-            router.push(`/comparison/${input1.toLowerCase().split(' ').join('-')}/${input2.toLowerCase().split(' ').join('-')}`);
+            router.push(`/comparison/${toURLFormat(input1)}/${toURLFormat(input2)}`);
             if (slug1 === input1 && slug2 === input2) {
                 setLoading(false);
             }
