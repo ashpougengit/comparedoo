@@ -1,7 +1,7 @@
 import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
 import SearchBox from "@/components/search-box/SearchBox"
 import { getCountryByIP } from "@/lib/array-list/allCountriesList"
-import { commonIndicators, countriesUniqueIndicators, KnowledgebaseIndicators, statesUniqueIndicators } from "@/lib/array-list/indicators"
+import { commonIndicators, countriesUniqueIndicators, statesUniqueIndicators } from "@/lib/array-list/indicators"
 import { getFormattedDate } from "@/lib/date-and-time/dateAndTime"
 import { camelToTitleCase, toURLFormat } from "@/lib/format/format"
 import Image from "next/image"
@@ -118,7 +118,7 @@ async function KnowledgebaseHome() {
                 </h2>
               </div>
 
-              <Link href={`/${toURLFormat(indicator)}/of-all-us-states`} className="read-here-link">Read Here...</Link>
+              <Link href={`/${toURLFormat(indicator)}-of-all-us-states`} className="read-here-link">Read Here...</Link>
             </div>
           ))
         }

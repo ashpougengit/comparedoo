@@ -60,6 +60,7 @@ export default function ScrollToTopBottom() {
             justifyContent: 'center',
             alignItems: 'center',
             boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.6)',
+            zIndex:9999
           }}
           aria-label="Scroll to top"
         >

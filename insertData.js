@@ -706,6 +706,9 @@ const insertMany = (stmt, data, tableDefinition) => {
     for (const row of rows) {
       try {
         const values = Object.entries(row).map(([key, value]) => {
+          if (key === 'HDI' || key === 'unitValueInUSD') {
+            return value; // Return the value without modification
+          }
           // Check if the key is 'population' and stringify it if it's an array
           if (key === 'population' && Array.isArray(value)) {
             value = JSON.stringify(value);

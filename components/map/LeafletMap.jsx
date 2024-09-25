@@ -67,9 +67,10 @@ const LeafletMap = ({ entity1, entity2, city1, city2 }) => {
     }, [entity1, entity2, city1, city2]);
 
     return (
-        <Suspense fallback={<p className={classes.loading}>Loading data...</p>}>
-            <div id="map" style={{ height: '50rem', width: '90rem' }}></div>
-        </Suspense>
+        // <Suspense fallback={<p className={classes.loading}>Loading data...</p>}>
+        //     <div id="map" style={{ height: '50rem', width: '90rem' }}></div>
+        // </Suspense>
+        <div id="map" style={{ height: '50rem', width: '90rem' }}></div>
 
     )
 };
