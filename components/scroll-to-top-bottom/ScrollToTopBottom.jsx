@@ -20,7 +20,7 @@ export default function ScrollToTopBottom() {
   // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0,
+      top: 120,
       behavior: 'smooth',
     });
   };
@@ -28,7 +28,7 @@ export default function ScrollToTopBottom() {
   // Scroll to bottom function
   const scrollToBottom = () => {
     window.scrollTo({
-      top: document.documentElement.scrollHeight,
+      top: document.documentElement.scrollHeight - window.innerHeight - 560,
       behavior: 'smooth',
     });
   };

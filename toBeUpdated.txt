@@ -51,6 +51,6 @@ standard of living country vs country
 
 - check all country names                             +++++++++++++**************
 
-- two Georgia                                         +++++++++++++**************
-
 - Threetabs sticky on back scroll                    ............................
+
+- fill attribute changed
