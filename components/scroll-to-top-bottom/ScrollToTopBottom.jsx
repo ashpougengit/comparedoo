@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useEffect, useState } from 'react';
 
@@ -8,7 +8,11 @@ export default function ScrollToTopBottom() {
   // Show buttons when page is scrolled beyond 300px
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 300 || window.scrollY + window.innerHeight < document.documentElement.scrollHeight);
+      setIsVisible(
+        window.scrollY > 300 ||
+          window.scrollY + window.innerHeight <
+            document.documentElement.scrollHeight
+      );
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -35,15 +39,17 @@ export default function ScrollToTopBottom() {
 
   return (
     isVisible && (
-      <div style={{
-        position: 'fixed',
-        right: '20px',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '20px', // Space between the buttons
-      }}>
+      <div
+        style={{
+          position: 'fixed',
+          right: '20px',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '20px', // Space between the buttons
+        }}
+      >
         {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
@@ -60,7 +66,7 @@ export default function ScrollToTopBottom() {
             justifyContent: 'center',
             alignItems: 'center',
             boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.6)',
-            zIndex:9999
+            zIndex: 9999,
           }}
           aria-label="Scroll to top"
         >

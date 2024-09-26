@@ -1,9 +1,10 @@
-import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
-import SearchBox from "@/components/search-box/SearchBox"
-import { getCountryByIP } from "@/lib/array-list/allCountriesList"
+import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner';
+import SearchBox from '@/components/search-box/SearchBox';
+import { getCountryByIP } from '@/lib/array-list/allCountriesList';
 import {
   commonIndicators,
   countriesUniqueIndicators,
+  KnowledgebaseIndicators,
   statesUniqueIndicators,
 } from '@/lib/array-list/indicators';
 import { getFormattedDate } from '@/lib/date-and-time/dateAndTime';
@@ -151,7 +152,7 @@ async function KnowledgebaseHome() {
             </div>
 
             <Link
-              href={`/${toURLFormat(indicator)}-of-all-us-states`}
+              href={`/${toURLFormat(indicator)}/of-all-us-states`}
               className="read-here-link"
             >
               Read Here...
@@ -163,4 +164,4 @@ async function KnowledgebaseHome() {
   );
 }
 
-export default KnowledgebaseHome
+export default KnowledgebaseHome;

@@ -51,9 +51,4 @@ standard of living country vs country
 
 - Threetabs sticky on back scroll                    ............................
 
--layout="fill"
-objectFit="contain"attribute changed
-
-- ScrollToTopBottom (media query)                    ////////////////////////////
-
-- rain, cloud images
+- fill attribute changed
