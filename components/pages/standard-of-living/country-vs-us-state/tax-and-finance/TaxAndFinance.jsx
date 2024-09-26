@@ -13,27 +13,27 @@ function TaxAndFinance({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slu
     const slug2SalesTaxRates = slug2StandardInfo.salesTaxRates
     const slug2PropertyTaxRates = slug2StandardInfo.propertyTaxRates
     const slug2CorporateTaxRates = slug2StandardInfo.corporateTaxRates
-    
+
     return (
         <>
             <AdsHeaderBanner />
 
-            <div class="economic-factors-comparison">
-                <h2 class="pages-h2">Tax and Finance Factors Information</h2>
+            <div className="economic-factors-comparison">
+                <h2 className="pages-h2">Tax and Finance Factors Information</h2>
             </div>
-            <div class="tax-factors-comparison-div1">
-                <table class="indicators-first-entity-and-second-entity-div1">
+            <div className="tax-factors-comparison-div1">
+                <table className="indicators-first-entity-and-second-entity-div1">
                     <thead>
-                        <tr class="first-tr">
+                        <tr className="first-tr">
                             <th>
-                                <div class="heading-map-name-flag">
-                                    <div class="right-indicator">
+                                <div className="heading-map-name-flag">
+                                    <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
                                             fill alt="Image representing an indicator" />
                                     </div>
-                                    <div class="indicator-text">Indicators</div>
-                                    <div class="left-indicator">
+                                    <div className="indicator-text">Indicators</div>
+                                    <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
                                             fill alt="Image illustrating an indicator" />
@@ -72,97 +72,97 @@ function TaxAndFinance({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slu
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="income-tax-rates-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="income-tax-rates-text">
                                         Income Tax Rates
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/income-tax-rates-states-image.png"
                                         fill alt="Image representing Income Tax Rates of any specific country or state" />
                                 </div>
                             </td>
                             <td
-                                class="income-tax-rates-answer-first-entity all-indicator-answers">
+                                className="income-tax-rates-answer-first-entity all-indicator-answers">
                                 {formatPercentage(slug1IncomeTaxRates)}
                             </td>
                             <td
-                                class="income-tax-rates-answer-second-entity all-indicator-answers">
+                                className="income-tax-rates-answer-second-entity all-indicator-answers">
                                 {formatPercentage(slug2IncomeTaxRates)}
                             </td>
                         </tr>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="sales-tax-rates-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="sales-tax-rates-text">
                                         Sales Tax Rates
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/sales-tax-rates-states-image.png"
                                         fill alt="Image representing Sales Tax Rates of any specific country or state" />
                                 </div>
                             </td>
-                            <td class="sales-tax-rates-answer-first-entity all-indicator-answers">
+                            <td className="sales-tax-rates-answer-first-entity all-indicator-answers">
                                 {formatPercentage(slug1SalesTaxRates)}
                             </td>
                             <td
-                                class="sales-tax-rates-answer-second-entity all-indicator-answers">
+                                className="sales-tax-rates-answer-second-entity all-indicator-answers">
                                 {formatPercentage(slug2SalesTaxRates)}
                             </td>
                         </tr>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="property-tax-rates-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="property-tax-rates-text">
                                         Property Tax Rates
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/property-tax-rates-states-image.png"
                                         fill alt="Image representing Property Tax Rates of any specific country or state" />
                                 </div>
                             </td>
                             <td
-                                class="property-tax-rates-answer-first-entity all-indicator-answers">
+                                className="property-tax-rates-answer-first-entity all-indicator-answers">
                                 {formatPercentage(slug1PropertyTaxRates)}
                             </td>
                             <td
-                                class="property-tax-rates-answer-second-entity all-indicator-answers">
+                                className="property-tax-rates-answer-second-entity all-indicator-answers">
                                 {formatPercentage(slug2PropertyTaxRates)}
                             </td>
                         </tr>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="corporate-tax-rates-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="corporate-tax-rates-text">
                                         Corporate Tax Rates
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/corporate-tax-rates-states-image.png"
                                         fill alt="Image representing Corporate Tax Rates of any specific country or state" />
                                 </div>
                             </td>
                             <td
-                                class="corporate-tax-rates-answer-first-entity all-indicator-answers">
+                                className="corporate-tax-rates-answer-first-entity all-indicator-answers">
                                 {formatPercentage(slug1CorporateTaxRates)}
                             </td>
                             <td
-                                class="corporate-tax-rates-answer-second-entity all-indicator-answers">
+                                className="corporate-tax-rates-answer-second-entity all-indicator-answers">
                                 {formatPercentage(slug2CorporateTaxRates)}
                             </td>
                         </tr>

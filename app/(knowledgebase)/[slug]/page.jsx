@@ -39,7 +39,7 @@ async function KnowledgeBase({ params }) {
   const isCountry = slug.includes('countries');
   const trimmedSlug = slug.replace(/of-all(countries|us-states)/, '');
   let indicator = toCamelCase(trimmedSlug);
-  
+
   const titleCasedIndicator = camelToTitleCase(indicator, isCountry);
 
   const indicatorType = indicatorsGeneral.includes(indicator) ? 'general' : 'standard';
@@ -225,7 +225,7 @@ async function KnowledgeBase({ params }) {
                   </thead>
 
                   <tbody>
-                    {arr.map((obj, index) => {
+                    {arr.map((obj, index) => {                      
                       return (
                         <tr key={index}>
                           <td className="basic-info-knowledgebase">
@@ -270,13 +270,13 @@ async function KnowledgeBase({ params }) {
           );
         })}
 
-        <div class="last-paragraph-of-the-page">
-          <div class="last-para-single-div">
+        <div className="last-paragraph-of-the-page">
+          <div className="last-para-single-div">
             <p>
               We hope you enjoyed the detailed guide on{' '}
               <strong>
                 the List of
-                <span class="knowledgebase-indicator">
+                <span className="knowledgebase-indicator">
                   {' '}
                   {titleCasedIndicator}{' '}
                 </span>
@@ -294,11 +294,11 @@ async function KnowledgeBase({ params }) {
           </div>
         </div>
 
-        <div class="individual-country-vs-others-list-boxes-grids">
+        <div className="individual-country-vs-others-list-boxes-grids">
           {randomList.map((value, index) => {
             return (
               <Link href={`/${toURLFormat(value)}-of-all-${isCountry ? 'countries' : 'us-states'}`} key={index}>
-                <div class="individual-country-vs-others-map-name-flag" >
+                <div className="individual-country-vs-others-map-name-flag" >
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${toURLFormat(value)}-image-for-knowledgebase.png`}

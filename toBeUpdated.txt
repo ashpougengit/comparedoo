@@ -14,8 +14,6 @@
 
 - <Image />(search box and header img tag not changed)+++++++++++++**************
 
-- unique indicators of country or state(knowledgebase)+++++++++++++**************
-
 - Taxes on Exports(India)(Standard) is Yet to Update coz it is 0.00493119659888326
 
 - Failed to find font override values for font `Nunito Sans`+++++++++++++**************
@@ -56,3 +54,7 @@ standard of living country vs country
 - fill attribute changed
 
 - ScrollToTopBottom (media query)                    ////////////////////////////
+
+- rain, cloud images
+
+- "largestCity": "Sydney (metropolitan) <br /> Melbourne (urban)"
