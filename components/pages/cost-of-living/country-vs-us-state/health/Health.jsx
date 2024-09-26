@@ -57,7 +57,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      fill alt="Image representing an indicator" />
+                     layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                   </div>
 
                   <div className="indicator-text">Indicators</div>
@@ -65,7 +66,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      fill alt="Image illustrating an indicator" />
+                     layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                   </div>
                 </div>
               </th>
@@ -73,13 +75,15 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${slug1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug1LowerCase}`} />
+                    <Image src={`/images/${slug1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug1LowerCase}`} />
                   </div>
 
                   <div className="first-entity-name-pages-comparison">{slug1}</div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${slug1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug1LowerCase}`} />
+                    <Image src={`/images/${slug1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug1LowerCase}`} />
                   </div>
                 </div>
               </th>
@@ -87,13 +91,15 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${slug2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug2LowerCase}`} />
+                    <Image src={`/images/${slug2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug2LowerCase}`} />
                   </div>
 
                   <div className="second-entity-name-pages-comparison"> {slug2} </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${slug2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2LowerCase}`} />
+                    <Image src={`/images/${slug2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug2LowerCase}`} />
                   </div>
                 </div>
               </th>
@@ -107,7 +113,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/doctors-visit-image.png"
-                    fill alt="Image Describing Doctors Visit" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Doctors Visit" />
                 </div>
               </td>
 
@@ -125,7 +132,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/specialist-visit-image.png"
-                    fill alt="Image Describing Specialists Visit" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Specialists Visit" />
                 </div>
               </td>
 
@@ -143,7 +151,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/dentist-visit-image.png"
-                    fill alt="Image Describing Dentist Visit" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Dentist Visit" />
                 </div>
               </td>
 
@@ -161,7 +170,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/eye-exam-image.png"
-                    fill alt="Image Describing Eye Exam" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Eye Exam" />
                 </div>
               </td>
 
@@ -179,7 +189,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/mental-health-counseling.png"
-                    fill alt="Image Describing Mental Health Counseling" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Mental Health Counseling" />
                 </div>
               </td>
 
@@ -199,7 +210,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/preventive-health-screening.png"
-                    fill alt="Image Describing Preventive Health Screening" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Preventive Health Screening" />
                 </div>
               </td>
 
@@ -219,7 +231,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/physical-therapy-image.png"
-                    fill alt="Image Describing Physical Therapy" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Physical Therapy" />
                 </div>
               </td>
 
@@ -237,7 +250,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/emergency-room-visit-image.png"
-                    fill alt="Image Describing Emergency Room Visit" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Emergency Room Visit" />
                 </div>
               </td>
 
@@ -256,7 +270,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/hospital-stay-per-night-image.png"
-                    fill alt="Image Describing Hospital Stay Per Night" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Hospital Stay Per Night" />
                 </div>
               </td>
 
@@ -276,7 +291,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/vaccinations-charge-image.png"
-                    fill alt="Image Describing Vaccinations" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Vaccinations" />
                 </div>
               </td>
 
@@ -294,7 +310,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/prescription-medication-image.png"
-                    fill alt="Image Describing Prescription Medication" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Prescription Medication" />
                 </div>
               </td>
 
@@ -314,7 +331,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/over-the-counter-medication-image.png"
-                    fill alt="Image Describing Over the Counter Medication" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Over the Counter Medication" />
                 </div>
               </td>
 
@@ -334,7 +352,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/health-insurance-premiums-image.png"
-                    fill alt="Image Describing Health Insurance Premiums" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Health Insurance Premiums" />
                 </div>
               </td>
 
@@ -354,7 +373,8 @@ function Health({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, sl
                 <div className="basic-information-images">
                   <Image
                     src="/images/health-insurance-deductibles-image.png"
-                    fill alt="Image Describing Health Insurance Deductibles" />
+                   layout="fill"
+objectFit="contain"alt="Image Describing Health Insurance Deductibles" />
                 </div>
               </td>
 

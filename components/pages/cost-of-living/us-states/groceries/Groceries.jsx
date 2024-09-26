@@ -32,215 +32,344 @@ function Groceries({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
     const moreOrLessPercentage = state1TotalCost > state2TotalCost ? 'more' : 'less'
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Groceries Cost Comparison</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">Groceries Cost Comparison</h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state1LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state1LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state1LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{state1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {state1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state1LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state1LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state1LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state2LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state2LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state2LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {state2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {state2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state2LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state2LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state2LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Long Grain Rice (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/rice-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing rice cost per month"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Long Grain Rice (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/rice-1-kg-image.png" fill alt="Image Describing rice cost per month" />
-                                </div>
-                            </td>
+                <td className="rice-1-kg-first-entity all-indicator-answers">
+                  {state1Rice1Kg
+                    ? `${formatNumberWithCommas(state1Rice1Kg)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="rice-1-kg-second-entity all-indicator-answers">
+                  {state2Rice1Kg
+                    ? `${formatNumberWithCommas(state2Rice1Kg)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="rice-1-kg-first-entity all-indicator-answers">
-                                {state1Rice1Kg ? `${formatNumberWithCommas(state1Rice1Kg)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="rice-1-kg-second-entity all-indicator-answers">
-                                {state2Rice1Kg ? `${formatNumberWithCommas(state2Rice1Kg)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Milk (1 Liter)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/milk-1-liter-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing milk cost per month"
+                    />
+                  </div>
+                </td>
 
+                <td className="milk-1-liter-first-entity all-indicator-answers">
+                  {state1MilkOneLiter
+                    ? `${formatNumberWithCommas(state1MilkOneLiter)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="milk-1-liter-second-entity all-indicator-answers">
+                  {state2MilkOneLiter
+                    ? `${formatNumberWithCommas(state2MilkOneLiter)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Water (1 Liter)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/water-1-liter-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing water cost per month"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Milk (1 Liter)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/milk-1-liter-image.png" fill alt="Image Describing milk cost per month" />
-                                </div>
-                            </td>
+                <td className="water-1-liter-first-entity all-indicator-answers">
+                  {state1Water1Liter
+                    ? `${formatNumberWithCommas(state1Water1Liter)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="water-1-liter-second-entity all-indicator-answers">
+                  {state2Water1Liter
+                    ? `${formatNumberWithCommas(state2Water1Liter)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="milk-1-liter-first-entity all-indicator-answers">
-                                {state1MilkOneLiter ? `${formatNumberWithCommas(state1MilkOneLiter)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="milk-1-liter-second-entity all-indicator-answers">
-                                {state2MilkOneLiter ? `${formatNumberWithCommas(state2MilkOneLiter)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Bread (500 gm)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/bread-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing bread cost per month"
+                    />
+                  </div>
+                </td>
 
+                <td className="bread-first-entity all-indicator-answers">
+                  {state1Bread500g
+                    ? `${formatNumberWithCommas(state1Bread500g)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="bread-second-entity all-indicator-answers">
+                  {state2Bread500g
+                    ? `${formatNumberWithCommas(state2Bread500g)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Water (1 Liter)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/water-1-liter-image.png" fill alt="Image Describing water cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Eggs (1 Dozen)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/eggs-dozen-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing eggs cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="water-1-liter-first-entity all-indicator-answers">
-                                {state1Water1Liter ? `${formatNumberWithCommas(state1Water1Liter)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="water-1-liter-second-entity all-indicator-answers">
-                                {state2Water1Liter ? `${formatNumberWithCommas(state2Water1Liter)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="eggs-first-entity all-indicator-answers">
+                  {state1EggsDozen
+                    ? `${formatNumberWithCommas(state1EggsDozen)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="eggs-second-entity all-indicator-answers">
+                  {state2EggsDozen
+                    ? `${formatNumberWithCommas(state2EggsDozen)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Bread (500 gm)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/bread-image.png" fill alt="Image Describing bread cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Cheese (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/cheese-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing cheese cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="bread-first-entity all-indicator-answers">
-                                {state1Bread500g ? `${formatNumberWithCommas(state1Bread500g)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="bread-second-entity all-indicator-answers">
-                                {state2Bread500g ? `${formatNumberWithCommas(state2Bread500g)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="cheese-1-kg-first-entity all-indicator-answers">
+                  {state1Cheese1Kg
+                    ? `${formatNumberWithCommas(state1Cheese1Kg)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="cheese-1-kg-second-entity all-indicator-answers">
+                  {state2Cheese1Kg
+                    ? `${formatNumberWithCommas(state2Cheese1Kg)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Eggs (1 Dozen)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/eggs-dozen-image.png" fill alt="Image Describing eggs cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Chicken Breast (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/chicken-breast-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing chicken cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="eggs-first-entity all-indicator-answers">
-                                {state1EggsDozen ? `${formatNumberWithCommas(state1EggsDozen)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="eggs-second-entity all-indicator-answers">
-                                {state2EggsDozen ? `${formatNumberWithCommas(state2EggsDozen)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="chicken-1-kg-first-entity all-indicator-answers">
+                  {state1ChickenBreasts1Kg
+                    ? `${formatNumberWithCommas(state1ChickenBreasts1Kg)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="chicken-1-kg-second-entity all-indicator-answers">
+                  {state2ChickenBreasts1Kg
+                    ? `${formatNumberWithCommas(state2ChickenBreasts1Kg)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Cheese (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/cheese-1-kg-image.png" fill alt="Image Describing cheese cost per month" />
-                                </div>
-                            </td>
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <h3>
+              Does the Groceries cost more in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {state1}{' '}
+              </span>{' '}
+              than in
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {state2}
+              </span>
+              ?
+            </h3>
+            <p>
+              In{' '}
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {state1}
+              </span>
+              , the cost of 1 Liter Water and 1 Liter Milk is{' '}
+              <strong>
+                <span className="water-and-milk-dollar-price-calculation">
+                  {' '}
+                  {waterAndMilkTimes}{' '}
+                </span>{' '}
+                times{' '}
+              </strong>
+              <span className="milk-water-more-less-calculation">
+                {' '}
+                {moreOrLessTimes}{' '}
+              </span>{' '}
+              expensive than the cost in
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {state2}
+              </span>
+              .
+            </p>
 
-                            <td className="cheese-1-kg-first-entity all-indicator-answers">
-                                {state1Cheese1Kg ? `${formatNumberWithCommas(state1Cheese1Kg)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="cheese-1-kg-second-entity all-indicator-answers">
-                                {state2Cheese1Kg ? `${formatNumberWithCommas(state2Cheese1Kg)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Chicken Breast (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/chicken-breast-1-kg-image.png"
-                                        fill alt="Image Describing chicken cost per month" />
-                                </div>
-                            </td>
-
-                            <td className="chicken-1-kg-first-entity all-indicator-answers">
-                                {state1ChickenBreasts1Kg ? `${formatNumberWithCommas(state1ChickenBreasts1Kg)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="chicken-1-kg-second-entity all-indicator-answers">
-                                {state2ChickenBreasts1Kg ? `${formatNumberWithCommas(state2ChickenBreasts1Kg)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
-
-
-                    <h3>
-                        Does the Groceries cost more in
-                        <span className="first-entity-name-pages-paragraph"> {state1} </span> than in
-                        <span className="second-entity-name-pages-paragraph"> {state2}</span>?
-                    </h3>
-                    <p>
-                        In <span className="first-entity-name-pages-paragraph"> {state1}</span>, the cost of 1 Liter Water and 1 Liter
-                        Milk is <strong><span className="water-and-milk-dollar-price-calculation"> {waterAndMilkTimes} </span> times </strong>
-                        <span className="milk-water-more-less-calculation"> {moreOrLessTimes} </span> expensive
-
-                        than the cost in
-                        <span className="second-entity-name-pages-paragraph"> {state2}</span>.
-                    </p>
-
-                    <p>
-                        If you lived in
-                        <span className="first-entity-name-pages-paragraph"> {state1}</span>, instead of
-                        <span className="second-entity-name-pages-paragraph"> {state2}</span>, you would have
-                        to pay
-                        <strong>
-                            <span className="groceries-calculation"> {percentageDifference}%</span> <span className="groceries-more-or-less-calculation"> {moreOrLessPercentage} </span></strong>
-                        for Groceries.
-                    </p>
-                </div>
-            </div>
-
-        </>
-    )
+            <p>
+              If you lived in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {state1}
+              </span>
+              , instead of
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {state2}
+              </span>
+              , you would have to pay
+              <strong>
+                <span className="groceries-calculation">
+                  {' '}
+                  {percentageDifference}%
+                </span>{' '}
+                <span className="groceries-more-or-less-calculation">
+                  {' '}
+                  {moreOrLessPercentage}{' '}
+                </span>
+              </strong>
+              for Groceries.
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default Groceries

@@ -43,13 +43,15 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
                                     <div className="indicator-text">
                                         Indicators
                                     </div>
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -57,13 +59,15 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${state1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state1URLCase}`} />
+                                        <Image src={`/images/${state1URLCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${state1URLCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{state1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state1URLCase}`} />
+                                        <Image src={`/images/${state1URLCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${state1URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -71,13 +75,15 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${state2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state2URLCase}`} />
+                                        <Image src={`/images/${state2URLCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${state2URLCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {state2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state2URLCase}`} />
+                                        <Image src={`/images/${state2URLCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${state2URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -92,7 +98,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/agriculture-forestry-states-images.png" fill alt="Image Depicting the total Agriculture, Forestry and Fishing Sectors jobs available in any specific country or state" />
+                                    <Image src="/images/agriculture-forestry-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Agriculture, Forestry and Fishing Sectors jobs available in any specific country or state" />
                                 </div>
                             </td>
                             <td className="agriculture-forestry-states-answer-first-entity all-indicator-answers">
@@ -112,7 +119,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/construction-states-images.png" fill alt="Image Depicting the total Construction Sector workers percentage in any specific country or state" />
+                                    <Image src="/images/construction-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Construction Sector workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
@@ -132,7 +140,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/manufacturing-states-images.png" fill alt="Image Depicting the total Manufacturing Sector workers percentage in any specific country or state" />
+                                    <Image src="/images/manufacturing-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Manufacturing Sector workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
@@ -150,7 +159,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/transportation-and-warehousing-states-images.png" fill alt="Image Depicting the total Transportation and Warehousing Sectors workers percentage in any specific country or state" />
+                                    <Image src="/images/transportation-and-warehousing-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Transportation and Warehousing Sectors workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
@@ -170,7 +180,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/information-states-images.png" fill alt="Image Depicting the total IT and Information Sectors workers percentage in any specific country or state" />
+                                    <Image src="/images/information-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total IT and Information Sectors workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
@@ -190,7 +201,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/arts-and-entertainment-states-images.png" fill alt="Image Depicting the total Arts and Entertainment workers percentage in any specific country or state" />
+                                    <Image src="/images/arts-and-entertainment-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Arts and Entertainment workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
@@ -208,7 +220,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/education-and-healthcare-states-images.png" fill alt="Image Depicting the total Education and Healthcare Sectors workers percentage in any specific country or state" />
+                                    <Image src="/images/education-and-healthcare-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Education and Healthcare Sectors workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
@@ -226,7 +239,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/real-estate-states-images.png" fill alt="Image Depicting the total Finance and Real Estate Sectors workers percentage in any specific country or state" />
+                                    <Image src="/images/real-estate-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Finance and Real Estate Sectors workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
@@ -246,7 +260,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/wholesale-trade-states-images.png" fill alt="Image Depicting the total Wholesale Trade workers percentage in any specific country or state" />
+                                    <Image src="/images/wholesale-trade-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Wholesale Trade workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
@@ -266,7 +281,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/retail-trade-states-images.png" fill alt="Image Depicting the total Retail Trade workers percentage in any specific country or state" />
+                                    <Image src="/images/retail-trade-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Retail Trade workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
@@ -286,7 +302,8 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
                                     </div>
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/public-administration-states-images.png" fill alt="Image Depicting the total Public Administration workers percentage in any specific country or state" />
+                                    <Image src="/images/public-administration-states-images.png"layout="fill"
+objectFit="contain"alt="Image Depicting the total Public Administration workers percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">

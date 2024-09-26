@@ -35,13 +35,15 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -49,13 +51,15 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${countryLowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${countryLowerCase}`} />
+                                        <Image src={`/images/${countryLowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${countryLowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${countryLowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${countryLowerCase}`} />
+                                        <Image src={`/images/${countryLowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${countryLowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -70,7 +74,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Doctor Visit</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/doctors-visit-image.png" fill alt="Image Describing Doctors Visit" />
+                                    <Image src="/images/doctors-visit-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Doctors Visit" />
                                 </div>
                             </td>
 
@@ -85,7 +90,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Specialist Visit</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/specialist-visit-image.png" fill alt="Image Describing Specialists Visit" />
+                                    <Image src="/images/specialist-visit-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Specialists Visit" />
                                 </div>
                             </td>
 
@@ -100,7 +106,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Dentist Visit</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/dentist-visit-image.png" fill alt="Image Describing Dentist Visit" />
+                                    <Image src="/images/dentist-visit-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Dentist Visit" />
                                 </div>
                             </td>
 
@@ -116,7 +123,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Eye Exam</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/eye-exam-image.png" fill alt="Image Describing Eye Exam" />
+                                    <Image src="/images/eye-exam-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Eye Exam" />
                                 </div>
                             </td>
 
@@ -131,7 +139,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">Mental Health Counseling</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/mental-health-counseling.png"
-                                        fill alt="Image Describing Mental Health Counseling" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Mental Health Counseling" />
                                 </div>
                             </td>
 
@@ -146,7 +155,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">Preventive Health Screening</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/preventive-health-screening.png"
-                                        fill alt="Image Describing Preventive Health Screening" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Preventive Health Screening" />
                                 </div>
                             </td>
 
@@ -161,7 +171,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Physical Therapy</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/physical-therapy-image.png" fill alt="Image Describing Physical Therapy" />
+                                    <Image src="/images/physical-therapy-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Physical Therapy" />
                                 </div>
                             </td>
 
@@ -175,7 +186,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Emergency Room Visit</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/emergency-room-visit-image.png" fill alt="Image Describing Emergency Room Visit" />
+                                    <Image src="/images/emergency-room-visit-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Emergency Room Visit" />
                                 </div>
                             </td>
 
@@ -190,7 +202,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">Hospital Stay Per Night</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/hospital-stay-per-night-image.png"
-                                        fill alt="Image Describing Hospital Stay Per Night" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Hospital Stay Per Night" />
                                 </div>
                             </td>
 
@@ -204,7 +217,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Vaccinations</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/vaccinations-charge-image.png" fill alt="Image Describing Vaccinations" />
+                                    <Image src="/images/vaccinations-charge-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Vaccinations" />
                                 </div>
                             </td>
 
@@ -219,7 +233,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">Prescription Medication</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/prescription-medication-image.png"
-                                        fill alt="Image Describing Prescription Medication" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Prescription Medication" />
                                 </div>
                             </td>
 
@@ -235,7 +250,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">Over the Counter Medication</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/over-the-counter-medication-image.png"
-                                        fill alt="Image Describing Over the Counter Medication" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Over the Counter Medication" />
                                 </div>
                             </td>
 
@@ -250,7 +266,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">Health Insurance Premiums</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/health-insurance-premiums-image.png"
-                                        fill alt="Image Describing Health Insurance Premiums" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Health Insurance Premiums" />
                                 </div>
                             </td>
 
@@ -265,7 +282,8 @@ function Health({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">Health Insurance Deductibles</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/health-insurance-deductibles-image.png"
-                                        fill alt="Image Describing Health Insurance Deductibles" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Health Insurance Deductibles" />
                                 </div>
                             </td>
 

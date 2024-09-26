@@ -45,13 +45,15 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -59,13 +61,15 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state1LowerCase}`} />
+                                        <Image src={`/images/${state1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${state1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{state1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state1LowerCase}`} />
+                                        <Image src={`/images/${state1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${state1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -73,13 +77,15 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state2LowerCase}`} />
+                                        <Image src={`/images/${state2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${state2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {state2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state2LowerCase}`} />
+                                        <Image src={`/images/${state2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${state2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -92,7 +98,8 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                             <td className="basic-info">
                                 <div className="all-indicators">Children&apos;s Jeans</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/children-jeans-image.png" fill alt="Image Describing Children Jeans" />
+                                    <Image src="/images/children-jeans-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Children Jeans" />
                                 </div>
                             </td>
 
@@ -110,7 +117,8 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                                 <div className="all-indicators">Children&apos;s Normal Sneakers</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/children-sneakers-image.png"
-                                        fill alt="Image Describing Children Normal Sneakers" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Children Normal Sneakers" />
                                 </div>
                             </td>
 
@@ -127,7 +135,8 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                                 <div className="all-indicators">Children&apos;s Winter Coat</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/children-winter-coat-image.png"
-                                        fill alt="Image Describing Children's Winter Coat" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Children's Winter Coat" />
                                 </div>
                             </td>
 
@@ -143,7 +152,8 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                             <td className="basic-info">
                                 <div className="all-indicators">Daycare for Infant</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/day-care-infant-image.png" fill alt="Image Describing Daycare for Infant" />
+                                    <Image src="/images/day-care-infant-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Daycare for Infant" />
                                 </div>
                             </td>
 
@@ -160,7 +170,8 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                             <td className="basic-info">
                                 <div className="all-indicators">Daycare for Toddler</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/day-care-toddler-image.png" fill alt="Image Describing Daycare for Toddler" />
+                                    <Image src="/images/day-care-toddler-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Daycare for Toddler" />
                                 </div>
                             </td>
 
@@ -177,7 +188,8 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                                 <div className="all-indicators">Childcare for Sick Days</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/children-care-for-sick-days-image.png"
-                                        fill alt="Image Describing Childcare for Sick Days" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Childcare for Sick Days" />
                                 </div>
                             </td>
 
@@ -194,7 +206,8 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                                 <div className="all-indicators">Early Childhood Education Programs</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/early-childhood-education-programs-image.png"
-                                        fill alt="Image Describing Early Childhood Education Programs" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Early Childhood Education Programs" />
                                 </div>
                             </td>
 
@@ -211,7 +224,8 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                                 <div className="all-indicators">Extra Curricular Activities</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/extra-curricular-activities-image.png"
-                                        fill alt="Image Describing Extra Curricular Activities" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Extra Curricular Activities" />
                                 </div>
                             </td>
 
@@ -227,7 +241,8 @@ function Childcare({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lowe
                             <td className="basic-info">
                                 <div className="all-indicators">Summer Camp for Kids</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/summer-camp-image.png" fill alt="Image Describing Summer Camp" />
+                                    <Image src="/images/summer-camp-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Summer Camp" />
                                 </div>
                             </td>
 

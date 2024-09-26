@@ -5,12 +5,13 @@ import { useRouter } from 'next/navigation';
 import { allEntities } from '@/lib/array-list/allEntitiesList';
 import { allCountries } from '@/lib/array-list/allCountriesList';
 import { USStates } from '@/lib/array-list/allUSStates';
-import { titleCased } from '@/lib/format/format';
+import { titleCased, toURLFormat } from '@/lib/format/format';
 import Loading from '../loading/Loading';
 
 export default function SearchBox({ userCountry, slug1, slug2 = null }) {
     const isSlug2 = slug2 !== null;
     let value1, value2;
+
     if (isSlug2) {
         value1 = slug1;
         value2 = slug2;
@@ -41,7 +42,7 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
     useEffect(() => {
         if (input1 && input2) {
             setLoading(true);
-            router.push(`/comparison/${input1.toLowerCase().split(' ').join('-')}/${input2.toLowerCase().split(' ').join('-')}`);
+            router.push(`/comparison/${toURLFormat(input1)}/${toURLFormat(input2)}`);
             if (slug1 === input1 && slug2 === input2) {
                 setLoading(false);
             }
@@ -152,7 +153,12 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
                     width="80"
                   />
                 ) : (
-                  ''
+                  <img
+                    src={`/images/${toURLFormat(userCountry)}-map-small.png`}
+                    alt={`Image illustrating the map of ${titleCased(userCountry)}`}
+
+                    width="80"
+                  />
                 )}
               </div>
               <div className="arrow-position-center-input">
@@ -241,10 +247,16 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
                   <img
                     src={`/images/${value2}-map-small.png`}
                     alt={`Image illustrating the map of ${titleCased(value2)}`}
+
                     width="80"
                   />
                 ) : (
-                  ''
+                  <img
+                    src={`/images/search-box-second-div-image.png`}
+                    alt='Search box second div image'
+                    
+                    width="80"
+                  />
                 )}
               </div>
               <div className="arrow-position-center-input">

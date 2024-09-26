@@ -3,6 +3,7 @@ import AllCountriesAntartica from '@/components/pages/continents/antartica/AllCo
 import InterestingFactsAntartica from '@/components/pages/continents/antartica/InterestingFactsAntartica'
 import MapAndDescriptionAntartica from '@/components/pages/continents/antartica/MapAndDescriptionAntartica'
 import SearchBox from '@/components/search-box/SearchBox';
+import { getCountryByIP } from '@/lib/array-list/allCountriesList';
 import { getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 
 // generateMetadata function
@@ -16,11 +17,13 @@ export async function generateMetadata() {
     };
 }
 
-function Antartica() {
+async function Antartica() {
     const formattedDate = getFormattedDate()
+    const userCountry = await getCountryByIP()
+    
     return (
         <>
-            <SearchBox />
+            <SearchBox userCountry={userCountry} />
 
             <AdsHeaderBanner />
 

@@ -48,7 +48,9 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      fill alt="Image representing an indicator"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing an indicator"
                     />
                   </div>
 
@@ -57,7 +59,9 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      fill alt="Image illustrating an indicator"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image illustrating an indicator"
                     />
                   </div>
                 </div>
@@ -66,13 +70,25 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${state1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state1LowerCase}`} />
+                    <Image
+                      src={`/images/${state1LowerCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${state1LowerCase}`}
+                    />
                   </div>
 
-                  <div className="first-entity-name-pages-comparison">{state1}</div>
+                  <div className="first-entity-name-pages-comparison">
+                    {state1}
+                  </div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${state1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state1LowerCase}`} />
+                    <Image
+                      src={`/images/${state1LowerCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${state1LowerCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -80,13 +96,26 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${state2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state2LowerCase}`} />
+                    <Image
+                      src={`/images/${state2LowerCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${state2LowerCase}`}
+                    />
                   </div>
 
-                  <div className="second-entity-name-pages-comparison"> {state2} </div>
+                  <div className="second-entity-name-pages-comparison">
+                    {' '}
+                    {state2}{' '}
+                  </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${state2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state2LowerCase}`} />
+                    <Image
+                      src={`/images/${state2LowerCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${state2LowerCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -102,16 +131,26 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-1-bedroom-flat-in-city-center-image.png"
-                    fill alt="Image Describing 1 bedroom apartment in City Center"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image Describing 1 bedroom apartment in City Center"
                   />
                 </div>
               </td>
 
               <td className="rent-1-bedroom-flat-in-city-center-answer-first-entity all-indicator-answers">
-                {state1Rent1bedroomflatInCityCenter ? `${formatNumberWithCommas(state1Rent1bedroomflatInCityCenter)} USD` : 'Yet to Update'}
+                {state1Rent1bedroomflatInCityCenter
+                  ? `${formatNumberWithCommas(
+                      state1Rent1bedroomflatInCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
               <td className="rent-1-bedroom-flat-in-city-center-answer-second-entity all-indicator-answers">
-                {state2Rent1bedroomflatInCityCenter ? `${formatNumberWithCommas(state2Rent1bedroomflatInCityCenter)} USD` : 'Yet to Update'}
+                {state2Rent1bedroomflatInCityCenter
+                  ? `${formatNumberWithCommas(
+                      state2Rent1bedroomflatInCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
             </tr>
 
@@ -123,16 +162,26 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-2-bedroom-flat-in-city-center-image.png"
-                    fill alt="Image Describing 2 bedroom apartment in City Center"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image Describing 2 bedroom apartment in City Center"
                   />
                 </div>
               </td>
 
               <td className="rent-2-bedroom-flat-in-city-center-answer-first-entity all-indicator-answers">
-                {state1Rent2bedroomflatInCityCenter ? `${formatNumberWithCommas(state1Rent2bedroomflatInCityCenter)} USD` : 'Yet to Update'}
+                {state1Rent2bedroomflatInCityCenter
+                  ? `${formatNumberWithCommas(
+                      state1Rent2bedroomflatInCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
               <td className="rent-2-bedroom-flat-in-city-center-answer-second-entity all-indicator-answers">
-                {state2Rent2bedroomflatInCityCenter ? `${formatNumberWithCommas(state2Rent2bedroomflatInCityCenter)} USD` : 'Yet to Update'}
+                {state2Rent2bedroomflatInCityCenter
+                  ? `${formatNumberWithCommas(
+                      state2Rent2bedroomflatInCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
             </tr>
 
@@ -144,16 +193,26 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-3-bedroom-flat-in-city-center-image.png"
-                    fill alt="Image Describing 3 bedroom apartment in City Center"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image Describing 3 bedroom apartment in City Center"
                   />
                 </div>
               </td>
 
               <td className="rent-3-bedroom-flat-in-city-center-answer-first-entity all-indicator-answers">
-                {state1Rent3bedroomflatInCityCenter ? `${formatNumberWithCommas(state1Rent3bedroomflatInCityCenter)} USD` : 'Yet to Update'}
+                {state1Rent3bedroomflatInCityCenter
+                  ? `${formatNumberWithCommas(
+                      state1Rent3bedroomflatInCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
               <td className="rent-3-bedroom-flat-in-city-center-answer-second-entity all-indicator-answers">
-                {state2Rent3bedroomflatInCityCenter ? `${formatNumberWithCommas(state2Rent3bedroomflatInCityCenter)} USD` : 'Yet to Update'}
+                {state2Rent3bedroomflatInCityCenter
+                  ? `${formatNumberWithCommas(
+                      state2Rent3bedroomflatInCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
             </tr>
 
@@ -165,16 +224,26 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-1-bedroom-flat-outside-city-center-image.png"
-                    fill alt="Image Describing 1 bedroom apartment outside City Center"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image Describing 1 bedroom apartment outside City Center"
                   />
                 </div>
               </td>
 
               <td className="rent-1-bedroom-flat-outside-city-center-answer-first-entity all-indicator-answers">
-                {state1Rent1bedroomflatOutsideCityCenter ? `${formatNumberWithCommas(state1Rent1bedroomflatOutsideCityCenter)} USD` : 'Yet to Update'}
+                {state1Rent1bedroomflatOutsideCityCenter
+                  ? `${formatNumberWithCommas(
+                      state1Rent1bedroomflatOutsideCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
               <td className="rent-1-bedroom-flat-outside-city-center-answer-second-entity all-indicator-answers">
-                {state2Rent1bedroomflatOutsideCityCenter ? `${formatNumberWithCommas(state2Rent1bedroomflatOutsideCityCenter)} USD` : 'Yet to Update'}
+                {state2Rent1bedroomflatOutsideCityCenter
+                  ? `${formatNumberWithCommas(
+                      state2Rent1bedroomflatOutsideCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
             </tr>
 
@@ -186,16 +255,26 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-2-bedroom-flat-outside-city-center-image.png"
-                    fill alt="Image Describing 2 bedroom apartment outside City Center"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image Describing 2 bedroom apartment outside City Center"
                   />
                 </div>
               </td>
 
               <td className="rent-2-bedroom-flat-outside-city-center-answer-first-entity all-indicator-answers">
-                {state1Rent2bedroomflatOutsideCityCenter ? `${formatNumberWithCommas(state1Rent2bedroomflatOutsideCityCenter)} USD` : 'Yet to Update'}
+                {state1Rent2bedroomflatOutsideCityCenter
+                  ? `${formatNumberWithCommas(
+                      state1Rent2bedroomflatOutsideCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
               <td className="rent-2-bedroom-flat-outside-city-center-answer-second-entity all-indicator-answers">
-                {state2Rent2bedroomflatOutsideCityCenter ? `${formatNumberWithCommas(state2Rent2bedroomflatOutsideCityCenter)} USD` : 'Yet to Update'}
+                {state2Rent2bedroomflatOutsideCityCenter
+                  ? `${formatNumberWithCommas(
+                      state2Rent2bedroomflatOutsideCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
             </tr>
 
@@ -207,16 +286,26 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-3-bedroom-flat-outside-city-center-image.png"
-                    fill alt="Image Describing 3 bedroom apartment outside City Center"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image Describing 3 bedroom apartment outside City Center"
                   />
                 </div>
               </td>
 
               <td className="rent-3-bedroom-flat-outside-city-center-answer-first-entity all-indicator-answers">
-                {state1Rent3bedroomflatOutsideCityCenter ? `${formatNumberWithCommas(state1Rent3bedroomflatOutsideCityCenter)} USD` : 'Yet to Update'}
+                {state1Rent3bedroomflatOutsideCityCenter
+                  ? `${formatNumberWithCommas(
+                      state1Rent3bedroomflatOutsideCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
               <td className="rent-3-bedroom-flat-outside-city-center-answer-second-entity all-indicator-answers">
-                {state2Rent3bedroomflatOutsideCityCenter ? `${formatNumberWithCommas(state2Rent3bedroomflatOutsideCityCenter)} USD` : 'Yet to Update'}
+                {state2Rent3bedroomflatOutsideCityCenter
+                  ? `${formatNumberWithCommas(
+                      state2Rent3bedroomflatOutsideCityCenter
+                    )} USD`
+                  : 'Yet to Update'}
               </td>
             </tr>
 
@@ -226,16 +315,22 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                 <div className="basic-information-images">
                   <Image
                     src="/images/mortgage-rates-per-month-image.png"
-                    fill alt="Image Describing Mortgage Rates Per Month"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image Describing Mortgage Rates Per Month"
                   />
                 </div>
               </td>
 
               <td className="mortgage-rates-per-month-index-answer-first-entity all-indicator-answers">
-                {state1MortgageRatesPerMonth ? `${state1MortgageRatesPerMonth} %` : 'Yet to Update'}
+                {state1MortgageRatesPerMonth
+                  ? `${state1MortgageRatesPerMonth} %`
+                  : 'Yet to Update'}
               </td>
               <td className="mortgage-rates-per-month-index-answer-second-entity all-indicator-answers">
-                {state2MortgageRatesPerMonth ? `${state2MortgageRatesPerMonth} %` : 'Yet to Update'}
+                {state2MortgageRatesPerMonth
+                  ? `${state2MortgageRatesPerMonth} %`
+                  : 'Yet to Update'}
               </td>
             </tr>
 
@@ -245,16 +340,22 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                 <div className="basic-information-images">
                   <Image
                     src="/images/real-estate-agents-comission-fees-image.png"
-                    fill alt="Image Describing Real Estate Agents Comission Fees"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image Describing Real Estate Agents Comission Fees"
                   />
                 </div>
               </td>
 
               <td className="real-estate-agents-commission-fees-answer-first-entity all-indicator-answers">
-                {state1RealEstateAgentsCommissionFees ? `${state1RealEstateAgentsCommissionFees} %` : 'Yet to Update'}
+                {state1RealEstateAgentsCommissionFees
+                  ? `${state1RealEstateAgentsCommissionFees} %`
+                  : 'Yet to Update'}
               </td>
               <td className="real-estate-agents-commission-fees-answer-second-entity all-indicator-answers">
-                {state2RealEstateAgentsCommissionFees ? `${state2RealEstateAgentsCommissionFees} %` : 'Yet to Update'}
+                {state2RealEstateAgentsCommissionFees
+                  ? `${state2RealEstateAgentsCommissionFees} %`
+                  : 'Yet to Update'}
               </td>
             </tr>
 
@@ -264,16 +365,22 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
                 <div className="basic-information-images">
                   <Image
                     src="/images/property-taxes-image.png"
-                    fill alt="Image Describing Property Taxes in any given country"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image Describing Property Taxes in any given country"
                   />
                 </div>
               </td>
 
               <td className="property-taxes-answer-first-entity all-indicator-answers">
-                {state1PropertyTaxRates ? `${state1PropertyTaxRates} %` : 'Yet to Update'}
+                {state1PropertyTaxRates
+                  ? `${state1PropertyTaxRates} %`
+                  : 'Yet to Update'}
               </td>
               <td className="property-taxes-answer-second-entity all-indicator-answers">
-                {state2PropertyTaxRates ? `${state2PropertyTaxRates} %` : 'Yet to Update'}
+                {state2PropertyTaxRates
+                  ? `${state2PropertyTaxRates} %`
+                  : 'Yet to Update'}
               </td>
             </tr>
           </tbody>
@@ -285,23 +392,36 @@ function Housing({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxIn
           <h3>
             Is housing more expensive in
             <span className="first-entity-name-pages-paragraph">
-              {state1}
+              {' '}
+              {state1}{' '}
             </span>{' '}
             than in
-            <span className="second-entity-name-pages-paragraph"> {state2}</span>?
+            <span className="second-entity-name-pages-paragraph">
+              {' '}
+              {state2}
+            </span>
+            ?
           </h3>
 
           <p>
             The average housing cost in
-            <span className="first-entity-name-pages-paragraph"> {state1} </span>
+            <span className="first-entity-name-pages-paragraph">
+              {' '}
+              {state1}{' '}
+            </span>
             <strong>
-              is <span className="housing-cost-calculation"> {costTimes} </span> times{' '}
+              is <span className="housing-cost-calculation"> {costTimes} </span>{' '}
+              times{' '}
             </strong>
             <span className="housing-cost-less-or-more-expensive-calculation">
               {moreOrLess}{' '}
             </span>
             expensive than
-            <span className="second-entity-name-pages-paragraph"> {state2}</span>.
+            <span className="second-entity-name-pages-paragraph">
+              {' '}
+              {state2}
+            </span>
+            .
           </p>
         </div>
       </div>

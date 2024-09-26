@@ -2,6 +2,7 @@ import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner'
 import CountriesListOceania from '@/components/pages/continents/oceania/CountriesListOceania'
 import MapAndDescriptionOceania from '@/components/pages/continents/oceania/MapAndDescriptionOceania'
 import SearchBox from '@/components/search-box/SearchBox';
+import { getCountryByIP } from '@/lib/array-list/allCountriesList';
 import { currentYear, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 
 // generateMetadata function
@@ -15,11 +16,13 @@ export async function generateMetadata() {
   };
 }
 
-function Oceania() {
+async function Oceania() {
   const formattedDate = getFormattedDate()
-  return (
-    <>
-      <SearchBox />
+  const userCountry = await getCountryByIP()
+
+    return (
+        <>
+            <SearchBox userCountry={userCountry} />
 
       <AdsHeaderBanner />
 

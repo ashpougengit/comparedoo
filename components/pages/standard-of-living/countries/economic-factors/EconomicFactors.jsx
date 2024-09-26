@@ -52,7 +52,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
               <th>
                 <div className="heading-map-name-flag">
                   <div className="right-indicator">
-                    <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                    <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                   </div>
 
                   <div className="indicator-text">
@@ -60,7 +61,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                   </div>
 
                   <div className="left-indicator">
-                    <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                    <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                   </div>
                 </div>
               </th>
@@ -68,13 +70,15 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1URLCase}`} />
+                    <Image src={`/images/${country1URLCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country1URLCase}`} />
                   </div>
 
                   <div className="first-entity-name-pages-comparison">{country1}</div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1URLCase}`} />
+                    <Image src={`/images/${country1URLCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country1URLCase}`} />
                   </div>
                 </div>
               </th>
@@ -82,13 +86,15 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2URLCase}`} />
+                    <Image src={`/images/${country2URLCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country2URLCase}`} />
                   </div>
 
                   <div className="second-entity-name-pages-comparison"> {country2} </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2URLCase}`} />
+                    <Image src={`/images/${country2URLCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country2URLCase}`} />
                   </div>
                 </div>
               </th>
@@ -109,7 +115,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/gdp-image.png"
-                    fill alt="Image representing the total Gross Domestic Product of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the total Gross Domestic Product of any specific country" />
                 </div>
               </td>
               <td className="gdp-answer-first-entity all-indicator-answers">{country1GDPNominal ? `${country1GDPNominal} USD` : 'Yet to Update'}</td>
@@ -131,7 +138,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/gdp-per-capita-image.png"
-                    fill alt="Image representing the total Gross Domestic Product Per Capita of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the total Gross Domestic Product Per Capita of any specific country" />
                 </div>
               </td>
               <td className="gdp-per-capita-answer-first-entity all-indicator-answers">
@@ -156,7 +164,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/gini-ratio-image.png"
-                    fill alt="Image representing the total GINI Ratio or GINI Coefficient of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the total GINI Ratio or GINI Coefficient of any specific country" />
                 </div>
               </td>
               <td className="gini-ratio-answer-first-entity all-indicator-answers">
@@ -182,7 +191,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/inflation-on-consumer-prices-image.png"
-                    fill alt="Image representing the Percentage of Inflation on consumer prices of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the Percentage of Inflation on consumer prices of any specific country" />
                 </div>
               </td>
               <td className="inflation-answer-first-entity all-indicator-answers">{country1InflationOnConsumerPrices ? `${country1InflationOnConsumerPrices} % annually` : 'Yet to Update'}
@@ -208,7 +218,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/central-government-debt-image.png"
-                    fill alt="Image representing the Central Government Debt of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the Central Government Debt of any specific country" />
                 </div>
               </td>
               <td className="central-government-debt-answer-first-entity all-indicator-answers">{country1CentralGovernmentDebt ? `${country1CentralGovernmentDebt}% of GDP` : 'Yet to Update'}
@@ -288,7 +299,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
               <th>
                 <div className="heading-map-name-flag">
                   <div className="right-indicator">
-                    <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                    <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                   </div>
 
                   <div className="indicator-text">
@@ -296,7 +308,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                   </div>
 
                   <div className="left-indicator">
-                    <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                    <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                   </div>
                 </div>
               </th>
@@ -304,13 +317,15 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1URLCase}`} />
+                    <Image src={`/images/${country1URLCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country1URLCase}`} />
                   </div>
 
                   <div className="first-entity-name-pages-comparison">{country1}</div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1URLCase}`} />
+                    <Image src={`/images/${country1URLCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country1URLCase}`} />
                   </div>
                 </div>
               </th>
@@ -318,13 +333,15 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2URLCase}`} />
+                    <Image src={`/images/${country2URLCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country2URLCase}`} />
                   </div>
 
                   <div className="second-entity-name-pages-comparison"> {country2} </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2URLCase}`} />
+                    <Image src={`/images/${country2URLCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country2URLCase}`} />
                   </div>
                 </div>
               </th>
@@ -345,7 +362,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/hdi-image.png"
-                    fill alt="Image representing the Human Development Index of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the Human Development Index of any specific country" />
                 </div>
               </td>
               <td className="hdi-answer-first-entity all-indicator-answers">
@@ -368,7 +386,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/human-capital-index-image.png"
-                    fill alt="Image representing the Human Capital Index of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the Human Capital Index of any specific country" />
                 </div>
               </td>
               <td className="human-capital-index-answer-first-entity all-indicator-answers">
@@ -394,7 +413,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/literacy-rate-image.png"
-                    fill alt="Image representing the Literacy Rate of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the Literacy Rate of any specific country" />
                 </div>
               </td>
               <td className="literacy-rate-answer-first-entity all-indicator-answers">
@@ -421,7 +441,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/life-expectancy-ratio-image.png"
-                    fill alt="Image representation of Life Expectancy Ratio any given country" />
+                   layout="fill"
+objectFit="contain"alt="Image representation of Life Expectancy Ratio any given country" />
                 </div>
               </td>
               <td className="life-expectancy-ratio-answer-first-entity all-indicator-answers">{country1LifeExpectancyRatio ? `${country1LifeExpectancyRatio} years` : 'Yet to Update'}</td>
@@ -444,7 +465,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/healthy-life-expectancy-ratio-image.png"
-                    fill alt="Image representation of Healthy Life Expectancy Ratio any given country" />
+                   layout="fill"
+objectFit="contain"alt="Image representation of Healthy Life Expectancy Ratio any given country" />
                 </div>
               </td>
               <td className="healthy-life-expectancy-ratio-answer-first-entity all-indicator-answers">{country1HealthyLifeExpectancyRatio ? `${country1HealthyLifeExpectancyRatio} years` : 'Yet to Update'}</td>
@@ -467,7 +489,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/poverty-headcount-image.png"
-                    fill alt="Image representing the Poverty Rate of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the Poverty Rate of any specific country" />
                 </div>
               </td>
               <td className="poverty-ratio-answer-first-entity all-indicator-answers">
@@ -492,7 +515,8 @@ function EconomicFactors({ country1StandardInfo, country2StandardInfo, country1U
                 </div>
                 <div className="basic-information-images">
                   <Image src="/images/unemployment-image.png"
-                    fill alt="Image representing the Unemployment Rate of any specific country" />
+                   layout="fill"
+objectFit="contain"alt="Image representing the Unemployment Rate of any specific country" />
                 </div>
               </td>
               <td className="unemployment-rate-answer-first-entity all-indicator-answers">{country1UnemploymentPercentageOfTotalLabourForce ? `${country1UnemploymentPercentageOfTotalLabourForce}% of total labor force`: 'Yet to Update'}

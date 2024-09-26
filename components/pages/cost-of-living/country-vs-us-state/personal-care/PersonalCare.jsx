@@ -47,7 +47,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                     <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
@@ -55,7 +56,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                     <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -64,13 +66,15 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug1LowerCase}`} />
+                                        <Image src={`/images/${slug1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{slug1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug1LowerCase}`} />
+                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -78,13 +82,15 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug2LowerCase}`} />
+                                        <Image src={`/images/${slug2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {slug2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2LowerCase}`} />
+                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -98,7 +104,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/cosmetic-procedures-image.png"
-                                        fill alt="Image Describing Cosmetic Procedures" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Cosmetic Procedures" />
                                 </div>
                             </td>
 
@@ -116,7 +123,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/spa-treatment-cost-image.png"
-                                        fill alt="Image Describing Spa Treatment" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Spa Treatment" />
                                 </div>
                             </td>
 
@@ -134,7 +142,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/manicure-pedicure-cost-image.png"
-                                        fill alt="Image Describing Manicure Pedicure Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Manicure Pedicure Cost" />
                                 </div>
                             </td>
 
@@ -154,7 +163,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/optical-glasses-image.png"
-                                        fill alt="Image Describing Optical Glasses Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Optical Glasses Cost" />
                                 </div>
                             </td>
 
@@ -172,7 +182,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/contact-lenses-image.png"
-                                        fill alt="Image Describing Contact Lenses Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Contact Lenses Cost" />
                                 </div>
                             </td>
 
@@ -190,7 +201,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/haircuts-price-image.png"
-                                        fill alt="Image Describing Hair Cuts" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Hair Cuts" />
                                 </div>
                             </td>
 
@@ -208,7 +220,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/hair-coloring-price-image.png"
-                                        fill alt="Image Describing Hair Coloring" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Hair Coloring" />
                                 </div>
                             </td>
 
@@ -226,7 +239,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/shampoo-price-image.png"
-                                        fill alt="Image Describing Shampoo Price" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Shampoo Price" />
                                 </div>
                             </td>
 
@@ -244,7 +258,8 @@ function PersonalCare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostIn
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/toothpaste-price-image.png"
-                                        fill alt="Image Describing Toothpaste Price" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Toothpaste Price" />
                                 </div>
                             </td>
 

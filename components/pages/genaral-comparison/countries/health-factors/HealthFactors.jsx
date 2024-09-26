@@ -45,41 +45,56 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
         <h2 className="pages-h2">Health Factors Comparison</h2>
       </div>
 
-
       <div className="health-factors-comparison-div1">
-
         <table className="indicators-first-entity-and-second-entity-div1">
-
           <thead>
-
             <tr className="first-tr">
               <th>
                 <div className="heading-map-name-flag">
                   <div className="right-indicator">
-                    <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                    <Image
+                      src="/images/indicators-right-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing an indicator"
+                    />
                   </div>
 
-                  <div className="indicator-text">
-                    Indicators
-                  </div>
+                  <div className="indicator-text">Indicators</div>
 
                   <div className="left-indicator">
-                    <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                    <Image
+                      src="/images/indicators-left-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image illustrating an indicator"
+                    />
                   </div>
                 </div>
               </th>
 
-
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country1URLCase}`}
+                    />
                   </div>
 
-                  <div className="first-entity-name-pages-comparison">{country1}</div>
+                  <div className="first-entity-name-pages-comparison">
+                    {country1}
+                  </div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country1URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -87,190 +102,239 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country2URLCase}`}
+                    />
                   </div>
 
-                  <div className="second-entity-name-pages-comparison"> {country2} </div>
+                  <div className="second-entity-name-pages-comparison">
+                    {' '}
+                    {country2}{' '}
+                  </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country2URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
             </tr>
-
           </thead>
 
           <tbody>
-
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="fertility-ratio-text">
                     Fertility Rate <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/fertility-ratio-image.png"
-                    fill alt="Image representation of Fertility rate or ratio of any given country" />
+                  <Image
+                    src="/images/fertility-ratio-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representation of Fertility rate or ratio of any given country"
+                  />
                 </div>
               </td>
               <td className="fertility-ratio-answer-first-entity all-indicator-answers">
                 {country1FertilityRate ? (
                   <>
-                    {country1FertilityRate}<span><br /> (Births Per
-                      Woman)</span>
+                    {country1FertilityRate}
+                    <span>
+                      <br /> (Births Per Woman)
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-              <td className="fertility-ratio-answer-second-entity all-indicator-answers">{country2FertilityRate ? (
-                <>
-                  {country2FertilityRate}<span><br /> (Births Per
-                    Woman)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="fertility-ratio-answer-second-entity all-indicator-answers">
+                {country2FertilityRate ? (
+                  <>
+                    {country2FertilityRate}
+                    <span>
+                      <br /> (Births Per Woman)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="death-rate-male-text">
                     Mortality Rate (Adult Male) <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/death-rate-image.png"
-                    fill alt="Image representation of Death rate or Mortality rate of adult male any given country" />
+                  <Image
+                    src="/images/death-rate-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representation of Death rate or Mortality rate of adult male any given country"
+                  />
                 </div>
               </td>
               <td className="death-rate-male-answer-first-entity all-indicator-answers">
                 {country1MortalityRateMale ? (
                   <>
-                    {country1MortalityRateMale}<span><br /> (Per 1000 Male
-                      Adults)</span>
+                    {country1MortalityRateMale}
+                    <span>
+                      <br /> (Per 1000 Male Adults)
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-              <td className="death-rate-male-answer-second-entity all-indicator-answers">{country2MortalityRateMale ? (
-                <>
-                  {country2MortalityRateMale}<span><br /> (Per 1000 Male
-                    Adults)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="death-rate-male-answer-second-entity all-indicator-answers">
+                {country2MortalityRateMale ? (
+                  <>
+                    {country2MortalityRateMale}
+                    <span>
+                      <br /> (Per 1000 Male Adults)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="death-rate-female-text">
                     Mortality Rate (Adult Female) <br /> ({lastYear})
                   </div>
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/death-rate-image.png"
-                    fill alt="Image representation of Death rate or Mortality rate of adult female any given country" />
+                  <Image
+                    src="/images/death-rate-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representation of Death rate or Mortality rate of adult female any given country"
+                  />
                 </div>
               </td>
-              <td className="death-rate-female-answer-first-entity all-indicator-answers">{country1MortalityRateFemale ? (
-                <>
-                  {country1MortalityRateFemale}<span><br /> (Per 1000 Female
-                    Adults)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="death-rate-female-answer-first-entity all-indicator-answers">
+                {country1MortalityRateFemale ? (
+                  <>
+                    {country1MortalityRateFemale}
+                    <span>
+                      <br /> (Per 1000 Female Adults)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-              <td className="death-rate-female-answer-second-entity all-indicator-answers">{country2MortalityRateFemale ? (
-                <>
-                  {country2MortalityRateFemale}<span><br /> (Per 1000 Female
-                    Adults)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="death-rate-female-answer-second-entity all-indicator-answers">
+                {country2MortalityRateFemale ? (
+                  <>
+                    {country2MortalityRateFemale}
+                    <span>
+                      <br /> (Per 1000 Female Adults)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
             </tr>
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="infant-mortality-rate-text">
                     Infant Mortality Rate <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/infant-mortality-ratio-image.png"
-                    fill alt="Image representation of Infant Mortality Rate of any given country" />
+                  <Image
+                    src="/images/infant-mortality-ratio-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representation of Infant Mortality Rate of any given country"
+                  />
                 </div>
               </td>
               <td className="infant-mortality-rate-answer-first-entity all-indicator-answers">
                 {country1InfantMortalityRate ? (
                   <>
-                    {country1InfantMortalityRate}<span><br /> (Per 1000
-                      Live
-                      Births)</span>
+                    {country1InfantMortalityRate}
+                    <span>
+                      <br /> (Per 1000 Live Births)
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-              <td className="infant-mortality-rate-answer-second-entity all-indicator-answers">{country2InfantMortalityRate ? (
-                <>
-                  {country2InfantMortalityRate}<span><br /> (Per 1000
-                    Live
-                    Births)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="infant-mortality-rate-answer-second-entity all-indicator-answers">
+                {country2InfantMortalityRate ? (
+                  <>
+                    {country2InfantMortalityRate}
+                    <span>
+                      <br /> (Per 1000 Live Births)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
-
-
           </tbody>
-
         </table>
       </div>
 
-
-
       <div className="in-content-banner-ads all-ads-formats">
-        <Image src="/images/header-top-banner-ads.png" fill alt="" />
+        <Image
+          src="/images/header-top-banner-ads.png"
+          layout="fill"
+          objectFit="contain"
+          alt=""
+        />
       </div>
 
       {/* <!-- ......... Health Factors second table Here  ......... --> */}
 
       <div className="health-factors-comparison-div2">
-
         <table className="indicators-first-entity-and-second-entity-div1">
-
           <thead>
-
             <tr className="first-tr">
               <th>
                 <div className="heading-map-name-flag">
                   <div className="right-indicator">
-                    <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                    <Image
+                      src="/images/indicators-right-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing an indicator"
+                    />
                   </div>
 
-                  <div className="indicator-text">
-                    Indicators
-                  </div>
+                  <div className="indicator-text">Indicators</div>
 
                   <div className="left-indicator">
-                    <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                    <Image
+                      src="/images/indicators-left-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image illustrating an indicator"
+                    />
                   </div>
                 </div>
               </th>
@@ -278,13 +342,25 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country1URLCase}`}
+                    />
                   </div>
 
-                  <div className="first-entity-name-pages-comparison">{country1}</div>
+                  <div className="first-entity-name-pages-comparison">
+                    {country1}
+                  </div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country1URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -292,13 +368,26 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country2URLCase}`}
+                    />
                   </div>
 
-                  <div className="second-entity-name-pages-comparison"> {country2} </div>
+                  <div className="second-entity-name-pages-comparison">
+                    {' '}
+                    {country2}{' '}
+                  </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country2URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -306,254 +395,421 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
           </thead>
 
           <tbody>
-
-
-
             <tr>
-
-
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="leading-cause-of-death-text">
                     Top Cause of Death <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/top-cause-of-death-image.png"
-                    fill alt="Image representation of top cause of death of any given country" />
+                  <Image
+                    src="/images/top-cause-of-death-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representation of top cause of death of any given country"
+                  />
                 </div>
               </td>
 
-              <td className="leading-cause-of-death-answer-first-entity all-indicator-answers">{country1TopCauseOfDeath ? (
-                <>
-                  {country1TopCauseOfDeath} <span> <br />
-                    (</span><span className="leading-cause-of-death-answer-number-first-entity">{country1TopCauseOfDeathNumber} </span> {country1TopCauseOfDeathNumber ? 'people per 100K population' : ''})
-                </>
-              ) : 'Yet to Update'}
+              <td className="leading-cause-of-death-answer-first-entity all-indicator-answers">
+                {country1TopCauseOfDeath ? (
+                  <>
+                    {country1TopCauseOfDeath}{' '}
+                    <span>
+                      {' '}
+                      <br />(
+                    </span>
+                    <span className="leading-cause-of-death-answer-number-first-entity">
+                      {country1TopCauseOfDeathNumber}{' '}
+                    </span>{' '}
+                    {country1TopCauseOfDeathNumber
+                      ? 'people per 100K population'
+                      : ''}
+                    )
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
               <td className="leading-cause-of-death-answer-second-entity all-indicator-answers">
                 {country2TopCauseOfDeath ? (
                   <>
-                    {country2TopCauseOfDeath} <span> <br />
-                      (</span><span className="leading-cause-of-death-answer-number-second-entity">{country2TopCauseOfDeathNumber} </span> {country2TopCauseOfDeathNumber ? 'people per 100K population' : ''})
+                    {country2TopCauseOfDeath}{' '}
+                    <span>
+                      {' '}
+                      <br />(
+                    </span>
+                    <span className="leading-cause-of-death-answer-number-second-entity">
+                      {country2TopCauseOfDeathNumber}{' '}
+                    </span>{' '}
+                    {country2TopCauseOfDeathNumber
+                      ? 'people per 100K population'
+                      : ''}
+                    )
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="least-cause-of-death-text">
                     Lowest Cause of Death <br /> ({lastYear})
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/lowest-cause-of-death-image.png"
-                    fill alt="Image representation of lowest cause of death of any given country" />
+                  <Image
+                    src="/images/lowest-cause-of-death-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representation of lowest cause of death of any given country"
+                  />
                 </div>
               </td>
 
-              <td className="least-cause-of-death-answer-first-entity all-indicator-answers">{country1LowestCauseOfDeath ? (
-                <>
-                  {country1LowestCauseOfDeath} <span>   <br />
-                    (</span><span className="least-cause-of-death-answer-number-first-entity"> {country1LowestCauseOfDeathNumber} </span> {country1LowestCauseOfDeathNumber ? 'people per 100K population' : ''})
-                </>
-              ) : 'Yet to Update'}
+              <td className="least-cause-of-death-answer-first-entity all-indicator-answers">
+                {country1LowestCauseOfDeath ? (
+                  <>
+                    {country1LowestCauseOfDeath}{' '}
+                    <span>
+                      {' '}
+                      <br />(
+                    </span>
+                    <span className="least-cause-of-death-answer-number-first-entity">
+                      {' '}
+                      {country1LowestCauseOfDeathNumber}{' '}
+                    </span>{' '}
+                    {country1LowestCauseOfDeathNumber
+                      ? 'people per 100K population'
+                      : ''}
+                    )
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
               <td className="least-cause-of-death-answer-second-entity all-indicator-answers">
                 {country2LowestCauseOfDeath ? (
                   <>
-                    {country2LowestCauseOfDeath} <span>   <br />
-                      (</span><span className="least-cause-of-death-answer-number-second-entity"> {country2LowestCauseOfDeathNumber} </span> {country2LowestCauseOfDeathNumber ? 'people per 100K population' : ''})
+                    {country2LowestCauseOfDeath}{' '}
+                    <span>
+                      {' '}
+                      <br />(
+                    </span>
+                    <span className="least-cause-of-death-answer-number-second-entity">
+                      {' '}
+                      {country2LowestCauseOfDeathNumber}{' '}
+                    </span>{' '}
+                    {country2LowestCauseOfDeathNumber
+                      ? 'people per 100K population'
+                      : ''}
+                    )
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="road-traffic-deaths-text">
                     Road Traffic Deaths <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/road-traffic-death-image.png"
-                    fill alt="Image representation of road accident death of any given country" />
+                  <Image
+                    src="/images/road-traffic-death-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representation of road accident death of any given country"
+                  />
                 </div>
               </td>
-              <td className="road-traffic-death-answer-first-entity all-indicator-answers">{country1RoadTrafficDeaths ? (
-                <>
-                  {country1RoadTrafficDeaths} <br />(<span
-                    className="road-traffic-death-text-no-change">people per 100K population) </span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="road-traffic-death-answer-first-entity all-indicator-answers">
+                {country1RoadTrafficDeaths ? (
+                  <>
+                    {country1RoadTrafficDeaths} <br />(
+                    <span className="road-traffic-death-text-no-change">
+                      people per 100K population){' '}
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
               <td className="road-traffic-death-answer-second-entity all-indicator-answers">
                 {country2RoadTrafficDeaths ? (
                   <>
-                    {country2RoadTrafficDeaths} <br />(<span
-                      className="road-traffic-death-text-no-change">people per 100K population) </span>
+                    {country2RoadTrafficDeaths} <br />(
+                    <span className="road-traffic-death-text-no-change">
+                      people per 100K population){' '}
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="suicide-deaths-text">
                     Suicide Deaths <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/suicide-death-image.png"
-                    fill alt="Image representation of number of suicide deaths of any given country" />
+                  <Image
+                    src="/images/suicide-death-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representation of number of suicide deaths of any given country"
+                  />
                 </div>
               </td>
               <td className="suicide-death-answer-first-entity all-indicator-answers">
                 {country1SuicideDeaths ? (
                   <>
-                    {country1SuicideDeaths} <br />(<span
-                      className="suicide-death-text-no-change">Number of suicide deaths per 100K people)</span>
+                    {country1SuicideDeaths} <br />(
+                    <span className="suicide-death-text-no-change">
+                      Number of suicide deaths per 100K people)
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
               <td className="suicide-death-answer-second-entity all-indicator-answers">
                 {country2SuicideDeaths ? (
                   <>
-                    {country2SuicideDeaths} <br />(<span
-                      className="suicide-death-text-no-change">Number of suicide deaths per 100K people)</span>
+                    {country2SuicideDeaths} <br />(
+                    <span className="suicide-death-text-no-change">
+                      Number of suicide deaths per 100K people)
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="new-hiv-infections-text">
                     New HIV Infections <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/new-hiv-infections-image.png"
-                    fill alt="Image representation of new HIV Infections of any given country" />
+                  <Image
+                    src="/images/new-hiv-infections-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representation of new HIV Infections of any given country"
+                  />
                 </div>
               </td>
-              <td className="new-hiv-infections-answer-first-entity all-indicator-answers">{country1NumberOfNewHIVInfections ? (
-                <>
-                  {country1NumberOfNewHIVInfections} <br />(<span
-                    className="new-hiv-infections-text-no-change">HIV infections per 1000 people)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="new-hiv-infections-answer-first-entity all-indicator-answers">
+                {country1NumberOfNewHIVInfections ? (
+                  <>
+                    {country1NumberOfNewHIVInfections} <br />(
+                    <span className="new-hiv-infections-text-no-change">
+                      HIV infections per 1000 people)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
               <td className="new-hiv-infections-answer-second-entity all-indicator-answers">
                 {country2NumberOfNewHIVInfections ? (
                   <>
-                    {country2NumberOfNewHIVInfections} <br />(<span
-                      className="new-hiv-infections-text-no-change">HIV infections per 1000 people)</span>
+                    {country2NumberOfNewHIVInfections} <br />(
+                    <span className="new-hiv-infections-text-no-change">
+                      HIV infections per 1000 people)
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
           </tbody>
-
         </table>
       </div>
 
       <div className="paragraph-for-pages-below-table">
         <div className="para-for-pages-single-div">
-          <p>The leading cause of death in <strong><span className="first-entity-name-pages-paragraph"> {country1}</span>,{' '}
-          </strong>
-            is <strong> [ <span className="leading-cause-of-death-answer-first-entity">{country1TopCauseOfDeath}</span> ]. </strong> Around
-            <strong> <span className="leading-cause-of-death-answer-number-first-entity"> {country1TopCauseOfDeathNumber} </span> people per 100,000
-              people </strong> in <strong><span className="first-entity-name-pages-paragraph"> {country1}</span>,
-            </strong> are dying of <span className="leading-cause-of-death-answer-first-entity"> {country1TopCauseOfDeath}</span>.
+          <p>
+            The leading cause of death in{' '}
+            <strong>
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {country1}
+              </span>
+              ,{' '}
+            </strong>
+            is{' '}
+            <strong>
+              {' '}
+              [{' '}
+              <span className="leading-cause-of-death-answer-first-entity">
+                {country1TopCauseOfDeath}
+              </span>{' '}
+              ].{' '}
+            </strong>{' '}
+            Around
+            <strong>
+              {' '}
+              <span className="leading-cause-of-death-answer-number-first-entity">
+                {' '}
+                {country1TopCauseOfDeathNumber}{' '}
+              </span>{' '}
+              people per 100,000 people{' '}
+            </strong>{' '}
+            in{' '}
+            <strong>
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {country1}
+              </span>
+              ,
+            </strong>{' '}
+            are dying of{' '}
+            <span className="leading-cause-of-death-answer-first-entity">
+              {' '}
+              {country1TopCauseOfDeath}
+            </span>
+            .
           </p>
 
           <p>
-            Similarly, around <strong> <span className="leading-cause-of-death-answer-number-second-entity"> {country2TopCauseOfDeathNumber} </span>
-              people per 100,000
-              people </strong> in <strong><span className="second-entity-name-pages-paragraph"> {country2}</span>,
-            </strong> are dying of <strong> <span className="leading-cause-of-death-answer-second-entity"> {country2TopCauseOfDeath}</span></strong>,
-            as
-            it
-            is the leading cause of death in there.
+            Similarly, around{' '}
+            <strong>
+              {' '}
+              <span className="leading-cause-of-death-answer-number-second-entity">
+                {' '}
+                {country2TopCauseOfDeathNumber}{' '}
+              </span>
+              people per 100,000 people{' '}
+            </strong>{' '}
+            in{' '}
+            <strong>
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {country2}
+              </span>
+              ,
+            </strong>{' '}
+            are dying of{' '}
+            <strong>
+              {' '}
+              <span className="leading-cause-of-death-answer-second-entity">
+                {' '}
+                {country2TopCauseOfDeath}
+              </span>
+            </strong>
+            , as it is the leading cause of death in there.
           </p>
 
           <br />
-          <p>The government of <strong><span className="first-entity-name-pages-paragraph"> {country1}</span>,{' '}
-          </strong>
-            spent <strong> [ <span className="health-expenditure-rate-answer-first-entity"> {country1CurrentHealthExpenditurePercentage}%</span> ] </strong> of the
-            amount
-            of
-            the Gross
-            Domestic Product (GDP) in health sectors in the year <strong><span
-              className="health-expenditure-rate-year"> {lastYear}</span></strong>.
+          <p>
+            The government of{' '}
+            <strong>
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {country1}
+              </span>
+              ,{' '}
+            </strong>
+            spent{' '}
+            <strong>
+              {' '}
+              [{' '}
+              <span className="health-expenditure-rate-answer-first-entity">
+                {' '}
+                {country1CurrentHealthExpenditurePercentage}%
+              </span>{' '}
+              ]{' '}
+            </strong>{' '}
+            of the amount of the Gross Domestic Product (GDP) in health sectors
+            in the year{' '}
+            <strong>
+              <span className="health-expenditure-rate-year"> {lastYear}</span>
+            </strong>
+            .
           </p>
 
-          <p>Likewise, the government of <strong><span className="second-entity-name-pages-paragraph"> {country2}</span>,
-          </strong>
-            spent <strong> [ <span className="health-expenditure-rate-answer-second-entity"> {country2CurrentHealthExpenditurePercentage}%</span> ] </strong> of the
-            amount
-            of
-            the Gross
-            Domestic Product (GDP) in health sectors in the year <strong><span
-              className="health-expenditure-rate-year"> {lastYear}</span></strong>.
+          <p>
+            Likewise, the government of{' '}
+            <strong>
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {country2}
+              </span>
+              ,
+            </strong>
+            spent{' '}
+            <strong>
+              {' '}
+              [{' '}
+              <span className="health-expenditure-rate-answer-second-entity">
+                {' '}
+                {country2CurrentHealthExpenditurePercentage}%
+              </span>{' '}
+              ]{' '}
+            </strong>{' '}
+            of the amount of the Gross Domestic Product (GDP) in health sectors
+            in the year{' '}
+            <strong>
+              <span className="health-expenditure-rate-year"> {lastYear}</span>
+            </strong>
+            .
           </p>
         </div>
-
       </div>
 
       <div className="in-content-banner-ads all-ads-formats">
-        <Image src="/images/header-top-banner-ads.png" fill alt="" />
+        <Image
+          src="/images/header-top-banner-ads.png"
+          layout="fill"
+          objectFit="contain"
+          alt=""
+        />
       </div>
 
       {/* <!-- .......... Health Factors third table Here  ........... --> */}
 
-
       <div className="health-factors-comparison-div3">
-
         <table className="indicators-first-entity-and-second-entity-div1">
-
           <thead>
             <tr className="first-tr">
               <th>
                 <div className="heading-map-name-flag">
                   <div className="right-indicator">
-                    <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                    <Image
+                      src="/images/indicators-right-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing an indicator"
+                    />
                   </div>
 
-                  <div className="indicator-text">
-                    Indicators
-                  </div>
+                  <div className="indicator-text">Indicators</div>
 
                   <div className="left-indicator">
-                    <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                    <Image
+                      src="/images/indicators-left-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image illustrating an indicator"
+                    />
                   </div>
                 </div>
               </th>
@@ -561,13 +817,25 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country1URLCase}`}
+                    />
                   </div>
 
-                  <div className="first-entity-name-pages-comparison">{country1}</div>
+                  <div className="first-entity-name-pages-comparison">
+                    {country1}
+                  </div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country1URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -575,13 +843,26 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country2URLCase}`}
+                    />
                   </div>
 
-                  <div className="second-entity-name-pages-comparison"> {country2} </div>
+                  <div className="second-entity-name-pages-comparison">
+                    {' '}
+                    {country2}{' '}
+                  </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country2URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -589,150 +870,175 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
           </thead>
 
           <tbody>
-
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="prevalance-of-hypertension-text">
                     Prevalance Of Hypertension <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/hypertension-image.png"
-                    fill alt="Visual representation of prevalance of hypertension ratio of any given country" />
+                  <Image
+                    src="/images/hypertension-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of prevalance of hypertension ratio of any given country"
+                  />
                 </div>
               </td>
-              <td className="prevalence-of-hypertension-answer-first-entity all-indicator-answers">{country1PrevalenceOfHypertensionPercentage ? (
-                <>
-                  {country1PrevalenceOfHypertensionPercentage} <br />(<span
-                    className="prevalence-of-hypertension-no-change">Percentage of adults [30-79] with
-                    hypertension)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="prevalence-of-hypertension-answer-first-entity all-indicator-answers">
+                {country1PrevalenceOfHypertensionPercentage ? (
+                  <>
+                    {country1PrevalenceOfHypertensionPercentage} <br />(
+                    <span className="prevalence-of-hypertension-no-change">
+                      Percentage of adults [30-79] with hypertension)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
               <td className="prevalence-of-hypertension-answer-second-entity all-indicator-answers">
                 {country2PrevalenceOfHypertensionPercentage ? (
                   <>
-                    {country2PrevalenceOfHypertensionPercentage} <br />(<span
-                      className="prevalence-of-hypertension-no-change">Percentage of adults [30-79] with
-                      hypertension)</span>
+                    {country2PrevalenceOfHypertensionPercentage} <br />(
+                    <span className="prevalence-of-hypertension-no-change">
+                      Percentage of adults [30-79] with hypertension)
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
-
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="adult-obesity-text">
                     Adult Obesity <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/obesity-image.png" fill alt="Visual representation of obesity ratio of any given country" />
+                  <Image
+                    src="/images/obesity-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of obesity ratio of any given country"
+                  />
                 </div>
               </td>
-              <td className="adult-obesity-answer-first-entity all-indicator-answers">{country1AdultObesityPercentage ? (
-                <>
-                  {country1AdultObesityPercentage}% <br />(<span
-                    className="adult-obesity-no-change">Percentage of Obesity in adults)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="adult-obesity-answer-first-entity all-indicator-answers">
+                {country1AdultObesityPercentage ? (
+                  <>
+                    {country1AdultObesityPercentage}% <br />(
+                    <span className="adult-obesity-no-change">
+                      Percentage of Obesity in adults)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
               <td className="adult-obesity-answer-second-entity all-indicator-answers">
                 {country2AdultObesityPercentage ? (
                   <>
-                    {country2AdultObesityPercentage}% <br />(<span
-                      className="adult-obesity-no-change">Percentage of Obesity in adults)</span>
+                    {country2AdultObesityPercentage}% <br />(
+                    <span className="adult-obesity-no-change">
+                      Percentage of Obesity in adults)
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="pure-alcohol-consumption-text">
                     Pure Alcohol Consumption <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/pure-alcohol-consumption-image.png"
-                    fill alt="Visual representation of pure alcohol consumption ratio of any given country" />
+                  <Image
+                    src="/images/pure-alcohol-consumption-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of pure alcohol consumption ratio of any given country"
+                  />
                 </div>
               </td>
-              <td className="pure-alcohol-consumption-answer-first-entity all-indicator-answers">{country1AlcoholConsumptionPercentage ? (
-                <>
-                  {country1AlcoholConsumptionPercentage} <span>Liters</span>
-                  <br />(<span className="pure-alcohol-consumption-no-change">per adult over a calendar year)</span>
-                </>
-              ) : 'Yet to Update'}
-
+              <td className="pure-alcohol-consumption-answer-first-entity all-indicator-answers">
+                {country1AlcoholConsumptionPercentage ? (
+                  <>
+                    {country1AlcoholConsumptionPercentage} <span>Liters</span>
+                    <br />(
+                    <span className="pure-alcohol-consumption-no-change">
+                      per adult over a calendar year)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-              <td className="pure-alcohol-consumption-answer-second-entity all-indicator-answers">{country2AlcoholConsumptionPercentage ? (
-                <>
-                  {country2AlcoholConsumptionPercentage} <span>Liters</span>
-                  <br />(<span className="pure-alcohol-consumption-no-change">per adult over a calendar year)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="pure-alcohol-consumption-answer-second-entity all-indicator-answers">
+                {country2AlcoholConsumptionPercentage ? (
+                  <>
+                    {country2AlcoholConsumptionPercentage} <span>Liters</span>
+                    <br />(
+                    <span className="pure-alcohol-consumption-no-change">
+                      per adult over a calendar year)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
 
             <tr>
               <td className="basic-info">
                 <div className="all-indicators">
-
                   <div className="tobacco-consumption-text">
                     Tobacco Consumption <br /> ({lastYear})
                   </div>
-
-
-
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/tobacco-consumption-image.png"
-                    fill alt="Visual representation of tobacco consumption ratio of any given country" />
+                  <Image
+                    src="/images/tobacco-consumption-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of tobacco consumption ratio of any given country"
+                  />
                 </div>
               </td>
-              <td className="tobacco-consumption-answer-first-entity all-indicator-answers">{country1TobaccoConsumptionPercentage ? (
-                <>
-                  {country1TobaccoConsumptionPercentage}% <br />(<span
-                    className="tobacco-consumption-no-change">Used by people aged 15 and above)</span>
-                </>
-              ) : 'Yet to Update'}
+              <td className="tobacco-consumption-answer-first-entity all-indicator-answers">
+                {country1TobaccoConsumptionPercentage ? (
+                  <>
+                    {country1TobaccoConsumptionPercentage}% <br />(
+                    <span className="tobacco-consumption-no-change">
+                      Used by people aged 15 and above)
+                    </span>
+                  </>
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
               <td className="tobacco-consumption-answer-second-entity all-indicator-answers">
                 {country2TobaccoConsumptionPercentage ? (
                   <>
-                    {country2TobaccoConsumptionPercentage}% <br />(<span
-                      className="tobacco-consumption-no-change">Used by people aged 15 and above)</span>
+                    {country2TobaccoConsumptionPercentage}% <br />(
+                    <span className="tobacco-consumption-no-change">
+                      Used by people aged 15 and above)
+                    </span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
-
             </tr>
-
-
-
-
-
-
           </tbody>
         </table>
       </div>
@@ -740,19 +1046,39 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
       <div className="paragraph-for-pages-below-table">
         <div className="para-for-pages-single-div">
           <p>
-            As per the data from the World Health Organization (WHO), people living in <strong><span
-              className="first-entity-name-pages-paragraph"> {country1}</span>,</strong> are <strong> <span
-                className="obese-calculations">
-                {obeseTimes}</span> times </strong>
-            <span className="more-or-less-obese-calculation-text"> {moreOrLess} </span> likely to be obese compared to the
-            people
-            living in <strong><span className="second-entity-name-pages-paragraph"> {country2}</span></strong>.
+            As per the data from the World Health Organization (WHO), people
+            living in{' '}
+            <strong>
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {country1}
+              </span>
+              ,
+            </strong>{' '}
+            are{' '}
+            <strong>
+              {' '}
+              <span className="obese-calculations">
+                {obeseTimes}
+              </span> times{' '}
+            </strong>
+            <span className="more-or-less-obese-calculation-text">
+              {' '}
+              {moreOrLess}{' '}
+            </span>{' '}
+            likely to be obese compared to the people living in{' '}
+            <strong>
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {country2}
+              </span>
+            </strong>
+            .
           </p>
         </div>
       </div>
-
     </>
-  )
+  );
 }
 
 export default HealthFactors

@@ -6,15 +6,13 @@
 
 - h1: Geographical factors (absent in single state general info page )
 
-- href="/contact-us"
+- href="/contact-us"                          ////////////////////////////
 
 - hamburger menu                              ////////////////////////////
 
 - search box
 
 - <Image />(search box and header img tag not changed)+++++++++++++**************
-
-- unique indicators of country or state(knowledgebase)+++++++++++++**************
 
 - Taxes on Exports(India)(Standard) is Yet to Update coz it is 0.00493119659888326
 
@@ -51,8 +49,11 @@ standard of living country vs country
 
 - check all country names                             +++++++++++++**************
 
-- two Georgia                                         +++++++++++++**************
-
 - Threetabs sticky on back scroll                    ............................
 
--weather images, sunny, cloudy, rainy
+-layout="fill"
+objectFit="contain"attribute changed
+
+- ScrollToTopBottom (media query)                    ////////////////////////////
+
+- rain, cloud images

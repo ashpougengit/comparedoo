@@ -22,241 +22,306 @@ function HumanDevelopment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, 
     const moreOrLess = slug1LifeExpectancyRatio > slug2LifeExpectancyRatio ? 'more' : 'less'
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div class="economic-factors-comparison">
-                <h2 class="pages-h2">Human Development Factors Information</h2>
-            </div>
-            <div class="economic-factors-comparison-div2">
-                <table class="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr class="first-tr">
-                            <th>
-                                <div class="heading-map-name-flag">
-                                    <div class="right-indicator">
-                                        <Image
-                                            src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
-                                    </div>
-                                    <div class="indicator-text">Indicators</div>
-                                    <div class="left-indicator">
-                                        <Image
-                                            src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+        <div class="economic-factors-comparison">
+          <h2 class="pages-h2">Human Development Factors Information</h2>
+        </div>
+        <div class="economic-factors-comparison-div2">
+          <table class="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr class="first-tr">
+                <th>
+                  <div class="heading-map-name-flag">
+                    <div class="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
+                    <div class="indicator-text">Indicators</div>
+                    <div class="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug1URLCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${slug1URLCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${slug1URLCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{slug1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {slug1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug1URLCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${slug1URLCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${slug1URLCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug2URLCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${slug2URLCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${slug2URLCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {slug2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {slug2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2URLCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="hdi-text">Human Development Index (HDI) ({lastYear})</div>
-                                </div>
-                                <div class="basic-information-images">
-                                    <Image
-                                        src="/images/hdi-image.png"
-                                        fill alt="Image representing the Human Development Index of any specific country or state" />
-                                </div>
-                            </td>
-                            <td class="hdi-answer-first-entity all-indicator-answers">
-                                {slug1HDI ?? 'Yet to Update'}
-                            </td>
-                            <td class="hdi-answer-second-entity all-indicator-answers">
-                                {slug2HDI ?? 'Yet to Update'}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="literacy-rate-text">
-                                        Literacy Rate
-                                        <br />
-                                        ({lastYear})
-                                    </div>
-                                </div>
-                                <div class="basic-information-images">
-                                    <Image
-                                        src="/images/literacy-rate-image.png"
-                                        fill alt="Image representing the Literacy Rate of any specific country or state" />
-                                </div>
-                            </td>
-                            <td class="literacy-rate-answer-first-entity all-indicator-answers">
-                                {slug1LiteracyRate ? `${slug1LiteracyRate} % (15 years+ above
-                                age)`: 'Yet to Update'}
-                            </td>
-                            <td class="literacy-rate-answer-second-entity all-indicator-answers">
-                                {slug2LiteracyRate ? `${slug2LiteracyRate} % (15 years+ above
-                                age)`: 'Yet to Update'}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="life-expectancy-ratio-text">
-                                        Life Expectancy Ratio
-                                    </div>
-                                    <div class="life-expectancy-ratio-year">({lastYear})</div>
-                                </div>
-                                <div class="basic-information-images">
-                                    <Image
-                                        src="/images/life-expectancy-ratio-image.png"
-                                        fill alt="Image representation of Life Expectancy Ratio any given country" />
-                                </div>
-                            </td>
-                            <td
-                                class="life-expectancy-ratio-answer-first-entity all-indicator-answers">
-                                {slug1LifeExpectancyRatio ? `${slug1LifeExpectancyRatio} years` : 'Yet to Update'}
-                            </td>
-                            <td
-                                class="life-expectancy-ratio-answer-second-entity all-indicator-answers">
-                                {slug2LifeExpectancyRatio ? `${slug2LifeExpectancyRatio} years` : 'Yet to Update'}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="poverty-ratio-text">
-                                        Poverty Ratio
-                                        <br />
-                                        ({lastYear})
-                                    </div>
-                                </div>
-                                <div class="basic-information-images">
-                                    <Image
-                                        src="/images/poverty-headcount-image.png"
-                                        fill alt="Image representing the Poverty Rate of any specific country or state" />
-                                </div>
-                            </td>
-                            <td class="poverty-ratio-answer-first-entity all-indicator-answers">
-                                {slug1PovertyRatio ? `${slug1PovertyRatio} % of total
-                                Population`: 'Yet to Update'}
-                            </td>
-                            <td class="poverty-ratio-answer-second-entity all-indicator-answers">
-                                {slug2PovertyRatio ? `${slug2PovertyRatio} % of total
-                                Population`: 'Yet to Update'}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="employment-rate-text">
-                                        Employment Rate
-                                        <br />
-                                        ({lastYear})
-                                    </div>
-                                </div>
-                                <div class="basic-information-images">
-                                    <Image
-                                        src="/images/employment-rate-image.png"
-                                        fill alt="Image representing the Employment Rate of any specific country or state" />
-                                </div>
-                            </td>
-                            <td
-                                class="unemployment-rate-answer-first-entity all-indicator-answers">
-                                {slug1EmploymentRate ? `${slug1EmploymentRate} % of
-                                total labor force`: 'Yet to Update'}
-                            </td>
-                            <td
-                                class="unemployment-rate-answer-second-entity all-indicator-answers">
-                                {slug2EmploymentRate ? `${slug2EmploymentRate} % of
-                                total labor force`: 'Yet to Update'}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="paragraph-for-pages-below-table">
-                <div class="para-for-pages-single-div">
-                    <p>
-                        <strong>The Human Development Index (HDI) </strong>
-                        is a measure used to assess the overall well-being and quality of life
-                        of people living in a country or a state. The key dimensions that give a country or a state good HDI rank are a long and healthy life, being knowledgeable and
-                        having a decent standard of living. This is expressed as a value between
-                        0 and 1. The higher a country&apos;s or a state&apos;s human development, the higher its HDI value.
-                    </p>
-                    <br />
-                    <p>
-                        The life expectancy ratio at birth in
-                        <strong>
-                            <span class="first-entity-name-pages-paragraph"> {slug1}</span>
-                            ,{' '}
-                        </strong>
-                        is{' '}
-                        <strong>
-                            [
-                            <span class="life-expectancy-ratio-answer-first-entity">
-                                {slug1LifeExpectancyRatio} years
-                            </span>
-                            ],{' '}
-                        </strong>
-                        whereas the life expectancy ratio at birth in
-                        <strong>
-                            <span class="second-entity-name-pages-paragraph"> {slug2} </span>
-                        </strong>
-                        is{' '}
-                        <strong>
-                            [
-                            <span class="life-expectancy-ratio-answer-first-entity">
-                                {slug2LifeExpectancyRatio} years
-                            </span>
-                            ].
-                        </strong>
-                    </p>
-                    <p>
-                        As per the data, a person born and lived in
-                        <strong>
-                            <span class="first-entity-name-pages-paragraph"> {slug1} </span>
-                        </strong>
-                        is expected to live{' '}
-                        <strong>
-                            [
-                            <span class="life-expectancy-ratio-age-calculation"> {lifeDifference} </span>
-                            years ]{' '}
-                        </strong>
-                        <span class="more-or-less-life-expectancy-calculation">
-                            {moreOrLess}{' '}
-                        </span>
-                        than a person born and lived in
-                        <strong>
-                            <span class="second-entity-name-pages-paragraph"> {slug2}</span>
-                            .
-                        </strong>
-                    </p>
-                </div>
-            </div>
-        </>
-    )
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${slug2URLCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${slug2URLCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="basic-info">
+                  <div class="all-indicators">
+                    <div class="hdi-text">
+                      Human Development Index (HDI) ({lastYear})
+                    </div>
+                  </div>
+                  <div class="basic-information-images">
+                    <Image
+                      src="/images/hdi-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing the Human Development Index of any specific country or state"
+                    />
+                  </div>
+                </td>
+                <td class="hdi-answer-first-entity all-indicator-answers">
+                  {slug1HDI ?? 'Yet to Update'}
+                </td>
+                <td class="hdi-answer-second-entity all-indicator-answers">
+                  {slug2HDI ?? 'Yet to Update'}
+                </td>
+              </tr>
+              <tr>
+                <td class="basic-info">
+                  <div class="all-indicators">
+                    <div class="literacy-rate-text">
+                      Literacy Rate
+                      <br />({lastYear})
+                    </div>
+                  </div>
+                  <div class="basic-information-images">
+                    <Image
+                      src="/images/literacy-rate-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing the Literacy Rate of any specific country or state"
+                    />
+                  </div>
+                </td>
+                <td class="literacy-rate-answer-first-entity all-indicator-answers">
+                  {slug1LiteracyRate
+                    ? `${slug1LiteracyRate} % (15 years+ above
+                                age)`
+                    : 'Yet to Update'}
+                </td>
+                <td class="literacy-rate-answer-second-entity all-indicator-answers">
+                  {slug2LiteracyRate
+                    ? `${slug2LiteracyRate} % (15 years+ above
+                                age)`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+              <tr>
+                <td class="basic-info">
+                  <div class="all-indicators">
+                    <div class="life-expectancy-ratio-text">
+                      Life Expectancy Ratio
+                    </div>
+                    <div class="life-expectancy-ratio-year">({lastYear})</div>
+                  </div>
+                  <div class="basic-information-images">
+                    <Image
+                      src="/images/life-expectancy-ratio-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representation of Life Expectancy Ratio any given country"
+                    />
+                  </div>
+                </td>
+                <td class="life-expectancy-ratio-answer-first-entity all-indicator-answers">
+                  {slug1LifeExpectancyRatio
+                    ? `${slug1LifeExpectancyRatio} years`
+                    : 'Yet to Update'}
+                </td>
+                <td class="life-expectancy-ratio-answer-second-entity all-indicator-answers">
+                  {slug2LifeExpectancyRatio
+                    ? `${slug2LifeExpectancyRatio} years`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+              <tr>
+                <td class="basic-info">
+                  <div class="all-indicators">
+                    <div class="poverty-ratio-text">
+                      Poverty Ratio
+                      <br />({lastYear})
+                    </div>
+                  </div>
+                  <div class="basic-information-images">
+                    <Image
+                      src="/images/poverty-headcount-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing the Poverty Rate of any specific country or state"
+                    />
+                  </div>
+                </td>
+                <td class="poverty-ratio-answer-first-entity all-indicator-answers">
+                  {slug1PovertyRatio
+                    ? `${slug1PovertyRatio} % of total
+                                Population`
+                    : 'Yet to Update'}
+                </td>
+                <td class="poverty-ratio-answer-second-entity all-indicator-answers">
+                  {slug2PovertyRatio
+                    ? `${slug2PovertyRatio} % of total
+                                Population`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+              <tr>
+                <td class="basic-info">
+                  <div class="all-indicators">
+                    <div class="employment-rate-text">
+                      Employment Rate
+                      <br />({lastYear})
+                    </div>
+                  </div>
+                  <div class="basic-information-images">
+                    <Image
+                      src="/images/employment-rate-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing the Employment Rate of any specific country or state"
+                    />
+                  </div>
+                </td>
+                <td class="unemployment-rate-answer-first-entity all-indicator-answers">
+                  {slug1EmploymentRate
+                    ? `${slug1EmploymentRate} % of
+                                total labor force`
+                    : 'Yet to Update'}
+                </td>
+                <td class="unemployment-rate-answer-second-entity all-indicator-answers">
+                  {slug2EmploymentRate
+                    ? `${slug2EmploymentRate} % of
+                                total labor force`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="paragraph-for-pages-below-table">
+          <div class="para-for-pages-single-div">
+            <p>
+              <strong>The Human Development Index (HDI) </strong>
+              is a measure used to assess the overall well-being and quality of
+              life of people living in a country or a state. The key dimensions
+              that give a country or a state good HDI rank are a long and
+              healthy life, being knowledgeable and having a decent standard of
+              living. This is expressed as a value between 0 and 1. The higher a
+              country&apos;s or a state&apos;s human development, the higher its
+              HDI value.
+            </p>
+            <br />
+            <p>
+              The life expectancy ratio at birth in
+              <strong>
+                <span class="first-entity-name-pages-paragraph"> {slug1}</span>,{' '}
+              </strong>
+              is{' '}
+              <strong>
+                [
+                <span class="life-expectancy-ratio-answer-first-entity">
+                  {slug1LifeExpectancyRatio} years
+                </span>
+                ],{' '}
+              </strong>
+              whereas the life expectancy ratio at birth in
+              <strong>
+                <span class="second-entity-name-pages-paragraph">
+                  {' '}
+                  {slug2}{' '}
+                </span>
+              </strong>
+              is{' '}
+              <strong>
+                [
+                <span class="life-expectancy-ratio-answer-first-entity">
+                  {slug2LifeExpectancyRatio} years
+                </span>
+                ].
+              </strong>
+            </p>
+            <p>
+              As per the data, a person born and lived in
+              <strong>
+                <span class="first-entity-name-pages-paragraph"> {slug1} </span>
+              </strong>
+              is expected to live{' '}
+              <strong>
+                [
+                <span class="life-expectancy-ratio-age-calculation">
+                  {' '}
+                  {lifeDifference}{' '}
+                </span>
+                years ]{' '}
+              </strong>
+              <span class="more-or-less-life-expectancy-calculation">
+                {moreOrLess}{' '}
+              </span>
+              than a person born and lived in
+              <strong>
+                <span class="second-entity-name-pages-paragraph"> {slug2}</span>
+                .
+              </strong>
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default HumanDevelopment

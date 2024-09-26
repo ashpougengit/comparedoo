@@ -61,13 +61,15 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -76,13 +78,15 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state1LowerCase}`} />
+                                        <Image src={`/images/${state1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${state1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{state1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state1LowerCase}`} />
+                                        <Image src={`/images/${state1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${state1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -90,13 +94,15 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state2LowerCase}`} />
+                                        <Image src={`/images/${state2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${state2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {state2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state2LowerCase}`} />
+                                        <Image src={`/images/${state2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${state2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -110,7 +116,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                                 <div className="all-indicators">Pair of Nike Running Shoes</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/pair-of-nike-running-shoes-image.png"
-                                        fill alt="Image Describing Pair of Nike Running Shoes" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Pair of Nike Running Shoes" />
                                 </div>
                             </td>
 
@@ -127,7 +134,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Men&apos;s Shirt</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/mens-dress-shirt-image.png" fill alt="Image Describing Men's Shirt" />
+                                    <Image src="/images/mens-dress-shirt-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Men's Shirt" />
                                 </div>
                             </td>
 
@@ -143,7 +151,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Women&apos;s Dress</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/women-dress-image.png" fill alt="Image Describing Women's Shirt" />
+                                    <Image src="/images/women-dress-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Women's Shirt" />
                                 </div>
                             </td>
 
@@ -159,7 +168,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Summer Dress</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/summer-dress-image.png" fill alt="Image Describing Summer Dress" />
+                                    <Image src="/images/summer-dress-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Summer Dress" />
                                 </div>
                             </td>
 
@@ -176,7 +186,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Men&apos;s Suit</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/mens-suit-image.png" fill alt="Image Describing Men's Suit" />
+                                    <Image src="/images/mens-suit-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Men's Suit" />
                                 </div>
                             </td>
 
@@ -192,7 +203,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Men&apos;s Jeans</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/mens-jeans-image.png" fill alt="Image Describing Men's Jeans" />
+                                    <Image src="/images/mens-jeans-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Men's Jeans" />
                                 </div>
                             </td>
 
@@ -208,7 +220,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Women&apos;s Jeans</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/women-jeans-image.png" fill alt="Image Describing Women's Jeans" />
+                                    <Image src="/images/women-jeans-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Women's Jeans" />
                                 </div>
                             </td>
 
@@ -224,7 +237,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Men&apos;s Formal Shoes</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/mens-formal-shoes-image.png" fill alt="Image Describing Men's formal Shoes" />
+                                    <Image src="/images/mens-formal-shoes-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Men's formal Shoes" />
                                 </div>
                             </td>
 
@@ -241,7 +255,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                                 <div className="all-indicators">Women&apos;s Formal Shoes</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/women-formal-shoes-image.png"
-                                        fill alt="Image Describing Women's formal Shoes" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Women's formal Shoes" />
                                 </div>
                             </td>
 
@@ -257,7 +272,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Men&apos;s Casual Shoes</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/mens-casual-shoes-image.png" fill alt="Image Describing Men's Casual Shoes" />
+                                    <Image src="/images/mens-casual-shoes-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Men's Casual Shoes" />
                                 </div>
                             </td>
 
@@ -275,7 +291,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                                 <div className="all-indicators">Women&apos;s Casual Shoes</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/women-casual-shoes-image.png"
-                                        fill alt="Image Describing Women's Casual Shoes" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Women's Casual Shoes" />
                                 </div>
                             </td>
 
@@ -291,7 +308,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Underwear For Men</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/men-underwear-image.png" fill alt="Image Describing Underwear For Men" />
+                                    <Image src="/images/men-underwear-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Underwear For Men" />
                                 </div>
                             </td>
 
@@ -307,7 +325,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Underwear For Women</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/women-underwear-image.png" fill alt="Image Describing Underwear For Women" />
+                                    <Image src="/images/women-underwear-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Underwear For Women" />
                                 </div>
                             </td>
 
@@ -323,7 +342,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Socks For Men</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/men-socks-image.png" fill alt="Image Describing socks For Men" />
+                                    <Image src="/images/men-socks-image.png"layout="fill"
+objectFit="contain"alt="Image Describing socks For Men" />
                                 </div>
                             </td>
 
@@ -340,7 +360,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Socks For Women</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/women-socks-image.png" fill alt="Image Describing socks For Women" />
+                                    <Image src="/images/women-socks-image.png"layout="fill"
+objectFit="contain"alt="Image Describing socks For Women" />
                                 </div>
                             </td>
 
@@ -357,7 +378,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                                 <div className="all-indicators">Wintercoat for Adults</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/adult-winter-coat-image.png"
-                                        fill alt="Image Describing Wintercoat for Adults" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Wintercoat for Adults" />
                                 </div>
                             </td>
 
@@ -373,7 +395,8 @@ function Clothing({ state1CostInfo, state2CostInfo, state1LowerCase, state2Lower
                             <td className="basic-info">
                                 <div className="all-indicators">Sportswear</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/sportswear-image.png" fill alt="Image Describing Sportswear" />
+                                    <Image src="/images/sportswear-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Sportswear" />
                                 </div>
                             </td>
 

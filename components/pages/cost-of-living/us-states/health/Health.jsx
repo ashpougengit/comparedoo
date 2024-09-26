@@ -41,326 +41,531 @@ function Health({ state1CostInfo, state2CostInfo, state1LowerCase, state2LowerCa
     const moreOrLess = state1TotalCost > state2TotalCost ? 'more' : 'less'
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Health and Medical Cost Comparison</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">Health and Medical Cost Comparison</h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state1LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state1LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state1LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{state1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {state1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state1LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state1LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state1LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state2LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state2LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state2LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {state2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {state2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state2LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state2LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state2LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Doctor Visit</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/doctors-visit-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Doctors Visit"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Doctor Visit</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/doctors-visit-image.png" fill alt="Image Describing Doctors Visit" />
-                                </div>
-                            </td>
+                <td className="doctors-visit-first-entity all-indicator-answers">
+                  {state1DoctorsVisit
+                    ? `${formatNumberWithCommas(state1DoctorsVisit)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="doctors-visit-second-entity all-indicator-answers">
+                  {state2DoctorsVisit
+                    ? `${formatNumberWithCommas(state2DoctorsVisit)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="doctors-visit-first-entity all-indicator-answers">
-                                {state1DoctorsVisit ? `${formatNumberWithCommas(state1DoctorsVisit)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="doctors-visit-second-entity all-indicator-answers">
-                                {state2DoctorsVisit ? `${formatNumberWithCommas(state2DoctorsVisit)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Specialist Visit</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/specialist-visit-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Specialists Visit"
+                    />
+                  </div>
+                </td>
 
+                <td className="specialists-visit-first-entity all-indicator-answers">
+                  {state1SpecialistsVisit
+                    ? `${formatNumberWithCommas(state1SpecialistsVisit)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="specialists-visit-second-entity all-indicator-answers">
+                  {state2SpecialistsVisit
+                    ? `${formatNumberWithCommas(state2SpecialistsVisit)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Specialist Visit</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/specialist-visit-image.png" fill alt="Image Describing Specialists Visit" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Dentist Visit</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/dentist-visit-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Dentist Visit"
+                    />
+                  </div>
+                </td>
 
-                            <td className="specialists-visit-first-entity all-indicator-answers">
-                                {state1SpecialistsVisit ? `${formatNumberWithCommas(state1SpecialistsVisit)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="specialists-visit-second-entity all-indicator-answers">
-                                {state2SpecialistsVisit ? `${formatNumberWithCommas(state2SpecialistsVisit)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="dentists-visit-first-entity all-indicator-answers">
+                  {state1DentistsVisit
+                    ? `${formatNumberWithCommas(state1DentistsVisit)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="dentists-visit-second-entity all-indicator-answers">
+                  {state2DentistsVisit
+                    ? `${formatNumberWithCommas(state2DentistsVisit)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Eye Exam</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/eye-exam-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Eye Exam"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Dentist Visit</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/dentist-visit-image.png" fill alt="Image Describing Dentist Visit" />
-                                </div>
-                            </td>
+                <td className="eye-exam-first-entity all-indicator-answers">
+                  {state1EyeExam
+                    ? `${formatNumberWithCommas(state1EyeExam)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="eye-exam-second-entity all-indicator-answers">
+                  {state2EyeExam
+                    ? `${formatNumberWithCommas(state2EyeExam)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="dentists-visit-first-entity all-indicator-answers">
-                                {state1DentistsVisit ? `${formatNumberWithCommas(state1DentistsVisit)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="dentists-visit-second-entity all-indicator-answers">
-                                {state2DentistsVisit ? `${formatNumberWithCommas(state2DentistsVisit)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Mental Health Counseling</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/mental-health-counseling.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Mental Health Counseling"
+                    />
+                  </div>
+                </td>
 
+                <td className="mental-health-counseling-first-entity all-indicator-answers">
+                  {state1MentalHealthCounseling
+                    ? `${formatNumberWithCommas(
+                        state1MentalHealthCounseling
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="mental-health-counseling-second-entity all-indicator-answers">
+                  {state2MentalHealthCounseling
+                    ? `${formatNumberWithCommas(
+                        state2MentalHealthCounseling
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Preventive Health Screening
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/preventive-health-screening.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Preventive Health Screening"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Eye Exam</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/eye-exam-image.png" fill alt="Image Describing Eye Exam" />
-                                </div>
-                            </td>
+                <td className="preventive-health-screening-first-entity all-indicator-answers">
+                  {state1PreventiveHealthScreenings
+                    ? `${formatNumberWithCommas(
+                        state1PreventiveHealthScreenings
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="preventive-health-screening-second-entity all-indicator-answers">
+                  {state2PreventiveHealthScreenings
+                    ? `${formatNumberWithCommas(
+                        state2PreventiveHealthScreenings
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="eye-exam-first-entity all-indicator-answers">
-                                {state1EyeExam ? `${formatNumberWithCommas(state1EyeExam)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="eye-exam-second-entity all-indicator-answers">
-                                {state2EyeExam ? `${formatNumberWithCommas(state2EyeExam)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Physical Therapy</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/physical-therapy-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Physical Therapy"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Mental Health Counseling</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/mental-health-counseling.png"
-                                        fill alt="Image Describing Mental Health Counseling" />
-                                </div>
-                            </td>
+                <td className="physical-therapy-first-entity all-indicator-answers">
+                  {state1PhysicalTherapy
+                    ? `${formatNumberWithCommas(state1PhysicalTherapy)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="physical-therapy-second-entity all-indicator-answers">
+                  {state2PhysicalTherapy
+                    ? `${formatNumberWithCommas(state2PhysicalTherapy)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="mental-health-counseling-first-entity all-indicator-answers">
-                                {state1MentalHealthCounseling ? `${formatNumberWithCommas(state1MentalHealthCounseling)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="mental-health-counseling-second-entity all-indicator-answers">
-                                {state2MentalHealthCounseling ? `${formatNumberWithCommas(state2MentalHealthCounseling)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Emergency Room Visit</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/emergency-room-visit-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Emergency Room Visit"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Preventive Health Screening</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/preventive-health-screening.png"
-                                        fill alt="Image Describing Preventive Health Screening" />
-                                </div>
-                            </td>
+                <td className="emergency-room-visit-first-entity all-indicator-answers">
+                  {state1EmergencyRoomVisit
+                    ? `${formatNumberWithCommas(state1EmergencyRoomVisit)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="emergency-room-visit-second-entity all-indicator-answers">
+                  {state2EmergencyRoomVisit
+                    ? `${formatNumberWithCommas(state2EmergencyRoomVisit)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="preventive-health-screening-first-entity all-indicator-answers">
-                                {state1PreventiveHealthScreenings ? `${formatNumberWithCommas(state1PreventiveHealthScreenings)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="preventive-health-screening-second-entity all-indicator-answers">
-                                {state2PreventiveHealthScreenings ? `${formatNumberWithCommas(state2PreventiveHealthScreenings)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Hospital Stay Per Night</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/hospital-stay-per-night-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Hospital Stay Per Night"
+                    />
+                  </div>
+                </td>
 
+                <td className="hospital-stay-per-night-first-entity all-indicator-answers">
+                  {state1HospitalStayPerNight
+                    ? `${formatNumberWithCommas(
+                        state1HospitalStayPerNight
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="hospital-stay-per-night-second-entity all-indicator-answers">
+                  {state2HospitalStayPerNight
+                    ? `${formatNumberWithCommas(
+                        state2HospitalStayPerNight
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Physical Therapy</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/physical-therapy-image.png" fill alt="Image Describing Physical Therapy" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Vaccinations</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/vaccinations-charge-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Vaccinations"
+                    />
+                  </div>
+                </td>
 
-                            <td className="physical-therapy-first-entity all-indicator-answers">
-                                {state1PhysicalTherapy ? `${formatNumberWithCommas(state1PhysicalTherapy)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="physical-therapy-second-entity all-indicator-answers">
-                                {state2PhysicalTherapy ? `${formatNumberWithCommas(state2PhysicalTherapy)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="vaccinations-first-entity all-indicator-answers">
+                  {state1Vaccinations
+                    ? `${formatNumberWithCommas(state1Vaccinations)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="vaccinations-second-entity all-indicator-answers">
+                  {state2Vaccinations
+                    ? `${formatNumberWithCommas(state2Vaccinations)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Emergency Room Visit</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/emergency-room-visit-image.png"
-                                        fill alt="Image Describing Emergency Room Visit" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Prescription Medication</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/prescription-medication-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Prescription Medication"
+                    />
+                  </div>
+                </td>
 
-                            <td className="emergency-room-visit-first-entity all-indicator-answers">
-                                {state1EmergencyRoomVisit ? `${formatNumberWithCommas(state1EmergencyRoomVisit)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="emergency-room-visit-second-entity all-indicator-answers">
-                                {state2EmergencyRoomVisit ? `${formatNumberWithCommas(state2EmergencyRoomVisit)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="prescription-medication-first-entity all-indicator-answers">
+                  {state1PrescriptionMedication
+                    ? `${formatNumberWithCommas(
+                        state1PrescriptionMedication
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="prescription-medication-second-entity all-indicator-answers">
+                  {state2PrescriptionMedication
+                    ? `${formatNumberWithCommas(
+                        state2PrescriptionMedication
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Hospital Stay Per Night</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/hospital-stay-per-night-image.png"
-                                        fill alt="Image Describing Hospital Stay Per Night" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Over the Counter Medication
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/over-the-counter-medication-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Over the Counter Medication"
+                    />
+                  </div>
+                </td>
 
-                            <td className="hospital-stay-per-night-first-entity all-indicator-answers">
-                                {state1HospitalStayPerNight ? `${formatNumberWithCommas(state1HospitalStayPerNight)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="hospital-stay-per-night-second-entity all-indicator-answers">
-                                {state2HospitalStayPerNight ? `${formatNumberWithCommas(state2HospitalStayPerNight)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="over-the-counter-medication-first-entity all-indicator-answers">
+                  {state1OverTheCounterMedication
+                    ? `${formatNumberWithCommas(
+                        state1OverTheCounterMedication
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="over-the-counter-medication-second-entity all-indicator-answers">
+                  {state2OverTheCounterMedication
+                    ? `${formatNumberWithCommas(
+                        state2OverTheCounterMedication
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Vaccinations</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/vaccinations-charge-image.png" fill alt="Image Describing Vaccinations" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Health Insurance Premiums
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/health-insurance-premiums-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Health Insurance Premiums"
+                    />
+                  </div>
+                </td>
 
-                            <td className="vaccinations-first-entity all-indicator-answers">
-                                {state1Vaccinations ? `${formatNumberWithCommas(state1Vaccinations)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="vaccinations-second-entity all-indicator-answers">
-                                {state2Vaccinations ? `${formatNumberWithCommas(state2Vaccinations)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="health-insurance-premiums-first-entity all-indicator-answers">
+                  {state1HealthInsurancePremiums
+                    ? `${formatNumberWithCommas(
+                        state1HealthInsurancePremiums
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="health-insurance-premiums-second-entity all-indicator-answers">
+                  {state2HealthInsurancePremiums
+                    ? `${formatNumberWithCommas(
+                        state2HealthInsurancePremiums
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Prescription Medication</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/prescription-medication-image.png"
-                                        fill alt="Image Describing Prescription Medication" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Health Insurance Deductibles
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/health-insurance-deductibles-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Health Insurance Deductibles"
+                    />
+                  </div>
+                </td>
 
-                            <td className="prescription-medication-first-entity all-indicator-answers">
-                                {state1PrescriptionMedication ? `${formatNumberWithCommas(state1PrescriptionMedication)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="prescription-medication-second-entity all-indicator-answers">
-                                {state2PrescriptionMedication ? `${formatNumberWithCommas(state2PrescriptionMedication)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="health-insurance-deductibles-first-entity all-indicator-answers">
+                  {state1HealthInsuranceDeductibles
+                    ? `${formatNumberWithCommas(
+                        state1HealthInsuranceDeductibles
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="health-insurance-deductibles-second-entity all-indicator-answers">
+                  {state2HealthInsuranceDeductibles
+                    ? `${formatNumberWithCommas(
+                        state2HealthInsuranceDeductibles
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <h3>
+              Does Health and Medical Treatment cost more in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {state1}{' '}
+              </span>{' '}
+              than in
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {state2}
+              </span>
+              ?
+            </h3>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Over the Counter Medication</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/over-the-counter-medication-image.png"
-                                        fill alt="Image Describing Over the Counter Medication" />
-                                </div>
-                            </td>
-
-                            <td className="over-the-counter-medication-first-entity all-indicator-answers">
-                                {state1OverTheCounterMedication ? `${formatNumberWithCommas(state1OverTheCounterMedication)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="over-the-counter-medication-second-entity all-indicator-answers">
-                                {state2OverTheCounterMedication ? `${formatNumberWithCommas(state2OverTheCounterMedication)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Health Insurance Premiums</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/health-insurance-premiums-image.png"
-                                        fill alt="Image Describing Health Insurance Premiums" />
-                                </div>
-                            </td>
-
-                            <td className="health-insurance-premiums-first-entity all-indicator-answers">
-                                {state1HealthInsurancePremiums ? `${formatNumberWithCommas(state1HealthInsurancePremiums)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="health-insurance-premiums-second-entity all-indicator-answers">
-                                {state2HealthInsurancePremiums ? `${formatNumberWithCommas(state2HealthInsurancePremiums)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Health Insurance Deductibles</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/health-insurance-deductibles-image.png"
-                                        fill alt="Image Describing Health Insurance Deductibles" />
-                                </div>
-                            </td>
-
-                            <td className="health-insurance-deductibles-first-entity all-indicator-answers">
-                                {state1HealthInsuranceDeductibles ? `${formatNumberWithCommas(state1HealthInsuranceDeductibles)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="health-insurance-deductibles-second-entity all-indicator-answers">
-                                {state2HealthInsuranceDeductibles ? `${formatNumberWithCommas(state2HealthInsuranceDeductibles)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
-                    <h3>
-                        Does Health and Medical Treatment cost more in
-                        <span className="first-entity-name-pages-paragraph"> {state1} </span> than in
-                        <span className="second-entity-name-pages-paragraph"> {state2}</span>?
-                    </h3>
-
-                    <p>
-                        If you lived in
-                        <span className="first-entity-name-pages-paragraph"> {state1}</span>, instead of
-                        <span className="second-entity-name-pages-paragraph"> {state2}</span>, you would have
-                        to pay
-                        <strong>
-                            <span className="health-and-medical-cost-calculation"> {costTimes} </span> times </strong> <span
-                                className="health-and-medical-cost-more-or-less-calculation"> {moreOrLess} </span>
-                        for Health and Medical Treatment.
-                    </p>
-                </div>
-            </div>
-        </>
-    )
+            <p>
+              If you lived in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {state1}
+              </span>
+              , instead of
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {state2}
+              </span>
+              , you would have to pay
+              <strong>
+                <span className="health-and-medical-cost-calculation">
+                  {' '}
+                  {costTimes}{' '}
+                </span>{' '}
+                times{' '}
+              </strong>{' '}
+              <span className="health-and-medical-cost-more-or-less-calculation">
+                {' '}
+                {moreOrLess}{' '}
+              </span>
+              for Health and Medical Treatment.
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default Health

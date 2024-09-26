@@ -48,7 +48,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                     <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
@@ -56,7 +57,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                     <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -64,13 +66,15 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug1LowerCase}`} />
+                                        <Image src={`/images/${slug1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{slug1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug1LowerCase}`} />
+                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -78,13 +82,15 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug2LowerCase}`} />
+                                        <Image src={`/images/${slug2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {slug2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2LowerCase}`} />
+                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -98,7 +104,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/children-jeans-image.png"
-                                        fill alt="Image Describing Children Jeans" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Children Jeans" />
                                 </div>
                             </td>
 
@@ -116,7 +123,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/children-sneakers-image.png"
-                                        fill alt="Image Describing Children Normal Sneakers" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Children Normal Sneakers" />
                                 </div>
                             </td>
 
@@ -134,7 +142,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/children-winter-coat-image.png"
-                                        fill alt="Image Describing Children's Winter Coat" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Children's Winter Coat" />
                                 </div>
                             </td>
 
@@ -153,7 +162,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/day-care-infant-image.png"
-                                        fill alt="Image Describing Daycare for Infant" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Daycare for Infant" />
                                 </div>
                             </td>
 
@@ -171,7 +181,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/day-care-toddler-image.png"
-                                        fill alt="Image Describing Daycare for Toddler" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Daycare for Toddler" />
                                 </div>
                             </td>
 
@@ -189,7 +200,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/children-care-for-sick-days-image.png"
-                                        fill alt="Image Describing Childcare for Sick Days" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Childcare for Sick Days" />
                                 </div>
                             </td>
 
@@ -211,7 +223,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/early-childhood-education-programs-image.png"
-                                        fill alt="Image Describing Early Childhood Education Programs" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Early Childhood Education Programs" />
                                 </div>
                             </td>
 
@@ -231,7 +244,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/extra-curricular-activities-image.png"
-                                        fill alt="Image Describing Extra Curricular Activities" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Extra Curricular Activities" />
                                 </div>
                             </td>
 
@@ -251,7 +265,8 @@ function Childcare({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/summer-camp-image.png"
-                                        fill alt="Image Describing Summer Camp" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Summer Camp" />
                                 </div>
                             </td>
 

@@ -32,13 +32,15 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -46,13 +48,15 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${countryLowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${countryLowerCase}`} />
+                                        <Image src={`/images/${countryLowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${countryLowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${countryLowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${countryLowerCase}`} />
+                                        <Image src={`/images/${countryLowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${countryLowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -67,7 +71,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">PreSchool Fees</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/pre-school-image.png" fill alt="Image Describing PreSchool Fees" />
+                                    <Image src="/images/pre-school-image.png"layout="fill"
+objectFit="contain"alt="Image Describing PreSchool Fees" />
                                 </div>
                             </td>
 
@@ -83,7 +88,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Primary School Fees</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/primary-school-fees-image.png" fill alt="Image Describing Primary School Fees" />
+                                    <Image src="/images/primary-school-fees-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Primary School Fees" />
                                 </div>
                             </td>
 
@@ -98,7 +104,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">Secondary School Fees</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/secondary-school-fees-image.png"
-                                        fill alt="Image Describing Secondary School Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Secondary School Fees" />
                                 </div>
                             </td>
 
@@ -112,7 +119,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Private School Fees</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/private-school-fees-image.png" fill alt="Image Describing Private School Fees" />
+                                    <Image src="/images/private-school-fees-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Private School Fees" />
                                 </div>
                             </td>
 
@@ -128,7 +136,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">University Tuition Fees</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/university-tuition-fees-image.png"
-                                        fill alt="Image Describing University Tuition Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing University Tuition Fees" />
                                 </div>
                             </td>
 
@@ -143,7 +152,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">University Private Tuition Fees</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/university-private-tuition-fees-image.png"
-                                        fill alt="Image Describing University Private Tuition Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing University Private Tuition Fees" />
                                 </div>
                             </td>
 
@@ -158,7 +168,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">After School Activities</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/after-school-activities-image.png"
-                                        fill alt="Image Describing After School Activities" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing After School Activities" />
                                 </div>
                             </td>
 
@@ -173,7 +184,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                                 <div className="all-indicators">Special Education Services</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/special-education-services-image.png"
-                                        fill alt="Image Describing Special Education Services" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Special Education Services" />
                                 </div>
                             </td>
 
@@ -189,7 +201,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Tutoring</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/tutoring-image.png" fill alt="Image Describing Tutoring" />
+                                    <Image src="/images/tutoring-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Tutoring" />
                                 </div>
                             </td>
 
@@ -203,7 +216,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">Textbooks Cost</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/textbooks-image.png" fill alt="Image Describing Textbooks Cost" />
+                                    <Image src="/images/textbooks-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Textbooks Cost" />
                                 </div>
                             </td>
 
@@ -217,7 +231,8 @@ function Education({ costInfo, currency, unitValueInUSD, countryLowerCase }) {
                             <td className="basic-info">
                                 <div className="all-indicators">School Supplies</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/school-supplies-image.png" fill alt="Image Describing School Supplies" />
+                                    <Image src="/images/school-supplies-image.png"layout="fill"
+objectFit="contain"alt="Image Describing School Supplies" />
                                 </div>
                             </td>
 

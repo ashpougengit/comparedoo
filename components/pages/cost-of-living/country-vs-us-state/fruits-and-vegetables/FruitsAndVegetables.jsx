@@ -30,234 +30,410 @@ function FruitsAndVegetables({ slug1, slug2, value1, value2, slug1CostInfo, slug
     const isDollarizedSlug2 = isDollarized(value2, slug2);
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Fruits and Vegetables Cost Comparison</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">Fruits and Vegetables Cost Comparison</h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image
-                                            src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image
-                                            src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug1LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${slug1LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${slug1LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{slug1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {slug1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug1LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${slug1LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${slug1LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug2LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${slug2LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${slug2LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {slug2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {slug2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${slug2LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${slug2LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Apples (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/apples-1-kg-image.png"
-                                        fill alt="Image Describing apples cost per month" />
-                                </div>
-                            </td>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Apples (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/apples-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing apples cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="apples-1-kg-first-entity all-indicator-answers">
-                                {slug1Apples1Kg ? formatCost(slug1Apples1Kg, slug1ExchangeRate, slug1Currency, isDollarizedSlug1) : 'Yet to Update'}
-                            </td>
-                            <td className="apples-1-kg-second-entity all-indicator-answers">
-                                {slug2Apples1Kg ? formatCost(slug2Apples1Kg, slug2ExchangeRate, slug2Currency, isDollarizedSlug2) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="apples-1-kg-first-entity all-indicator-answers">
+                  {slug1Apples1Kg
+                    ? formatCost(
+                        slug1Apples1Kg,
+                        slug1ExchangeRate,
+                        slug1Currency,
+                        isDollarizedSlug1
+                      )
+                    : 'Yet to Update'}
+                </td>
+                <td className="apples-1-kg-second-entity all-indicator-answers">
+                  {slug2Apples1Kg
+                    ? formatCost(
+                        slug2Apples1Kg,
+                        slug2ExchangeRate,
+                        slug2Currency,
+                        isDollarizedSlug2
+                      )
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Bananas (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/bananas-1-kg-image.png"
-                                        fill alt="Image Describing bananas cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Bananas (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/bananas-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing bananas cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="bananas-1-kg-first-entity all-indicator-answers">
-                                {slug1Bananas1Kg ? formatCost(slug1Bananas1Kg, slug1ExchangeRate, slug1Currency, isDollarizedSlug1) : 'Yet to Update'}
-                            </td>
-                            <td className="bananas-1-kg-second-entity all-indicator-answers">
-                                {slug2Bananas1Kg ? formatCost(slug2Bananas1Kg, slug2ExchangeRate, slug2Currency, isDollarizedSlug2) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="bananas-1-kg-first-entity all-indicator-answers">
+                  {slug1Bananas1Kg
+                    ? formatCost(
+                        slug1Bananas1Kg,
+                        slug1ExchangeRate,
+                        slug1Currency,
+                        isDollarizedSlug1
+                      )
+                    : 'Yet to Update'}
+                </td>
+                <td className="bananas-1-kg-second-entity all-indicator-answers">
+                  {slug2Bananas1Kg
+                    ? formatCost(
+                        slug2Bananas1Kg,
+                        slug2ExchangeRate,
+                        slug2Currency,
+                        isDollarizedSlug2
+                      )
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Oranges (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/oranges-1-kg-image.png"
-                                        fill alt="Image Describing oranges cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Oranges (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/oranges-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing oranges cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="oranges-1-kg-first-entity all-indicator-answers">
-                                {slug1Oranges1Kg ? formatCost(slug1Oranges1Kg, slug1ExchangeRate, slug1Currency, isDollarizedSlug1) : 'Yet to Update'}
-                            </td>
-                            <td className="oranges-1-kg-second-entity all-indicator-answers">
-                                {slug2Oranges1Kg ? formatCost(slug2Oranges1Kg, slug2ExchangeRate, slug2Currency, isDollarizedSlug2) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="oranges-1-kg-first-entity all-indicator-answers">
+                  {slug1Oranges1Kg
+                    ? formatCost(
+                        slug1Oranges1Kg,
+                        slug1ExchangeRate,
+                        slug1Currency,
+                        isDollarizedSlug1
+                      )
+                    : 'Yet to Update'}
+                </td>
+                <td className="oranges-1-kg-second-entity all-indicator-answers">
+                  {slug2Oranges1Kg
+                    ? formatCost(
+                        slug2Oranges1Kg,
+                        slug2ExchangeRate,
+                        slug2Currency,
+                        isDollarizedSlug2
+                      )
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Tomatoes (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/tomatoes-1-kg-image.png"
-                                        fill alt="Image Describing tomatoes cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Tomatoes (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/tomatoes-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing tomatoes cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="tomatoes-1-kg-first-entity all-indicator-answers">
-                                {slug1Tomatoes1Kg ? formatCost(slug1Tomatoes1Kg, slug1ExchangeRate, slug1Currency, isDollarizedSlug1) : 'Yet to Update'}
-                            </td>
-                            <td className="tomatoes-1-kg-second-entity all-indicator-answers">
-                                {slug2Tomatoes1Kg ? formatCost(slug2Tomatoes1Kg, slug2ExchangeRate, slug2Currency, isDollarizedSlug2) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="tomatoes-1-kg-first-entity all-indicator-answers">
+                  {slug1Tomatoes1Kg
+                    ? formatCost(
+                        slug1Tomatoes1Kg,
+                        slug1ExchangeRate,
+                        slug1Currency,
+                        isDollarizedSlug1
+                      )
+                    : 'Yet to Update'}
+                </td>
+                <td className="tomatoes-1-kg-second-entity all-indicator-answers">
+                  {slug2Tomatoes1Kg
+                    ? formatCost(
+                        slug2Tomatoes1Kg,
+                        slug2ExchangeRate,
+                        slug2Currency,
+                        isDollarizedSlug2
+                      )
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Potatoes (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/potatoes-1-kg-image.png"
-                                        fill alt="Image Describing potatoes cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Potatoes (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/potatoes-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing potatoes cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="potatoes-1-kg-first-entity all-indicator-answers">
-                                {slug1Potatoes1Kg ? formatCost(slug1Potatoes1Kg, slug1ExchangeRate, slug1Currency, isDollarizedSlug1) : 'Yet to Update'}
-                            </td>
-                            <td className="potatoes-1-kg-second-entity all-indicator-answers">
-                                {slug2Potatoes1Kg ? formatCost(slug2Potatoes1Kg, slug2ExchangeRate, slug2Currency, isDollarizedSlug2) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="potatoes-1-kg-first-entity all-indicator-answers">
+                  {slug1Potatoes1Kg
+                    ? formatCost(
+                        slug1Potatoes1Kg,
+                        slug1ExchangeRate,
+                        slug1Currency,
+                        isDollarizedSlug1
+                      )
+                    : 'Yet to Update'}
+                </td>
+                <td className="potatoes-1-kg-second-entity all-indicator-answers">
+                  {slug2Potatoes1Kg
+                    ? formatCost(
+                        slug2Potatoes1Kg,
+                        slug2ExchangeRate,
+                        slug2Currency,
+                        isDollarizedSlug2
+                      )
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Lemons (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/lemons-1-kg-image.png"
-                                        fill alt="Image Describing lemons cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Lemons (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/lemons-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing lemons cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="lemons-1-kg-first-entity all-indicator-answers">
-                                {slug1Lemons1Kg ? formatCost(slug1Lemons1Kg, slug2ExchangeRate, slug2Currency, isDollarizedSlug2) : 'Yet to Update'}
-                            </td>
-                            <td className="lemons-1-kg-second-entity all-indicator-answers">
-                                {slug2Lemons1Kg ? formatCost(slug2Lemons1Kg, slug2ExchangeRate, slug2Currency, isDollarizedSlug2) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="lemons-1-kg-first-entity all-indicator-answers">
+                  {slug1Lemons1Kg
+                    ? formatCost(
+                        slug1Lemons1Kg,
+                        slug2ExchangeRate,
+                        slug2Currency,
+                        isDollarizedSlug2
+                      )
+                    : 'Yet to Update'}
+                </td>
+                <td className="lemons-1-kg-second-entity all-indicator-answers">
+                  {slug2Lemons1Kg
+                    ? formatCost(
+                        slug2Lemons1Kg,
+                        slug2ExchangeRate,
+                        slug2Currency,
+                        isDollarizedSlug2
+                      )
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Onions (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/onions-1-kg-image.png"
-                                        fill alt="Image Describing onions cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Onions (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/onions-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing onions cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="onions-1-kg-first-entity all-indicator-answers">
-                                {slug1Onions1Kg ? formatCost(slug1Onions1Kg, slug1ExchangeRate, slug1Currency, isDollarizedSlug1) : 'Yet to Update'}
-                            </td>
-                            <td className="onions-1-kg-second-entity all-indicator-answers">
-                                {slug2Onions1Kg ? formatCost(slug2Onions1Kg, slug2ExchangeRate, slug2Currency, isDollarizedSlug2) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="onions-1-kg-first-entity all-indicator-answers">
+                  {slug1Onions1Kg
+                    ? formatCost(
+                        slug1Onions1Kg,
+                        slug1ExchangeRate,
+                        slug1Currency,
+                        isDollarizedSlug1
+                      )
+                    : 'Yet to Update'}
+                </td>
+                <td className="onions-1-kg-second-entity all-indicator-answers">
+                  {slug2Onions1Kg
+                    ? formatCost(
+                        slug2Onions1Kg,
+                        slug2ExchangeRate,
+                        slug2Currency,
+                        isDollarizedSlug2
+                      )
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Lentils (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/lentils-1-kg-image.png"
-                                        fill alt="Image Describing lentils cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Lentils (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/lentils-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing lentils cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="lentils-1-kg-first-entity all-indicator-answers">
-                                {slug1Lentils1Kg ? formatCost(slug1Lentils1Kg, slug1ExchangeRate, slug1Currency, isDollarizedSlug1) : 'Yet to Update'}
-                            </td>
-                            <td className="lentils-1-kg-second-entity all-indicator-answers">
-                                {slug2Lentils1Kg ? formatCost(slug2Lentils1Kg, slug2ExchangeRate, slug2Currency, isDollarizedSlug2) : 'Yet to Update'}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <td className="lentils-1-kg-first-entity all-indicator-answers">
+                  {slug1Lentils1Kg
+                    ? formatCost(
+                        slug1Lentils1Kg,
+                        slug1ExchangeRate,
+                        slug1Currency,
+                        isDollarizedSlug1
+                      )
+                    : 'Yet to Update'}
+                </td>
+                <td className="lentils-1-kg-second-entity all-indicator-answers">
+                  {slug2Lentils1Kg
+                    ? formatCost(
+                        slug2Lentils1Kg,
+                        slug2ExchangeRate,
+                        slug2Currency,
+                        isDollarizedSlug2
+                      )
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
-                    <p>
-                        If you lived in
-                        <span className="first-entity-name-pages-paragraph"> {slug1}</span>
-                        , instead of
-                        <span className="second-entity-name-pages-paragraph"> {slug2}</span>
-                        , you would have to pay
-                        <strong>
-                            <span className="fruits-and-vegetables-calculation"> {costTimes} </span>
-                            times{' '}
-                        </strong>
-                        <span className="fruits-and-vegetables-more-or-less-calculation">
-                            {moreOrLess}{' '}
-                        </span>
-                        for Fruits and Vegetables.
-                    </p>
-                </div>
-            </div>
-        </>
-    )
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <p>
+              If you lived in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {slug1}
+              </span>
+              , instead of
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {slug2}
+              </span>
+              , you would have to pay
+              <strong>
+                <span className="fruits-and-vegetables-calculation">
+                  {' '}
+                  {costTimes}{' '}
+                </span>
+                times{' '}
+              </strong>
+              <span className="fruits-and-vegetables-more-or-less-calculation">
+                {moreOrLess}{' '}
+              </span>
+              for Fruits and Vegetables.
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default FruitsAndVegetables

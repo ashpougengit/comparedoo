@@ -48,7 +48,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                     <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
@@ -56,7 +57,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                     <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -64,13 +66,15 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug1LowerCase}`} />
+                                        <Image src={`/images/${slug1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{slug1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug1LowerCase}`} />
+                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -78,13 +82,15 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug2LowerCase}`} />
+                                        <Image src={`/images/${slug2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {slug2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2LowerCase}`} />
+                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -100,7 +106,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/public-transportation-pass-per-month-image.png"
-                                        fill alt="Image Describing Monthly Public Transportation Pass" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Monthly Public Transportation Pass" />
                                 </div>
                             </td>
 
@@ -122,7 +129,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/single-public-transportation-ticket-image.png"
-                                        fill alt="Image Describing Single Public Transportation Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Single Public Transportation Ticket" />
                                 </div>
                             </td>
 
@@ -142,7 +150,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/train-tickets-image.png"
-                                        fill alt="Image Describing Single Train Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Single Train Ticket" />
                                 </div>
                             </td>
 
@@ -160,7 +169,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/air-fare-domestic.png"
-                                        fill alt="Image Describing Domestic Airplane Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Domestic Airplane Ticket" />
                                 </div>
                             </td>
 
@@ -178,7 +188,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/taxi-start-fare-image.png"
-                                        fill alt="Image Describing Taxi Start Fare" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Taxi Start Fare" />
                                 </div>
                             </td>
 
@@ -196,7 +207,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/taxi-rate-per-kilometers-image.png"
-                                        fill alt="Image Describing Taxi Rate Per Kilometer" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Taxi Rate Per Kilometer" />
                                 </div>
                             </td>
 
@@ -216,7 +228,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/car-rental-per-day-image.png"
-                                        fill alt="Image Describing Car Rental Per Day" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Car Rental Per Day" />
                                 </div>
                             </td>
 
@@ -236,7 +249,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/parking-fees-inside-city-per-hour-image.png"
-                                        fill alt="Image Describing Parking Fees in City Center" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Parking Fees in City Center" />
                                 </div>
                             </td>
 
@@ -258,7 +272,8 @@ function Transportation({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/parking-fees-outside-city-per-hour-image.png"
-                                        fill alt="Image Describing Parking Fees outside City Center" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Parking Fees outside City Center" />
                                 </div>
                             </td>
 

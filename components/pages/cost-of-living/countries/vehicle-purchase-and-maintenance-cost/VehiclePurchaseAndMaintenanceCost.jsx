@@ -46,13 +46,15 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -60,13 +62,15 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -74,13 +78,15 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {country2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -94,7 +100,8 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                                 <div className="all-indicators">Reasonable Vehicle Purchase Cost</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/vehicle-purchase-price-image.png"
-                                        fill alt="Image Describing Reasonable Vehicle Purchase Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Reasonable Vehicle Purchase Cost" />
                                 </div>
                             </td>
 
@@ -112,7 +119,8 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                                 <div className="all-indicators">Vehicle Registration Cost</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/vehicle-registration-image.png"
-                                        fill alt="Image Describing Vehicle Registration Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Vehicle Registration Cost" />
                                 </div>
                             </td>
 
@@ -129,7 +137,8 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                             <td className="basic-info">
                                 <div className="all-indicators">Driving License Fees</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/driving-license-fees-image.png" fill alt="Image Describing Driving License Fees" />
+                                    <Image src="/images/driving-license-fees-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Driving License Fees" />
                                 </div>
                             </td>
 
@@ -147,7 +156,8 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                             <td className="basic-info">
                                 <div className="all-indicators">Car Insurance Cost</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/car-insurance-image.png" fill alt="Image Describing Car Insurance Cost" />
+                                    <Image src="/images/car-insurance-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Car Insurance Cost" />
                                 </div>
                             </td>
 
@@ -164,7 +174,8 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                             <td className="basic-info">
                                 <div className="all-indicators">Car Maintenance Cost</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/car-maintenance-image.png" fill alt="Image Describing Car Maintenance Cost" />
+                                    <Image src="/images/car-maintenance-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Car Maintenance Cost" />
                                 </div>
                             </td>
 
@@ -182,7 +193,8 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                                 <div className="all-indicators">Car Loan Interest Rates</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/car-loan-interest-rate-image.png"
-                                        fill alt="Image Describing Car Loan Interest Rates" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Car Loan Interest Rates" />
                                 </div>
                             </td>
 
@@ -196,7 +208,8 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                             <td className="basic-info">
                                 <div className="all-indicators">Fuel Per Liter</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/fuel-per-liter-image.png" fill alt="Image Describing Fuel Per Liter" />
+                                    <Image src="/images/fuel-per-liter-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Fuel Per Liter" />
                                 </div>
                             </td>
 
@@ -212,7 +225,8 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                             <td className="basic-info">
                                 <div className="all-indicators">Fuel Per Gallon</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/fuel-per-gallon-image.png" fill alt="Image Describing Fuel Per Gallon" />
+                                    <Image src="/images/fuel-per-gallon-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Fuel Per Gallon" />
                                 </div>
                             </td>
 
@@ -228,7 +242,8 @@ function VehiclePurchaseAndMaintenanceCost({ country1CostInfo, country2CostInfo,
                             <td className="basic-info">
                                 <div className="all-indicators">Average Toll Fees</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/toll-fees-image.png" fill alt="Image Describing Average Toll Fees" />
+                                    <Image src="/images/toll-fees-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Average Toll Fees" />
                                 </div>
                             </td>
 

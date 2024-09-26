@@ -1,10 +1,8 @@
 import { Nunito_Sans } from 'next/font/google';
-// import Head from 'next/head';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
 import './globals.css'
 import ScrollProgressBar from '@/components/scroll-progress-bar/ScrollProgressBar';
-import HamburgerMenu from '@/components/hamburger-menu/HamburgerMenu';
 import ScrollToTopBottom from '@/components/scroll-to-top-bottom/ScrollToTopBottom';
 
 const nunitoSans = Nunito_Sans({
@@ -12,18 +10,32 @@ const nunitoSans = Nunito_Sans({
   display: 'swap',
 });
 
-export const metadata = {
-  title: 'Comparedo home page',
-  description: 'A site for comparing countries, states and cities',
-};
+// generate Metadata
+export async function generateMetadata() {
+  try {
+      const title = 'Comparedo home page';
+      const description = 'A site for comparing countries, states and cities'
+
+      return {
+          title,
+          description,
+      };
+  } catch (error) {
+      return {
+          title: 'Error loading page',
+          description: error.message,
+      };
+  }
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-      </Head> */}
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/images/favicon-image-comparedoo.png" />
+      </head>
 
       <body className={nunitoSans.className}>
 

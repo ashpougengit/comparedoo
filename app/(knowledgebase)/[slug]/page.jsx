@@ -38,13 +38,18 @@ async function KnowledgeBase({ params }) {
   const { slug } = params;
   const isCountry = slug.includes('countries');
   const trimmedSlug = slug.replace(/of-all(countries|us-states)/, '');
-  const indicator = toCamelCase(trimmedSlug);
+  let indicator = toCamelCase(trimmedSlug);
+  
   const titleCasedIndicator = camelToTitleCase(indicator, isCountry);
 
   const indicatorType = indicatorsGeneral.includes(indicator) ? 'general' : 'standard';
 
+  const realIndicator = indicator
+
+  indicator = (indicator === 'unemploymentPercentageOfTotalLabourForce' || indicator === 'employmentRate') ? (isCountry ? "unemploymentPercentageOfTotalLabourForce" : 'employmentRate') : indicator
+
   try {
-    const indicatorInfo = await fetchIndicatorInfo(isCountry ? 'country' : 'state', indicator, indicatorType);
+    let indicatorInfo = await fetchIndicatorInfo(isCountry ? 'country' : 'state', indicator, indicatorType);
 
     let majorReligionPercentage, majorReligionWithPercentage
     if (indicator === 'majorReligion') {
@@ -60,6 +65,24 @@ async function KnowledgeBase({ params }) {
           majorReligionPercentage: percentageData ? percentageData.majorReligionPercentage : null
         };
       });
+    }
+
+    if (realIndicator === 'unemploymentPercentageOfTotalLabourForce' && !isCountry) {
+      indicatorInfo = indicatorInfo.map(value => (
+        {
+          state: value.state,
+          unemploymentPercentageOfTotalLabourForce: Math.abs(value.employmentRate - 100)
+        }
+      ))
+    }
+
+    if (realIndicator === 'employmentRate' && isCountry) {
+      indicatorInfo = indicatorInfo.map(value => (
+        {
+          country: value.country,
+          employmentRate: Math.abs(value.unemploymentPercentageOfTotalLabourForce - 100)
+        }
+      ))
     }
 
     // Handle the case when indicatorInfo is null or undefined
@@ -226,10 +249,10 @@ async function KnowledgeBase({ params }) {
                             {/* {
                               obj[indicator] ? `${formatNumberWithCommas(obj[indicator])} ${indicatorValueType(indicator, isCountry)}` : 'Yet to Update'
                             } */}
-                            {obj[indicator] ? (
+                            {obj[realIndicator] ? (
                               <>
                                 {
-                                  indicator === 'majorReligion' ? `${formatNumberWithCommas(obj[indicator])} ${indicatorValueType(indicator, isCountry)} (${obj['majorReligionPercentage']}%)` : `${formatNumberWithCommas(obj[indicator])} ${indicatorValueType(indicator, isCountry)}`
+                                  indicator === 'majorReligion' ? `${formatNumberWithCommas(obj[realIndicator])} ${indicatorValueType(realIndicator, isCountry)} (${obj['majorReligionPercentage']}%)` : (realIndicator === 'HDI' || realIndicator === 'unitValueInUSD') ? obj[realIndicator] : `${formatNumberWithCommas(obj[realIndicator])} ${indicatorValueType(realIndicator, isCountry)}`
                                 }
                               </>
                             ) : 'Yet to Update'

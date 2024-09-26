@@ -26,299 +26,453 @@ function BasicUtilities({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
     const percentageDifference = (((Math.abs(slug1TotalCost - slug2TotalCost)) / slug2TotalCost) * 100).toFixed(2)
     const moreOrLessUtilities = slug1TotalCost > slug2TotalCost ? 'more' : 'less'
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Basic Utilities Cost Comparison</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">Basic Utilities Cost Comparison</h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image
-                                            src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image
-                                            src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug1LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${slug1LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${slug1LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{slug1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {slug1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug1LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${slug1LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${slug1LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug2LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${slug2LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${slug2LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {slug2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {slug2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${slug2LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${slug2LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Basic Home Furnishing</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/home-furnishing-image.png"
-                                        fill alt="Image Describing Home Furnishing Cost" />
-                                </div>
-                            </td>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Basic Home Furnishing</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/home-furnishing-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Home Furnishing Cost"
+                    />
+                  </div>
+                </td>
 
-                            <td
-                                className="home-furnishing-answer-first-entity all-indicator-answers">
-                                {slug1HomeFurnishing ? (
-                                    value1 === 'state' || dollarizedCountries.includes(slug1) ? (
-                                        `${formatNumberWithCommas(slug1HomeFurnishing)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug1HomeFurnishing)} ${slug1Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug1HomeFurnishing * slug1ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                            <td
-                                className="home-furnishing-answer-second-entity all-indicator-answers">
-                                {slug2HomeFurnishing ? (
-                                    value2 === 'state' || dollarizedCountries.includes(slug2) ? (
-                                        `${formatNumberWithCommas(slug2HomeFurnishing)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug2HomeFurnishing)} ${slug2Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug2HomeFurnishing * slug2ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="home-furnishing-answer-first-entity all-indicator-answers">
+                  {slug1HomeFurnishing ? (
+                    value1 === 'state' ||
+                    dollarizedCountries.includes(slug1) ? (
+                      `${formatNumberWithCommas(slug1HomeFurnishing)} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug1HomeFurnishing
+                        )} ${slug1Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug1HomeFurnishing * slug1ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+                <td className="home-furnishing-answer-second-entity all-indicator-answers">
+                  {slug2HomeFurnishing ? (
+                    value2 === 'state' ||
+                    dollarizedCountries.includes(slug2) ? (
+                      `${formatNumberWithCommas(slug2HomeFurnishing)} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug2HomeFurnishing
+                        )} ${slug2Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug2HomeFurnishing * slug2ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Electricity Cost Per Month</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/electricity-cost-per-month-image.png"
-                                        fill alt="Image Describing Electricity Cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Electricity Cost Per Month
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/electricity-cost-per-month-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Electricity Cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td
-                                className="electricity-cost-per-month-answer-first-entity all-indicator-answers">
-                                {slug1ElectricityCostPerMonth ? (
-                                    value1 === 'state' || dollarizedCountries.includes(slug1) ? (
-                                        `${formatNumberWithCommas(slug1ElectricityCostPerMonth)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug1ElectricityCostPerMonth)} ${slug1Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug1ElectricityCostPerMonth * slug1ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                            <td
-                                className="electricity-cost-per-month-answer-second-entity all-indicator-answers">
-                                {slug2ElectricityCostPerMonth ? (
-                                    value2 === 'state' || dollarizedCountries.includes(slug2) ? (
-                                        `${formatNumberWithCommas(slug2ElectricityCostPerMonth)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug2ElectricityCostPerMonth)} ${slug2Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug2ElectricityCostPerMonth * slug2ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="electricity-cost-per-month-answer-first-entity all-indicator-answers">
+                  {slug1ElectricityCostPerMonth ? (
+                    value1 === 'state' ||
+                    dollarizedCountries.includes(slug1) ? (
+                      `${formatNumberWithCommas(
+                        slug1ElectricityCostPerMonth
+                      )} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug1ElectricityCostPerMonth
+                        )} ${slug1Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug1ElectricityCostPerMonth * slug1ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+                <td className="electricity-cost-per-month-answer-second-entity all-indicator-answers">
+                  {slug2ElectricityCostPerMonth ? (
+                    value2 === 'state' ||
+                    dollarizedCountries.includes(slug2) ? (
+                      `${formatNumberWithCommas(
+                        slug2ElectricityCostPerMonth
+                      )} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug2ElectricityCostPerMonth
+                        )} ${slug2Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug2ElectricityCostPerMonth * slug2ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Heating Cost Per Month</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/heating-cost-per-month-image.png"
-                                        fill alt="Image Describing Heating Cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Heating Cost Per Month</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/heating-cost-per-month-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Heating Cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td
-                                className="heating-cost-per-month-answer-first-entity all-indicator-answers">
-                                {slug1HeatingCostPerMonth ? (
-                                    value1 === 'state' || dollarizedCountries.includes(slug1) ? (
-                                        `${formatNumberWithCommas(slug1HeatingCostPerMonth)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug1HeatingCostPerMonth)} ${slug1Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug1HeatingCostPerMonth * slug1ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                            <td
-                                className="heating-cost-per-month-answer-second-entity all-indicator-answers">
-                                {slug2HeatingCostPerMonth ? (
-                                    value2 === 'state' || dollarizedCountries.includes(slug2) ? (
-                                        `${formatNumberWithCommas(slug2HeatingCostPerMonth)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug2HeatingCostPerMonth)} ${slug2Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug2HeatingCostPerMonth * slug2ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="heating-cost-per-month-answer-first-entity all-indicator-answers">
+                  {slug1HeatingCostPerMonth ? (
+                    value1 === 'state' ||
+                    dollarizedCountries.includes(slug1) ? (
+                      `${formatNumberWithCommas(slug1HeatingCostPerMonth)} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug1HeatingCostPerMonth
+                        )} ${slug1Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug1HeatingCostPerMonth * slug1ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+                <td className="heating-cost-per-month-answer-second-entity all-indicator-answers">
+                  {slug2HeatingCostPerMonth ? (
+                    value2 === 'state' ||
+                    dollarizedCountries.includes(slug2) ? (
+                      `${formatNumberWithCommas(slug2HeatingCostPerMonth)} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug2HeatingCostPerMonth
+                        )} ${slug2Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug2HeatingCostPerMonth * slug2ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Cooling Cost Per Month</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/cooling-cost-per-month-image.png"
-                                        fill alt="Image Describing Cooling Cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Cooling Cost Per Month</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/cooling-cost-per-month-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Cooling Cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td
-                                className="cooling-cost-per-month-answer-first-entity all-indicator-answers">
-                                {slug1CoolingCostPerMonth ? (
-                                    value1 === 'state' || dollarizedCountries.includes(slug1) ? (
-                                        `${formatNumberWithCommas(slug1CoolingCostPerMonth)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug1CoolingCostPerMonth)} ${slug1Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug1CoolingCostPerMonth * slug1ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                            <td
-                                className="cooling-cost-per-month-answer-second-entity all-indicator-answers">
-                                {slug2CoolingCostPerMonth ? (
-                                    value2 === 'state' || dollarizedCountries.includes(slug2) ? (
-                                        `${formatNumberWithCommas(slug2CoolingCostPerMonth)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug2CoolingCostPerMonth)} ${slug2Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug2CoolingCostPerMonth * slug2ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="cooling-cost-per-month-answer-first-entity all-indicator-answers">
+                  {slug1CoolingCostPerMonth ? (
+                    value1 === 'state' ||
+                    dollarizedCountries.includes(slug1) ? (
+                      `${formatNumberWithCommas(slug1CoolingCostPerMonth)} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug1CoolingCostPerMonth
+                        )} ${slug1Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug1CoolingCostPerMonth * slug1ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+                <td className="cooling-cost-per-month-answer-second-entity all-indicator-answers">
+                  {slug2CoolingCostPerMonth ? (
+                    value2 === 'state' ||
+                    dollarizedCountries.includes(slug2) ? (
+                      `${formatNumberWithCommas(slug2CoolingCostPerMonth)} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug2CoolingCostPerMonth
+                        )} ${slug2Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug2CoolingCostPerMonth * slug2ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Water Supply Cost Per Month</div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/water-cost-per-month-image.png"
-                                        fill alt="Image Describing water cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Water Supply Cost Per Month
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/water-cost-per-month-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing water cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td
-                                className="water-cost-per-month-answer-first-entity all-indicator-answers">
-                                {slug1WaterCostPerMonth ? (
-                                    value1 === 'state' || dollarizedCountries.includes(slug1) ? (
-                                        `${formatNumberWithCommas(slug1WaterCostPerMonth)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug1WaterCostPerMonth)} ${slug1Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug1WaterCostPerMonth * slug1ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                            <td
-                                className="water-cost-per-month-answer-second-entity all-indicator-answers">
-                                {slug2WaterCostPerMonth ? (
-                                    value2 === 'state' || dollarizedCountries.includes(slug2) ? (
-                                        `${formatNumberWithCommas(slug2WaterCostPerMonth)} USD`
-                                    ) : (
-                                        <>
-                                            {`${formatNumberWithCommas(slug2WaterCostPerMonth)} ${slug2Currency}`} <br />
-                                            {`(${formatNumberWithCommas(slug2WaterCostPerMonth * slug2ExchangeRate)} USD)`}
-                                        </>
-                                    )
-                                ) : 'Yet to Update'}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <td className="water-cost-per-month-answer-first-entity all-indicator-answers">
+                  {slug1WaterCostPerMonth ? (
+                    value1 === 'state' ||
+                    dollarizedCountries.includes(slug1) ? (
+                      `${formatNumberWithCommas(slug1WaterCostPerMonth)} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug1WaterCostPerMonth
+                        )} ${slug1Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug1WaterCostPerMonth * slug1ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+                <td className="water-cost-per-month-answer-second-entity all-indicator-answers">
+                  {slug2WaterCostPerMonth ? (
+                    value2 === 'state' ||
+                    dollarizedCountries.includes(slug2) ? (
+                      `${formatNumberWithCommas(slug2WaterCostPerMonth)} USD`
+                    ) : (
+                      <>
+                        {`${formatNumberWithCommas(
+                          slug2WaterCostPerMonth
+                        )} ${slug2Currency}`}{' '}
+                        <br />
+                        {`(${formatNumberWithCommas(
+                          slug2WaterCostPerMonth * slug2ExchangeRate
+                        )} USD)`}
+                      </>
+                    )
+                  ) : (
+                    'Yet to Update'
+                  )}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
-                    <h3>
-                        Does the utility cost more in
-                        <span className="first-entity-name-pages-paragraph"> {slug1} </span>
-                        than in
-                        <span className="second-entity-name-pages-paragraph"> {slug2}</span>
-                        ?
-                    </h3>
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <h3>
+              Does the utility cost more in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {slug1}{' '}
+              </span>
+              than in
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {slug2}
+              </span>
+              ?
+            </h3>
 
-                    <p>
-                        If you lived in
-                        <span className="first-entity-name-pages-paragraph"> {slug1}</span>
-                        , instead of
-                        <span className="second-entity-name-pages-paragraph"> {slug2}</span>
-                        , you would have to pay
-                        <strong>
-                            <span className="utility-bills-calculation"> {percentageDifference}% </span>
-                            <span className="utility-more-or-less-calculation"> {moreOrLessUtilities} </span>
-                        </strong>
-                        for Utilities.
-                    </p>
+            <p>
+              If you lived in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {slug1}
+              </span>
+              , instead of
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {slug2}
+              </span>
+              , you would have to pay
+              <strong>
+                <span className="utility-bills-calculation">
+                  {' '}
+                  {percentageDifference}%{' '}
+                </span>
+                <span className="utility-more-or-less-calculation">
+                  {' '}
+                  {moreOrLessUtilities}{' '}
+                </span>
+              </strong>
+              for Utilities.
+            </p>
 
-                    <p>
-                        The basic home furnishing in
-                        <span className="first-entity-name-pages-paragraph"> {slug1} </span>
-                        <strong>
-                            costs
-                            <span className="home-furnishing-answer-first-entity"> {furnishingCostTimes} </span>
-                            times
-                        </strong>
-                        <span className="less-or-more-expensive-calculation"> {moreOrLessFurnishing} </span>
-                        compared to
-                        <span className="second-entity-name-pages-paragraph"> {slug2}</span>
-                        .
-                    </p>
-                </div>
-            </div>
-        </>
-    )
+            <p>
+              The basic home furnishing in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {slug1}{' '}
+              </span>
+              <strong>
+                costs
+                <span className="home-furnishing-answer-first-entity">
+                  {' '}
+                  {furnishingCostTimes}{' '}
+                </span>
+                times
+              </strong>
+              <span className="less-or-more-expensive-calculation">
+                {' '}
+                {moreOrLessFurnishing}{' '}
+              </span>
+              compared to
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {slug2}
+              </span>
+              .
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default BasicUtilities

@@ -20,7 +20,7 @@ export default function ScrollToTopBottom() {
   // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0,
+      top: 120,
       behavior: 'smooth',
     });
   };
@@ -28,7 +28,7 @@ export default function ScrollToTopBottom() {
   // Scroll to bottom function
   const scrollToBottom = () => {
     window.scrollTo({
-      top: document.documentElement.scrollHeight,
+      top: document.documentElement.scrollHeight - window.innerHeight - 560,
       behavior: 'smooth',
     });
   };
@@ -60,6 +60,7 @@ export default function ScrollToTopBottom() {
             justifyContent: 'center',
             alignItems: 'center',
             boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.6)',
+            zIndex:9999
           }}
           aria-label="Scroll to top"
         >

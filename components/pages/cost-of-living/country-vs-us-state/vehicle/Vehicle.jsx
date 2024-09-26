@@ -47,7 +47,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                     <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
@@ -55,7 +56,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                     <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -63,13 +65,15 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug1LowerCase}`} />
+                                        <Image src={`/images/${slug1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{slug1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug1LowerCase}`} />
+                                        <Image src={`/images/${slug1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -77,13 +81,15 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug2LowerCase}`} />
+                                        <Image src={`/images/${slug2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${slug2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {slug2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2LowerCase}`} />
+                                        <Image src={`/images/${slug2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${slug2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -97,7 +103,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/vehicle-purchase-price-image.png"
-                                        fill alt="Image Describing Reasonable Vehicle Purchase Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Reasonable Vehicle Purchase Cost" />
                                 </div>
                             </td>
 
@@ -117,7 +124,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/vehicle-registration-image.png"
-                                        fill alt="Image Describing Vehicle Registration Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Vehicle Registration Cost" />
                                 </div>
                             </td>
 
@@ -137,7 +145,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/driving-license-fees-image.png"
-                                        fill alt="Image Describing Driving License Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Driving License Fees" />
                                 </div>
                             </td>
 
@@ -156,7 +165,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/car-insurance-image.png"
-                                        fill alt="Image Describing Car Insurance Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Car Insurance Cost" />
                                 </div>
                             </td>
 
@@ -174,7 +184,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/car-maintenance-image.png"
-                                        fill alt="Image Describing Car Maintainence Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Car Maintainence Cost" />
                                 </div>
                             </td>
 
@@ -194,7 +205,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/car-loan-interest-rate-image.png"
-                                        fill alt="Image Describing Car Loan Interest Rates" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Car Loan Interest Rates" />
                                 </div>
                             </td>
 
@@ -214,7 +226,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/fuel-per-liter-image.png"
-                                        fill alt="Image Describing Fuel Per Liter" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Fuel Per Liter" />
                                 </div>
                             </td>
 
@@ -232,7 +245,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/fuel-per-gallon-image.png"
-                                        fill alt="Image Describing Fuel Per Gallon" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Fuel Per Gallon" />
                                 </div>
                             </td>
 
@@ -250,7 +264,8 @@ function Vehicle({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, s
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/toll-fees-image.png"
-                                        fill alt="Image Describing Average Toll Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Average Toll Fees" />
                                 </div>
                             </td>
 

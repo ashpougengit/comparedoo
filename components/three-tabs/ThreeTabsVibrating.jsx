@@ -86,57 +86,104 @@ function ThreeTabs({ entity1, entity2 = null }) {
     }, [lastScrollY, canBeSticky]);
 
     return (
-        <>
-            {category === toggledPath ? (
-                <div
-                    ref={tabRef}
-                    className="three-tabs-links"
-                    style={{
-                        position: isSticky ? 'sticky' : 'relative',
-                        top: isSticky ? 0 : 'auto',
-                        left: 0,
-                        right: 0,
-                        zIndex: 1000,
-                        backgroundColor: '#fff',
-                        boxShadow: isSticky ? '0 4px 6px rgba(90, 90, 90, 0.9)' : 'none',
-                        padding: '10px 0',
-                        transition: 'all 0.3s ease',
-                        willChange: 'transform, box-shadow', // Hint to browser for smoother transitions
-                    }}
-                >
-                    <Link href={`/${slug2 ? 'comparison' : 'general-information'}/${slug1}/${slug2 ? slug2 : ''}`} onClick={() => setToggledPath(slug2 ? 'comparison' : 'general-information')}>
-                        <div className={path.startsWith('/general-information') || path.startsWith('/comparison') ? 'general-info three-tabs-links-flex active-link' : 'general-info three-tabs-links-flex'}>
-                            <div className="three-tabs-links-image">
-                                <Image src="/images/general-comparison-image-comparedoo.png" fill alt="General Comparison Image Comparedoo.com" />
-                            </div>
-                            <div className="three-tabs-links-text">
-                                {slug2 ? 'General Comparison' : 'General Information'}
-                            </div>
-                        </div>
-                    </Link>
+      <>
+        {category === toggledPath ? (
+          <div
+            ref={tabRef}
+            className="three-tabs-links"
+            style={{
+              position: isSticky ? 'sticky' : 'relative',
+              top: isSticky ? 0 : 'auto',
+              left: 0,
+              right: 0,
+              zIndex: 1000,
+              backgroundColor: '#fff',
+              boxShadow: isSticky ? '0 4px 6px rgba(90, 90, 90, 0.9)' : 'none',
+              padding: '10px 0',
+              transition: 'all 0.3s ease',
+              willChange: 'transform, box-shadow', // Hint to browser for smoother transitions
+            }}
+          >
+            <Link
+              href={`/${
+                slug2 ? 'comparison' : 'general-information'
+              }/${slug1}/${slug2 ? slug2 : ''}`}
+              onClick={() =>
+                setToggledPath(slug2 ? 'comparison' : 'general-information')
+              }
+            >
+              <div
+                className={
+                  path.startsWith('/general-information') ||
+                  path.startsWith('/comparison')
+                    ? 'general-info three-tabs-links-flex active-link'
+                    : 'general-info three-tabs-links-flex'
+                }
+              >
+                <div className="three-tabs-links-image">
+                  <Image
+                    src="/images/general-comparison-image-comparedoo.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="General Comparison Image Comparedoo.com"
+                  />
+                </div>
+                <div className="three-tabs-links-text">
+                  {slug2 ? 'General Comparison' : 'General Information'}
+                </div>
+              </div>
+            </Link>
 
-                    <Link href={`/cost-of-living/${slug1}/${slug2 ? slug2 : ''}`} onClick={() => setToggledPath('cost-of-living')}>
-                        <div className={path.startsWith('/cost-of-living') ? "cost-of-living three-tabs-links-flex active-link" : "cost-of-living three-tabs-links-flex"}>
-                            <div className="three-tabs-links-image">
-                                <Image src="/images/cost-of-living-image-comparedoo.png" fill alt="Cost of Living Image Comparedoo.com" />
-                            </div>
-                            <div className="three-tabs-links-text">Cost of Living</div>
-                        </div>
-                    </Link >
+            <Link
+              href={`/cost-of-living/${slug1}/${slug2 ? slug2 : ''}`}
+              onClick={() => setToggledPath('cost-of-living')}
+            >
+              <div
+                className={
+                  path.startsWith('/cost-of-living')
+                    ? 'cost-of-living three-tabs-links-flex active-link'
+                    : 'cost-of-living three-tabs-links-flex'
+                }
+              >
+                <div className="three-tabs-links-image">
+                  <Image
+                    src="/images/cost-of-living-image-comparedoo.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Cost of Living Image Comparedoo.com"
+                  />
+                </div>
+                <div className="three-tabs-links-text">Cost of Living</div>
+              </div>
+            </Link>
 
-                    <Link href={`/standard-of-living/${slug1}/${slug2 ? slug2 : ''}`
-                    } onClick={() => setToggledPath('standard-of-living')}>
-                        <div className={path.startsWith('/standard-of-living') ? "standard-of-living three-tabs-links-flex active-link" : "standard-of-living three-tabs-links-flex"}>
-                            <div className="three-tabs-links-image">
-                                <Image src="/images/standard-of-living-image-comparedoo.png" fill alt="Standard Of Living Image Comparedoo.com" />
-                            </div>
-                            <div className="three-tabs-links-text">Standard of Living</div>
-                        </div>
-                    </Link >
-                </div >
-            ) : <Loading />}
-
-        </>
+            <Link
+              href={`/standard-of-living/${slug1}/${slug2 ? slug2 : ''}`}
+              onClick={() => setToggledPath('standard-of-living')}
+            >
+              <div
+                className={
+                  path.startsWith('/standard-of-living')
+                    ? 'standard-of-living three-tabs-links-flex active-link'
+                    : 'standard-of-living three-tabs-links-flex'
+                }
+              >
+                <div className="three-tabs-links-image">
+                  <Image
+                    src="/images/standard-of-living-image-comparedoo.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Standard Of Living Image Comparedoo.com"
+                  />
+                </div>
+                <div className="three-tabs-links-text">Standard of Living</div>
+              </div>
+            </Link>
+          </div>
+        ) : (
+          <Loading />
+        )}
+      </>
     );
 }
 

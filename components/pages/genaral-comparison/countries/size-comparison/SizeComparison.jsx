@@ -26,24 +26,77 @@ function SizeComparison({ country1GeneralInfo, country2GeneralInfo, country1URLC
 
   return (
     <>
-      <div className='size-comparison'>
-        <h2 className='pages-h2'>Size Comparison</h2>
+      <div className="size-comparison">
+        <h2 className="pages-h2">Size Comparison</h2>
       </div>
 
       <div className="paragraph-for-pages-below-table">
         <div className="para-for-pages-single-div">
-          <p>The total area of <span className="first-entity-name-pages-paragraph"> {country1} </span><strong>
-            is <span className="area-in-square-kilometers-first-entity"> {country1AreaInSqKmStr} </span> sq km</strong>, and the total area of
-            <span className="second-entity-name-pages-paragraph"> {country2} </span><strong>
-              is <span className="area-in-square-kilometers-second-entity"> {country2AreaInSqKmStr} </span> sq km</strong>. <span
-                className="first-entity-name-pages-paragraph"> {country1} </span> is
+          <p>
+            The total area of{' '}
+            <span className="first-entity-name-pages-paragraph">
+              {' '}
+              {country1}{' '}
+            </span>
+            <strong>
+              is{' '}
+              <span className="area-in-square-kilometers-first-entity">
+                {' '}
+                {country1AreaInSqKmStr}{' '}
+              </span>{' '}
+              sq km
+            </strong>
+            , and the total area of
+            <span className="second-entity-name-pages-paragraph">
+              {' '}
+              {country2}{' '}
+            </span>
+            <strong>
+              is{' '}
+              <span className="area-in-square-kilometers-second-entity">
+                {' '}
+                {country2AreaInSqKmStr}{' '}
+              </span>{' '}
+              sq km
+            </strong>
+            .{' '}
+            <span className="first-entity-name-pages-paragraph">
+              {' '}
+              {country1}{' '}
+            </span>{' '}
+            is
             <span className="smaller-or-bigger"> {isBigger} </span> than
-            <span className="second-entity-name-pages-paragraph"> {country2} </span> by
-            <strong><span className="area-in-km-differences"> {areaDifferenceInKm} </span> sq km</strong>.
-            <span className="first-entity-name-pages-paragraph"> {country1} </span> is around
-            <strong><span className="country-area-division"> {timesBiggerOrSmaller} </span> </strong>times
+            <span className="second-entity-name-pages-paragraph">
+              {' '}
+              {country2}{' '}
+            </span>{' '}
+            by
+            <strong>
+              <span className="area-in-km-differences">
+                {' '}
+                {areaDifferenceInKm}{' '}
+              </span>{' '}
+              sq km
+            </strong>
+            .
+            <span className="first-entity-name-pages-paragraph">
+              {' '}
+              {country1}{' '}
+            </span>{' '}
+            is around
+            <strong>
+              <span className="country-area-division">
+                {' '}
+                {timesBiggerOrSmaller}{' '}
+              </span>{' '}
+            </strong>
+            times
             <span className="smaller-or-bigger"> {isBigger} </span> than
-            <span className="second-entity-name-pages-paragraph"> {country2}</span>.
+            <span className="second-entity-name-pages-paragraph">
+              {' '}
+              {country2}
+            </span>
+            .
           </p>
         </div>
       </div>
@@ -55,15 +108,23 @@ function SizeComparison({ country1GeneralInfo, country2GeneralInfo, country1URLC
               <th>
                 <div className="heading-map-name-flag">
                   <div className="right-indicator">
-                    <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                    <Image
+                      src="/images/indicators-right-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing an indicator"
+                    />
                   </div>
 
-                  <div className="indicator-text">
-                    Indicators
-                  </div>
+                  <div className="indicator-text">Indicators</div>
 
                   <div className="left-indicator">
-                    <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                    <Image
+                      src="/images/indicators-left-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image illustrating an indicator"
+                    />
                   </div>
                 </div>
               </th>
@@ -71,13 +132,25 @@ function SizeComparison({ country1GeneralInfo, country2GeneralInfo, country1URLC
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country1URLCase}`}
+                    />
                   </div>
 
-                  <div className="first-entity-name-pages-comparison">{country1}</div>
+                  <div className="first-entity-name-pages-comparison">
+                    {country1}
+                  </div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country1URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -85,13 +158,26 @@ function SizeComparison({ country1GeneralInfo, country2GeneralInfo, country1URLC
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country2URLCase}`}
+                    />
                   </div>
 
-                  <div className="second-entity-name-pages-comparison"> {country2} </div>
+                  <div className="second-entity-name-pages-comparison">
+                    {' '}
+                    {country2}{' '}
+                  </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country2URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -99,84 +185,116 @@ function SizeComparison({ country1GeneralInfo, country2GeneralInfo, country1URLC
           </thead>
 
           <tbody>
-
             <tr>
               <td className="basic-info">
-                <div className="all-indicators">
-                  Area in Square Kilometers
-                </div>
+                <div className="all-indicators">Area in Square Kilometers</div>
                 <div className="basic-information-images">
-                  <Image src="/images/square-km-image.png" fill alt="Illustration of area in Square Kilometers" />
+                  <Image
+                    src="/images/square-km-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Illustration of area in Square Kilometers"
+                  />
                 </div>
               </td>
-              <td className="area-in-square-kilometers-first-entity all-indicator-answers">{country1AreaInSqKmStr ? `${country1AreaInSqKmStr} Sq km` : 'Yet to Update'}
+              <td className="area-in-square-kilometers-first-entity all-indicator-answers">
+                {country1AreaInSqKmStr
+                  ? `${country1AreaInSqKmStr} Sq km`
+                  : 'Yet to Update'}
               </td>
-              <td className="area-in-square-kilometers-second-entity all-indicator-answers">{country2AreaInSqKmStr ? `${country2AreaInSqKmStr} Sq km` : 'Yet to Update'}
+              <td className="area-in-square-kilometers-second-entity all-indicator-answers">
+                {country2AreaInSqKmStr
+                  ? `${country2AreaInSqKmStr} Sq km`
+                  : 'Yet to Update'}
               </td>
-
             </tr>
             <tr>
               <td className="all-indicators">Difference</td>
-              <td colSpan="2"> <strong> [<span className="area-in-km-differences"></span> {areaDifferenceInKm ? `${areaDifferenceInKm} Square Kilometers` : 'Yet to Update'}]</strong>
+              <td colSpan="2">
+                {' '}
+                <strong>
+                  {' '}
+                  [<span className="area-in-km-differences"></span>{' '}
+                  {areaDifferenceInKm
+                    ? `${areaDifferenceInKm} Square Kilometers`
+                    : 'Yet to Update'}
+                  ]
+                </strong>
               </td>
-
             </tr>
 
             <tr>
-              <td colSpan="3" className='narrow-table-row'></td>
+              <td colSpan="3" className="narrow-table-row"></td>
             </tr>
 
             <tr>
               <td className="basic-info">
-                <div className="all-indicators">
-                  Area in Square Mile
-                </div>
+                <div className="all-indicators">Area in Square Mile</div>
                 <div className="basic-information-images">
-                  <Image src="/images/square-mile-image.png" fill alt="Illustration of area in Square Mile" />
+                  <Image
+                    src="/images/square-mile-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Illustration of area in Square Mile"
+                  />
                 </div>
               </td>
               <td className="area-in-square-mile-first-entity all-indicator-answers">
-                {country1AreaInSqMileStr ? `${country1AreaInSqMileStr} Sq Mile` : 'Yet to Update'}
+                {country1AreaInSqMileStr
+                  ? `${country1AreaInSqMileStr} Sq Mile`
+                  : 'Yet to Update'}
               </td>
               <td className="area-in-square-mile-second-entity all-indicator-answers">
-                {country2AreaInSqMileStr ? `${country2AreaInSqMileStr} Sq Mile` : 'Yet to Update'}
+                {country2AreaInSqMileStr
+                  ? `${country2AreaInSqMileStr} Sq Mile`
+                  : 'Yet to Update'}
               </td>
-
             </tr>
             <tr>
               <td className="all-indicators">Difference</td>
-              <td colSpan="2"> <strong> [<span className="area-in-km-differences"></span> {areaDifferenceInMile ? `${areaDifferenceInMile} Square Mile` : 'Yet to Update'}]</strong>
+              <td colSpan="2">
+                {' '}
+                <strong>
+                  {' '}
+                  [<span className="area-in-km-differences"></span>{' '}
+                  {areaDifferenceInMile
+                    ? `${areaDifferenceInMile} Square Mile`
+                    : 'Yet to Update'}
+                  ]
+                </strong>
               </td>
             </tr>
 
             <tr>
-              <td colSpan="3" className='narrow-table-row'></td>
+              <td colSpan="3" className="narrow-table-row"></td>
             </tr>
 
             <tr>
               <td className="basic-info">
-                <div className="all-indicators">
-                  Water % in Area
-                </div>
+                <div className="all-indicators">Water % in Area</div>
                 <div className="basic-information-images">
-                  <Image src="/images/water-percentage-image.png"
-                    fill alt="Illustration of water percentage area of any country in the world" />
+                  <Image
+                    src="/images/water-percentage-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Illustration of water percentage area of any country in the world"
+                  />
                 </div>
               </td>
-              <td className="water-percentage-area-first-entity all-indicator-answers">{country1WaterPercentage ?? 'Yet to Update'}</td>
-              <td className="water-percentage-area-second-entity all-indicator-answers">{country2WaterPercentage ?? 'Yet to Update'}</td>
-
+              <td className="water-percentage-area-first-entity all-indicator-answers">
+                {country1WaterPercentage ?? 'Yet to Update'}
+              </td>
+              <td className="water-percentage-area-second-entity all-indicator-answers">
+                {country2WaterPercentage ?? 'Yet to Update'}
+              </td>
             </tr>
-
           </tbody>
         </table>
-
       </div>
 
       <AdsHeaderBanner />
-
     </>
-  )
+  );
 }
 
 export default SizeComparison
