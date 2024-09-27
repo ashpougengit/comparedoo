@@ -5,17 +5,17 @@ function LastParagraph({ state1, state2 }) {
         <>
             <AdsHeaderBanner />
 
-            <div class="last-paragraph-of-the-page">
-                <div class="last-para-single-div">
+            <div className="last-paragraph-of-the-page">
+                <div className="last-para-single-div">
                     <p>
                         We hope you enjoyed the detailed guide on the standard of living
                         comparsion between
                         <strong>
-                            <span class="first-entity-name-pages-paragraph"> {state1} </span>
+                            <span className="first-entity-name-pages-paragraph"> {state1} </span>
                         </strong>
                         and
                         <strong>
-                            <span class="second-entity-name-pages-paragraph"> {state2}</span>
+                            <span className="second-entity-name-pages-paragraph"> {state2}</span>
                             .
                         </strong>
                     </p>

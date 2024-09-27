@@ -14,7 +14,7 @@ import SearchBox from "@/components/search-box/SearchBox";
 // generateMetadata function
 export async function generateMetadata({ params }) {
     const { slug } = params;
-    const decodedSlug = titleCased(slug.replace(/-/g, ' '))
+    const decodedSlug = titleCased(slug?.replace(/-/g, ' '))
 
     try {
         let title, description
@@ -37,7 +37,6 @@ export async function generateMetadata({ params }) {
 async function GeneralInfoPage({ params }) {
     const { slug } = params;
     const slugArr = [slug]
-
     let decodedSlug1;
 
     try {
@@ -45,10 +44,8 @@ async function GeneralInfoPage({ params }) {
     } catch (error) {
         return <p>Error: {error.message}</p>;
     }
-
     const entity1 = titleCased(decodedSlug1);
     const isSlug1Country = allCountries.includes(entity1);
-
     try {
         const [generalInfo] = await Promise.all([
             fetchData(entity1, isSlug1Country ? allCountries : USStates, isSlug1Country ? fetchCountryGeneralInfo : fetchUSStateGeneralInfo),
@@ -73,7 +70,7 @@ async function GeneralInfoPage({ params }) {
 
         return (
             <>
-                <SearchBox slug1={entity1} />
+                <SearchBox slug1={entity1} slug2='' />
                 <AdsHeaderBanner />
                 <PageTitle entity={entity1} />
                 <PublishInfo formattedDate={formattedDate} />
