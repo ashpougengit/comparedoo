@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
     };
   } catch (error) {
     return {
-      title: 'Comparison Error',
+      title: 'Error',
       description: error.message,
     };
   }

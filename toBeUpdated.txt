@@ -58,3 +58,9 @@ standard of living country vs country
 - <div className="continent-map">
                     <img src="/images/map-of-antartica-big.png" alt="Map of Antartica" />
                 </div>
+
+- slug/image.png(url returned in console)
+
+- favicon                                             +++++++++++++**************
+
+- meta title and description for error and not found pages(redirect)

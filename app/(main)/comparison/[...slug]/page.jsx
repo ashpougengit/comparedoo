@@ -11,6 +11,7 @@ import { fetchCountryGeneralInfo, fetchHealthExpenditurePercentage, fetchUSState
 import { calculateTimeDifference, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
+import { allEntities } from "@/lib/array-list/allEntitiesList";
 
 // generateMetadata function
 export async function generateMetadata({ params }) {
@@ -18,9 +19,8 @@ export async function generateMetadata({ params }) {
 
     try {
         const [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
-        const title = `${titleCased(decodedSlug1)} vs ${titleCased(decodedSlug2)} (Statistical Comparison)`;
-        const description = `Discover the comparsion between ${titleCased(decodedSlug1)} and ${titleCased(decodedSlug2)} in this article, highlighting general comparison, cost of living and quality of life.
-`;
+        const title = allEntities.includes(titleCased(decodedSlug2)) ? `${titleCased(decodedSlug1)} vs ${titleCased(decodedSlug2)} (Statistical Comparison)` : 'Error'
+        const description = allEntities.includes(titleCased(decodedSlug2)) ? `Discover the comparsion between ${titleCased(decodedSlug1)} and ${titleCased(decodedSlug2)} in this article, highlighting general comparison, cost of living and quality of life.` : 'Enter two places to compare'
 
         return {
             title,
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
         };
     } catch (error) {
         return {
-            title: 'Comparison Error',
+            title: 'Error',
             description: error.message,
         };
     }
@@ -46,7 +46,11 @@ async function GeneralComparison({ params }) {
     }
 
     const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
-    
+
+    if (!allEntities.includes(titleCased(decodedSlug2))) {
+        return <p>Error: Enter two places to compare</p>
+    }
+
     if ([entity1, entity2].includes('United States') && USStates.includes(entity1 === 'United States' ? entity2 : entity1)) {
         return <p>Error: Cannot compare a U.S. state with the United States itself.</p>;
     }
