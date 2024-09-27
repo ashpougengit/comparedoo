@@ -30,217 +30,459 @@ function FruitsAndVegetablesCost({ country1CostInfo, country2CostInfo, country1C
     const moreOrLess = country1TotalCost > country2TotalCost ? 'more' : 'less'
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Fruits and Vegetables Cost Comparison</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">Fruits and Vegetables Cost Comparison</h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${country1LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${country1LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{country1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {country1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${country1LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${country1LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${country2LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${country2LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {country2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {country2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${country2LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${country2LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Apples (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/apples-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing apples cost per month"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Apples (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/apples-1-kg-image.png" fill alt="Image Describing apples cost per month" />
-                                </div>
-                            </td>
+                <td className="apples-1-kg-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Apples1Kg)} ${
+                    country1Apples1Kg ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="apples-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Apples1Kg * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="apples-1-kg-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Apples1Kg)} ${
+                    country2Apples1Kg ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="apples-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Apples1Kg * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="apples-1-kg-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Apples1Kg)} ${country1Apples1Kg ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="apples-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Apples1Kg * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="apples-1-kg-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Apples1Kg)} ${country2Apples1Kg ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="apples-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Apples1Kg * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Bananas (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/bananas-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing bananas cost per month"
+                    />
+                  </div>
+                </td>
 
+                <td className="bananas-1-kg-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Bananas1Kg)} ${
+                    country1Bananas1Kg ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="bananas-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Bananas1Kg * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="bananas-1-kg-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Bananas1Kg)} ${
+                    country2Bananas1Kg ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="bananas-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Bananas1Kg * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Oranges (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/oranges-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing oranges cost per month"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Bananas (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/bananas-1-kg-image.png" fill alt="Image Describing bananas cost per month" />
-                                </div>
-                            </td>
+                <td className="oranges-1-kg-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Oranges1Kg)} ${
+                    country1Oranges1Kg ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="oranges-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Oranges1Kg * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="oranges-1-kg-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Oranges1Kg)} ${
+                    country2Oranges1Kg ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="oranges-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Oranges1Kg * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="bananas-1-kg-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Bananas1Kg)} ${country1Bananas1Kg ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="bananas-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Bananas1Kg * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="bananas-1-kg-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Bananas1Kg)} ${country2Bananas1Kg ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="bananas-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Bananas1Kg * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Tomatoes (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/tomatoes-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing tomatoes cost per month"
+                    />
+                  </div>
+                </td>
 
+                <td className="tomatoes-1-kg-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Tomatoes1Kg)} ${
+                    country1Tomatoes1Kg ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="tomatoes-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Tomatoes1Kg * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="tomatoes-1-kg-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Tomatoes1Kg)} ${
+                    country2Tomatoes1Kg ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="tomatoes-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Tomatoes1Kg * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Oranges (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/oranges-1-kg-image.png" fill alt="Image Describing oranges cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Potatoes (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/potatoes-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing potatoes cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="oranges-1-kg-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Oranges1Kg)} ${country1Oranges1Kg ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="oranges-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Oranges1Kg * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="oranges-1-kg-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Oranges1Kg)} ${country2Oranges1Kg ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="oranges-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Oranges1Kg * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+                <td className="potatoes-1-kg-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Potatoes1Kg)} ${
+                    country1Potatoes1Kg ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="potatoes-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Potatoes1Kg * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="potatoes-1-kg-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Potatoes1Kg)} ${
+                    country2Potatoes1Kg ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="potatoes-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Potatoes1Kg * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Tomatoes (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/tomatoes-1-kg-image.png" fill alt="Image Describing tomatoes cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Lemons (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/lemons-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing lemons cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="tomatoes-1-kg-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Tomatoes1Kg)} ${country1Tomatoes1Kg ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="tomatoes-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Tomatoes1Kg * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="tomatoes-1-kg-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Tomatoes1Kg)} ${country2Tomatoes1Kg ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="tomatoes-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Tomatoes1Kg * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+                <td className="lemons-1-kg-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Lemons1Kg)} ${
+                    country1Lemons1Kg ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="lemons-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Lemons1Kg * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="lemons-1-kg-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Lemons1Kg)} ${
+                    country2Lemons1Kg ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="lemons-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Lemons1Kg * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Potatoes (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/potatoes-1-kg-image.png" fill alt="Image Describing potatoes cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Onions (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/onions-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing onions cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="potatoes-1-kg-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Potatoes1Kg)} ${country1Potatoes1Kg ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="potatoes-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Potatoes1Kg * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="potatoes-1-kg-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Potatoes1Kg)} ${country2Potatoes1Kg ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="potatoes-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Potatoes1Kg * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+                <td className="onions-1-kg-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Onions1Kg)} ${
+                    country1Onions1Kg ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="onions-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Onions1Kg * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="onions-1-kg-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Onions1Kg)} ${
+                    country2Onions1Kg ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="onions-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Onions1Kg * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Lemons (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/lemons-1-kg-image.png" fill alt="Image Describing lemons cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Lentils (1 KG)</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/lentils-1-kg-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing lentils cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="lemons-1-kg-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Lemons1Kg)} ${country1Lemons1Kg ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="lemons-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Lemons1Kg * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="lemons-1-kg-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Lemons1Kg)} ${country2Lemons1Kg ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="lemons-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Lemons1Kg * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+                <td className="lentils-1-kg-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Lentils1Kg)} ${
+                    country1Lentils1Kg ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="lentils-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Lentils1Kg * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="lentils-1-kg-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Lentils1Kg)} ${
+                    country2Lentils1Kg ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="lentils-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Lentils1Kg * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Onions (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/onions-1-kg-image.png" fill alt="Image Describing onions cost per month" />
-                                </div>
-                            </td>
-
-                            <td className="onions-1-kg-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Onions1Kg)} ${country1Onions1Kg ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="onions-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Onions1Kg * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="onions-1-kg-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Onions1Kg)} ${country2Onions1Kg ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="onions-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Onions1Kg * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Lentils (1 KG)</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/lentils-1-kg-image.png" fill alt="Image Describing lentils cost per month" />
-                                </div>
-                            </td>
-
-                            <td className="lentils-1-kg-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Lentils1Kg)} ${country1Lentils1Kg ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="lentils-1-kg-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Lentils1Kg * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="lentils-1-kg-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Lentils1Kg)} ${country2Lentils1Kg ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="lentils-1-kg-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Lentils1Kg * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
-
-
-
-                    <p>
-                        If you lived in
-                        <span className="first-entity-name-pages-paragraph"> {country1}</span>, instead of
-                        <span className="second-entity-name-pages-paragraph"> {country2}</span>, you would have
-                        to pay
-                        <strong>
-                            <span className="fruits-and-vegetables-calculation"> {costTimes} </span> times </strong> <span
-                                className="fruits-and-vegetables-more-or-less-calculation"> {moreOrLess} </span>
-                        for Fruits and Vegetables.
-                    </p>
-                </div>
-            </div>
-        </>
-    )
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <p>
+              If you lived in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {country1}
+              </span>
+              , instead of
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {country2}
+              </span>
+              , you would have to pay
+              <strong>
+                <span className="fruits-and-vegetables-calculation">
+                  {' '}
+                  {costTimes}{' '}
+                </span>{' '}
+                times{' '}
+              </strong>{' '}
+              <span className="fruits-and-vegetables-more-or-less-calculation">
+                {' '}
+                {moreOrLess}{' '}
+              </span>
+              for Fruits and Vegetables.
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default FruitsAndVegetablesCost

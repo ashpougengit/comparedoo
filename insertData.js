@@ -7,13 +7,25 @@ const dbPath = path.join(process.cwd(), 'comparedoo.db');
 const db = new Database(dbPath, { verbose: console.log });
 
 // Paths to JSON data files
-const countryGeneralPath = path.join(process.cwd(), 'country_general_info.json');
+const countryGeneralPath = path.join(
+  process.cwd(),
+  'country_general_info.json'
+);
 const countryCostPath = path.join(process.cwd(), 'country_cost_info.json');
-const countryStandardPath = path.join(process.cwd(), 'country_standard_info.json');
+const countryStandardPath = path.join(
+  process.cwd(),
+  'country_standard_info.json'
+);
 
-const USStateGeneralPath = path.join(process.cwd(), 'us_state_general_info.json');
+const USStateGeneralPath = path.join(
+  process.cwd(),
+  'us_state_general_info.json'
+);
 const USStateCostPath = path.join(process.cwd(), 'us_state_cost_info.json');
-const USStateStandardPath = path.join(process.cwd(), 'us_state_standard_info.json');
+const USStateStandardPath = path.join(
+  process.cwd(),
+  'us_state_standard_info.json'
+);
 
 // Read JSON data
 const countryGeneralRawData = fs.readFileSync(countryGeneralPath);
@@ -34,12 +46,12 @@ const USStateCostData = JSON.parse(USStateCostRawData);
 const USStateStandardData = JSON.parse(USStateStandardRawData);
 
 function manageZerosAfterDecimal(num) {
-  const roundedNum = num.toFixed(2)
-  const numArr = roundedNum.split('.')
+  const roundedNum = num.toFixed(2);
+  const numArr = roundedNum.split('.');
   if (numArr[1] === '00') {
-    return Number(numArr[0])
+    return Number(numArr[0]);
   } else {
-    return Number(roundedNum)
+    return Number(roundedNum);
   }
 }
 
@@ -58,7 +70,7 @@ function convertToNumber(value, type, key) {
     }
 
     if (typeof value === 'number') {
-      return parseFloat(value)
+      return parseFloat(value);
     }
   }
 
@@ -72,7 +84,7 @@ function convertToNumber(value, type, key) {
     }
 
     if (typeof value === 'number') {
-      return manageZerosAfterDecimal(value)
+      return manageZerosAfterDecimal(value);
     }
   }
 
@@ -139,7 +151,7 @@ const countryGeneralTable = {
   tobaccoConsumptionPercentage: 'REAL',
   alcoholConsumptionPercentage: 'REAL',
   startOfWeek: 'TEXT',
-  unitValueInUSD: 'REAL'
+  unitValueInUSD: 'REAL',
 };
 
 const countryCostTable = {
@@ -366,9 +378,8 @@ const countryStandardTable = {
   incomeTaxRates: 'TEXT',
   salesTaxRates: 'TEXT',
   propertyTaxRates: 'TEXT',
-  currencySymbol: 'TEXT'
+  currencySymbol: 'TEXT',
 };
-
 
 const USStateGeneralTable = {
   state: 'TEXT',
@@ -410,7 +421,7 @@ const USStateGeneralTable = {
   currencySymbol: 'TEXT',
   startOfWeek: 'TEXT',
   drivingSide: 'TEXT',
-  callingCode: 'TEXT'
+  callingCode: 'TEXT',
 };
 
 const USStateCostTable = {
@@ -655,8 +666,8 @@ const USStateStandardTable = {
   divorcedPopulationPercentageMale: 'REAL',
   divorcedPopulationPercentageFemale: 'REAL',
   widowedPopulationPercentageMale: 'REAL',
-  widowedPopulationPercentageFemale: 'REAL'
-}
+  widowedPopulationPercentageFemale: 'REAL',
+};
 
 // Prepared statements for inserting data
 
@@ -672,10 +683,9 @@ const insertCountryCostInfo = db.prepare(`
   ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
 `);
 
-const insertCountryStandardInfo = db.prepare(`INSERT INTO country_standard_info (country, GDPNominal, GDPPerCapita, GINI, inflationOnConsumerPrices, centralGovernmentDebt, HDI, humanCapitalIndex, literacyRate, lifeExpectancyRatio, healthyLifeExpectancyRatio, povertyRatio, unemploymentPercentageOfTotalLabourForce, grossNationalExpenditure, currentHealthExpenditurePercentage, researchAndDevelopmentExpenditure, governmentExpenditureOnEducation, internationalTourismExpenditureUSD, numberOfInternationalTouristsArrival, militaryExpenditure, densityOfDoctorsNumber, densityOfNursesNumber, densityOfPharmacistsNumber, hospitalBedsPer1000Peoples, pregnantWomenReceivingPrenatalCare, agriculturalLand, forestArea, CO2Emission, accessToElectricity, accessToInternet, annualFreshWaterWithdrawls, timeRequiredToStartABusinessDays, newBusinessesRegisteredNumber, newBusinessesRegistrationDensityPer1000People, costOfBusinessStartUpProcedures,importsOfGoodsAndServicesPercentageOfGDP, fuelImportsPercentageOfMerchandiseImports, costToImportBorderComplianceUSD, costToImportDocumentryComplianceUSD, timeToImportBorderComplianceHours, timeToImportDocumentryComplianceHours, exportsOfGoodsAndServicesPercentageOfGDP, fuelExportsPercentageOfMerchandiseExports, costToExportBorderComplianceUSD, costToExportDocumentryComplianceUSD, timeToExportBorderComplianceHours, timeToExportDocumentryComplianceHours, grossNationalSavings, taxRevenue, taxesOnExportsPercentageOfTaxRevenue, taxesOnGoodsAndServicesPercentageOfRevenue, taxesOnInternationalTradePercentageOfRevenue, timeToPrepareAndPayTaxesHours, customsAndOtherImportDutiesPercentageOfTaxRevenue, corporateTaxRates, incomeTaxRates, salesTaxRates, propertyTaxRates, currencySymbol) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-`)
-
-
+const insertCountryStandardInfo =
+  db.prepare(`INSERT INTO country_standard_info (country, GDPNominal, GDPPerCapita, GINI, inflationOnConsumerPrices, centralGovernmentDebt, HDI, humanCapitalIndex, literacyRate, lifeExpectancyRatio, healthyLifeExpectancyRatio, povertyRatio, unemploymentPercentageOfTotalLabourForce, grossNationalExpenditure, currentHealthExpenditurePercentage, researchAndDevelopmentExpenditure, governmentExpenditureOnEducation, internationalTourismExpenditureUSD, numberOfInternationalTouristsArrival, militaryExpenditure, densityOfDoctorsNumber, densityOfNursesNumber, densityOfPharmacistsNumber, hospitalBedsPer1000Peoples, pregnantWomenReceivingPrenatalCare, agriculturalLand, forestArea, CO2Emission, accessToElectricity, accessToInternet, annualFreshWaterWithdrawls, timeRequiredToStartABusinessDays, newBusinessesRegisteredNumber, newBusinessesRegistrationDensityPer1000People, costOfBusinessStartUpProcedures,importsOfGoodsAndServicesPercentageOfGDP, fuelImportsPercentageOfMerchandiseImports, costToImportBorderComplianceUSD, costToImportDocumentryComplianceUSD, timeToImportBorderComplianceHours, timeToImportDocumentryComplianceHours, exportsOfGoodsAndServicesPercentageOfGDP, fuelExportsPercentageOfMerchandiseExports, costToExportBorderComplianceUSD, costToExportDocumentryComplianceUSD, timeToExportBorderComplianceHours, timeToExportDocumentryComplianceHours, grossNationalSavings, taxRevenue, taxesOnExportsPercentageOfTaxRevenue, taxesOnGoodsAndServicesPercentageOfRevenue, taxesOnInternationalTradePercentageOfRevenue, timeToPrepareAndPayTaxesHours, customsAndOtherImportDutiesPercentageOfTaxRevenue, corporateTaxRates, incomeTaxRates, salesTaxRates, propertyTaxRates, currencySymbol) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+`);
 
 const insertUSStateGeneralInfo = db.prepare(`
   INSERT INTO us_state_general_info (
@@ -687,7 +697,7 @@ const insertUSStateGeneralInfo = db.prepare(`
     veteransPercentageMale, veteransPercentageFemale, currencyName, currencySymbol, startOfWeek,
     drivingSide, callingCode
   ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-`)
+`);
 
 const insertUSStateCostInfo = db.prepare(`
   INSERT INTO us_state_cost_info (
@@ -699,7 +709,7 @@ const insertUSStateStandardInfo = db.prepare(`
   INSERT INTO us_state_standard_info (
     state, population, HDI, literacyRate, lifeExpectancyRatio, povertyRatio, employmentRate, GDPNominal, GDPPerCapita, GINI, totalRegisteredPhysicians, totalRegisteredNurses, availableHospitalBeds, disabilityPercentage, populationWithoutHealthInsuranceCoverage, salesTaxRates, propertyTaxRates, gasAndFuelTaxRatesPerGallon, beerTaxPerGallon, incomeTaxRates, corporateTaxRates, medianAge, sexRatioMalesPer100Females, age60to64, age65to74, age75to84, age85AndOver, medianIncomeDollars, agricultureForestryFishing, construction, manufacturing, wholesaleTrade, retailTrade, transportationAndWarehousing, ITAndInformation, financeAndRealEstate, educationAndHealthCare, artsEntertainmentRecreation, publicAdministration, workFromHome, meanTravelTimeToWorkMinutes, privateWageandSalaryWorkers, governmentWorkers, selfEmployedInNotOwnIncorporatedBusiness, accessToInternet, accessToElectricity, forestArea, agriculturalLand, highSchoolGraduate, associateDegreePercentage, bachelorsDegreePercentage, graduateDegreePercentage, onlyEnglishSpeakingPercentage, whiteRace, blackOrAfricanAmericanRace, americanIndianAndAlaskaNativeRace, asianRace, hawaiianAndPacificIslanderRace, twoOrMoreRaces, hispanicOrLatino, marriedCoupleHouseholdPercentage, maleHouseholderPercentage, femaleHouseholderPercentage, averageFamilySize, homeOwnershipRate, medianGrossRent, totalHousingUnits, marriedNotSeparatedPopulationPercentageMale, marriedNotSeparatedPopulationPercentageFemale, neverMarriedPopulationPercentageMale, neverMarriedPopulationPercentageFemale, separatedPopulationPercentageMale, separatedPopulationPercentageFemale, divorcedPopulationPercentageMale, divorcedPopulationPercentageFemale, widowedPopulationPercentageMale, widowedPopulationPercentageFemale
   ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-`)
+`);
 
 const insertMany = (stmt, data, tableDefinition) => {
   const insertTransaction = db.transaction((rows) => {
@@ -717,7 +727,11 @@ const insertMany = (stmt, data, tableDefinition) => {
         });
         stmt.run(...values);
       } catch (error) {
-        console.error(`Failed to insert row: ${JSON.stringify(row)} with error: ${error.message}`);
+        console.error(
+          `Failed to insert row: ${JSON.stringify(row)} with error: ${
+            error.message
+          }`
+        );
       }
     }
   });
@@ -726,19 +740,25 @@ const insertMany = (stmt, data, tableDefinition) => {
 };
 
 try {
-
   // Insert data into country tables
   insertMany(insertCountryGeneralInfo, countryGeneralData, countryGeneralTable);
   insertMany(insertCountryCostInfo, countryCostData, countryCostTable);
-  insertMany(insertCountryStandardInfo, countryStandardData, countryStandardTable);
-  
+  insertMany(
+    insertCountryStandardInfo,
+    countryStandardData,
+    countryStandardTable
+  );
+
   // Insert data into us-state tables
   insertMany(insertUSStateGeneralInfo, USStateGeneralData, USStateGeneralTable);
   insertMany(insertUSStateCostInfo, USStateCostData, USStateCostTable);
-  insertMany(insertUSStateStandardInfo, USStateStandardData, USStateStandardTable);
+  insertMany(
+    insertUSStateStandardInfo,
+    USStateStandardData,
+    USStateStandardTable
+  );
 
   console.log('Data inserted successfully');
-
 } catch (error) {
   console.error('Failed to insert data:', error);
 } finally {

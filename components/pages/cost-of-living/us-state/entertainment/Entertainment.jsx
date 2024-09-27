@@ -37,7 +37,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                     <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
@@ -45,7 +46,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                     <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -53,13 +55,15 @@ function Entertainment({ costInfo, stateLowerCase }) {
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${stateLowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${stateLowerCase}`} />
+                                        <Image src={`/images/${stateLowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${stateLowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{state}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${stateLowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${stateLowerCase}`} />
+                                        <Image src={`/images/${stateLowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${stateLowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -73,7 +77,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/movie-ticket-image.png"
-                                        fill alt="Image Describing Single Movie Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Single Movie Ticket" />
                                 </div>
                             </td>
 
@@ -88,7 +93,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/theater-ticket-image.png"
-                                        fill alt="Image Describing Single Theater Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Single Theater Ticket" />
                                 </div>
                             </td>
 
@@ -103,7 +109,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/concert-ticket-image.png"
-                                        fill alt="Image Describing Single Concert Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Single Concert Ticket" />
                                 </div>
                             </td>
 
@@ -118,7 +125,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/sports-event-ticket-image.png"
-                                        fill alt="Image Describing Single Sports Event Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Single Sports Event Ticket" />
                                 </div>
                             </td>
 
@@ -133,7 +141,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/gym-membership-image.png"
-                                        fill alt="Image Describing Gym Membership" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Gym Membership" />
                                 </div>
                             </td>
 
@@ -148,7 +157,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/swimming-pool-access-image.png"
-                                        fill alt="Image Describing Swimming Pool Access" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Swimming Pool Access" />
                                 </div>
                             </td>
 
@@ -163,7 +173,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/museum-entry-image.png"
-                                        fill alt="Image Describing Museum Entry Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Museum Entry Ticket" />
                                 </div>
                             </td>
 
@@ -178,7 +189,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/zoo-entry-image.png"
-                                        fill alt="Image Describing Zoo Entry Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Zoo Entry Ticket" />
                                 </div>
                             </td>
 
@@ -193,7 +205,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/amusement-park-entry-image.png"
-                                        fill alt="Image Describing Amusement Park Entry Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Amusement Park Entry Ticket" />
                                 </div>
                             </td>
 
@@ -208,7 +221,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/bowling-image.png"
-                                        fill alt="Image Describing Bowling" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Bowling" />
                                 </div>
                             </td>
 
@@ -221,7 +235,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/mini-golf-image.png"
-                                        fill alt="Image Describing Mini Golf" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Mini Golf" />
                                 </div>
                             </td>
 
@@ -236,7 +251,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/video-games-image.png"
-                                        fill alt="Image Describing Video Games" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Video Games" />
                                 </div>
                             </td>
 
@@ -251,7 +267,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/streaming-services-image.png"
-                                        fill alt="Image Describing Streaming Services" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Streaming Services" />
                                 </div>
                             </td>
 
@@ -266,7 +283,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/outdoor-equipment-rental-image.png"
-                                        fill alt="Image Describing Outdoor Equipment Rental" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Outdoor Equipment Rental" />
                                 </div>
                             </td>
 
@@ -282,7 +300,8 @@ function Entertainment({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/theme-park-annual-pass-image.png"
-                                        fill alt="Image Describing Theme Park Annual Pass" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Theme Park Annual Pass" />
                                 </div>
                             </td>
 

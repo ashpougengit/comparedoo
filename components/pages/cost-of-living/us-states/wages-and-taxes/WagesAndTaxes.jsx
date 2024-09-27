@@ -31,249 +31,376 @@ function WagesAndTaxes({ state1CostInfo, state2CostInfo, entity1PropertyAndIncom
     const moreOrLess = state1TotalCost > state2TotalCost ? 'more' : 'less'
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Wages and Taxes Cost Comparison</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">Wages and Taxes Cost Comparison</h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state1LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state1LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state1LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{state1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {state1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state1LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state1LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state1LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state2LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state2LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state2LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {state2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {state2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state2LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state2LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state2LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Average Gross Monthly Salary
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/average-gross-monthly-salary-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Average Gross Monthly Salary"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Average Gross Monthly Salary</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/average-gross-monthly-salary-image.png"
-                                        fill alt="Image Describing Average Gross Monthly Salary" />
-                                </div>
-                            </td>
+                <td className="average-gross-monthly-salary-first-entity all-indicator-answers">
+                  {state1AverageGrossSalary
+                    ? `${formatNumberWithCommas(state1AverageGrossSalary)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="average-gross-monthly-salary-second-entity all-indicator-answers">
+                  {state2AverageGrossSalary
+                    ? `${formatNumberWithCommas(state2AverageGrossSalary)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="average-gross-monthly-salary-first-entity all-indicator-answers">
-                                {state1AverageGrossSalary ? `${formatNumberWithCommas(state1AverageGrossSalary)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="average-gross-monthly-salary-second-entity all-indicator-answers">
-                                {state2AverageGrossSalary ? `${formatNumberWithCommas(state2AverageGrossSalary)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Average Net Monthly Salary
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/average-net-monthly-salary-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Average Net Monthly Salary"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Average Net Monthly Salary</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/average-net-monthly-salary-image.png"
-                                        fill alt="Image Describing Average Net Monthly Salary" />
-                                </div>
-                            </td>
+                <td className="average-net-monthly-salary-first-entity all-indicator-answers">
+                  {state1AverageNetSalary
+                    ? `${formatNumberWithCommas(state1AverageNetSalary)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="average-net-monthly-salary-second-entity all-indicator-answers">
+                  {state2AverageNetSalary
+                    ? `${formatNumberWithCommas(state2AverageNetSalary)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="average-net-monthly-salary-first-entity all-indicator-answers">
-                                {state1AverageNetSalary ? `${formatNumberWithCommas(state1AverageNetSalary)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="average-net-monthly-salary-second-entity all-indicator-answers">
-                                {state2AverageNetSalary ? `${formatNumberWithCommas(state2AverageNetSalary)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Minimum Wages</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/minimum-wage-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Minimum Wages"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Minimum Wages</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/minimum-wage-image.png" fill alt="Image Describing Minimum Wages" />
-                                </div>
-                            </td>
+                <td className="minimum-wage-first-entity all-indicator-answers">
+                  {state1MinimumWage
+                    ? `${formatNumberWithCommas(
+                        state1MinimumWage
+                      )} USD per hour`
+                    : 'Yet to Update'}
+                </td>
+                <td className="minimum-wage-second-entity all-indicator-answers">
+                  {state2MinimumWage
+                    ? `${formatNumberWithCommas(
+                        state2MinimumWage
+                      )} USD per hour`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="minimum-wage-first-entity all-indicator-answers">
-                                {state1MinimumWage ? `${formatNumberWithCommas(state1MinimumWage)} USD per hour` : 'Yet to Update'}
-                            </td>
-                            <td className="minimum-wage-second-entity all-indicator-answers">
-                                {state2MinimumWage ? `${formatNumberWithCommas(state2MinimumWage)} USD per hour` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Average Bonus</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/average-bonus-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Average Bonus"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Average Bonus</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/average-bonus-image.png" fill alt="Image Describing Average Bonus" />
-                                </div>
-                            </td>
+                <td className="average-bonus-first-entity all-indicator-answers">
+                  {state1AverageBonus
+                    ? `${formatNumberWithCommas(state1AverageBonus)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="average-bonus-second-entity all-indicator-answers">
+                  {state2AverageBonus
+                    ? `${formatNumberWithCommas(state2AverageBonus)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="average-bonus-first-entity all-indicator-answers">
-                                {state1AverageBonus ? `${formatNumberWithCommas(state1AverageBonus)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="average-bonus-second-entity all-indicator-answers">
-                                {state2AverageBonus ? `${formatNumberWithCommas(state2AverageBonus)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Income Tax Rate</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/income-tax-rate-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Income Tax Rate"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Income Tax Rate</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/income-tax-rate-image.png" fill alt="Image Describing Income Tax Rate" />
-                                </div>
-                            </td>
+                <td className="income-tax-rate-first-entity all-indicator-answers">
+                  {state1IncomeTaxRates
+                    ? `${state1IncomeTaxRates}%`
+                    : 'Yet to update'}
+                </td>
+                <td className="income-tax-rate-second-entity all-indicator-answers">
+                  {state2IncomeTaxRates
+                    ? `${state2IncomeTaxRates}%`
+                    : 'Yet to update'}
+                </td>
+              </tr>
 
-                            <td className="income-tax-rate-first-entity all-indicator-answers">
-                                {state1IncomeTaxRates ? `${state1IncomeTaxRates}%` : 'Yet to update'}
-                            </td>
-                            <td className="income-tax-rate-second-entity all-indicator-answers">
-                                {state2IncomeTaxRates ? `${state2IncomeTaxRates}%` : 'Yet to update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Social Security Contributions
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/social-security-contributions-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Social Security Contributions"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Social Security Contributions</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/social-security-contributions-image.png"
-                                        fill alt="Image Describing Social Security Contributions" />
-                                </div>
-                            </td>
+                <td className="social-security-contributions-first-entity all-indicator-answers">
+                  {state1SocialSecurityContributions
+                    ? `${state1SocialSecurityContributions}%`
+                    : 'Yet to update'}
+                </td>
+                <td className="social-security-contributions-second-entity all-indicator-answers">
+                  {state2SocialSecurityContributions
+                    ? `${state2SocialSecurityContributions}%`
+                    : 'Yet to update'}
+                </td>
+              </tr>
 
-                            <td className="social-security-contributions-first-entity all-indicator-answers">
-                                {state1SocialSecurityContributions ? `${state1SocialSecurityContributions}%` : 'Yet to update'}
-                            </td>
-                            <td className="social-security-contributions-second-entity all-indicator-answers">
-                                {state2SocialSecurityContributions ? `${state2SocialSecurityContributions}%` : 'Yet to update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Pension Contributions</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/pension-contributions-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Pension Contributions"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Pension Contributions</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/pension-contributions-image.png"
-                                        fill alt="Image Describing Pension Contributions" />
-                                </div>
-                            </td>
+                <td className="pension-contributions-first-entity all-indicator-answers">
+                  {state1PensionContributions
+                    ? `${state1PensionContributions}%`
+                    : 'Yet to update'}
+                </td>
+                <td className="pension-contributions-second-entity all-indicator-answers">
+                  {state2PensionContributions
+                    ? `${state2PensionContributions}%`
+                    : 'Yet to update'}
+                </td>
+              </tr>
 
-                            <td className="pension-contributions-first-entity all-indicator-answers">
-                                {state1PensionContributions ? `${state1PensionContributions}%` : 'Yet to update'}
-                            </td>
-                            <td className="pension-contributions-second-entity all-indicator-answers">
-                                {state2PensionContributions ? `${state2PensionContributions}%` : 'Yet to update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Cost of Living Index</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/cost-of-living-index-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Cost of Living Index"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Cost of Living Index</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/cost-of-living-index-image.png"
-                                        fill alt="Image Describing Cost of Living Index" />
-                                </div>
-                            </td>
+                <td className="cost-of-living-index-first-entity all-indicator-answers">
+                  {state1CostOfLivingIndex ?? 'Yet to Update'}
+                </td>
+                <td className="cost-of-living-index-second-entity all-indicator-answers">
+                  {state2CostOfLivingIndex ?? 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="cost-of-living-index-first-entity all-indicator-answers">
-                                {state1CostOfLivingIndex ?? 'Yet to Update'}
-                            </td>
-                            <td className="cost-of-living-index-second-entity all-indicator-answers">
-                                {state2CostOfLivingIndex ?? 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Median Household Income</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/median-household-income-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Median Household Income"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Median Household Income</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/median-household-income-image.png"
-                                        fill alt="Image Describing Median Household Income" />
-                                </div>
-                            </td>
+                <td className="median-household-income-first-entity all-indicator-answers">
+                  {state1MedianHouseholdIncome
+                    ? `${formatNumberWithCommas(
+                        state1MedianHouseholdIncome
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="median-household-income-second-entity all-indicator-answers">
+                  {state2MedianHouseholdIncome
+                    ? `${formatNumberWithCommas(
+                        state2MedianHouseholdIncome
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-                            <td className="median-household-income-first-entity all-indicator-answers">
-                                {state1MedianHouseholdIncome ? `${formatNumberWithCommas(state1MedianHouseholdIncome)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="median-household-income-second-entity all-indicator-answers">
-                                {state2MedianHouseholdIncome ? `${formatNumberWithCommas(state2MedianHouseholdIncome)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
-
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
-
-
-
-
-                    <h3>
-                        Do people earn more money as salary in
-                        <span className="first-entity-name-pages-paragraph"> {state1} </span> than in
-                        <span className="second-entity-name-pages-paragraph"> {state2}</span>?
-                    </h3>
-                    <p>
-
-                        If you lived in
-                        <span className="first-entity-name-pages-paragraph"> {state1}</span>, you would
-                        earn
-                        <strong>
-                            <span className="salary-cost-calculation"> {costTimes} </span> times </strong> <span
-                                className="salary-cost-more-or-less-calculation"> {moreOrLess} </span>
-                        salary as compared to
-                        <span className="second-entity-name-pages-paragraph"> {state2}</span>.
-
-                    </p>
-
-
-
-                </div>
-            </div>
-
-        </>
-    )
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <h3>
+              Do people earn more money as salary in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {state1}{' '}
+              </span>{' '}
+              than in
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {state2}
+              </span>
+              ?
+            </h3>
+            <p>
+              If you lived in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {state1}
+              </span>
+              , you would earn
+              <strong>
+                <span className="salary-cost-calculation"> {costTimes} </span>{' '}
+                times{' '}
+              </strong>{' '}
+              <span className="salary-cost-more-or-less-calculation">
+                {' '}
+                {moreOrLess}{' '}
+              </span>
+              salary as compared to
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {state2}
+              </span>
+              .
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default WagesAndTaxes

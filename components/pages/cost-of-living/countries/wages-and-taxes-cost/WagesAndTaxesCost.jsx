@@ -46,13 +46,15 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -60,13 +62,15 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -74,13 +78,15 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {country2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -94,7 +100,8 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                                 <div className="all-indicators">Average Gross Monthly Salary</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/average-gross-monthly-salary-image.png"
-                                        fill alt="Image Describing Average Gross Monthly Salary" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Average Gross Monthly Salary" />
                                 </div>
                             </td>
 
@@ -113,7 +120,8 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                                 <div className="all-indicators">Average Net Monthly Salary</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/average-net-monthly-salary-image.png"
-                                        fill alt="Image Describing Average Net Monthly Salary" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Average Net Monthly Salary" />
                                 </div>
                             </td>
 
@@ -129,7 +137,8 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                             <td className="basic-info">
                                 <div className="all-indicators">Minimum Wages</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/minimum-wage-image.png" fill alt="Image Describing Minimum Wages" />
+                                    <Image src="/images/minimum-wage-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Minimum Wages" />
                                 </div>
                             </td>
 
@@ -145,7 +154,8 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                             <td className="basic-info">
                                 <div className="all-indicators">Average Bonus</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/average-bonus-image.png" fill alt="Image Describing Average Bonus" />
+                                    <Image src="/images/average-bonus-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Average Bonus" />
                                 </div>
                             </td>
 
@@ -161,7 +171,8 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                             <td className="basic-info">
                                 <div className="all-indicators">Income Tax Rate</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/income-tax-rate-image.png" fill alt="Image Describing Income Tax Rate" />
+                                    <Image src="/images/income-tax-rate-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Income Tax Rate" />
                                 </div>
                             </td>
 
@@ -176,7 +187,8 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                                 <div className="all-indicators">Social Security Contributions</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/social-security-contributions-image.png"
-                                        fill alt="Image Describing Social Security Contributions" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Social Security Contributions" />
                                 </div>
                             </td>
 
@@ -190,7 +202,8 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                             <td className="basic-info">
                                 <div className="all-indicators">Pension Contributions</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/pension-contributions-image.png" fill alt="Image Describing Pension Contributions" />
+                                    <Image src="/images/pension-contributions-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Pension Contributions" />
                                 </div>
                             </td>
 
@@ -204,7 +217,8 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                             <td className="basic-info">
                                 <div className="all-indicators">Cost of Living Index</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/cost-of-living-index-image.png" fill alt="Image Describing Cost of Living Index" />
+                                    <Image src="/images/cost-of-living-index-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Cost of Living Index" />
                                 </div>
                             </td>
 
@@ -219,7 +233,8 @@ function WagesAndTaxesCost({ country1CostInfo, country2CostInfo, country1Currenc
                                 <div className="all-indicators">Median Household Income</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/median-household-income-image.png"
-                                        fill alt="Image Describing Median Household Income" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Median Household Income" />
                                 </div>
                             </td>
 

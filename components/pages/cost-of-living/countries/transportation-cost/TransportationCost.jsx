@@ -46,13 +46,15 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -60,13 +62,15 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -74,13 +78,15 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {country2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -94,7 +100,8 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                                 <div className="all-indicators">Monthly Public Transportation Pass</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/public-transportation-pass-per-month-image.png"
-                                        fill alt="Image Describing Monthly Public Transportation Pass" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Monthly Public Transportation Pass" />
                                 </div>
                             </td>
 
@@ -112,7 +119,8 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                                 <div className="all-indicators">Single Public Transportation Ticket</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/single-public-transportation-ticket-image.png"
-                                        fill alt="Image Describing Single Public Transportation Ticket" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Single Public Transportation Ticket" />
                                 </div>
                             </td>
 
@@ -131,7 +139,8 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                             <td className="basic-info">
                                 <div className="all-indicators">Single Train Ticket</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/train-tickets-image.png" fill alt="Image Describing Single Train Ticket" />
+                                    <Image src="/images/train-tickets-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Single Train Ticket" />
                                 </div>
                             </td>
 
@@ -147,7 +156,8 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                             <td className="basic-info">
                                 <div className="all-indicators">Domestic Airplane Ticket</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/air-fare-domestic.png" fill alt="Image Describing Domestic Airplane Ticket" />
+                                    <Image src="/images/air-fare-domestic.png"layout="fill"
+objectFit="contain"alt="Image Describing Domestic Airplane Ticket" />
                                 </div>
                             </td>
 
@@ -164,7 +174,8 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                             <td className="basic-info">
                                 <div className="all-indicators">Taxi Start Fare</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/taxi-start-fare-image.png" fill alt="Image Describing Taxi Start Fare" />
+                                    <Image src="/images/taxi-start-fare-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Taxi Start Fare" />
                                 </div>
                             </td>
 
@@ -182,7 +193,8 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                                 <div className="all-indicators">Taxi Rate Per Kilometer</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/taxi-rate-per-kilometers-image.png"
-                                        fill alt="Image Describing Taxi Rate Per Kilometer" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Taxi Rate Per Kilometer" />
                                 </div>
                             </td>
 
@@ -198,7 +210,8 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                             <td className="basic-info">
                                 <div className="all-indicators">Car Rental Per Day</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/car-rental-per-day-image.png" fill alt="Image Describing Car Rental Per Day" />
+                                    <Image src="/images/car-rental-per-day-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Car Rental Per Day" />
                                 </div>
                             </td>
 
@@ -215,7 +228,8 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                                 <div className="all-indicators">Parking Fees in City Center Per Hour</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/parking-fees-inside-city-per-hour-image.png"
-                                        fill alt="Image Describing Parking Fees in City Center" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Parking Fees in City Center" />
                                 </div>
                             </td>
 
@@ -233,7 +247,8 @@ function TransportationCost({ country1CostInfo, country2CostInfo, country1Curren
                                 <div className="all-indicators">Parking Fees outside City Center Per Hour</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/parking-fees-outside-city-per-hour-image.png"
-                                        fill alt="Image Describing Parking Fees outside City Center" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Parking Fees outside City Center" />
                                 </div>
                             </td>
 

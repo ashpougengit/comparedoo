@@ -31,242 +31,387 @@ function Transportation({ state1CostInfo, state2CostInfo, state1LowerCase, state
     const moreOrLess = state1TotalCost > state2TotalCost ? 'more' : 'less'
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Transportation Cost Comparison</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">Transportation Cost Comparison</h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state1LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state1LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state1LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{state1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {state1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state1LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state1LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state1LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state2LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state2LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state2LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {state2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {state2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state2LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state2LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state2LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Monthly Public Transportation Pass
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/public-transportation-pass-per-month-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Monthly Public Transportation Pass"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Monthly Public Transportation Pass</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/public-transportation-pass-per-month-image.png"
-                                        fill alt="Image Describing Monthly Public Transportation Pass" />
-                                </div>
-                            </td>
+                <td className="public-transport-pass-first-entity all-indicator-answers">
+                  {state1PublicTransportPass
+                    ? `${formatNumberWithCommas(state1PublicTransportPass)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="public-transport-pass-second-entity all-indicator-answers">
+                  {state2PublicTransportPass
+                    ? `${formatNumberWithCommas(state2PublicTransportPass)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="public-transport-pass-first-entity all-indicator-answers">
-                                {state1PublicTransportPass ? `${formatNumberWithCommas(state1PublicTransportPass)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="public-transport-pass-second-entity all-indicator-answers">
-                                {state2PublicTransportPass ? `${formatNumberWithCommas(state2PublicTransportPass)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Single Public Transportation Ticket
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/single-public-transportation-ticket-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Single Public Transportation Ticket"
+                    />
+                  </div>
+                </td>
 
+                <td className="single-public-transportation-ticket-first-entity all-indicator-answers">
+                  {state1SinglePublicTransportTicket
+                    ? `${formatNumberWithCommas(
+                        state1SinglePublicTransportTicket
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="single-public-transportation-ticket-second-entity all-indicator-answers">
+                  {state2SinglePublicTransportTicket
+                    ? `${formatNumberWithCommas(
+                        state2SinglePublicTransportTicket
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Single Public Transportation Ticket</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/single-public-transportation-ticket-image.png"
-                                        fill alt="Image Describing Single Public Transportation Ticket" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Single Train Ticket</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/train-tickets-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Single Train Ticket"
+                    />
+                  </div>
+                </td>
 
-                            <td className="single-public-transportation-ticket-first-entity all-indicator-answers">
-                                {state1SinglePublicTransportTicket ? `${formatNumberWithCommas(state1SinglePublicTransportTicket)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="single-public-transportation-ticket-second-entity all-indicator-answers">
-                                {state2SinglePublicTransportTicket ? `${formatNumberWithCommas(state2SinglePublicTransportTicket)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="single-train-ticket-first-entity all-indicator-answers">
+                  {state1TrainTickets
+                    ? `${formatNumberWithCommas(state1TrainTickets)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="single-train-ticket-second-entity all-indicator-answers">
+                  {state2TrainTickets
+                    ? `${formatNumberWithCommas(state2TrainTickets)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Domestic Airplane Ticket</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/air-fare-domestic.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Domestic Airplane Ticket"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Single Train Ticket</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/train-tickets-image.png" fill alt="Image Describing Single Train Ticket" />
-                                </div>
-                            </td>
+                <td className="air-fare-domestic-first-entity all-indicator-answers">
+                  {state1AirfareDomestic
+                    ? `${formatNumberWithCommas(state1AirfareDomestic)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="air-fare-domestic-second-entity all-indicator-answers">
+                  {state2AirfareDomestic
+                    ? `${formatNumberWithCommas(state2AirfareDomestic)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="single-train-ticket-first-entity all-indicator-answers">
-                                {state1TrainTickets ? `${formatNumberWithCommas(state1TrainTickets)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="single-train-ticket-second-entity all-indicator-answers">
-                                {state2TrainTickets ? `${formatNumberWithCommas(state2TrainTickets)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Taxi Start Fare</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/taxi-start-fare-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Taxi Start Fare"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Domestic Airplane Ticket</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/air-fare-domestic.png" fill alt="Image Describing Domestic Airplane Ticket" />
-                                </div>
-                            </td>
+                <td className="taxi-start-fare-first-entity all-indicator-answers">
+                  {state1TaxiStartFare
+                    ? `${formatNumberWithCommas(state1TaxiStartFare)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="taxi-start-fare-second-entity all-indicator-answers">
+                  {state2TaxiStartFare
+                    ? `${formatNumberWithCommas(state2TaxiStartFare)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="air-fare-domestic-first-entity all-indicator-answers">
-                                {state1AirfareDomestic ? `${formatNumberWithCommas(state1AirfareDomestic)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="air-fare-domestic-second-entity all-indicator-answers">
-                                {state2AirfareDomestic ? `${formatNumberWithCommas(state2AirfareDomestic)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Taxi Rate Per Kilometer</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/taxi-rate-per-kilometers-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Taxi Rate Per Kilometer"
+                    />
+                  </div>
+                </td>
 
+                <td className="taxi-rate-per-kilometers-first-entity all-indicator-answers">
+                  {state1TaxiRatePerKm
+                    ? `${formatNumberWithCommas(state1TaxiRatePerKm)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="taxi-rate-per-kilometers-second-entity all-indicator-answers">
+                  {state2TaxiRatePerKm
+                    ? `${formatNumberWithCommas(state2TaxiRatePerKm)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Taxi Start Fare</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/taxi-start-fare-image.png" fill alt="Image Describing Taxi Start Fare" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Car Rental Per Day</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/car-rental-per-day-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Car Rental Per Day"
+                    />
+                  </div>
+                </td>
 
-                            <td className="taxi-start-fare-first-entity all-indicator-answers">
-                                {state1TaxiStartFare ? `${formatNumberWithCommas(state1TaxiStartFare)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="taxi-start-fare-second-entity all-indicator-answers">
-                                {state2TaxiStartFare ? `${formatNumberWithCommas(state2TaxiStartFare)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="car-rental-per-day-first-entity all-indicator-answers">
+                  {state1CarRentalPerDay
+                    ? `${formatNumberWithCommas(state1CarRentalPerDay)} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="car-rental-per-day-second-entity all-indicator-answers">
+                  {state2CarRentalPerDay
+                    ? `${formatNumberWithCommas(state2CarRentalPerDay)} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Parking Fees in City Center Per Hour
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/parking-fees-inside-city-per-hour-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Parking Fees in City Center"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Taxi Rate Per Kilometer</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/taxi-rate-per-kilometers-image.png"
-                                        fill alt="Image Describing Taxi Rate Per Kilometer" />
-                                </div>
-                            </td>
+                <td className="parking-fees-in-city-center-first-entity all-indicator-answers">
+                  {state1ParkingFeesCityCenterPerHour
+                    ? `${formatNumberWithCommas(
+                        state1ParkingFeesCityCenterPerHour
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="parking-fees-in-city-center-second-entity all-indicator-answers">
+                  {state2ParkingFeesCityCenterPerHour
+                    ? `${formatNumberWithCommas(
+                        state2ParkingFeesCityCenterPerHour
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
 
-                            <td className="taxi-rate-per-kilometers-first-entity all-indicator-answers">
-                                {state1TaxiRatePerKm ? `${formatNumberWithCommas(state1TaxiRatePerKm)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="taxi-rate-per-kilometers-second-entity all-indicator-answers">
-                                {state2TaxiRatePerKm ? `${formatNumberWithCommas(state2TaxiRatePerKm)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Parking Fees outside City Center Per Hour
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/parking-fees-outside-city-per-hour-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Parking Fees outside City Center"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Car Rental Per Day</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/car-rental-per-day-image.png" fill alt="Image Describing Car Rental Per Day" />
-                                </div>
-                            </td>
+                <td className="parking-fees-outside-city-center-first-entity all-indicator-answers">
+                  {state1ParkingFeesOutsideCityCenterPerHour
+                    ? `${formatNumberWithCommas(
+                        state1ParkingFeesOutsideCityCenterPerHour
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+                <td className="parking-fees-outside-city-center-second-entity all-indicator-answers">
+                  {state2ParkingFeesOutsideCityCenterPerHour
+                    ? `${formatNumberWithCommas(
+                        state2ParkingFeesOutsideCityCenterPerHour
+                      )} USD`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-                            <td className="car-rental-per-day-first-entity all-indicator-answers">
-                                {state1CarRentalPerDay ? `${formatNumberWithCommas(state1CarRentalPerDay)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="car-rental-per-day-second-entity all-indicator-answers">
-                                {state2CarRentalPerDay ? `${formatNumberWithCommas(state2CarRentalPerDay)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <h3>
+              Is Transportation more expensive in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {state1}{' '}
+              </span>{' '}
+              than in
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {state2}
+              </span>
+              ?
+            </h3>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Parking Fees in City Center Per Hour</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/parking-fees-inside-city-per-hour-image.png"
-                                        fill alt="Image Describing Parking Fees in City Center" />
-                                </div>
-                            </td>
-
-                            <td className="parking-fees-in-city-center-first-entity all-indicator-answers">
-                                {state1ParkingFeesCityCenterPerHour ? `${formatNumberWithCommas(state1ParkingFeesCityCenterPerHour)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="parking-fees-in-city-center-second-entity all-indicator-answers">
-                                {state2ParkingFeesCityCenterPerHour ? `${formatNumberWithCommas(state2ParkingFeesCityCenterPerHour)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Parking Fees outside City Center Per Hour</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/parking-fees-outside-city-per-hour-image.png"
-                                        fill alt="Image Describing Parking Fees outside City Center" />
-                                </div>
-                            </td>
-
-                            <td className="parking-fees-outside-city-center-first-entity all-indicator-answers">
-                                {state1ParkingFeesOutsideCityCenterPerHour ? `${formatNumberWithCommas(state1ParkingFeesOutsideCityCenterPerHour)} USD` : 'Yet to Update'}
-                            </td>
-                            <td className="parking-fees-outside-city-center-second-entity all-indicator-answers">
-                                {state2ParkingFeesOutsideCityCenterPerHour ? `${formatNumberWithCommas(state2ParkingFeesOutsideCityCenterPerHour)} USD` : 'Yet to Update'}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
-                    <h3>
-                        Is Transportation more expensive in
-                        <span className="first-entity-name-pages-paragraph"> {state1} </span> than in
-                        <span className="second-entity-name-pages-paragraph"> {state2}</span>?
-                    </h3>
-
-                    <p>
-
-                        If you lived in
-                        <span className="first-entity-name-pages-paragraph"> {state1}</span>, instead of
-                        <span className="second-entity-name-pages-paragraph"> {state2}</span>, you would have
-                        to pay
-                        <strong>
-                            <span className="drinks-cost-calculation"> {costTimes} </span> times </strong> <span
-                                className="drinks-cost-more-or-less-calculation"> {moreOrLess} </span>
-                        for transportation.
-                    </p>
-                </div>
-            </div>
-        </>
-    )
+            <p>
+              If you lived in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {state1}
+              </span>
+              , instead of
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {state2}
+              </span>
+              , you would have to pay
+              <strong>
+                <span className="drinks-cost-calculation"> {costTimes} </span>{' '}
+                times{' '}
+              </strong>{' '}
+              <span className="drinks-cost-more-or-less-calculation">
+                {' '}
+                {moreOrLess}{' '}
+              </span>
+              for transportation.
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default Transportation

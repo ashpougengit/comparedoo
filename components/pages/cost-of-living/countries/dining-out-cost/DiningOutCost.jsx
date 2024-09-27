@@ -30,223 +30,483 @@ function DiningOutCost({ country1CostInfo, country2CostInfo, country1Currency, c
     const moreOrLessPercentage = country1TotalCost > country2TotalCost ? 'more' : 'less'
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Dining Out Cost Comparison</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">Dining Out Cost Comparison</h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${country1LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${country1LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{country1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {country1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${country1LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${country1LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${country2LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${country2LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {country2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {country2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${country2LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${country2LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Meal at a Resonable Restaurant
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/meal-in-an-inexpensive-restaurant-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Meal cost at an inexpensive restaurant"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Meal at a Resonable Restaurant</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/meal-in-an-inexpensive-restaurant-image.png"
-                                        fill alt="Image Describing Meal cost at an inexpensive restaurant" />
-                                </div>
-                            </td>
+                <td className="meal-at-a-resonable-restaurant-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(
+                    country1MealAtInexpensiveRestaurant
+                  )} ${
+                    country1MealAtInexpensiveRestaurant ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="meal-at-a-resonable-restaurant-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1MealAtInexpensiveRestaurant *
+                        country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="meal-at-a-resonable-restaurant-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(
+                    country2MealAtInexpensiveRestaurant
+                  )} ${
+                    country2MealAtInexpensiveRestaurant ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="meal-at-a-resonable-restaurant-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2MealAtInexpensiveRestaurant *
+                        country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="meal-at-a-resonable-restaurant-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1MealAtInexpensiveRestaurant)} ${country1MealAtInexpensiveRestaurant ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span
-                                    className="meal-at-a-resonable-restaurant-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1MealAtInexpensiveRestaurant * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="meal-at-a-resonable-restaurant-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2MealAtInexpensiveRestaurant)} ${country2MealAtInexpensiveRestaurant ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : ( <span
-                                    className="meal-at-a-resonable-restaurant-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2MealAtInexpensiveRestaurant * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Three-Course Meal for Two
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/three-course-meal-for-two-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Three-Course Meal for Two cost"
+                    />
+                  </div>
+                </td>
 
+                <td className="three-course-meal-for-two-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1ThreeCourseMealForTwo)} ${
+                    country1ThreeCourseMealForTwo ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="three-course-meal-for-two-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1ThreeCourseMealForTwo * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="three-course-meal-for-two-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2ThreeCourseMealForTwo)} ${
+                    country2ThreeCourseMealForTwo ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="three-course-meal-for-two-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2ThreeCourseMealForTwo * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Fast Food Combo Meal</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/fast-food-combo-meal-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing the cost of Fast Food Combo Meal"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Three-Course Meal for Two</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/three-course-meal-for-two-image.png"
-                                        fill alt="Image Describing Three-Course Meal for Two cost" />
-                                </div>
-                            </td>
+                <td className="fast-food-combo-meal-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1FastFoodComboMeal)} ${
+                    country1FastFoodComboMeal ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="fast-food-combo-meal-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1FastFoodComboMeal * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="fast-food-combo-meal-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2FastFoodComboMeal)} ${
+                    country2FastFoodComboMeal ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="fast-food-combo-meal-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2FastFoodComboMeal * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="three-course-meal-for-two-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1ThreeCourseMealForTwo)} ${country1ThreeCourseMealForTwo ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="three-course-meal-for-two-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1ThreeCourseMealForTwo * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="three-course-meal-for-two-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2ThreeCourseMealForTwo)} ${country2ThreeCourseMealForTwo ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : ( <span className="three-course-meal-for-two-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2ThreeCourseMealForTwo * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Normal Coffee</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/coffee-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Coffee cost"
+                    />
+                  </div>
+                </td>
 
+                <td className="coffee-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Coffee)} ${
+                    country1Coffee ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="coffee-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Coffee * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="coffee-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Coffee)} ${
+                    country2Coffee ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="coffee-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Coffee * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Fast Food Combo Meal</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/fast-food-combo-meal-image.png"
-                                        fill alt="Image Describing the cost of Fast Food Combo Meal" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Soft Drink</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/soft-drink-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Soft Drink Cost"
+                    />
+                  </div>
+                </td>
 
-                            <td className="fast-food-combo-meal-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1FastFoodComboMeal)} ${country1FastFoodComboMeal ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="fast-food-combo-meal-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1FastFoodComboMeal * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="fast-food-combo-meal-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2FastFoodComboMeal)} ${country2FastFoodComboMeal ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : ( <span className="fast-food-combo-meal-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2FastFoodComboMeal * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+                <td className="soft-drink-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1SoftDrink)} ${
+                    country1SoftDrink ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="soft-drink-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1SoftDrink * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="soft-drink-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2SoftDrink)} ${
+                    country2SoftDrink ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="soft-drink-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2SoftDrink * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Normal Coffee</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/coffee-image.png" fill alt="Image Describing Coffee cost" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Pizza for One</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/pizza-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Pizza cost"
+                    />
+                  </div>
+                </td>
 
-                            <td className="coffee-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Coffee)} ${country1Coffee ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="coffee-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Coffee * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="coffee-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Coffee)} ${country2Coffee ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : ( <span className="coffee-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Coffee * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+                <td className="pizza-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1Pizza)} ${
+                    country1Pizza ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="pizza-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1Pizza * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="pizza-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2Pizza)} ${
+                    country2Pizza ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="pizza-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2Pizza * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Soft Drink</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/soft-drink-image.png" fill alt="Image Describing Soft Drink Cost" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Take-Out Delivery Meal</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/take-out-delivery-meal-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Take Out Delivery Meal Cost"
+                    />
+                  </div>
+                </td>
 
-                            <td className="soft-drink-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1SoftDrink)} ${country1SoftDrink ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="soft-drink-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1SoftDrink * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="soft-drink-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2SoftDrink)} ${country2SoftDrink ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : ( <span className="soft-drink-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2SoftDrink * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+                <td className="take-out-delivery-meal-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1TakeoutDeliveryMeal)} ${
+                    country1TakeoutDeliveryMeal ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="take-out-delivery-meal-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1TakeoutDeliveryMeal * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="take-out-delivery-meal-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2TakeoutDeliveryMeal)} ${
+                    country2TakeoutDeliveryMeal ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="take-out-delivery-meal-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2TakeoutDeliveryMeal * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Pizza for One</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/pizza-image.png" fill alt="Image Describing Pizza cost" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Cigarette Pack of 20</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/cigarettes-pack-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing lentils cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="pizza-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1Pizza)} ${country1Pizza ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="pizza-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1Pizza * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="pizza-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2Pizza)} ${country2Pizza ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : ( <span className="pizza-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2Pizza * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+                <td className="cigarettes-pack-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1CigarettesPackOf20)} ${
+                    country1CigarettesPackOf20 ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="cigarettes-pack-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1CigarettesPackOf20 * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="cigarettes-pack-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2CigarettesPackOf20)} ${
+                    country2CigarettesPackOf20 ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="cigarettes-pack-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2CigarettesPackOf20 * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Take-Out Delivery Meal</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/take-out-delivery-meal-image.png"
-                                        fill alt="Image Describing Take Out Delivery Meal Cost" />
-                                </div>
-                            </td>
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <h3>
+              Is Dining-Out more expensive in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {country1}{' '}
+              </span>{' '}
+              than in
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {country2}{' '}
+              </span>
+              ?
+            </h3>
 
-                            <td className="take-out-delivery-meal-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1TakeoutDeliveryMeal)} ${country1TakeoutDeliveryMeal ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="take-out-delivery-meal-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1TakeoutDeliveryMeal * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="take-out-delivery-meal-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2TakeoutDeliveryMeal)} ${country2TakeoutDeliveryMeal ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : ( <span className="take-out-delivery-meal-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2TakeoutDeliveryMeal * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Cigarette Pack of 20</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/cigarettes-pack-image.png" fill alt="Image Describing lentils cost per month" />
-                                </div>
-                            </td>
-
-                            <td className="cigarettes-pack-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1CigarettesPackOf20)} ${country1CigarettesPackOf20 ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="cigarettes-pack-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1CigarettesPackOf20 * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="cigarettes-pack-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2CigarettesPackOf20)} ${country2CigarettesPackOf20 ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : ( <span className="cigarettes-pack-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2CigarettesPackOf20 * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
-                    <h3>
-                        Is Dining-Out more expensive in
-                        <span className="first-entity-name-pages-paragraph"> {country1} </span> than in
-                        <span className="second-entity-name-pages-paragraph"> {country2} </span>?
-                    </h3>
-
-                    <p>
-
-                        Dining-Out costs <strong> <span className="dining-out-cost-calculation"> {percentageDifference}% </span></strong>
-                        <span className="dining-out-more-less-calculation"> {moreOrLessPercentage} </span> in
-                        <span className="first-entity-name-pages-paragraph"> {country1} </span> compared to
-                        <span className="second-entity-name-pages-paragraph"> {country2}</span>.
-                    </p>
-                </div>
-            </div>
-        </>
-    )
+            <p>
+              Dining-Out costs{' '}
+              <strong>
+                {' '}
+                <span className="dining-out-cost-calculation">
+                  {' '}
+                  {percentageDifference}%{' '}
+                </span>
+              </strong>
+              <span className="dining-out-more-less-calculation">
+                {' '}
+                {moreOrLessPercentage}{' '}
+              </span>{' '}
+              in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {country1}{' '}
+              </span>{' '}
+              compared to
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {country2}
+              </span>
+              .
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default DiningOutCost

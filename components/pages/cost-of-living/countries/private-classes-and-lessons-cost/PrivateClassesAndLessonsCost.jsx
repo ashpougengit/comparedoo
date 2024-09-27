@@ -30,218 +30,477 @@ function PrivateClassesAndLessonsCost({ country1CostInfo, country2CostInfo, coun
     const moreOrLess = country1TotalCost > country2TotalCost ? 'more' : 'less'
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Private Classes and Lessons Cost Comparison</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">
+            Private Classes and Lessons Cost Comparison
+          </h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${country1LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${country1LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{country1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {country1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${country1LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${country1LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2LowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${country2LowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${country2LowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {country2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {country2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2LowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${country2LowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${country2LowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Language Classes</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/language-classes-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Language Classes"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Language Classes</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/language-classes-image.png" fill alt="Image Describing Language Classes" />
-                                </div>
-                            </td>
+                <td className="language-classes-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1LanguageClasses)} ${
+                    country1LanguageClasses ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="language-classes-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1LanguageClasses * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="language-classes-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2LanguageClasses)} ${
+                    country2LanguageClasses ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="language-classes-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2LanguageClasses * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="language-classes-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1LanguageClasses)} ${country1LanguageClasses ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="language-classes-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1LanguageClasses * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="language-classes-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2LanguageClasses)} ${country2LanguageClasses ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="language-classes-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2LanguageClasses * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Parenting Classes</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/parenting-classes-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Parenting Classes"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Parenting Classes</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/parenting-classes-image.png" fill alt="Image Describing Parenting Classes" />
-                                </div>
-                            </td>
+                <td className="parenting-classes-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1ParentingClasses)} ${
+                    country1ParentingClasses ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="parenting-classes-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1ParentingClasses * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="parenting-classes-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2ParentingClasses)} ${
+                    country2ParentingClasses ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="parenting-classes-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2ParentingClasses * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="parenting-classes-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1ParentingClasses)} ${country1ParentingClasses ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="parenting-classes-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1ParentingClasses * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="parenting-classes-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2ParentingClasses)} ${country2ParentingClasses ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="parenting-classes-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2ParentingClasses * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Art Classes</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/art-classes-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Art Classes"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Art Classes</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/art-classes-image.png" fill alt="Image Describing Art Classes" />
-                                </div>
-                            </td>
+                <td className="art-classes-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1ArtClasses)} ${
+                    country1ArtClasses ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="art-classes-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1ArtClasses * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="art-classes-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2ArtClasses)} ${
+                    country2ArtClasses ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="art-classes-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2ArtClasses * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="art-classes-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1ArtClasses)} ${country1ArtClasses ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="art-classes-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1ArtClasses * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="art-classes-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2ArtClasses)} ${country2ArtClasses ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="art-classes-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2ArtClasses * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Fitness Classes</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/fitness-class-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Fitness Classes"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Fitness Classes</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/fitness-class-image.png" fill alt="Image Describing Fitness Classes" />
-                                </div>
-                            </td>
+                <td className="fitness-class-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1FitnessClass)} ${
+                    country1FitnessClass ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="fitness-class-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1FitnessClass * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="fitness-class-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2FitnessClass)} ${
+                    country2FitnessClass ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="fitness-class-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2FitnessClass * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="fitness-class-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1FitnessClass)} ${country1FitnessClass ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="fitness-class-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1FitnessClass * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="fitness-class-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2FitnessClass)} ${country2FitnessClass ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="fitness-class-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2FitnessClass * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Music Lessons</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/music-lessons-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Music Lessons"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Music Lessons</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/music-lessons-image.png" fill alt="Image Describing Music Lessons" />
-                                </div>
-                            </td>
+                <td className="music-lessons-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1MusicLessons)} ${
+                    country1MusicLessons ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="music-lessons-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1MusicLessons * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="music-lessons-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2MusicLessons)} ${
+                    country2MusicLessons ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="music-lessons-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2MusicLessons * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="music-lessons-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1MusicLessons)} ${country1MusicLessons ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="music-lessons-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1MusicLessons * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="music-lessons-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2MusicLessons)} ${country2MusicLessons ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="music-lessons-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2MusicLessons * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Dance Lessons</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/dance-lessons-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Dance Lessons"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Dance Lessons</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/dance-lessons-image.png" fill alt="Image Describing Dance Lessons" />
-                                </div>
-                            </td>
+                <td className="dance-lessons-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1DanceLessons)} ${
+                    country1DanceLessons ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="dance-lessons-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1DanceLessons * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="dance-lessons-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2DanceLessons)} ${
+                    country2DanceLessons ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="dance-lessons-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2DanceLessons * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="dance-lessons-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1DanceLessons)} ${country1DanceLessons ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="dance-lessons-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1DanceLessons * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="dance-lessons-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2DanceLessons)} ${country2DanceLessons ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="dance-lessons-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2DanceLessons * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Reading Materials for Classes
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/reading-materials-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Reading Materials for Classes"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Reading Materials for Classes</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/reading-materials-image.png"
-                                        fill alt="Image Describing Reading Materials for Classes" />
-                                </div>
-                            </td>
+                <td className="reading-materials-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1ReadingMaterials)} ${
+                    country1ReadingMaterials ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="reading-materials-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1ReadingMaterials * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="reading-materials-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2ReadingMaterials)} ${
+                    country2ReadingMaterials ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="reading-materials-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2ReadingMaterials * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="reading-materials-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1ReadingMaterials)} ${country1ReadingMaterials ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="reading-materials-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1ReadingMaterials * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="reading-materials-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2ReadingMaterials)} ${country2ReadingMaterials ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="reading-materials-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2ReadingMaterials * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Educational Software</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/educational-software-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Educational Software"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Educational Software</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/educational-software-image.png" fill alt="Image Describing Educational Software" />
-                                </div>
-                            </td>
+                <td className="educational-software-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country1EducationalSoftware)} ${
+                    country1EducationalSoftware ? country1Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country1) ? (
+                    ''
+                  ) : (
+                    <span className="educational-software-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country1EducationalSoftware * country1UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+                <td className="educational-software-second-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(country2EducationalSoftware)} ${
+                    country2EducationalSoftware ? country2Currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country2) ? (
+                    ''
+                  ) : (
+                    <span className="educational-software-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      country2EducationalSoftware * country2UnitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-                            <td className="educational-software-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1EducationalSoftware)} ${country1EducationalSoftware ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' :(<span className="educational-software-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1EducationalSoftware * country1UnitValueInUSD)}`}</span>)}
-                            </td>
-                            <td className="educational-software-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2EducationalSoftware)} ${country2EducationalSoftware ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="educational-software-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2EducationalSoftware * country2UnitValueInUSD)}`}</span>)}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <h3>
+              Are Private Classes more expensive in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {country1}{' '}
+              </span>{' '}
+              than in
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {country2}
+              </span>
+              ?
+            </h3>
 
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
-                    <h3>
-                        Are Private Classes more expensive in
-                        <span className="first-entity-name-pages-paragraph"> {country1} </span> than in
-                        <span className="second-entity-name-pages-paragraph"> {country2}</span>?
-                    </h3>
-
-                    <p>
-                        If you lived in
-                        <span className="first-entity-name-pages-paragraph"> {country1}</span>, instead of
-                        <span className="second-entity-name-pages-paragraph"> {country2}</span>, you would have
-                        to pay
-                        <strong>
-                            <span className="private-classes-cost-calculation"> {costTimes} </span> times </strong> <span
-                                className="private-classes-cost-more-or-less-calculation"> {moreOrLess} </span>
-                        for Private Classes.
-                    </p>
-                </div>
-            </div>
-
-        </>
-    )
+            <p>
+              If you lived in
+              <span className="first-entity-name-pages-paragraph">
+                {' '}
+                {country1}
+              </span>
+              , instead of
+              <span className="second-entity-name-pages-paragraph">
+                {' '}
+                {country2}
+              </span>
+              , you would have to pay
+              <strong>
+                <span className="private-classes-cost-calculation">
+                  {' '}
+                  {costTimes}{' '}
+                </span>{' '}
+                times{' '}
+              </strong>{' '}
+              <span className="private-classes-cost-more-or-less-calculation">
+                {' '}
+                {moreOrLess}{' '}
+              </span>
+              for Private Classes.
+            </p>
+          </div>
+        </div>
+      </>
+    );
 }
 
 export default PrivateClassesAndLessonsCost

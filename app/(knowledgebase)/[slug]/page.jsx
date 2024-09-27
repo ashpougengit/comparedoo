@@ -1,8 +1,18 @@
 import React from 'react';
 import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner';
-import { indicatorsGeneral, indicatorValueType, randomIndicatorsList } from '@/lib/array-list/indicators';
+import {
+  indicatorsGeneral,
+  indicatorValueType,
+  randomIndicatorsList,
+} from '@/lib/array-list/indicators';
 import { fetchIndicatorInfo } from '@/lib/database/fetch';
-import { camelToTitleCase, toURLFormat, toCamelCase, formatNumberWithCommas, titleCased } from '@/lib/format/format';
+import {
+  camelToTitleCase,
+  toURLFormat,
+  toCamelCase,
+  formatNumberWithCommas,
+  titleCased,
+} from '@/lib/format/format';
 import { currentYear, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,8 +28,12 @@ export async function generateMetadata({ params }) {
   const titleCasedIndicator = camelToTitleCase(indicator, isCountry);
 
   try {
-    const title = `${titleCasedIndicator} of All ${isCountry ? 'Countries' : 'US States'} (Updated: ${currentYear})`;
-    const description = isCountry ? `Discover the ${titleCasedIndicator} worldwide. In this article, you can find a comprehensive list of ${titleCasedIndicator} of all countries in the world.` : `In this article, you can find a comprehensive list of ${titleCasedIndicator} of all 50 states in the United States of America. 
+    const title = `${titleCasedIndicator} of All ${
+      isCountry ? 'Countries' : 'US States'
+    } (Updated: ${currentYear})`;
+    const description = isCountry
+      ? `Discover the ${titleCasedIndicator} worldwide. In this article, you can find a comprehensive list of ${titleCasedIndicator} of all countries in the world.`
+      : `In this article, you can find a comprehensive list of ${titleCasedIndicator} of all 50 states in the United States of America. 
 `;
 
     return {
@@ -42,47 +56,68 @@ async function KnowledgeBase({ params }) {
 
   const titleCasedIndicator = camelToTitleCase(indicator, isCountry);
 
-  const indicatorType = indicatorsGeneral.includes(indicator) ? 'general' : 'standard';
+  const indicatorType = indicatorsGeneral.includes(indicator)
+    ? 'general'
+    : 'standard';
 
-  const realIndicator = indicator
+  const realIndicator = indicator;
 
-  indicator = (indicator === 'unemploymentPercentageOfTotalLabourForce' || indicator === 'employmentRate') ? (isCountry ? "unemploymentPercentageOfTotalLabourForce" : 'employmentRate') : indicator
+  indicator =
+    indicator === 'unemploymentPercentageOfTotalLabourForce' ||
+    indicator === 'employmentRate'
+      ? isCountry
+        ? 'unemploymentPercentageOfTotalLabourForce'
+        : 'employmentRate'
+      : indicator;
 
   try {
-    let indicatorInfo = await fetchIndicatorInfo(isCountry ? 'country' : 'state', indicator, indicatorType);
+    let indicatorInfo = await fetchIndicatorInfo(
+      isCountry ? 'country' : 'state',
+      indicator,
+      indicatorType
+    );
 
-    let majorReligionPercentage, majorReligionWithPercentage
+    let majorReligionPercentage, majorReligionWithPercentage;
     if (indicator === 'majorReligion') {
-      majorReligionPercentage = await fetchIndicatorInfo('country', 'majorReligionPercentage', indicatorType)
-      majorReligionWithPercentage = indicatorInfo.map(religionData => {
+      majorReligionPercentage = await fetchIndicatorInfo(
+        'country',
+        'majorReligionPercentage',
+        indicatorType
+      );
+      majorReligionWithPercentage = indicatorInfo.map((religionData) => {
         const percentageData = majorReligionPercentage.find(
-          percentage => percentage.country === religionData.country
+          (percentage) => percentage.country === religionData.country
         );
 
         return {
           country: religionData.country,
           majorReligion: religionData.majorReligion,
-          majorReligionPercentage: percentageData ? percentageData.majorReligionPercentage : null
+          majorReligionPercentage: percentageData
+            ? percentageData.majorReligionPercentage
+            : null,
         };
       });
     }
 
-    if (realIndicator === 'unemploymentPercentageOfTotalLabourForce' && !isCountry) {
-      indicatorInfo = indicatorInfo.map(value => (
-        {
-          state: value.state,
-          unemploymentPercentageOfTotalLabourForce: Math.abs(value.employmentRate - 100)
-        }
-      ))
+    if (
+      realIndicator === 'unemploymentPercentageOfTotalLabourForce' &&
+      !isCountry
+    ) {
+      indicatorInfo = indicatorInfo.map((value) => ({
+        state: value.state,
+        unemploymentPercentageOfTotalLabourForce: Math.abs(
+          value.employmentRate - 100
+        ),
+      }));
     }
 
     if (realIndicator === 'employmentRate' && isCountry) {
-      indicatorInfo = indicatorInfo.map(value => (
-        {
-          country: value.country,
-          employmentRate: Math.abs(value.unemploymentPercentageOfTotalLabourForce - 100)
-        }
-      ))
+      indicatorInfo = indicatorInfo.map((value) => ({
+        country: value.country,
+        employmentRate: Math.abs(
+          value.unemploymentPercentageOfTotalLabourForce - 100
+        ),
+      }));
     }
 
     // Handle the case when indicatorInfo is null or undefined
@@ -92,17 +127,24 @@ async function KnowledgeBase({ params }) {
 
     // Divide the data into chunks
     const chunkSize = isCountry ? 14 : 10;
-    const sourceArray = indicator === 'majorReligion' ? majorReligionWithPercentage : indicatorInfo;
+    const sourceArray =
+      indicator === 'majorReligion'
+        ? majorReligionWithPercentage
+        : indicatorInfo;
     const dividedArrays = Array.from(
       { length: Math.ceil(sourceArray?.length / chunkSize) },
       (_, i) => sourceArray?.slice(i * chunkSize, (i + 1) * chunkSize)
     );
 
-    const randomList = randomIndicatorsList(indicator, indicatorType, isCountry);
+    const randomList = randomIndicatorsList(
+      indicator,
+      indicatorType,
+      isCountry
+    );
 
     const formattedDate = getFormattedDate();
 
-    const userCountry = await getCountryByIP()
+    const userCountry = await getCountryByIP();
 
     return (
       <>
@@ -117,8 +159,8 @@ async function KnowledgeBase({ params }) {
               {' '}
               {titleCasedIndicator}{' '}
             </span>
-            of All {isCountry ? 'Countries' : 'US States'} (Updated: {currentYear}
-            )
+            of All {isCountry ? 'Countries' : 'US States'} (Updated:{' '}
+            {currentYear})
           </h1>
         </div>
 
@@ -204,7 +246,9 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
-                              alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'}`}
+                              alt={`Image representing the ${titleCasedIndicator} of all ${
+                                isCountry ? 'Countries' : 'US States'
+                              }`}
                             />
                           </div>
 
@@ -216,7 +260,9 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
-                              alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'}`}
+                              alt={`Image representing the ${titleCasedIndicator} of all ${
+                                isCountry ? 'Countries' : 'US States'
+                              }`}
                             />
                           </div>
                         </div>
@@ -240,8 +286,9 @@ async function KnowledgeBase({ params }) {
                                   obj[isCountry ? 'country' : 'state']
                                 )}-flag-small.png`}
                                 fill
-                                alt={`Image illustrating the flag of ${obj[isCountry ? 'country' : 'state']
-                                  }`}
+                                alt={`Image illustrating the flag of ${
+                                  obj[isCountry ? 'country' : 'state']
+                                }`}
                               />
                             </div>
                           </td>
@@ -251,13 +298,26 @@ async function KnowledgeBase({ params }) {
                             } */}
                             {obj[realIndicator] ? (
                               <>
-                                {
-                                  indicator === 'majorReligion' ? `${formatNumberWithCommas(obj[realIndicator])} ${indicatorValueType(realIndicator, isCountry)} (${obj['majorReligionPercentage']}%)` : (realIndicator === 'HDI' || realIndicator === 'unitValueInUSD') ? obj[realIndicator] : `${formatNumberWithCommas(obj[realIndicator])} ${indicatorValueType(realIndicator, isCountry)}`
-                                }
+                                {indicator === 'majorReligion'
+                                  ? `${formatNumberWithCommas(
+                                      obj[realIndicator]
+                                    )} ${indicatorValueType(
+                                      realIndicator,
+                                      isCountry
+                                    )} (${obj['majorReligionPercentage']}%)`
+                                  : realIndicator === 'HDI' ||
+                                    realIndicator === 'unitValueInUSD'
+                                  ? obj[realIndicator]
+                                  : `${formatNumberWithCommas(
+                                      obj[realIndicator]
+                                    )} ${indicatorValueType(
+                                      realIndicator,
+                                      isCountry
+                                    )}`}
                               </>
-                            ) : 'Yet to Update'
-
-                            }
+                            ) : (
+                              'Yet to Update'
+                            )}
                           </td>
                         </tr>
                       );
@@ -298,12 +358,16 @@ async function KnowledgeBase({ params }) {
           {randomList.map((value, index) => {
             return (
               <Link href={`/${toURLFormat(value)}-of-all-${isCountry ? 'countries' : 'us-states'}`} key={index}>
-                <div className="individual-country-vs-others-map-name-flag" >
+                <div class="individual-country-vs-others-map-name-flag" >
                   <div className="first-entity-map-pages-comparison">
                     <Image
-                      src={`/images/${toURLFormat(value)}-image-for-knowledgebase.png`}
+                      src={`/images/${toURLFormat(
+                        value
+                      )}-image-for-knowledgebase.png`}
                       fill
-                      alt={`Image representing the ${camelToTitleCase(value)} of all ${isCountry ? 'Countries' : 'US States'}`}
+                      alt={`Image representing the ${camelToTitleCase(
+                        value
+                      )} of all ${isCountry ? 'Countries' : 'US States'}`}
                     />
                   </div>
 
@@ -313,16 +377,19 @@ async function KnowledgeBase({ params }) {
 
                   <div className="first-entity-flag-pages-comparison">
                     <Image
-                      src={`/images/${toURLFormat(value)}-image-for-knowledgebase.png`}
+                      src={`/images/${toURLFormat(
+                        value
+                      )}-image-for-knowledgebase.png`}
                       fill
-                      alt={`Image representing the ${camelToTitleCase(value)} of all ${isCountry ? 'Countries' : 'US States'}`}
+                      alt={`Image representing the ${camelToTitleCase(
+                        value
+                      )} of all ${isCountry ? 'Countries' : 'US States'}`}
                     />
                   </div>
                 </div>
               </Link>
-            )
+            );
           })}
-
         </div>
 
         <AdsHeaderBanner />
@@ -337,6 +404,6 @@ async function KnowledgeBase({ params }) {
       </div>
     );
   }
-};
+}
 
 export default KnowledgeBase;

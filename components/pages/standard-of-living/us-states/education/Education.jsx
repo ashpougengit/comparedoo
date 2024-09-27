@@ -15,141 +15,207 @@ function Education({ state1StandardInfo, state2StandardInfo, state1URLCase, stat
     const state2GraduatedegreePercentage = state2StandardInfo.graduatedegreePercentage
 
     return (
-        <>
-            <div className="economic-factors-comparison">
-                <h2 className="pages-h2">School and Education Factors Comparison</h2>
-            </div>
-            <div className="import-export-factors-comparison-div1">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
-                                    </div>
-                                    <div className="indicator-text">
-                                        Indicators
-                                    </div>
-                                    <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+      <>
+        <div className="economic-factors-comparison">
+          <h2 className="pages-h2">School and Education Factors Comparison</h2>
+        </div>
+        <div className="import-export-factors-comparison-div1">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
+                    <div className="indicator-text">Indicators</div>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${state1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state1URLCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state1URLCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state1URLCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{state1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {state1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state1URLCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state1URLCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state1URLCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${state2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${state2URLCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${state2URLCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${state2URLCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {state2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {state2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${state2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${state2URLCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">
-                                    <div className="employment-rate-states-text">
-                                        High School Graduate
-                                        <br />
-                                        ({lastYear})
-                                    </div>
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/high-school-graduate-states-images.png" fill alt="Image Depicting High School Graduate percentage in any specific country or state" />
-                                </div>
-                            </td>
-                            <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1HighSchoolGraduate ? `${state1HighSchoolGraduate} %` : 'Yet to Update'}
-                            </td>
-                            <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2HighSchoolGraduate ? `${state2HighSchoolGraduate} %` : 'Yet to Update'}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">
-                                    <div className="employment-rate-states-text">
-                                        Associate Degree
-                                        <br />
-                                        ({lastYear})
-                                    </div>
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/associate-degree-states-images.png" fill alt="Image Depicting Associate Degree percentage in any specific country or state" />
-                                </div>
-                            </td>
-                            <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1AssociatedegreePercentage ? `${state1AssociatedegreePercentage} %` : 'Yet to Update'}
-                            </td>
-                            <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2AssociatedegreePercentage ? `${state2AssociatedegreePercentage} %` : 'Yet to Update'}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">
-                                    <div className="employment-rate-states-text">
-                                        Bachelor&apos;s Degree
-                                        <br />
-                                        ({lastYear})
-                                    </div>
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/bachelor-degree-states-images.png" fill alt="Image Depicting Bachelor's Degree percentage in any specific country or state" />
-                                </div>
-                            </td>
-                            <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1BachelorsdegreePercentage ? `${state1BachelorsdegreePercentage} %` : 'Yet to Update'}
-                            </td>
-                            <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2BachelorsdegreePercentage ? `${state2BachelorsdegreePercentage} %` : 'Yet to Update'}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">
-                                    <div className="employment-rate-states-text">
-                                        Graduate Degree Holders Percentage ({lastYear})
-                                    </div>
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/graduate-degree-states-images.png" fill alt="Image Depicting Graduate Degree Holders Percentage percentage in any specific country or state" />
-                                </div>
-                            </td>
-                            <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1GraduatedegreePercentage ? `${state1GraduatedegreePercentage} %` : 'Yet to Update'}
-                            </td>
-                            <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2GraduatedegreePercentage ? `${state2GraduatedegreePercentage} %` : 'Yet to Update'}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </>
-    )
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${state2URLCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${state2URLCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    <div className="employment-rate-states-text">
+                      High School Graduate
+                      <br />({lastYear})
+                    </div>
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/high-school-graduate-states-images.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Depicting High School Graduate percentage in any specific country or state"
+                    />
+                  </div>
+                </td>
+                <td className="employment-rate-states-answer-first-entity all-indicator-answers">
+                  {state1HighSchoolGraduate
+                    ? `${state1HighSchoolGraduate} %`
+                    : 'Yet to Update'}
+                </td>
+                <td className="employment-rate-states-answer-second-entity all-indicator-answers">
+                  {state2HighSchoolGraduate
+                    ? `${state2HighSchoolGraduate} %`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    <div className="employment-rate-states-text">
+                      Associate Degree
+                      <br />({lastYear})
+                    </div>
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/associate-degree-states-images.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Depicting Associate Degree percentage in any specific country or state"
+                    />
+                  </div>
+                </td>
+                <td className="employment-rate-states-answer-first-entity all-indicator-answers">
+                  {state1AssociatedegreePercentage
+                    ? `${state1AssociatedegreePercentage} %`
+                    : 'Yet to Update'}
+                </td>
+                <td className="employment-rate-states-answer-second-entity all-indicator-answers">
+                  {state2AssociatedegreePercentage
+                    ? `${state2AssociatedegreePercentage} %`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    <div className="employment-rate-states-text">
+                      Bachelor&apos;s Degree
+                      <br />({lastYear})
+                    </div>
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/bachelor-degree-states-images.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Depicting Bachelor's Degree percentage in any specific country or state"
+                    />
+                  </div>
+                </td>
+                <td className="employment-rate-states-answer-first-entity all-indicator-answers">
+                  {state1BachelorsdegreePercentage
+                    ? `${state1BachelorsdegreePercentage} %`
+                    : 'Yet to Update'}
+                </td>
+                <td className="employment-rate-states-answer-second-entity all-indicator-answers">
+                  {state2BachelorsdegreePercentage
+                    ? `${state2BachelorsdegreePercentage} %`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    <div className="employment-rate-states-text">
+                      Graduate Degree Holders Percentage ({lastYear})
+                    </div>
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/graduate-degree-states-images.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Depicting Graduate Degree Holders Percentage percentage in any specific country or state"
+                    />
+                  </div>
+                </td>
+                <td className="employment-rate-states-answer-first-entity all-indicator-answers">
+                  {state1GraduatedegreePercentage
+                    ? `${state1GraduatedegreePercentage} %`
+                    : 'Yet to Update'}
+                </td>
+                <td className="employment-rate-states-answer-second-entity all-indicator-answers">
+                  {state2GraduatedegreePercentage
+                    ? `${state2GraduatedegreePercentage} %`
+                    : 'Yet to Update'}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </>
+    );
 }
 
 export default Education

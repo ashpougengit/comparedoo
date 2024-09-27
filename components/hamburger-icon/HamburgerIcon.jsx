@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HamburgerIcon = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,14 +16,18 @@ const HamburgerIcon = () => {
       <div className="hamburger-icon" onClick={handleToggle}>
         {isOpen ? (
           <>
-            <Link href='/'>
-              <img src='/images/close' />
+            <Link href="/">
+              <Image layout="fill" objectFit="contain" src="/images/close" />
             </Link>
           </>
         ) : (
           <>
-            <Link href='/menu-bar'>
-              <img src='/images/menu-icon' />
+            <Link href="/menu-bar">
+              <Image
+                layout="fill"
+                objectFit="contain"
+                src="/images/menu-icon"
+              />
             </Link>
           </>
         )}

@@ -11,129 +11,218 @@ function BasicUtilities({ costInfo, currency, unitValueInUSD, countryLowerCase }
     const coolingCostPerMonth = costInfo.coolingCostPerMonth
     const waterCostPerMonth = costInfo.waterCostPerMonth
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="geographical-map">
-                <h2 className="pages-h2">Basic Utilities Cost</h2>
-            </div>
+        <div className="geographical-map">
+          <h2 className="pages-h2">Basic Utilities Cost</h2>
+        </div>
 
-            <div className="basic-information-comparison-div1">
-                <table className="indicators-single-country-divs">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="basic-information-comparison-div1">
+          <table className="indicators-single-country-divs">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${countryLowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${countryLowerCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${countryLowerCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${countryLowerCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{country}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {country}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${countryLowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${countryLowerCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${countryLowerCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${countryLowerCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Basic Home Furnishing</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/home-furnishing-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Home Furnishing Cost"
+                    />
+                  </div>
+                </td>
 
-                        </tr>
-                    </thead>
+                <td className="home-furnishing-answer-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(homeFurnishing)} ${
+                    homeFurnishing ? currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country) ? (
+                    ''
+                  ) : (
+                    <span className="home-furnishing-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      homeFurnishing * unitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                    <tbody>
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Basic Home Furnishing</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/home-furnishing-image.png" fill alt="Image Describing Home Furnishing Cost" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Electricity Cost Per Month
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/electricity-cost-per-month-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Electricity Cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="home-furnishing-answer-first-entity all-indicator-answers">{`${formatNumberWithCommas(homeFurnishing)} ${homeFurnishing ? currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country) ? '' : (<span className="home-furnishing-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(homeFurnishing * unitValueInUSD)}`}</span>)}
-                            </td>
+                <td className="electricity-cost-per-month-answer-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(electricityCostPerMonth)} ${
+                    electricityCostPerMonth ? currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country) ? (
+                    ''
+                  ) : (
+                    <span className="electricity-cost-per-month-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      electricityCostPerMonth * unitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Heating Cost Per Month</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/heating-cost-per-month-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Heating Cost per month"
+                    />
+                  </div>
+                </td>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Electricity Cost Per Month</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/electricity-cost-per-month-image.png"
-                                        fill alt="Image Describing Electricity Cost per month" />
-                                </div>
-                            </td>
+                <td className="heating-cost-per-month-answer-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(heatingCostPerMonth)} ${
+                    heatingCostPerMonth ? currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country) ? (
+                    ''
+                  ) : (
+                    <span className="heating-cost-per-month-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      heatingCostPerMonth * unitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                            <td className="electricity-cost-per-month-answer-first-entity all-indicator-answers">{`${formatNumberWithCommas(electricityCostPerMonth)} ${electricityCostPerMonth ? currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country) ? '' : (<span
-                                    className="electricity-cost-per-month-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(electricityCostPerMonth * unitValueInUSD)}`}</span>)}
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">Cooling Cost Per Month</div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/cooling-cost-per-month-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing Cooling Cost per month"
+                    />
+                  </div>
+                </td>
 
-                        </tr>
+                <td className="cooling-cost-per-month-answer-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(coolingCostPerMonth)} ${
+                    coolingCostPerMonth ? currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country) ? (
+                    ''
+                  ) : (
+                    <span className="cooling-cost-per-month-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      coolingCostPerMonth * unitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Heating Cost Per Month</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/heating-cost-per-month-image.png"
-                                        fill alt="Image Describing Heating Cost per month" />
-                                </div>
-                            </td>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators">
+                    Water Supply Cost Per Month
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/water-cost-per-month-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image Describing water cost per month"
+                    />
+                  </div>
+                </td>
 
-                            <td className="heating-cost-per-month-answer-first-entity all-indicator-answers">{`${formatNumberWithCommas(heatingCostPerMonth)} ${heatingCostPerMonth ? currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country) ? '' : (<span className="heating-cost-per-month-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(heatingCostPerMonth * unitValueInUSD)}`}</span>)}
-                            </td>
-
-                        </tr>
-
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Cooling Cost Per Month</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/cooling-cost-per-month-image.png"
-                                        fill alt="Image Describing Cooling Cost per month" />
-                                </div>
-                            </td>
-
-                            <td className="cooling-cost-per-month-answer-first-entity all-indicator-answers">{`${formatNumberWithCommas(coolingCostPerMonth)} ${coolingCostPerMonth ? currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country) ? '' : (<span className="cooling-cost-per-month-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(coolingCostPerMonth * unitValueInUSD)}`}</span>)}
-                            </td>
-
-                        </tr>
-
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">Water Supply Cost Per Month</div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/water-cost-per-month-image.png" fill alt="Image Describing water cost per month" />
-                                </div>
-                            </td>
-
-                            <td className="water-cost-per-month-answer-first-entity all-indicator-answers">{`${formatNumberWithCommas(waterCostPerMonth)} ${waterCostPerMonth ? currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country) ? '' : (<span className="water-cost-per-month-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(waterCostPerMonth * unitValueInUSD)}`}</span>)}
-                            </td>
-
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </>
-    )
+                <td className="water-cost-per-month-answer-first-entity all-indicator-answers">
+                  {`${formatNumberWithCommas(waterCostPerMonth)} ${
+                    waterCostPerMonth ? currency : ''
+                  }`}
+                  <br />{' '}
+                  {dollarizedCountries.includes(country) ? (
+                    ''
+                  ) : (
+                    <span className="water-cost-per-month-answer-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(
+                      waterCostPerMonth * unitValueInUSD
+                    )}`}</span>
+                  )}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </>
+    );
 }
 
 export default BasicUtilities

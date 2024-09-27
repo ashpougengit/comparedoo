@@ -21,216 +21,260 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
     const slug2NationalColors = slug2GeneralInfo[isSlug1State ? 'nationalColors' : 'stateColors']
 
     return (
-        <>
-            <AdsHeaderBanner />
+      <>
+        <AdsHeaderBanner />
 
-            <div className="national-symbols-comparison">
-                <h2 className="pages-h2">{isSlug1State ? 'State/National' : 'National/State'} Symbols Comparison</h2>
-            </div>
+        <div className="national-symbols-comparison">
+          <h2 className="pages-h2">
+            {isSlug1State ? 'State/National' : 'National/State'} Symbols
+            Comparison
+          </h2>
+        </div>
 
-            <div className="national-symbols-factors-comparison">
-                <table className="indicators-first-entity-and-second-entity-div1">
-                    <thead>
-                        <tr className="first-tr">
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="right-indicator">
-                                        <Image
-                                            src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
-                                    </div>
+        <div className="national-symbols-factors-comparison">
+          <table className="indicators-first-entity-and-second-entity-div1">
+            <thead>
+              <tr className="first-tr">
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="right-indicator">
+                      <Image
+                        src="/images/indicators-right-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image representing an indicator"
+                      />
+                    </div>
 
-                                    <div className="indicator-text">Indicators</div>
+                    <div className="indicator-text">Indicators</div>
 
-                                    <div className="left-indicator">
-                                        <Image
-                                            src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="left-indicator">
+                      <Image
+                        src="/images/indicators-left-image.png"
+                        layout="fill"
+                        objectFit="contain"
+                        alt="Image illustrating an indicator"
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug1URLCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="first-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${slug1URLCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${slug1URLCase}`}
+                      />
+                    </div>
 
-                                    <div className="first-entity-name-pages-comparison">{slug1}</div>
+                    <div className="first-entity-name-pages-comparison">
+                      {slug1}
+                    </div>
 
-                                    <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug1URLCase}`} />
-                                    </div>
-                                </div>
-                            </th>
+                    <div className="first-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${slug1URLCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${slug1URLCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
 
-                            <th>
-                                <div className="heading-map-name-flag">
-                                    <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${slug2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${slug2URLCase}`} />
-                                    </div>
+                <th>
+                  <div className="heading-map-name-flag">
+                    <div className="second-entity-map-pages-comparison">
+                      <Image
+                        src={`/images/${slug2URLCase}-map-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Pictorial representation of map of ${slug2URLCase}`}
+                      />
+                    </div>
 
-                                    <div className="second-entity-name-pages-comparison"> {slug2} </div>
+                    <div className="second-entity-name-pages-comparison">
+                      {' '}
+                      {slug2}{' '}
+                    </div>
 
-                                    <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2URLCase}`} />
-                                    </div>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                    <div className="second-entity-flag-pages-comparison">
+                      <Image
+                        src={`/images/${slug2URLCase}-flag-small.png`}
+                        layout="fill"
+                        objectFit="contain"
+                        alt={`Image illustrating the flag of ${slug2URLCase}`}
+                      />
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
 
-                    <tbody>
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators-health-factors all-indicators">
-                                    {isSlug1State ? 'State/National' : 'National/State'} Anthem Title (Native)
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/national-anthem-native-image.png"
-                                        fill alt="Visual representation of national anthem of any country in their native language" />
-                                </div>
-                            </td>
+            <tbody>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators-health-factors all-indicators">
+                    {isSlug1State ? 'State/National' : 'National/State'} Anthem
+                    Title (Native)
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/national-anthem-native-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Visual representation of national anthem of any country in their native language"
+                    />
+                  </div>
+                </td>
 
-                            <td
-                                className="national-anthem-native-answer-first-entity all-indicator-answers">
-                                {slug1AnthemNative ?? 'Yet to Update'}
-                            </td>
-                            <td
-                                className="national-anthem-native-answer-second-entity all-indicator-answers">
-                                {slug2AnthemNative ?? 'Yet to Update'}
-                            </td>
-                        </tr>
+                <td className="national-anthem-native-answer-first-entity all-indicator-answers">
+                  {slug1AnthemNative ?? 'Yet to Update'}
+                </td>
+                <td className="national-anthem-native-answer-second-entity all-indicator-answers">
+                  {slug2AnthemNative ?? 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators-health-factors all-indicators">
-                                    {isSlug1State ? 'State/National' : 'National/State'} Anthem Title (In English)
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/national-anthem-english-image.png"
-                                        fill alt="Visual representation of national anthem of any country in English language" />
-                                </div>
-                            </td>
-                            <td
-                                className="national-anthem-in-english-answer-first-entity all-indicator-answers">
-                                {slug1AnthemEnglish ?? 'Yet to Update'}
-                            </td>
-                            <td
-                                className="national-anthem-in-english-answer-second-entity all-indicator-answers">
-                                {slug2AnthemEnglish ?? 'Yet to Update'}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators-health-factors all-indicators">
-                                    {isSlug1State ? 'State/National' : 'National/State'} Animal
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/national-animal-image.png"
-                                        fill alt="Visual representation of national animal of any specific country" />
-                                </div>
-                            </td>
-                            <td
-                                className="national-animal-answer-first-entity all-indicator-answers">
-                                {slug1NationalAnimal ?? 'Yet to Update'}
-                            </td>
-                            <td
-                                className="national-animal-answer-second-entity all-indicator-answers">
-                                {slug2NationalAnimal ?? 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators-health-factors all-indicators">
+                    {isSlug1State ? 'State/National' : 'National/State'} Anthem
+                    Title (In English)
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/national-anthem-english-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Visual representation of national anthem of any country in English language"
+                    />
+                  </div>
+                </td>
+                <td className="national-anthem-in-english-answer-first-entity all-indicator-answers">
+                  {slug1AnthemEnglish ?? 'Yet to Update'}
+                </td>
+                <td className="national-anthem-in-english-answer-second-entity all-indicator-answers">
+                  {slug2AnthemEnglish ?? 'Yet to Update'}
+                </td>
+              </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators-health-factors all-indicators">
+                    {isSlug1State ? 'State/National' : 'National/State'} Animal
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/national-animal-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Visual representation of national animal of any specific country"
+                    />
+                  </div>
+                </td>
+                <td className="national-animal-answer-first-entity all-indicator-answers">
+                  {slug1NationalAnimal ?? 'Yet to Update'}
+                </td>
+                <td className="national-animal-answer-second-entity all-indicator-answers">
+                  {slug2NationalAnimal ?? 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators-health-factors all-indicators">
-                                    {isSlug1State ? 'State/National' : 'National/State'} Bird
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/national-bird-image.png"
-                                        fill alt="Visual representation of national bird of any specific country" />
-                                </div>
-                            </td>
-                            <td className="national-bird-answer-first-entity all-indicator-answers">
-                                {slug1NationalBird ?? 'Yet to Update'}
-                            </td>
-                            <td
-                                className="national-bird-answer-second-entity all-indicator-answers">
-                                {slug2NationalBird ?? 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators-health-factors all-indicators">
+                    {isSlug1State ? 'State/National' : 'National/State'} Bird
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/national-bird-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Visual representation of national bird of any specific country"
+                    />
+                  </div>
+                </td>
+                <td className="national-bird-answer-first-entity all-indicator-answers">
+                  {slug1NationalBird ?? 'Yet to Update'}
+                </td>
+                <td className="national-bird-answer-second-entity all-indicator-answers">
+                  {slug2NationalBird ?? 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators-health-factors all-indicators">
-                                    {isSlug1State ? 'State/National' : 'National/State'} Flower
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/national-flower-image.png"
-                                        fill alt="Visual representation of national flower of any specific country" />
-                                </div>
-                            </td>
-                            <td
-                                className="national-flower-answer-first-entity all-indicator-answers">
-                                {slug1NationalFlower ?? 'Yet to Update'}
-                            </td>
-                            <td
-                                className="national-flower-answer-second-entity all-indicator-answers">
-                                {slug2NationalFlower ?? 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators-health-factors all-indicators">
+                    {isSlug1State ? 'State/National' : 'National/State'} Flower
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/national-flower-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Visual representation of national flower of any specific country"
+                    />
+                  </div>
+                </td>
+                <td className="national-flower-answer-first-entity all-indicator-answers">
+                  {slug1NationalFlower ?? 'Yet to Update'}
+                </td>
+                <td className="national-flower-answer-second-entity all-indicator-answers">
+                  {slug2NationalFlower ?? 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators-health-factors all-indicators">
-                                    {isSlug1State ? 'State/National' : 'National/State'} Sport
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/national-sport-image.png"
-                                        fill alt="Visual representation of national sport of any specific country" />
-                                </div>
-                            </td>
-                            <td
-                                className="national-sport-answer-first-entity all-indicator-answers">
-                                {slug1NationalSport ?? 'Yet to Update'}
-                            </td>
-                            <td
-                                className="national-sport-answer-second-entity all-indicator-answers">
-                                {slug2NationalSport ?? 'Yet to Update'}
-                            </td>
-                        </tr>
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators-health-factors all-indicators">
+                    {isSlug1State ? 'State/National' : 'National/State'} Sport
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/national-sport-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Visual representation of national sport of any specific country"
+                    />
+                  </div>
+                </td>
+                <td className="national-sport-answer-first-entity all-indicator-answers">
+                  {slug1NationalSport ?? 'Yet to Update'}
+                </td>
+                <td className="national-sport-answer-second-entity all-indicator-answers">
+                  {slug2NationalSport ?? 'Yet to Update'}
+                </td>
+              </tr>
 
-                        <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators-health-factors all-indicators">
-                                    {isSlug1State ? 'State/National' : 'National/State'} Colors
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image
-                                        src="/images/national-colors-image.png"
-                                        fill alt="Visual representation of national colors of any specific country" />
-                                </div>
-                            </td>
-                            <td
-                                className="national-colors-answer-first-entity all-indicator-answers">
-                                {slug1NationalColors ?? 'Yet to Update'}
-                            </td>
-                            <td
-                                className="national-colors-answer-second-entity all-indicator-answers">
-                                {slug2NationalColors ?? 'Yet to Update'}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </>
-    )
+              <tr>
+                <td className="basic-info">
+                  <div className="all-indicators-health-factors all-indicators">
+                    {isSlug1State ? 'State/National' : 'National/State'} Colors
+                  </div>
+                  <div className="basic-information-images">
+                    <Image
+                      src="/images/national-colors-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Visual representation of national colors of any specific country"
+                    />
+                  </div>
+                </td>
+                <td className="national-colors-answer-first-entity all-indicator-answers">
+                  {slug1NationalColors ?? 'Yet to Update'}
+                </td>
+                <td className="national-colors-answer-second-entity all-indicator-answers">
+                  {slug2NationalColors ?? 'Yet to Update'}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </>
+    );
 }
 
 export default Symbols

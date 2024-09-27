@@ -39,7 +39,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                     <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
@@ -47,7 +48,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                     <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -55,13 +57,15 @@ function Clothing({ costInfo, stateLowerCase }) {
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${stateLowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${stateLowerCase}`} />
+                                        <Image src={`/images/${stateLowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${stateLowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{state}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${stateLowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${stateLowerCase}`} />
+                                        <Image src={`/images/${stateLowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${stateLowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -75,7 +79,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/pair-of-nike-running-shoes-image.png"
-                                        fill alt="Image Describing Pair of Nike Running Shoes" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Pair of Nike Running Shoes" />
                                 </div>
                             </td>
 
@@ -91,7 +96,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/mens-dress-shirt-image.png"
-                                        fill alt="Image Describing Men's Shirt" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Men's Shirt" />
                                 </div>
                             </td>
 
@@ -106,7 +112,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/women-dress-image.png"
-                                        fill alt="Image Describing Women's Shirt" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Women's Shirt" />
                                 </div>
                             </td>
 
@@ -121,7 +128,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/summer-dress-image.png"
-                                        fill alt="Image Describing Summer Dress" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Summer Dress" />
                                 </div>
                             </td>
 
@@ -136,7 +144,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/mens-suit-image.png"
-                                        fill alt="Image Describing Men's Suit" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Men's Suit" />
                                 </div>
                             </td>
 
@@ -151,7 +160,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/mens-jeans-image.png"
-                                        fill alt="Image Describing Men's Jeans" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Men's Jeans" />
                                 </div>
                             </td>
 
@@ -166,7 +176,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/women-jeans-image.png"
-                                        fill alt="Image Describing Women's Jeans" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Women's Jeans" />
                                 </div>
                             </td>
 
@@ -181,7 +192,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/mens-formal-shoes-image.png"
-                                        fill alt="Image Describing Men's formal Shoes" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Men's formal Shoes" />
                                 </div>
                             </td>
 
@@ -196,7 +208,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/women-formal-shoes-image.png"
-                                        fill alt="Image Describing Women's formal Shoes" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Women's formal Shoes" />
                                 </div>
                             </td>
 
@@ -211,7 +224,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/mens-casual-shoes-image.png"
-                                        fill alt="Image Describing Men's Casual Shoes" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Men's Casual Shoes" />
                                 </div>
                             </td>
 
@@ -226,7 +240,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/women-casual-shoes-image.png"
-                                        fill alt="Image Describing Women's Casual Shoes" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Women's Casual Shoes" />
                                 </div>
                             </td>
 
@@ -241,7 +256,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/men-underwear-image.png"
-                                        fill alt="Image Describing Underwear For Men" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Underwear For Men" />
                                 </div>
                             </td>
 
@@ -256,7 +272,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/women-underwear-image.png"
-                                        fill alt="Image Describing Underwear For Women" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Underwear For Women" />
                                 </div>
                             </td>
 
@@ -271,7 +288,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/men-socks-image.png"
-                                        fill alt="Image Describing socks For Men" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing socks For Men" />
                                 </div>
                             </td>
 
@@ -286,7 +304,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/women-socks-image.png"
-                                        fill alt="Image Describing socks For Women" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing socks For Women" />
                                 </div>
                             </td>
 
@@ -301,7 +320,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/adult-winter-coat-image.png"
-                                        fill alt="Image Describing Wintercoat for Adults" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Wintercoat for Adults" />
                                 </div>
                             </td>
 
@@ -317,7 +337,8 @@ function Clothing({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/sportswear-image.png"
-                                        fill alt="Image Describing Sportswear" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Sportswear" />
                                 </div>
                             </td>
 

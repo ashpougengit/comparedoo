@@ -3,28 +3,55 @@ import Link from 'next/link'
 
 function Footer() {
     return (
-        <footer>
-            <div className="primary-footer">
-                <div className="footer-logo">
-                    <Image src="/images/comparedoo-logo-footer.png" fill alt="Comparedoo Official Logo Footer" />
-                </div>
+      <footer>
+        <div className="primary-footer">
+          <div className="footer-logo">
+            <Image
+              src="/images/comparedoo-logo-footer.png"
+              layout="fill"
+              objectFit="contain"
+              alt="Comparedoo Official Logo Footer"
+            />
+          </div>
 
-                <div className="footer-links">
-                    <ul>
-                        <li><Link className='next-link-footer' href='/about-us'>About Us</Link></li>
-                        <li><Link className='next-link-footer' href='/contact-us'>Contact Us</Link></li>
-                        <li><Link className='next-link-footer' href='/privacy-policy'>Privacy Policy</Link></li>
-                        <li><Link className='next-link-footer' href='/terms-and-conditions'>Terms and Conditions</Link></li>
-                        <li><Link className='next-link-footer' href='/cookie-policy'>Cookie Policy</Link></li>
-                    </ul>
-                </div>
+          <div className="footer-links">
+            <ul>
+              <li>
+                <Link className="next-link-footer" href="/about-us">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link className="next-link-footer" href="/contact-us">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link className="next-link-footer" href="/privacy-policy">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link className="next-link-footer" href="/terms-and-conditions">
+                  Terms and Conditions
+                </Link>
+              </li>
+              <li>
+                <Link className="next-link-footer" href="/cookie-policy">
+                  Cookie Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-                <div className="secondary-footer">
-                    <p>&copy; Copyright | comparedoo.com - 2024 | All Rights Reserved.</p>
-                </div>
-            </div>
-        </footer>
-    )
+          <div className="secondary-footer">
+            <p>
+              &copy; Copyright | comparedoo.com - 2024 | All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    );
 }
 
 export default Footer

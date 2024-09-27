@@ -54,7 +54,3 @@ standard of living country vs country
 - fill attribute changed
 
 - ScrollToTopBottom (media query)                    ////////////////////////////
-
-- rain, cloud images
-
-- "largestCity": "Sydney (metropolitan) <br /> Melbourne (urban)"

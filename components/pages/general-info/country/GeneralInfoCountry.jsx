@@ -9,55 +9,80 @@ import Population from "./population/Population"
 import AgeDistribution from "./age-distribution/AgeDistribution"
 import Weather from "./weather/Weather"
 import Health from "./health/Health"
-import CountryBasicInfo from "./country-basic-info/CountryBasicInfo"
-import GeographicalMap from "@/components/map/GeographicalMap"
-import { convertLatLongToDecimal } from "@/lib/helper"
-import LastParagraph from "./last-paragraph/LastParagraph"
-import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import CountryBasicInfo from './country-basic-info/CountryBasicInfo';
+import { convertLatLongToDecimal } from '@/lib/helper';
+import LastParagraph from './last-paragraph/LastParagraph';
+import ComparisonLinks from '@/components/comparison-links/ComparisonLinks';
 
 function GeneralInfoCountry({ generalInfo, weatherInfo, listForLinks }) {
-    const country = generalInfo.country
-    const countryURLCase = country.toLowerCase().split(' ').join('-')
-    const capitalCity = convertLatLongToDecimal(generalInfo.latitude, generalInfo.longitude)
-    const pageType = 'comparison'
+  const country = generalInfo.country;
+  const countryURLCase = country.toLowerCase().split(' ').join('-');
+  const capitalCity = convertLatLongToDecimal(
+    generalInfo.latitude,
+    generalInfo.longitude
+  );
+  const pageType = 'comparison';
 
-    return (
-        <>
-            <ThreeTabs entity1={country} />
+  return (
+    <>
+      <ThreeTabs entity1={country} />
 
-            <GeographicalMap entity1={country} city1={capitalCity} />
+      <TopDescription country={country} />
 
-            <TopDescription country={country} />
+      <PictorialRepresentation
+        country={country}
+        countryURLCase={countryURLCase}
+      />
 
-            <PictorialRepresentation country={country} countryURLCase={countryURLCase} />
+      <CountryBasicInfo
+        generalInfo={generalInfo}
+        countryURLCase={countryURLCase}
+      />
 
-            <CountryBasicInfo generalInfo={generalInfo} countryURLCase={countryURLCase} />
+      <SizeInfo generalInfo={generalInfo} countryURLCase={countryURLCase} />
 
-            <SizeInfo generalInfo={generalInfo} countryURLCase={countryURLCase} />
+      <GeographicalFactors
+        generalInfo={generalInfo}
+        countryURLCase={countryURLCase}
+      />
 
-            <GeographicalFactors generalInfo={generalInfo} countryURLCase={countryURLCase} />
+      <NationalSymbols
+        generalInfo={generalInfo}
+        countryURLCase={countryURLCase}
+      />
 
-            <NationalSymbols generalInfo={generalInfo} countryURLCase={countryURLCase} />
+      <DateAndTime
+        generalInfo={generalInfo}
+        weatherInfo={weatherInfo}
+        countryURLCase={countryURLCase}
+      />
 
-            <DateAndTime generalInfo={generalInfo} weatherInfo={weatherInfo} countryURLCase={countryURLCase} />
+      <Population generalInfo={generalInfo} countryURLCase={countryURLCase} />
 
-            <Population generalInfo={generalInfo} countryURLCase={countryURLCase} />
+      <AgeDistribution
+        generalInfo={generalInfo}
+        countryURLCase={countryURLCase}
+      />
 
-            <AgeDistribution generalInfo={generalInfo} countryURLCase={countryURLCase} />
+      {weatherInfo && (
+        <Weather
+          weatherInfo={weatherInfo}
+          country={country}
+          countryURLCase={countryURLCase}
+        />
+      )}
 
-            {weatherInfo && <Weather weatherInfo={weatherInfo} country={country} countryURLCase={countryURLCase} />}
+      <Health generalInfo={generalInfo} countryURLCase={countryURLCase} />
 
-            <Health generalInfo={generalInfo} countryURLCase={countryURLCase} />
+      <LastParagraph country={country} />
 
-            <LastParagraph country={country} />
-
-            <ComparisonLinks
-                entity={country}
-                listForLinks={listForLinks}
-                pageType={pageType}
-            />
-        </>
-    )
+      <ComparisonLinks
+        entity={country}
+        listForLinks={listForLinks}
+        pageType={pageType}
+      />
+    </>
+  );
 }
 
 export default GeneralInfoCountry

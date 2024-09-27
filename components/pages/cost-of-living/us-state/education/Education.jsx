@@ -33,7 +33,8 @@ function Education({ costInfo, stateLowerCase }) {
                                     <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
@@ -41,7 +42,8 @@ function Education({ costInfo, stateLowerCase }) {
                                     <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
+                                           layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -49,13 +51,15 @@ function Education({ costInfo, stateLowerCase }) {
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${stateLowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${stateLowerCase}`} />
+                                        <Image src={`/images/${stateLowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${stateLowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{state}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${stateLowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${stateLowerCase}`} />
+                                        <Image src={`/images/${stateLowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${stateLowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -69,7 +73,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/pre-school-image.png"
-                                        fill alt="Image Describing PreSchool Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing PreSchool Fees" />
                                 </div>
                             </td>
 
@@ -84,7 +89,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/primary-school-fees-image.png"
-                                        fill alt="Image Describing Primary School Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Primary School Fees" />
                                 </div>
                             </td>
 
@@ -99,7 +105,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/secondary-school-fees-image.png"
-                                        fill alt="Image Describing Secondary School Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Secondary School Fees" />
                                 </div>
                             </td>
 
@@ -115,7 +122,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/private-school-fees-image.png"
-                                        fill alt="Image Describing Private School Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Private School Fees" />
                                 </div>
                             </td>
 
@@ -130,7 +138,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/university-tuition-fees-image.png"
-                                        fill alt="Image Describing University Tuition Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing University Tuition Fees" />
                                 </div>
                             </td>
 
@@ -146,7 +155,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/university-private-tuition-fees-image.png"
-                                        fill alt="Image Describing University Private Tuition Fees" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing University Private Tuition Fees" />
                                 </div>
                             </td>
 
@@ -162,7 +172,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/after-school-activities-image.png"
-                                        fill alt="Image Describing After School Activities" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing After School Activities" />
                                 </div>
                             </td>
 
@@ -178,7 +189,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/special-education-services-image.png"
-                                        fill alt="Image Describing Special Education Services" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Special Education Services" />
                                 </div>
                             </td>
 
@@ -194,7 +206,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/tutoring-image.png"
-                                        fill alt="Image Describing Tutoring" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Tutoring" />
                                 </div>
                             </td>
 
@@ -209,7 +222,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/textbooks-image.png"
-                                        fill alt="Image Describing Textbooks Cost" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing Textbooks Cost" />
                                 </div>
                             </td>
 
@@ -224,7 +238,8 @@ function Education({ costInfo, stateLowerCase }) {
                                 <div className="basic-information-images">
                                     <Image
                                         src="/images/school-supplies-image.png"
-                                        fill alt="Image Describing School Supplies" />
+                                       layout="fill"
+objectFit="contain"alt="Image Describing School Supplies" />
                                 </div>
                             </td>
 

@@ -71,16 +71,22 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
               <th>
                 <div className="heading-map-name-flag">
                   <div className="right-indicator">
-                    <Image src="/images/indicators-right-image.png"
-                      fill alt="Image representing an indicator"
+                    <Image
+                      src="/images/indicators-right-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing an indicator"
                     />
                   </div>
 
                   <div className="indicator-text">Indicators</div>
 
                   <div className="left-indicator">
-                    <Image src="/images/indicators-left-image.png"
-                      fill alt="Image illustrating an indicator"
+                    <Image
+                      src="/images/indicators-left-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image illustrating an indicator"
                     />
                   </div>
                 </div>
@@ -89,13 +95,25 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country1URLCase}`}
+                    />
                   </div>
 
-                  <div className="first-entity-name-pages-comparison">{country1}</div>
+                  <div className="first-entity-name-pages-comparison">
+                    {country1}
+                  </div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country1URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -103,13 +121,26 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country2URLCase}`}
+                    />
                   </div>
 
-                  <div className="second-entity-name-pages-comparison"> {country2} </div>
+                  <div className="second-entity-name-pages-comparison">
+                    {' '}
+                    {country2}{' '}
+                  </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country2URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -121,12 +152,15 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
               <td className="basic-info">
                 <div className="all-indicators">
                   <div className="imports-of-goods-and-services-text">
-                    Imports of Goods and Services <br /> ({lastYear})
+                    Imports of Goods and Services ({lastYear})
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/imports-of-goods-and-services-image.png"
-                    fill alt="Image representing Imports of Goods and Services"
+                  <Image
+                    src="/images/imports-of-goods-and-services-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Imports of Goods and Services"
                   />
                 </div>
               </td>
@@ -160,8 +194,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/fuel-imports-image.png"
-                    fill alt="Image representing Total Fuel Imports"
+                  <Image
+                    src="/images/fuel-imports-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Total Fuel Imports"
                   />
                 </div>
               </td>
@@ -194,8 +231,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/cost-to-import-border-compliance-image.png"
-                    fill alt="Image representing Cost to Import Border Compliance"
+                  <Image
+                    src="/images/cost-to-import-border-compliance-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Cost to Import Border Compliance"
                   />
                 </div>
               </td>
@@ -229,8 +269,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/time-to-import-border-compliance-image.png"
-                    fill alt="Image representing Time to Import Border Compliance"
+                  <Image
+                    src="/images/time-to-import-border-compliance-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Time to Import Border Compliance"
                   />
                 </div>
               </td>
@@ -240,10 +283,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country1TimeToImportBorderComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${country1TimeToImportBorderComplianceHours > 1
-                        ? 'Hours'
-                        : 'Hour'
-                        }`}
+                      {`${
+                        country1TimeToImportBorderComplianceHours > 1
+                          ? 'Hours'
+                          : 'Hour'
+                      }`}
                     </span>
                   </>
                 ) : (
@@ -256,10 +300,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country2TimeToImportBorderComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${country2TimeToImportBorderComplianceHours > 1
-                        ? 'Hours'
-                        : 'Hour'
-                        }`}
+                      {`${
+                        country2TimeToImportBorderComplianceHours > 1
+                          ? 'Hours'
+                          : 'Hour'
+                      }`}
                     </span>
                   </>
                 ) : (
@@ -276,8 +321,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/cost-to-import-documentary-compliance-image.png"
-                    fill alt="Image representing Cost to Import documentary Compliance"
+                  <Image
+                    src="/images/cost-to-import-documentary-compliance-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Cost to Import documentary Compliance"
                   />
                 </div>
               </td>
@@ -315,8 +363,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/time-to-import-documentary-compliance-image.png"
-                    fill alt="Image representing Time to Import Documentary Compliance"
+                  <Image
+                    src="/images/time-to-import-documentary-compliance-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Time to Import Documentary Compliance"
                   />
                 </div>
               </td>
@@ -326,10 +377,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country1TimeToImportDocumentryComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${country1TimeToImportDocumentryComplianceHours > 1
-                        ? 'Hours'
-                        : 'Hour'
-                        }`}
+                      {`${
+                        country1TimeToImportDocumentryComplianceHours > 1
+                          ? 'Hours'
+                          : 'Hour'
+                      }`}
                     </span>
                   </>
                 ) : (
@@ -342,10 +394,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country2TimeToImportDocumentryComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${country2TimeToImportDocumentryComplianceHours > 1
-                        ? 'Hours'
-                        : 'Hour'
-                        }`}
+                      {`${
+                        country2TimeToImportDocumentryComplianceHours > 1
+                          ? 'Hours'
+                          : 'Hour'
+                      }`}
                     </span>
                   </>
                 ) : (
@@ -364,32 +417,49 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
               <th>
                 <div className="heading-map-name-flag">
                   <div className="right-indicator">
-                    <Image src="/images/indicators-right-image.png"
-                      fill alt="Image representing an indicator"
+                    <Image
+                      src="/images/indicators-right-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing an indicator"
                     />
                   </div>
 
                   <div className="indicator-text">Indicators</div>
 
                   <div className="left-indicator">
-                    <Image src="/images/indicators-left-image.png"
-                      fill alt="Image illustrating an indicator"
+                    <Image
+                      src="/images/indicators-left-image.png"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image illustrating an indicator"
                     />
                   </div>
                 </div>
               </th>
 
-
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country1URLCase}`}
+                    />
                   </div>
 
-                  <div className="first-entity-name-pages-comparison">{country1}</div>
+                  <div className="first-entity-name-pages-comparison">
+                    {country1}
+                  </div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${country1URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1URLCase}`} />
+                    <Image
+                      src={`/images/${country1URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country1URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -397,13 +467,26 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
               <th>
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${country2URLCase}`}
+                    />
                   </div>
 
-                  <div className="second-entity-name-pages-comparison"> {country2} </div>
+                  <div className="second-entity-name-pages-comparison">
+                    {' '}
+                    {country2}{' '}
+                  </div>
 
                   <div className="second-entity-flag-pages-comparison">
-                    <Image src={`/images/${country2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2URLCase}`} />
+                    <Image
+                      src={`/images/${country2URLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${country2URLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -419,8 +502,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/exports-of-goods-and-services-image.png"
-                    fill alt="Image representing Exports of Goods and Services"
+                  <Image
+                    src="/images/exports-of-goods-and-services-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Exports of Goods and Services"
                   />
                 </div>
               </td>
@@ -454,8 +540,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/fuel-exports-image.png"
-                    fill alt="Image representing Total Fuel Exports"
+                  <Image
+                    src="/images/fuel-exports-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Total Fuel Exports"
                   />
                 </div>
               </td>
@@ -488,8 +577,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/cost-to-export-border-compliance-image.png"
-                    fill alt="Image representing Cost to Export Border Compliance"
+                  <Image
+                    src="/images/cost-to-export-border-compliance-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Cost to Export Border Compliance"
                   />
                 </div>
               </td>
@@ -523,8 +615,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/time-to-export-border-compliance-image.png"
-                    fill alt="Image representing Time to Export Border Compliance"
+                  <Image
+                    src="/images/time-to-export-border-compliance-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Time to Export Border Compliance"
                   />
                 </div>
               </td>
@@ -534,10 +629,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country1TimeToExportBorderComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${country1TimeToExportBorderComplianceHours > 1
-                        ? 'Hours'
-                        : 'Hour'
-                        }`}
+                      {`${
+                        country1TimeToExportBorderComplianceHours > 1
+                          ? 'Hours'
+                          : 'Hour'
+                      }`}
                     </span>
                   </>
                 ) : (
@@ -550,10 +646,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country2TimeToExportBorderComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${country2TimeToExportBorderComplianceHours > 1
-                        ? 'Hours'
-                        : 'Hour'
-                        }`}
+                      {`${
+                        country2TimeToExportBorderComplianceHours > 1
+                          ? 'Hours'
+                          : 'Hour'
+                      }`}
                     </span>
                   </>
                 ) : (
@@ -570,8 +667,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/cost-to-export-documentary-compliance-image.png"
-                    fill alt="Image representing Cost to Export documentary Compliance"
+                  <Image
+                    src="/images/cost-to-export-documentary-compliance-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Cost to Export documentary Compliance"
                   />
                 </div>
               </td>
@@ -609,8 +709,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   </div>
                 </div>
                 <div className="basic-information-images">
-                  <Image src="/images/time-to-export-documentary-compliance-image.png"
-                    fill alt="Image representing Time to Export Documentary Compliance"
+                  <Image
+                    src="/images/time-to-export-documentary-compliance-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Image representing Time to Export Documentary Compliance"
                   />
                 </div>
               </td>
@@ -620,10 +723,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country1TimeToExportDocumentryComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${country1TimeToExportDocumentryComplianceHours > 1
-                        ? 'Hours'
-                        : 'Hour'
-                        }`}
+                      {`${
+                        country1TimeToExportDocumentryComplianceHours > 1
+                          ? 'Hours'
+                          : 'Hour'
+                      }`}
                     </span>
                   </>
                 ) : (
@@ -636,10 +740,11 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country2TimeToExportDocumentryComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${country2TimeToExportDocumentryComplianceHours > 1
-                        ? 'Hours'
-                        : 'Hour'
-                        }`}
+                      {`${
+                        country2TimeToExportDocumentryComplianceHours > 1
+                          ? 'Hours'
+                          : 'Hour'
+                      }`}
                     </span>
                   </>
                 ) : (

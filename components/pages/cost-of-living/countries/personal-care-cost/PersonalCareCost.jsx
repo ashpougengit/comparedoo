@@ -46,13 +46,15 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" fill alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"layout="fill"
+objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" fill alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png"layout="fill"
+objectFit="contain"alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -60,13 +62,15 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country1LowerCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country1LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -74,13 +78,15 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-map-small.png`} fill alt={`Pictorial representation of map of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2LowerCase}-map-small.png`}layout="fill"
+objectFit="contain"alt={`Pictorial representation of map of ${country2LowerCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {country2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2LowerCase}-flag-small.png`}layout="fill"
+objectFit="contain"alt={`Image illustrating the flag of ${country2LowerCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -93,7 +99,8 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <td className="basic-info">
                                 <div className="all-indicators">Cosmetic Procedures</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/cosmetic-procedures-image.png" fill alt="Image Describing Cosmetic Procedures" />
+                                    <Image src="/images/cosmetic-procedures-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Cosmetic Procedures" />
                                 </div>
                             </td>
 
@@ -110,7 +117,8 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <td className="basic-info">
                                 <div className="all-indicators">Spa Treatment</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/spa-treatment-cost-image.png" fill alt="Image Describing Spa Treatment" />
+                                    <Image src="/images/spa-treatment-cost-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Spa Treatment" />
                                 </div>
                             </td>
 
@@ -127,7 +135,8 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <td className="basic-info">
                                 <div className="all-indicators">Manicure Pedicure Cost</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/manicure-pedicure-cost-image.png" fill alt="Image Describing Manicure Pedicure Cost" />
+                                    <Image src="/images/manicure-pedicure-cost-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Manicure Pedicure Cost" />
                                 </div>
                             </td>
 
@@ -145,7 +154,8 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <td className="basic-info">
                                 <div className="all-indicators">Optical Glasses Cost</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/optical-glasses-image.png" fill alt="Image Describing Optical Glasses Cost" />
+                                    <Image src="/images/optical-glasses-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Optical Glasses Cost" />
                                 </div>
                             </td>
 
@@ -161,7 +171,8 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <td className="basic-info">
                                 <div className="all-indicators">Contact Lenses Cost</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/contact-lenses-image.png" fill alt="Image Describing Contact Lenses Cost" />
+                                    <Image src="/images/contact-lenses-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Contact Lenses Cost" />
                                 </div>
                             </td>
 
@@ -177,7 +188,8 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <td className="basic-info">
                                 <div className="all-indicators">Haircuts</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/haircuts-price-image.png" fill alt="Image Describing Hair Cuts" />
+                                    <Image src="/images/haircuts-price-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Hair Cuts" />
                                 </div>
                             </td>
 
@@ -194,7 +206,8 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <td className="basic-info">
                                 <div className="all-indicators">Hair Coloring</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/hair-coloring-price-image.png" fill alt="Image Describing Hair Coloring" />
+                                    <Image src="/images/hair-coloring-price-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Hair Coloring" />
                                 </div>
                             </td>
 
@@ -210,7 +223,8 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <td className="basic-info">
                                 <div className="all-indicators">Shampoo Price</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/shampoo-price-image.png" fill alt="Image Describing Shampoo Price" />
+                                    <Image src="/images/shampoo-price-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Shampoo Price" />
                                 </div>
                             </td>
 
@@ -226,7 +240,8 @@ function PersonalCareCost({ country1CostInfo, country2CostInfo, country1Currency
                             <td className="basic-info">
                                 <div className="all-indicators">Toothpaste Price</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/toothpaste-price-image.png" fill alt="Image Describing Toothpaste Price" />
+                                    <Image src="/images/toothpaste-price-image.png"layout="fill"
+objectFit="contain"alt="Image Describing Toothpaste Price" />
                                 </div>
                             </td>
 

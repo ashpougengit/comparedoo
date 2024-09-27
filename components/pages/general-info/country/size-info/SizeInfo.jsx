@@ -22,7 +22,9 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      fill alt="Image representing an indicator"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image representing an indicator"
                     />
                   </div>
 
@@ -31,7 +33,9 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      fill alt="Image illustrating an indicator"
+                      layout="fill"
+                      objectFit="contain"
+                      alt="Image illustrating an indicator"
                     />
                   </div>
                 </div>
@@ -40,13 +44,25 @@ function SizeInfo({ generalInfo, countryURLCase }) {
               <th>
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
-                    <Image src={`/images/${countryURLCase}-map-small.png`} fill alt={`Pictorial representation of map of ${countryURLCase}`} />
+                    <Image
+                      src={`/images/${countryURLCase}-map-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Pictorial representation of map of ${countryURLCase}`}
+                    />
                   </div>
 
-                  <div className="first-entity-name-pages-comparison">{country}</div>
+                  <div className="first-entity-name-pages-comparison">
+                    {country}
+                  </div>
 
                   <div className="first-entity-flag-pages-comparison">
-                    <Image src={`/images/${countryURLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${countryURLCase}`} />
+                    <Image
+                      src={`/images/${countryURLCase}-flag-small.png`}
+                      layout="fill"
+                      objectFit="contain"
+                      alt={`Image illustrating the flag of ${countryURLCase}`}
+                    />
                   </div>
                 </div>
               </th>
@@ -60,7 +76,9 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/square-km-image.png"
-                    fill alt="Illustration of area in Square Kilometers"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Illustration of area in Square Kilometers"
                   />
                 </div>
               </td>
@@ -69,7 +87,9 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                   <>
                     {areaInSqKm} <span>Sq km</span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
             </tr>
 
@@ -83,7 +103,9 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/square-mile-image.png"
-                    fill alt="Illustration of area in Square Mile"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Illustration of area in Square Mile"
                   />
                 </div>
               </td>
@@ -92,7 +114,9 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                   <>
                     {areaInSqMile} <span>Sq Mile</span>
                   </>
-                ) : 'Yet to Update'}
+                ) : (
+                  'Yet to Update'
+                )}
               </td>
             </tr>
 
@@ -106,7 +130,9 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/water-percentage-image.png"
-                    fill alt="Illustration of water percentage area of any country in the world"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Illustration of water percentage area of any country in the world"
                   />
                 </div>
               </td>
