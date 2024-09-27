@@ -12,7 +12,7 @@ function MapAndDescriptionAntartica() {
 
 
                 <div className="continent-map">
-                    <img src="/map-of-africa.png" alt="Map of Africa and outline showing for all countries in Africa" />
+                    <img src="/images/map-of-antarctica-big.png" alt="Map of Antartica" />
                 </div>
                 <table className="continent-table">
 

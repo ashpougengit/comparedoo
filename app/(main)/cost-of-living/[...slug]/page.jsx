@@ -94,7 +94,7 @@ async function CostComparison({ params }) {
 
     return (
       <>
-        <SearchBox slug1={slug[0]} slug2={slug[1]} />
+        <SearchBox slug1={entity1} slug2={entity2} />
         <AdsHeaderBanner />
         <PageTitle entity1={entity1} entity2={entity2} />
         <PublishInfo formattedDate={formattedDate} />

@@ -22,7 +22,7 @@
 
 - Schema Markup                                 ////////////////////////////
 
-- rain and cloud put image in the answe
+- rain and cloud put image in the answe               +++++++++++++**************
 
 - 172
 
@@ -54,3 +54,7 @@ standard of living country vs country
 - fill attribute changed
 
 - ScrollToTopBottom (media query)                    ////////////////////////////
+
+- <div className="continent-map">
+                    <img src="/images/map-of-antartica-big.png" alt="Map of Antartica" />
+                </div>
