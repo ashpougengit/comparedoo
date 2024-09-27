@@ -363,7 +363,7 @@ async function KnowledgeBase({ params }) {
                     <Image
                       src={`/images/${toURLFormat(
                         value
-                      )}-image-for-knowledgebase.png`}
+                      )}-image.png`}
                       fill
                       alt={`Image representing the ${camelToTitleCase(
                         value
@@ -379,7 +379,7 @@ async function KnowledgeBase({ params }) {
                     <Image
                       src={`/images/${toURLFormat(
                         value
-                      )}-image-for-knowledgebase.png`}
+                      )}-image.png`}
                       fill
                       alt={`Image representing the ${camelToTitleCase(
                         value

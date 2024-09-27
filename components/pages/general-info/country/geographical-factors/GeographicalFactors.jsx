@@ -38,8 +38,8 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png"layout="fill"
-objectFit="contain"alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png" layout="fill"
+                                            objectFit="contain" alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">
@@ -47,8 +47,8 @@ objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png"layout="fill"
-objectFit="contain"alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png" layout="fill"
+                                            objectFit="contain" alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -56,15 +56,15 @@ objectFit="contain"alt="Image illustrating an indicator" />
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${countryURLCase}-map-small.png`}layout="fill"
-objectFit="contain"alt={`Pictorial representation of map of ${countryURLCase}`} />
+                                        <Image src={`/images/${countryURLCase}-map-small.png`} layout="fill"
+                                            objectFit="contain" alt={`Pictorial representation of map of ${countryURLCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${countryURLCase}-flag-small.png`}layout="fill"
-objectFit="contain"alt={`Image illustrating the flag of ${countryURLCase}`} />
+                                        <Image src={`/images/${countryURLCase}-flag-small.png`} layout="fill"
+                                            objectFit="contain" alt={`Image illustrating the flag of ${countryURLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -80,8 +80,8 @@ objectFit="contain"alt={`Image illustrating the flag of ${countryURLCase}`} />
                                     Largest City
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/largest-city-image.png"layout="fill"
-objectFit="contain"alt="Visual representation of the Largest City of any country" />
+                                    <Image src="/images/largest-city-image.png" layout="fill"
+                                        objectFit="contain" alt="Visual representation of the Largest City of any country" />
                                 </div>
                             </td>
                             <td className="largest-city-answer-first-entity all-indicator-answers">{largestCity ?? 'Yet to Update'}</td>
@@ -95,8 +95,8 @@ objectFit="contain"alt="Visual representation of the Largest City of any country
                                     Demonyms
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/demonyms-image.png"layout="fill"
-objectFit="contain"alt="Image depicting demonyms of any specific country" />
+                                    <Image src="/images/demonyms-image.png" layout="fill"
+                                        objectFit="contain" alt="Image depicting demonyms of any specific country" />
                                 </div>
                             </td>
                             <td className="demonyms-answer-first-entity all-indicator-answers">{demonyms ?? 'Yet to Update'}</td>
@@ -114,8 +114,8 @@ objectFit="contain"alt="Image depicting demonyms of any specific country" />
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/official-language-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Image depicting the official languages of any specific country" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Image depicting the official languages of any specific country" />
                                 </div>
                             </td>
                             <td className="official-languages-answer-first-entity all-indicator-answers">{officialLanguages ?? 'Yet to Update'}</td>
@@ -128,8 +128,8 @@ objectFit="contain"alt="Image depicting the official languages of any specific c
                                     Government Status
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/government-status-image.png"layout="fill"
-objectFit="contain"alt="Image indicating the government status of any country" />
+                                    <Image src="/images/government-status-image.png" layout="fill"
+                                        objectFit="contain" alt="Image indicating the government status of any country" />
                                 </div>
                             </td>
                             <td className="government-status-answer-first-entity all-indicator-answers">{governmentStatus ?? 'Yet to Update'}</td>
@@ -142,8 +142,8 @@ objectFit="contain"alt="Image indicating the government status of any country" /
                                     Major Religion
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/major-religion-image.png"layout="fill"
-objectFit="contain"alt="Image indicating the major religion of any country" />
+                                    <Image src="/images/major-religion-image.png" layout="fill"
+                                        objectFit="contain" alt="Image indicating the major religion of any country" />
                                 </div>
                             </td>
                             <td className="major-religion-answer-first-entity all-indicator-answers">{majorReligion ?? 'Yet to Update'}</td>
@@ -157,8 +157,8 @@ objectFit="contain"alt="Image indicating the major religion of any country" />
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/major-religion-percentage-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Image indicating the major religion percentage of any country" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Image indicating the major religion percentage of any country" />
                                 </div>
                             </td>
                             <td className="major-religion-percentage-answer-first-entity all-indicator-answers">{majorReligionPercentage ? `${majorReligionPercentage} %` : 'Yet to Update'}</td>
@@ -203,8 +203,8 @@ objectFit="contain"alt="Image indicating the major religion percentage of any co
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png"layout="fill"
-objectFit="contain"alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png" layout="fill"
+                                            objectFit="contain" alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">
@@ -212,8 +212,8 @@ objectFit="contain"alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png"layout="fill"
-objectFit="contain"alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png" layout="fill"
+                                            objectFit="contain" alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -221,15 +221,15 @@ objectFit="contain"alt="Image illustrating an indicator" />
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${countryURLCase}-map-small.png`}layout="fill"
-objectFit="contain"alt={`Pictorial representation of map of ${countryURLCase}`} />
+                                        <Image src={`/images/${countryURLCase}-map-small.png`} layout="fill"
+                                            objectFit="contain" alt={`Pictorial representation of map of ${countryURLCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${countryURLCase}-flag-small.png`}layout="fill"
-objectFit="contain"alt={`Image illustrating the flag of ${countryURLCase}`} />
+                                        <Image src={`/images/${countryURLCase}-flag-small.png`} layout="fill"
+                                            objectFit="contain" alt={`Image illustrating the flag of ${countryURLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -246,8 +246,8 @@ objectFit="contain"alt={`Image illustrating the flag of ${countryURLCase}`} />
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/currency-name-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Visual representation of currency name of any specific country" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Visual representation of currency name of any specific country" />
                                 </div>
                             </td>
                             <td className="currency-name-answer-first-entity all-indicator-answers">{currencyName ?? 'Yet to Update'}</td>
@@ -261,8 +261,8 @@ objectFit="contain"alt="Visual representation of currency name of any specific c
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/currency-symbol-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Visual representation of currency symbol of any specific country" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Visual representation of currency symbol of any specific country" />
                                 </div>
                             </td>
                             <td className="currency-symbol-answer-first-entity all-indicator-answers">{currencySymbol ?? 'Yet to Update'}</td>
@@ -277,8 +277,8 @@ objectFit="contain"alt="Visual representation of currency symbol of any specific
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/driving-side-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Visual representation of driving side of any specific country" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Visual representation of driving side of any specific country" />
                                 </div>
                             </td>
                             <td className="driving-side-answer-first-entity all-indicator-answers">{drivingSide ?? 'Yet to Update'}</td>
@@ -291,8 +291,8 @@ objectFit="contain"alt="Visual representation of driving side of any specific co
                                     Calling Code
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/calling-code-image.png"layout="fill"
-objectFit="contain"alt="Image depicting calling code of any specific country" />
+                                    <Image src="/images/calling-code-image.png" layout="fill"
+                                        objectFit="contain" alt="Image depicting calling code of any specific country" />
                                 </div>
                             </td>
                             <td className="calling-code-answer-first-entity all-indicator-answers">{callingCode ?? 'Yet to Update'}</td>
@@ -306,8 +306,8 @@ objectFit="contain"alt="Image depicting calling code of any specific country" />
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/internet-tld-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Image depicting Internet Top Level Domain also called tld of any specific country" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Image depicting Internet Top Level Domain also called tld of any specific country" />
                                 </div>
                             </td>
                             <td className="internet-tld-answer-first-entity all-indicator-answers">{internetTLD ?? 'Yet to Update'}</td>
@@ -321,8 +321,8 @@ objectFit="contain"alt="Image depicting Internet Top Level Domain also called tl
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/start-of-week-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Image showing the first working day of week of any specific country" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Image showing the first working day of week of any specific country" />
                                 </div>
                             </td>
                             <td className="week-start-answer-first-entity all-indicator-answers">{startOfWeek ?? 'Yet to Update'}</td>
@@ -335,8 +335,8 @@ objectFit="contain"alt="Image showing the first working day of week of any speci
                                     ISO 3166 Code
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/iso-code-image.png"layout="fill"
-objectFit="contain"alt="Image depicting ISO 3166 Code of any specific country" />
+                                    <Image src="/images/iso-3166-code-image.png" layout="fill"
+                                        objectFit="contain" alt="Image depicting ISO 3166 Code of any specific country" />
                                 </div>
                             </td>
                             <td className="iso-code-answer-first-entity all-indicator-answers">{ISO3166Code ?? 'Yet to Update'}</td>

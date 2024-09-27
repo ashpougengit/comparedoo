@@ -4,6 +4,7 @@ import Footer from '@/components/footer/Footer';
 import './globals.css'
 import ScrollProgressBar from '@/components/scroll-progress-bar/ScrollProgressBar';
 import ScrollToTopBottom from '@/components/scroll-to-top-bottom/ScrollToTopBottom';
+import NetworkStatus from '@/components/network-status/NetworkStatus';
 
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
@@ -34,14 +35,17 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/images/favicon-image-comparedoo.png" />
+        <link rel="icon" href="/images/favicon-image-comparedoo.png" type="image/png" />
       </head>
 
       <body className={nunitoSans.className}>
 
         <ScrollProgressBar />
 
+        <NetworkStatus />
+        
         <Header />
+
 
         {children}
 

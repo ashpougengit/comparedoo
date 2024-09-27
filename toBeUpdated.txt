@@ -64,3 +64,5 @@ standard of living country vs country
 - favicon                                             +++++++++++++**************
 
 - meta title and description for error and not found pages(redirect)
+
+- internet error
