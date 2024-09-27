@@ -1,3 +1,4 @@
+import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
 import { lastYear } from "@/lib/date-and-time/dateAndTime"
 import Image from "next/image"
 
@@ -41,6 +42,8 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
 
   return (
     <>
+     <AdsHeaderBanner />
+
       <div className="health-factors">
         <h2 className="pages-h2">Health Factors Comparison</h2>
       </div>
@@ -300,14 +303,7 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
         </table>
       </div>
 
-      <div className="in-content-banner-ads all-ads-formats">
-        <Image
-          src="/images/header-top-banner-ads.png"
-          layout="fill"
-          objectFit="contain"
-          alt=""
-        />
-      </div>
+     <AdsHeaderBanner />
 
       {/* <!-- ......... Health Factors second table Here  ......... --> */}
 
@@ -775,14 +771,7 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
         </div>
       </div>
 
-      <div className="in-content-banner-ads all-ads-formats">
-        <Image
-          src="/images/header-top-banner-ads.png"
-          layout="fill"
-          objectFit="contain"
-          alt=""
-        />
-      </div>
+      <AdsHeaderBanner />
 
       {/* <!-- .......... Health Factors third table Here  ........... --> */}
 

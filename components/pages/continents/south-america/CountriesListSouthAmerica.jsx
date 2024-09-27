@@ -1,3 +1,4 @@
+import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner';
 import { southAmericaCountries } from '@/lib/array-list/allCountriesList'
 import { toURLFormat } from '@/lib/format/format'
 import Image from 'next/image'
@@ -6,6 +7,8 @@ import Link from 'next/link'
 function CountriesListSouthAmerica() {
     return (
       <>
+       <AdsHeaderBanner />
+
         <div className="countries-list-continents-pages">
           <h2 className="pages-h2">Countries List</h2>
         </div>

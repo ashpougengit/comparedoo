@@ -1,4 +1,3 @@
-import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner'
 import Image from 'next/image'
 
 function MapAndDescriptionEurope() {
@@ -107,8 +106,6 @@ function MapAndDescriptionEurope() {
             </tbody>
           </table>
         </div>
-
-        <AdsHeaderBanner />
       </>
     );
 }

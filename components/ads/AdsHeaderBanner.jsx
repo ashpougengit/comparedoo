@@ -8,7 +8,7 @@ function AdsHeaderBanner() {
             src="/images/header-top-banner-ads.png"
             layout="fill"
             objectFit="contain"
-            alt=""
+            alt="Header top banner ads"
           />
         </div>
       </>

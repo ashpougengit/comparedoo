@@ -3,6 +3,8 @@ import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner'
 function InterestingFactsAntartica() {
     return (
         <>
+         <AdsHeaderBanner />
+
             <div className="countries-list-continents-pages">
                 <h2 className="pages-h2">Interesting Facts about Antarctica</h2>
             </div>

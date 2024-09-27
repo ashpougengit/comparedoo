@@ -107,10 +107,6 @@ function MapAndDescriptionSouthAmerica() {
             </tbody>
           </table>
         </div>
-
-        <div className="in-content-banner-ads all-ads-formats">
-          <img src="header-top-banner-ads.png" alt="" />
-        </div>
       </>
     );
 }

@@ -1,3 +1,4 @@
+import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
 import { lastYear } from "@/lib/date-and-time/dateAndTime"
 import { formatNumberWithCommas } from "@/lib/format/format"
 import Image from "next/image"
@@ -138,14 +139,10 @@ function EconomicFactors({ standardInfo, stateURLCase }) {
             </tbody>
           </table>
         </div>
-        <div className="in-content-banner-ads all-ads-formats">
-          <Image
-            src="/images/header-top-banner-ads.png"
-            layout="fill"
-            objectFit="contain"
-            alt=""
-          />
-        </div>
+        
+        <AdsHeaderBanner />
+
+        
         <div className="paragraph-for-pages-below-table">
           <div className="para-for-pages-single-div">
             <p>

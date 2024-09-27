@@ -79,8 +79,6 @@ function MapAndDescriptionAntartica() {
                 </table>
 
             </div>
-
-            <AdsHeaderBanner />
         </>
     )
 }
