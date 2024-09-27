@@ -16,6 +16,7 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
         value1 = slug1;
         value2 = slug2;
     }
+    
     const router = useRouter();
 
     const [input1, setInput1] = useState(userCountry ? userCountry : titleCased(slug1));

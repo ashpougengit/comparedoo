@@ -44,7 +44,7 @@ async function GeneralComparison({ params }) {
     } catch (error) {
         return <p>Error: {error.message}</p>;
     }
-
+    
     const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
 
     if (!allEntities.includes(titleCased(decodedSlug2))) {

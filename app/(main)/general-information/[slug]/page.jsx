@@ -45,6 +45,7 @@ async function GeneralInfoPage({ params }) {
         return <p>Error: {error.message}</p>;
     }
     const entity1 = titleCased(decodedSlug1);
+    
     const isSlug1Country = allCountries.includes(entity1);
     try {
         const [generalInfo] = await Promise.all([
