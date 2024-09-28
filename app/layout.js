@@ -39,13 +39,12 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={nunitoSans.className}>
-
+        
         <ScrollProgressBar />
 
         <NetworkStatus />
         
         <Header />
-
 
         {children}
 
