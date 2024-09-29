@@ -4,12 +4,12 @@ function MenuBar() {
     return (
         <div className="hamburger-menu">
             <hr className="divider" />
-            <ul className="content-list">
-                <li><a href={'/oceania'}>Oceania</a></li>
-                <li><a href={'/africa'}>Africa</a></li>
-                <li><a href={'/knowledgebase'}>Knowledgebase</a></li>
-                <li><a href={'/asia'}>Asia</a></li>
-                <li><a href={'/south-america'}>South America</a></li>
+            <ul className="menu-items">
+                <li><Link href={'/oceania'} className="next-link-header">Oceania</Link></li>
+                <li><Link href={'/africa'} className="next-link-header">Africa</Link></li>
+                <li><Link href={'/knowledgebase'} className="next-link-header">Knowledgebase</Link></li>
+                <li><Link href={'/asia'} className="next-link-header">Asia</Link></li>
+                <li><Link href={'/south-america'} className="next-link-header">South America</Link></li>
             </ul>
         </div>
     );

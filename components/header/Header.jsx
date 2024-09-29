@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
-import HamburgerIcon from '../hamburger-icon/HamburgerIcon';
 import Image from 'next/image';
+import HamburgerIcon from '../hamburger-icon/HamburgerIcon';
 
 function Header() {
 
@@ -63,9 +63,10 @@ function Header() {
               </li>
             </ul>
           </div>
+          
+          <HamburgerIcon />
         </div>
 
-        <HamburgerIcon />
       </div>
     </header>
   );

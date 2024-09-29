@@ -17,16 +17,26 @@ const HamburgerIcon = () => {
         {isOpen ? (
           <>
             <Link href="/">
-              <Image layout="fill" objectFit="contain" src="/images/close" />
+              <Image
+                // layout="fill"
+                objectFit="contain"
+                src="/images/close.png"
+                alt='Close menu bar'
+                width='25'
+                height='25'
+              />
             </Link>
           </>
         ) : (
           <>
             <Link href="/menu-bar">
               <Image
-                layout="fill"
+                // layout="fill"
                 objectFit="contain"
-                src="/images/menu-icon"
+                src="/images/menu-icon.png"
+                alt='Open menu bar'
+                width='25'
+                height='25'
               />
             </Link>
           </>

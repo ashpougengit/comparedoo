@@ -2,17 +2,15 @@
 
 - .toFixed returns 0.0
 
-***** .env.local                              +++++++++++++**************
-
 - h1: Geographical factors (absent in single state general info page )
 
 - href="/contact-us"                          ////////////////////////////
 
 - hamburger menu                              ////////////////////////////
 
-- search box
+- <Image />  layout="fill" objectFit="contain" +++++++++++++**************
 
-- <Image />(search box and header img tag not changed)+++++++++++++**************
+- manual height width in hamburger icons
 
 - Taxes on Exports(India)(Standard) is Yet to Update coz it is 0.00493119659888326
 

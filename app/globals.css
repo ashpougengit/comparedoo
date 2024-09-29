@@ -72,7 +72,9 @@ body {
 }
 
 .hamburger-icon {
-  display: none;
+  /* display: none; */
+  height: 1rem;
+  width: 0rem;
 }
 
 .nav-menus ul li {
@@ -103,7 +105,7 @@ body {
   transition: all 0.3s;
 }
 
-.nav-items-after-dropdown > *{
+.nav-items-after-dropdown > * {
   display: block;
   padding: 0.5rem 0;
 }
@@ -124,7 +126,7 @@ body {
   padding-top: 1rem;
 }
 
-.nav-items-after-dropdown ul li{
+.nav-items-after-dropdown ul li {
   margin: 0;
 }
 
@@ -775,22 +777,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-
-.hamburger-icon {
-  display: none;
-}
-
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
 
 /* ................................................. Pages.html code starts here ................... */
 /* ................................................. Pages.html code starts here ................... */
@@ -1868,6 +1854,19 @@ td.four-rem-height-td {
 
 .nav-menus.open {
   display: flex;
+}
+
+.hamburger-menu {
+  padding: 3rem 2rem;
+}
+
+.divider {
+  border-top: 0.3rem solid #000;
+}
+
+.menu-items{
+  list-style-type: none;
+  padding-top: 1rem;
 }
 
 /* Turn the hamburger lines into an "X" */
