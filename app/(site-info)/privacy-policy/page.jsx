@@ -1,5 +1,6 @@
 import PrivacyPolicyContent from '@/components/pages/site-info/privacy-policy/PrivacyPolicyContent'
 import SearchBox from '@/components/search-box/SearchBox'
+import { getCountryByIP } from '@/lib/array-list/allCountriesList'
 import { getFormattedDate } from '@/lib/date-and-time/dateAndTime'
 
 // generateMetadata function
@@ -13,12 +14,13 @@ export async function generateMetadata() {
     };
 }
 
-function PrivacyPolicy() {
+async function PrivacyPolicy() {
     const formattedDate = getFormattedDate()
+    const userCountry = await getCountryByIP()
 
     return (
         <>
-            <SearchBox />
+            <SearchBox userCountry={userCountry} />
 
             <div className="meta-title-primary-heading">
                 <h1>

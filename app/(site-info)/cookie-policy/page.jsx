@@ -1,5 +1,6 @@
 import CookiePolicyContent from '@/components/pages/site-info/cookie-policy/CookiePolicyContent'
 import SearchBox from '@/components/search-box/SearchBox'
+import { getCountryByIP } from '@/lib/array-list/allCountriesList'
 import { getFormattedDate } from '@/lib/date-and-time/dateAndTime'
 
 // generateMetadata function
@@ -13,11 +14,13 @@ export async function generateMetadata() {
     };
 }
 
-function CookiePolicy() {
+async function CookiePolicy() {
     const formattedDate = getFormattedDate()
+    const userCountry = await getCountryByIP()
+
     return (
         <>
-            <SearchBox />
+            <SearchBox userCountry={userCountry} />
 
             <div className="meta-title-primary-heading">
                 <h1>

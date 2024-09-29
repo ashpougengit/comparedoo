@@ -4,7 +4,7 @@
 
 - h1: Geographical factors (absent in single state general info page )
 
-- href="/contact-us"                          ////////////////////////////
+- href="/contact-us" (also meta data)                         ////////////////////////////
 
 - hamburger menu                              ////////////////////////////
 
