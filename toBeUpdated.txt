@@ -27,10 +27,6 @@
 - 18,000 QAR
 4,860 USD(bracket missing, cost)
 
-- http://localhost:3000/cost-of-living/qatar/cyprus
-  - Special Education Services(Yet to Update
-0 USD)
-
 Gross Domestic Product (GDP)
 (2023)
 standard of living country vs country
@@ -48,8 +44,6 @@ standard of living country vs country
 - check all country names                             +++++++++++++**************
 
 - Threetabs sticky on back scroll                    ............................
-
-- fill attribute changed
 
 - ScrollToTopBottom (media query)                    ////////////////////////////
 
