@@ -13,7 +13,7 @@ import {
   formatNumberWithCommas,
   titleCased,
 } from '@/lib/format/format';
-import { currentYear, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
+import { convertToISODate, currentYear, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 import Image from 'next/image';
 import Link from 'next/link';
 import SearchBox from '@/components/search-box/SearchBox';
@@ -28,18 +28,45 @@ export async function generateMetadata({ params }) {
   const titleCasedIndicator = camelToTitleCase(indicator, isCountry);
 
   try {
-    const title = `${titleCasedIndicator} of All ${
-      isCountry ? 'Countries' : 'US States'
-    } (Updated: ${currentYear})`;
+    const title = `${titleCasedIndicator} of All ${isCountry ? 'Countries' : 'US States'
+      } (Updated: ${currentYear})`;
     const description = isCountry
       ? `Discover the ${titleCasedIndicator} worldwide. In this article, you can find a comprehensive list of ${titleCasedIndicator} of all countries in the world.`
       : `In this article, you can find a comprehensive list of ${titleCasedIndicator} of all 50 states in the United States of America. 
 `;
+    const formattedDate = getFormattedDate()
+    const dateModified = convertToISODate(formattedDate)
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": `${title}`,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Comparedoo.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.comparedoo.com/comparedoo-logo"
+        }
+      },
+      "datePublished": `${datePublished}`,
+      "dateModified": `${dateModified}`,
+      "description": `${description}`
+    }
 
     return {
       title,
       description,
-    };
+      // Inject the JSON-LD script in metadata
+      additionalMetaTags: [
+        {
+          tagName: 'script',
+          innerHTML: JSON.stringify(jsonLd),
+          type: 'application/ld+json',
+          key: 'jsonld',
+        },
+      ],
+    }
   } catch (error) {
     return {
       title: 'Error',
@@ -64,7 +91,7 @@ async function KnowledgeBase({ params }) {
 
   indicator =
     indicator === 'unemploymentPercentageOfTotalLabourForce' ||
-    indicator === 'employmentRate'
+      indicator === 'employmentRate'
       ? isCountry
         ? 'unemploymentPercentageOfTotalLabourForce'
         : 'employmentRate'
@@ -246,9 +273,8 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
-                              alt={`Image representing the ${titleCasedIndicator} of all ${
-                                isCountry ? 'Countries' : 'US States'
-                              }`}
+                              alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
+                                }`}
                             />
                           </div>
 
@@ -260,9 +286,8 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
-                              alt={`Image representing the ${titleCasedIndicator} of all ${
-                                isCountry ? 'Countries' : 'US States'
-                              }`}
+                              alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
+                                }`}
                             />
                           </div>
                         </div>
@@ -271,7 +296,7 @@ async function KnowledgeBase({ params }) {
                   </thead>
 
                   <tbody>
-                    {arr.map((obj, index) => {                      
+                    {arr.map((obj, index) => {
                       return (
                         <tr key={index}>
                           <td className="basic-info-knowledgebase">
@@ -286,9 +311,8 @@ async function KnowledgeBase({ params }) {
                                   obj[isCountry ? 'country' : 'state']
                                 )}-flag-small.png`}
                                 fill
-                                alt={`Image illustrating the flag of ${
-                                  obj[isCountry ? 'country' : 'state']
-                                }`}
+                                alt={`Image illustrating the flag of ${obj[isCountry ? 'country' : 'state']
+                                  }`}
                               />
                             </div>
                           </td>
@@ -300,15 +324,15 @@ async function KnowledgeBase({ params }) {
                               <>
                                 {indicator === 'majorReligion'
                                   ? `${formatNumberWithCommas(
-                                      obj[realIndicator]
-                                    )} ${indicatorValueType(
-                                      realIndicator,
-                                      isCountry
-                                    )} (${obj['majorReligionPercentage']}%)`
+                                    obj[realIndicator]
+                                  )} ${indicatorValueType(
+                                    realIndicator,
+                                    isCountry
+                                  )} (${obj['majorReligionPercentage']}%)`
                                   : realIndicator === 'HDI' ||
                                     realIndicator === 'unitValueInUSD'
-                                  ? obj[realIndicator]
-                                  : `${formatNumberWithCommas(
+                                    ? obj[realIndicator]
+                                    : `${formatNumberWithCommas(
                                       obj[realIndicator]
                                     )} ${indicatorValueType(
                                       realIndicator,

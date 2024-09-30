@@ -9,7 +9,7 @@ import { allCountries } from "@/lib/array-list/allCountriesList";
 import { USStates } from "@/lib/array-list/allUSStates";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import { fetchCountryCostInfo, fetchCurrencyInfo, fetchPropertyAndIncomeTaxInfo, fetchUSStateCostInfo } from "@/lib/database/fetch";
-import { currentYear, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
+import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { titleCased } from "@/lib/format/format";
 import { decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 
@@ -24,11 +24,39 @@ export async function generateMetadata({ params }) {
       ;
     const description = decodedSlug1 && decodedSlug2 ? `Explore the cost of living comparison between ${titleCased(decodedSlug1)} and ${titleCased(decodedSlug2)}, highlighting key differences in housing, food, transportation and lifestyle expenses.` : `Get insights into the cost of living in ${titleCased(decodedSlug1)}, covering expenses like housing, fooding, transportation and health factors. 
 `;
+    const formattedDate = getFormattedDate()
+    const dateModified = convertToISODate(formattedDate)
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": `${title}`,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Comparedoo.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.comparedoo.com/comparedoo-logo"
+        }
+      },
+      "datePublished": `${datePublished}`,
+      "dateModified": `${dateModified}`,
+      "description": `${description}`
+    }
 
     return {
       title,
       description,
-    };
+      // Inject the JSON-LD script in metadata
+      additionalMetaTags: [
+        {
+          tagName: 'script',
+          innerHTML: JSON.stringify(jsonLd),
+          type: 'application/ld+json',
+          key: 'jsonld',
+        },
+      ],
+    }
   } catch (error) {
     return {
       title: 'Error',

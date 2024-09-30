@@ -3,17 +3,45 @@ import CountriesListSouthAmerica from '@/components/pages/continents/south-ameri
 import MapAndDescriptionSouthAmerica from '@/components/pages/continents/south-america/MapAndDescriptionSouthAmerica'
 import SearchBox from '@/components/search-box/SearchBox';
 import { getCountryByIP } from '@/lib/array-list/allCountriesList';
-import { currentYear, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
+import { convertToISODate, currentYear, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 
 // generateMetadata function
 export async function generateMetadata() {
   const title = `List of All Countries in South America (Updated: ${currentYear})`
   const description = 'A complete list of countries in South America, including basic data on their geography, population, and capitals.'
+  const formattedDate = getFormattedDate()
+  const dateModified = convertToISODate(formattedDate)
+
+  const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": `${title}`,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Comparedoo.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.comparedoo.com/comparedoo-logo"
+        }
+      },
+      "datePublished": `${datePublished}`,
+      "dateModified": `${dateModified}`,
+      "description": `${description}` 
+    }
 
   return {
-    title,
-    description,
-  };
+      title,
+      description,
+       // Inject the JSON-LD script in metadata
+       additionalMetaTags:  [
+          {
+              tagName: 'script',
+              innerHTML: JSON.stringify(jsonLd),
+              type: 'application/ld+json',
+              key: 'jsonld',
+          },
+      ],
+  }
 }
 
 async function SouthAmerica() {

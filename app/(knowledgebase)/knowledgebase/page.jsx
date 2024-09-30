@@ -4,13 +4,51 @@ import { getCountryByIP } from '@/lib/array-list/allCountriesList';
 import {
   commonIndicators,
   countriesUniqueIndicators,
-  KnowledgebaseIndicators,
   statesUniqueIndicators,
 } from '@/lib/array-list/indicators';
-import { getFormattedDate } from '@/lib/date-and-time/dateAndTime';
+import { convertToISODate, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 import { camelToTitleCase, toURLFormat } from '@/lib/format/format';
 import Image from 'next/image';
 import Link from 'next/link';
+
+// generateMetadata function
+export async function generateMetadata() {
+  const title = 'Knowledgebase Articles'
+  const description = 'In this section of the website, you will get to read various knowledgeable articles explained in the listicle form.'
+  const formattedDate = getFormattedDate()
+  const dateModified = convertToISODate(formattedDate)
+
+  const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": `${title}`,
+      "publisher": {
+          "@type": "Organization",
+          "name": "Comparedoo.com",
+          "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.comparedoo.com/comparedoo-logo"
+          }
+      },
+      "datePublished": `${datePublished}`,
+      "dateModified": `${dateModified}`,
+      "description": `${description}`
+  }
+
+  return {
+      title,
+      description,
+      // Inject the JSON-LD script in metadata
+      additionalMetaTags: [
+          {
+              tagName: 'script',
+              innerHTML: JSON.stringify(jsonLd),
+              type: 'application/ld+json',
+              key: 'jsonld',
+          },
+      ],
+  }
+}
 
 async function KnowledgebaseHome() {
   const formattedDate = getFormattedDate();

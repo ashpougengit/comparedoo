@@ -5,7 +5,7 @@ import { allCountries } from "@/lib/array-list/allCountriesList";
 import { USStates } from "@/lib/array-list/allUSStates";
 import { fetchWeatherInfo } from "@/lib/weather/weather";
 import { titleCased } from "@/lib/format/format";
-import { currentYear, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
+import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 import { fetchCountryGeneralInfo, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
 import { getListForLinks } from "@/lib/array-list/randomList";
@@ -22,10 +22,39 @@ export async function generateMetadata({ params }) {
             title = `General Information About ${decodedSlug} (Updated: ${currentYear})`;
             description = `In this article, you will get to read about ${decodedSlug}, highlighting general information, cost of living and quality of life.`;
         }
+        const formattedDate = getFormattedDate()
+        const dateModified = convertToISODate(formattedDate)
+
+        const jsonLd = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": `${title}`,
+            "publisher": {
+                "@type": "Organization",
+                "name": "Comparedoo.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.comparedoo.com/comparedoo-logo"
+                }
+            },
+            "datePublished": `${datePublished}`,
+            "dateModified": `${dateModified}`,
+            "description": `${description}`
+        }
+
         return {
             title,
             description,
-        };
+            // Inject the JSON-LD script in metadata
+            additionalMetaTags: [
+                {
+                    tagName: 'script',
+                    innerHTML: JSON.stringify(jsonLd),
+                    type: 'application/ld+json',
+                    key: 'jsonld',
+                },
+            ],
+        }
     } catch (error) {
         return {
             title: 'Error',
@@ -45,7 +74,7 @@ async function GeneralInfoPage({ params }) {
         return <p>Error: {error.message}</p>;
     }
     const entity1 = titleCased(decodedSlug1);
-    
+
     const isSlug1Country = allCountries.includes(entity1);
     try {
         const [generalInfo] = await Promise.all([

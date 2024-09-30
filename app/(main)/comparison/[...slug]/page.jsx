@@ -8,7 +8,7 @@ import { fetchWeatherInfoSequentially } from "@/lib/weather/weather";
 import { decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 import { titleCased } from "@/lib/format/format";
 import { fetchCountryGeneralInfo, fetchHealthExpenditurePercentage, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
-import { calculateTimeDifference, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
+import { calculateTimeDifference, convertToISODate, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
 import { allEntities } from "@/lib/array-list/allEntitiesList";
@@ -21,11 +21,39 @@ export async function generateMetadata({ params }) {
         const [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
         const title = allEntities.includes(titleCased(decodedSlug2)) ? `${titleCased(decodedSlug1)} vs ${titleCased(decodedSlug2)} (Statistical Comparison)` : 'Error'
         const description = allEntities.includes(titleCased(decodedSlug2)) ? `Discover the comparsion between ${titleCased(decodedSlug1)} and ${titleCased(decodedSlug2)} in this article, highlighting general comparison, cost of living and quality of life.` : 'Enter two places to compare'
+        const formattedDate = getFormattedDate()
+        const dateModified = convertToISODate(formattedDate)
+
+        const jsonLd = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": `${title}`,
+            "publisher": {
+              "@type": "Organization",
+              "name": "Comparedoo.com",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.comparedoo.com/comparedoo-logo"
+              }
+            },
+            "datePublished": `${datePublished}`,
+            "dateModified": `${dateModified}`,
+            "description": `${description}` 
+          }
 
         return {
             title,
             description,
-        };
+             // Inject the JSON-LD script in metadata
+             additionalMetaTags:  [
+                {
+                    tagName: 'script',
+                    innerHTML: JSON.stringify(jsonLd),
+                    type: 'application/ld+json',
+                    key: 'jsonld',
+                },
+            ],
+        }
     } catch (error) {
         return {
             title: 'Error',

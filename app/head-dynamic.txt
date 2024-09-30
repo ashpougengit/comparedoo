@@ -1,0 +1,21 @@
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Nepal vs India (Statistical Comparison)" ///////////////////////
+    },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Comparedoo.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.comparedoo.com/comparedoo-logo"
+    }
+  },
+  "datePublished": "2024-09-29",////////////////////////////////
+  "dateModified": "2024-09-29",////////////////////////////////////
+  "description": "Discover the comparison between Nepal and India in this article highlighting general comparison, cost of living and quality of life." //////////
+}
+
+ </script>

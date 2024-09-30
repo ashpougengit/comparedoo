@@ -52,3 +52,11 @@ standard of living country vs country
 - meta title and description for error and not found pages(redirect)
 
 - revalidate
+
+- cookie policy
+
+- 404 page
+
+- sitemap
+
+- meta data for knowledgebase homepage and contactus page and hamburger menu and main home page

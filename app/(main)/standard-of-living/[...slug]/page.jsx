@@ -9,7 +9,7 @@ import StandardOfLivingUSState from "@/components/pages/standard-of-living/us-st
 import { decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 import { titleCased } from "@/lib/format/format";
 import { fetchCountryStandardInfo, fetchUSStateStandardInfo } from "@/lib/database/fetch";
-import { currentYear, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
+import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
 
@@ -22,8 +22,39 @@ export async function generateMetadata({ params }) {
         const title = decodedSlug1 && decodedSlug2 ? `${titleCased(decodedSlug1)} vs ${titleCased(decodedSlug2)} (Standard of Living)` : `Standard of Living in ${titleCased(decodedSlug1)} (Updated: ${currentYear})`;
         const description = decodedSlug1 && decodedSlug2 ? `Find out how the standard of living differs between ${titleCased(decodedSlug1)} and ${titleCased(decodedSlug2)}, focusing on income, healthcare, education, and quality of life.` : `Explore the standard of living in ${titleCased(decodedSlug1)} highlighting income, healthcare, education, and quality of life.
 `;
+        const formattedDate = getFormattedDate()
+        const dateModified = convertToISODate(formattedDate)
 
-        return { title, description };
+        const jsonLd = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": `${title}`,
+            "publisher": {
+                "@type": "Organization",
+                "name": "Comparedoo.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.comparedoo.com/comparedoo-logo"
+                }
+            },
+            "datePublished": `${datePublished}`,
+            "dateModified": `${dateModified}`,
+            "description": `${description}`
+        }
+
+        return {
+            title,
+            description,
+            // Inject the JSON-LD script in metadata
+            additionalMetaTags: [
+                {
+                    tagName: 'script',
+                    innerHTML: JSON.stringify(jsonLd),
+                    type: 'application/ld+json',
+                    key: 'jsonld',
+                },
+            ],
+        }
     } catch (error) {
         return {
             title: 'Error',
