@@ -72,9 +72,7 @@ body {
 }
 
 .hamburger-icon {
-  /* display: none; */
-  height: 1rem;
-  width: 0rem;
+   cursor: pointer;
 }
 
 .nav-menus ul li {
@@ -1864,7 +1862,7 @@ td.four-rem-height-td {
   border-top: 0.3rem solid #000;
 }
 
-.menu-items{
+.menu-items {
   list-style-type: none;
   padding-top: 1rem;
 }

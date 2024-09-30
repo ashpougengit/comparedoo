@@ -1,48 +1,52 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 const HamburgerIcon = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname !== '/menu-bar') {
+      setIsOpen(false);
+    }
+  }, [pathname]);
 
   const handleToggle = () => {
-    setIsOpen((isOpen) => !isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
+
+  const handleNavigation = () => {
+    if (isOpen) {
+      router.back();
+    } else {
+      router.push('/menu-bar');
+    }
   };
 
   return (
-    <>
-      <div className="hamburger-icon" onClick={handleToggle}>
-        {isOpen ? (
-          <>
-            <Link href="/">
-              <Image
-                // layout="fill"
-                objectFit="contain"
-                src="/images/close.png"
-                alt='Close menu bar'
-                width='25'
-                height='25'
-              />
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link href="/menu-bar">
-              <Image
-                // layout="fill"
-                objectFit="contain"
-                src="/images/menu-icon.png"
-                alt='Open menu bar'
-                width='25'
-                height='25'
-              />
-            </Link>
-          </>
-        )}
-      </div>
-    </>
+    <div className="hamburger-icon" onClick={() => { handleToggle(); handleNavigation(); }}>
+      {isOpen ? (
+        <Image
+          objectFit="contain"
+          src="/images/close.png"
+          alt="Close menu bar"
+          width={25}
+          height={25}
+        />
+      ) : (
+        <Image
+          objectFit="contain"
+          src="/images/menu-icon.png"
+          alt="Open menu bar"
+          width={25}
+          height={25}
+        />
+      )}
+    </div>
   );
 };
 
