@@ -180,7 +180,7 @@ async function KnowledgeBase({ params }) {
         <AdsHeaderBanner />
 
         <div className="meta-title-primary-heading">
-          <h1>
+          <h1 className='entry-title' >
             List of
             <span className="knowledgebase-indicator">
               {' '}
@@ -423,7 +423,7 @@ async function KnowledgeBase({ params }) {
     // Display an error message when there is no data or an error occurs
     return (
       <div>
-        <h1>Error</h1>
+        <h1 className='entry-title' >Error</h1>
         <p>{error.message || 'An error occurred while fetching data.'}</p>
       </div>
     );

@@ -51,7 +51,7 @@ async function TermsAndConditions() {
             <SearchBox userCountry={userCountry} />
 
             <div className="meta-title-primary-heading">
-                <h1>
+                <h1 className='entry-title' >
                     Terms and Conditions (Comparedoo.com)
                 </h1>
             </div>

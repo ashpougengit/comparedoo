@@ -114,7 +114,7 @@ async function GeneralInfoPage({ params }) {
 
 const PageTitle = ({ entity }) => (
     <div className="meta-title-primary-heading">
-        <h1>
+        <h1 className='entry-title' >
             <span className="first-entity-name-individual-country">{entity}</span>
             (General Information)
         </h1>
@@ -144,7 +144,7 @@ const renderContent = (entity, generalInfo, weatherInfo, listForLinks) => {
                 <GeneralInfoUSState generalInfo={generalInfo} weatherInfo={weatherInfo} listForLinks={listForLinks} />
             )
         } else {
-            return <h1>  Unable to fetch data </h1>
+            return <h1 className='entry-title' >  Unable to fetch data </h1>
         }
         // return <p>Error: Unable to fetch all data.</p>;
     } catch (error) {

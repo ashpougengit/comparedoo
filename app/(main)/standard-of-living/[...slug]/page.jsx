@@ -130,11 +130,11 @@ async function StandardComparison({ params }) {
 const PageTitle = ({ entity1, entity2 }) => (
     <div className="meta-title-primary-heading">
         {entity1 && entity2 ? (
-            <h1>
+            <h1 className='entry-title' >
                 <span className='first-entity-name-pages-paragraph'>{entity1}</span> vs <span className='second-entity-name-pages-paragraph'>{entity2}</span> (Standard of Living)
             </h1>
         ) : (
-            <h1>
+            <h1 className='entry-title' >
                 Standard of Living in
                 <span className="first-entity-name-individual-state"> {entity1} </span>
                 (2024 Statistics)

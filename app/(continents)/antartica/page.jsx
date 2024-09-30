@@ -18,23 +18,23 @@ export async function generateMetadata() {
         "@type": "Article",
         "headline": `${title}`,
         "publisher": {
-          "@type": "Organization",
-          "name": "Comparedoo.com",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.comparedoo.com/comparedoo-logo"
-          }
+            "@type": "Organization",
+            "name": "Comparedoo.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.comparedoo.com/comparedoo-logo"
+            }
         },
         "datePublished": `${datePublished}`,
         "dateModified": `${dateModified}`,
-        "description": `${description}` 
-      }
+        "description": `${description}`
+    }
 
     return {
         title,
         description,
-         // Inject the JSON-LD script in metadata
-         additionalMetaTags:  [
+        // Inject the JSON-LD script in metadata
+        additionalMetaTags: [
             {
                 tagName: 'script',
                 innerHTML: JSON.stringify(jsonLd),
@@ -48,7 +48,7 @@ export async function generateMetadata() {
 async function Antartica() {
     const formattedDate = getFormattedDate()
     const userCountry = await getCountryByIP()
-    
+
     return (
         <>
             <SearchBox userCountry={userCountry} />
@@ -56,7 +56,7 @@ async function Antartica() {
             <AdsHeaderBanner />
 
             <div className="meta-title-primary-heading">
-                <h1>
+                <h1 className='entry-title' >
                     Antarctica
                 </h1>
             </div>

@@ -51,7 +51,7 @@ async function AboutUs() {
             <SearchBox userCountry={userCountry} />
 
             <div className="meta-title-primary-heading">
-                <h1>
+                <h1 className='entry-title' >
                     About Us (Comparedoo.com)
                 </h1>
             </div>

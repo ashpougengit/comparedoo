@@ -29,23 +29,23 @@ export async function generateMetadata({ params }) {
             "@type": "Article",
             "headline": `${title}`,
             "publisher": {
-              "@type": "Organization",
-              "name": "Comparedoo.com",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.comparedoo.com/comparedoo-logo"
-              }
+                "@type": "Organization",
+                "name": "Comparedoo.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.comparedoo.com/comparedoo-logo"
+                }
             },
             "datePublished": `${datePublished}`,
             "dateModified": `${dateModified}`,
-            "description": `${description}` 
-          }
+            "description": `${description}`
+        }
 
         return {
             title,
             description,
-             // Inject the JSON-LD script in metadata
-             additionalMetaTags:  [
+            // Inject the JSON-LD script in metadata
+            additionalMetaTags: [
                 {
                     tagName: 'script',
                     innerHTML: JSON.stringify(jsonLd),
@@ -72,7 +72,7 @@ async function GeneralComparison({ params }) {
     } catch (error) {
         return <p>Error: {error.message}</p>;
     }
-    
+
     const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
 
     if (!allEntities.includes(titleCased(decodedSlug2))) {
@@ -148,7 +148,7 @@ async function GeneralComparison({ params }) {
 
 const PageTitle = ({ entity1, entity2 }) => (
     <div className="meta-title-primary-heading">
-        <h1>
+        <h1 className='entry-title' >
             <span className='first-entity-name-pages-paragraph'>{entity1}</span> vs <span className='second-entity-name-pages-paragraph'>{entity2}</span> (Statistical Comparison)
         </h1>
     </div>

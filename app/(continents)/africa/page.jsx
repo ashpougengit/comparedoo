@@ -13,34 +13,34 @@ export async function generateMetadata() {
   const dateModified = convertToISODate(formattedDate)
 
   const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": `${title}`,
-      "publisher": {
-        "@type": "Organization",
-        "name": "Comparedoo.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.comparedoo.com/comparedoo-logo"
-        }
-      },
-      "datePublished": `${datePublished}`,
-      "dateModified": `${dateModified}`,
-      "description": `${description}` 
-    }
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": `${title}`,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Comparedoo.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.comparedoo.com/comparedoo-logo"
+      }
+    },
+    "datePublished": `${datePublished}`,
+    "dateModified": `${dateModified}`,
+    "description": `${description}`
+  }
 
   return {
-      title,
-      description,
-       // Inject the JSON-LD script in metadata
-       additionalMetaTags:  [
-          {
-              tagName: 'script',
-              innerHTML: JSON.stringify(jsonLd),
-              type: 'application/ld+json',
-              key: 'jsonld',
-          },
-      ],
+    title,
+    description,
+    // Inject the JSON-LD script in metadata
+    additionalMetaTags: [
+      {
+        tagName: 'script',
+        innerHTML: JSON.stringify(jsonLd),
+        type: 'application/ld+json',
+        key: 'jsonld',
+      },
+    ],
   }
 }
 
@@ -55,7 +55,7 @@ async function Africa() {
       <AdsHeaderBanner />
 
       <div className="meta-title-primary-heading">
-        <h1>
+        <h1 className='entry-title' >
           List of all countries in [<span className="continent-name">Africa</span>]
         </h1>
       </div>

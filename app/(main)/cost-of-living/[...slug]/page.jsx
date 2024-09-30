@@ -138,11 +138,11 @@ async function CostComparison({ params }) {
 const PageTitle = ({ entity1, entity2 }) => (
   <div className="meta-title-primary-heading">
     {entity1 && entity2 ? (
-      <h1>
+      <h1 className='entry-title' >
         <span className='first-entity-name-pages-paragraph'>{entity1}</span> vs <span className='second-entity-name-pages-paragraph'>{entity2}</span> (Cost of Living)
       </h1>
     ) : (
-      <h1>
+      <h1 className='entry-title' >
         Cost of Living in
         <span className="first-entity-name-individual-state"> {entity1} </span>
         (2024 Statistics)

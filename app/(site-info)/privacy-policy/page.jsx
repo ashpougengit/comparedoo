@@ -51,7 +51,7 @@ async function PrivacyPolicy() {
             <SearchBox userCountry={userCountry} />
 
             <div className="meta-title-primary-heading">
-                <h1>
+                <h1 className='entry-title' >
                     Privacy Policy (Comparedoo.com)
                 </h1>
             </div>
