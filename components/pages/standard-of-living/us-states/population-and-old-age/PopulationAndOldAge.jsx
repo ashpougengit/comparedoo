@@ -158,10 +158,10 @@ function PopulationAndOldAge({ state1StandardInfo, state2StandardInfo, state1URL
                   </div>
                 </td>
                 <td className="median-age-first-entity all-indicator-answers">
-                  {state1MedianAge ? `${state1MedianAge}%` : 'Yet to Update'}
+                  {state1MedianAge ? `${state1MedianAge} %` : 'Yet to Update'}
                 </td>
                 <td className="median-age-second-entity all-indicator-answers">
-                  {state2MedianAge ? `${state2MedianAge}%` : 'Yet to Update'}
+                  {state2MedianAge ? `${state2MedianAge} %` : 'Yet to Update'}
                 </td>
               </tr>
               <tr>
@@ -220,10 +220,10 @@ function PopulationAndOldAge({ state1StandardInfo, state2StandardInfo, state1URL
                   </div>
                 </td>
                 <td className="60-to-64-years-population-first-entity all-indicator-answers">
-                  {state1Age60to64 ? `${state1Age60to64}%` : 'Yet to Update'}
+                  {state1Age60to64 ? `${state1Age60to64} %` : 'Yet to Update'}
                 </td>
                 <td className="60-to-64-years-population-second-entity all-indicator-answers">
-                  {state2Age60to64 ? `${state2Age60to64}%` : 'Yet to Update'}
+                  {state2Age60to64 ? `${state2Age60to64} %` : 'Yet to Update'}
                 </td>
               </tr>
               <tr>
@@ -244,10 +244,10 @@ function PopulationAndOldAge({ state1StandardInfo, state2StandardInfo, state1URL
                   </div>
                 </td>
                 <td className="65-to-74-years-population-first-entity all-indicator-answers">
-                  {state1Age65to74 ? `${state1Age65to74}%` : 'Yet to Update'}
+                  {state1Age65to74 ? `${state1Age65to74} %` : 'Yet to Update'}
                 </td>
                 <td className="65-to-74-years-population-second-entity all-indicator-answers">
-                  {state2Age65to74 ? `${state2Age65to74}%` : 'Yet to Update'}
+                  {state2Age65to74 ? `${state2Age65to74} %` : 'Yet to Update'}
                 </td>
               </tr>
               <tr>
@@ -268,10 +268,10 @@ function PopulationAndOldAge({ state1StandardInfo, state2StandardInfo, state1URL
                   </div>
                 </td>
                 <td className="75-to-84-years-population-first-entity all-indicator-answers">
-                  {state1Age75to84 ? `${state1Age75to84}%` : 'Yet to Update'}
+                  {state1Age75to84 ? `${state1Age75to84} %` : 'Yet to Update'}
                 </td>
                 <td className="75-to-84-years-population-second-entity all-indicator-answers">
-                  {state2Age75to84 ? `${state2Age75to84}%` : 'Yet to Update'}
+                  {state2Age75to84 ? `${state2Age75to84} %` : 'Yet to Update'}
                 </td>
               </tr>
               <tr>
@@ -293,12 +293,12 @@ function PopulationAndOldAge({ state1StandardInfo, state2StandardInfo, state1URL
                 </td>
                 <td className="85-years-and-older-population-first-entity all-indicator-answers">
                   {state1Age85AndOver
-                    ? `${state1Age85AndOver}%`
+                    ? `${state1Age85AndOver} %`
                     : 'Yet to Update'}
                 </td>
                 <td className="85-years-and-older-population-second-entity all-indicator-answers">
                   {state2Age85AndOver
-                    ? `${state2Age85AndOver}%`
+                    ? `${state2Age85AndOver} %`
                     : 'Yet to Update'}
                 </td>
               </tr>

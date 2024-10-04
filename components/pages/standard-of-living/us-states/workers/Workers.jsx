@@ -154,12 +154,12 @@ function Workers({ state1StandardInfo, state2StandardInfo, state1URLCase, state2
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
                   {state1WorkFromHome
-                    ? `${state1WorkFromHome}%`
+                    ? `${state1WorkFromHome} %`
                     : 'Yet to Update'}
                 </td>
                 <td className="employment-rate-states-answer-second-entity all-indicator-answers">
                   {state2WorkFromHome
-                    ? `${state2WorkFromHome}%`
+                    ? `${state2WorkFromHome} %`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -181,12 +181,12 @@ function Workers({ state1StandardInfo, state2StandardInfo, state1URLCase, state2
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
                   {state1PrivateWageandSalaryWorkers
-                    ? `${state1PrivateWageandSalaryWorkers}%`
+                    ? `${state1PrivateWageandSalaryWorkers} %`
                     : 'Yet to Update'}
                 </td>
                 <td className="employment-rate-states-answer-second-entity all-indicator-answers">
                   {state2PrivateWageandSalaryWorkers
-                    ? `${state2PrivateWageandSalaryWorkers}%`
+                    ? `${state2PrivateWageandSalaryWorkers} %`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -208,12 +208,12 @@ function Workers({ state1StandardInfo, state2StandardInfo, state1URLCase, state2
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
                   {state1GovernmentWorkers
-                    ? `${state1GovernmentWorkers}%`
+                    ? `${state1GovernmentWorkers} %`
                     : 'Yet to Update'}
                 </td>
                 <td className="employment-rate-states-answer-second-entity all-indicator-answers">
                   {state2GovernmentWorkers
-                    ? `${state2GovernmentWorkers}%`
+                    ? `${state2GovernmentWorkers} %`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -236,12 +236,12 @@ function Workers({ state1StandardInfo, state2StandardInfo, state1URLCase, state2
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
                   {state1SelfEmployedInNotOwnIncorporatedBusiness
-                    ? `${state1SelfEmployedInNotOwnIncorporatedBusiness}%`
+                    ? `${state1SelfEmployedInNotOwnIncorporatedBusiness} %`
                     : 'Yet to Update'}
                 </td>
                 <td className="employment-rate-states-answer-second-entity all-indicator-answers">
                   {state2SelfEmployedInNotOwnIncorporatedBusiness
-                    ? `${state2SelfEmployedInNotOwnIncorporatedBusiness}%`
+                    ? `${state2SelfEmployedInNotOwnIncorporatedBusiness} %`
                     : 'Yet to Update'}
                 </td>
               </tr>

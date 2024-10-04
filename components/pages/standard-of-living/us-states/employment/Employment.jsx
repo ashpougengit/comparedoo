@@ -8,10 +8,10 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
     const state1Construction = state1StandardInfo.construction
     const state1Manufacturing = state1StandardInfo.manufacturing
     const state1TransportationAndWarehousing = state1StandardInfo.transportationAndWarehousing
-    const state1Information = state1StandardInfo.information
+    const state1ITAndInformation = state1StandardInfo.ITAndInformation
     const state1ArtsEntertainmentRecreation = state1StandardInfo.artsEntertainmentRecreation
-    const state1EducationandHealthCare = state1StandardInfo.educationandHealthCare
-    const state1FinanceandRealEstate = state1StandardInfo.financeandRealEstate
+    const state1EducationAndHealthCare = state1StandardInfo.educationAndHealthCare
+    const state1FinanceAndRealEstate = state1StandardInfo.financeAndRealEstate
     const state1WholesaleTrade = state1StandardInfo.wholesaleTrade
     const state1RetailTrade = state1StandardInfo.retailTrade
     const state1PublicAdministration = state1StandardInfo.publicAdministration
@@ -21,10 +21,10 @@ function Employment({ state1StandardInfo, state2StandardInfo, state1URLCase, sta
     const state2Construction = state2StandardInfo.construction
     const state2Manufacturing = state2StandardInfo.manufacturing
     const state2TransportationAndWarehousing = state2StandardInfo.transportationAndWarehousing
-    const state2Information = state2StandardInfo.information
+    const state2ITAndInformation = state2StandardInfo.ITAndInformation
     const state2ArtsEntertainmentRecreation = state2StandardInfo.artsEntertainmentRecreation
-    const state2EducationandHealthCare = state2StandardInfo.educationandHealthCare
-    const state2FinanceandRealEstate = state2StandardInfo.financeandRealEstate
+    const state2EducationAndHealthCare = state2StandardInfo.educationAndHealthCare
+    const state2FinanceAndRealEstate = state2StandardInfo.financeAndRealEstate
     const state2WholesaleTrade = state2StandardInfo.wholesaleTrade
     const state2RetailTrade = state2StandardInfo.retailTrade
     const state2PublicAdministration = state2StandardInfo.publicAdministration
@@ -103,10 +103,10 @@ objectFit="contain"alt="Image Depicting the total Agriculture, Forestry and Fish
                                 </div>
                             </td>
                             <td className="agriculture-forestry-states-answer-first-entity all-indicator-answers">
-                                {state1AgricultureForestryFishing ? `${state1AgricultureForestryFishing}%` : 'Yet to Update'}
+                                {state1AgricultureForestryFishing ? `${state1AgricultureForestryFishing} %` : 'Yet to Update'}
                             </td>
                             <td className="agriculture-forestry-states-answer-second-entity all-indicator-answers">
-                                {state2AgricultureForestryFishing ? `${state2AgricultureForestryFishing}%` : 'Yet to Update'}
+                                {state2AgricultureForestryFishing ? `${state2AgricultureForestryFishing} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -124,10 +124,10 @@ objectFit="contain"alt="Image Depicting the total Construction Sector workers pe
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1Construction ? `${state1Construction}%` : 'Yet to Update'}
+                                {state1Construction ? `${state1Construction} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2Construction ? `${state2Construction}%` : 'Yet to Update'}
+                                {state2Construction ? `${state2Construction} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -145,10 +145,10 @@ objectFit="contain"alt="Image Depicting the total Manufacturing Sector workers p
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1Manufacturing ? `${state1Manufacturing}%` : 'Yet to Update'}
+                                {state1Manufacturing ? `${state1Manufacturing} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2Manufacturing ? `${state2Manufacturing}%` : 'Yet to Update'}
+                                {state2Manufacturing ? `${state2Manufacturing} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -164,10 +164,10 @@ objectFit="contain"alt="Image Depicting the total Transportation and Warehousing
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1TransportationAndWarehousing ? `${state1TransportationAndWarehousing}%` : 'Yet to Update'}
+                                {state1TransportationAndWarehousing ? `${state1TransportationAndWarehousing} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2TransportationAndWarehousing ? `${state2TransportationAndWarehousing}%` : 'Yet to Update'}
+                                {state2TransportationAndWarehousing ? `${state2TransportationAndWarehousing} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -185,10 +185,10 @@ objectFit="contain"alt="Image Depicting the total IT and Information Sectors wor
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1Information ? `${state1Information}%` : 'Yet to Update'}
+                                {state1ITAndInformation ? `${state1ITAndInformation} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2Information ? `${state2Information}%` : 'Yet to Update'}
+                                {state2ITAndInformation ? `${state2ITAndInformation} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -206,10 +206,10 @@ objectFit="contain"alt="Image Depicting the total Arts and Entertainment workers
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1ArtsEntertainmentRecreation ? `${state1ArtsEntertainmentRecreation}%` : 'Yet to Update'}
+                                {state1ArtsEntertainmentRecreation ? `${state1ArtsEntertainmentRecreation} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2ArtsEntertainmentRecreation ? `${state2ArtsEntertainmentRecreation}%` : 'Yet to Update'}
+                                {state2ArtsEntertainmentRecreation ? `${state2ArtsEntertainmentRecreation} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -225,10 +225,10 @@ objectFit="contain"alt="Image Depicting the total Education and Healthcare Secto
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1EducationandHealthCare ? `${state1EducationandHealthCare}%` : 'Yet to Update'}
+                                {state1EducationAndHealthCare ? `${state1EducationAndHealthCare} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2EducationandHealthCare ? `${state2EducationandHealthCare}%` : 'Yet to Update'}
+                                {state2EducationAndHealthCare ? `${state2EducationAndHealthCare} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -244,10 +244,10 @@ objectFit="contain"alt="Image Depicting the total Finance and Real Estate Sector
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1FinanceandRealEstate ? `${state1FinanceandRealEstate}%` : 'Yet to Update'}
+                                {state1FinanceAndRealEstate ? `${state1FinanceAndRealEstate} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2FinanceandRealEstate ? `${state2FinanceandRealEstate}%` : 'Yet to Update'}
+                                {state2FinanceAndRealEstate ? `${state2FinanceAndRealEstate} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -265,10 +265,10 @@ objectFit="contain"alt="Image Depicting the total Wholesale Trade workers percen
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1WholesaleTrade ? `${state1WholesaleTrade}%` : 'Yet to Update'}
+                                {state1WholesaleTrade ? `${state1WholesaleTrade} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2WholesaleTrade ? `${state2WholesaleTrade}%` : 'Yet to Update'}
+                                {state2WholesaleTrade ? `${state2WholesaleTrade} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -286,10 +286,10 @@ objectFit="contain"alt="Image Depicting the total Retail Trade workers percentag
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1RetailTrade ? `${state1RetailTrade}%` : 'Yet to Update'}
+                                {state1RetailTrade ? `${state1RetailTrade} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2RetailTrade ? `${state2RetailTrade}%` : 'Yet to Update'}
+                                {state2RetailTrade ? `${state2RetailTrade} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
@@ -307,10 +307,10 @@ objectFit="contain"alt="Image Depicting the total Public Administration workers 
                                 </div>
                             </td>
                             <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                                {state1PublicAdministration ? `${state1PublicAdministration}%` : 'Yet to Update'}
+                                {state1PublicAdministration ? `${state1PublicAdministration} %` : 'Yet to Update'}
                             </td>
                             <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                                {state2PublicAdministration ? `${state2PublicAdministration}%` : 'Yet to Update'}
+                                {state2PublicAdministration ? `${state2PublicAdministration} %` : 'Yet to Update'}
                             </td>
                         </tr>
                     </tbody>

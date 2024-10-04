@@ -1,62 +1,71 @@
 import { allCountries } from "@/lib/array-list/allCountriesList";
+import { toURLFormat } from "@/lib/format/format";
 import Image from "next/image"
 import Link from "next/link"
 
 function ComparisonLinks({ entity, listForLinks, pageType }) {
-    const isCountry = allCountries.includes(entity)
+  let filteredEntity = entity
+  
+  const specialEntities = {
+    'Georgia (USA)': 'Georgia USA',
+    "Côte d'Ivoire": "Cote d'Ivoire",
+    "São Tomé and Príncipe": "Sao Tome and Principe"
+  };
+  
+  filteredEntity = specialEntities[filteredEntity] || filteredEntity;  
 
-    return (
-      <>
-        <div className="individual-country-vs-others-list-boxes-grids">
-          {listForLinks.map((value) => {
-            const lowerEntity = entity.toLowerCase().split(' ').join('-');
-            const lowerValue = value.toLowerCase().split(' ').join('-');
+  const isCountry = allCountries.includes(entity)
 
-            return (
-              <Link
-                href={`/${pageType}/${lowerEntity}/${lowerValue}`}
-                key={lowerValue}
-                className="comparison-links-bottom"
-              >
-                <div className="individual-country-vs-others-map-name-flag">
-                  <div className="individual-country-first-entity-map">
-                    <Image
-                      src={`/images/${
-                        isCountry ? `${lowerEntity}` : `${lowerEntity}-us-state`
+  return (
+    <>
+      <div className="individual-country-vs-others-list-boxes-grids">
+        {listForLinks.map((value) => {
+          const entityURL = toURLFormat(filteredEntity);
+          const valueURL = toURLFormat(value);
+
+          return (
+            <Link
+              href={`/${pageType}/${entityURL}/${valueURL}`}
+              key={valueURL}
+              className="comparison-links-bottom"
+            >
+              <div className="individual-country-vs-others-map-name-flag">
+                <div className="individual-country-first-entity-map">
+                  <Image
+                    src={`/images/${isCountry ? `${entityURL}` : `${entityURL}-us-state`
                       }-map-small.png`}
-                      fill
-                      alt={`Pictorial representation of the map of ${entity}`}
-                    />
+                    fill
+                    alt={`Pictorial representation of the map of ${entity}`}
+                  />
+                </div>
+                <div className="individual-country-vs-another-country-name">
+                  <div className="individual-country-first-entity-name">
+                    {' '}
+                    {entity}{' '}
                   </div>
-                  <div className="individual-country-vs-another-country-name">
-                    <div className="individual-country-first-entity-name">
-                      {' '}
-                      {entity}{' '}
-                    </div>
-                    <div className="versus-between-individual-country-and-another-country">
-                      v/s
-                    </div>
-                    <div className="individual-country-another-country-name">
-                      {' '}
-                      {value}{' '}
-                    </div>
+                  <div className="versus-between-individual-country-and-another-country">
+                    v/s
                   </div>
-                  <div className="individual-country-second-entity-map">
-                    <Image
-                      src={`/images/${
-                        isCountry ? `${lowerValue}` : `${lowerValue}-us-state`
-                      }-map-small.png`}
-                      fill
-                      alt={`Pictorial representation of the map of ${value}`}
-                    />
+                  <div className="individual-country-another-country-name">
+                    {' '}
+                    {value === 'Georgia USA' ? 'Georgia (USA)' : value}{' '}
                   </div>
                 </div>
-              </Link>
-            );
-          })}
-        </div>
-      </>
-    );
+                <div className="individual-country-second-entity-map">
+                  <Image
+                    src={`/images/${isCountry ? `${valueURL}` : `${valueURL}-us-state`
+                      }-map-small.png`}
+                    fill
+                    alt={`Pictorial representation of the map of ${value}`}
+                  />
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </>
+  );
 }
 
 export default ComparisonLinks

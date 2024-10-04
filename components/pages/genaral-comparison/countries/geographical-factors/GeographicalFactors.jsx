@@ -7,7 +7,6 @@ function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country
     const country1LargestCity = country1GeneralInfo.largestCity
     const country1Demonyms = country1GeneralInfo.demonyms
     const country1OfficialLanguages = country1GeneralInfo.officialLanguages
-    const country1OfficialLanguagesArray = country1OfficialLanguages.split(',')
     const country1GovernmentStatus = country1GeneralInfo.governmentStatus
     const country1MajorReligion = country1GeneralInfo.majorReligion
     const country1MajorReligionPercentage = country1GeneralInfo.majorReligionPercentage
@@ -24,7 +23,6 @@ function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country
     const country2LargestCity = country2GeneralInfo.largestCity
     const country2Demonyms = country2GeneralInfo.demonyms
     const country2OfficialLanguages = country2GeneralInfo.officialLanguages
-    const country2OfficialLanguagesArray = country2OfficialLanguages.split(',')
     const country2GovernmentStatus = country2GeneralInfo.governmentStatus
     const country2MajorReligion = country2GeneralInfo.majorReligion
     const country2MajorReligionPercentage = country2GeneralInfo.majorReligionPercentage
@@ -221,25 +219,21 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
 
             </div>
 
-            <div className="paragraph-for-pages-below-table">
-                <div className="para-for-pages-single-div">
+            {country1Demonyms && country2Demonyms &&
+                <div className="paragraph-for-pages-below-table">
+                    <div className="para-for-pages-single-div">
+                        <p>The people of <strong> <span className="first-entity-name-pages-paragraph">{country1} </span></strong>
+                            are called <strong> <span className="demonyms-answer-first-entity">{country1Demonyms}</span></strong>, and the people of
+                            <strong>
+                                <span className="second-entity-name-pages-paragraph"> {country2}</span></strong> are
+                            called
+                            <strong> <span className="demonyms-answer-second-entity">{country2Demonyms}</span></strong>.
+                        </p>
 
-
-                    <p>The people of <strong> <span className="first-entity-name-pages-paragraph">{country1} </span></strong>
-                        are called <strong> <span className="demonyms-answer-first-entity">{country1Demonyms}</span></strong>, and the people of
-                        <strong>
-                            <span className="second-entity-name-pages-paragraph"> {country2}</span></strong> are
-                        called
-                        <strong> <span className="demonyms-answer-second-entity">{country2Demonyms}</span></strong>.
-                    </p>
+                    </div>
 
                 </div>
-
-            </div>
-
-
-
-
+            }
 
             <div className="geographical-factors-comparison-div2">
 

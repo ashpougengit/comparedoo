@@ -20,15 +20,16 @@ import WagesAndTaxes from "./wages-and-taxes/WagesAndTaxes"
 import ProfessionalServices from "./professional-services/ProfessionalServices"
 import LastParagraph from "./last-paragraph/LastParagraph"
 import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import { toURLFormat } from "@/lib/format/format"
 
 function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, currencyInfo, entity1PropertyAndIncomeTaxInfo, entity2PropertyAndIncomeTaxInfo, costTimes, moreOrLess, listForLinks }) {
     const slug1 = slug1CostInfo[value1]
     const slug2 = slug2CostInfo[value2]
-    const slug1LowerCase = slug1.toLowerCase().split(' ').join('-')
-    const slug2LowerCase = slug2.toLowerCase().split(' ').join('-')
+    const slug1URLCase = toURLFormat(slug1)
+    const slug2URLCase = toURLFormat(slug2)
 
-    const slug1Currency = value1 === 'country' ? currencyInfo.currencySymbol : ''
-    const slug2Currency = value2 === 'country' ? currencyInfo.currencySymbol : ''
+    const slug1Currency = value1 === 'country' ? currencyInfo.currencySymbol : 'USD'
+    const slug2Currency = value2 === 'country' ? currencyInfo.currencySymbol : 'USD'
     const slug1ExchangeRate = value1 != 'state' ? currencyInfo.unitValueInUSD : 1
     const slug2ExchangeRate = value2 != 'state' ? currencyInfo.unitValueInUSD : 1
 
@@ -49,8 +50,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Housing
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -65,8 +66,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <BasicUtilities
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -79,8 +80,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <NetworkAndCommunication
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -93,8 +94,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Groceries
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -110,8 +111,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <FruitsAndVegetables
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -124,8 +125,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <DiningOut
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -138,8 +139,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Drinks
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -152,8 +153,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Transportation
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -166,8 +167,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Vehicle
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -180,8 +181,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Health
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -194,8 +195,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <PersonalCare
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -208,8 +209,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Clothing
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -222,8 +223,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Childcare
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -236,8 +237,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Education
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -250,8 +251,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <Entertainment
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -265,8 +266,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <PrivateClasses
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -279,8 +280,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <WagesAndTaxes
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}
@@ -295,8 +296,8 @@ function CountryVsUSStateCost({ slug1CostInfo, slug2CostInfo, value1, value2, cu
             <ProfessionalServices
                 slug1={slug1}
                 slug2={slug2}
-                slug1LowerCase={slug1LowerCase}
-                slug2LowerCase={slug2LowerCase}
+                slug1URLCase={slug1URLCase}
+                slug2URLCase={slug2URLCase}
                 value1={value1}
                 value2={value2}
                 slug1CostInfo={slug1CostInfo}

@@ -7,7 +7,7 @@ function Housing({ state1StandardInfo, state2StandardInfo, state1URLCase, state2
     const state1 = state1StandardInfo.state
     const state1TotalHousingUnits = state1StandardInfo.totalHousingUnits
     const state1MedianGrossRent = state1StandardInfo.medianGrossRent
-    const state1HomeownershipRate = state1StandardInfo.homeownershipRate
+    const state1HomeOwnershipRate = state1StandardInfo.homeOwnershipRate
     const state1AverageFamilySize = state1StandardInfo.averageFamilySize
     const state1MarriedCoupleHouseholdPercentage = state1StandardInfo.marriedCoupleHouseholdPercentage
     const state1MaleHouseholderPercentage = state1StandardInfo.maleHouseholderPercentage
@@ -16,7 +16,7 @@ function Housing({ state1StandardInfo, state2StandardInfo, state1URLCase, state2
     const state2 = state2StandardInfo.state
     const state2TotalHousingUnits = state2StandardInfo.totalHousingUnits
     const state2MedianGrossRent = state2StandardInfo.medianGrossRent
-    const state2HomeownershipRate = state2StandardInfo.homeownershipRate
+    const state2HomeOwnershipRate = state2StandardInfo.homeOwnershipRate
     const state2AverageFamilySize = state2StandardInfo.averageFamilySize
     const state2MarriedCoupleHouseholdPercentage = state2StandardInfo.marriedCoupleHouseholdPercentage
     const state2MaleHouseholderPercentage = state2StandardInfo.maleHouseholderPercentage
@@ -157,12 +157,12 @@ function Housing({ state1StandardInfo, state2StandardInfo, state1URLCase, state2
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
                   {state1MedianGrossRent
-                    ? `${formatNumberWithCommas(state1MedianGrossRent)} USD`
+                    ? `${formatNumberWithCommas(state1MedianGrossRent)} USD per month`
                     : 'Yet to Update'}
                 </td>
                 <td className="employment-rate-states-answer-second-entity all-indicator-answers">
                   {state2MedianGrossRent
-                    ? `${formatNumberWithCommas(state2MedianGrossRent)} USD`
+                    ? `${formatNumberWithCommas(state2MedianGrossRent)} USD per month`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -184,13 +184,13 @@ function Housing({ state1StandardInfo, state2StandardInfo, state1URLCase, state2
                   </div>
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                  {state1HomeownershipRate
-                    ? `${state1HomeownershipRate} %`
+                  {state1HomeOwnershipRate
+                    ? `${state1HomeOwnershipRate} %`
                     : 'yet to Update'}
                 </td>
                 <td className="employment-rate-states-answer-second-entity all-indicator-answers">
-                  {state2HomeownershipRate
-                    ? `${state2HomeownershipRate} %`
+                  {state2HomeOwnershipRate
+                    ? `${state2HomeOwnershipRate} %`
                     : 'yet to Update'}
                 </td>
               </tr>

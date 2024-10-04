@@ -6,22 +6,30 @@ import { USStates } from "@/lib/array-list/allUSStates";
 import { fetchWeatherInfo } from "@/lib/weather/weather";
 import { titleCased } from "@/lib/format/format";
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
-import { decodeAndValidateSlugs, fetchData } from "@/lib/helper";
+import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 import { fetchCountryGeneralInfo, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
+import Error404 from "@/components/error/Error404";
+import { allEntities } from "@/lib/array-list/allEntitiesList";
 
 // generateMetadata function
 export async function generateMetadata({ params }) {
     const { slug } = params;
-    const decodedSlug = titleCased(slug?.replace(/-/g, ' '))
+    const decodedSlug = titleCased(slug)
 
     try {
         let title, description
-        if (allCountries.includes(decodedSlug)) {
+        if (allEntities.includes(decodedSlug)) {
             title = `General Information About ${decodedSlug} (Updated: ${currentYear})`;
             description = `In this article, you will get to read about ${decodedSlug}, highlighting general information, cost of living and quality of life.`;
+        } else {
+            return {
+                title: 'Error',
+                description: 'Invalid URL. Please check the path and try again.',
+            }
         }
+
         const formattedDate = getFormattedDate()
         const dateModified = convertToISODate(formattedDate)
 
@@ -65,13 +73,20 @@ export async function generateMetadata({ params }) {
 
 async function GeneralInfoPage({ params }) {
     const { slug } = params;
+
+    // if (slug.length > 1) {
+    //     return <Error404 />
+    //   }
+
     const slugArr = [slug]
+
     let decodedSlug1;
 
     try {
         [decodedSlug1] = decodeAndValidateSlugs(slugArr);
     } catch (error) {
-        return <p>Error: {error.message}</p>;
+        // return <p>Error: {error.message}</p>;
+        return <Error404 />
     }
     const entity1 = titleCased(decodedSlug1);
 
@@ -100,7 +115,7 @@ async function GeneralInfoPage({ params }) {
 
         return (
             <>
-                <SearchBox slug1={entity1} slug2='' />
+                <SearchBox slug1={checkCountry(entity1)} slug2='' />
                 <AdsHeaderBanner />
                 <PageTitle entity={entity1} />
                 <PublishInfo formattedDate={formattedDate} />
@@ -108,7 +123,8 @@ async function GeneralInfoPage({ params }) {
             </>
         );
     } catch (error) {
-        return <p>Error: {error}.</p>;
+        // return <p>Error: {error}</p>;
+        return <Error404 />
     }
 }
 
@@ -148,7 +164,7 @@ const renderContent = (entity, generalInfo, weatherInfo, listForLinks) => {
         }
         // return <p>Error: Unable to fetch all data.</p>;
     } catch (error) {
-        return error
+        return <Error404 />
     }
 };
 

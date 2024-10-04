@@ -15,6 +15,7 @@ import LastParagraph from './last-paragraph/LastParagraph';
 import { getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 import { convertLatLongToDecimal } from '@/lib/helper';
 import ComparisonLinks from '@/components/comparison-links/ComparisonLinks';
+import { toURLFormat } from '@/lib/format/format';
 
 function GeneralComparisonCountries({
   country1GeneralInfo,
@@ -29,19 +30,9 @@ function GeneralComparisonCountries({
 }) {
   const country1 = country1GeneralInfo?.country;
   const country2 = country2GeneralInfo?.country;
-  const country1URLCase = country1.toLowerCase().split(' ').join('-');
-  const country2URLCase = country2.toLowerCase().split(' ').join('-');
-  const capitalCity1 = convertLatLongToDecimal(
-    country1GeneralInfo.latitude,
-    country1GeneralInfo.longitude
-  );
-  const capitalCity2 = convertLatLongToDecimal(
-    country2GeneralInfo.latitude,
-    country2GeneralInfo.longitude
-  );
+  const country1URLCase = toURLFormat(country1);
+  const country2URLCase = toURLFormat(country2);
 
-  // Get the formatted date of 7 days ago
-  const formattedDate = getFormattedDate();
   const pageType = 'comparison';
 
   return (

@@ -14,10 +14,11 @@ import Housing from "./housing/Housing"
 import MaritalStatus from "./marital-status/MaritalStatus"
 import LastParagraph from "./last-paragraph/LastParagraph"
 import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import { toURLFormat } from "@/lib/format/format"
 
 function StandardOfLivingUSState({ standardInfo, listForLinks }) {
     const state = standardInfo.state
-    const stateURLCase = state.toLowerCase().split(' ').join('-')
+    const stateURLCase = toURLFormat(state)
     const pageType = 'standard-of-living'
 
     return (

@@ -498,7 +498,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
               <td className="basic-info">
                 <div className="all-indicators">
                   <div className="exports-of-goods-and-services-text">
-                    Exports of Goods and Services <br /> ({lastYear})
+                    Exports of Goods and Services ({lastYear})
                   </div>
                 </div>
                 <div className="basic-information-images">

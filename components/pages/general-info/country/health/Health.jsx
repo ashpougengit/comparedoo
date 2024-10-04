@@ -458,7 +458,7 @@ function Health({ generalInfo, countryURLCase }) {
               </span>
               ,
             </strong>
-            is{' '}
+            {' '}is{' '}
             <strong>
               {' '}
               [{' '}

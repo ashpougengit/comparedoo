@@ -14,12 +14,13 @@ import RaceAndEthnicity from "./race-and-ethnicity/RaceAndEthnicity"
 import Housing from "./housing/Housing"
 import MaritalStatus from "./marital-status/MaritalStatus"
 import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import { toURLFormat } from "@/lib/format/format"
 
 function StandardOfLivingUSStates({ state1StandardInfo, state2StandardInfo, standardTimes, betterOrLesser, listForLinks }) {
     const state1 = state1StandardInfo.state
     const state2 = state2StandardInfo.state
-    const state1URLCase = state1.toLowerCase().split(' ').join('-')
-    const state2URLCase = state2.toLowerCase().split(' ').join('-')
+    const state1URLCase = toURLFormat(state1)
+    const state2URLCase = toURLFormat(state2)
     const pageType = 'standard-of-living'
 
     return (

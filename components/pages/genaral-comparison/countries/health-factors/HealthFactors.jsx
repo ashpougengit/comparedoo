@@ -1,48 +1,79 @@
-import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
-import { lastYear } from "@/lib/date-and-time/dateAndTime"
-import Image from "next/image"
+import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner';
+import { lastYear } from '@/lib/date-and-time/dateAndTime';
+import Image from 'next/image';
 
-function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1CurrentHealthExpenditurePercentage, country2CurrentHealthExpenditurePercentage, country1URLCase, country2URLCase }) {
-  const country1 = country1GeneralInfo.country
-  const country1FertilityRate = country1GeneralInfo.fertilityRate
-  const country1MortalityRateMale = country1GeneralInfo.mortalityRateMale
-  const country1MortalityRateFemale = country1GeneralInfo.mortalityRateFemale
-  const country1InfantMortalityRate = country1GeneralInfo.infantMortalityRate
-  const country1TopCauseOfDeath = country1GeneralInfo.topCauseOfDeath
-  const country1TopCauseOfDeathNumber = country1GeneralInfo.topCauseOfDeathNumber
-  const country1LowestCauseOfDeath = country1GeneralInfo.lowestCauseOfDeath
-  const country1LowestCauseOfDeathNumber = country1GeneralInfo.lowestCauseOfDeathNumber
-  const country1RoadTrafficDeaths = country1GeneralInfo.roadTrafficDeaths
-  const country1SuicideDeaths = country1GeneralInfo.suicideDeaths
-  const country1NumberOfNewHIVInfections = country1GeneralInfo.numberOfNewHIVInfections
-  const country1PrevalenceOfHypertensionPercentage = country1GeneralInfo.prevalenceOfHypertensionPercentage
-  const country1AdultObesityPercentage = country1GeneralInfo.adultObesityPercentage
-  const country1AlcoholConsumptionPercentage = country1GeneralInfo.alcoholConsumptionPercentage
-  const country1TobaccoConsumptionPercentage = country1GeneralInfo.tobaccoConsumptionPercentage
+function HealthFactors({
+  country1GeneralInfo,
+  country2GeneralInfo,
+  country1CurrentHealthExpenditurePercentage,
+  country2CurrentHealthExpenditurePercentage,
+  country1URLCase,
+  country2URLCase,
+}) {
+  const country1 = country1GeneralInfo.country;
+  const country1FertilityRate = country1GeneralInfo.fertilityRate;
+  const country1MortalityRateMale = country1GeneralInfo.mortalityRateMale;
+  const country1MortalityRateFemale = country1GeneralInfo.mortalityRateFemale;
+  const country1InfantMortalityRate = country1GeneralInfo.infantMortalityRate;
+  const country1TopCauseOfDeath = country1GeneralInfo.topCauseOfDeath;
+  const country1TopCauseOfDeathNumber =
+    country1GeneralInfo.topCauseOfDeathNumber;
+  const country1LowestCauseOfDeath = country1GeneralInfo.lowestCauseOfDeath;
+  const country1LowestCauseOfDeathNumber =
+    country1GeneralInfo.lowestCauseOfDeathNumber;
+  const country1RoadTrafficDeaths = country1GeneralInfo.roadTrafficDeaths;
+  const country1SuicideDeaths = country1GeneralInfo.suicideDeaths;
+  const country1NumberOfNewHIVInfections =
+    country1GeneralInfo.numberOfNewHIVInfections;
+  const country1PrevalenceOfHypertensionPercentage =
+    country1GeneralInfo.prevalenceOfHypertensionPercentage;
+  const country1AdultObesityPercentage =
+    country1GeneralInfo.adultObesityPercentage;
+  const country1AlcoholConsumptionPercentage =
+    country1GeneralInfo.alcoholConsumptionPercentage;
+  const country1TobaccoConsumptionPercentage =
+    country1GeneralInfo.tobaccoConsumptionPercentage;
 
-  const country2 = country2GeneralInfo.country
-  const country2FertilityRate = country2GeneralInfo.fertilityRate
-  const country2MortalityRateMale = country2GeneralInfo.mortalityRateMale
-  const country2MortalityRateFemale = country2GeneralInfo.mortalityRateFemale
-  const country2InfantMortalityRate = country2GeneralInfo.infantMortalityRate
-  const country2TopCauseOfDeath = country2GeneralInfo.topCauseOfDeath
-  const country2TopCauseOfDeathNumber = country2GeneralInfo.topCauseOfDeathNumber
-  const country2LowestCauseOfDeath = country2GeneralInfo.lowestCauseOfDeath
-  const country2LowestCauseOfDeathNumber = country2GeneralInfo.lowestCauseOfDeathNumber
-  const country2RoadTrafficDeaths = country2GeneralInfo.roadTrafficDeaths
-  const country2SuicideDeaths = country2GeneralInfo.suicideDeaths
-  const country2NumberOfNewHIVInfections = country2GeneralInfo.numberOfNewHIVInfections
-  const country2PrevalenceOfHypertensionPercentage = country2GeneralInfo.prevalenceOfHypertensionPercentage
-  const country2AdultObesityPercentage = country2GeneralInfo.adultObesityPercentage
-  const country2AlcoholConsumptionPercentage = country2GeneralInfo.alcoholConsumptionPercentage
-  const country2TobaccoConsumptionPercentage = country2GeneralInfo.tobaccoConsumptionPercentage
+  const country2 = country2GeneralInfo.country;
+  const country2FertilityRate = country2GeneralInfo.fertilityRate;
+  const country2MortalityRateMale = country2GeneralInfo.mortalityRateMale;
+  const country2MortalityRateFemale = country2GeneralInfo.mortalityRateFemale;
+  const country2InfantMortalityRate = country2GeneralInfo.infantMortalityRate;
+  const country2TopCauseOfDeath = country2GeneralInfo.topCauseOfDeath;
+  const country2TopCauseOfDeathNumber =
+    country2GeneralInfo.topCauseOfDeathNumber;
+  const country2LowestCauseOfDeath = country2GeneralInfo.lowestCauseOfDeath;
+  const country2LowestCauseOfDeathNumber =
+    country2GeneralInfo.lowestCauseOfDeathNumber;
+  const country2RoadTrafficDeaths = country2GeneralInfo.roadTrafficDeaths;
+  const country2SuicideDeaths = country2GeneralInfo.suicideDeaths;
+  const country2NumberOfNewHIVInfections =
+    country2GeneralInfo.numberOfNewHIVInfections;
+  const country2PrevalenceOfHypertensionPercentage =
+    country2GeneralInfo.prevalenceOfHypertensionPercentage;
+  const country2AdultObesityPercentage =
+    country2GeneralInfo.adultObesityPercentage;
+  const country2AlcoholConsumptionPercentage =
+    country2GeneralInfo.alcoholConsumptionPercentage;
+  const country2TobaccoConsumptionPercentage =
+    country2GeneralInfo.tobaccoConsumptionPercentage;
 
-  const obeseTimes = country1AdultObesityPercentage > country2AdultObesityPercentage ? (country1AdultObesityPercentage / country2AdultObesityPercentage).toFixed(2) : (country2AdultObesityPercentage / country1AdultObesityPercentage).toFixed(2)
-  const moreOrLess = country1AdultObesityPercentage > country2AdultObesityPercentage ? 'more' : 'less'
+  const obeseTimes =
+    country1AdultObesityPercentage > country2AdultObesityPercentage
+      ? (
+        country1AdultObesityPercentage / country2AdultObesityPercentage
+      ).toFixed(2)
+      : (
+        country2AdultObesityPercentage / country1AdultObesityPercentage
+      ).toFixed(2);
+  const moreOrLess =
+    country1AdultObesityPercentage > country2AdultObesityPercentage
+      ? 'more'
+      : 'less';
 
   return (
     <>
-     <AdsHeaderBanner />
+      <AdsHeaderBanner />
 
       <div className="health-factors">
         <h2 className="pages-h2">Health Factors Comparison</h2>
@@ -303,7 +334,7 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
         </table>
       </div>
 
-     <AdsHeaderBanner />
+      <AdsHeaderBanner />
 
       {/* <!-- ......... Health Factors second table Here  ......... --> */}
 
@@ -642,132 +673,150 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
 
       <div className="paragraph-for-pages-below-table">
         <div className="para-for-pages-single-div">
-          <p>
-            The leading cause of death in{' '}
-            <strong>
-              <span className="first-entity-name-pages-paragraph">
-                {' '}
-                {country1}
-              </span>
-              ,{' '}
-            </strong>
-            is{' '}
-            <strong>
-              {' '}
-              [{' '}
-              <span className="leading-cause-of-death-answer-first-entity">
-                {country1TopCauseOfDeath}
-              </span>{' '}
-              ].{' '}
-            </strong>{' '}
-            Around
-            <strong>
-              {' '}
-              <span className="leading-cause-of-death-answer-number-first-entity">
-                {' '}
-                {country1TopCauseOfDeathNumber}{' '}
-              </span>{' '}
-              people per 100,000 people{' '}
-            </strong>{' '}
-            in{' '}
-            <strong>
-              <span className="first-entity-name-pages-paragraph">
-                {' '}
-                {country1}
-              </span>
-              ,
-            </strong>{' '}
-            are dying of{' '}
-            <span className="leading-cause-of-death-answer-first-entity">
-              {' '}
-              {country1TopCauseOfDeath}
-            </span>
-            .
-          </p>
+          {country1TopCauseOfDeath &&
+            country1TopCauseOfDeathNumber &&
+            country2TopCauseOfDeath &&
+            country2TopCauseOfDeathNumber && (
+              <>
+                <p>
+                  The leading cause of death in{' '}
+                  <strong>
+                    <span className="first-entity-name-pages-paragraph">
+                      {' '}
+                      {country1}
+                    </span>
+                    ,{' '}
+                  </strong>
+                  is{' '}
+                  <strong>
+                    {' '}
+                    [{' '}
+                    <span className="leading-cause-of-death-answer-first-entity">
+                      {country1TopCauseOfDeath}
+                    </span>{' '}
+                    ].{' '}
+                  </strong>{' '}
+                  Around
+                  <strong>
+                    {' '}
+                    <span className="leading-cause-of-death-answer-number-first-entity">
+                      {' '}
+                      {country1TopCauseOfDeathNumber}{' '}
+                    </span>{' '}
+                    people per 100,000 people{' '}
+                  </strong>{' '}
+                  in{' '}
+                  <strong>
+                    <span className="first-entity-name-pages-paragraph">
+                      {' '}
+                      {country1}
+                    </span>
+                    ,
+                  </strong>{' '}
+                  are dying of{' '}
+                  <span className="leading-cause-of-death-answer-first-entity">
+                    {' '}
+                    {country1TopCauseOfDeath}
+                  </span>
+                  .
+                </p>
 
-          <p>
-            Similarly, around{' '}
-            <strong>
-              {' '}
-              <span className="leading-cause-of-death-answer-number-second-entity">
-                {' '}
-                {country2TopCauseOfDeathNumber}{' '}
-              </span>
-              people per 100,000 people{' '}
-            </strong>{' '}
-            in{' '}
-            <strong>
-              <span className="second-entity-name-pages-paragraph">
-                {' '}
-                {country2}
-              </span>
-              ,
-            </strong>{' '}
-            are dying of{' '}
-            <strong>
-              {' '}
-              <span className="leading-cause-of-death-answer-second-entity">
-                {' '}
-                {country2TopCauseOfDeath}
-              </span>
-            </strong>
-            , as it is the leading cause of death in there.
-          </p>
+                <p>
+                  Similarly, around{' '}
+                  <strong>
+                    {' '}
+                    <span className="leading-cause-of-death-answer-number-second-entity">
+                      {' '}
+                      {country2TopCauseOfDeathNumber}{' '}
+                    </span>
+                    people per 100,000 people{' '}
+                  </strong>{' '}
+                  in{' '}
+                  <strong>
+                    <span className="second-entity-name-pages-paragraph">
+                      {' '}
+                      {country2}
+                    </span>
+                    ,
+                  </strong>{' '}
+                  are dying of{' '}
+                  <strong>
+                    {' '}
+                    <span className="leading-cause-of-death-answer-second-entity">
+                      {' '}
+                      {country2TopCauseOfDeath}
+                    </span>
+                  </strong>
+                  , as it is the leading cause of death in there.
+                </p>
+              </>
+            )}
 
           <br />
-          <p>
-            The government of{' '}
-            <strong>
-              <span className="first-entity-name-pages-paragraph">
-                {' '}
-                {country1}
-              </span>
-              ,{' '}
-            </strong>
-            spent{' '}
-            <strong>
-              {' '}
-              [{' '}
-              <span className="health-expenditure-rate-answer-first-entity">
-                {' '}
-                {country1CurrentHealthExpenditurePercentage}%
-              </span>{' '}
-              ]{' '}
-            </strong>{' '}
-            of the amount of the Gross Domestic Product (GDP) in health sectors
-            in the year{' '}
-            <strong>
-              <span className="health-expenditure-rate-year"> {lastYear}</span>
-            </strong>
-            .
-          </p>
+          {country1CurrentHealthExpenditurePercentage &&
+            country2CurrentHealthExpenditurePercentage && (
+              <>
+                <p>
+                  The government of{' '}
+                  <strong>
+                    <span className="first-entity-name-pages-paragraph">
+                      {' '}
+                      {country1}
+                    </span>
+                    ,{' '}
+                  </strong>
+                  spent{' '}
+                  <strong>
+                    {' '}
+                    [{' '}
+                    <span className="health-expenditure-rate-answer-first-entity">
+                      {' '}
+                      {country1CurrentHealthExpenditurePercentage}%
+                    </span>{' '}
+                    ]{' '}
+                  </strong>{' '}
+                  of the amount of the Gross Domestic Product (GDP) in health
+                  sectors in the year{' '}
+                  <strong>
+                    <span className="health-expenditure-rate-year">
+                      {' '}
+                      {lastYear}
+                    </span>
+                  </strong>
+                  .
+                </p>
 
-          <p>
-            Likewise, the government of{' '}
-            <strong>
-              <span className="second-entity-name-pages-paragraph">
-                {' '}
-                {country2}
-              </span>
-              ,
-            </strong>
-            spent{' '}
-            <strong>
-              {' '}
-              [{' '}
-              <span className="health-expenditure-rate-answer-second-entity">
-                {' '}
-                {country2CurrentHealthExpenditurePercentage}%
-              </span>{' '}
-              ]{' '}
-            </strong>{' '}
-            of the amount of the Gross Domestic Product (GDP) in health sectors
-            in the year{' '}
-            <strong>
-              <span className="health-expenditure-rate-year"> {lastYear}</span>
-            </strong>
-            .
-          </p>
+                <p>
+                  Likewise, the government of{' '}
+                  <strong>
+                    <span className="second-entity-name-pages-paragraph">
+                      {' '}
+                      {country2}
+                    </span>
+                    ,
+                  </strong>
+                  {' '}spent{' '}
+                  <strong>
+                    {' '}
+                    [{' '}
+                    <span className="health-expenditure-rate-answer-second-entity">
+                      {' '}
+                      {country2CurrentHealthExpenditurePercentage}%
+                    </span>{' '}
+                    ]{' '}
+                  </strong>{' '}
+                  of the amount of the Gross Domestic Product (GDP) in health
+                  sectors in the year{' '}
+                  <strong>
+                    <span className="health-expenditure-rate-year">
+                      {' '}
+                      {lastYear}
+                    </span>
+                  </strong>
+                  .
+                </p>
+              </>
+            )}
         </div>
       </div>
 
@@ -1032,42 +1081,44 @@ function HealthFactors({ country1GeneralInfo, country2GeneralInfo, country1Curre
         </table>
       </div>
 
-      <div className="paragraph-for-pages-below-table">
-        <div className="para-for-pages-single-div">
-          <p>
-            As per the data from the World Health Organization (WHO), people
-            living in{' '}
-            <strong>
-              <span className="first-entity-name-pages-paragraph">
+      {country1AdultObesityPercentage && country2AdultObesityPercentage &&
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <p>
+              As per the data from the World Health Organization (WHO), people
+              living in{' '}
+              <strong>
+                <span className="first-entity-name-pages-paragraph">
+                  {' '}
+                  {country1}
+                </span>
+                ,
+              </strong>{' '}
+              are{' '}
+              <strong>
                 {' '}
-                {country1}
-              </span>
-              ,
-            </strong>{' '}
-            are{' '}
-            <strong>
-              {' '}
-              <span className="obese-calculations">
-                {obeseTimes}
-              </span> times{' '}
-            </strong>
-            <span className="more-or-less-obese-calculation-text">
-              {' '}
-              {moreOrLess}{' '}
-            </span>{' '}
-            likely to be obese compared to the people living in{' '}
-            <strong>
-              <span className="second-entity-name-pages-paragraph">
+                <span className="obese-calculations">
+                  {obeseTimes}
+                </span> times{' '}
+              </strong>
+              <span className="more-or-less-obese-calculation-text">
                 {' '}
-                {country2}
-              </span>
-            </strong>
-            .
-          </p>
+                {moreOrLess}{' '}
+              </span>{' '}
+              likely to be obese compared to the people living in{' '}
+              <strong>
+                <span className="second-entity-name-pages-paragraph">
+                  {' '}
+                  {country2}
+                </span>
+              </strong>
+              .
+            </p>
+          </div>
         </div>
-      </div>
+      }
     </>
   );
 }
 
-export default HealthFactors
+export default HealthFactors;

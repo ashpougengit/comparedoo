@@ -6,12 +6,12 @@ import Image from "next/image"
 
 function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLCase, slug2URLCase }) {
     const slug1GDPNominal = slug1StandardInfo.GDPNominal
-    const slug1GDPNominalStr = USStates.includes(slug1) ? `${formatNumberWithCommas(slug1GDPNominal)} million USD` : slug1GDPNominal
+    const slug1GDPNominalStr = USStates.includes(slug1) ? `$${formatNumberWithCommas((slug1GDPNominal * 1e6) / 1e9)} billion` : slug1GDPNominal
     const slug1GDPPerCapita = slug1StandardInfo.GDPPerCapita
     const slug1GINI = slug1StandardInfo.GINI
 
     const slug2GDPNominal = slug2StandardInfo.GDPNominal
-    const slug2GDPNominalStr = USStates.includes(slug2) ? `${formatNumberWithCommas(slug2GDPNominal)} million USD` : slug2GDPNominal
+    const slug2GDPNominalStr = USStates.includes(slug2) ? `$${formatNumberWithCommas((slug2GDPNominal * 1e6) / 1e9)} billion` : slug2GDPNominal
     const slug2GDPPerCapita = slug2StandardInfo.GDPPerCapita
     const slug2GINI = slug2StandardInfo.GINI
 
@@ -42,47 +42,47 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                 </div>
                             </th>
 
-                <th>
-                  <div className="heading-map-name-flag">
-                    <div className="first-entity-map-pages-comparison">
-                      <Image
-                        src={`/images/${slug1URLCase}-map-small.png`}
-                        layout="fill"
-                        objectFit="contain"
-                        alt={`Pictorial representation of map of ${slug1URLCase}`}
-                      />
-                    </div>
+                            <th>
+                                <div className="heading-map-name-flag">
+                                    <div className="first-entity-map-pages-comparison">
+                                        <Image
+                                            src={`/images/${slug1URLCase}-map-small.png`}
+                                            layout="fill"
+                                            objectFit="contain"
+                                            alt={`Pictorial representation of map of ${slug1URLCase}`}
+                                        />
+                                    </div>
 
-                    <div className="first-entity-name-pages-comparison">
-                      {slug1}
-                    </div>
+                                    <div className="first-entity-name-pages-comparison">
+                                        {slug1}
+                                    </div>
 
-                    <div className="first-entity-flag-pages-comparison">
-                      <Image
-                        src={`/images/${slug1URLCase}-flag-small.png`}
-                        layout="fill"
-                        objectFit="contain"
-                        alt={`Image illustrating the flag of ${slug1URLCase}`}
-                      />
-                    </div>
-                  </div>
-                </th>
+                                    <div className="first-entity-flag-pages-comparison">
+                                        <Image
+                                            src={`/images/${slug1URLCase}-flag-small.png`}
+                                            layout="fill"
+                                            objectFit="contain"
+                                            alt={`Image illustrating the flag of ${slug1URLCase}`}
+                                        />
+                                    </div>
+                                </div>
+                            </th>
 
-                <th>
-                  <div className="heading-map-name-flag">
-                    <div className="second-entity-map-pages-comparison">
-                      <Image
-                        src={`/images/${slug2URLCase}-map-small.png`}
-                        layout="fill"
-                        objectFit="contain"
-                        alt={`Pictorial representation of map of ${slug2URLCase}`}
-                      />
-                    </div>
+                            <th>
+                                <div className="heading-map-name-flag">
+                                    <div className="second-entity-map-pages-comparison">
+                                        <Image
+                                            src={`/images/${slug2URLCase}-map-small.png`}
+                                            layout="fill"
+                                            objectFit="contain"
+                                            alt={`Pictorial representation of map of ${slug2URLCase}`}
+                                        />
+                                    </div>
 
-                    <div className="second-entity-name-pages-comparison">
-                      {' '}
-                      {slug2}{' '}
-                    </div>
+                                    <div className="second-entity-name-pages-comparison">
+                                        {' '}
+                                        {slug2}{' '}
+                                    </div>
 
                                     <div className="second-entity-flag-pages-comparison">
                                         <Image src={`/images/${slug2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2URLCase}`} />
@@ -162,7 +162,7 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                 </table>
             </div>
 
-        <AdsHeaderBanner />
+            <AdsHeaderBanner />
 
             <div class="paragraph-for-pages-below-table">
                 <div class="para-for-pages-single-div">

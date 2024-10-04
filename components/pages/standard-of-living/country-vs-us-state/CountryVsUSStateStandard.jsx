@@ -6,12 +6,13 @@ import TaxAndFinance from "./tax-and-finance/TaxAndFinance"
 import Environment from "./environment/Environment"
 import LastParagraph from "./last-paragraph/LastParagraph"
 import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import { toURLFormat } from "@/lib/format/format"
 
 function CountryVsUSStateStandard({ slug1StandardInfo, slug2StandardInfo, value1, value2, standardTimes, betterOrLesser, listForLinks }) {
     const slug1 = slug1StandardInfo[value1]
     const slug2 = slug2StandardInfo[value2]
-    const slug1URLCase = slug1?.toLowerCase().split(' ').join('-')
-    const slug2URLCase = slug2?.toLowerCase().split(' ').join('-')
+    const slug1URLCase = toURLFormat(slug1)
+    const slug2URLCase = toURLFormat(slug2)
     const pageType = 'standard-of-living'
 
     return (

@@ -4,9 +4,9 @@ import Image from "next/image"
 function Education({ standardInfo, stateURLCase }) {
     const state = standardInfo.state
     const highSchoolGraduate = standardInfo.highSchoolGraduate
-    const associatedegreePercentage = standardInfo.associatedegreePercentage
-    const bachelorsdegreePercentage = standardInfo.bachelorsdegreePercentage
-    const graduatedegreePercentage = standardInfo.graduatedegreePercentage
+    const associateDegreePercentage = standardInfo.associateDegreePercentage
+    const bachelorsDegreePercentage = standardInfo.bachelorsDegreePercentage
+    const graduateDegreePercentage = standardInfo.graduateDegreePercentage
 
     return (
       <>
@@ -107,8 +107,8 @@ function Education({ standardInfo, stateURLCase }) {
                   </div>
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                  {associatedegreePercentage
-                    ? `${associatedegreePercentage} %`
+                  {associateDegreePercentage
+                    ? `${associateDegreePercentage} %`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -130,8 +130,8 @@ function Education({ standardInfo, stateURLCase }) {
                   </div>
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                  {bachelorsdegreePercentage
-                    ? `${bachelorsdegreePercentage} %`
+                  {bachelorsDegreePercentage
+                    ? `${bachelorsDegreePercentage} %`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -152,8 +152,8 @@ function Education({ standardInfo, stateURLCase }) {
                   </div>
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                  {graduatedegreePercentage
-                    ? `${graduatedegreePercentage} %`
+                  {graduateDegreePercentage
+                    ? `${graduateDegreePercentage} %`
                     : 'Yet to Update'}
                 </td>
               </tr>

@@ -7,17 +7,15 @@ import Symbols from "./symbols/Symbols"
 import DateAndTime from "./date-and-time/DateAndTime"
 import Population from "./population/Population"
 import Weather from './weather/Weather';
-import { convertLatLongToDecimal } from '@/lib/helper';
 import LastParagraph from './last-paragraph/LastParagraph';
 import ComparisonLinks from '@/components/comparison-links/ComparisonLinks';
+import { toURLFormat } from "@/lib/format/format"
 
 function GeneralInfoUSState({ generalInfo, weatherInfo, listForLinks }) {
   const state = generalInfo.state;
-  const stateURLCase = state.toLowerCase().split(' ').join('-');
-  const capitalCity = convertLatLongToDecimal(
-    generalInfo.latitude,
-    generalInfo.longitude
-  );
+  let stateURLCase = toURLFormat(state);
+  stateURLCase = stateURLCase === 'georgia-(usa)' ? 'georgia-usa' : stateURLCase
+
   const pageType = 'comparison';
 
   return (

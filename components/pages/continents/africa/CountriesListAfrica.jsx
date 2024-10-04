@@ -16,17 +16,15 @@ function CountriesListAfrica() {
       <div className="first-paragraph-of-the-page">
         <div className="first-para-single-div">
           <p>
-            There are total of{' '}
+            There are total of
             <strong>
-              {' '}
               <span className="number-of-countries-in-the-given-continent">
-                {' '}
-                54{' '}
+                {' '} 54{' '}
               </span>
             </strong>
             countries in
             <strong>
-              <span className="continent-name"> Africa</span>
+              <span className="continent-name">{' '} Africa</span>
             </strong>
             . You can click the countries links below and compare them further
             to other countries, cities and states in the world.

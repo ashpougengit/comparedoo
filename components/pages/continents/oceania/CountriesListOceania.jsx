@@ -18,15 +18,13 @@ function CountriesListOceania() {
           <p>
             There are total of
             <strong>
-              {' '}
               <span className="number-of-countries-in-the-given-continent">
-                15
+                {' '}15{' '}
               </span>
-            </strong>{' '}
+            </strong>
             countries in
             <strong>
-              {' '}
-              <span className="continent-name">Oceania</span>
+              <span className="continent-name">{' '}Oceania</span>
             </strong>
             . You can click the countries links below and compare them further
             to other countries, cities and states in the world.

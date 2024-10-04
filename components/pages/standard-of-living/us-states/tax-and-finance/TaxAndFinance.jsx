@@ -9,7 +9,7 @@ function TaxAndFinance({ state1StandardInfo, state2StandardInfo, state1URLCase, 
     const state1SalesTaxRates = state1StandardInfo.salesTaxRates
     const state1PropertyTaxRates = state1StandardInfo.propertyTaxRates
     const state1CorporateTaxRates = state1StandardInfo.corporateTaxRates
-    const state1GasandFuelTaxRatesPerGallon = state1StandardInfo.gasandFuelTaxRatesPerGallon
+    const state1GasAndFuelTaxRatesPerGallon = state1StandardInfo.gasAndFuelTaxRatesPerGallon
     const state1BeerTaxPerGallon = state1StandardInfo.beerTaxPerGallon
 
     const state2 = state2StandardInfo.state
@@ -17,7 +17,7 @@ function TaxAndFinance({ state1StandardInfo, state2StandardInfo, state1URLCase, 
     const state2SalesTaxRates = state2StandardInfo.salesTaxRates
     const state2PropertyTaxRates = state2StandardInfo.propertyTaxRates
     const state2CorporateTaxRates = state2StandardInfo.corporateTaxRates
-    const state2GasandFuelTaxRatesPerGallon = state2StandardInfo.gasandFuelTaxRatesPerGallon
+    const state2GasAndFuelTaxRatesPerGallon = state2StandardInfo.gasAndFuelTaxRatesPerGallon
     const state2BeerTaxPerGallon = state2StandardInfo.beerTaxPerGallon
 
     return (
@@ -222,13 +222,13 @@ function TaxAndFinance({ state1StandardInfo, state2StandardInfo, state1URLCase, 
                   </div>
                 </td>
                 <td className="gas-and-fuel-tax-rates-answer-first-entity all-indicator-answers">
-                  {state1GasandFuelTaxRatesPerGallon
-                    ? `${state1GasandFuelTaxRatesPerGallon} USD Per Gallon`
+                  {state1GasAndFuelTaxRatesPerGallon
+                    ? `${state1GasAndFuelTaxRatesPerGallon} USD Per Gallon`
                     : 'Yet to Update'}
                 </td>
                 <td className="gas-and-fuel-tax-rates-answer-second-entity all-indicator-answers">
-                  {state2GasandFuelTaxRatesPerGallon
-                    ? `${state2GasandFuelTaxRatesPerGallon} USD Per Gallon`
+                  {state2GasAndFuelTaxRatesPerGallon
+                    ? `${state2GasAndFuelTaxRatesPerGallon} USD Per Gallon`
                     : 'Yet to Update'}
                 </td>
               </tr>

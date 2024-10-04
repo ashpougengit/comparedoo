@@ -9,10 +9,11 @@ import ImportsAndExports from "./imports-and-exports/ImportsAndExports"
 import TaxFactors from "./tax-factors/TaxFactors"
 import LastParagraph from "./last-paragraph/LastParagraph"
 import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import { toURLFormat } from "@/lib/format/format"
 
 function StandardOfLivingCountry({ standardInfo, listForLinks }) {
   const country = standardInfo.country
-  const countryURLCase = country.toLowerCase().split(' ').join('-')
+  const countryURLCase = toURLFormat(country)
   const pageType = 'standard-of-living'
 
   return (

@@ -10,24 +10,21 @@ import AgeDistribution from "./age-distribution/AgeDistribution"
 import Weather from "./weather/Weather"
 import Health from "./health/Health"
 import CountryBasicInfo from './country-basic-info/CountryBasicInfo';
-import { convertLatLongToDecimal } from '@/lib/helper';
 import LastParagraph from './last-paragraph/LastParagraph';
 import ComparisonLinks from '@/components/comparison-links/ComparisonLinks';
+import { toURLFormat } from "@/lib/format/format"
 
 function GeneralInfoCountry({ generalInfo, weatherInfo, listForLinks }) {
   const country = generalInfo.country;
-  const countryURLCase = country.toLowerCase().split(' ').join('-');
-  const capitalCity = convertLatLongToDecimal(
-    generalInfo.latitude,
-    generalInfo.longitude
-  );
+  const countryURLCase = toURLFormat(country);
+
   const pageType = 'comparison';
 
   return (
     <>
       <ThreeTabs entity1={country} />
 
-      <TopDescription country={country} />
+      <TopDescription country={country} weatherInfo={weatherInfo} />
 
       <PictorialRepresentation
         country={country}

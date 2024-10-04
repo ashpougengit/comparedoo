@@ -3,7 +3,7 @@ import { dollarizedCountries } from "@/lib/array-list/dollarizedCountries"
 import { formatNumberWithCommas, formatUSDWithCommas } from "@/lib/format/format"
 import Image from "next/image"
 
-function ChildcareCost({ country1CostInfo, country2CostInfo, country1Currency, country2Currency, country1UnitValueInUSD, country2UnitValueInUSD, country1LowerCase, country2LowerCase }) {
+function ChildcareCost({ country1CostInfo, country2CostInfo, country1Currency, country2Currency, country1UnitValueInUSD, country2UnitValueInUSD, country1URLCase, country2URLCase }) {
     const country1 = country1CostInfo.country
     const country1ChildrensJeans = country1CostInfo.childrensJeans
     const country1ChildrensSneakers = country1CostInfo.childrensSneakers
@@ -46,15 +46,16 @@ function ChildcareCost({ country1CostInfo, country2CostInfo, country1Currency, c
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png"layout="fill"
-objectFit="contain"alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png"
+                                            layout="fill"
+                                            objectFit="contain" alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">Indicators</div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png"layout="fill"
-objectFit="contain"alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png" layout="fill"
+                                            objectFit="contain" alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -62,15 +63,15 @@ objectFit="contain"alt="Image illustrating an indicator" />
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-map-small.png`}layout="fill"
-objectFit="contain"alt={`Pictorial representation of map of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1URLCase}-map-small.png`} layout="fill"
+                                            objectFit="contain" alt={`Pictorial representation of map of ${country1URLCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1LowerCase}-flag-small.png`}layout="fill"
-objectFit="contain"alt={`Image illustrating the flag of ${country1LowerCase}`} />
+                                        <Image src={`/images/${country1URLCase}-flag-small.png`} layout="fill"
+                                            objectFit="contain" alt={`Image illustrating the flag of ${country1URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -78,15 +79,15 @@ objectFit="contain"alt={`Image illustrating the flag of ${country1LowerCase}`} /
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-map-small.png`}layout="fill"
-objectFit="contain"alt={`Pictorial representation of map of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2URLCase}-map-small.png`} layout="fill"
+                                            objectFit="contain" alt={`Pictorial representation of map of ${country2URLCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {country2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2LowerCase}-flag-small.png`}layout="fill"
-objectFit="contain"alt={`Image illustrating the flag of ${country2LowerCase}`} />
+                                        <Image src={`/images/${country2URLCase}-flag-small.png`} layout="fill"
+                                            objectFit="contain" alt={`Image illustrating the flag of ${country2URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -99,16 +100,16 @@ objectFit="contain"alt={`Image illustrating the flag of ${country2LowerCase}`} /
                             <td className="basic-info">
                                 <div className="all-indicators">Children&apos;s Jeans</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/children-jeans-image.png"layout="fill"
-objectFit="contain"alt="Image Describing Children Jeans" />
+                                    <Image src="/images/children-jeans-image.png" layout="fill"
+                                        objectFit="contain" alt="Image Describing Children Jeans" />
                                 </div>
                             </td>
 
                             <td className="children-jeans-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1ChildrensJeans)} ${country1ChildrensJeans ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="children-jeans-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1ChildrensJeans * country1UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="children-jeans-first-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country1ChildrensJeans * country1UnitValueInUSD)})`}</span>)}
                             </td>
                             <td className="children-jeans-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2ChildrensJeans)} ${country2ChildrensJeans ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="children-jeans-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2ChildrensJeans * country2UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="children-jeans-second-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country2ChildrensJeans * country2UnitValueInUSD)})`}</span>)}
                             </td>
                         </tr>
 
@@ -117,16 +118,16 @@ objectFit="contain"alt="Image Describing Children Jeans" />
                             <td className="basic-info">
                                 <div className="all-indicators">Children&apos;s Normal Sneakers</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/children-sneakers-image.png"layout="fill"
-objectFit="contain"alt="Image Describing Children Normal Sneakers" />
+                                    <Image src="/images/children-sneakers-image.png" layout="fill"
+                                        objectFit="contain" alt="Image Describing Children Normal Sneakers" />
                                 </div>
                             </td>
 
                             <td className="children-sneakers-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1ChildrensSneakers)} ${country1ChildrensSneakers ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="children-sneakers-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1ChildrensSneakers * country1UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="children-sneakers-first-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country1ChildrensSneakers * country1UnitValueInUSD)})`}</span>)}
                             </td>
                             <td className="children-sneakers-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2ChildrensSneakers)} ${country2ChildrensSneakers ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="children-sneakers-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2ChildrensSneakers * country2UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="children-sneakers-second-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country2ChildrensSneakers * country2UnitValueInUSD)})`}</span>)}
                             </td>
                         </tr>
 
@@ -134,16 +135,16 @@ objectFit="contain"alt="Image Describing Children Normal Sneakers" />
                             <td className="basic-info">
                                 <div className="all-indicators">Children&apos;s Winter Coat</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/children-winter-coat-image.png"layout="fill"
-objectFit="contain"alt="Image Describing Children's Winter Coat" />
+                                    <Image src="/images/children-winter-coat-image.png" layout="fill"
+                                        objectFit="contain" alt="Image Describing Children's Winter Coat" />
                                 </div>
                             </td>
 
                             <td className="children-winter-coat-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1ChildrensWinterCoat)} ${country1ChildrensWinterCoat ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="children-winter-coat-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1ChildrensWinterCoat * country1UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="children-winter-coat-first-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country1ChildrensWinterCoat * country1UnitValueInUSD)})`}</span>)}
                             </td>
                             <td className="children-winter-coat-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2ChildrensWinterCoat)} ${country2ChildrensWinterCoat ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="children-winter-coat-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2ChildrensWinterCoat * country2UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="children-winter-coat-second-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country2ChildrensWinterCoat * country2UnitValueInUSD)})`}</span>)}
                             </td>
                         </tr>
 
@@ -151,16 +152,16 @@ objectFit="contain"alt="Image Describing Children's Winter Coat" />
                             <td className="basic-info">
                                 <div className="all-indicators">Daycare for Infant</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/day-care-infant-image.png"layout="fill"
-objectFit="contain"alt="Image Describing Daycare for Infant" />
+                                    <Image src="/images/day-care-infant-image.png" layout="fill"
+                                        objectFit="contain" alt="Image Describing Daycare for Infant" />
                                 </div>
                             </td>
 
                             <td className="daycare-infant-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1DaycareInfant)} ${country1DaycareInfant ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="daycare-infant-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1DaycareInfant * country1UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="daycare-infant-first-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country1DaycareInfant * country1UnitValueInUSD)})`}</span>)}
                             </td>
                             <td className="daycare-infant-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2DaycareInfant)} ${country2DaycareInfant ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="daycare-infant-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2DaycareInfant * country2UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="daycare-infant-second-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country2DaycareInfant * country2UnitValueInUSD)})`}</span>)}
                             </td>
                         </tr>
 
@@ -169,16 +170,16 @@ objectFit="contain"alt="Image Describing Daycare for Infant" />
                             <td className="basic-info">
                                 <div className="all-indicators">Daycare for Toddler</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/day-care-toddler-image.png"layout="fill"
-objectFit="contain"alt="Image Describing Daycare for Toddler" />
+                                    <Image src="/images/day-care-toddler-image.png" layout="fill"
+                                        objectFit="contain" alt="Image Describing Daycare for Toddler" />
                                 </div>
                             </td>
 
                             <td className="daycare-toddler-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1DaycareToddler)} ${country1DaycareToddler ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="daycare-toddler-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1DaycareToddler * country1UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="daycare-toddler-first-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country1DaycareToddler * country1UnitValueInUSD)})`}</span>)}
                             </td>
                             <td className="daycare-toddler-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2DaycareToddler)} ${country2DaycareToddler ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="daycare-toddler-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2DaycareToddler * country2UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="daycare-toddler-second-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country2DaycareToddler * country2UnitValueInUSD)})`}</span>)}
                             </td>
                         </tr>
 
@@ -187,16 +188,16 @@ objectFit="contain"alt="Image Describing Daycare for Toddler" />
                                 <div className="all-indicators">Childcare for Sick Days</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/children-care-for-sick-days-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Image Describing Childcare for Sick Days" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Image Describing Childcare for Sick Days" />
                                 </div>
                             </td>
 
                             <td className="childcare-for-sick-days-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1ChildcareForSickDays)} ${country1ChildcareForSickDays ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="childcare-for-sick-days-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1ChildcareForSickDays * country1UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="childcare-for-sick-days-first-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country1ChildcareForSickDays * country1UnitValueInUSD)})`}</span>)}
                             </td>
                             <td className="childcare-for-sick-days-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2ChildcareForSickDays)} ${country2ChildcareForSickDays ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="childcare-for-sick-days-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2ChildcareForSickDays * country2UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="childcare-for-sick-days-second-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country2ChildcareForSickDays * country2UnitValueInUSD)})`}</span>)}
                             </td>
                         </tr>
 
@@ -205,18 +206,18 @@ objectFit="contain"alt="Image Describing Childcare for Sick Days" />
                                 <div className="all-indicators">Early Childhood Education Programs</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/early-childhood-education-programs-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Image Describing Early Childhood Education Programs" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Image Describing Early Childhood Education Programs" />
                                 </div>
                             </td>
 
                             <td className="early-childhood-education-program-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1EarlyChildhoodEducationPrograms)} ${country1EarlyChildhoodEducationPrograms ? country1Currency : ''}`}
                                 <br /> {dollarizedCountries.includes(country1) ? '' : (<span
-                                    className="early-childhood-education-program-first-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1EarlyChildhoodEducationPrograms * country1UnitValueInUSD)}`}</span>)}
+                                    className="early-childhood-education-program-first-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country1EarlyChildhoodEducationPrograms * country1UnitValueInUSD)})`}</span>)}
                             </td>
                             <td className="early-childhood-education-program-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2EarlyChildhoodEducationPrograms)} ${country2EarlyChildhoodEducationPrograms ? country2Currency : ''}`}
                                 <br /> {dollarizedCountries.includes(country2) ? '' : (<span
-                                    className="early-childhood-education-program-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2EarlyChildhoodEducationPrograms * country2UnitValueInUSD)}`}</span>)}
+                                    className="early-childhood-education-program-second-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country2EarlyChildhoodEducationPrograms * country2UnitValueInUSD)})`}</span>)}
                             </td>
                         </tr>
 
@@ -226,17 +227,17 @@ objectFit="contain"alt="Image Describing Early Childhood Education Programs" />
                                 <div className="all-indicators">Extra Curricular Activities</div>
                                 <div className="basic-information-images">
                                     <Image src="/images/extra-curricular-activities-image.png"
-                                       layout="fill"
-objectFit="contain"alt="Image Describing Extra Curricular Activities" />
+                                        layout="fill"
+                                        objectFit="contain" alt="Image Describing Extra Curricular Activities" />
                                 </div>
                             </td>
 
                             <td className="extra-curricular-activities-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1ExtracurricularActivities)} ${country1ExtracurricularActivities ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="extra-curricular-activities-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1ExtracurricularActivities * country1UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="extra-curricular-activities-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country1ExtracurricularActivities * country1UnitValueInUSD)})`}</span>)}
                             </td>
                             <td className="extra-curricular-activities-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2ExtracurricularActivities)} ${country2ExtracurricularActivities ? country2Currency : ''}`}
                                 <br /> {dollarizedCountries.includes(country2) ? '' : (<span
-                                    className="extra-curricular-activities-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2ExtracurricularActivities * country2UnitValueInUSD)}`}</span>)}
+                                    className="extra-curricular-activities-second-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country2ExtracurricularActivities * country2UnitValueInUSD)})`}</span>)}
                             </td>
                         </tr>
 
@@ -244,16 +245,16 @@ objectFit="contain"alt="Image Describing Extra Curricular Activities" />
                             <td className="basic-info">
                                 <div className="all-indicators">Summer Camp for Kids</div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/summer-camp-image.png"layout="fill"
-objectFit="contain"alt="Image Describing Summer Camp" />
+                                    <Image src="/images/summer-camp-image.png" layout="fill"
+                                        objectFit="contain" alt="Image Describing Summer Camp" />
                                 </div>
                             </td>
 
                             <td className="summer-camp-first-entity all-indicator-answers">{`${formatNumberWithCommas(country1SummerCamp)} ${country1SummerCamp ? country1Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="summer-camp-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country1SummerCamp * country1UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country1) ? '' : (<span className="summer-camp-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country1SummerCamp * country1UnitValueInUSD)})`}</span>)}
                             </td>
                             <td className="summer-camp-second-entity all-indicator-answers">{`${formatNumberWithCommas(country2SummerCamp)} ${country2SummerCamp ? country2Currency : ''}`}
-                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="summer-camp-second-entity-amount-in-usd amount-in-dollar">{`${formatUSDWithCommas(country2SummerCamp * country2UnitValueInUSD)}`}</span>)}
+                                <br /> {dollarizedCountries.includes(country2) ? '' : (<span className="summer-camp-second-entity-amount-in-usd amount-in-dollar">{`(${formatUSDWithCommas(country2SummerCamp * country2UnitValueInUSD)})`}</span>)}
                             </td>
                         </tr>
 
@@ -265,17 +266,17 @@ objectFit="contain"alt="Image Describing Summer Camp" />
                 <div className="para-for-pages-single-div">
                     <h3>
                         Does Childcare Care cost more in
-                        <span className="first-entity-name-pages-paragraph"> {country1} </span> than in
-                        <span className="second-entity-name-pages-paragraph"> {country2}</span>?
+                        <span className="first-entity-name-pages-paragraph"> {' '}{country1} {' '}</span> than in
+                        <span className="second-entity-name-pages-paragraph"> {' '}{country2}</span>?
                     </h3>
                     <p>
                         If you lived in
-                        <span className="first-entity-name-pages-paragraph"> {country1}</span>, instead of
-                        <span className="second-entity-name-pages-paragraph"> {country2}</span>, you would have
+                        <span className="first-entity-name-pages-paragraph"> {' '}{country1}</span>, instead of
+                        <span className="second-entity-name-pages-paragraph"> {' '}{country2}</span>, you would have
                         to pay
                         <strong>
-                            <span className="childcare-cost-calculation"> {costTimes} </span> times </strong> <span
-                                className="childcare-cost-more-or-less-calculation"> {moreOrLess} </span>
+                            <span className="childcare-cost-calculation">{' '} {costTimes}{' '} </span> times </strong> <span
+                                className="childcare-cost-more-or-less-calculation">{' '} {moreOrLess}{' '} </span>
                         for Childcare and kids clothing.
                     </p>
                 </div>

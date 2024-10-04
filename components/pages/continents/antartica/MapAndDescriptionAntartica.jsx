@@ -8,9 +8,6 @@ function MapAndDescriptionAntartica() {
             </div>
 
             <div className="map-of-continent-and-ads-section">
-
-
-
                 <div className="continent-map">
                     <img src="/images/map-of-antarctica-big.png" alt="Map of Antartica" />
                 </div>

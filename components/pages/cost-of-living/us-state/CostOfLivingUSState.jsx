@@ -20,34 +20,35 @@ import WagesAndTaxes from "./wages-and-taxes/WagesAndTaxes"
 import ProfessionalServices from "./professional-services/ProfessionalServices"
 import LastParagraph from "./last-paragraph/LastParagraph"
 import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import { toURLFormat } from "@/lib/format/format"
 
 function CostOfLivingUSState({ costInfo, propertyAndIncomeTaxInfo, listForLinks }) {
     const state = costInfo.state
-    const stateLowerCase = state.toLowerCase().split(' ').join('-')
+    const stateURLCase = toURLFormat(state)
     const pageType = 'cost-of-living'
 
     return (
         <>
             <ThreeTabs entity1={state} />
             <TopDescription state={state} />
-            <Housing costInfo={costInfo} propertyAndIncomeTaxInfo={propertyAndIncomeTaxInfo} stateLowerCase={stateLowerCase} />
-            <BasicUtilities costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <NetworkAndCommunication costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <Groceries costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <FruitsAndVegetables costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <DiningOut costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <Drinks costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <Transportation costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <Vehicle costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <Health costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <PersonalCare costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <Clothing costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <Childcare costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <Education costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <Entertainment costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <PrivateClasses costInfo={costInfo} stateLowerCase={stateLowerCase} />
-            <WagesAndTaxes costInfo={costInfo} propertyAndIncomeTaxInfo={propertyAndIncomeTaxInfo} stateLowerCase={stateLowerCase} />
-            <ProfessionalServices costInfo={costInfo} stateLowerCase={stateLowerCase} />
+            <Housing costInfo={costInfo} propertyAndIncomeTaxInfo={propertyAndIncomeTaxInfo} stateURLCase={stateURLCase} />
+            <BasicUtilities costInfo={costInfo} stateURLCase={stateURLCase} />
+            <NetworkAndCommunication costInfo={costInfo} stateURLCase={stateURLCase} />
+            <Groceries costInfo={costInfo} stateURLCase={stateURLCase} />
+            <FruitsAndVegetables costInfo={costInfo} stateURLCase={stateURLCase} />
+            <DiningOut costInfo={costInfo} stateURLCase={stateURLCase} />
+            <Drinks costInfo={costInfo} stateURLCase={stateURLCase} />
+            <Transportation costInfo={costInfo} stateURLCase={stateURLCase} />
+            <Vehicle costInfo={costInfo} stateURLCase={stateURLCase} />
+            <Health costInfo={costInfo} stateURLCase={stateURLCase} />
+            <PersonalCare costInfo={costInfo} stateURLCase={stateURLCase} />
+            <Clothing costInfo={costInfo} stateURLCase={stateURLCase} />
+            <Childcare costInfo={costInfo} stateURLCase={stateURLCase} />
+            <Education costInfo={costInfo} stateURLCase={stateURLCase} />
+            <Entertainment costInfo={costInfo} stateURLCase={stateURLCase} />
+            <PrivateClasses costInfo={costInfo} stateURLCase={stateURLCase} />
+            <WagesAndTaxes costInfo={costInfo} propertyAndIncomeTaxInfo={propertyAndIncomeTaxInfo} stateURLCase={stateURLCase} />
+            <ProfessionalServices costInfo={costInfo} stateURLCase={stateURLCase} />
             <LastParagraph state={state} />
             <ComparisonLinks entity={state} listForLinks={listForLinks} pageType={pageType}
             />

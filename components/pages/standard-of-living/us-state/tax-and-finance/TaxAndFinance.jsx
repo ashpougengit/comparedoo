@@ -9,7 +9,7 @@ function TaxAndFinance({ standardInfo, stateURLCase }) {
     const salesTaxRates = standardInfo.salesTaxRates
     const propertyTaxRates = standardInfo.propertyTaxRates
     const corporateTaxRates = standardInfo.corporateTaxRates
-    const gasandFuelTaxRatesPerGallon = standardInfo.gasandFuelTaxRatesPerGallon
+    const gasAndFuelTaxRatesPerGallon = standardInfo.gasAndFuelTaxRatesPerGallon
     const beerTaxPerGallon = standardInfo.beerTaxPerGallon
 
     return (
@@ -174,8 +174,8 @@ function TaxAndFinance({ standardInfo, stateURLCase }) {
                   </div>
                 </td>
                 <td className="gas-and-fuel-tax-rates-answer-first-entity all-indicator-answers">
-                  {gasandFuelTaxRatesPerGallon
-                    ? `${gasandFuelTaxRatesPerGallon} USD Per Gallon`
+                  {gasAndFuelTaxRatesPerGallon
+                    ? `${gasAndFuelTaxRatesPerGallon} USD Per Gallon`
                     : 'Yet to Update'}
                 </td>
               </tr>

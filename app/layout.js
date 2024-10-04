@@ -6,6 +6,7 @@ import ScrollProgressBar from '@/components/scroll-progress-bar/ScrollProgressBa
 import ScrollToTopBottom from '@/components/scroll-to-top-bottom/ScrollToTopBottom';
 import NetworkStatus from '@/components/network-status/NetworkStatus';
 import Script from 'next/script';
+import CookieBanner from '@/components/cookie-banner/CookieBanner';
 
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
@@ -83,6 +84,8 @@ export default function RootLayout({ children }) {
 
         {children}
 
+        <CookieBanner />
+        
         <ScrollToTopBottom />
 
         <Footer />

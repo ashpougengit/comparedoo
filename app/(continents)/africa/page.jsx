@@ -56,7 +56,7 @@ async function Africa() {
 
       <div className="meta-title-primary-heading">
         <h1 className='entry-title' >
-          List of all countries in [<span className="continent-name">Africa</span>]
+          List of all countries in{' '} [<span className="continent-name">Africa</span>]
         </h1>
       </div>
 

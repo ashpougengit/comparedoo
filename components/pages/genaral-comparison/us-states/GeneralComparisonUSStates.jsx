@@ -10,6 +10,7 @@ import LastParagraph from "./last-paragraph/LastParagraph"
 import Weather from './weather/Weather';
 import { convertLatLongToDecimal } from '@/lib/helper';
 import ComparisonLinks from '@/components/comparison-links/ComparisonLinks';
+import { toURLFormat } from "@/lib/format/format"
 
 function GeneralComparisonUSStates({
   state1GeneralInfo,
@@ -22,8 +23,11 @@ function GeneralComparisonUSStates({
 }) {
   const state1 = state1GeneralInfo.state;
   const state2 = state2GeneralInfo.state;
-  const state1URLCase = state1.toLowerCase().split(' ').join('-');
-  const state2URLCase = state2.toLowerCase().split(' ').join('-');
+  let state1URLCase = toURLFormat(state1);
+  state1URLCase = state1URLCase === 'georgia-(usa)' ? 'georgia-usa' : state1URLCase
+  let state2URLCase = toURLFormat(state2);
+  state2URLCase = state2URLCase === 'georgia-(usa)' ? 'georgia-usa' : state2URLCase
+
   const capitalCity1 = convertLatLongToDecimal(
     state1GeneralInfo.latitude,
     state1GeneralInfo.longitude

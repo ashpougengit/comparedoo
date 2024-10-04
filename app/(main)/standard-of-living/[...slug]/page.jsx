@@ -6,16 +6,24 @@ import StandardOfLivingUSStates from "@/components/pages/standard-of-living/us-s
 import CountryVsUSStateStandard from "@/components/pages/standard-of-living/country-vs-us-state/CountryVsUSStateStandard";
 import StandardOfLivingCountry from "@/components/pages/standard-of-living/country/StandardOfLivingCountry";
 import StandardOfLivingUSState from "@/components/pages/standard-of-living/us-state/StandardOfLivingUSState";
-import { decodeAndValidateSlugs, fetchData } from "@/lib/helper";
+import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 import { titleCased } from "@/lib/format/format";
 import { fetchCountryStandardInfo, fetchUSStateStandardInfo } from "@/lib/database/fetch";
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
+import Error404 from "@/components/error/Error404";
 
 // generateMetadata function
 export async function generateMetadata({ params }) {
     const { slug } = params;
+
+    if (slug.length > 2) {
+        return {
+            title: 'Error',
+            description: 'Invalid URL. Please check the path and try again.',
+        }
+    }
 
     try {
         const [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
@@ -66,18 +74,24 @@ export async function generateMetadata({ params }) {
 async function StandardComparison({ params }) {
     const { slug } = params;
 
+    if (slug.length > 2) {
+        return <Error404 />
+      }
+      
     let decodedSlug1, decodedSlug2;
 
     try {
         [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
     } catch (error) {
-        return <p>Error: {error.message}</p>;
+        // return <p>Error: {error.message}</p>;
+        return <Error404 />
     }
 
     const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
 
     if ([entity1, entity2].includes('United States') && USStates.includes(entity1 === 'United States' ? entity2 : entity1)) {
-        return <p>Error: Cannot compare a U.S. state with the United States itself.</p>;
+        // return <p>Error: Cannot compare a U.S. state with the United States itself.</p>;
+        return <Error404 />
     }
 
     const isSlug1Country = allCountries.includes(entity1);
@@ -115,7 +129,7 @@ async function StandardComparison({ params }) {
 
         return (
             <>
-                <SearchBox slug1={entity1} slug2={entity2} />
+                <SearchBox slug1={checkCountry(entity1)} slug2={checkCountry(entity2)} />
                 <AdsHeaderBanner />
                 <PageTitle entity1={entity1} entity2={entity2} />
                 <PublishInfo formattedDate={formattedDate} />
@@ -123,7 +137,8 @@ async function StandardComparison({ params }) {
             </>
         );
     } catch (error) {
-        return <p>Error: Unable to fetch data.</p>;
+        // return <p>Error: Unable to fetch data.</p>;
+        return <Error404 />
     }
 }
 
@@ -178,7 +193,8 @@ const renderContent = ({ slug, entity1, entity2, entity1StandardInfo, entity2Sta
         }
     }
 
-    return <p>Error: Unable to fetch all data.</p>;
+    // return <p>Error: Unable to fetch all data.</p>;
+    return <Error404 />
 };
 
 export default StandardComparison;

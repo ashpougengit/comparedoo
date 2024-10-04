@@ -3,228 +3,229 @@ import { determineCurrentTimezone, renderTimezones } from "@/lib/date-and-time/d
 import Image from "next/image"
 
 function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
-    const country = generalInfo.country
-    const currentDate = weatherInfo?.currentDate
-    const currentTime = weatherInfo?.currentTime
-    const totalTimezonesArray = generalInfo.totalTimezones.split('<br />')
-    const DST = generalInfo.DST
-    const DSTStart = generalInfo.DSTStart
-    const DSTEnd = generalInfo.DSTEnd
-    const DSTDuration = generalInfo.DSTDuration
-    const timezoneNormal = generalInfo.timezoneNormal
-    const timezoneSummer = generalInfo.timezoneSummer
+  const country = generalInfo.country
+  const currentDate = weatherInfo?.currentDate
+  const currentTime = weatherInfo?.currentTime
+  const totalTimezonesArray = generalInfo.totalTimezones.split('<br />')
+  const DST = generalInfo.DST
+  const DSTStart = generalInfo.DSTStart
+  const DSTEnd = generalInfo.DSTEnd
+  const DSTDuration = generalInfo.DSTDuration
+  const timezoneNormal = generalInfo.timezoneNormal
+  const timezoneSummer = generalInfo.timezoneSummer
 
-    const currentTimezone = determineCurrentTimezone(DSTStart, DSTEnd, timezoneNormal, timezoneSummer);
-    const currentTimezoneArray = currentTimezone.split('<br />')
-    const multipleTimezones = currentTimezoneArray.length > 1
+  const currentTimezone = determineCurrentTimezone(DSTStart, DSTEnd, timezoneNormal, timezoneSummer);
+  const currentTimezoneArray = currentTimezone.split('<br />')
+  const multipleTimezones = currentTimezoneArray.length > 1
 
-    return (
-      <>
-        <AdsHeaderBanner />
+  return (
+    <>
+      <AdsHeaderBanner />
 
-        <div className="time-differences-comparison">
-          <h2 className="pages-h2">Date and Time Information</h2>
-        </div>
+      <div className="time-differences-comparison">
+        <h2 className="pages-h2">Date and Time Information</h2>
+      </div>
 
-        <div className="time-factors-comparison">
-          <table className="indicators-single-country-divs">
-            <thead>
-              <tr className="first-tr">
-                <th>
-                  <div className="heading-map-name-flag">
-                    <div className="right-indicator">
-                      <Image
-                        src="/images/indicators-right-image.png"
-                        layout="fill"
-                        objectFit="contain"
-                        alt="Image representing an indicator"
-                      />
-                    </div>
-
-                    <div className="indicator-text">Indicators</div>
-
-                    <div className="left-indicator">
-                      <Image
-                        src="/images/indicators-left-image.png"
-                        layout="fill"
-                        objectFit="contain"
-                        alt="Image illustrating an indicator"
-                      />
-                    </div>
-                  </div>
-                </th>
-
-                <th>
-                  <div className="heading-map-name-flag">
-                    <div className="first-entity-map-pages-comparison">
-                      <Image
-                        src={`/images/${countryURLCase}-map-small.png`}
-                        layout="fill"
-                        objectFit="contain"
-                        alt={`Pictorial representation of map of ${countryURLCase}`}
-                      />
-                    </div>
-
-                    <div className="first-entity-name-pages-comparison">
-                      {country}
-                    </div>
-
-                    <div className="first-entity-flag-pages-comparison">
-                      <Image
-                        src={`/images/${countryURLCase}-flag-small.png`}
-                        layout="fill"
-                        objectFit="contain"
-                        alt={`Image illustrating the flag of ${countryURLCase}`}
-                      />
-                    </div>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td className="basic-info">
-                  <div className="all-indicators">Current Date</div>
-                  <div className="basic-information-images">
+      <div className="time-factors-comparison">
+        <table className="indicators-single-country-divs">
+          <thead>
+            <tr className="first-tr">
+              <th>
+                <div className="heading-map-name-flag">
+                  <div className="right-indicator">
                     <Image
-                      src="/images/current-date-image.png"
+                      src="/images/indicators-right-image.png"
                       layout="fill"
                       objectFit="contain"
-                      alt="Visual representation of current date of any specific country"
+                      alt="Image representing an indicator"
                     />
                   </div>
-                </td>
-                <td className="current-date-answer-first-entity all-indicator-answers">
-                  {currentDate ?? 'Yet to Update'}
-                </td>
-              </tr>
-              <tr>
-                <td className="basic-info">
-                  <div className="all-indicators">Current Time</div>
-                  <div className="basic-information-images">
+
+                  <div className="indicator-text">Indicators</div>
+
+                  <div className="left-indicator">
                     <Image
-                      src="/images/current-time-image.png"
+                      src="/images/indicators-left-image.png"
                       layout="fill"
                       objectFit="contain"
-                      alt="Visual representation of current time of any specific country"
+                      alt="Image illustrating an indicator"
                     />
                   </div>
-                </td>
-                <td className="current-time-answer-first-entity all-indicator-answers">
-                  {currentTime ?? 'Yet to Update'}
-                </td>
-              </tr>
-              <tr>
-                <td className="basic-info">
-                  <div className="all-indicators">Timezones</div>
-                  <div className="basic-information-images">
+                </div>
+              </th>
+
+              <th>
+                <div className="heading-map-name-flag">
+                  <div className="first-entity-map-pages-comparison">
                     <Image
-                      src="/images/timezone-image.png"
+                      src={`/images/${countryURLCase}-map-small.png`}
                       layout="fill"
                       objectFit="contain"
-                      alt="Visual representation of timezones of any specific country"
+                      alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
-                </td>
-                <td className="timezones-first-entity all-indicator-answers">
-                  {renderTimezones(totalTimezonesArray) ?? 'Yet to Update'}
-                </td>
-              </tr>
 
-              <tr>
-                <td className="basic-info">
-                  <div className="all-indicators">Current Timezone</div>
-                  <div className="basic-information-images">
+                  <div className="first-entity-name-pages-comparison">
+                    {country}
+                  </div>
+
+                  <div className="first-entity-flag-pages-comparison">
                     <Image
-                      src="/images/current-timezone-image.png"
+                      src={`/images/${countryURLCase}-flag-small.png`}
                       layout="fill"
                       objectFit="contain"
-                      alt="Visual representation of current timezone of any specific country"
+                      alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
-                </td>
-                <td className="current-timezone-answer-first-entity all-indicator-answers">
-                  {renderTimezones(currentTimezoneArray) ?? 'Yet to Update'}
-                </td>
-              </tr>
+                </div>
+              </th>
+            </tr>
+          </thead>
 
-              <tr>
-                <td className="basic-info">
-                  <div className="all-indicators">Daylight Saving Time</div>
-                  <div className="basic-information-images">
-                    <Image
-                      src="/images/internet-tld-image.png"
-                      layout="fill"
-                      objectFit="contain"
-                      alt="Visual representation of Daylight Saving Time of any specific country"
-                    />
-                  </div>
-                </td>
-                <td className="dst-timezone-answer-first-entity all-indicator-answers">
-                  {DST ?? 'Yet to Update'}
-                </td>
-              </tr>
+          <tbody>
+            <tr>
+              <td className="basic-info">
+                <div className="all-indicators">Current Date</div>
+                <div className="basic-information-images">
+                  <Image
+                    src="/images/current-date-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of current date of any specific country"
+                  />
+                </div>
+              </td>
+              <td className="current-date-answer-first-entity all-indicator-answers">
+                {currentDate ?? 'Yet to Update'}
+              </td>
+            </tr>
+            <tr>
+              <td className="basic-info">
+                <div className="all-indicators">Current Time</div>
+                <div className="basic-information-images">
+                  <Image
+                    src="/images/current-time-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of current time of any specific country"
+                  />
+                </div>
+              </td>
+              <td className="current-time-answer-first-entity all-indicator-answers">
+                {currentTime ?? 'Yet to Update'}
+              </td>
+            </tr>
+            <tr>
+              <td className="basic-info">
+                <div className="all-indicators">Timezones</div>
+                <div className="basic-information-images">
+                  <Image
+                    src="/images/timezone-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of timezones of any specific country"
+                  />
+                </div>
+              </td>
+              <td className="timezones-first-entity all-indicator-answers">
+                {renderTimezones(totalTimezonesArray) ?? 'Yet to Update'}
+              </td>
+            </tr>
 
-              <tr>
-                <td className="basic-info">
-                  <div className="all-indicators">
-                    Daylight Saving Time Start
-                  </div>
-                  <div className="basic-information-images">
-                    <Image
-                      src="/images/dst-start-image.png"
-                      layout="fill"
-                      objectFit="contain"
-                      alt="Visual representation of Daylight Saving Time Start of any specific country"
-                    />
-                  </div>
-                </td>
+            <tr>
+              <td className="basic-info">
+                <div className="all-indicators">Current Timezone</div>
+                <div className="basic-information-images">
+                  <Image
+                    src="/images/current-timezone-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of current timezone of any specific country"
+                  />
+                </div>
+              </td>
+              <td className="current-timezone-answer-first-entity all-indicator-answers">
+                {renderTimezones(currentTimezoneArray) ?? 'Yet to Update'}
+              </td>
+            </tr>
 
-                <td className="dst-start-answer-first-entity all-indicator-answers">
-                  {DSTStart ?? 'Yet to Update'}
-                </td>
-              </tr>
+            <tr>
+              <td className="basic-info">
+                <div className="all-indicators">Daylight Saving Time</div>
+                <div className="basic-information-images">
+                  <Image
+                    src="/images/internet-tld-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of Daylight Saving Time of any specific country"
+                  />
+                </div>
+              </td>
+              <td className="dst-timezone-answer-first-entity all-indicator-answers">
+                {DST ?? 'Yet to Update'}
+              </td>
+            </tr>
 
-              <tr>
-                <td className="basic-info">
-                  <div className="all-indicators">Daylight Saving Time End</div>
-                  <div className="basic-information-images">
-                    <Image
-                      src="/images/dst-end-image.png"
-                      layout="fill"
-                      objectFit="contain"
-                      alt="Visual representation of Daylight Saving Time End of any specific country"
-                    />
-                  </div>
-                </td>
-                <td className="dst-end-answer-first-entity all-indicator-answers">
-                  {DSTEnd ?? 'Yet to Update'}
-                </td>
-              </tr>
+            <tr>
+              <td className="basic-info">
+                <div className="all-indicators">
+                  Daylight Saving Time Start
+                </div>
+                <div className="basic-information-images">
+                  <Image
+                    src="/images/dst-start-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of Daylight Saving Time Start of any specific country"
+                  />
+                </div>
+              </td>
 
-              <tr>
-                <td className="basic-info">
-                  <div className="all-indicators">
-                    Daylight Saving Time Duration
-                  </div>
-                  <div className="basic-information-images">
-                    <Image
-                      src="/images/dst-duration-image.png"
-                      layout="fill"
-                      objectFit="contain"
-                      alt="Visual representation of Daylight Saving Time Duration of any specific country"
-                    />
-                  </div>
-                </td>
-                <td className="dst-duration-answer-first-entity all-indicator-answers">
-                  {DSTDuration ?? 'Yet to Update'}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <td className="dst-start-answer-first-entity all-indicator-answers">
+                {DSTStart ?? 'Yet to Update'}
+              </td>
+            </tr>
 
+            <tr>
+              <td className="basic-info">
+                <div className="all-indicators">Daylight Saving Time End</div>
+                <div className="basic-information-images">
+                  <Image
+                    src="/images/dst-end-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of Daylight Saving Time End of any specific country"
+                  />
+                </div>
+              </td>
+              <td className="dst-end-answer-first-entity all-indicator-answers">
+                {DSTEnd ?? 'Yet to Update'}
+              </td>
+            </tr>
+
+            <tr>
+              <td className="basic-info">
+                <div className="all-indicators">
+                  Daylight Saving Time Duration
+                </div>
+                <div className="basic-information-images">
+                  <Image
+                    src="/images/dst-duration-image.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Visual representation of Daylight Saving Time Duration of any specific country"
+                  />
+                </div>
+              </td>
+              <td className="dst-duration-answer-first-entity all-indicator-answers">
+                {DSTDuration ?? 'Yet to Update'}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {(weatherInfo || DST) &&
         <div className="paragraph-for-pages-below-table">
           <div className="para-for-pages-single-div">
             {weatherInfo && (
@@ -317,8 +318,9 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
             )}
           </div>
         </div>
-      </>
-    );
+      }
+    </>
+  );
 }
 
 export default DateAndTime

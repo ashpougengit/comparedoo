@@ -10,6 +10,9 @@ import Loading from '../loading/Loading';
 import Image from 'next/image';
 
 export default function SearchBox({ userCountry, slug1, slug2 = null }) {
+  const countriesForSearch = allCountries.filter(country => country !== "Côte d'Ivoire" && country !== 'São Tomé and Príncipe');
+  const entitiesForSearch = allEntities.filter(entity => entity !== "Côte d'Ivoire" && entity !== 'São Tomé and Príncipe');
+
   const isSlug2 = slug2 !== null;
   let value1, value2;
 
@@ -20,21 +23,21 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
 
   const router = useRouter();
 
-  const [input1, setInput1] = useState(userCountry ? userCountry : titleCased(slug1));
+  const [input1, setInput1] = useState(userCountry ? userCountry : slug1);
   const [input2, setInput2] = useState('');
 
-  const [tempInput1, setTempInput1] = useState(userCountry ? userCountry : titleCased(slug1));
+  const [tempInput1, setTempInput1] = useState(userCountry ? userCountry : slug1);
   const [tempInput2, setTempInput2] = useState('');
 
   const [loading, setLoading] = useState(false);
   const [dropdown1Visible, setDropdown1Visible] = useState(false);
   const [dropdown2Visible, setDropdown2Visible] = useState(false);
-  const [filteredCountries1, setFilteredCountries1] = useState(allEntities);
-  const [filteredCountries2, setFilteredCountries2] = useState(allEntities);
+  const [filteredCountries1, setFilteredCountries1] = useState(entitiesForSearch);
+  const [filteredCountries2, setFilteredCountries2] = useState(entitiesForSearch);
 
   const input1Ref = useRef(null);
   const input2Ref = useRef(null);
-  const previousInput1 = useRef(userCountry ? userCountry : titleCased(slug1));
+  const previousInput1 = useRef(userCountry ? userCountry : slug1);
   const previousInput2 = useRef('');
 
   useEffect(() => {
@@ -61,13 +64,13 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
   const getFilteredCountries = (otherInput) => {
     if (otherInput === 'United States') {
       // If the other input is "United States", remove all US states from the dropdown
-      return allCountries;
+      return countriesForSearch;
     } else if (USStates.includes(otherInput)) {
       // If the other input is a US state, remove "United States" from the dropdown
-      return allEntities.filter(entity => entity !== 'United States');
+      return entitiesForSearch.filter(entity => entity !== 'United States');
     } else {
       // Otherwise, return all entities except the other input
-      return allEntities.filter(entity => entity !== otherInput).sort();
+      return entitiesForSearch.filter(entity => entity !== otherInput).sort();
     }
   };
 

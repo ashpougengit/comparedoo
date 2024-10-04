@@ -1,30 +1,64 @@
-import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
-import { formatCost, isDollarized } from "@/lib/format/formatCost"
-import Image from "next/image"
+import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner';
+import { formatCost, isDollarized } from '@/lib/format/formatCost';
+import Image from 'next/image';
 
-function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo, slug1Currency, slug2Currency, slug1ExchangeRate, slug2ExchangeRate, slug1LowerCase, slug2LowerCase }) {
-  const slug1LanguageClasses = slug1CostInfo.languageClasses
-  const slug1ParentingClasses = slug1CostInfo.parentingClasses
-  const slug1ArtClasses = slug1CostInfo.artClasses
-  const slug1FitnessClass = slug1CostInfo.fitnessClass
-  const slug1MusicLessons = slug1CostInfo.musicLessons
-  const slug1DanceLessons = slug1CostInfo.danceLessons
-  const slug1ReadingMaterials = slug1CostInfo.readingMaterials
-  const slug1EducationalSoftware = slug1CostInfo.educationalSoftware
-  const slug1TotalCost = ((slug1LanguageClasses || 0) + (slug1ParentingClasses || 0) + (slug1ArtClasses || 0) + (slug1FitnessClass || 0) + (slug1MusicLessons || 0) + (slug1DanceLessons || 0) + (slug1ReadingMaterials || 0) + (slug1EducationalSoftware || 0)) * slug1ExchangeRate
+function PrivateClasses({
+  slug1,
+  slug2,
+  value1,
+  value2,
+  slug1CostInfo,
+  slug2CostInfo,
+  slug1Currency,
+  slug2Currency,
+  slug1ExchangeRate,
+  slug2ExchangeRate,
+  slug1URLCase,
+  slug2URLCase,
+}) {
+  const slug1LanguageClasses = slug1CostInfo.languageClasses;
+  const slug1ParentingClasses = slug1CostInfo.parentingClasses;
+  const slug1ArtClasses = slug1CostInfo.artClasses;
+  const slug1FitnessClass = slug1CostInfo.fitnessClass;
+  const slug1MusicLessons = slug1CostInfo.musicLessons;
+  const slug1DanceLessons = slug1CostInfo.danceLessons;
+  const slug1ReadingMaterials = slug1CostInfo.readingMaterials;
+  const slug1EducationalSoftware = slug1CostInfo.educationalSoftware;
+  const slug1TotalCost =
+    ((slug1LanguageClasses || 0) +
+      (slug1ParentingClasses || 0) +
+      (slug1ArtClasses || 0) +
+      (slug1FitnessClass || 0) +
+      (slug1MusicLessons || 0) +
+      (slug1DanceLessons || 0) +
+      (slug1ReadingMaterials || 0) +
+      (slug1EducationalSoftware || 0)) *
+    slug1ExchangeRate;
 
-  const slug2LanguageClasses = slug2CostInfo.languageClasses
-  const slug2ParentingClasses = slug2CostInfo.parentingClasses
-  const slug2ArtClasses = slug2CostInfo.artClasses
-  const slug2FitnessClass = slug2CostInfo.fitnessClass
-  const slug2MusicLessons = slug2CostInfo.musicLessons
-  const slug2DanceLessons = slug2CostInfo.danceLessons
-  const slug2ReadingMaterials = slug2CostInfo.readingMaterials
-  const slug2EducationalSoftware = slug2CostInfo.educationalSoftware
-  const slug2TotalCost = ((slug2LanguageClasses || 0) + (slug2ParentingClasses || 0) + (slug2ArtClasses || 0) + (slug2FitnessClass || 0) + (slug2MusicLessons || 0) + (slug2DanceLessons || 0) + (slug2ReadingMaterials || 0) + (slug2EducationalSoftware || 0)) * slug2ExchangeRate
+  const slug2LanguageClasses = slug2CostInfo.languageClasses;
+  const slug2ParentingClasses = slug2CostInfo.parentingClasses;
+  const slug2ArtClasses = slug2CostInfo.artClasses;
+  const slug2FitnessClass = slug2CostInfo.fitnessClass;
+  const slug2MusicLessons = slug2CostInfo.musicLessons;
+  const slug2DanceLessons = slug2CostInfo.danceLessons;
+  const slug2ReadingMaterials = slug2CostInfo.readingMaterials;
+  const slug2EducationalSoftware = slug2CostInfo.educationalSoftware;
+  const slug2TotalCost =
+    ((slug2LanguageClasses || 0) +
+      (slug2ParentingClasses || 0) +
+      (slug2ArtClasses || 0) +
+      (slug2FitnessClass || 0) +
+      (slug2MusicLessons || 0) +
+      (slug2DanceLessons || 0) +
+      (slug2ReadingMaterials || 0) +
+      (slug2EducationalSoftware || 0)) *
+    slug2ExchangeRate;
 
-  const costTimes = slug1TotalCost > slug2TotalCost ? (slug1TotalCost / slug2TotalCost).toFixed(2) : (slug2TotalCost / slug1TotalCost).toFixed(2)
-  const moreOrLess = slug1TotalCost > slug2TotalCost ? 'more' : 'less'
+  const costTimes =
+    slug1TotalCost > slug2TotalCost
+      ? (slug1TotalCost / slug2TotalCost).toFixed(2)
+      : (slug2TotalCost / slug1TotalCost).toFixed(2);
+  const moreOrLess = slug1TotalCost > slug2TotalCost ? 'more' : 'less';
 
   const isDollarizedSlug1 = isDollarized(value1, slug1);
   const isDollarizedSlug2 = isDollarized(value2, slug2);
@@ -71,10 +105,10 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                 <div className="heading-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
                     <Image
-                      src={`/images/${slug1LowerCase}-map-small.png`}
+                      src={`/images/${slug1URLCase}-map-small.png`}
                       layout="fill"
                       objectFit="contain"
-                      alt={`Pictorial representation of map of ${slug1LowerCase}`}
+                      alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
 
@@ -84,10 +118,10 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
 
                   <div className="first-entity-flag-pages-comparison">
                     <Image
-                      src={`/images/${slug1LowerCase}-flag-small.png`}
+                      src={`/images/${slug1URLCase}-flag-small.png`}
                       layout="fill"
                       objectFit="contain"
-                      alt={`Image illustrating the flag of ${slug1LowerCase}`}
+                      alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
                 </div>
@@ -97,10 +131,10 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
                 <div className="heading-map-name-flag">
                   <div className="second-entity-map-pages-comparison">
                     <Image
-                      src={`/images/${slug2LowerCase}-map-small.png`}
+                      src={`/images/${slug2URLCase}-map-small.png`}
                       layout="fill"
                       objectFit="contain"
-                      alt={`Pictorial representation of map of ${slug2LowerCase}`}
+                      alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
 
@@ -111,10 +145,10 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
 
                   <div className="second-entity-flag-pages-comparison">
                     <Image
-                      src={`/images/${slug2LowerCase}-flag-small.png`}
+                      src={`/images/${slug2URLCase}-flag-small.png`}
                       layout="fill"
                       objectFit="contain"
-                      alt={`Image illustrating the flag of ${slug2LowerCase}`}
+                      alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
                 </div>
@@ -139,21 +173,21 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
               <td className="language-classes-first-entity all-indicator-answers">
                 {slug1LanguageClasses
                   ? formatCost(
-                      slug1LanguageClasses,
-                      slug1ExchangeRate,
-                      slug1Currency,
-                      isDollarizedSlug1
-                    )
+                    slug1LanguageClasses,
+                    slug1ExchangeRate,
+                    slug1Currency,
+                    isDollarizedSlug1
+                  )
                   : 'Yet to Update'}
               </td>
               <td className="language-classes-second-entity all-indicator-answers">
                 {slug2LanguageClasses
                   ? formatCost(
-                      slug2LanguageClasses,
-                      slug2ExchangeRate,
-                      slug2Currency,
-                      isDollarizedSlug2
-                    )
+                    slug2LanguageClasses,
+                    slug2ExchangeRate,
+                    slug2Currency,
+                    isDollarizedSlug2
+                  )
                   : 'Yet to Update'}
               </td>
             </tr>
@@ -174,21 +208,21 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
               <td className="parenting-classes-first-entity all-indicator-answers">
                 {slug1ParentingClasses
                   ? formatCost(
-                      slug1ParentingClasses,
-                      slug1ExchangeRate,
-                      slug1Currency,
-                      isDollarizedSlug1
-                    )
+                    slug1ParentingClasses,
+                    slug1ExchangeRate,
+                    slug1Currency,
+                    isDollarizedSlug1
+                  )
                   : 'Yet to Update'}
               </td>
               <td className="parenting-classes-second-entity all-indicator-answers">
                 {slug2ParentingClasses
                   ? formatCost(
-                      slug2ParentingClasses,
-                      slug2ExchangeRate,
-                      slug2Currency,
-                      isDollarizedSlug2
-                    )
+                    slug2ParentingClasses,
+                    slug2ExchangeRate,
+                    slug2Currency,
+                    isDollarizedSlug2
+                  )
                   : 'Yet to Update'}
               </td>
             </tr>
@@ -209,21 +243,21 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
               <td className="art-classes-first-entity all-indicator-answers">
                 {slug1ArtClasses
                   ? formatCost(
-                      slug1ArtClasses,
-                      slug1ExchangeRate,
-                      slug1Currency,
-                      isDollarizedSlug1
-                    )
+                    slug1ArtClasses,
+                    slug1ExchangeRate,
+                    slug1Currency,
+                    isDollarizedSlug1
+                  )
                   : 'Yet to Update'}
               </td>
               <td className="art-classes-second-entity all-indicator-answers">
                 {slug2ArtClasses
                   ? formatCost(
-                      slug2ArtClasses,
-                      slug2ExchangeRate,
-                      slug2Currency,
-                      isDollarizedSlug2
-                    )
+                    slug2ArtClasses,
+                    slug2ExchangeRate,
+                    slug2Currency,
+                    isDollarizedSlug2
+                  )
                   : 'Yet to Update'}
               </td>
             </tr>
@@ -244,21 +278,21 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
               <td className="fitness-class-first-entity all-indicator-answers">
                 {slug1FitnessClass
                   ? formatCost(
-                      slug1FitnessClass,
-                      slug1ExchangeRate,
-                      slug1Currency,
-                      isDollarizedSlug1
-                    )
+                    slug1FitnessClass,
+                    slug1ExchangeRate,
+                    slug1Currency,
+                    isDollarizedSlug1
+                  )
                   : 'Yet to Update'}
               </td>
               <td className="fitness-class-second-entity all-indicator-answers">
                 {slug2FitnessClass
                   ? formatCost(
-                      slug2FitnessClass,
-                      slug2ExchangeRate,
-                      slug2Currency,
-                      isDollarizedSlug2
-                    )
+                    slug2FitnessClass,
+                    slug2ExchangeRate,
+                    slug2Currency,
+                    isDollarizedSlug2
+                  )
                   : 'Yet to Update'}
               </td>
             </tr>
@@ -279,21 +313,21 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
               <td className="music-lessons-first-entity all-indicator-answers">
                 {slug1MusicLessons
                   ? formatCost(
-                      slug1MusicLessons,
-                      slug1ExchangeRate,
-                      slug1Currency,
-                      isDollarizedSlug1
-                    )
+                    slug1MusicLessons,
+                    slug1ExchangeRate,
+                    slug1Currency,
+                    isDollarizedSlug1
+                  )
                   : 'Yet to Update'}
               </td>
               <td className="music-lessons-second-entity all-indicator-answers">
                 {slug2MusicLessons
                   ? formatCost(
-                      slug2MusicLessons,
-                      slug2ExchangeRate,
-                      slug2Currency,
-                      isDollarizedSlug2
-                    )
+                    slug2MusicLessons,
+                    slug2ExchangeRate,
+                    slug2Currency,
+                    isDollarizedSlug2
+                  )
                   : 'Yet to Update'}
               </td>
             </tr>
@@ -314,21 +348,21 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
               <td className="dance-lessons-first-entity all-indicator-answers">
                 {slug1DanceLessons
                   ? formatCost(
-                      slug1DanceLessons,
-                      slug1ExchangeRate,
-                      slug1Currency,
-                      isDollarizedSlug1
-                    )
+                    slug1DanceLessons,
+                    slug1ExchangeRate,
+                    slug1Currency,
+                    isDollarizedSlug1
+                  )
                   : 'Yet to Update'}
               </td>
               <td className="dance-lessons-second-entity all-indicator-answers">
                 {slug2DanceLessons
                   ? formatCost(
-                      slug2DanceLessons,
-                      slug2ExchangeRate,
-                      slug2Currency,
-                      isDollarizedSlug2
-                    )
+                    slug2DanceLessons,
+                    slug2ExchangeRate,
+                    slug2Currency,
+                    isDollarizedSlug2
+                  )
                   : 'Yet to Update'}
               </td>
             </tr>
@@ -351,21 +385,21 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
               <td className="reading-materials-first-entity all-indicator-answers">
                 {slug1ReadingMaterials
                   ? formatCost(
-                      slug1ReadingMaterials,
-                      slug1ExchangeRate,
-                      slug1Currency,
-                      isDollarizedSlug1
-                    )
+                    slug1ReadingMaterials,
+                    slug1ExchangeRate,
+                    slug1Currency,
+                    isDollarizedSlug1
+                  )
                   : 'Yet to Update'}
               </td>
               <td className="reading-materials-second-entity all-indicator-answers">
                 {slug2ReadingMaterials
                   ? formatCost(
-                      slug2ReadingMaterials,
-                      slug2ExchangeRate,
-                      slug2Currency,
-                      isDollarizedSlug2
-                    )
+                    slug2ReadingMaterials,
+                    slug2ExchangeRate,
+                    slug2Currency,
+                    isDollarizedSlug2
+                  )
                   : 'Yet to Update'}
               </td>
             </tr>
@@ -386,21 +420,21 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
               <td className="educational-software-first-entity all-indicator-answers">
                 {slug1EducationalSoftware
                   ? formatCost(
-                      slug1EducationalSoftware,
-                      slug1ExchangeRate,
-                      slug1Currency,
-                      isDollarizedSlug1
-                    )
+                    slug1EducationalSoftware,
+                    slug1ExchangeRate,
+                    slug1Currency,
+                    isDollarizedSlug1
+                  )
                   : 'Yet to Update'}
               </td>
               <td className="educational-software-second-entity all-indicator-answers">
                 {slug2EducationalSoftware
                   ? formatCost(
-                      slug2EducationalSoftware,
-                      slug2ExchangeRate,
-                      slug2Currency,
-                      isDollarizedSlug2
-                    )
+                    slug2EducationalSoftware,
+                    slug2ExchangeRate,
+                    slug2Currency,
+                    isDollarizedSlug2
+                  )
                   : 'Yet to Update'}
               </td>
             </tr>
@@ -442,4 +476,4 @@ function PrivateClasses({ slug1, slug2, value1, value2, slug1CostInfo, slug2Cost
   );
 }
 
-export default PrivateClasses
+export default PrivateClasses;

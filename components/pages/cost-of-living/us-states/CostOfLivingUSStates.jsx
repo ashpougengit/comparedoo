@@ -20,12 +20,13 @@ import WagesAndTaxes from "./wages-and-taxes/WagesAndTaxes"
 import ProfessionalServices from "./professional-services/ProfessionalServices"
 import LastParagraph from "./last-paragraph/LastParagraph"
 import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import { toURLFormat } from "@/lib/format/format"
 
 function CostOfLivingUSStates({ state1CostInfo, state2CostInfo, entity1PropertyAndIncomeTaxInfo, entity2PropertyAndIncomeTaxInfo, costTimes, moreOrLess, listForLinks }) {
     const state1 = state1CostInfo.state
     const state2 = state2CostInfo.state
-    const state1LowerCase = state1.toLowerCase().split(' ').join('-')
-    const state2LowerCase = state2.toLowerCase().split(' ').join('-')
+    const state1URLCase = toURLFormat(state1)
+    const state2URLCase = toURLFormat(state2)
     const pageType = 'cost-of-living'
 
     return (
@@ -41,114 +42,114 @@ function CostOfLivingUSStates({ state1CostInfo, state2CostInfo, entity1PropertyA
                 moreOrLess={moreOrLess}
             />
             <Housing
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
                 entity1PropertyAndIncomeTaxInfo={entity1PropertyAndIncomeTaxInfo}
                 entity2PropertyAndIncomeTaxInfo={entity2PropertyAndIncomeTaxInfo}
             />
             <BasicUtilities
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <NetworkAndCommunication
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <Groceries
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <FruitsAndVegetables
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <DiningOut
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <Drinks
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <Transportation
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <Vehicle
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <Health
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <PersonalCare
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <Clothing
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <Childcare
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <Education
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <Entertainment
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <PrivateClasses
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />
             <WagesAndTaxes
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
                 entity1PropertyAndIncomeTaxInfo={entity1PropertyAndIncomeTaxInfo}
                 entity2PropertyAndIncomeTaxInfo={entity2PropertyAndIncomeTaxInfo}
             />
             <ProfessionalServices
-                state1LowerCase={state1LowerCase}
-                state2LowerCase={state2LowerCase}
+                state1URLCase={state1URLCase}
+                state2URLCase={state2URLCase}
                 state1CostInfo={state1CostInfo}
                 state2CostInfo={state2CostInfo}
             />

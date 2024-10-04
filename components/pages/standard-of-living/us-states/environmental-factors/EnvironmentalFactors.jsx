@@ -123,12 +123,12 @@ function EnvironmentalFactors({ state1StandardInfo, state2StandardInfo, state1UR
                 </td>
                 <td className="environmental-factors-answer-first-entity all-indicator-answers">
                   {state1AccessToInternet
-                    ? `${state1AccessToInternet}%`
+                    ? `${state1AccessToInternet} %`
                     : 'Yet to Update'}
                 </td>
                 <td className="environmental-factors-answer-second-entity all-indicator-answers">
                   {state2AccessToInternet
-                    ? `${state2AccessToInternet}%`
+                    ? `${state2AccessToInternet} %`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -151,12 +151,12 @@ function EnvironmentalFactors({ state1StandardInfo, state2StandardInfo, state1UR
                 </td>
                 <td className="environmental-factors-answer-first-entity all-indicator-answers">
                   {state1AccessToElectricity
-                    ? `${state1AccessToElectricity}%`
+                    ? `${state1AccessToElectricity} %`
                     : 'Yet to Update'}
                 </td>
                 <td className="environmental-factors-answer-second-entity all-indicator-answers">
                   {state2AccessToElectricity
-                    ? `${state2AccessToElectricity}%`
+                    ? `${state2AccessToElectricity} %`
                     : 'Yet to Update'}
                 </td>
               </tr>

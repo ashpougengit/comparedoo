@@ -6,7 +6,6 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
   const slug1LargestCity = slug1GeneralInfo.largestCity
   const slug1Demonyms = slug1GeneralInfo.demonyms
   const slug1OfficialLanguages = slug1GeneralInfo.officialLanguages
-  const slug1OfficialLanguagesArray = slug1OfficialLanguages.split(',')
   const slug1CurrencyName = slug1GeneralInfo.currencyName
   const slug1CurrencySymbol = slug1GeneralInfo.currencySymbol
   const slug1StartOfWeek = slug1GeneralInfo.startOfWeek
@@ -18,7 +17,6 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
   const slug2LargestCity = slug2GeneralInfo.largestCity
   const slug2Demonyms = slug2GeneralInfo.demonyms
   const slug2OfficialLanguages = slug2GeneralInfo.officialLanguages
-  const slug2OfficialLanguagesArray = slug2OfficialLanguages.split(',')
   const slug2CurrencyName = slug2GeneralInfo.currencyName
   const slug2CurrencySymbol = slug2GeneralInfo.currencySymbol
   const slug2StartOfWeek = slug2GeneralInfo.startOfWeek
@@ -242,40 +240,42 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
         </table>
       </div>
 
-      <div className="paragraph-for-pages-below-table">
-        <div className="para-for-pages-single-div">
-          <p>
-            The people of
-            <strong>
-              <span className="first-entity-name-pages-paragraph">
-                {' '}
-                {slug1}{' '}
-              </span>
-            </strong>
-            are called
-            <strong>
-              <span className="demonyms-answer-first-entity">
-                {' '}
-                {slug1Demonyms}
-              </span>
-            </strong>
-            , and the people of{' '}
-            <strong>
-              <span className="second-entity-name-pages-paragraph">
-                {slug2}{' '}
-              </span>
-            </strong>
-            are called
-            <strong>
-              <span className="demonyms-answer-second-entity">
-                {' '}
-                {slug2Demonyms}
-              </span>
-            </strong>
-            .
-          </p>
+      {slug1Demonyms && slug2Demonyms &&
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <p>
+              The people of
+              <strong>
+                <span className="first-entity-name-pages-paragraph">
+                  {' '}
+                  {slug1}{' '}
+                </span>
+              </strong>
+              are called
+              <strong>
+                <span className="demonyms-answer-first-entity">
+                  {' '}
+                  {slug1Demonyms}
+                </span>
+              </strong>
+              , and the people of{' '}
+              <strong>
+                <span className="second-entity-name-pages-paragraph">
+                  {slug2}{' '}
+                </span>
+              </strong>
+              are called
+              <strong>
+                <span className="demonyms-answer-second-entity">
+                  {' '}
+                  {slug2Demonyms}
+                </span>
+              </strong>
+              .
+            </p>
+          </div>
         </div>
-      </div>
+      }
 
       <div className="geographical-factors-comparison-div2">
         <table className="indicators-first-entity-and-second-entity-div2">

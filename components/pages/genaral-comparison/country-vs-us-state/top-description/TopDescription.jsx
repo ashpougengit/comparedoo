@@ -7,12 +7,12 @@ function TopDescription({ slug1, slug2 }) {
                     <p>
                         Comparedoo.com welcomes you to explore the detailed comparison between
                         <strong>
-                            <span className="first-entity-name-pages-paragraph"> {slug1} </span>
+                            <span className="first-entity-name-pages-paragraph">{' '} {slug1}{' '} </span>
                         </strong>
                         and
                         <strong>
                             <span className="second-entity-name-pages-paragraph">
-                                {slug2}
+                               {' '} {slug2}
                             </span>
                             .
                         </strong>

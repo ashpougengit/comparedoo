@@ -9,12 +9,13 @@ import ImportAndExportFactors from "./import-and-export-factors/ImportAndExportF
 import TaxFactors from "./tax-factors/TaxFactors"
 import LastParagraph from "./last-paragraph/LastParagraph"
 import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import { toURLFormat } from "@/lib/format/format"
 
 function StandardOfLivingCountries({ country1StandardInfo, country2StandardInfo, standardTimes, betterOrLesser, listForLinks }) {
   const country1 = country1StandardInfo.country
   const country2 = country2StandardInfo.country
-  const country1URLCase = country1.toLowerCase().split(' ').join('-')
-  const country2URLCase = country2.toLowerCase().split(' ').join('-')
+  const country1URLCase = toURLFormat(country1)
+  const country2URLCase = toURLFormat(country2)
   const pageType = 'standard-of-living'
 
   return (

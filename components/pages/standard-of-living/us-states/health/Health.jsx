@@ -213,12 +213,12 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                 </td>
                 <td className="income-tax-rates-answer-first-entity all-indicator-answers">
                   {state1DisabilityPercentage
-                    ? `${state1DisabilityPercentage}%`
+                    ? `${state1DisabilityPercentage} %`
                     : 'Yet to Update'}
                 </td>
                 <td className="income-tax-rates-answer-second-entity all-indicator-answers">
                   {state2DisabilityPercentage
-                    ? `${state2DisabilityPercentage}%`
+                    ? `${state2DisabilityPercentage} %`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -240,12 +240,12 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                 </td>
                 <td className="income-tax-rates-first-entity all-indicator-answers">
                   {state1PopulationWithoutHealthInsuranceCoverage
-                    ? `${state1PopulationWithoutHealthInsuranceCoverage}%`
+                    ? `${state1PopulationWithoutHealthInsuranceCoverage} %`
                     : 'Yet to Update'}
                 </td>
                 <td className="income-tax-rates-second-entity all-indicator-answers">
                   {state2PopulationWithoutHealthInsuranceCoverage
-                    ? `${state2PopulationWithoutHealthInsuranceCoverage}%`
+                    ? `${state2PopulationWithoutHealthInsuranceCoverage} %`
                     : 'Yet to Update'}
                 </td>
               </tr>

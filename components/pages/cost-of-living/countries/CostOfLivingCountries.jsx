@@ -20,13 +20,14 @@ import VehiclePurchaseAndMaintenanceCost from "./vehicle-purchase-and-maintenanc
 import WagesAndTaxesCost from "./wages-and-taxes-cost/WagesAndTaxesCost"
 import LastParagraph from "./last-paragraph/LastParagraph"
 import ComparisonLinks from "@/components/comparison-links/ComparisonLinks"
+import { toURLFormat } from "@/lib/format/format"
 
 function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1CurrencyInfo, country2CurrencyInfo, entity1PropertyAndIncomeTaxInfo, entity2PropertyAndIncomeTaxInfo, costTimes, moreOrLess, listForLinks }) {
     const country1 = country1CostInfo.country
     const country2 = country2CostInfo.country
 
-    const country1LowerCase = country1.toLowerCase().split(' ').join('-')
-    const country2LowerCase = country2.toLowerCase().split(' ').join('-')
+    const country1URLCase = toURLFormat(country1)
+    const country2URLCase = toURLFormat(country2)
 
     const country1Currency = country1CurrencyInfo.currencySymbol
     const country2Currency = country2CurrencyInfo.currencySymbol
@@ -50,8 +51,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
             />
 
             <HousingCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -62,8 +63,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <BasicUtilitiesCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -72,8 +73,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <NetworkAndCommunication
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -82,8 +83,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <GroceriesCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -92,8 +93,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <FruitsAndVegetablesCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -102,8 +103,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <DiningOutCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -112,8 +113,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <DrinksCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -122,8 +123,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <TransportationCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -132,8 +133,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <VehiclePurchaseAndMaintenanceCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -142,8 +143,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <HealthAndMedicalCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -152,8 +153,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <PersonalCareCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -162,8 +163,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <ClothingAndFootwearCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -172,8 +173,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <ChildcareCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -182,8 +183,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <SchoolAndEducationCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -192,8 +193,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <EntertainmentAndRecreationCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -202,8 +203,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <PrivateClassesAndLessonsCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -212,8 +213,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <WagesAndTaxesCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}
@@ -224,8 +225,8 @@ function CostOfLivingCountries({ country1CostInfo, country2CostInfo, country1Cur
                 country2UnitValueInUSD={country2UnitValueInUSD}
             />
             <ProfessionalServicesCost
-                country1LowerCase={country1LowerCase}
-                country2LowerCase={country2LowerCase}
+                country1URLCase={country1URLCase}
+                country2URLCase={country2URLCase}
                 country1CostInfo={country1CostInfo}
                 country2CostInfo={country2CostInfo}
                 country1Currency={country1Currency}

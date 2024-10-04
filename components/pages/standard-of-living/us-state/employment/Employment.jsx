@@ -8,10 +8,10 @@ function Employment({ standardInfo, stateURLCase }) {
     const construction = standardInfo.construction
     const manufacturing = standardInfo.manufacturing
     const transportationAndWarehousing = standardInfo.transportationAndWarehousing
-    const information = standardInfo.information
+    const ITAndInformation = standardInfo.ITAndInformation
     const artsEntertainmentRecreation = standardInfo.artsEntertainmentRecreation
-    const educationandHealthCare = standardInfo.educationandHealthCare
-    const financeandRealEstate = standardInfo.financeandRealEstate
+    const educationAndHealthCare = standardInfo.educationAndHealthCare
+    const financeAndRealEstate = standardInfo.financeAndRealEstate
     const wholesaleTrade = standardInfo.wholesaleTrade
     const retailTrade = standardInfo.retailTrade
     const publicAdministration = standardInfo.publicAdministration
@@ -180,7 +180,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   </div>
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                  {information ? `${information} %` : 'Yet to Update'}
+                  {ITAndInformation ? `${ITAndInformation} %` : 'Yet to Update'}
                 </td>
               </tr>
               <tr>
@@ -223,8 +223,8 @@ function Employment({ standardInfo, stateURLCase }) {
                   </div>
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                  {educationandHealthCare
-                    ? `${educationandHealthCare} %`
+                  {educationAndHealthCare
+                    ? `${educationAndHealthCare} %`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -245,8 +245,8 @@ function Employment({ standardInfo, stateURLCase }) {
                   </div>
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                  {financeandRealEstate
-                    ? `${financeandRealEstate} %`
+                  {financeAndRealEstate
+                    ? `${financeAndRealEstate} %`
                     : 'Yet to Update'}
                 </td>
               </tr>

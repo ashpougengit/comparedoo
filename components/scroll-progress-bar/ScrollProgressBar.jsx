@@ -7,8 +7,6 @@ export default function ScrollProgressBar() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [currentPath, setCurrentPath] = useState(''); // Track current pathname
   const pathname = usePathname(); // Get the current pathname
-  // console.log('pathName1: ', pathname);
-  // console.log('currentPath1: ', currentPath);
   // Function to update scroll progress based on scroll position
   const updateScrollProgress = () => {
     const scrollTop = window.scrollY;
@@ -28,8 +26,6 @@ export default function ScrollProgressBar() {
 
   // Detect path change and reset the progress bar
   useEffect(() => {
-    // console.log('pathName2: ', pathname);
-    // console.log('currentPath2: ', currentPath);
     // When pathname changes, reset scroll progress
     if (currentPath !== pathname) {
       setScrollProgress(0); // Reset progress to 0

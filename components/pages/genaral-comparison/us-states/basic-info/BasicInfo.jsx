@@ -476,44 +476,46 @@ function BasicInfo({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2
         </table>
       </div>
 
-      <div className="paragraph-for-pages-below-table">
-        <div className="para-for-pages-single-div">
-          <p>
-            The people of{' '}
-            <strong>
-              {' '}
-              <span className="first-entity-name-pages-paragraph">
+      {state1Demonyms && state2Demonyms &&
+        <div className="paragraph-for-pages-below-table">
+          <div className="para-for-pages-single-div">
+            <p>
+              The people of{' '}
+              <strong>
                 {' '}
-                {state1}{' '}
-              </span>
-            </strong>
-            are called{' '}
-            <strong>
-              {' '}
-              <span className="demonyms-answer-first-entity">
+                <span className="first-entity-name-pages-paragraph">
+                  {' '}
+                  {state1}{' '}
+                </span>
+              </strong>
+              are called{' '}
+              <strong>
                 {' '}
-                {state1Demonyms}
-              </span>
-            </strong>
-            , and the people of
-            <strong>
-              <span className="second-entity-name-pages-paragraph">
+                <span className="demonyms-answer-first-entity">
+                  {' '}
+                  {state1Demonyms}
+                </span>
+              </strong>
+              , and the people of
+              <strong>
+                <span className="second-entity-name-pages-paragraph">
+                  {' '}
+                  {state2}{' '}
+                </span>
+              </strong>
+              are called
+              <strong>
                 {' '}
-                {state2}{' '}
-              </span>
-            </strong>
-            are called
-            <strong>
-              {' '}
-              <span className="demonyms-answer-second-entity">
-                {' '}
-                {state2Demonyms}
-              </span>
-            </strong>
-            .
-          </p>
+                <span className="demonyms-answer-second-entity">
+                  {' '}
+                  {state2Demonyms}
+                </span>
+              </strong>
+              .
+            </p>
+          </div>
         </div>
-      </div>
+      }
     </>
   );
 }

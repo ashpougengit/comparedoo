@@ -5,17 +5,25 @@ import { USStates } from "@/lib/array-list/allUSStates";
 import GeneralComparisonUSStates from "@/components/pages/genaral-comparison/us-states/GeneralComparisonUSStates";
 import CountryVsUSStateGeneral from "@/components/pages/genaral-comparison/country-vs-us-state/CountryVsUSStateGeneral";
 import { fetchWeatherInfoSequentially } from "@/lib/weather/weather";
-import { decodeAndValidateSlugs, fetchData } from "@/lib/helper";
+import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 import { titleCased } from "@/lib/format/format";
 import { fetchCountryGeneralInfo, fetchHealthExpenditurePercentage, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
 import { calculateTimeDifference, convertToISODate, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
 import { allEntities } from "@/lib/array-list/allEntitiesList";
+import Error404 from "@/components/error/Error404";
 
 // generateMetadata function
 export async function generateMetadata({ params }) {
     const { slug } = params;
+
+    if (slug.length > 2) {
+        return {
+            title: 'Error',
+            description: 'Invalid URL. Please check the path and try again.',
+        }
+    }
 
     try {
         const [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
@@ -64,24 +72,33 @@ export async function generateMetadata({ params }) {
 
 async function GeneralComparison({ params }) {
     const { slug } = params
+
+    if (slug.length > 2) {
+        return <Error404 />
+    }
+
     let [decodedSlug1, decodedSlug2] = []
 
     try {
         [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
 
     } catch (error) {
-        return <p>Error: {error.message}</p>;
+        // return <p>Error: {error.message}</p>;
+        return <Error404 />
     }
 
     const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
 
     if (!allEntities.includes(titleCased(decodedSlug2))) {
-        return <p>Error: Enter two places to compare</p>
+        // return <p>Error: Enter two places to compare</p>
+        return <Error404 />
     }
 
     if ([entity1, entity2].includes('United States') && USStates.includes(entity1 === 'United States' ? entity2 : entity1)) {
-        return <p>Error: Cannot compare a U.S. state with the United States itself.</p>;
+        // return <p>Error: Cannot compare a U.S. state with the United States itself.</p>;
+        return <Error404 />
     }
+
     const isSlug1Country = allCountries.includes(entity1);
     const isSlug2Country = slug.length === 2 && allCountries.includes(entity2);
     const value1 = isSlug1Country ? 'country' : 'state'
@@ -133,7 +150,7 @@ async function GeneralComparison({ params }) {
 
         return (
             <>
-                <SearchBox slug1={entity1} slug2={entity2} />
+                <SearchBox slug1={checkCountry(entity1)} slug2={checkCountry(entity2)} />
                 <AdsHeaderBanner />
                 <PageTitle entity1={entity1} entity2={entity2} />
                 <PublishInfo formattedDate={formattedDate} />
@@ -142,7 +159,11 @@ async function GeneralComparison({ params }) {
         )
 
     } catch (error) {
-        return <p>Error: Unable to fetch data.</p>;
+        return (
+            <>
+                <Error404 />
+            </>
+        );
     }
 }
 
@@ -175,7 +196,11 @@ const renderContent = ({ slug, entity1, entity2, entity1GeneralInfo, entity2Gene
         if (isCountry1 && isState2 || isState1 && isCountry2) return <CountryVsUSStateGeneral slug1GeneralInfo={entity1GeneralInfo} slug2GeneralInfo={entity2GeneralInfo} slug1WeatherInfo={entity1WeatherInfo} slug2WeatherInfo={entity2WeatherInfo} timeDifference={timeDifference} aheadOrBehind={aheadOrBehind} value1={value1} value2={value2} listForLinks={listForLinks} />;
     }
 
-    return <p>Error: Unable to fetch all data.</p>;
+    return (
+        <>
+            <Error404 />
+        </>
+    );
 };
 
 export default GeneralComparison;

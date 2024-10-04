@@ -7,7 +7,7 @@ import Link from 'next/link';
 function CountriesListEurope() {
   return (
     <>
-     <AdsHeaderBanner />
+      <AdsHeaderBanner />
 
       <div className="countries-list-continents-pages">
         <h2 className="pages-h2">Countries List</h2>
@@ -16,16 +16,15 @@ function CountriesListEurope() {
       <div className="first-paragraph-of-the-page">
         <div className="first-para-single-div">
           <p>
-            There are total of{' '}
+            There are total of
             <strong>
-              {' '}
               <span className="number-of-countries-in-the-given-continent">
-                44
+                {' '}44{' '}
               </span>
             </strong>
             countries in
             <strong>
-              <span className="continent-name">Europe</span>
+              <span className="continent-name">{' '}Europe</span>
             </strong>
             . You can click the countries links below and compare them further
             to other countries, cities and states in the world.

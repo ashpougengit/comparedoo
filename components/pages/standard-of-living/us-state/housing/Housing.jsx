@@ -7,7 +7,7 @@ function Housing({ standardInfo, stateURLCase }) {
     const state = standardInfo.state
     const totalHousingUnits = standardInfo.totalHousingUnits
     const medianGrossRent = standardInfo.medianGrossRent
-    const homeownershipRate = standardInfo.homeownershipRate
+    const homeOwnershipRate = standardInfo.homeOwnershipRate
     const averageFamilySize = standardInfo.averageFamilySize
     const marriedCoupleHouseholdPercentage = standardInfo.marriedCoupleHouseholdPercentage
     const maleHouseholderPercentage = standardInfo.maleHouseholderPercentage
@@ -115,7 +115,7 @@ function Housing({ standardInfo, stateURLCase }) {
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
                   {medianGrossRent
-                    ? `${formatNumberWithCommas(medianGrossRent)}`
+                    ? `${formatNumberWithCommas(medianGrossRent)} USD per month`
                     : 'Yet to Update'}
                 </td>
               </tr>
@@ -137,8 +137,8 @@ function Housing({ standardInfo, stateURLCase }) {
                   </div>
                 </td>
                 <td className="employment-rate-states-answer-first-entity all-indicator-answers">
-                  {homeownershipRate
-                    ? `${homeownershipRate} %`
+                  {homeOwnershipRate
+                    ? `${homeOwnershipRate} %`
                     : 'yet to Update'}
                 </td>
               </tr>

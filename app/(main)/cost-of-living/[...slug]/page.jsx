@@ -1,4 +1,5 @@
 import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner";
+import Error404 from "@/components/error/Error404";
 import CostOfLivingCountries from "@/components/pages/cost-of-living/countries/CostOfLivingCountries";
 import CountryVsUSStateCost from "@/components/pages/cost-of-living/country-vs-us-state/CountryVsUSStateCost";
 import CostOfLivingCountry from "@/components/pages/cost-of-living/country/CostOfLivingCountry";
@@ -11,12 +12,19 @@ import { getListForLinks } from "@/lib/array-list/randomList";
 import { fetchCountryCostInfo, fetchCurrencyInfo, fetchPropertyAndIncomeTaxInfo, fetchUSStateCostInfo } from "@/lib/database/fetch";
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { titleCased } from "@/lib/format/format";
-import { decodeAndValidateSlugs, fetchData } from "@/lib/helper";
+import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 
 
 // generateMetadata function
 export async function generateMetadata({ params }) {
   const { slug } = params;
+
+  if (slug.length > 2) {
+    return {
+      title: 'Error',
+      description: 'Invalid URL. Please check the path and try again.',
+    }
+  }
 
   try {
     const [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
@@ -68,19 +76,25 @@ export async function generateMetadata({ params }) {
 async function CostComparison({ params }) {
   const { slug } = params;
 
+  if (slug.length > 2) {
+    return <Error404 />
+  }
+
   let decodedSlug1, decodedSlug2;
 
   try {
     [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
   } catch (error) {
     console.error(error.message);
-    return <p>Error message: {error.message}</p>;
+    // return <p>Error message: {error.message}</p>;
+    return <Error404 />
   }
 
   const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
 
   if ([entity1, entity2].includes('United States') && USStates.includes(entity1 === 'United States' ? entity2 : entity1)) {
-    return <p>Error: Cannot compare a U.S. state with the United States itself.</p>;
+    // return <p>Error: Cannot compare a U.S. state with the United States itself.</p>;
+    return <Error404 />
   }
 
   const isSlug1Country = allCountries.includes(entity1);
@@ -122,7 +136,7 @@ async function CostComparison({ params }) {
 
     return (
       <>
-        <SearchBox slug1={entity1} slug2={entity2} />
+        <SearchBox slug1={checkCountry(entity1)} slug2={checkCountry(entity2)} />
         <AdsHeaderBanner />
         <PageTitle entity1={entity1} entity2={entity2} />
         <PublishInfo formattedDate={formattedDate} />
@@ -131,7 +145,8 @@ async function CostComparison({ params }) {
     );
   } catch (error) {
     console.log(error);
-    return <p>Error: Unable to fetch data.</p>;
+    // return <p>Error: Unable to fetch data.</p>;
+    return <Error404 />
   }
 }
 
@@ -186,7 +201,8 @@ const renderContent = ({ slug, entity1, entity2, entity1CostInfo, entity2CostInf
     }
   }
 
-  return <p>Error: Unable to fetch all data.</p>;
+  // return <p>Error: Unable to fetch all data.</p>;
+  return <Error404 />
 }
 
 export default CostComparison

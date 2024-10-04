@@ -9,7 +9,11 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
     const currentHealthExpenditurePercentage = standardInfo.currentHealthExpenditurePercentage
     const researchAndDevelopmentExpenditure = standardInfo.researchAndDevelopmentExpenditure
     const governmentExpenditureOnEducation = standardInfo.governmentExpenditureOnEducation
-    const internationalTourismExpenditureUSD = standardInfo.internationalTourismExpenditureUSD
+    // const internationalTourismExpenditureUSD = standardInfo.internationalTourismExpenditureUSD
+
+    const internationalTourismExpenditureRaw = standardInfo.internationalTourismExpenditureUSD
+    const internationalTourismExpenditureMillion = internationalTourismExpenditureRaw ? `${formatNumberWithCommas(internationalTourismExpenditureRaw / 1e6)} million USD` : null
+
     const internationalTourists = standardInfo.numberOfInternationalTouristsArrival
     const militaryExpenditure = standardInfo.militaryExpenditure
 
@@ -192,10 +196,7 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   </div>
                 </td>
                 <td className="international-tourism-expenditure-answer-first-entity all-indicator-answers">
-                  {formatNumberWithCommas(internationalTourismExpenditureUSD)}
-                  <span>
-                    {internationalTourismExpenditureUSD ? ' USD' : ''}
-                  </span>
+                  {internationalTourismExpenditureMillion?? 'Yet to Update'}
                 </td>
               </tr>
 
