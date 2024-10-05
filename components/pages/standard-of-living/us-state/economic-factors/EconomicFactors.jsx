@@ -80,8 +80,7 @@ function EconomicFactors({ standardInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/gdp-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the total Gross Domestic Product of any specific country or state"
                   />
                 </div>
@@ -103,8 +102,7 @@ function EconomicFactors({ standardInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/gdp-per-capita-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the total Gross Domestic Product Per Capita of any specific country or state"
                   />
                 </div>
@@ -126,8 +124,7 @@ function EconomicFactors({ standardInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/gini-ratio-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the total GINI Ratio or GINI Coefficient of any specific country or state"
                   />
                 </div>

@@ -94,8 +94,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/gdp-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the total Gross Domestic Product of any specific country"
                   />
                 </div>
@@ -115,8 +114,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/gdp-per-capita-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the total Gross Domestic Product Per Capita of any specific country"
                   />
                 </div>
@@ -136,8 +134,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/gini-ratio-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the total GINI Ratio or GINI Coefficient of any specific country"
                   />
                 </div>
@@ -157,8 +154,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/inflation-on-consumer-prices-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Percentage of Inflation on consumer prices of any specific country"
                   />
                 </div>
@@ -180,8 +176,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/central-government-debt-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Central Government Debt of any specific country"
                   />
                 </div>
@@ -307,8 +302,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/hdi-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Human Development Index of any specific country"
                   />
                 </div>
@@ -328,8 +322,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/human-capital-index-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Human Capital Index of any specific country"
                   />
                 </div>
@@ -349,8 +342,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/literacy-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Literacy Rate of any specific country"
                   />
                 </div>
@@ -377,8 +369,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/life-expectancy-ratio-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of Life Expectancy Ratio any given country"
                   />
                 </div>
@@ -404,8 +395,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/healthy-life-expectancy-ratio-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of Healthy Life Expectancy Ratio any given country"
                   />
                 </div>
@@ -427,8 +417,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/poverty-headcount-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Poverty Rate of any specific country"
                   />
                 </div>
@@ -451,8 +440,7 @@ function EconomicFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/unemployment-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Unemployment Rate of any specific country"
                   />
                 </div>

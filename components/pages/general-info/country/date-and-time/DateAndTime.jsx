@@ -89,8 +89,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/current-date-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of current date of any specific country"
                   />
                 </div>
@@ -105,8 +104,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/current-time-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of current time of any specific country"
                   />
                 </div>
@@ -121,8 +119,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/timezone-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of timezones of any specific country"
                   />
                 </div>
@@ -138,8 +135,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/current-timezone-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of current timezone of any specific country"
                   />
                 </div>
@@ -155,8 +151,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/internet-tld-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of Daylight Saving Time of any specific country"
                   />
                 </div>
@@ -174,8 +169,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/dst-start-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of Daylight Saving Time Start of any specific country"
                   />
                 </div>
@@ -192,8 +186,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/dst-end-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of Daylight Saving Time End of any specific country"
                   />
                 </div>
@@ -211,8 +204,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/dst-duration-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of Daylight Saving Time Duration of any specific country"
                   />
                 </div>

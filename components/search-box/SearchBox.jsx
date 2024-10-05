@@ -9,11 +9,12 @@ import { titleCased, toURLFormat } from '@/lib/format/format';
 import Loading from '../loading/Loading';
 import Image from 'next/image';
 
-export default function SearchBox({ userCountry, slug1, slug2 = null }) {
+export default function SearchBox({ userCountry = null, slug1 = null, slug2 = null }) {
   const countriesForSearch = allCountries.filter(country => country !== "Côte d'Ivoire" && country !== 'São Tomé and Príncipe');
   const entitiesForSearch = allEntities.filter(entity => entity !== "Côte d'Ivoire" && entity !== 'São Tomé and Príncipe');
 
-  const isSlug2 = slug2 !== null;
+  const isSlug1 = slug1 !== null && slug1 !== '';
+  const isSlug2 = slug2 !== null && slug2 !== '';
   let value1, value2;
 
   if (isSlug2) {
@@ -151,19 +152,23 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
         <div className="comparedoo-compare-main">
           <div className="compare-first-entity" ref={input1Ref}>
             <div className="first-entity-map-compare-section">
-              {isSlug2 ? (
+              {(isSlug1 || isSlug2) ? (
                 <Image
-                  src={`/images/${toURLFormat(value1)}-map-small.png`}
-                  alt={`Image illustrating the map of ${titleCased(value1)}`}
-                  layout="fill"
-                  objectFit="contain"
+                  src={`/images/${toURLFormat(value1 || slug1)}-map-small.png`}
+                  alt={`Image illustrating the map of ${titleCased(value1 || slug1)}`}
+                  fill
                 />
-              ) : (
+              ) : userCountry ? (
                 <Image
                   src={`/images/${toURLFormat(userCountry)}-map-small.png`}
                   alt={`Image illustrating the map of ${titleCased(userCountry)}`}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                />
+              ) : (
+                <Image
+                  src={`/images/search-box-second-div-image.png`}
+                  alt='Search box second div image'
+                  fill
                 />
               )}
             </div>
@@ -241,8 +246,7 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
             <div className="heading-second">
               <Image
                 src="/images/comparedoo-logo-for-comparison.png"
-                layout="fill"
-                objectFit="contain"
+                fill
                 alt="Comparedoo"
               />
             </div>
@@ -254,15 +258,13 @@ export default function SearchBox({ userCountry, slug1, slug2 = null }) {
                 <Image
                   src={`/images/${toURLFormat(value2)}-map-small.png`}
                   alt={`Image illustrating the map of ${titleCased(value2)}`}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
                 />
               ) : (
                 <Image
                   src={`/images/search-box-second-div-image.png`}
                   alt='Search box second div image'
-                  layout="fill"
-                  objectFit="contain"
+                  fill
                 />
               )}
             </div>

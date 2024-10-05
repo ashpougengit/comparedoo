@@ -157,8 +157,7 @@ function ProfessionalServices({
                 <div className="basic-information-images">
                   <Image
                     src="/images/legal-consultation-per-hour-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Legal Consultation Per Hour Rate"
                   />
                 </div>
@@ -194,8 +193,7 @@ function ProfessionalServices({
                 <div className="basic-information-images">
                   <Image
                     src="/images/accounting-services-per-hour-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Accounting Services Per Hour Rate"
                   />
                 </div>
@@ -231,8 +229,7 @@ function ProfessionalServices({
                 <div className="basic-information-images">
                   <Image
                     src="/images/IT-support-services-per-hour-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing IT Support Services Per Hour Rate"
                   />
                 </div>
@@ -268,8 +265,7 @@ function ProfessionalServices({
                 <div className="basic-information-images">
                   <Image
                     src="/images/technician-services-per-hour-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Technician Services Per Hour Rate"
                   />
                 </div>

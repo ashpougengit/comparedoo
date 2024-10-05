@@ -158,8 +158,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/imports-of-goods-and-services-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Imports of Goods and Services"
                   />
                 </div>
@@ -196,8 +195,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/fuel-imports-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Total Fuel Imports"
                   />
                 </div>
@@ -233,8 +231,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/cost-to-import-border-compliance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Cost to Import Border Compliance"
                   />
                 </div>
@@ -271,8 +268,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/time-to-import-border-compliance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Time to Import Border Compliance"
                   />
                 </div>
@@ -283,11 +279,10 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country1TimeToImportBorderComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${
-                        country1TimeToImportBorderComplianceHours > 1
+                      {`${country1TimeToImportBorderComplianceHours > 1
                           ? 'Hours'
                           : 'Hour'
-                      }`}
+                        }`}
                     </span>
                   </>
                 ) : (
@@ -300,11 +295,10 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country2TimeToImportBorderComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${
-                        country2TimeToImportBorderComplianceHours > 1
+                      {`${country2TimeToImportBorderComplianceHours > 1
                           ? 'Hours'
                           : 'Hour'
-                      }`}
+                        }`}
                     </span>
                   </>
                 ) : (
@@ -323,8 +317,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/cost-to-import-documentary-compliance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Cost to Import documentary Compliance"
                   />
                 </div>
@@ -365,8 +358,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/time-to-import-documentary-compliance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Time to Import Documentary Compliance"
                   />
                 </div>
@@ -377,11 +369,10 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country1TimeToImportDocumentryComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${
-                        country1TimeToImportDocumentryComplianceHours > 1
+                      {`${country1TimeToImportDocumentryComplianceHours > 1
                           ? 'Hours'
                           : 'Hour'
-                      }`}
+                        }`}
                     </span>
                   </>
                 ) : (
@@ -394,11 +385,10 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country2TimeToImportDocumentryComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${
-                        country2TimeToImportDocumentryComplianceHours > 1
+                      {`${country2TimeToImportDocumentryComplianceHours > 1
                           ? 'Hours'
                           : 'Hour'
-                      }`}
+                        }`}
                     </span>
                   </>
                 ) : (
@@ -504,8 +494,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/exports-of-goods-and-services-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Exports of Goods and Services"
                   />
                 </div>
@@ -542,8 +531,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/fuel-exports-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Total Fuel Exports"
                   />
                 </div>
@@ -579,8 +567,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/cost-to-export-border-compliance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Cost to Export Border Compliance"
                   />
                 </div>
@@ -617,8 +604,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/time-to-export-border-compliance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Time to Export Border Compliance"
                   />
                 </div>
@@ -629,11 +615,10 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country1TimeToExportBorderComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${
-                        country1TimeToExportBorderComplianceHours > 1
+                      {`${country1TimeToExportBorderComplianceHours > 1
                           ? 'Hours'
                           : 'Hour'
-                      }`}
+                        }`}
                     </span>
                   </>
                 ) : (
@@ -646,11 +631,10 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country2TimeToExportBorderComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${
-                        country2TimeToExportBorderComplianceHours > 1
+                      {`${country2TimeToExportBorderComplianceHours > 1
                           ? 'Hours'
                           : 'Hour'
-                      }`}
+                        }`}
                     </span>
                   </>
                 ) : (
@@ -669,8 +653,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/cost-to-export-documentary-compliance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Cost to Export documentary Compliance"
                   />
                 </div>
@@ -711,8 +694,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                 <div className="basic-information-images">
                   <Image
                     src="/images/time-to-export-documentary-compliance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Time to Export Documentary Compliance"
                   />
                 </div>
@@ -723,11 +705,10 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country1TimeToExportDocumentryComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${
-                        country1TimeToExportDocumentryComplianceHours > 1
+                      {`${country1TimeToExportDocumentryComplianceHours > 1
                           ? 'Hours'
                           : 'Hour'
-                      }`}
+                        }`}
                     </span>
                   </>
                 ) : (
@@ -740,11 +721,10 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     {country2TimeToExportDocumentryComplianceHours}{' '}
                     <span>
                       {' '}
-                      {`${
-                        country2TimeToExportDocumentryComplianceHours > 1
+                      {`${country2TimeToExportDocumentryComplianceHours > 1
                           ? 'Hours'
                           : 'Hour'
-                      }`}
+                        }`}
                     </span>
                   </>
                 ) : (

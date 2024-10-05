@@ -190,8 +190,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/movie-ticket-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Single Movie Ticket"
                   />
                 </div>
@@ -225,8 +224,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/theater-ticket-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Single Theater Ticket"
                   />
                 </div>
@@ -260,8 +258,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/concert-ticket-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Single Concert Ticket"
                   />
                 </div>
@@ -297,8 +294,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/sports-event-ticket-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Single Sports Event Ticket"
                   />
                 </div>
@@ -332,8 +328,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/gym-membership-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Gym Membership"
                   />
                 </div>
@@ -367,8 +362,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/swimming-pool-access-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Swimming Pool Access"
                   />
                 </div>
@@ -402,8 +396,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/museum-entry-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Museum Entry Ticket"
                   />
                 </div>
@@ -437,8 +430,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/zoo-entry-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Zoo Entry Ticket"
                   />
                 </div>
@@ -474,8 +466,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/amusement-park-entry-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Amusement Park Entry Ticket"
                   />
                 </div>
@@ -509,8 +500,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/bowling-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Bowling"
                   />
                 </div>
@@ -544,8 +534,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/mini-golf-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Mini Golf"
                   />
                 </div>
@@ -579,8 +568,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/video-games-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Video Games"
                   />
                 </div>
@@ -614,8 +602,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/streaming-services-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Streaming Services"
                   />
                 </div>
@@ -649,8 +636,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/outdoor-equipment-rental-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Outdoor Equipment Rental"
                   />
                 </div>
@@ -684,8 +670,7 @@ function Entertainment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/theme-park-annual-pass-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Theme Park Annual Pass"
                   />
                 </div>

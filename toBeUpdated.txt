@@ -37,6 +37,13 @@
 
 - weather images
 
+
 - <a href="mailto:info.comparedoo@gmail.com" className="email-link"> not working in contact-us
 
 ============================== // change base url ==============================
+
+- adjust cursor pointer in read here in knowledgebase
+
+- http://localhost:3000/population-of-all-countries
+
+- currency name(currency symbol) 

@@ -7,7 +7,7 @@ import {
   statesUniqueIndicators,
 } from '@/lib/array-list/indicators';
 import { convertToISODate, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
-import { camelToTitleCase, toURLFormat } from '@/lib/format/format';
+import { camelToTitleCase, titleCased, toURLFormat } from '@/lib/format/format';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -80,10 +80,9 @@ async function KnowledgebaseHome() {
           <div className="knowledgebase-div" key={index}>
             <div className="knowledgebase-thumbnail-image">
               <Image
-                layout="fill"
-                objectFit="contain"
+                fill
                 src={`/images/${toURLFormat(indicator)}-country-thumbnail.png`}
-                alt={`${toURLFormat(indicator)} Country Thumbnail Image`}
+                alt={`${titleCased(indicator)} Country Thumbnail Image`}
               />
             </div>
 
@@ -111,10 +110,9 @@ async function KnowledgebaseHome() {
           <div className="knowledgebase-div" key={index}>
             <div className="knowledgebase-thumbnail-image">
               <Image
-                layout="fill"
-                objectFit="contain"
+                fill
                 src={`/images/${toURLFormat(indicator)}-country-thumbnail.png`}
-                alt={`${toURLFormat(indicator)} Country Thumbnail Image`}
+                alt={`${titleCased(indicator)} Country Thumbnail Image`}
               />
             </div>
 
@@ -142,10 +140,9 @@ async function KnowledgebaseHome() {
           <div className="knowledgebase-div" key={index}>
             <div className="knowledgebase-thumbnail-image">
               <Image
-                layout="fill"
-                objectFit="contain"
+                fill
                 src={`/images/${toURLFormat(indicator)}-state-thumbnail.png`}
-                alt={`${toURLFormat(indicator)} US State Thumbnail Image`}
+                alt={`${titleCased(indicator)} US State Thumbnail Image`}
               />
             </div>
 
@@ -173,10 +170,9 @@ async function KnowledgebaseHome() {
           <div className="knowledgebase-div" key={index}>
             <div className="knowledgebase-thumbnail-image">
               <Image
-                layout="fill"
-                objectFit="contain"
+                fill
                 src={`/images/${toURLFormat(indicator)}-state-thumbnail.png`}
-                alt={`${toURLFormat(indicator)} US State Thumbnail Image`}
+                alt={`${titleCased(indicator)} US State Thumbnail Image`}
               />
             </div>
 

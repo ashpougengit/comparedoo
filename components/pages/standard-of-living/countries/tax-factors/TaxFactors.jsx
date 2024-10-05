@@ -139,8 +139,7 @@ function TaxFactors({ country1StandardInfo, country2StandardInfo, country1URLCas
                 <div className="basic-information-images">
                   <Image
                     src="/images/gross-national-savings-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the total Gross National Savings of any specific country"
                   />
                 </div>
@@ -175,8 +174,7 @@ function TaxFactors({ country1StandardInfo, country2StandardInfo, country1URLCas
                 <div className="basic-information-images">
                   <Image
                     src="/images/tax-revenue-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the total tax revenue collection of any specific country"
                   />
                 </div>
@@ -211,8 +209,7 @@ function TaxFactors({ country1StandardInfo, country2StandardInfo, country1URLCas
                 <div className="basic-information-images">
                   <Image
                     src="/images/taxes-on-exports-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Taxes on Exports"
                   />
                 </div>
@@ -249,8 +246,7 @@ function TaxFactors({ country1StandardInfo, country2StandardInfo, country1URLCas
                 <div className="basic-information-images">
                   <Image
                     src="/images/taxes-on-goods-and-services-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Taxes on Goods and Services"
                   />
                 </div>
@@ -287,8 +283,7 @@ function TaxFactors({ country1StandardInfo, country2StandardInfo, country1URLCas
                 <div className="basic-information-images">
                   <Image
                     src="/images/taxes-on-international-trade-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Taxes on International Trade"
                   />
                 </div>
@@ -325,8 +320,7 @@ function TaxFactors({ country1StandardInfo, country2StandardInfo, country1URLCas
                 <div className="basic-information-images">
                   <Image
                     src="/images/time-to-prepare-and-pay-taxes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Time to Prepare and Pay Taxes"
                   />
                 </div>
@@ -375,8 +369,7 @@ function TaxFactors({ country1StandardInfo, country2StandardInfo, country1URLCas
                 <div className="basic-information-images">
                   <Image
                     src="/images/customs-and-other-import-duties-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Customs and Other Import Duties"
                   />
                 </div>

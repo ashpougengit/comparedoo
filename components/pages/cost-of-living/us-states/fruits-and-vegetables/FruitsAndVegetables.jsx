@@ -150,8 +150,7 @@ function FruitsAndVegetables({
                 <div className="basic-information-images">
                   <Image
                     src="/images/apples-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing apples cost per month"
                   />
                 </div>
@@ -175,8 +174,7 @@ function FruitsAndVegetables({
                 <div className="basic-information-images">
                   <Image
                     src="/images/bananas-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing bananas cost per month"
                   />
                 </div>
@@ -200,8 +198,7 @@ function FruitsAndVegetables({
                 <div className="basic-information-images">
                   <Image
                     src="/images/oranges-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing oranges cost per month"
                   />
                 </div>
@@ -225,8 +222,7 @@ function FruitsAndVegetables({
                 <div className="basic-information-images">
                   <Image
                     src="/images/tomatoes-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing tomatoes cost per month"
                   />
                 </div>
@@ -250,8 +246,7 @@ function FruitsAndVegetables({
                 <div className="basic-information-images">
                   <Image
                     src="/images/potatoes-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing potatoes cost per month"
                   />
                 </div>
@@ -275,8 +270,7 @@ function FruitsAndVegetables({
                 <div className="basic-information-images">
                   <Image
                     src="/images/lemons-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing lemons cost per month"
                   />
                 </div>
@@ -300,8 +294,7 @@ function FruitsAndVegetables({
                 <div className="basic-information-images">
                   <Image
                     src="/images/onions-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing onions cost per month"
                   />
                 </div>
@@ -325,8 +318,7 @@ function FruitsAndVegetables({
                 <div className="basic-information-images">
                   <Image
                     src="/images/lentils-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing lentils cost per month"
                   />
                 </div>

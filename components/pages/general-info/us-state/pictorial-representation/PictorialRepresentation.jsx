@@ -21,8 +21,7 @@ function PictorialRepresentation({ state, stateURLCase }) {
               <div className="first-entity-map">
                 <Image
                   src={`/images/${stateURLCase}-us-state-map-medium.png`}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
                   alt={`Pictorial representation of map of ${state}`}
                 />
               </div>
@@ -32,8 +31,7 @@ function PictorialRepresentation({ state, stateURLCase }) {
               <div className="first-entity-flag">
                 <Image
                   src={`/images/${stateURLCase}-us-state-flag-medium.png`}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
                   alt={`Image illustrating the flag of ${state}`}
                 />
               </div>
@@ -43,8 +41,7 @@ function PictorialRepresentation({ state, stateURLCase }) {
               <div className="first-entity-emblem">
                 <Image
                   src={`/images/${stateURLCase}-us-state-seal-big.png`}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
                   alt={`Image showing the state seal of ${state}`}
                 />
               </div>

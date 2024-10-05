@@ -85,8 +85,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/time-required-to-start-a-business-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Time Required to Start a Business"
                   />
                 </div>
@@ -108,8 +107,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/new-businesses-registered-number-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing New Businesses Registered"
                   />
                 </div>
@@ -132,8 +130,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/new-businesses-registration-density-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing New Businesses Registration Density"
                   />
                 </div>
@@ -155,8 +152,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/cost-of-business-start-up-procedures-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing Cost of Business Start-Up Procedures"
                   />
                 </div>

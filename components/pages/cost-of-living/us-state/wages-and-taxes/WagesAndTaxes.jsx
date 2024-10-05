@@ -87,8 +87,7 @@ function WagesAndTaxes({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/average-gross-monthly-salary-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Average Gross Monthly Salary"
                   />
                 </div>
@@ -107,8 +106,7 @@ function WagesAndTaxes({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/average-net-monthly-salary-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Average Net Monthly Salary"
                   />
                 </div>
@@ -127,8 +125,7 @@ function WagesAndTaxes({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/minimum-wage-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Minimum Wages"
                   />
                 </div>
@@ -147,8 +144,7 @@ function WagesAndTaxes({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/average-bonus-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Average Bonus"
                   />
                 </div>
@@ -167,8 +163,7 @@ function WagesAndTaxes({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/income-tax-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Income Tax Rate"
                   />
                 </div>
@@ -188,8 +183,7 @@ function WagesAndTaxes({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/social-security-contributions-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Social Security Contributions"
                   />
                 </div>
@@ -207,8 +201,7 @@ function WagesAndTaxes({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/pension-contributions-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Pension Contributions"
                   />
                 </div>
@@ -226,8 +219,7 @@ function WagesAndTaxes({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/cost-of-living-index-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Cost of Living Index"
                   />
                 </div>
@@ -244,8 +236,7 @@ function WagesAndTaxes({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/median-household-income-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Median Household Income"
                   />
                 </div>

@@ -131,8 +131,7 @@ function HumanDevelopment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/hdi-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Human Development Index of any specific country or state"
                   />
                 </div>
@@ -155,8 +154,7 @@ function HumanDevelopment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/literacy-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Literacy Rate of any specific country or state"
                   />
                 </div>
@@ -188,8 +186,7 @@ function HumanDevelopment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/life-expectancy-ratio-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of Life Expectancy Ratio any given country"
                   />
                 </div>
@@ -216,8 +213,7 @@ function HumanDevelopment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/poverty-headcount-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Poverty Rate of any specific country or state"
                   />
                 </div>
@@ -246,8 +242,7 @@ function HumanDevelopment({
                 <div className="basic-information-images">
                   <Image
                     src="/images/employment-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Employment Rate of any specific country or state"
                   />
                 </div>

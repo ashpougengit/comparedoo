@@ -196,8 +196,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/doctors-visit-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Doctors Visit"
                   />
                 </div>
@@ -235,8 +234,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/specialist-visit-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Specialists Visit"
                   />
                 </div>
@@ -274,8 +272,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/dentist-visit-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Dentist Visit"
                   />
                 </div>
@@ -313,8 +310,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/eye-exam-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Eye Exam"
                   />
                 </div>
@@ -352,8 +348,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/mental-health-counseling.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Mental Health Counseling"
                   />
                 </div>
@@ -393,8 +388,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/preventive-health-screening.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Preventive Health Screening"
                   />
                 </div>
@@ -436,8 +430,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/physical-therapy-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Physical Therapy"
                   />
                 </div>
@@ -475,8 +468,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/emergency-room-visit-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Emergency Room Visit"
                   />
                 </div>
@@ -514,8 +506,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/hospital-stay-per-night-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Hospital Stay Per Night"
                   />
                 </div>
@@ -553,8 +544,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/vaccinations-charge-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Vaccinations"
                   />
                 </div>
@@ -592,8 +582,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/prescription-medication-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Prescription Medication"
                   />
                 </div>
@@ -633,8 +622,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/over-the-counter-medication-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Over the Counter Medication"
                   />
                 </div>
@@ -672,8 +660,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/health-insurance-premiums-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Health Insurance Premiums"
                   />
                 </div>
@@ -713,8 +700,7 @@ function HealthAndMedicalCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/health-insurance-deductibles-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Health Insurance Deductibles"
                   />
                 </div>

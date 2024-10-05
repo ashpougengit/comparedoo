@@ -1,4 +1,5 @@
 import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner'
+import Image from 'next/image'
 
 function MapAndDescriptionAntartica() {
     return (
@@ -9,7 +10,7 @@ function MapAndDescriptionAntartica() {
 
             <div className="map-of-continent-and-ads-section">
                 <div className="continent-map">
-                    <img src="/images/map-of-antarctica-big.png" alt="Map of Antartica" />
+                    <Image src="/images/map-of-antarctica-big.png" fill alt="Map of Antartica" />
                 </div>
                 <table className="continent-table">
 

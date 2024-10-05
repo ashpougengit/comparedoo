@@ -162,8 +162,7 @@ function PrivateClassesAndLessonsCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/language-classes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Language Classes"
                   />
                 </div>
@@ -201,8 +200,7 @@ function PrivateClassesAndLessonsCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/parenting-classes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Parenting Classes"
                   />
                 </div>
@@ -240,8 +238,7 @@ function PrivateClassesAndLessonsCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/art-classes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Art Classes"
                   />
                 </div>
@@ -279,8 +276,7 @@ function PrivateClassesAndLessonsCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/fitness-class-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Fitness Classes"
                   />
                 </div>
@@ -318,8 +314,7 @@ function PrivateClassesAndLessonsCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/music-lessons-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Music Lessons"
                   />
                 </div>
@@ -357,8 +352,7 @@ function PrivateClassesAndLessonsCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/dance-lessons-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Dance Lessons"
                   />
                 </div>
@@ -398,8 +392,7 @@ function PrivateClassesAndLessonsCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/reading-materials-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Reading Materials for Classes"
                   />
                 </div>
@@ -437,8 +430,7 @@ function PrivateClassesAndLessonsCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/educational-software-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Educational Software"
                   />
                 </div>

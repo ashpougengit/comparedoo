@@ -95,8 +95,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/fertility-ratio-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of Fertility rate or ratio of any given country"
                   />
                 </div>
@@ -125,8 +124,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/death-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of Death rate or Mortality rate of adult male any given country"
                   />
                 </div>
@@ -155,8 +153,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/death-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of Death rate or Mortality rate of adult female any given country"
                   />
                 </div>
@@ -185,8 +182,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/infant-mortality-ratio-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of Infant Mortality Rate of any given country"
                   />
                 </div>
@@ -279,8 +275,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/top-cause-of-death-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of top cause of death of any given country"
                   />
                 </div>
@@ -321,8 +316,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/lowest-cause-of-death-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of lowest cause of death of any given country"
                   />
                 </div>
@@ -364,8 +358,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/road-traffic-death-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of road accident death of any given country"
                   />
                 </div>
@@ -394,8 +387,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/suicide-death-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of number of suicide deaths of any given country"
                   />
                 </div>
@@ -424,8 +416,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/new-hiv-infections-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of new HIV Infections of any given country"
                   />
                 </div>
@@ -565,8 +556,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/hypertension-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of prevalance of hypertension ratio of any given country"
                   />
                 </div>
@@ -595,8 +585,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/obesity-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of obesity ratio of any given country"
                   />
                 </div>
@@ -625,8 +614,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/pure-alcohol-consumption-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of pure alcohol consumption ratio of any given country"
                   />
                 </div>
@@ -656,8 +644,7 @@ function Health({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/tobacco-consumption-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of tobacco consumption ratio of any given country"
                   />
                 </div>

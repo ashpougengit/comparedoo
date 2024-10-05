@@ -45,8 +45,7 @@ function CountriesListAfrica() {
                 <div className="country-map">
                   <Image
                     src={`/images/${urlCasedCountry}-map-small.png`}
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt={`Pictorial representation of map of ${country}`}
                   />
                 </div>
@@ -56,8 +55,7 @@ function CountriesListAfrica() {
                 <div className="country-flag">
                   <Image
                     src={`/images/${urlCasedCountry}-flag-small.png`}
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt={`Image illustrating the flag of ${country}`}
                   />
                 </div>

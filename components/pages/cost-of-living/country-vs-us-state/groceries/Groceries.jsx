@@ -166,8 +166,7 @@ function Groceries({
                 <div className="basic-information-images">
                   <Image
                     src="/images/rice-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing rice cost per month"
                   />
                 </div>
@@ -219,8 +218,7 @@ function Groceries({
                 <div className="basic-information-images">
                   <Image
                     src="/images/milk-1-liter-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing milk cost per month"
                   />
                 </div>
@@ -272,8 +270,7 @@ function Groceries({
                 <div className="basic-information-images">
                   <Image
                     src="/images/water-1-liter-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing water cost per month"
                   />
                 </div>
@@ -325,8 +322,7 @@ function Groceries({
                 <div className="basic-information-images">
                   <Image
                     src="/images/bread-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing bread cost per month"
                   />
                 </div>
@@ -378,8 +374,7 @@ function Groceries({
                 <div className="basic-information-images">
                   <Image
                     src="/images/eggs-dozen-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing eggs cost per month"
                   />
                 </div>
@@ -431,8 +426,7 @@ function Groceries({
                 <div className="basic-information-images">
                   <Image
                     src="/images/cheese-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing cheese cost per month"
                   />
                 </div>
@@ -484,8 +478,7 @@ function Groceries({
                 <div className="basic-information-images">
                   <Image
                     src="/images/chicken-breast-1-kg-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing chicken cost per month"
                   />
                 </div>

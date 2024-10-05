@@ -146,8 +146,7 @@ function BasicUtilities({
                 <div className="basic-information-images">
                   <Image
                     src="/images/home-furnishing-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Home Furnishing Cost"
                   />
                 </div>
@@ -171,8 +170,7 @@ function BasicUtilities({
                 <div className="basic-information-images">
                   <Image
                     src="/images/electricity-cost-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Electricity Cost per month"
                   />
                 </div>
@@ -200,8 +198,7 @@ function BasicUtilities({
                 <div className="basic-information-images">
                   <Image
                     src="/images/heating-cost-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Heating Cost per month"
                   />
                 </div>
@@ -225,8 +222,7 @@ function BasicUtilities({
                 <div className="basic-information-images">
                   <Image
                     src="/images/cooling-cost-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Cooling Cost per month"
                   />
                 </div>
@@ -252,8 +248,7 @@ function BasicUtilities({
                 <div className="basic-information-images">
                   <Image
                     src="/images/water-cost-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing water cost per month"
                   />
                 </div>

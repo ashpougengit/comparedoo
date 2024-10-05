@@ -85,8 +85,7 @@ function PersonalCare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/cosmetic-procedures-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Cosmetic Procedures"
                   />
                 </div>
@@ -105,8 +104,7 @@ function PersonalCare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/spa-treatment-cost-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Spa Treatment"
                   />
                 </div>
@@ -125,8 +123,7 @@ function PersonalCare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/manicure-pedicure-cost-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Manicure Pedicure Cost"
                   />
                 </div>
@@ -145,8 +142,7 @@ function PersonalCare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/optical-glasses-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Optical Glasses Cost"
                   />
                 </div>
@@ -165,8 +161,7 @@ function PersonalCare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/contact-lenses-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Contact Lenses Cost"
                   />
                 </div>
@@ -185,8 +180,7 @@ function PersonalCare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/haircuts-price-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Hair Cuts"
                   />
                 </div>
@@ -205,8 +199,7 @@ function PersonalCare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/hair-coloring-price-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Hair Coloring"
                   />
                 </div>
@@ -225,8 +218,7 @@ function PersonalCare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/shampoo-price-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Shampoo Price"
                   />
                 </div>
@@ -245,8 +237,7 @@ function PersonalCare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/toothpaste-price-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Toothpaste Price"
                   />
                 </div>

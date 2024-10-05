@@ -82,8 +82,7 @@ function Drinks({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/wine-bottle-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Wine Mid Range Bottle"
                   />
                 </div>
@@ -102,8 +101,7 @@ function Drinks({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/glass-of-wine.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing cost of Glass of Wine"
                   />
                 </div>
@@ -122,8 +120,7 @@ function Drinks({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/beer-bottle-domestic-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing the cost of a domestic beer of half liter"
                   />
                 </div>
@@ -142,8 +139,7 @@ function Drinks({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/beer-bottle-branded-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing the cost of a branded beer of half liter"
                   />
                 </div>
@@ -162,8 +158,7 @@ function Drinks({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/alcohol-bottle-domestic-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing the cost of a Domestic Alcohol 1 liter"
                   />
                 </div>
@@ -182,8 +177,7 @@ function Drinks({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/alcohol-bottle-branded-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing the cost of a Branded Alcohol 1 liter"
                   />
                 </div>

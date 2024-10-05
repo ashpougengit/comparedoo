@@ -76,8 +76,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/square-km-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Illustration of area in Square Kilometers"
                   />
                 </div>
@@ -103,8 +102,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/square-mile-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Illustration of area in Square Mile"
                   />
                 </div>
@@ -130,8 +128,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/water-percentage-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Illustration of water percentage area of any country in the world"
                   />
                 </div>

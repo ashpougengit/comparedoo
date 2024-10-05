@@ -87,8 +87,7 @@ function Vehicle({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/vehicle-purchase-price-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Reasonable Vehicle Purchase Cost"
                   />
                 </div>
@@ -107,8 +106,7 @@ function Vehicle({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/vehicle-registration-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Vehicle Registration Cost"
                   />
                 </div>
@@ -127,8 +125,7 @@ function Vehicle({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/driving-license-fees-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Driving License Fees"
                   />
                 </div>
@@ -147,8 +144,7 @@ function Vehicle({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/car-insurance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Car Insurance Cost"
                   />
                 </div>
@@ -167,8 +163,7 @@ function Vehicle({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/car-maintenance-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Car Maintainence Cost"
                   />
                 </div>
@@ -187,8 +182,7 @@ function Vehicle({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/car-loan-interest-rate-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Car Loan Interest Rates"
                   />
                 </div>
@@ -207,8 +201,7 @@ function Vehicle({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/fuel-per-liter-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Fuel Per Liter"
                   />
                 </div>
@@ -227,8 +220,7 @@ function Vehicle({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/fuel-per-gallon-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Fuel Per Gallon"
                   />
                 </div>
@@ -247,8 +239,7 @@ function Vehicle({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/toll-fees-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Average Toll Fees"
                   />
                 </div>

@@ -140,8 +140,7 @@ function NetworkAndCommunication({
                 <div className="basic-information-images">
                   <Image
                     src="/images/wifi-cost-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing wifi cost per month"
                   />
                 </div>
@@ -167,8 +166,7 @@ function NetworkAndCommunication({
                 <div className="basic-information-images">
                   <Image
                     src="/images/mobile-phone-plan-cost-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing mobile phone basic plan cost per month"
                   />
                 </div>
@@ -198,8 +196,7 @@ function NetworkAndCommunication({
                 <div className="basic-information-images">
                   <Image
                     src="/images/landline-phone-service-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Landline phone basic plan cost per month"
                   />
                 </div>
@@ -229,8 +226,7 @@ function NetworkAndCommunication({
                 <div className="basic-information-images">
                   <Image
                     src="/images/cable-tv-service-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Cable TV basic plan cost per month"
                   />
                 </div>

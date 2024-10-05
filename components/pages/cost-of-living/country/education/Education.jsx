@@ -91,8 +91,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/pre-school-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing PreSchool Fees"
                   />
                 </div>
@@ -118,8 +117,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/primary-school-fees-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Primary School Fees"
                   />
                 </div>
@@ -145,8 +143,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/secondary-school-fees-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Secondary School Fees"
                   />
                 </div>
@@ -172,8 +169,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/private-school-fees-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Private School Fees"
                   />
                 </div>
@@ -199,8 +195,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/university-tuition-fees-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing University Tuition Fees"
                   />
                 </div>
@@ -228,8 +223,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/university-private-tuition-fees-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing University Private Tuition Fees"
                   />
                 </div>
@@ -255,8 +249,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/after-school-activities-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing After School Activities"
                   />
                 </div>
@@ -282,8 +275,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/special-education-services-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Special Education Services"
                   />
                 </div>
@@ -309,8 +301,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/tutoring-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Tutoring"
                   />
                 </div>
@@ -336,8 +327,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/textbooks-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Textbooks Cost"
                   />
                 </div>
@@ -363,8 +353,7 @@ function Education({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/school-supplies-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing School Supplies"
                   />
                 </div>

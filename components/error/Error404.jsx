@@ -1,14 +1,17 @@
+import Image from "next/image"
 import SearchBox from "../search-box/SearchBox"
+import { getCountryByIP } from "@/lib/array-list/allCountriesList"
 
-function Error404() {
+async function Error404() {
+  const userCountry = await getCountryByIP()
+
   return (
     <>
-    {/* <SearchBox slug1='' slug2=''/> */}
-
       <div className="error-404">
         <div className="error-image">
-          <img
-            src="images/error-404.png"
+          <Image
+            src="/images/error-404.png"
+            fill
             alt="404 Error, Page Not Found" />
         </div>
       </div>
@@ -17,6 +20,7 @@ function Error404() {
         <p>“Oops! You’ve traveled off the grid. No comparisons here!”</p>
         <p>Try searching again.</p>
       </div>
+      <SearchBox userCountry={userCountry} slug2='' />
     </>
   )
 }

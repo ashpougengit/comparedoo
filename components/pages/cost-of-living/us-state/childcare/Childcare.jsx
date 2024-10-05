@@ -86,8 +86,7 @@ function Childcare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/children-jeans-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Children Jeans"
                   />
                 </div>
@@ -108,8 +107,7 @@ function Childcare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/children-sneakers-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Children Normal Sneakers"
                   />
                 </div>
@@ -130,8 +128,7 @@ function Childcare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/children-winter-coat-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Children's Winter Coat"
                   />
                 </div>
@@ -150,8 +147,7 @@ function Childcare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/day-care-infant-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Daycare for Infant"
                   />
                 </div>
@@ -170,8 +166,7 @@ function Childcare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/day-care-toddler-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Daycare for Toddler"
                   />
                 </div>
@@ -190,8 +185,7 @@ function Childcare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/children-care-for-sick-days-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Childcare for Sick Days"
                   />
                 </div>
@@ -212,8 +206,7 @@ function Childcare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/early-childhood-education-programs-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Early Childhood Education Programs"
                   />
                 </div>
@@ -236,8 +229,7 @@ function Childcare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/extra-curricular-activities-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Extra Curricular Activities"
                   />
                 </div>
@@ -256,8 +248,7 @@ function Childcare({ costInfo, stateURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/summer-camp-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Summer Camp"
                   />
                 </div>

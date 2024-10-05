@@ -97,8 +97,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/pair-of-nike-running-shoes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Pair of Nike Running Shoes"
                   />
                 </div>
@@ -124,8 +123,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/mens-dress-shirt-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Men's Shirt"
                   />
                 </div>
@@ -151,8 +149,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/women-dress-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Women's Shirt"
                   />
                 </div>
@@ -178,8 +175,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/summer-dress-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Summer Dress"
                   />
                 </div>
@@ -205,8 +201,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/mens-suit-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Men's Suit"
                   />
                 </div>
@@ -232,8 +227,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/mens-jeans-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Men's Jeans"
                   />
                 </div>
@@ -259,8 +253,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/women-jeans-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Women's Jeans"
                   />
                 </div>
@@ -286,8 +279,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/mens-formal-shoes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Men's formal Shoes"
                   />
                 </div>
@@ -313,8 +305,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/women-formal-shoes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Women's formal Shoes"
                   />
                 </div>
@@ -340,8 +331,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/mens-casual-shoes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Men's Casual Shoes"
                   />
                 </div>
@@ -367,8 +357,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/women-casual-shoes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Women's Casual Shoes"
                   />
                 </div>
@@ -394,8 +383,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/men-underwear-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Underwear For Men"
                   />
                 </div>
@@ -421,8 +409,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/women-underwear-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Underwear For Women"
                   />
                 </div>
@@ -448,8 +435,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/men-socks-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing socks For Men"
                   />
                 </div>
@@ -475,8 +461,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/women-socks-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing socks For Women"
                   />
                 </div>
@@ -502,8 +487,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/adult-winter-coat-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Wintercoat for Adults"
                   />
                 </div>
@@ -529,8 +513,7 @@ function Clothing({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/sportswear-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Sportswear"
                   />
                 </div>

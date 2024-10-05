@@ -178,8 +178,7 @@ function HousingCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-1-bedroom-flat-in-city-center-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing 1 bedroom apartment in City Center"
                   />
                 </div>
@@ -223,8 +222,7 @@ function HousingCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-2-bedroom-flat-in-city-center-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing 2 bedroom apartment in City Center"
                   />
                 </div>
@@ -264,8 +262,7 @@ function HousingCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-3-bedroom-flat-in-city-center-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing 3 bedroom apartment in City Center"
                   />
                 </div>
@@ -305,8 +302,7 @@ function HousingCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-1-bedroom-flat-outside-city-center-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing 1 bedroom apartment outside City Center"
                   />
                 </div>
@@ -346,8 +342,7 @@ function HousingCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-2-bedroom-flat-outside-city-center-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing 2 bedroom apartment outside City Center"
                   />
                 </div>
@@ -387,8 +382,7 @@ function HousingCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/rent-3-bedroom-flat-outside-city-center-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing 3 bedroom apartment outside City Center"
                   />
                 </div>
@@ -426,8 +420,7 @@ function HousingCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/mortgage-rates-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Mortgage Rates Per Month"
                   />
                 </div>
@@ -447,8 +440,7 @@ function HousingCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/real-estate-agents-comission-fees-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Real Estate Agents Comission Fees"
                   />
                 </div>
@@ -468,8 +460,7 @@ function HousingCost({
                 <div className="basic-information-images">
                   <Image
                     src="/images/property-taxes-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Property Taxes in any given country"
                   />
                 </div>

@@ -84,8 +84,7 @@ function NationalSymbols({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/national-anthem-native-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of national anthem of any country in their native language"
                   />
                 </div>
@@ -104,8 +103,7 @@ function NationalSymbols({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/national-anthem-english-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of national anthem of any country in English language"
                   />
                 </div>
@@ -122,8 +120,7 @@ function NationalSymbols({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/national-animal-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of national animal of any specific country"
                   />
                 </div>
@@ -141,8 +138,7 @@ function NationalSymbols({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/national-bird-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of national bird of any specific country"
                   />
                 </div>
@@ -160,8 +156,7 @@ function NationalSymbols({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/national-flower-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of national flower of any specific country"
                   />
                 </div>
@@ -179,8 +174,7 @@ function NationalSymbols({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/national-sport-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of national sport of any specific country"
                   />
                 </div>
@@ -198,8 +192,7 @@ function NationalSymbols({ generalInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/national-colors-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of national colors of any specific country"
                   />
                 </div>

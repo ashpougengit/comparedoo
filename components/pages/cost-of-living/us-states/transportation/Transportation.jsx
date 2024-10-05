@@ -162,8 +162,7 @@ function Transportation({
                 <div className="basic-information-images">
                   <Image
                     src="/images/public-transportation-pass-per-month-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Monthly Public Transportation Pass"
                   />
                 </div>
@@ -189,8 +188,7 @@ function Transportation({
                 <div className="basic-information-images">
                   <Image
                     src="/images/single-public-transportation-ticket-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Single Public Transportation Ticket"
                   />
                 </div>
@@ -218,8 +216,7 @@ function Transportation({
                 <div className="basic-information-images">
                   <Image
                     src="/images/train-tickets-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Single Train Ticket"
                   />
                 </div>
@@ -243,8 +240,7 @@ function Transportation({
                 <div className="basic-information-images">
                   <Image
                     src="/images/air-fare-domestic.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Domestic Airplane Ticket"
                   />
                 </div>
@@ -268,8 +264,7 @@ function Transportation({
                 <div className="basic-information-images">
                   <Image
                     src="/images/taxi-start-fare-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Taxi Start Fare"
                   />
                 </div>
@@ -293,8 +288,7 @@ function Transportation({
                 <div className="basic-information-images">
                   <Image
                     src="/images/taxi-rate-per-kilometers-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Taxi Rate Per Kilometer"
                   />
                 </div>
@@ -318,8 +312,7 @@ function Transportation({
                 <div className="basic-information-images">
                   <Image
                     src="/images/car-rental-per-day-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Car Rental Per Day"
                   />
                 </div>
@@ -345,8 +338,7 @@ function Transportation({
                 <div className="basic-information-images">
                   <Image
                     src="/images/parking-fees-inside-city-per-hour-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Parking Fees in City Center"
                   />
                 </div>
@@ -376,8 +368,7 @@ function Transportation({
                 <div className="basic-information-images">
                   <Image
                     src="/images/parking-fees-outside-city-per-hour-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Parking Fees outside City Center"
                   />
                 </div>

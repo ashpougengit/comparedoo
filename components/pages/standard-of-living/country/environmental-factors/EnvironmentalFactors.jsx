@@ -87,8 +87,7 @@ function EnvironmentalFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/agricultural-land-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Depicting the total Agricultural Land available in any specific country"
                   />
                 </div>
@@ -110,8 +109,7 @@ function EnvironmentalFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/forest-area-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Depicting the total Forest Area available in any specific country"
                   />
                 </div>
@@ -133,8 +131,7 @@ function EnvironmentalFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/co2-emissions-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Depicting the total CO2 Emissions from any specific country"
                   />
                 </div>
@@ -157,8 +154,7 @@ function EnvironmentalFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/access-to-electricity-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Depicting the access of electricity in any specific country"
                   />
                 </div>
@@ -182,8 +178,7 @@ function EnvironmentalFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/access-to-internet-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Depicting the access of internet in any specific country"
                   />
                 </div>
@@ -207,8 +202,7 @@ function EnvironmentalFactors({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/fresh-water-withdrawals-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Depicting the annual freshwater withdrawals from any specific country"
                   />
                 </div>

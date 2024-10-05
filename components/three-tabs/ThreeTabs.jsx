@@ -15,8 +15,8 @@ function ThreeTabs({ entity1, entity2 = null }) {
   )
     ? 'comparison'
     : path.startsWith('/cost-of-living')
-    ? 'cost-of-living'
-    : 'standard-of-living';
+      ? 'cost-of-living'
+      : 'standard-of-living';
 
   const slug1 = entity1?.toLowerCase().split(' ').join('-');
   const slug2 = entity2?.toLowerCase().split(' ').join('-');
@@ -28,9 +28,8 @@ function ThreeTabs({ entity1, entity2 = null }) {
       {category === toggledPath ? (
         <div className="three-tabs-links">
           <Link
-            href={`/${slug2 ? 'comparison' : 'general-information'}/${slug1}/${
-              slug2 ? slug2 : ''
-            }`}
+            href={`/${slug2 ? 'comparison' : 'general-information'}/${slug1}/${slug2 ? slug2 : ''
+              }`}
             onClick={() =>
               setToggledPath(slug2 ? 'comparison' : 'general-information')
             }
@@ -39,7 +38,7 @@ function ThreeTabs({ entity1, entity2 = null }) {
             <div
               className={
                 path.startsWith('/general-information') ||
-                path.startsWith('/comparison')
+                  path.startsWith('/comparison')
                   ? 'general-info three-tabs-links-flex active-link'
                   : 'general-info three-tabs-links-flex'
               }
@@ -47,8 +46,7 @@ function ThreeTabs({ entity1, entity2 = null }) {
               <div className="three-tabs-links-image">
                 <Image
                   src="/images/general-information-image-comparedoo.png"
-                  layout="fill"
-                  objectFit="contain"
+                  fill
                   alt="General Comparison Image Comparedoo.com"
                 />
               </div>
@@ -73,8 +71,7 @@ function ThreeTabs({ entity1, entity2 = null }) {
               <div className="three-tabs-links-image">
                 <Image
                   src="/images/cost-of-living-image-comparedoo.png"
-                  layout="fill"
-                  objectFit="contain"
+                  fill
                   alt="Cost of Living Image Comparedoo.com"
                 />
               </div>
@@ -97,8 +94,7 @@ function ThreeTabs({ entity1, entity2 = null }) {
               <div className="three-tabs-links-image">
                 <Image
                   src="/images/standard-of-living-image-comparedoo.png"
-                  layout="fill"
-                  objectFit="contain"
+                  fill
                   alt="Standard Of Living Image Comparedoo.com"
                 />
               </div>

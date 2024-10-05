@@ -7,8 +7,8 @@ import Link from 'next/link';
 function CountriesListOceania() {
   return (
     <>
-    <AdsHeaderBanner />
-    
+      <AdsHeaderBanner />
+
       <div className="countries-list-continents-pages">
         <h2 className="pages-h2">Countries List</h2>
       </div>
@@ -42,8 +42,7 @@ function CountriesListOceania() {
                 <div className="country-map">
                   <Image
                     src={`/images/${urlCasedCountry}-map-small.png`}
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt={`Pictorial representation of map of ${country}`}
                   />
                 </div>
@@ -53,8 +52,7 @@ function CountriesListOceania() {
                 <div className="country-flag">
                   <Image
                     src={`/images/${urlCasedCountry}-flag-small.png`}
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt={`Image illustrating the flag of ${country}`}
                   />
                 </div>

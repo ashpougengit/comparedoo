@@ -85,8 +85,7 @@ function Health({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/number-of-doctors-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of number of Doctors in any specific country"
                   />
                 </div>
@@ -114,8 +113,7 @@ function Health({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/number-of-nurses-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of number of Nurses in any specific country"
                   />
                 </div>
@@ -143,8 +141,7 @@ function Health({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/number-of-pharmacists-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of number of Pharmacists in any specific country"
                   />
                 </div>
@@ -172,8 +169,7 @@ function Health({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/hospital-beds-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of Available Hospital Beds in any specific country"
                   />
                 </div>
@@ -201,8 +197,7 @@ function Health({ standardInfo, countryURLCase }) {
                 <div className="basic-information-images">
                   <Image
                     src="/images/pregnant-women-receiving-prenatal-care-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of Pregnant Women Receiving Prenatal Care in any specific country"
                   />
                 </div>

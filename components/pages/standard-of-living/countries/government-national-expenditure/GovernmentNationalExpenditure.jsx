@@ -132,8 +132,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                 <div className="basic-information-images">
                   <Image
                     src="/images/gross-national-expenditure-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the total Gross National Expenditure of any specific country"
                   />
                 </div>
@@ -168,8 +167,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                 <div className="basic-information-images">
                   <Image
                     src="/images/health-expenditure-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representation of total Health Expenditure of any given country"
                   />
                 </div>
@@ -205,8 +203,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                 <div className="basic-information-images">
                   <Image
                     src="/images/research-and-development-expenditure-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Government Expenditure of any specific country"
                   />
                 </div>
@@ -243,8 +240,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                 <div className="basic-information-images">
                   <Image
                     src="/images/government-expenditure-on-education-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Government Expenditure of any specific country"
                   />
                 </div>
@@ -281,8 +277,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                 <div className="basic-information-images">
                   <Image
                     src="/images/international-tourism-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the International Tourism Expenditure of any specific country"
                   />
                 </div>
@@ -305,8 +300,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                 <div className="basic-information-images">
                   <Image
                     src="/images/number-of-international-tourists-arrival.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Number of International Tourists Arrival in any specific country"
                   />
                 </div>
@@ -329,8 +323,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                 <div className="basic-information-images">
                   <Image
                     src="/images/military-expenditure-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image representing the Military Expenditure of any specific country"
                   />
                 </div>

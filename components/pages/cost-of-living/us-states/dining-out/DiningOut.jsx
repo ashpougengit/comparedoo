@@ -154,8 +154,7 @@ function DiningOut({
                 <div className="basic-information-images">
                   <Image
                     src="/images/meal-in-an-inexpensive-restaurant-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Meal cost at an inexpensive restaurant"
                   />
                 </div>
@@ -183,8 +182,7 @@ function DiningOut({
                 <div className="basic-information-images">
                   <Image
                     src="/images/three-course-meal-for-two-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Three-Course Meal for Two cost"
                   />
                 </div>
@@ -208,8 +206,7 @@ function DiningOut({
                 <div className="basic-information-images">
                   <Image
                     src="/images/fast-food-combo-meal-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing the cost of Fast Food Combo Meal"
                   />
                 </div>
@@ -233,8 +230,7 @@ function DiningOut({
                 <div className="basic-information-images">
                   <Image
                     src="/images/coffee-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Coffee cost"
                   />
                 </div>
@@ -258,8 +254,7 @@ function DiningOut({
                 <div className="basic-information-images">
                   <Image
                     src="/images/soft-drink-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Soft Drink Cost"
                   />
                 </div>
@@ -283,8 +278,7 @@ function DiningOut({
                 <div className="basic-information-images">
                   <Image
                     src="/images/pizza-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Pizza cost"
                   />
                 </div>
@@ -308,8 +302,7 @@ function DiningOut({
                 <div className="basic-information-images">
                   <Image
                     src="/images/take-out-delivery-meal-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing Take Out Delivery Meal Cost"
                   />
                 </div>
@@ -333,8 +326,7 @@ function DiningOut({
                 <div className="basic-information-images">
                   <Image
                     src="/images/cigarettes-pack-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image Describing lentils cost per month"
                   />
                 </div>

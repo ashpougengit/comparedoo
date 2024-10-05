@@ -191,8 +191,7 @@ function SizeComparison({ country1GeneralInfo, country2GeneralInfo, country1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/square-km-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Illustration of area in Square Kilometers"
                   />
                 </div>
@@ -233,8 +232,7 @@ function SizeComparison({ country1GeneralInfo, country2GeneralInfo, country1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/square-mile-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Illustration of area in Square Mile"
                   />
                 </div>
@@ -275,8 +273,7 @@ function SizeComparison({ country1GeneralInfo, country2GeneralInfo, country1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/water-percentage-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Illustration of water percentage area of any country in the world"
                   />
                 </div>

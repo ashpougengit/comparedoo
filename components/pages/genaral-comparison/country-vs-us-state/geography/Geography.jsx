@@ -123,8 +123,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/largest-city-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of the Largest City of any country"
                   />
                 </div>
@@ -143,8 +142,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/demonyms-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image depicting demonyms of any specific country"
                   />
                 </div>
@@ -163,8 +161,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/official-language-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image depicting the official languages of any specific country"
                   />
                 </div>
@@ -183,8 +180,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/currency-name-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of currency name of any specific country"
                   />
                 </div>
@@ -203,8 +199,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/currency-symbol-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of currency symbol of any specific country"
                   />
                 </div>
@@ -223,8 +218,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/start-of-week-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image showing the first working day of week of any specific country"
                   />
                 </div>
@@ -367,8 +361,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/driving-side-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Visual representation of driving side of any specific country"
                   />
                 </div>
@@ -387,8 +380,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/calling-code-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image depicting calling code of any specific country"
                   />
                 </div>
@@ -409,8 +401,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/internet-tld-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image depicting Internet Top Level Domain also called tld of any specific country"
                   />
                 </div>
@@ -429,8 +420,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="basic-information-images">
                   <Image
                     src="/images/iso-3166-code-image.png"
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                     alt="Image depicting ISO 3166 Code of any specific country"
                   />
                 </div>
