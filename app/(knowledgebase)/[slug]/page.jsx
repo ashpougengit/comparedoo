@@ -30,7 +30,9 @@ import Error404 from '@/components/error/Error404';
 // generateMetadata function
 export async function generateMetadata({ params }) {
   const { slug } = params;
-  const formattedIndicators = allIndicators.map(indicator => toURLFormat(indicator));
+  const formattedIndicators = allIndicators.map((indicator) =>
+    toURLFormat(indicator)
+  );
 
   // Helper function to create error metadata
   function createErrorMetadata(errorDescription) {
@@ -41,11 +43,15 @@ export async function generateMetadata({ params }) {
   }
 
   //  Regular expression to match valid URLs for /slug page
-  const pattern = new RegExp(`^(${formattedIndicators.join('|')})-(of-all-countries|of-all-us-states)$`);
+  const pattern = new RegExp(
+    `^(${formattedIndicators.join('|')})-(of-all-countries|of-all-us-states)$`
+  );
 
   // Validate the slug against the pattern
   if (!pattern.test(slug)) {
-    return createErrorMetadata('Invalid URL. Please check the path and try again.')
+    return createErrorMetadata(
+      'Invalid URL. Please check the path and try again.'
+    );
   }
 
   const isCountry = slug.includes('countries');
@@ -55,15 +61,19 @@ export async function generateMetadata({ params }) {
 
   // Validation for conflicting indicators between countries and US states
   if (
-    (countriesUniqueIndicators.includes(indicator) && slug.includes('us-states')) ||
+    (countriesUniqueIndicators.includes(indicator) &&
+      slug.includes('us-states')) ||
     (statesUniqueIndicators.includes(indicator) && slug.includes('countries'))
   ) {
-    return createErrorMetadata('Invalid URL. Please check the path and try again.');
+    return createErrorMetadata(
+      'Invalid URL. Please check the path and try again.'
+    );
   }
 
   try {
-    const title = `${titleCasedIndicator} of All ${isCountry ? 'Countries' : 'US States'
-      } (Updated: ${currentYear})`;
+    const title = `${titleCasedIndicator} of All ${
+      isCountry ? 'Countries' : 'US States'
+    } (Updated: ${currentYear})`;
     const description = isCountry
       ? `Discover the ${titleCasedIndicator} worldwide. In this article, you can find a comprehensive list of ${titleCasedIndicator} of all countries in the world.`
       : `In this article, you can find a comprehensive list of ${titleCasedIndicator} of all 50 states in the United States of America.`;
@@ -101,17 +111,23 @@ export async function generateMetadata({ params }) {
       ],
     };
   } catch (error) {
-    return createErrorMetadata('Invalid URL. Please check the path and try again.')
+    return createErrorMetadata(
+      'Invalid URL. Please check the path and try again.'
+    );
   }
 }
 
 async function KnowledgeBase({ params }) {
   const { slug } = params;
 
-  const formattedIndicators = allIndicators.map(indicator => toURLFormat(indicator));
+  const formattedIndicators = allIndicators.map((indicator) =>
+    toURLFormat(indicator)
+  );
 
   //  Regular expression to match valid URLs for knowledgebase/slug page
-  const pattern = new RegExp(`^(${formattedIndicators.join('|')})-(of-all-countries|of-all-us-states)$`);
+  const pattern = new RegExp(
+    `^(${formattedIndicators.join('|')})-(of-all-countries|of-all-us-states)$`
+  );
 
   // Validate the slug against the pattern
   if (!pattern.test(slug)) {
@@ -122,11 +138,17 @@ async function KnowledgeBase({ params }) {
   const trimmedSlug = slug.replace(/of-all(countries|us-states)/, '');
   let indicator = toCamelCase(trimmedSlug);
 
-  if (countriesUniqueIndicators.includes(indicator) && slug.includes('us-states')) {
-    return <Error404 />
+  if (
+    countriesUniqueIndicators.includes(indicator) &&
+    slug.includes('us-states')
+  ) {
+    return <Error404 />;
   }
-  if (statesUniqueIndicators.includes(indicator) && slug.includes('countries')) {
-    return <Error404 />
+  if (
+    statesUniqueIndicators.includes(indicator) &&
+    slug.includes('countries')
+  ) {
+    return <Error404 />;
   }
 
   const titleCasedIndicator = camelToTitleCase(indicator, isCountry);
@@ -139,7 +161,7 @@ async function KnowledgeBase({ params }) {
 
   indicator =
     indicator === 'unemploymentPercentageOfTotalLabourForce' ||
-      indicator === 'employmentRate'
+    indicator === 'employmentRate'
       ? isCountry
         ? 'unemploymentPercentageOfTotalLabourForce'
         : 'employmentRate'
@@ -152,8 +174,7 @@ async function KnowledgeBase({ params }) {
       indicatorType
     );
 
-    // console.log('indicatorInfo: ', indicatorInfo);
-
+    // majorReligion(percentage)
     let majorReligionPercentage, majorReligionWithPercentage;
     if (indicator === 'majorReligion') {
       majorReligionPercentage = await fetchIndicatorInfo(
@@ -172,6 +193,27 @@ async function KnowledgeBase({ params }) {
           majorReligionPercentage: percentageData
             ? percentageData.majorReligionPercentage
             : null,
+        };
+      });
+    }
+
+    // 'currencyName(symbol)'
+    let currencySymbol, currencyNameAndSymbol;
+    if (indicator === 'currencyName') {
+      currencySymbol = await fetchIndicatorInfo(
+        'country',
+        'currencySymbol',
+        indicatorType
+      );
+      currencyNameAndSymbol = indicatorInfo.map((currencyData) => {
+        const symbolData = currencySymbol.find(
+          (symbol) => symbol.country === currencyData.country
+        );
+
+        return {
+          country: currencyData.country,
+          currencyName: currencyData.currencyName,
+          currencySymbol: symbolData ? symbolData.currencySymbol : null,
         };
       });
     }
@@ -200,7 +242,7 @@ async function KnowledgeBase({ params }) {
     // Handle the case when indicatorInfo is null or undefined
     if (!indicatorInfo || indicatorInfo.length === 0) {
       // throw new Error('No data available for the selected indicator.');
-      <Error404 />
+      <Error404 />;
     }
 
     // Divide the data into chunks
@@ -208,6 +250,8 @@ async function KnowledgeBase({ params }) {
     const sourceArray =
       indicator === 'majorReligion'
         ? majorReligionWithPercentage
+        : indicator === 'currencyName'
+        ? currencyNameAndSymbol
         : indicatorInfo;
     const dividedArrays = Array.from(
       { length: Math.ceil(sourceArray?.length / chunkSize) },
@@ -324,8 +368,9 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
-                              alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
-                                }`}
+                              alt={`Image representing the ${titleCasedIndicator} of all ${
+                                isCountry ? 'Countries' : 'US States'
+                              }`}
                             />
                           </div>
 
@@ -337,8 +382,9 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
-                              alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
-                                }`}
+                              alt={`Image representing the ${titleCasedIndicator} of all ${
+                                isCountry ? 'Countries' : 'US States'
+                              }`}
                             />
                           </div>
                         </div>
@@ -362,8 +408,9 @@ async function KnowledgeBase({ params }) {
                                   obj[isCountry ? 'country' : 'state']
                                 )}-flag-small.png`}
                                 fill
-                                alt={`Image illustrating the flag of ${obj[isCountry ? 'country' : 'state']
-                                  }`}
+                                alt={`Image illustrating the flag of ${
+                                  obj[isCountry ? 'country' : 'state']
+                                }`}
                               />
                             </div>
                           </td>
@@ -375,15 +422,17 @@ async function KnowledgeBase({ params }) {
                               <>
                                 {indicator === 'majorReligion'
                                   ? `${formatNumberWithCommas(
-                                    obj[realIndicator]
-                                  )} ${indicatorValueType(
-                                    realIndicator,
-                                    isCountry
-                                  )} (${obj['majorReligionPercentage']}%)`
+                                      obj[realIndicator]
+                                    )} ${indicatorValueType(
+                                      realIndicator,
+                                      isCountry
+                                    )} (${obj['majorReligionPercentage']}%)`
+                                  : indicator === 'currencyName'
+                                  ? `${obj[realIndicator]} (${obj['currencySymbol']})`
                                   : realIndicator === 'HDI' ||
                                     realIndicator === 'unitValueInUSD'
-                                    ? obj[realIndicator]
-                                    : `${formatNumberWithCommas(
+                                  ? obj[realIndicator]
+                                  : `${formatNumberWithCommas(
                                       obj[realIndicator]
                                     )} ${indicatorValueType(
                                       realIndicator,
@@ -433,8 +482,9 @@ async function KnowledgeBase({ params }) {
           {randomList.map((value, index) => {
             return (
               <Link
-                href={`/${toURLFormat(value)}-of-all-${isCountry ? 'countries' : 'us-states'
-                  }`}
+                href={`/${toURLFormat(value)}-of-all-${
+                  isCountry ? 'countries' : 'us-states'
+                }`}
                 key={index}
               >
                 <div class="individual-country-vs-others-map-name-flag">
