@@ -186,7 +186,7 @@ async function KnowledgebaseHome() {
             </div>
 
             <Link
-              href={`/${toURLFormat(indicator)}/of-all-us-states`}
+              href={`/${toURLFormat(indicator)}-of-all-us-states`}
               className="read-here-link"
             >
               Read Here...

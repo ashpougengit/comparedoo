@@ -71,9 +71,8 @@ export async function generateMetadata({ params }) {
   }
 
   try {
-    const title = `${titleCasedIndicator} of All ${
-      isCountry ? 'Countries' : 'US States'
-    } (Updated: ${currentYear})`;
+    const title = `${titleCasedIndicator} of All ${isCountry ? 'Countries' : 'US States'
+      } (Updated: ${currentYear})`;
     const description = isCountry
       ? `Discover the ${titleCasedIndicator} worldwide. In this article, you can find a comprehensive list of ${titleCasedIndicator} of all countries in the world.`
       : `In this article, you can find a comprehensive list of ${titleCasedIndicator} of all 50 states in the United States of America.`;
@@ -161,7 +160,7 @@ async function KnowledgeBase({ params }) {
 
   indicator =
     indicator === 'unemploymentPercentageOfTotalLabourForce' ||
-    indicator === 'employmentRate'
+      indicator === 'employmentRate'
       ? isCountry
         ? 'unemploymentPercentageOfTotalLabourForce'
         : 'employmentRate'
@@ -251,8 +250,8 @@ async function KnowledgeBase({ params }) {
       indicator === 'majorReligion'
         ? majorReligionWithPercentage
         : indicator === 'currencyName'
-        ? currencyNameAndSymbol
-        : indicatorInfo;
+          ? currencyNameAndSymbol
+          : indicatorInfo;
     const dividedArrays = Array.from(
       { length: Math.ceil(sourceArray?.length / chunkSize) },
       (_, i) => sourceArray?.slice(i * chunkSize, (i + 1) * chunkSize)
@@ -368,9 +367,8 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
-                              alt={`Image representing the ${titleCasedIndicator} of all ${
-                                isCountry ? 'Countries' : 'US States'
-                              }`}
+                              alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
+                                }`}
                             />
                           </div>
 
@@ -382,9 +380,8 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
-                              alt={`Image representing the ${titleCasedIndicator} of all ${
-                                isCountry ? 'Countries' : 'US States'
-                              }`}
+                              alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
+                                }`}
                             />
                           </div>
                         </div>
@@ -408,9 +405,8 @@ async function KnowledgeBase({ params }) {
                                   obj[isCountry ? 'country' : 'state']
                                 )}-flag-small.png`}
                                 fill
-                                alt={`Image illustrating the flag of ${
-                                  obj[isCountry ? 'country' : 'state']
-                                }`}
+                                alt={`Image illustrating the flag of ${obj[isCountry ? 'country' : 'state']
+                                  }`}
                               />
                             </div>
                           </td>
@@ -422,22 +418,21 @@ async function KnowledgeBase({ params }) {
                               <>
                                 {indicator === 'majorReligion'
                                   ? `${formatNumberWithCommas(
-                                      obj[realIndicator]
-                                    )} ${indicatorValueType(
-                                      realIndicator,
-                                      isCountry
-                                    )} (${obj['majorReligionPercentage']}%)`
+                                    obj[realIndicator]
+                                  )} ${indicatorValueType(
+                                    realIndicator,
+                                    isCountry
+                                  )} (${obj['majorReligionPercentage']}%)`
                                   : indicator === 'currencyName'
-                                  ? `${obj[realIndicator]} (${obj['currencySymbol']})`
-                                  : realIndicator === 'HDI' ||
-                                    realIndicator === 'unitValueInUSD'
-                                  ? obj[realIndicator]
-                                  : `${formatNumberWithCommas(
-                                      obj[realIndicator]
-                                    )} ${indicatorValueType(
-                                      realIndicator,
-                                      isCountry
-                                    )}`}
+                                    ? `${obj[realIndicator]} (${obj['currencySymbol']})`
+                                    : realIndicator === 'HDI' ||
+                                      realIndicator === 'unitValueInUSD'
+                                      ? obj[realIndicator]
+                                      : `${formatNumberWithCommas(obj[realIndicator])} 
+                                  ${indicatorValueType(
+                                        realIndicator,
+                                        isCountry
+                                      )}`}
                               </>
                             ) : (
                               'Yet to Update'
@@ -482,9 +477,8 @@ async function KnowledgeBase({ params }) {
           {randomList.map((value, index) => {
             return (
               <Link
-                href={`/${toURLFormat(value)}-of-all-${
-                  isCountry ? 'countries' : 'us-states'
-                }`}
+                href={`/${toURLFormat(value)}-of-all-${isCountry ? 'countries' : 'us-states'
+                  }`}
                 key={index}
               >
                 <div class="individual-country-vs-others-map-name-flag">

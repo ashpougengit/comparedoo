@@ -44,4 +44,5 @@
 
 - adjust cursor pointer in read here in knowledgebase
 
-- http://localhost:3000/population-of-all-countries
+-
+    - List of Total Timezones of All Countries/states(<br />)
