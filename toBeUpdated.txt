@@ -45,5 +45,3 @@
 - adjust cursor pointer in read here in knowledgebase
 
 - http://localhost:3000/population-of-all-countries
-
-- currency name(currency symbol) 
