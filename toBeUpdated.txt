@@ -1,19 +1,13 @@
 - Threetabs sticky on back scroll
 
 - slug/image.png(url returned in console)
-........................................................................
 
-==> convertToNumber function for database
-
-- .toFixed returns 0.0
+- List of Total Timezones of All Countries/states(<br />)
 
 - h1: Geographical factors (absent in single state general info page )
-
-- <Image />  layout="fill" objectFit="contain" +++++++++++++**************
+........................................................................
 
 - Failed to find font override values for font `Nunito Sans`+++++++++++++**************
-
-- rain and cloud put image in the answe               +++++++++++++**************
 
 - Standard of living(top description calculation)     +++++++++++++**************
 
@@ -21,28 +15,26 @@
 
 - revalidate                                          +++++++++++++**************
 
-- sitemap                                             +++++++++++++**************
+- state vs state > general info > pictorial representation   ////////////////////
 
-- country1URLCase, country2URLCase,
-
-- Georgia USA images error
-
-- International Tourism Expenditure (convert in million USD)
-
-- Corporate Tax Rates 0.0 %(ohio)
-
-- change 'information' to 'comparison' in comparison pages
-
-- state vs state > general info > pictorial representation
-
-- weather images
-
+- weather images                                      ///////////////////////////
 
 - <a href="mailto:info.comparedoo@gmail.com" className="email-link"> not working in contact-us
 
 ============================== // change base url ==============================
 
-- adjust cursor pointer in read here in knowledgebase
+- adjust cursor pointer in read here in knowledgebase ///////////////////////////
 
--
-    - List of Total Timezones of All Countries/states(<br />)
+- {slug1WeatherImage}.png`} height='50' width='50' /> change to fill
+
+
+
+Final Summary:
+~ staticPages:  14
+~ 196 values: 38220 distinct ordered pairs.
+~ 196 vs 50 values: 19600 distinct ordered pairs.
+~ 50 values: 2450 distinct ordered pairs.
+~ 38220*3 + 19600*3 + 2450*3 + 196*3 + 50*3 + 89 + 0 + 14= 181651 urls
+====================================
+
+= allRoutes:182830(sitemap.xml)

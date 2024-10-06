@@ -43,7 +43,7 @@ function HumanDevelopment({
       <AdsHeaderBanner />
 
       <div class="economic-factors-comparison">
-        <h2 class="pages-h2">Human Development Factors Information</h2>
+        <h2 class="pages-h2">Human Development Factors Comparison</h2>
       </div>
       <div class="economic-factors-comparison-div2">
         <table class="indicators-first-entity-and-second-entity-div1">
@@ -74,8 +74,7 @@ function HumanDevelopment({
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -87,8 +86,7 @@ function HumanDevelopment({
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -100,8 +98,7 @@ function HumanDevelopment({
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>

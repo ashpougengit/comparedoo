@@ -18,7 +18,7 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
     return (
         <>
             <div class="economic-factors-comparison">
-                <h2 class="pages-h2">Economic Factors Information</h2>
+                <h2 class="pages-h2">Economic Factors Comparison</h2>
             </div>
 
             {/* ......... Economic Factors Comparison first table Here  ......... */}

@@ -73,8 +73,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -84,8 +83,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -97,8 +95,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -110,8 +107,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -123,8 +119,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -137,8 +132,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -280,8 +274,8 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <span>
                       {' '}
                       {`${country1TimeToImportBorderComplianceHours > 1
-                          ? 'Hours'
-                          : 'Hour'
+                        ? 'Hours'
+                        : 'Hour'
                         }`}
                     </span>
                   </>
@@ -296,8 +290,8 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <span>
                       {' '}
                       {`${country2TimeToImportBorderComplianceHours > 1
-                          ? 'Hours'
-                          : 'Hour'
+                        ? 'Hours'
+                        : 'Hour'
                         }`}
                     </span>
                   </>
@@ -370,8 +364,8 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <span>
                       {' '}
                       {`${country1TimeToImportDocumentryComplianceHours > 1
-                          ? 'Hours'
-                          : 'Hour'
+                        ? 'Hours'
+                        : 'Hour'
                         }`}
                     </span>
                   </>
@@ -386,8 +380,8 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <span>
                       {' '}
                       {`${country2TimeToImportDocumentryComplianceHours > 1
-                          ? 'Hours'
-                          : 'Hour'
+                        ? 'Hours'
+                        : 'Hour'
                         }`}
                     </span>
                   </>
@@ -409,8 +403,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -420,8 +413,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -433,8 +425,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -446,8 +437,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -459,8 +449,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -473,8 +462,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -616,8 +604,8 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <span>
                       {' '}
                       {`${country1TimeToExportBorderComplianceHours > 1
-                          ? 'Hours'
-                          : 'Hour'
+                        ? 'Hours'
+                        : 'Hour'
                         }`}
                     </span>
                   </>
@@ -632,8 +620,8 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <span>
                       {' '}
                       {`${country2TimeToExportBorderComplianceHours > 1
-                          ? 'Hours'
-                          : 'Hour'
+                        ? 'Hours'
+                        : 'Hour'
                         }`}
                     </span>
                   </>
@@ -706,8 +694,8 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <span>
                       {' '}
                       {`${country1TimeToExportDocumentryComplianceHours > 1
-                          ? 'Hours'
-                          : 'Hour'
+                        ? 'Hours'
+                        : 'Hour'
                         }`}
                     </span>
                   </>
@@ -722,8 +710,8 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <span>
                       {' '}
                       {`${country2TimeToExportDocumentryComplianceHours > 1
-                          ? 'Hours'
-                          : 'Hour'
+                        ? 'Hours'
+                        : 'Hour'
                         }`}
                     </span>
                   </>

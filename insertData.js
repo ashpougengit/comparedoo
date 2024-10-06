@@ -46,13 +46,30 @@ const USStateCostData = JSON.parse(USStateCostRawData);
 const USStateStandardData = JSON.parse(USStateStandardRawData);
 
 function manageZerosAfterDecimal(num) {
-  const roundedNum = num.toFixed(2);
-  const numArr = roundedNum.split('.');
-  if (numArr[1] === '00') {
-    return Number(numArr[0]);
-  } else {
-    return Number(roundedNum);
+  if (Number.isInteger(num)) {
+      return num;
   }
+
+  // If the number is a floating-point number and its integer part is greater than 0
+  if (Math.floor(num) > 0) {
+      return num.toFixed(2);
+  }
+
+  // If the integer part is 0 and it's a floating-point number
+  // Check for significant digits after decimal, starting from .toFixed(2) to .toFixed(6)
+  for (let i = 2; i <= 6; i++) {
+      const fixedValue = num.toFixed(i);
+
+      // If the fixed value has significant digits (i.e., not just zeros after decimal)
+      if (!/^0\.0+$/.test(fixedValue)) {
+          // Ensure the value doesn't have trailing zeros for small decimals
+          if (parseFloat(fixedValue) > 0) {
+              return fixedValue;  // Return the valid fixed decimal
+          }
+      }
+  }
+
+  return 0;
 }
 
 function convertToNumber(value, type, key) {
@@ -65,16 +82,10 @@ function convertToNumber(value, type, key) {
   }
 
   if (type === 'REAL' && (key === 'HDI' || key === 'unitValueInUSD')) {
-    if (typeof value === 'string') {
-      return parseFloat(value);
-    }
-
-    if (typeof value === 'number') {
-      return parseFloat(value);
-    }
+    return parseFloat(value);
   }
 
-  if ((type === 'INTEGER' || type === 'REAL') && key !== 'HDI') {
+  if ((type === 'INTEGER' || type === 'REAL') && key !== 'HDI' && key !== 'unitValueInUSD') {
     // Ensure the value is a string before applying the match method
     if (typeof value === 'string') {
       const match = value.match(/[\d,]+(\.\d+)?/);
@@ -728,8 +739,7 @@ const insertMany = (stmt, data, tableDefinition) => {
         stmt.run(...values);
       } catch (error) {
         console.error(
-          `Failed to insert row: ${JSON.stringify(row)} with error: ${
-            error.message
+          `Failed to insert row: ${JSON.stringify(row)} with error: ${error.message
           }`
         );
       }

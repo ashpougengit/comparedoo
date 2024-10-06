@@ -61,8 +61,7 @@ function Drinks({
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -72,8 +71,7 @@ function Drinks({
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -85,8 +83,7 @@ function Drinks({
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${state1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${state1URLCase}`}
                     />
                   </div>
@@ -98,8 +95,7 @@ function Drinks({
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${state1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${state1URLCase}`}
                     />
                   </div>
@@ -111,8 +107,7 @@ function Drinks({
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${state2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${state2URLCase}`}
                     />
                   </div>
@@ -125,8 +120,7 @@ function Drinks({
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${state2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${state2URLCase}`}
                     />
                   </div>

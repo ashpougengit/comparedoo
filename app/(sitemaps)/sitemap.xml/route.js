@@ -95,59 +95,59 @@ export function chunkArray(array, size) {
   return chunked;
 }
 ///////////////////////////////////////
-  // Base URL
-  const baseUrl = 'http://localhost:3000'; // change base url along with http
+// Base URL
+const baseUrl = 'http://localhost:3000'; // change base url along with http
 
-  // Static routes to include in the sitemap
-  const continents = ['africa', 'antartica', 'asia', 'europe', 'north-america', 'oceania', 'south-america'];
-  const siteInfo = ['about-us', 'contact-us', 'cookie-policy', 'privacy-policy', 'terms-and-conditions'];
-  const staticPages = [...continents, ...siteInfo, 'knowledgebase', 'menu-bar'];
+// Static routes to include in the sitemap
+const continents = ['africa', 'antartica', 'asia', 'europe', 'north-america', 'oceania', 'south-america'];
+const siteInfo = ['about-us', 'contact-us', 'cookie-policy', 'privacy-policy', 'terms-and-conditions'];
+const staticPages = [...continents, ...siteInfo, 'knowledgebase', 'menu-bar'];
 
-  // Generate sitemap URLs for each static route
-  const staticRoutes = staticPages.map((route) => ({
-    url: `${baseUrl}/${route}`
-  }));
+// Generate sitemap URLs for each static route
+const staticRoutes = staticPages.map((route) => ({
+  url: `${baseUrl}/${route}`
+}));
 
-  const countriesGeneral = generateComparisons(filteredCountries, baseUrl, 'comparison');
-  const countriesCost = generateComparisons(filteredCountries, baseUrl, 'cost-of-living');
-  const countriesStandard = generateComparisons(filteredCountries, baseUrl, 'standard-of-living');
+const countriesGeneral = generateComparisons(filteredCountries, baseUrl, 'comparison');
+const countriesCost = generateComparisons(filteredCountries, baseUrl, 'cost-of-living');
+const countriesStandard = generateComparisons(filteredCountries, baseUrl, 'standard-of-living');
 
-  const USStatesGeneral = generateComparisons(allUSStates, baseUrl, 'comparison');
-  const USStatesCost = generateComparisons(allUSStates, baseUrl, 'cost-of-living');
-  const USStatesStandard = generateComparisons(allUSStates, baseUrl, 'standard-of-living');
+const USStatesGeneral = generateComparisons(allUSStates, baseUrl, 'comparison');
+const USStatesCost = generateComparisons(allUSStates, baseUrl, 'cost-of-living');
+const USStatesStandard = generateComparisons(allUSStates, baseUrl, 'standard-of-living');
 
-  const countryVsUSStateGeneral = generateCountryStateComparisons(filteredCountries, allUSStates, baseUrl, 'comparison');
-  const countryVsUSStateCost = generateCountryStateComparisons(filteredCountries, allUSStates, baseUrl, 'cost-of-living');
-  const countryVsUSStateStandard = generateCountryStateComparisons(filteredCountries, allUSStates, baseUrl, 'standard-of-living');
+const countryVsUSStateGeneral = generateCountryStateComparisons(filteredCountries, allUSStates, baseUrl, 'comparison');
+const countryVsUSStateCost = generateCountryStateComparisons(filteredCountries, allUSStates, baseUrl, 'cost-of-living');
+const countryVsUSStateStandard = generateCountryStateComparisons(filteredCountries, allUSStates, baseUrl, 'standard-of-living');
 
-  const countryGeneral = generateSingleEntityUrls(filteredCountries, baseUrl, 'general-information');
-  const countryCost = generateSingleEntityUrls(filteredCountries, baseUrl, 'cost-of-living');
-  const countryStandard = generateSingleEntityUrls(filteredCountries, baseUrl, 'standard-of-living');
+const countryGeneral = generateSingleEntityUrls(filteredCountries, baseUrl, 'general-information');
+const countryCost = generateSingleEntityUrls(filteredCountries, baseUrl, 'cost-of-living');
+const countryStandard = generateSingleEntityUrls(filteredCountries, baseUrl, 'standard-of-living');
 
-  const USStateGeneral = generateSingleEntityUrls(allUSStates, baseUrl, 'general-information');
-  const USStateCost = generateSingleEntityUrls(allUSStates, baseUrl, 'cost-of-living');
-  const USStateStandard = generateSingleEntityUrls(allUSStates, baseUrl, 'standard-of-living');
+const USStateGeneral = generateSingleEntityUrls(allUSStates, baseUrl, 'general-information');
+const USStateCost = generateSingleEntityUrls(allUSStates, baseUrl, 'cost-of-living');
+const USStateStandard = generateSingleEntityUrls(allUSStates, baseUrl, 'standard-of-living');
 
-  const countriesIndicatorsUnique = generateIndicatorUrls(countriesUniqueIndicators, baseUrl, 'countries');
-  const countriesIndicatorsCommon = generateIndicatorUrls(commonIndicators, baseUrl, 'countries');
-  const USStatesIndicatorsUnique = generateIndicatorUrls(statesUniqueIndicators, baseUrl, 'us-states');
-  const USStatesIndicatorsCommon = generateIndicatorUrls(commonIndicators, baseUrl, 'us-states');
+const countriesIndicatorsUnique = generateIndicatorUrls(countriesUniqueIndicators, baseUrl, 'countries');
+const countriesIndicatorsCommon = generateIndicatorUrls(commonIndicators, baseUrl, 'countries');
+const USStatesIndicatorsUnique = generateIndicatorUrls(statesUniqueIndicators, baseUrl, 'us-states');
+const USStatesIndicatorsCommon = generateIndicatorUrls(commonIndicators, baseUrl, 'us-states');
 
-  // Combine static and dynamic routes
-  export const allRoutes = [
-    ...staticRoutes, 
-    ...countriesGeneral, ...countriesCost, ...countriesStandard, 
-    ...USStatesGeneral, ...USStatesCost, ...USStatesStandard, 
-    ...countryVsUSStateGeneral, ...countryVsUSStateCost, ...countryVsUSStateStandard, 
-    ...countryGeneral, ...countryCost, ...countryStandard, 
-    ...USStateGeneral, ...USStateCost, ...USStateStandard, 
-    ...countriesIndicatorsUnique, ...countriesIndicatorsCommon, 
-    ...USStatesIndicatorsUnique, ...USStatesIndicatorsCommon
-  ];
+// Combine static and dynamic routes
+export const allRoutes = [
+  ...staticRoutes,
+  ...countriesGeneral, ...countriesCost, ...countriesStandard,
+  ...USStatesGeneral, ...USStatesCost, ...USStatesStandard,
+  ...countryVsUSStateGeneral, ...countryVsUSStateCost, ...countryVsUSStateStandard,
+  ...countryGeneral, ...countryCost, ...countryStandard,
+  ...USStateGeneral, ...USStateCost, ...USStateStandard,
+  ...countriesIndicatorsUnique, ...countriesIndicatorsCommon,
+  ...USStatesIndicatorsUnique, ...USStatesIndicatorsCommon
+];
 
 // console.log('allRoutesLength', allRoutes.length);
-  // Split allRoutes into 8 chunks, each with approximately 40,000 URLs
-  const chunkedRoutes = chunkArray(allRoutes, 40000);
+// Split allRoutes into 5 chunks, each with approximately 40,000 URLs
+const chunkedRoutes = chunkArray(allRoutes, 40000);
 ///////////////////////////////////////
 export async function GET(request) {
 
@@ -185,13 +185,13 @@ export async function GET(request) {
         `<?xml version="1.0" encoding="UTF-8"?>
          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
            ${selectedRoutes
-            .map(
-              (route) => `
+          .map(
+            (route) => `
              <url>
                <loc>${route.url}</loc>
              </url>`
-            )
-            .join('')}
+          )
+          .join('')}
          </urlset>`,
         {
           headers: {

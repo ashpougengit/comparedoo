@@ -46,8 +46,7 @@ function DiningOut({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -57,8 +56,7 @@ function DiningOut({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -70,8 +68,7 @@ function DiningOut({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -83,8 +80,7 @@ function DiningOut({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -96,8 +92,7 @@ function DiningOut({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -110,8 +105,7 @@ function DiningOut({ slug1, slug2, value1, value2, slug1CostInfo, slug2CostInfo,
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>

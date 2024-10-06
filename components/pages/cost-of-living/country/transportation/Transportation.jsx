@@ -41,8 +41,7 @@ function Transportation({
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -52,8 +51,7 @@ function Transportation({
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -65,8 +63,7 @@ function Transportation({
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -78,8 +75,7 @@ function Transportation({
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>

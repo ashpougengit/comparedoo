@@ -19,7 +19,7 @@ function TaxAndFinance({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slu
         <AdsHeaderBanner />
 
             <div class="economic-factors-comparison">
-                <h2 class="pages-h2">Tax and Finance Factors Information</h2>
+                <h2 class="pages-h2">Tax and Finance Factors Comparison</h2>
             </div>
             <div class="tax-factors-comparison-div1">
                 <table class="indicators-first-entity-and-second-entity-div1">

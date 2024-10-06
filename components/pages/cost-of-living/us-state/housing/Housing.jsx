@@ -35,8 +35,7 @@ function Housing({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -46,8 +45,7 @@ function Housing({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -59,8 +57,7 @@ function Housing({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -72,8 +69,7 @@ function Housing({ costInfo, propertyAndIncomeTaxInfo, stateURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
