@@ -117,6 +117,7 @@ function Clothing({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -127,6 +128,7 @@ function Clothing({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -139,6 +141,7 @@ function Clothing({
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -151,6 +154,7 @@ function Clothing({
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -163,6 +167,7 @@ function Clothing({
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -176,6 +181,7 @@ function Clothing({
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -192,6 +198,7 @@ function Clothing({
                   <Image
                     src="/images/pair-of-nike-running-shoes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Pair of Nike Running Shoes"
                   />
                 </div>
@@ -226,6 +233,7 @@ function Clothing({
                   <Image
                     src="/images/mens-dress-shirt-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Men's Shirt"
                   />
                 </div>
@@ -260,6 +268,7 @@ function Clothing({
                   <Image
                     src="/images/women-dress-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Women's Shirt"
                   />
                 </div>
@@ -294,6 +303,7 @@ function Clothing({
                   <Image
                     src="/images/summer-dress-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Summer Dress"
                   />
                 </div>
@@ -328,6 +338,7 @@ function Clothing({
                   <Image
                     src="/images/mens-suit-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Men's Suit"
                   />
                 </div>
@@ -362,6 +373,7 @@ function Clothing({
                   <Image
                     src="/images/mens-jeans-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Men's Jeans"
                   />
                 </div>
@@ -396,6 +408,7 @@ function Clothing({
                   <Image
                     src="/images/women-jeans-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Women's Jeans"
                   />
                 </div>
@@ -430,6 +443,7 @@ function Clothing({
                   <Image
                     src="/images/mens-formal-shoes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Men's formal Shoes"
                   />
                 </div>
@@ -464,6 +478,7 @@ function Clothing({
                   <Image
                     src="/images/women-formal-shoes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Women's formal Shoes"
                   />
                 </div>
@@ -498,6 +513,7 @@ function Clothing({
                   <Image
                     src="/images/mens-casual-shoes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Men's Casual Shoes"
                   />
                 </div>
@@ -532,6 +548,7 @@ function Clothing({
                   <Image
                     src="/images/women-casual-shoes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Women's Casual Shoes"
                   />
                 </div>
@@ -566,6 +583,7 @@ function Clothing({
                   <Image
                     src="/images/men-underwear-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Underwear For Men"
                   />
                 </div>
@@ -600,6 +618,7 @@ function Clothing({
                   <Image
                     src="/images/women-underwear-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Underwear For Women"
                   />
                 </div>
@@ -634,6 +653,7 @@ function Clothing({
                   <Image
                     src="/images/men-socks-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing socks For Men"
                   />
                 </div>
@@ -668,6 +688,7 @@ function Clothing({
                   <Image
                     src="/images/women-socks-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing socks For Women"
                   />
                 </div>
@@ -702,6 +723,7 @@ function Clothing({
                   <Image
                     src="/images/adult-winter-coat-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Wintercoat for Adults"
                   />
                 </div>
@@ -736,6 +758,7 @@ function Clothing({
                   <Image
                     src="/images/sportswear-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Sportswear"
                   />
                 </div>

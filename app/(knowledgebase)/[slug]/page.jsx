@@ -343,6 +343,7 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src="/images/indicators-right-image.png"
                               fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               alt="Image representing an indicator"
                             />
                           </div>
@@ -355,6 +356,7 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src="/images/indicators-left-image.png"
                               fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               alt="Image illustrating an indicator"
                             />
                           </div>
@@ -367,6 +369,7 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
                                 }`}
                             />
@@ -380,6 +383,7 @@ async function KnowledgeBase({ params }) {
                             <Image
                               src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
                               fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
                                 }`}
                             />
@@ -405,6 +409,7 @@ async function KnowledgeBase({ params }) {
                                   obj[isCountry ? 'country' : 'state']
                                 )}-flag-small.png`}
                                 fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 alt={`Image illustrating the flag of ${obj[isCountry ? 'country' : 'state']
                                   }`}
                               />
@@ -486,6 +491,7 @@ async function KnowledgeBase({ params }) {
                     <Image
                       src={`/images/${toURLFormat(value)}-image.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image representing the ${camelToTitleCase(
                         value
                       )} of all ${isCountry ? 'Countries' : 'US States'}`}
@@ -500,6 +506,7 @@ async function KnowledgeBase({ params }) {
                     <Image
                       src={`/images/${toURLFormat(value)}-image.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image representing the ${camelToTitleCase(
                         value
                       )} of all ${isCountry ? 'Countries' : 'US States'}`}

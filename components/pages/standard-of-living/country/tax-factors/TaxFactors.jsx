@@ -28,8 +28,9 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -39,8 +40,9 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -52,8 +54,9 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -65,8 +68,9 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -87,6 +91,7 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/gross-national-savings-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the total Gross National Savings of any specific country"
                   />
                 </div>
@@ -109,6 +114,7 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/tax-revenue-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the total tax revenue collection of any specific country"
                   />
                 </div>
@@ -129,6 +135,7 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/taxes-on-exports-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Taxes on Exports"
                   />
                 </div>
@@ -151,6 +158,7 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/taxes-on-goods-and-services-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Taxes on Goods and Services"
                   />
                 </div>
@@ -173,6 +181,7 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/taxes-on-international-trade-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Taxes on International Trade"
                   />
                 </div>
@@ -195,6 +204,7 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/time-to-prepare-and-pay-taxes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time to Prepare and Pay Taxes"
                   />
                 </div>
@@ -218,6 +228,7 @@ function TaxFactors({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/customs-and-other-import-duties-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Customs and Other Import Duties"
                   />
                 </div>

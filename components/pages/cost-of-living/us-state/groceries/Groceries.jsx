@@ -30,6 +30,7 @@ function Groceries({ costInfo, stateURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -40,6 +41,7 @@ function Groceries({ costInfo, stateURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -52,6 +54,7 @@ function Groceries({ costInfo, stateURLCase }) {
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -64,6 +67,7 @@ function Groceries({ costInfo, stateURLCase }) {
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -80,6 +84,7 @@ function Groceries({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/rice-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing rice cost per month"
                   />
                 </div>
@@ -99,6 +104,7 @@ function Groceries({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/milk-1-liter-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing milk cost per month"
                   />
                 </div>
@@ -118,6 +124,7 @@ function Groceries({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/water-1-liter-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing water cost per month"
                   />
                 </div>
@@ -137,6 +144,7 @@ function Groceries({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/bread-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing bread cost per month"
                   />
                 </div>
@@ -156,6 +164,7 @@ function Groceries({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/eggs-dozen-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing eggs cost per month"
                   />
                 </div>
@@ -175,6 +184,7 @@ function Groceries({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/cheese-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing cheese cost per month"
                   />
                 </div>
@@ -194,6 +204,7 @@ function Groceries({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/chicken-breast-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing chicken cost per month"
                   />
                 </div>

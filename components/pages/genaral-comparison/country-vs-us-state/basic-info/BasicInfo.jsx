@@ -30,8 +30,9 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -41,8 +42,9 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -54,8 +56,9 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -67,8 +70,9 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -80,8 +84,9 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -94,8 +99,9 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -112,6 +118,7 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/country-name-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of official name of any country"
                   />
                 </div>
@@ -132,6 +139,7 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/continent-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of all continents in the world"
                   />
                 </div>
@@ -151,6 +159,7 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/landlocked-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting whether the status is landlocked or not."
                   />
                 </div>
@@ -170,6 +179,7 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/capital-city-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of a capital city of any specific country"
                   />
                 </div>
@@ -189,6 +199,7 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/latitude-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Latitide lines in World Map"
                   />
                 </div>
@@ -208,6 +219,7 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/longitude-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Longitude lines in World Map"
                   />
                 </div>

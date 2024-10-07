@@ -40,8 +40,9 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -51,8 +52,9 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -64,8 +66,9 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -77,8 +80,9 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -90,8 +94,9 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -104,8 +109,9 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -125,6 +131,7 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <Image
                     src="/images/national-anthem-native-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national anthem of any country in their native language"
                   />
                 </div>
@@ -148,6 +155,7 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <Image
                     src="/images/national-anthem-english-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national anthem of any country in English language"
                   />
                 </div>
@@ -168,6 +176,7 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <Image
                     src="/images/national-animal-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national animal of any specific country"
                   />
                 </div>
@@ -189,6 +198,7 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <Image
                     src="/images/national-bird-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national bird of any specific country"
                   />
                 </div>
@@ -210,6 +220,7 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <Image
                     src="/images/national-flower-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national flower of any specific country"
                   />
                 </div>
@@ -231,6 +242,7 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <Image
                     src="/images/national-sport-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national sport of any specific country"
                   />
                 </div>
@@ -252,6 +264,7 @@ function Symbols({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCas
                   <Image
                     src="/images/national-colors-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national colors of any specific country"
                   />
                 </div>

@@ -157,18 +157,27 @@ export default function SearchBox({ userCountry = null, slug1 = null, slug2 = nu
                   src={`/images/${toURLFormat(value1 || slug1)}-map-small.png`}
                   alt={`Image illustrating the map of ${titleCased(value1 || slug1)}`}
                   fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                 />
               ) : userCountry ? (
                 <Image
                   src={`/images/${toURLFormat(userCountry)}-map-small.png`}
                   alt={`Image illustrating the map of ${titleCased(userCountry)}`}
                   fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                 />
               ) : (
                 <Image
                   src={`/images/search-box-second-div-image.png`}
                   alt='Search box second div image'
                   fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                 />
               )}
             </div>
@@ -247,6 +256,8 @@ export default function SearchBox({ userCountry = null, slug1 = null, slug2 = nu
               <Image
                 src="/images/comparedoo-logo-for-comparison.png"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
                 alt="Comparedoo"
               />
             </div>
@@ -259,12 +270,18 @@ export default function SearchBox({ userCountry = null, slug1 = null, slug2 = nu
                   src={`/images/${toURLFormat(value2)}-map-small.png`}
                   alt={`Image illustrating the map of ${titleCased(value2)}`}
                   fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                 />
               ) : (
                 <Image
                   src={`/images/search-box-second-div-image.png`}
                   alt='Search box second div image'
                   fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                 />
               )}
             </div>

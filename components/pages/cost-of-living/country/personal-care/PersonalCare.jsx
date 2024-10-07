@@ -41,6 +41,7 @@ function PersonalCare({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -51,6 +52,7 @@ function PersonalCare({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -63,6 +65,7 @@ function PersonalCare({
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -75,6 +78,7 @@ function PersonalCare({
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -91,6 +95,7 @@ function PersonalCare({
                   <Image
                     src="/images/cosmetic-procedures-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Cosmetic Procedures"
                   />
                 </div>
@@ -117,6 +122,7 @@ function PersonalCare({
                   <Image
                     src="/images/spa-treatment-cost-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Spa Treatment"
                   />
                 </div>
@@ -143,6 +149,7 @@ function PersonalCare({
                   <Image
                     src="/images/manicure-pedicure-cost-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Manicure Pedicure Cost"
                   />
                 </div>
@@ -169,6 +176,7 @@ function PersonalCare({
                   <Image
                     src="/images/optical-glasses-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Optical Glasses Cost"
                   />
                 </div>
@@ -195,6 +203,7 @@ function PersonalCare({
                   <Image
                     src="/images/contact-lenses-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Contact Lenses Cost"
                   />
                 </div>
@@ -221,6 +230,7 @@ function PersonalCare({
                   <Image
                     src="/images/haircuts-price-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Hair Cuts"
                   />
                 </div>
@@ -247,6 +257,7 @@ function PersonalCare({
                   <Image
                     src="/images/hair-coloring-price-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Hair Coloring"
                   />
                 </div>
@@ -273,6 +284,7 @@ function PersonalCare({
                   <Image
                     src="/images/shampoo-price-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Shampoo Price"
                   />
                 </div>
@@ -299,6 +311,7 @@ function PersonalCare({
                   <Image
                     src="/images/toothpaste-price-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Toothpaste Price"
                   />
                 </div>

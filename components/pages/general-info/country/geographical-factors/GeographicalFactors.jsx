@@ -35,6 +35,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -45,6 +46,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -57,6 +59,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -69,6 +72,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -85,6 +89,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/largest-city-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of the Largest City of any country"
                   />
                 </div>
@@ -101,6 +106,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/demonyms-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting demonyms of any specific country"
                   />
                 </div>
@@ -117,6 +123,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/official-language-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting the official languages of any specific country"
                   />
                 </div>
@@ -133,6 +140,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/government-status-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image indicating the government status of any country"
                   />
                 </div>
@@ -149,6 +157,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/major-religion-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image indicating the major religion of any country"
                   />
                 </div>
@@ -165,6 +174,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/major-religion-percentage-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image indicating the major religion percentage of any country"
                   />
                 </div>
@@ -244,6 +254,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -254,6 +265,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -266,6 +278,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -278,6 +291,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -294,6 +308,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/currency-name-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of currency name of any specific country"
                   />
                 </div>
@@ -310,6 +325,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/currency-symbol-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of currency symbol of any specific country"
                   />
                 </div>
@@ -326,6 +342,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/driving-side-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of driving side of any specific country"
                   />
                 </div>
@@ -342,6 +359,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/calling-code-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting calling code of any specific country"
                   />
                 </div>
@@ -358,6 +376,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/internet-tld-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting Internet Top Level Domain also called tld of any specific country"
                   />
                 </div>
@@ -374,6 +393,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/start-of-week-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image showing the first working day of week of any specific country"
                   />
                 </div>
@@ -390,6 +410,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/iso-3166-code-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting ISO 3166 Code of any specific country"
                   />
                 </div>

@@ -36,8 +36,9 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -47,8 +48,9 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -60,8 +62,9 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -73,8 +76,9 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -95,6 +99,7 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/gross-national-expenditure-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the total Gross National Expenditure of any specific country"
                   />
                 </div>
@@ -118,6 +123,7 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/health-expenditure-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representation of total Health Expenditure of any given country"
                   />
                 </div>
@@ -140,6 +146,7 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/research-and-development-expenditure-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Government Expenditure of any specific country"
                   />
                 </div>
@@ -163,6 +170,7 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/government-expenditure-on-education-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Government Expenditure of any specific country"
                   />
                 </div>
@@ -186,6 +194,7 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/international-tourism-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the International Tourism Expenditure of any specific country"
                   />
                 </div>
@@ -206,6 +215,7 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/number-of-international-tourists-arrival.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Number of International Tourists Arrival in any specific country"
                   />
                 </div>
@@ -226,6 +236,7 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/military-expenditure-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Military Expenditure of any specific country"
                   />
                 </div>

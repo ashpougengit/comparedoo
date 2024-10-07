@@ -31,13 +31,15 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                     <div class="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing an indicator" />
                                     </div>
                                     <div class="indicator-text">Indicators</div>
                                     <div class="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -47,8 +49,9 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                     <div className="first-entity-map-pages-comparison">
                                         <Image
                                             src={`/images/${slug1URLCase}-map-small.png`}
-                                            layout="fill"
-                                            objectFit="contain"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                                             alt={`Pictorial representation of map of ${slug1URLCase}`}
                                         />
                                     </div>
@@ -60,8 +63,9 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                     <div className="first-entity-flag-pages-comparison">
                                         <Image
                                             src={`/images/${slug1URLCase}-flag-small.png`}
-                                            layout="fill"
-                                            objectFit="contain"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                                             alt={`Image illustrating the flag of ${slug1URLCase}`}
                                         />
                                     </div>
@@ -73,8 +77,9 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                     <div className="second-entity-map-pages-comparison">
                                         <Image
                                             src={`/images/${slug2URLCase}-map-small.png`}
-                                            layout="fill"
-                                            objectFit="contain"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                                             alt={`Pictorial representation of map of ${slug2URLCase}`}
                                         />
                                     </div>
@@ -85,7 +90,8 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                     </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2URLCase}`} />
+                                        <Image src={`/images/${slug2URLCase}-flag-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt={`Image illustrating the flag of ${slug2URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -104,7 +110,8 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                 <div class="basic-information-images">
                                     <Image
                                         src="/images/gdp-image.png"
-                                        fill alt="Image representing the total Gross Domestic Product of any specific country or state" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing the total Gross Domestic Product of any specific country or state" />
                                 </div>
                             </td>
                             <td class="gdp-answer-first-entity all-indicator-answers">
@@ -126,7 +133,8 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                 <div class="basic-information-images">
                                     <Image
                                         src="/images/gdp-per-capita-image.png"
-                                        fill alt="Image representing the total Gross Domestic Product Per Capita of any specific country or state" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing the total Gross Domestic Product Per Capita of any specific country or state" />
                                 </div>
                             </td>
                             <td class="gdp-per-capita-answer-first-entity all-indicator-answers">
@@ -148,7 +156,8 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                 <div class="basic-information-images">
                                     <Image
                                         src="/images/gini-ratio-image.png"
-                                        fill alt="Image representing the total GINI Ratio or GINI Coefficient of any specific country or state" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing the total GINI Ratio or GINI Coefficient of any specific country or state" />
                                 </div>
                             </td>
                             <td class="gini-ratio-answer-first-entity all-indicator-answers">

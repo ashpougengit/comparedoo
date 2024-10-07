@@ -36,6 +36,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -46,6 +47,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -58,6 +60,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -70,6 +73,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -88,6 +92,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/vehicle-purchase-price-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Reasonable Vehicle Purchase Cost"
                   />
                 </div>
@@ -114,6 +119,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/vehicle-registration-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Vehicle Registration Cost"
                   />
                 </div>
@@ -140,6 +146,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/driving-license-fees-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Driving License Fees"
                   />
                 </div>
@@ -166,6 +173,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/car-insurance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Car Insurance Cost"
                   />
                 </div>
@@ -192,6 +200,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/car-maintenance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Car Maintainence Cost"
                   />
                 </div>
@@ -218,6 +227,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/car-loan-interest-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Car Loan Interest Rates"
                   />
                 </div>
@@ -237,6 +247,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/fuel-per-liter-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Fuel Per Liter"
                   />
                 </div>
@@ -263,6 +274,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/fuel-per-gallon-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Fuel Per Gallon"
                   />
                 </div>
@@ -289,6 +301,7 @@ function Vehicle({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/toll-fees-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Average Toll Fees"
                   />
                 </div>

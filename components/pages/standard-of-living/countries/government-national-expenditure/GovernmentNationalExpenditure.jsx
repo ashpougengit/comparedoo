@@ -48,6 +48,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -58,6 +59,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -70,6 +72,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -82,6 +85,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -94,6 +98,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -107,6 +112,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -127,6 +133,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                   <Image
                     src="/images/gross-national-expenditure-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the total Gross National Expenditure of any specific country"
                   />
                 </div>
@@ -162,6 +169,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                   <Image
                     src="/images/health-expenditure-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representation of total Health Expenditure of any given country"
                   />
                 </div>
@@ -198,6 +206,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                   <Image
                     src="/images/research-and-development-expenditure-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Government Expenditure of any specific country"
                   />
                 </div>
@@ -235,6 +244,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                   <Image
                     src="/images/government-expenditure-on-education-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Government Expenditure of any specific country"
                   />
                 </div>
@@ -272,6 +282,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                   <Image
                     src="/images/international-tourism-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the International Tourism Expenditure of any specific country"
                   />
                 </div>
@@ -295,6 +306,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                   <Image
                     src="/images/number-of-international-tourists-arrival.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Number of International Tourists Arrival in any specific country"
                   />
                 </div>
@@ -318,6 +330,7 @@ function GovernmentNationalExpenditure({ country1StandardInfo, country2StandardI
                   <Image
                     src="/images/military-expenditure-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Military Expenditure of any specific country"
                   />
                 </div>

@@ -74,6 +74,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -84,6 +85,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -96,6 +98,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -108,6 +111,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -120,6 +124,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -133,6 +138,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -153,6 +159,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/imports-of-goods-and-services-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Imports of Goods and Services"
                   />
                 </div>
@@ -190,6 +197,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/fuel-imports-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Total Fuel Imports"
                   />
                 </div>
@@ -226,6 +234,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/cost-to-import-border-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Cost to Import Border Compliance"
                   />
                 </div>
@@ -263,6 +272,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/time-to-import-border-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time to Import Border Compliance"
                   />
                 </div>
@@ -312,6 +322,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/cost-to-import-documentary-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Cost to Import documentary Compliance"
                   />
                 </div>
@@ -353,6 +364,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/time-to-import-documentary-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time to Import Documentary Compliance"
                   />
                 </div>
@@ -404,6 +416,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -414,6 +427,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -426,6 +440,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -438,6 +453,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -450,6 +466,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -463,6 +480,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -483,6 +501,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/exports-of-goods-and-services-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Exports of Goods and Services"
                   />
                 </div>
@@ -520,6 +539,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/fuel-exports-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Total Fuel Exports"
                   />
                 </div>
@@ -556,6 +576,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/cost-to-export-border-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Cost to Export Border Compliance"
                   />
                 </div>
@@ -593,6 +614,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/time-to-export-border-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time to Export Border Compliance"
                   />
                 </div>
@@ -642,6 +664,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/cost-to-export-documentary-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Cost to Export documentary Compliance"
                   />
                 </div>
@@ -683,6 +706,7 @@ function ImportAndExportFactors({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/time-to-export-documentary-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time to Export Documentary Compliance"
                   />
                 </div>

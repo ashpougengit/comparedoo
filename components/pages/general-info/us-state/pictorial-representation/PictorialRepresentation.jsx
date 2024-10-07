@@ -22,6 +22,7 @@ function PictorialRepresentation({ state, stateURLCase }) {
                 <Image
                   src={`/images/${stateURLCase}-us-state-map-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Pictorial representation of map of ${state}`}
                 />
               </div>
@@ -32,6 +33,7 @@ function PictorialRepresentation({ state, stateURLCase }) {
                 <Image
                   src={`/images/${stateURLCase}-us-state-flag-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image illustrating the flag of ${state}`}
                 />
               </div>
@@ -42,6 +44,7 @@ function PictorialRepresentation({ state, stateURLCase }) {
                 <Image
                   src={`/images/${stateURLCase}-us-state-seal-big.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image showing the state seal of ${state}`}
                 />
               </div>

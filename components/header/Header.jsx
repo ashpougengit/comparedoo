@@ -9,15 +9,15 @@ function Header() {
     <header>
       <div className="header">
         <div className="navigation-bar">
-          <div className="logo">
-            <Link href="/">
-              <Image
-                src="/images/comparedoo-logo.png"
-                fill
-                alt="Comparedoo Official Logo"
-              />
-            </Link>
-          </div>
+          <Link href="/" className="logo">
+            <Image
+              src="/images/comparedoo-logo.png"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              alt="Comparedoo Official Logo"
+              priority
+            />
+          </Link>
 
           <div className="nav-menus">
             <ul>
@@ -63,7 +63,7 @@ function Header() {
               </li>
             </ul>
           </div>
-          
+
           <HamburgerIcon />
         </div>
 

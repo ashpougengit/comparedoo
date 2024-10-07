@@ -23,8 +23,9 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -34,8 +35,9 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -47,8 +49,9 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -60,8 +63,9 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -78,6 +82,7 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/country-name-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of official name of any country"
                   />
                 </div>
@@ -95,6 +100,7 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/continent-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of all continents in the world"
                   />
                 </div>
@@ -111,6 +117,7 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/landlocked-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting whether the status is landlocked or not."
                   />
                 </div>
@@ -127,6 +134,7 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/capital-city-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of a capital city of any specific country"
                   />
                 </div>
@@ -143,6 +151,7 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/latitude-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Latitide lines in World Map"
                   />
                 </div>
@@ -159,6 +168,7 @@ function CountryBasicInfo({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/longitude-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Longitude lines in World Map"
                   />
                 </div>

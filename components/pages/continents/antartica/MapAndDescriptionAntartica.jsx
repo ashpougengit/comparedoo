@@ -10,7 +10,8 @@ function MapAndDescriptionAntartica() {
 
             <div className="map-of-continent-and-ads-section">
                 <div className="continent-map">
-                    <Image src="/images/map-of-antarctica-big.png" fill alt="Map of Antartica" />
+                    <Image src="/images/map-of-antarctica-big.png" fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Map of Antartica" />
                 </div>
                 <table className="continent-table">
 

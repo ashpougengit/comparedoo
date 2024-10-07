@@ -31,7 +31,7 @@ const HamburgerIcon = () => {
     <div className="hamburger-icon" onClick={() => { handleToggle(); handleNavigation(); }}>
       {isOpen ? (
         <Image
-          objectFit="contain"
+
           src="/images/close.png"
           alt="Close menu bar"
           width={25}
@@ -39,7 +39,7 @@ const HamburgerIcon = () => {
         />
       ) : (
         <Image
-          objectFit="contain"
+
           src="/images/menu-icon.png"
           alt="Open menu bar"
           width={25}

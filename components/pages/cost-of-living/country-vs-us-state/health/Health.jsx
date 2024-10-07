@@ -108,6 +108,7 @@ function Health({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -118,6 +119,7 @@ function Health({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -130,6 +132,7 @@ function Health({
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -142,6 +145,7 @@ function Health({
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -154,6 +158,7 @@ function Health({
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -167,6 +172,7 @@ function Health({
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -183,6 +189,7 @@ function Health({
                   <Image
                     src="/images/doctors-visit-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Doctors Visit"
                   />
                 </div>
@@ -217,6 +224,7 @@ function Health({
                   <Image
                     src="/images/specialist-visit-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Specialists Visit"
                   />
                 </div>
@@ -251,6 +259,7 @@ function Health({
                   <Image
                     src="/images/dentist-visit-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Dentist Visit"
                   />
                 </div>
@@ -285,6 +294,7 @@ function Health({
                   <Image
                     src="/images/eye-exam-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Eye Exam"
                   />
                 </div>
@@ -319,6 +329,7 @@ function Health({
                   <Image
                     src="/images/mental-health-counseling.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Mental Health Counseling"
                   />
                 </div>
@@ -355,6 +366,7 @@ function Health({
                   <Image
                     src="/images/preventive-health-screening.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Preventive Health Screening"
                   />
                 </div>
@@ -389,6 +401,7 @@ function Health({
                   <Image
                     src="/images/physical-therapy-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Physical Therapy"
                   />
                 </div>
@@ -423,6 +436,7 @@ function Health({
                   <Image
                     src="/images/emergency-room-visit-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Emergency Room Visit"
                   />
                 </div>
@@ -457,6 +471,7 @@ function Health({
                   <Image
                     src="/images/hospital-stay-per-night-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Hospital Stay Per Night"
                   />
                 </div>
@@ -491,6 +506,7 @@ function Health({
                   <Image
                     src="/images/vaccinations-charge-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Vaccinations"
                   />
                 </div>
@@ -525,6 +541,7 @@ function Health({
                   <Image
                     src="/images/prescription-medication-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Prescription Medication"
                   />
                 </div>
@@ -561,6 +578,7 @@ function Health({
                   <Image
                     src="/images/over-the-counter-medication-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Over the Counter Medication"
                   />
                 </div>
@@ -595,6 +613,7 @@ function Health({
                   <Image
                     src="/images/health-insurance-premiums-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Health Insurance Premiums"
                   />
                 </div>
@@ -631,6 +650,7 @@ function Health({
                   <Image
                     src="/images/health-insurance-deductibles-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Health Insurance Deductibles"
                   />
                 </div>

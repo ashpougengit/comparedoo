@@ -5,14 +5,14 @@ import Link from "next/link"
 
 function ComparisonLinks({ entity, listForLinks, pageType }) {
   let filteredEntity = entity
-  
+
   const specialEntities = {
     'Georgia (USA)': 'Georgia USA',
     "Côte d'Ivoire": "Cote d'Ivoire",
     "São Tomé and Príncipe": "Sao Tome and Principe"
   };
-  
-  filteredEntity = specialEntities[filteredEntity] || filteredEntity;  
+
+  filteredEntity = specialEntities[filteredEntity] || filteredEntity;
 
   const isCountry = allCountries.includes(entity)
 
@@ -35,6 +35,7 @@ function ComparisonLinks({ entity, listForLinks, pageType }) {
                     src={`/images/${isCountry ? `${entityURL}` : `${entityURL}-us-state`
                       }-map-small.png`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt={`Pictorial representation of the map of ${entity}`}
                   />
                 </div>
@@ -56,6 +57,7 @@ function ComparisonLinks({ entity, listForLinks, pageType }) {
                     src={`/images/${isCountry ? `${valueURL}` : `${valueURL}-us-state`
                       }-map-small.png`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt={`Pictorial representation of the map of ${value}`}
                   />
                 </div>

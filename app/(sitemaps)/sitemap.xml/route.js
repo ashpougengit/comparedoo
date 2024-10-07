@@ -145,7 +145,6 @@ export const allRoutes = [
   ...USStatesIndicatorsUnique, ...USStatesIndicatorsCommon
 ];
 
-// console.log('allRoutesLength', allRoutes.length);
 // Split allRoutes into 5 chunks, each with approximately 40,000 URLs
 const chunkedRoutes = chunkArray(allRoutes, 40000);
 ///////////////////////////////////////

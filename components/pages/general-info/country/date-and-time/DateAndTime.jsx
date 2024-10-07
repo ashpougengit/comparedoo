@@ -36,6 +36,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -46,6 +47,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -58,6 +60,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -70,6 +73,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -86,6 +90,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                   <Image
                     src="/images/current-date-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current date of any specific country"
                   />
                 </div>
@@ -101,6 +106,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                   <Image
                     src="/images/current-time-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current time of any specific country"
                   />
                 </div>
@@ -116,6 +122,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                   <Image
                     src="/images/timezone-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of timezones of any specific country"
                   />
                 </div>
@@ -132,6 +139,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                   <Image
                     src="/images/current-timezone-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current timezone of any specific country"
                   />
                 </div>
@@ -148,6 +156,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                   <Image
                     src="/images/internet-tld-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Daylight Saving Time of any specific country"
                   />
                 </div>
@@ -166,6 +175,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                   <Image
                     src="/images/dst-start-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Daylight Saving Time Start of any specific country"
                   />
                 </div>
@@ -183,6 +193,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                   <Image
                     src="/images/dst-end-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Daylight Saving Time End of any specific country"
                   />
                 </div>
@@ -201,6 +212,7 @@ function DateAndTime({ generalInfo, weatherInfo, countryURLCase }) {
                   <Image
                     src="/images/dst-duration-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Daylight Saving Time Duration of any specific country"
                   />
                 </div>

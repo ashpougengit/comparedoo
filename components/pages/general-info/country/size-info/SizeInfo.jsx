@@ -23,6 +23,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -33,6 +34,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -45,6 +47,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -57,6 +60,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -73,6 +77,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/square-km-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of area in Square Kilometers"
                   />
                 </div>
@@ -99,6 +104,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/square-mile-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of area in Square Mile"
                   />
                 </div>
@@ -125,6 +131,7 @@ function SizeInfo({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/water-percentage-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of water percentage area of any country in the world"
                   />
                 </div>

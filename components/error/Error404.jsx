@@ -12,6 +12,7 @@ async function Error404() {
           <Image
             src="/images/error-404.png"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt="404 Error, Page Not Found" />
         </div>
       </div>

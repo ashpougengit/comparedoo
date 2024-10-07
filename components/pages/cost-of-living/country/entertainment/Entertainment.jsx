@@ -47,6 +47,7 @@ function Entertainment({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -57,6 +58,7 @@ function Entertainment({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -69,6 +71,7 @@ function Entertainment({
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -81,6 +84,7 @@ function Entertainment({
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -97,6 +101,7 @@ function Entertainment({
                   <Image
                     src="/images/movie-ticket-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Single Movie Ticket"
                   />
                 </div>
@@ -123,6 +128,7 @@ function Entertainment({
                   <Image
                     src="/images/theater-ticket-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Single Theater Ticket"
                   />
                 </div>
@@ -149,6 +155,7 @@ function Entertainment({
                   <Image
                     src="/images/concert-ticket-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Single Concert Ticket"
                   />
                 </div>
@@ -177,6 +184,7 @@ function Entertainment({
                   <Image
                     src="/images/sports-event-ticket-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Single Sports Event Ticket"
                   />
                 </div>
@@ -203,6 +211,7 @@ function Entertainment({
                   <Image
                     src="/images/gym-membership-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Gym Membership"
                   />
                 </div>
@@ -229,6 +238,7 @@ function Entertainment({
                   <Image
                     src="/images/swimming-pool-access-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Swimming Pool Access"
                   />
                 </div>
@@ -255,6 +265,7 @@ function Entertainment({
                   <Image
                     src="/images/museum-entry-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Museum Entry Ticket"
                   />
                 </div>
@@ -281,6 +292,7 @@ function Entertainment({
                   <Image
                     src="/images/zoo-entry-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Zoo Entry Ticket"
                   />
                 </div>
@@ -309,6 +321,7 @@ function Entertainment({
                   <Image
                     src="/images/amusement-park-entry-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Amusement Park Entry Ticket"
                   />
                 </div>
@@ -335,6 +348,7 @@ function Entertainment({
                   <Image
                     src="/images/bowling-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Bowling"
                   />
                 </div>
@@ -361,6 +375,7 @@ function Entertainment({
                   <Image
                     src="/images/mini-golf-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Mini Golf"
                   />
                 </div>
@@ -387,6 +402,7 @@ function Entertainment({
                   <Image
                     src="/images/video-games-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Video Games"
                   />
                 </div>
@@ -413,6 +429,7 @@ function Entertainment({
                   <Image
                     src="/images/streaming-services-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Streaming Services"
                   />
                 </div>
@@ -439,6 +456,7 @@ function Entertainment({
                   <Image
                     src="/images/outdoor-equipment-rental-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Outdoor Equipment Rental"
                   />
                 </div>
@@ -465,6 +483,7 @@ function Entertainment({
                   <Image
                     src="/images/theme-park-annual-pass-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Theme Park Annual Pass"
                   />
                 </div>

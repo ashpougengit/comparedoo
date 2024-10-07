@@ -22,6 +22,7 @@ function Pictorial({ state1, state2, state1URLCase, state2URLCase }) {
                 <Image
                   src={`/images/${state1URLCase}-us-state-map-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Pictorial representation of the map of ${state1}`}
                 />
               </div>
@@ -32,6 +33,7 @@ function Pictorial({ state1, state2, state1URLCase, state2URLCase }) {
                 <Image
                   src={`/images/${state1URLCase}-us-state-flag-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image illustrating the flag of ${state1}`}
                 />
               </div>
@@ -42,6 +44,7 @@ function Pictorial({ state1, state2, state1URLCase, state2URLCase }) {
                 <Image
                   src={`/images/${state1URLCase}-us-state-seal-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image showing the state seal of ${state1}`}
                 />
               </div>
@@ -60,6 +63,7 @@ function Pictorial({ state1, state2, state1URLCase, state2URLCase }) {
                 <Image
                   src={`/images/${state2URLCase}-us-state-map-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Pictorial representation of the map of ${state2}`}
                 />
               </div>
@@ -70,6 +74,7 @@ function Pictorial({ state1, state2, state1URLCase, state2URLCase }) {
                 <Image
                   src={`/images/${state2URLCase}-us-state-flag-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image illustrating the flag of ${state2}`}
                 />
               </div>
@@ -80,6 +85,7 @@ function Pictorial({ state1, state2, state1URLCase, state2URLCase }) {
                 <Image
                   src={`/images/${state2URLCase}-us-state-seal-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image showing the state seal of ${state2}`}
                 />
               </div>

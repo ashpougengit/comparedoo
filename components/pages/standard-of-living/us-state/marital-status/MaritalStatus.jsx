@@ -31,8 +31,9 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -40,8 +41,9 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -52,8 +54,9 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -65,8 +68,9 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -87,6 +91,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/married-man-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Married Male (Not Separated) percentage in any specific country or state"
                   />
                 </div>
@@ -109,6 +114,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/married-woman-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Married Female (Not Separated) percentage in any specific country or state"
                   />
                 </div>
@@ -131,6 +137,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/never-married-man-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Never Married (Male) percentage in any specific country or state"
                   />
                 </div>
@@ -153,6 +160,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/never-married-woman-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Never Married (Female) percentage in any specific country or state"
                   />
                 </div>
@@ -175,6 +183,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/separated-man-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Separated (Male) percentage in any specific country or state"
                   />
                 </div>
@@ -197,6 +206,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/separated-woman-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Separated (Female) percentage in any specific country or state"
                   />
                 </div>
@@ -219,6 +229,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/divorced-man-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Separated (Male) percentage in any specific country or state"
                   />
                 </div>
@@ -241,6 +252,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/divorced-woman-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Divorced (Female) percentage in any specific country or state"
                   />
                 </div>
@@ -263,6 +275,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/widowed-man-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Widowed (Male) percentage in any specific country or state"
                   />
                 </div>
@@ -285,6 +298,7 @@ function MaritalStatus({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/widowed-woman-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Widowed (Female) percentage in any specific country or state"
                   />
                 </div>

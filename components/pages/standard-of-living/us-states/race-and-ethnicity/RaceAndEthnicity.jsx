@@ -40,8 +40,9 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -49,8 +50,9 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -62,8 +64,9 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${state1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${state1URLCase}`}
                     />
                   </div>
@@ -75,8 +78,9 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${state1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${state1URLCase}`}
                     />
                   </div>
@@ -88,8 +92,9 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${state2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${state2URLCase}`}
                     />
                   </div>
@@ -102,8 +107,9 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${state2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${state2URLCase}`}
                     />
                   </div>
@@ -124,6 +130,7 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <Image
                     src="/images/white-race-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting White Race percentage in any specific country or state"
                   />
                 </div>
@@ -150,6 +157,7 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <Image
                     src="/images/black-or-african-race-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Black or African American Race percentage in any specific country or state"
                   />
                 </div>
@@ -180,6 +188,7 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <Image
                     src="/images/american-indian-and-alaska-native-race-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting American Indian and Alaska Native percentage in any specific country or state"
                   />
                 </div>
@@ -211,6 +220,7 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <Image
                     src="/images/asian-race-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Asian Race percentage in any specific country or state"
                   />
                 </div>
@@ -237,6 +247,7 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <Image
                     src="/images/hawaiian-and-pacific-islander-race-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Hawaiian and Pacific Islander Race percentage in any specific country or state"
                   />
                 </div>
@@ -268,6 +279,7 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <Image
                     src="/images/hispanic-or-latino-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Hispanic or Latino percentage in any specific country or state"
                   />
                 </div>
@@ -295,6 +307,7 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <Image
                     src="/images/two-or-more-races-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Two or More Races percentage in any specific country or state"
                   />
                 </div>
@@ -321,6 +334,7 @@ function RaceAndEthnicity({ state1StandardInfo, state2StandardInfo, state1URLCas
                   <Image
                     src="/images/only-english-speaking-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Only English Speaking Population Percentage percentage in any specific country or state"
                   />
                 </div>

@@ -25,8 +25,9 @@ function AgeDistribution({ generalInfo, countryURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -36,8 +37,9 @@ function AgeDistribution({ generalInfo, countryURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -49,8 +51,9 @@ function AgeDistribution({ generalInfo, countryURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -62,8 +65,9 @@ function AgeDistribution({ generalInfo, countryURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -84,6 +88,7 @@ function AgeDistribution({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/teenage-girl.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image of a Teenage Girl"
                   />
                 </div>
@@ -105,6 +110,7 @@ function AgeDistribution({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/adult-woman.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image of an Adult Woman"
                   />
                 </div>
@@ -125,6 +131,7 @@ function AgeDistribution({ generalInfo, countryURLCase }) {
                   <Image
                     src="/images/old-aged-woman.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image of a Older Aged Woman"
                   />
                 </div>

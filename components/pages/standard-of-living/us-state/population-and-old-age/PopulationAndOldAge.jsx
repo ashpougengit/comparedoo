@@ -31,8 +31,9 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -40,8 +41,9 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -52,8 +54,9 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -65,8 +68,9 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -87,6 +91,7 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/total-population-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of total population of any specific country or a state"
                   />
                 </div>
@@ -109,6 +114,7 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/median-age-states-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of Median Age of any specific country or a state"
                   />
                 </div>
@@ -129,6 +135,7 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/sex-ratio-states-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of Sex Ratio of any specific country or a state"
                   />
                 </div>
@@ -156,6 +163,7 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/60-to-64-years-states-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of 60 to 64 years age group of any specific country or a state"
                   />
                 </div>
@@ -176,6 +184,7 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/65-to-74-years-states-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of 65 to 74 years age group of any specific country or a state"
                   />
                 </div>
@@ -196,6 +205,7 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/75-to-84-years-states-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of 75 to 84 years age group of any specific country or a state"
                   />
                 </div>
@@ -216,6 +226,7 @@ function PopulationAndOldAge({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/85-years-and-over-states-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of 85 years and older age group of any specific country or a state"
                   />
                 </div>

@@ -40,6 +40,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -50,6 +51,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -62,6 +64,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -74,6 +77,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -86,6 +90,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -99,6 +104,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -119,6 +125,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/number-of-doctors-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of number of Doctors in any specific country"
                   />
                 </div>
@@ -158,6 +165,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/number-of-nurses-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of number of Nurses in any specific country"
                   />
                 </div>
@@ -197,6 +205,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/number-of-pharmacists-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of number of Pharmacists in any specific country"
                   />
                 </div>
@@ -236,6 +245,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/hospital-beds-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Available Hospital Beds in any specific country"
                   />
                 </div>
@@ -275,6 +285,7 @@ function HealthSystemFacilities({ country1StandardInfo, country2StandardInfo, co
                   <Image
                     src="/images/pregnant-women-receiving-prenatal-care-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Pregnant Women Receiving Prenatal Care in any specific country"
                   />
                 </div>

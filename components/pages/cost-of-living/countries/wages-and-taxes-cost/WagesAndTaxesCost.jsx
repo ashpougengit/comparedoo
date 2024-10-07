@@ -80,6 +80,7 @@ function WagesAndTaxesCost({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -90,6 +91,7 @@ function WagesAndTaxesCost({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -102,6 +104,7 @@ function WagesAndTaxesCost({
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -114,6 +117,7 @@ function WagesAndTaxesCost({
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -126,6 +130,7 @@ function WagesAndTaxesCost({
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -139,6 +144,7 @@ function WagesAndTaxesCost({
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -157,6 +163,7 @@ function WagesAndTaxesCost({
                   <Image
                     src="/images/average-gross-monthly-salary-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Average Gross Monthly Salary"
                   />
                 </div>
@@ -195,6 +202,7 @@ function WagesAndTaxesCost({
                   <Image
                     src="/images/average-net-monthly-salary-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Average Net Monthly Salary"
                   />
                 </div>
@@ -233,6 +241,7 @@ function WagesAndTaxesCost({
                   <Image
                     src="/images/minimum-wage-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Minimum Wages"
                   />
                 </div>
@@ -271,6 +280,7 @@ function WagesAndTaxesCost({
                   <Image
                     src="/images/average-bonus-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Average Bonus"
                   />
                 </div>
@@ -309,6 +319,7 @@ function WagesAndTaxesCost({
                   <Image
                     src="/images/income-tax-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Income Tax Rate"
                   />
                 </div>
@@ -335,6 +346,7 @@ function WagesAndTaxesCost({
                   <Image
                     src="/images/social-security-contributions-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Social Security Contributions"
                   />
                 </div>
@@ -359,6 +371,7 @@ function WagesAndTaxesCost({
                   <Image
                     src="/images/pension-contributions-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Pension Contributions"
                   />
                 </div>
@@ -383,6 +396,7 @@ function WagesAndTaxesCost({
                   <Image
                     src="/images/cost-of-living-index-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Cost of Living Index"
                   />
                 </div>
@@ -403,6 +417,7 @@ function WagesAndTaxesCost({
                   <Image
                     src="/images/median-household-income-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Median Household Income"
                   />
                 </div>

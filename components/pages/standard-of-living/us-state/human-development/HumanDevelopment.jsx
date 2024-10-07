@@ -26,8 +26,9 @@ function HumanDevelopment({ standardInfo, stateURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -35,8 +36,9 @@ function HumanDevelopment({ standardInfo, stateURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -47,8 +49,9 @@ function HumanDevelopment({ standardInfo, stateURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -60,8 +63,9 @@ function HumanDevelopment({ standardInfo, stateURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -82,6 +86,7 @@ function HumanDevelopment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/hdi-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Human Development Index of any specific country or state"
                   />
                 </div>
@@ -102,6 +107,7 @@ function HumanDevelopment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/literacy-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Literacy Rate of any specific country or state"
                   />
                 </div>
@@ -126,6 +132,7 @@ function HumanDevelopment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/life-expectancy-ratio-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representation of Life Expectancy Ratio any given country"
                   />
                 </div>
@@ -148,6 +155,7 @@ function HumanDevelopment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/poverty-headcount-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Poverty Rate of any specific country or state"
                   />
                 </div>
@@ -170,6 +178,7 @@ function HumanDevelopment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/employment-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Employment Rate of any specific country or state"
                   />
                 </div>

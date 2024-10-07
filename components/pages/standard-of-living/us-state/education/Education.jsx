@@ -22,8 +22,9 @@ function Education({ standardInfo, stateURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -31,8 +32,9 @@ function Education({ standardInfo, stateURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -43,8 +45,9 @@ function Education({ standardInfo, stateURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -56,8 +59,9 @@ function Education({ standardInfo, stateURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -78,6 +82,7 @@ function Education({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/high-school-graduate-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting High School Graduate percentage in any specific country or state"
                   />
                 </div>
@@ -100,6 +105,7 @@ function Education({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/associate-degree-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Associate Degree percentage in any specific country or state"
                   />
                 </div>
@@ -122,6 +128,7 @@ function Education({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/bachelor-degree-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Bachelor's Degree percentage in any specific country or state"
                   />
                 </div>
@@ -143,6 +150,7 @@ function Education({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/graduate-degree-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Graduate Degree Holders Percentage percentage in any specific country or state"
                   />
                 </div>

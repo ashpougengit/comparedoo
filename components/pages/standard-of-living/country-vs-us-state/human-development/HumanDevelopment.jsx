@@ -55,6 +55,7 @@ function HumanDevelopment({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -63,6 +64,7 @@ function HumanDevelopment({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -75,6 +77,7 @@ function HumanDevelopment({
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -87,6 +90,7 @@ function HumanDevelopment({
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -99,6 +103,7 @@ function HumanDevelopment({
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -112,6 +117,7 @@ function HumanDevelopment({
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -131,6 +137,7 @@ function HumanDevelopment({
                   <Image
                     src="/images/hdi-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Human Development Index of any specific country or state"
                   />
                 </div>
@@ -154,6 +161,7 @@ function HumanDevelopment({
                   <Image
                     src="/images/literacy-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Literacy Rate of any specific country or state"
                   />
                 </div>
@@ -183,6 +191,7 @@ function HumanDevelopment({
                   <Image
                     src="/images/life-expectancy-ratio-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representation of Life Expectancy Ratio any given country"
                   />
                 </div>
@@ -210,6 +219,7 @@ function HumanDevelopment({
                   <Image
                     src="/images/poverty-headcount-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Poverty Rate of any specific country or state"
                   />
                 </div>
@@ -239,6 +249,7 @@ function HumanDevelopment({
                   <Image
                     src="/images/employment-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Employment Rate of any specific country or state"
                   />
                 </div>

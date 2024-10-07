@@ -70,6 +70,7 @@ function Population({ generalInfo, countryURLCase }) {
               <Image
                 src={`/images/${countryURLCase}-map-small.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Pictorial representation of map of ${countryURLCase}`}
               />
             </div>
@@ -82,6 +83,7 @@ function Population({ generalInfo, countryURLCase }) {
               <Image
                 src={`/images/${countryURLCase}-flag-small.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Image illustrating the flag of ${countryURLCase}`}
               />
             </div>

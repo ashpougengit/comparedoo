@@ -58,6 +58,7 @@ function NetworkAndCommunication({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -68,6 +69,7 @@ function NetworkAndCommunication({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -80,6 +82,7 @@ function NetworkAndCommunication({
                     <Image
                       src={`/images/${state1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${state1URLCase}`}
                     />
                   </div>
@@ -92,6 +95,7 @@ function NetworkAndCommunication({
                     <Image
                       src={`/images/${state1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${state1URLCase}`}
                     />
                   </div>
@@ -104,6 +108,7 @@ function NetworkAndCommunication({
                     <Image
                       src={`/images/${state2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${state2URLCase}`}
                     />
                   </div>
@@ -117,6 +122,7 @@ function NetworkAndCommunication({
                     <Image
                       src={`/images/${state2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${state2URLCase}`}
                     />
                   </div>
@@ -135,6 +141,7 @@ function NetworkAndCommunication({
                   <Image
                     src="/images/wifi-cost-per-month-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing wifi cost per month"
                   />
                 </div>
@@ -161,6 +168,7 @@ function NetworkAndCommunication({
                   <Image
                     src="/images/mobile-phone-plan-cost-per-month-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing mobile phone basic plan cost per month"
                   />
                 </div>
@@ -191,6 +199,7 @@ function NetworkAndCommunication({
                   <Image
                     src="/images/landline-phone-service-per-month-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Landline phone basic plan cost per month"
                   />
                 </div>
@@ -221,6 +230,7 @@ function NetworkAndCommunication({
                   <Image
                     src="/images/cable-tv-service-per-month-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Cable TV basic plan cost per month"
                   />
                 </div>

@@ -43,6 +43,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -53,6 +54,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -65,6 +67,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -77,6 +80,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -89,6 +93,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -102,6 +107,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -118,6 +124,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/largest-city-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of the Largest City of any country"
                   />
                 </div>
@@ -137,6 +144,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/demonyms-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting demonyms of any specific country"
                   />
                 </div>
@@ -156,6 +164,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/official-language-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting the official languages of any specific country"
                   />
                 </div>
@@ -175,6 +184,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/currency-name-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of currency name of any specific country"
                   />
                 </div>
@@ -194,6 +204,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/currency-symbol-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of currency symbol of any specific country"
                   />
                 </div>
@@ -213,6 +224,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/start-of-week-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image showing the first working day of week of any specific country"
                   />
                 </div>
@@ -275,6 +287,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -285,6 +298,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -297,6 +311,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -309,6 +324,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -321,6 +337,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -334,6 +351,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -350,6 +368,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/driving-side-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of driving side of any specific country"
                   />
                 </div>
@@ -369,6 +388,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/calling-code-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting calling code of any specific country"
                   />
                 </div>
@@ -390,6 +410,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/internet-tld-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting Internet Top Level Domain also called tld of any specific country"
                   />
                 </div>
@@ -409,6 +430,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                   <Image
                     src="/images/iso-3166-code-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting ISO 3166 Code of any specific country"
                   />
                 </div>

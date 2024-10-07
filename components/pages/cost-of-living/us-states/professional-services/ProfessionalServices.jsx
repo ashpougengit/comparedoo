@@ -64,6 +64,7 @@ function ProfessionalServices({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -74,6 +75,7 @@ function ProfessionalServices({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -86,6 +88,7 @@ function ProfessionalServices({
                     <Image
                       src={`/images/${state1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${state1URLCase}`}
                     />
                   </div>
@@ -98,6 +101,7 @@ function ProfessionalServices({
                     <Image
                       src={`/images/${state1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${state1URLCase}`}
                     />
                   </div>
@@ -110,6 +114,7 @@ function ProfessionalServices({
                     <Image
                       src={`/images/${state2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${state2URLCase}`}
                     />
                   </div>
@@ -123,6 +128,7 @@ function ProfessionalServices({
                     <Image
                       src={`/images/${state2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${state2URLCase}`}
                     />
                   </div>
@@ -141,6 +147,7 @@ function ProfessionalServices({
                   <Image
                     src="/images/legal-consultation-per-hour-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Legal Consultation Per Hour Rate"
                   />
                 </div>
@@ -171,6 +178,7 @@ function ProfessionalServices({
                   <Image
                     src="/images/accounting-services-per-hour-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Accounting Services Per Hour Rate"
                   />
                 </div>
@@ -201,6 +209,7 @@ function ProfessionalServices({
                   <Image
                     src="/images/IT-support-services-per-hour-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing IT Support Services Per Hour Rate"
                   />
                 </div>
@@ -231,6 +240,7 @@ function ProfessionalServices({
                   <Image
                     src="/images/technician-services-per-hour-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Technician Services Per Hour Rate"
                   />
                 </div>

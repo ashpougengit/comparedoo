@@ -31,6 +31,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -39,6 +40,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -50,6 +52,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -62,6 +65,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -77,6 +81,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/country-name-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of official name of any country"
                   />
                 </div>
@@ -92,6 +97,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/continent-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of all continents in the world"
                   />
                 </div>
@@ -107,6 +113,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/landlocked-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting whether the status is landlocked or not."
                   />
                 </div>
@@ -122,6 +129,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/capital-city-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of a capital city of any specific country"
                   />
                 </div>
@@ -137,6 +145,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/latitude-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Latitide lines in World Map"
                   />
                 </div>
@@ -152,6 +161,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/longitude-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Longitude lines in World Map"
                   />
                 </div>
@@ -176,6 +186,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -184,6 +195,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -195,6 +207,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -207,6 +220,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -222,6 +236,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/motto-latin-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of official name of any country"
                   />
                 </div>
@@ -237,6 +252,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/motto-english-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of all continents in the world"
                   />
                 </div>
@@ -252,6 +268,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/national-anthem-native-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting whether the status is landlocked or not."
                   />
                 </div>
@@ -267,6 +284,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/largest-city-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of a largest city of any specific state"
                   />
                 </div>
@@ -282,6 +300,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/demonyms-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting demonyms of any specific country"
                   />
                 </div>
@@ -299,6 +318,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/internet-tld-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting Internet Top Level Domain also called tld of any specific country"
                   />
                 </div>
@@ -314,6 +334,7 @@ function BasicInfo({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/iso-3166-code-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting ISO 3166 Code of any specific country"
                   />
                 </div>

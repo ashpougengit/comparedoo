@@ -33,6 +33,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -43,6 +44,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -55,6 +57,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -67,6 +70,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -83,6 +87,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/wine-bottle-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Wine Mid Range Bottle"
                   />
                 </div>
@@ -109,6 +114,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/glass-of-wine.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing cost of Glass of Wine"
                   />
                 </div>
@@ -135,6 +141,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/beer-bottle-domestic-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing the cost of a domestic beer of half liter"
                   />
                 </div>
@@ -161,6 +168,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/beer-bottle-branded-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing the cost of a branded beer of half liter"
                   />
                 </div>
@@ -187,6 +195,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/alcohol-bottle-domestic-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing the cost of a Domestic Alcohol 1 liter"
                   />
                 </div>
@@ -213,6 +222,7 @@ function Drinks({ costInfo, currency, unitValueInUSD, countryURLCase }) {
                   <Image
                     src="/images/alcohol-bottle-branded-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing the cost of a Branded Alcohol 1 liter"
                   />
                 </div>

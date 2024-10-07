@@ -97,6 +97,7 @@ function PopulationComparison({ country1, country2, country1GeneralInfo, country
               <Image
                 src={`/images/${country1URLCase}-map-small.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Pictorial representation of map of ${country1URLCase}`}
               />
             </div>
@@ -109,6 +110,7 @@ function PopulationComparison({ country1, country2, country1GeneralInfo, country
               <Image
                 src={`/images/${country1URLCase}-flag-small.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Image illustrating the flag of ${country1URLCase}`}
               />
             </div>
@@ -134,6 +136,7 @@ function PopulationComparison({ country1, country2, country1GeneralInfo, country
               <Image
                 src={`/images/${country2URLCase}-map-small.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Pictorial representation of map of ${country2URLCase}`}
               />
             </div>
@@ -146,6 +149,7 @@ function PopulationComparison({ country1, country2, country1GeneralInfo, country
               <Image
                 src={`/images/${country2URLCase}-flag-small.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Image illustrating the flag of ${country2URLCase}`}
               />
             </div>

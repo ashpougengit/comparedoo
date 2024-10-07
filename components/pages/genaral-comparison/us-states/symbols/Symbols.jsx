@@ -33,8 +33,9 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -44,8 +45,9 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -57,8 +59,9 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${state1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${state1URLCase}`}
                     />
                   </div>
@@ -70,8 +73,9 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${state1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${state1URLCase}`}
                     />
                   </div>
@@ -83,8 +87,9 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${state2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${state2URLCase}`}
                     />
                   </div>
@@ -97,8 +102,9 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${state2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${state2URLCase}`}
                     />
                   </div>
@@ -117,6 +123,7 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <Image
                     src="/images/national-bird-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national bird of any specific country"
                   />
                 </div>
@@ -138,6 +145,7 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <Image
                     src="/images/national-flower-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of state flower of any specific country"
                   />
                 </div>
@@ -159,6 +167,7 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <Image
                     src="/images/national-sport-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national sport of any specific country"
                   />
                 </div>
@@ -180,6 +189,7 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <Image
                     src="/images/state-tree-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national colors of any specific country"
                   />
                 </div>
@@ -201,6 +211,7 @@ function Symbols({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2UR
                   <Image
                     src="/images/state-colors-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of state colors of any specific US State"
                   />
                 </div>

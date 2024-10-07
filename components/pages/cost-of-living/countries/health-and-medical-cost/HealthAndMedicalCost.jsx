@@ -116,6 +116,7 @@ function HealthAndMedicalCost({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -126,6 +127,7 @@ function HealthAndMedicalCost({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -138,6 +140,7 @@ function HealthAndMedicalCost({
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -150,6 +153,7 @@ function HealthAndMedicalCost({
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -162,6 +166,7 @@ function HealthAndMedicalCost({
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -175,6 +180,7 @@ function HealthAndMedicalCost({
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -191,6 +197,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/doctors-visit-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Doctors Visit"
                   />
                 </div>
@@ -229,6 +236,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/specialist-visit-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Specialists Visit"
                   />
                 </div>
@@ -267,6 +275,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/dentist-visit-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Dentist Visit"
                   />
                 </div>
@@ -305,6 +314,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/eye-exam-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Eye Exam"
                   />
                 </div>
@@ -343,6 +353,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/mental-health-counseling.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Mental Health Counseling"
                   />
                 </div>
@@ -383,6 +394,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/preventive-health-screening.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Preventive Health Screening"
                   />
                 </div>
@@ -425,6 +437,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/physical-therapy-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Physical Therapy"
                   />
                 </div>
@@ -463,6 +476,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/emergency-room-visit-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Emergency Room Visit"
                   />
                 </div>
@@ -501,6 +515,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/hospital-stay-per-night-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Hospital Stay Per Night"
                   />
                 </div>
@@ -539,6 +554,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/vaccinations-charge-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Vaccinations"
                   />
                 </div>
@@ -577,6 +593,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/prescription-medication-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Prescription Medication"
                   />
                 </div>
@@ -617,6 +634,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/over-the-counter-medication-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Over the Counter Medication"
                   />
                 </div>
@@ -655,6 +673,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/health-insurance-premiums-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Health Insurance Premiums"
                   />
                 </div>
@@ -695,6 +714,7 @@ function HealthAndMedicalCost({
                   <Image
                     src="/images/health-insurance-deductibles-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Health Insurance Deductibles"
                   />
                 </div>

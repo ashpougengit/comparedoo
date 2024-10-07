@@ -26,6 +26,7 @@ function PictorialRepresentation({ slug1, slug2, value1, value2, slug1URLCase, s
                 <Image
                   src={`/images/${slug1URLCase}-map-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Pictorial representation of map of ${slug1}`}
                 />
               </div>
@@ -38,6 +39,7 @@ function PictorialRepresentation({ slug1, slug2, value1, value2, slug1URLCase, s
                 <Image
                   src={`/images/${slug1URLCase}-flag-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image illustrating the flag of ${slug1}`}
                 />
               </div>
@@ -55,6 +57,7 @@ function PictorialRepresentation({ slug1, slug2, value1, value2, slug1URLCase, s
                   src={`/images/${slug1URLCase}-${value1 === 'country' ? 'coat-of-arms' : 'us-state-seal'
                     }-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image showing the ${value1 === 'country' ? 'Coat of Arms' : 'State Seal'
                     } of ${slug1}`}
                 />
@@ -78,6 +81,7 @@ function PictorialRepresentation({ slug1, slug2, value1, value2, slug1URLCase, s
                 <Image
                   src={`/images/${slug2URLCase}-map-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Pictorial representation of map of ${slug2}`}
                 />
               </div>
@@ -90,6 +94,7 @@ function PictorialRepresentation({ slug1, slug2, value1, value2, slug1URLCase, s
                 <Image
                   src={`/images/${slug2URLCase}-flag-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image illustrating the flag of ${slug2}`}
                 />
               </div>
@@ -107,6 +112,7 @@ function PictorialRepresentation({ slug1, slug2, value1, value2, slug1URLCase, s
                   src={`/images/${slug2URLCase}-${value2 === 'country' ? 'coat-of-arms' : 'us-state-seal'
                     }-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image showing the ${value2 === 'country' ? 'Coat of Arms' : 'State Seal'
                     } of ${slug2}`}
                 />

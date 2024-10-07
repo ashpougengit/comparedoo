@@ -16,7 +16,7 @@ const LeafletMap = ({ entity1, entity2, city1, city2 }) => {
 
         const validCity1 = city1 && city1.length === 2;
         const validCity2 = city2 && city2.length === 2;
-        
+
         const centerLat = validCity1 && validCity2 ? (city1[0] + city2[0]) / 2 : (validCity1 ? city1[0] : 20);
         const centerLng = validCity1 && validCity2 ? (city1[1] + city2[1]) / 2 : (validCity1 ? city1[1] : 0);
 
@@ -42,11 +42,13 @@ const LeafletMap = ({ entity1, entity2, city1, city2 }) => {
 
         const circleMarkerOptions = {
             radius: 8,
-            fillColor: "#ff7800",
+            fill
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  Color: "#ff7800",
             color: "#000",
             weight: 1,
             opacity: 1,
-            fillOpacity: 0.8
+            fill
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"  Opacity: 0.8
         };
 
         if (validCity1) {

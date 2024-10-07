@@ -48,8 +48,9 @@ function Population({ generalInfo, stateURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -57,8 +58,9 @@ function Population({ generalInfo, stateURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -69,8 +71,9 @@ function Population({ generalInfo, stateURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -82,8 +85,9 @@ function Population({ generalInfo, stateURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -99,6 +103,7 @@ function Population({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/total-population-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of total population of any specific country or a state"
                   />
                 </div>
@@ -114,6 +119,7 @@ function Population({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/veterans-percentage-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation Veterans"
                   />
                 </div>
@@ -131,6 +137,7 @@ function Population({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/male-veterans-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Male Veterans"
                   />
                 </div>
@@ -148,6 +155,7 @@ function Population({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/female-veterans-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Female Veterans"
                   />
                 </div>

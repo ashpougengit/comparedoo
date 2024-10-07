@@ -47,8 +47,9 @@ function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" layout="fill"
-                                            objectFit="contain" alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png" fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">
@@ -56,8 +57,9 @@ function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country
                                     </div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" layout="fill"
-                                            objectFit="contain" alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png" fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -65,15 +67,17 @@ function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1URLCase}-map-small.png`} layout="fill"
-                                            objectFit="contain" alt={`Pictorial representation of map of ${country1URLCase}`} />
+                                        <Image src={`/images/${country1URLCase}-map-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt={`Pictorial representation of map of ${country1URLCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1URLCase}-flag-small.png`} layout="fill"
-                                            objectFit="contain" alt={`Image illustrating the flag of ${country1URLCase}`} />
+                                        <Image src={`/images/${country1URLCase}-flag-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt={`Image illustrating the flag of ${country1URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -81,15 +85,17 @@ function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2URLCase}-map-small.png`} layout="fill"
-                                            objectFit="contain" alt={`Pictorial representation of map of ${country2URLCase}`} />
+                                        <Image src={`/images/${country2URLCase}-map-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt={`Pictorial representation of map of ${country2URLCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {country2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2URLCase}-flag-small.png`} layout="fill"
-                                            objectFit="contain" alt={`Image illustrating the flag of ${country2URLCase}`} />
+                                        <Image src={`/images/${country2URLCase}-flag-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt={`Image illustrating the flag of ${country2URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -104,8 +110,9 @@ function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country
                                     Largest City
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/largest-city-image.png" layout="fill"
-                                        objectFit="contain" alt="Visual representation of the Largest City of any country" />
+                                    <Image src="/images/largest-city-image.png" fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Visual representation of the Largest City of any country" />
                                 </div>
                             </td>
                             <td className="largest-city-answer-first-entity all-indicator-answers">{country1LargestCity ?? 'Yet to Update'}</td>
@@ -119,8 +126,9 @@ function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country
                                     Smallest City
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/smallest-city-image.png"layout="fill"
-objectFit="contain"alt="Visual representation of the Smallest City of any country" />
+                                    <Image src="/images/smallest-city-image.png"  fill
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"   
+alt="Visual representation of the Smallest City of any country" />
                                 </div>
                             </td>
                             <td className="smallest-city-answer-first-entity all-indicator-answers">Warsaw</td>
@@ -133,8 +141,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                     Demonyms
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/demonyms-image.png" layout="fill"
-                                        objectFit="contain" alt="Image depicting demonyms of any specific country" />
+                                    <Image src="/images/demonyms-image.png" fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Image depicting demonyms of any specific country" />
                                 </div>
                             </td>
                             <td className="demonyms-answer-first-entity all-indicator-answers">{country1Demonyms ?? 'Yet to Update'}</td>
@@ -153,8 +162,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/official-language-image.png"
-                                        layout="fill"
-                                        objectFit="contain" alt="Image depicting the official languages of any specific country" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Image depicting the official languages of any specific country" />
                                 </div>
                             </td>
                             <td className="official-languages-answer-first-entity all-indicator-answers">{country1OfficialLanguages ?? 'Yet to Update'}</td>
@@ -168,8 +178,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                     Government Status
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/government-status-image.png" layout="fill"
-                                        objectFit="contain" alt="Image indicating the government status of any country" />
+                                    <Image src="/images/government-status-image.png" fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Image indicating the government status of any country" />
                                 </div>
                             </td>
                             <td className="government-status-answer-first-entity all-indicator-answers">{country1GovernmentStatus ?? 'Yet to Update'}</td>
@@ -183,8 +194,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                     Major Religion
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/major-religion-image.png" layout="fill"
-                                        objectFit="contain" alt="Image indicating the major religion of any country" />
+                                    <Image src="/images/major-religion-image.png" fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Image indicating the major religion of any country" />
                                 </div>
                             </td>
                             <td className="major-religion-answer-first-entity all-indicator-answers">{country1MajorReligion ?? 'Yet to Update'}</td>
@@ -199,8 +211,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/major-religion-percentage-image.png"
-                                        layout="fill"
-                                        objectFit="contain" alt="Image indicating the major religion percentage of any country" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Image indicating the major religion percentage of any country" />
                                 </div>
                             </td>
                             <td className="major-religion-percentage-answer-first-entity all-indicator-answers">
@@ -245,8 +258,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="right-indicator">
-                                        <Image src="/images/indicators-right-image.png" layout="fill"
-                                            objectFit="contain" alt="Image representing an indicator" />
+                                        <Image src="/images/indicators-right-image.png" fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt="Image representing an indicator" />
                                     </div>
 
                                     <div className="indicator-text">
@@ -254,8 +268,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                     </div>
 
                                     <div className="left-indicator">
-                                        <Image src="/images/indicators-left-image.png" layout="fill"
-                                            objectFit="contain" alt="Image illustrating an indicator" />
+                                        <Image src="/images/indicators-left-image.png" fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
@@ -263,15 +278,17 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="first-entity-map-pages-comparison">
-                                        <Image src={`/images/${country1URLCase}-map-small.png`} layout="fill"
-                                            objectFit="contain" alt={`Pictorial representation of map of ${country1URLCase}`} />
+                                        <Image src={`/images/${country1URLCase}-map-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt={`Pictorial representation of map of ${country1URLCase}`} />
                                     </div>
 
                                     <div className="first-entity-name-pages-comparison">{country1}</div>
 
                                     <div className="first-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country1URLCase}-flag-small.png`} layout="fill"
-                                            objectFit="contain" alt={`Image illustrating the flag of ${country1URLCase}`} />
+                                        <Image src={`/images/${country1URLCase}-flag-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt={`Image illustrating the flag of ${country1URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -279,15 +296,17 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                             <th>
                                 <div className="heading-map-name-flag">
                                     <div className="second-entity-map-pages-comparison">
-                                        <Image src={`/images/${country2URLCase}-map-small.png`} layout="fill"
-                                            objectFit="contain" alt={`Pictorial representation of map of ${country2URLCase}`} />
+                                        <Image src={`/images/${country2URLCase}-map-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt={`Pictorial representation of map of ${country2URLCase}`} />
                                     </div>
 
                                     <div className="second-entity-name-pages-comparison"> {country2} </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${country2URLCase}-flag-small.png`} layout="fill"
-                                            objectFit="contain" alt={`Image illustrating the flag of ${country2URLCase}`} />
+                                        <Image src={`/images/${country2URLCase}-flag-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            alt={`Image illustrating the flag of ${country2URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -301,8 +320,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                     Currency Name
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/currency-name-image.png" layout="fill"
-                                        objectFit="contain" alt="Visual representation of currency name of any specific country" />
+                                    <Image src="/images/currency-name-image.png" fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Visual representation of currency name of any specific country" />
                                 </div>
                             </td>
                             <td className="currency-name-answer-first-entity all-indicator-answers">{country1CurrencyName ?? 'Yet to Update'}</td>
@@ -316,8 +336,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/currency-symbol-image.png"
-                                        layout="fill"
-                                        objectFit="contain" alt="Visual representation of currency symbol of any specific country" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Visual representation of currency symbol of any specific country" />
                                 </div>
                             </td>
                             <td className="currency-symbol-answer-first-entity all-indicator-answers">{country1CurrencySymbol ?? 'Yet to Update'}</td>
@@ -330,8 +351,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                     Driving Side
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/driving-side-image.png" layout="fill"
-                                        objectFit="contain" alt="Visual representation of driving side of any specific country" />
+                                    <Image src="/images/driving-side-image.png" fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Visual representation of driving side of any specific country" />
                                 </div>
                             </td>
                             <td className="driving-side-answer-first-entity all-indicator-answers">{country1DrivingSide ?? 'Yet to Update'}</td>
@@ -344,8 +366,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                     Calling Code
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/calling-code-image.png" layout="fill"
-                                        objectFit="contain" alt="Image depicting calling code of any specific country" />
+                                    <Image src="/images/calling-code-image.png" fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Image depicting calling code of any specific country" />
                                 </div>
                             </td>
                             <td className="calling-code-answer-first-entity all-indicator-answers">{country1CallingCode ?? 'Yet to Update'}</td>
@@ -359,8 +382,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/internet-tld-image.png"
-                                        layout="fill"
-                                        objectFit="contain" alt="Image depicting Internet Top Level Domain also called tld of any specific country" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Image depicting Internet Top Level Domain also called tld of any specific country" />
                                 </div>
                             </td>
                             <td className="internet-tld-answer-first-entity all-indicator-answers">{country1InternetTLD ?? 'Yet to Update'}</td>
@@ -374,8 +398,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                 </div>
                                 <div className="basic-information-images">
                                     <Image src="/images/start-of-week-image.png"
-                                        layout="fill"
-                                        objectFit="contain"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                                         alt="Image showing the first working day of week of any specific country" />
                                 </div>
                             </td>
@@ -389,8 +414,9 @@ objectFit="contain"alt="Visual representation of the Smallest City of any countr
                                     ISO 3166 Code
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/iso-3166-code-image.png" layout="fill"
-                                        objectFit="contain" alt="Image depicting ISO 3166 Code of any specific country" />
+                                    <Image src="/images/iso-3166-code-image.png" fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        alt="Image depicting ISO 3166 Code of any specific country" />
                                 </div>
                             </td>
                             <td className="iso-code-answer-first-entity all-indicator-answers">{country1ISO3166Code ?? 'Yet to Update'}</td>

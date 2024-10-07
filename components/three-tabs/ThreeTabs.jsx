@@ -47,6 +47,7 @@ function ThreeTabs({ entity1, entity2 = null }) {
                 <Image
                   src="/images/general-information-image-comparedoo.png"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="General Comparison Image Comparedoo.com"
                 />
               </div>
@@ -72,6 +73,7 @@ function ThreeTabs({ entity1, entity2 = null }) {
                 <Image
                   src="/images/cost-of-living-image-comparedoo.png"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="Cost of Living Image Comparedoo.com"
                 />
               </div>
@@ -95,6 +97,7 @@ function ThreeTabs({ entity1, entity2 = null }) {
                 <Image
                   src="/images/standard-of-living-image-comparedoo.png"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="Standard Of Living Image Comparedoo.com"
                 />
               </div>

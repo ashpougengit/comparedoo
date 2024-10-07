@@ -21,6 +21,7 @@ function PictorialRepresentation({ country, countryURLCase }) {
               <Image
                 src={`/images/${countryURLCase}-in-world-map-big.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Pictorial representation of big size map of ${country} in the world map`}
               />
             </div>
@@ -33,6 +34,7 @@ function PictorialRepresentation({ country, countryURLCase }) {
               <Image
                 src={`/images/${countryURLCase}-map-big.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Pictorial representation of big size map of ${country}`}
               />
             </div>
@@ -45,6 +47,7 @@ function PictorialRepresentation({ country, countryURLCase }) {
               <Image
                 src={`/images/${countryURLCase}-flag-big.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Image illustrating the big size flag of ${country}`}
               />
             </div>
@@ -59,6 +62,7 @@ function PictorialRepresentation({ country, countryURLCase }) {
               <Image
                 src={`/images/${countryURLCase}-coat-of-arms-big.png`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt={`Image showing the big size coat of arms or embelem of ${country}`}
               />
             </div>

@@ -40,6 +40,7 @@ function PrivateClasses({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -50,6 +51,7 @@ function PrivateClasses({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -62,6 +64,7 @@ function PrivateClasses({
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -74,6 +77,7 @@ function PrivateClasses({
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -90,6 +94,7 @@ function PrivateClasses({
                   <Image
                     src="/images/language-classes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Language Classes"
                   />
                 </div>
@@ -116,6 +121,7 @@ function PrivateClasses({
                   <Image
                     src="/images/parenting-classes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Parenting Classes"
                   />
                 </div>
@@ -142,6 +148,7 @@ function PrivateClasses({
                   <Image
                     src="/images/art-classes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Art Classes"
                   />
                 </div>
@@ -168,6 +175,7 @@ function PrivateClasses({
                   <Image
                     src="/images/fitness-class-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Fitness Classes"
                   />
                 </div>
@@ -194,6 +202,7 @@ function PrivateClasses({
                   <Image
                     src="/images/music-lessons-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Music Lessons"
                   />
                 </div>
@@ -220,6 +229,7 @@ function PrivateClasses({
                   <Image
                     src="/images/dance-lessons-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Dance Lessons"
                   />
                 </div>
@@ -248,6 +258,7 @@ function PrivateClasses({
                   <Image
                     src="/images/reading-materials-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Reading Materials for Classes"
                   />
                 </div>
@@ -274,6 +285,7 @@ function PrivateClasses({
                   <Image
                     src="/images/educational-software-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Educational Software"
                   />
                 </div>

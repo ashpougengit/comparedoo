@@ -43,6 +43,7 @@ function Housing({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -53,6 +54,7 @@ function Housing({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -65,6 +67,7 @@ function Housing({
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -77,6 +80,7 @@ function Housing({
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -95,6 +99,7 @@ function Housing({
                   <Image
                     src="/images/rent-1-bedroom-flat-in-city-center-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing 1 bedroom apartment in City Center"
                   />
                 </div>
@@ -123,6 +128,7 @@ function Housing({
                   <Image
                     src="/images/rent-2-bedroom-flat-in-city-center-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing 2 bedroom apartment in City Center"
                   />
                 </div>
@@ -151,6 +157,7 @@ function Housing({
                   <Image
                     src="/images/rent-3-bedroom-flat-in-city-center-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing 3 bedroom apartment in City Center"
                   />
                 </div>
@@ -179,6 +186,7 @@ function Housing({
                   <Image
                     src="/images/rent-1-bedroom-flat-outside-city-center-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing 1 bedroom apartment outside City Center"
                   />
                 </div>
@@ -207,6 +215,7 @@ function Housing({
                   <Image
                     src="/images/rent-2-bedroom-flat-outside-city-center-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing 2 bedroom apartment outside City Center"
                   />
                 </div>
@@ -235,6 +244,7 @@ function Housing({
                   <Image
                     src="/images/rent-3-bedroom-flat-outside-city-center-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing 3 bedroom apartment outside City Center"
                   />
                 </div>
@@ -261,6 +271,7 @@ function Housing({
                   <Image
                     src="/images/mortgage-rates-per-month-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Mortgage Rates Per Month"
                   />
                 </div>
@@ -280,6 +291,7 @@ function Housing({
                   <Image
                     src="/images/real-estate-agents-comission-fees-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Real Estate Agents Comission Fees"
                   />
                 </div>
@@ -299,6 +311,7 @@ function Housing({
                   <Image
                     src="/images/property-taxes-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Property Taxes in any given country"
                   />
                 </div>

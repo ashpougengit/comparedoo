@@ -26,6 +26,7 @@ function PictorialRepresentation({ country1, country2, country1URLCase, country2
                 <Image
                   src={`/images/${country1URLCase}-in-world-map-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Pictorial representation of the map of ${country1} in the world map`}
                 />
               </div>
@@ -38,6 +39,7 @@ function PictorialRepresentation({ country1, country2, country1URLCase, country2
                 <Image
                   src={`/images/${country1URLCase}-map-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Pictorial representation of map of ${country1}`}
                 />
               </div>
@@ -50,6 +52,7 @@ function PictorialRepresentation({ country1, country2, country1URLCase, country2
                 <Image
                   src={`/images/${country1URLCase}-flag-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image illustrating the flag of ${country1}`}
                 />
               </div>
@@ -62,6 +65,7 @@ function PictorialRepresentation({ country1, country2, country1URLCase, country2
                 <Image
                   src={`/images/${country1URLCase}-coat-of-arms-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image showing the coat of arms of ${country1}`}
                 />
               </div>
@@ -84,6 +88,7 @@ function PictorialRepresentation({ country1, country2, country1URLCase, country2
                 <Image
                   src={`/images/${country2URLCase}-in-world-map-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Pictorial representation of the map of ${country2} in the world map`}
                 />
               </div>
@@ -96,6 +101,7 @@ function PictorialRepresentation({ country1, country2, country1URLCase, country2
                 <Image
                   src={`/images/${country2URLCase}-map-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Pictorial representation of map of ${country2}`}
                 />
               </div>
@@ -108,6 +114,7 @@ function PictorialRepresentation({ country1, country2, country1URLCase, country2
                 <Image
                   src={`/images/${country2URLCase}-flag-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image illustrating the flag of ${country2}`}
                 />
               </div>
@@ -120,6 +127,7 @@ function PictorialRepresentation({ country1, country2, country1URLCase, country2
                 <Image
                   src={`/images/${country2URLCase}-coat-of-arms-medium.png`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt={`Image showing the coat of arms of ${country2}`}
                 />
               </div>

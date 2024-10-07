@@ -81,6 +81,7 @@ async function KnowledgebaseHome() {
             <div className="knowledgebase-thumbnail-image">
               <Image
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`/images/${toURLFormat(indicator)}-country-thumbnail.png`}
                 alt={`${titleCased(indicator)} Country Thumbnail Image`}
               />
@@ -111,6 +112,7 @@ async function KnowledgebaseHome() {
             <div className="knowledgebase-thumbnail-image">
               <Image
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`/images/${toURLFormat(indicator)}-country-thumbnail.png`}
                 alt={`${titleCased(indicator)} Country Thumbnail Image`}
               />
@@ -141,6 +143,7 @@ async function KnowledgebaseHome() {
             <div className="knowledgebase-thumbnail-image">
               <Image
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`/images/${toURLFormat(indicator)}-state-thumbnail.png`}
                 alt={`${titleCased(indicator)} US State Thumbnail Image`}
               />
@@ -171,6 +174,7 @@ async function KnowledgebaseHome() {
             <div className="knowledgebase-thumbnail-image">
               <Image
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`/images/${toURLFormat(indicator)}-state-thumbnail.png`}
                 alt={`${titleCased(indicator)} US State Thumbnail Image`}
               />

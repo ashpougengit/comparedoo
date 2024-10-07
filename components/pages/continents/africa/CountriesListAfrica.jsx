@@ -46,6 +46,7 @@ function CountriesListAfrica() {
                   <Image
                     src={`/images/${urlCasedCountry}-map-small.png`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt={`Pictorial representation of map of ${country}`}
                   />
                 </div>
@@ -56,6 +57,7 @@ function CountriesListAfrica() {
                   <Image
                     src={`/images/${urlCasedCountry}-flag-small.png`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt={`Image illustrating the flag of ${country}`}
                   />
                 </div>

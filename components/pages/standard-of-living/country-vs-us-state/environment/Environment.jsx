@@ -15,8 +15,8 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
     const slug2AgriculturalLand = slug2StandardInfo.agriculturalLand
 
     return (
-      <>
-        <AdsHeaderBanner />
+        <>
+            <AdsHeaderBanner />
 
             <div class="economic-factors-comparison">
                 <h2 class="pages-h2">Environmental Factors Comparison</h2>
@@ -30,61 +30,67 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                                     <div class="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
-                                            fill alt="Image representing an indicator" />
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing an indicator" />
                                     </div>
                                     <div class="indicator-text">Indicators</div>
                                     <div class="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
-                                            fill alt="Image illustrating an indicator" />
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image illustrating an indicator" />
                                     </div>
                                 </div>
                             </th>
 
-                <th>
-                  <div className="heading-map-name-flag">
-                    <div className="first-entity-map-pages-comparison">
-                      <Image
-                        src={`/images/${slug1URLCase}-map-small.png`}
-                        layout="fill"
-                        objectFit="contain"
-                        alt={`Pictorial representation of map of ${slug1URLCase}`}
-                      />
-                    </div>
+                            <th>
+                                <div className="heading-map-name-flag">
+                                    <div className="first-entity-map-pages-comparison">
+                                        <Image
+                                            src={`/images/${slug1URLCase}-map-small.png`}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 
-                    <div className="first-entity-name-pages-comparison">
-                      {slug1}
-                    </div>
+                                            alt={`Pictorial representation of map of ${slug1URLCase}`}
+                                        />
+                                    </div>
 
-                    <div className="first-entity-flag-pages-comparison">
-                      <Image
-                        src={`/images/${slug1URLCase}-flag-small.png`}
-                        layout="fill"
-                        objectFit="contain"
-                        alt={`Image illustrating the flag of ${slug1URLCase}`}
-                      />
-                    </div>
-                  </div>
-                </th>
+                                    <div className="first-entity-name-pages-comparison">
+                                        {slug1}
+                                    </div>
 
-                <th>
-                  <div className="heading-map-name-flag">
-                    <div className="second-entity-map-pages-comparison">
-                      <Image
-                        src={`/images/${slug2URLCase}-map-small.png`}
-                        layout="fill"
-                        objectFit="contain"
-                        alt={`Pictorial representation of map of ${slug2URLCase}`}
-                      />
-                    </div>
+                                    <div className="first-entity-flag-pages-comparison">
+                                        <Image
+                                            src={`/images/${slug1URLCase}-flag-small.png`}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 
-                    <div className="second-entity-name-pages-comparison">
-                      {' '}
-                      {slug2}{' '}
-                    </div>
+                                            alt={`Image illustrating the flag of ${slug1URLCase}`}
+                                        />
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th>
+                                <div className="heading-map-name-flag">
+                                    <div className="second-entity-map-pages-comparison">
+                                        <Image
+                                            src={`/images/${slug2URLCase}-map-small.png`}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
+                                            alt={`Pictorial representation of map of ${slug2URLCase}`}
+                                        />
+                                    </div>
+
+                                    <div className="second-entity-name-pages-comparison">
+                                        {' '}
+                                        {slug2}{' '}
+                                    </div>
 
                                     <div className="second-entity-flag-pages-comparison">
-                                        <Image src={`/images/${slug2URLCase}-flag-small.png`} fill alt={`Image illustrating the flag of ${slug2URLCase}`} />
+                                        <Image src={`/images/${slug2URLCase}-flag-small.png`} fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt={`Image illustrating the flag of ${slug2URLCase}`} />
                                     </div>
                                 </div>
                             </th>
@@ -103,7 +109,8 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                                 <div class="basic-information-images">
                                     <Image
                                         src="/images/access-to-internet-states-image.png"
-                                        fill alt="Image Depicting Access to Internet percentage in any specific country or state" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image Depicting Access to Internet percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td
@@ -127,7 +134,8 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                                 <div class="basic-information-images">
                                     <Image
                                         src="/images/access-to-electricity-states-image.png"
-                                        fill alt="Image Depicting Access to Electricity percentage in any specific country or state" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image Depicting Access to Electricity percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td
@@ -151,7 +159,8 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                                 <div class="basic-information-images">
                                     <Image
                                         src="/images/forest-area-states-image.png"
-                                        fill alt="Image Depicting Total Forest Area percentage in any specific country or state" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image Depicting Total Forest Area percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td
@@ -175,7 +184,8 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                                 <div class="basic-information-images">
                                     <Image
                                         src="/images/agricultural-land-states-image.png"
-                                        fill alt="Image Depicting Agricultural Land percentage in any specific country or state" />
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image Depicting Agricultural Land percentage in any specific country or state" />
                                 </div>
                             </td>
                             <td

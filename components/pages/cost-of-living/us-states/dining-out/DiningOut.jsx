@@ -72,6 +72,7 @@ function DiningOut({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -82,6 +83,7 @@ function DiningOut({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -94,6 +96,7 @@ function DiningOut({
                     <Image
                       src={`/images/${state1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${state1URLCase}`}
                     />
                   </div>
@@ -106,6 +109,7 @@ function DiningOut({
                     <Image
                       src={`/images/${state1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${state1URLCase}`}
                     />
                   </div>
@@ -118,6 +122,7 @@ function DiningOut({
                     <Image
                       src={`/images/${state2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${state2URLCase}`}
                     />
                   </div>
@@ -131,6 +136,7 @@ function DiningOut({
                     <Image
                       src={`/images/${state2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${state2URLCase}`}
                     />
                   </div>
@@ -149,6 +155,7 @@ function DiningOut({
                   <Image
                     src="/images/meal-in-an-inexpensive-restaurant-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Meal cost at an inexpensive restaurant"
                   />
                 </div>
@@ -177,6 +184,7 @@ function DiningOut({
                   <Image
                     src="/images/three-course-meal-for-two-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Three-Course Meal for Two cost"
                   />
                 </div>
@@ -201,6 +209,7 @@ function DiningOut({
                   <Image
                     src="/images/fast-food-combo-meal-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing the cost of Fast Food Combo Meal"
                   />
                 </div>
@@ -225,6 +234,7 @@ function DiningOut({
                   <Image
                     src="/images/coffee-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Coffee cost"
                   />
                 </div>
@@ -249,6 +259,7 @@ function DiningOut({
                   <Image
                     src="/images/soft-drink-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Soft Drink Cost"
                   />
                 </div>
@@ -273,6 +284,7 @@ function DiningOut({
                   <Image
                     src="/images/pizza-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Pizza cost"
                   />
                 </div>
@@ -297,6 +309,7 @@ function DiningOut({
                   <Image
                     src="/images/take-out-delivery-meal-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Take Out Delivery Meal Cost"
                   />
                 </div>
@@ -321,6 +334,7 @@ function DiningOut({
                   <Image
                     src="/images/cigarettes-pack-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing lentils cost per month"
                   />
                 </div>

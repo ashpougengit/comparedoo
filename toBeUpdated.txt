@@ -25,16 +25,16 @@
 
 - adjust cursor pointer in read here in knowledgebase ///////////////////////////
 
-- {slug1WeatherImage}.png`} height='50' width='50' /> change to fill
+- {slug1WeatherImage}.png`} height='50' width='50' /> change to   fill
+ sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
 
-
+ fill
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+====================================
 
 Final Summary:
 ~ staticPages:  14
 ~ 196 values: 38220 distinct ordered pairs.
-~ 196 vs 50 values: 19600 distinct ordered pairs.
+~ 196 vs 50 values: 19500 distinct ordered pairs.(without USA)
 ~ 50 values: 2450 distinct ordered pairs.
-~ 38220*3 + 19600*3 + 2450*3 + 196*3 + 50*3 + 89 + 0 + 14= 181651 urls
-====================================
-
-= allRoutes:182830(sitemap.xml)
+~ allRoutes:181351(sitemap.xml) 38220*3 + 19500*3 + 2450*3 + 196*3 + 50*3 + 89 + 14= 181351 urls

@@ -25,8 +25,9 @@ function Symbols({ generalInfo, stateURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -34,8 +35,9 @@ function Symbols({ generalInfo, stateURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -46,8 +48,9 @@ function Symbols({ generalInfo, stateURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -59,8 +62,9 @@ function Symbols({ generalInfo, stateURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -78,6 +82,7 @@ function Symbols({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/national-bird-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national bird of any specific country"
                   />
                 </div>
@@ -95,6 +100,7 @@ function Symbols({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/national-flower-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of state flower of any specific country"
                   />
                 </div>
@@ -112,6 +118,7 @@ function Symbols({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/national-sport-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national sport of any specific country"
                   />
                 </div>
@@ -129,6 +136,7 @@ function Symbols({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/state-tree-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of national colors of any specific country"
                   />
                 </div>
@@ -146,6 +154,7 @@ function Symbols({ generalInfo, stateURLCase }) {
                   <Image
                     src="/images/state-colors-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of state colors of any specific US State"
                   />
                 </div>

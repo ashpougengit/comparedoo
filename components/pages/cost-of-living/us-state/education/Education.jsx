@@ -34,6 +34,7 @@ function Education({ costInfo, stateURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -44,6 +45,7 @@ function Education({ costInfo, stateURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -56,6 +58,7 @@ function Education({ costInfo, stateURLCase }) {
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -68,6 +71,7 @@ function Education({ costInfo, stateURLCase }) {
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -84,6 +88,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/pre-school-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing PreSchool Fees"
                   />
                 </div>
@@ -103,6 +108,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/primary-school-fees-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Primary School Fees"
                   />
                 </div>
@@ -122,6 +128,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/secondary-school-fees-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Secondary School Fees"
                   />
                 </div>
@@ -141,6 +148,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/private-school-fees-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Private School Fees"
                   />
                 </div>
@@ -160,6 +168,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/university-tuition-fees-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing University Tuition Fees"
                   />
                 </div>
@@ -181,6 +190,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/university-private-tuition-fees-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing University Private Tuition Fees"
                   />
                 </div>
@@ -200,6 +210,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/after-school-activities-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing After School Activities"
                   />
                 </div>
@@ -219,6 +230,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/special-education-services-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Special Education Services"
                   />
                 </div>
@@ -238,6 +250,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/tutoring-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Tutoring"
                   />
                 </div>
@@ -257,6 +270,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/textbooks-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Textbooks Cost"
                   />
                 </div>
@@ -276,6 +290,7 @@ function Education({ costInfo, stateURLCase }) {
                   <Image
                     src="/images/school-supplies-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing School Supplies"
                   />
                 </div>

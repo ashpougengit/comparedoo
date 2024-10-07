@@ -70,6 +70,7 @@ function FruitsAndVegetables({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -80,6 +81,7 @@ function FruitsAndVegetables({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -92,6 +94,7 @@ function FruitsAndVegetables({
                     <Image
                       src={`/images/${state1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${state1URLCase}`}
                     />
                   </div>
@@ -104,6 +107,7 @@ function FruitsAndVegetables({
                     <Image
                       src={`/images/${state1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${state1URLCase}`}
                     />
                   </div>
@@ -116,6 +120,7 @@ function FruitsAndVegetables({
                     <Image
                       src={`/images/${state2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${state2URLCase}`}
                     />
                   </div>
@@ -129,6 +134,7 @@ function FruitsAndVegetables({
                     <Image
                       src={`/images/${state2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${state2URLCase}`}
                     />
                   </div>
@@ -145,6 +151,7 @@ function FruitsAndVegetables({
                   <Image
                     src="/images/apples-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing apples cost per month"
                   />
                 </div>
@@ -169,6 +176,7 @@ function FruitsAndVegetables({
                   <Image
                     src="/images/bananas-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing bananas cost per month"
                   />
                 </div>
@@ -193,6 +201,7 @@ function FruitsAndVegetables({
                   <Image
                     src="/images/oranges-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing oranges cost per month"
                   />
                 </div>
@@ -217,6 +226,7 @@ function FruitsAndVegetables({
                   <Image
                     src="/images/tomatoes-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing tomatoes cost per month"
                   />
                 </div>
@@ -241,6 +251,7 @@ function FruitsAndVegetables({
                   <Image
                     src="/images/potatoes-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing potatoes cost per month"
                   />
                 </div>
@@ -265,6 +276,7 @@ function FruitsAndVegetables({
                   <Image
                     src="/images/lemons-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing lemons cost per month"
                   />
                 </div>
@@ -289,6 +301,7 @@ function FruitsAndVegetables({
                   <Image
                     src="/images/onions-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing onions cost per month"
                   />
                 </div>
@@ -313,6 +326,7 @@ function FruitsAndVegetables({
                   <Image
                     src="/images/lentils-1-kg-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing lentils cost per month"
                   />
                 </div>

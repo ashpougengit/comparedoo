@@ -91,6 +91,7 @@ function Transportation({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -101,6 +102,7 @@ function Transportation({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -113,6 +115,7 @@ function Transportation({
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -125,6 +128,7 @@ function Transportation({
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -137,6 +141,7 @@ function Transportation({
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -150,6 +155,7 @@ function Transportation({
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -168,6 +174,7 @@ function Transportation({
                   <Image
                     src="/images/public-transportation-pass-per-month-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Monthly Public Transportation Pass"
                   />
                 </div>
@@ -204,6 +211,7 @@ function Transportation({
                   <Image
                     src="/images/single-public-transportation-ticket-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Single Public Transportation Ticket"
                   />
                 </div>
@@ -238,6 +246,7 @@ function Transportation({
                   <Image
                     src="/images/train-tickets-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Single Train Ticket"
                   />
                 </div>
@@ -272,6 +281,7 @@ function Transportation({
                   <Image
                     src="/images/air-fare-domestic.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Domestic Airplane Ticket"
                   />
                 </div>
@@ -306,6 +316,7 @@ function Transportation({
                   <Image
                     src="/images/taxi-start-fare-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Taxi Start Fare"
                   />
                 </div>
@@ -340,6 +351,7 @@ function Transportation({
                   <Image
                     src="/images/taxi-rate-per-kilometers-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Taxi Rate Per Kilometer"
                   />
                 </div>
@@ -374,6 +386,7 @@ function Transportation({
                   <Image
                     src="/images/car-rental-per-day-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Car Rental Per Day"
                   />
                 </div>
@@ -410,6 +423,7 @@ function Transportation({
                   <Image
                     src="/images/parking-fees-inside-city-per-hour-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Parking Fees in City Center"
                   />
                 </div>
@@ -446,6 +460,7 @@ function Transportation({
                   <Image
                     src="/images/parking-fees-outside-city-per-hour-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Parking Fees outside City Center"
                   />
                 </div>

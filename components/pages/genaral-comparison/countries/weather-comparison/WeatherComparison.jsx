@@ -34,6 +34,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -42,6 +43,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -54,6 +56,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -66,6 +69,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -78,6 +82,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -91,6 +96,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -114,6 +120,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <Image
                     src="/images/place-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of place of any country"
                   />
                 </div>
@@ -132,6 +139,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <Image
                     src="/images/current-time-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current time of any specific country"
                   />
                 </div>
@@ -150,6 +158,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <Image
                     src="/images/current-weather-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current weather of any specific place in a country"
                   />
                 </div>
@@ -159,7 +168,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <>
                     {country1CurrentWeather}
                     <span>
-                      {country1WeatherImage && <Image src={`/images/${country1WeatherImage}.png`} height='50' width='50' />}
+                      {country1WeatherImage && <Image src={`/images/${country1WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${country1CurrentWeather} in ${country1Place}`} />}
                     </span>
 
                   </>
@@ -170,7 +179,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <>
                     {country2CurrentWeather}
                     <span>
-                      {country2WeatherImage && <Image src={`/images/${country2WeatherImage}.png`} height='50' width='50' />}
+                      {country2WeatherImage && <Image src={`/images/${country2WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${country2CurrentWeather} in ${country2Place}`} />}
                     </span>
 
                   </>
@@ -185,6 +194,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <Image
                     src="/images/current-temperature-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current temperature of any specific place in a country"
                   />
                 </div>
@@ -204,6 +214,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <Image
                     src="/images/wind-speed-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Speed of Wind Flowing of any specific place in a country"
                   />
                 </div>
@@ -220,6 +231,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <Image
                     src="/images/humidity-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Humidity of any specific place in a country"
                   />
                 </div>

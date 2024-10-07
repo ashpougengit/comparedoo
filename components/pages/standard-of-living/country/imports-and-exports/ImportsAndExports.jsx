@@ -34,8 +34,9 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -45,8 +46,9 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -58,8 +60,9 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -71,8 +74,9 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -93,6 +97,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/imports-of-goods-and-services-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Imports of Goods and Services"
                   />
                 </div>
@@ -116,6 +121,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/fuel-imports-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Total Fuel Imports"
                   />
                 </div>
@@ -138,6 +144,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/cost-to-import-border-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Cost to Import Border Compliance"
                   />
                 </div>
@@ -162,6 +169,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/time-to-import-border-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time to Import Border Compliance"
                   />
                 </div>
@@ -185,6 +193,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/cost-to-import-documentary-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Cost to Import documentary Compliance"
                   />
                 </div>
@@ -209,6 +218,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/time-to-import-documentary-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time to Import Documentary Compliance"
                   />
                 </div>
@@ -235,8 +245,9 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -246,8 +257,9 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -259,8 +271,9 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -272,8 +285,9 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -294,6 +308,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/exports-of-goods-and-services-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Exports of Goods and Services"
                   />
                 </div>
@@ -317,6 +332,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/fuel-exports-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Total Fuel Exports"
                   />
                 </div>
@@ -339,6 +355,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/cost-to-export-border-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Cost to Export Border Compliance"
                   />
                 </div>
@@ -363,6 +380,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/time-to-export-border-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time to Export Border Compliance"
                   />
                 </div>
@@ -386,6 +404,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/cost-to-export-documentary-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Cost to Export documentary Compliance"
                   />
                 </div>
@@ -410,6 +429,7 @@ function ImportsAndExports({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/time-to-export-documentary-compliance-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time to Export Documentary Compliance"
                   />
                 </div>

@@ -104,8 +104,9 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -115,8 +116,9 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -128,8 +130,9 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -141,8 +144,9 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -154,8 +158,9 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -168,8 +173,9 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -188,6 +194,7 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                   <Image
                     src="/images/square-km-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of area in Square Kilometers"
                   />
                 </div>
@@ -227,6 +234,7 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                   <Image
                     src="/images/square-mile-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of area in Square Mile"
                   />
                 </div>
@@ -266,6 +274,7 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                   <Image
                     src="/images/water-percentage-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of water percentage area of any country in the world"
                   />
                 </div>

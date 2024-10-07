@@ -67,6 +67,7 @@ function EconomicFactors({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -77,6 +78,7 @@ function EconomicFactors({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -89,6 +91,7 @@ function EconomicFactors({
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -101,6 +104,7 @@ function EconomicFactors({
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -113,6 +117,7 @@ function EconomicFactors({
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -126,6 +131,7 @@ function EconomicFactors({
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -146,6 +152,7 @@ function EconomicFactors({
                   <Image
                     src="/images/gdp-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the total Gross Domestic Product of any specific country"
                   />
                 </div>
@@ -173,6 +180,7 @@ function EconomicFactors({
                   <Image
                     src="/images/gdp-per-capita-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the total Gross Domestic Product Per Capita of any specific country"
                   />
                 </div>
@@ -200,6 +208,7 @@ function EconomicFactors({
                   <Image
                     src="/images/gini-ratio-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the total GINI Ratio or GINI Coefficient of any specific country"
                   />
                 </div>
@@ -227,6 +236,7 @@ function EconomicFactors({
                   <Image
                     src="/images/inflation-on-consumer-prices-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Percentage of Inflation on consumer prices of any specific country"
                   />
                 </div>
@@ -256,6 +266,7 @@ function EconomicFactors({
                   <Image
                     src="/images/central-government-debt-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Central Government Debt of any specific country"
                   />
                 </div>
@@ -373,6 +384,7 @@ function EconomicFactors({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -383,6 +395,7 @@ function EconomicFactors({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -395,6 +408,7 @@ function EconomicFactors({
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -407,6 +421,7 @@ function EconomicFactors({
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -419,6 +434,7 @@ function EconomicFactors({
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -432,6 +448,7 @@ function EconomicFactors({
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -452,6 +469,7 @@ function EconomicFactors({
                   <Image
                     src="/images/hdi-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Human Development Index of any specific country"
                   />
                 </div>
@@ -475,6 +493,7 @@ function EconomicFactors({
                   <Image
                     src="/images/human-capital-index-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Human Capital Index of any specific country"
                   />
                 </div>
@@ -502,6 +521,7 @@ function EconomicFactors({
                   <Image
                     src="/images/literacy-rate-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Literacy Rate of any specific country"
                   />
                 </div>
@@ -531,6 +551,7 @@ function EconomicFactors({
                   <Image
                     src="/images/life-expectancy-ratio-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representation of Life Expectancy Ratio any given country"
                   />
                 </div>
@@ -562,6 +583,7 @@ function EconomicFactors({
                   <Image
                     src="/images/healthy-life-expectancy-ratio-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representation of Healthy Life Expectancy Ratio any given country"
                   />
                 </div>
@@ -589,6 +611,7 @@ function EconomicFactors({
                   <Image
                     src="/images/poverty-headcount-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Poverty Rate of any specific country"
                   />
                 </div>
@@ -616,6 +639,7 @@ function EconomicFactors({
                   <Image
                     src="/images/unemployment-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Unemployment Rate of any specific country"
                   />
                 </div>

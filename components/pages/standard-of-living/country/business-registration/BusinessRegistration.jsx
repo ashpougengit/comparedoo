@@ -28,6 +28,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -38,6 +39,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -50,6 +52,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${countryURLCase}`}
                     />
                   </div>
@@ -62,6 +65,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                     <Image
                       src={`/images/${countryURLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${countryURLCase}`}
                     />
                   </div>
@@ -82,6 +86,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/time-required-to-start-a-business-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Time Required to Start a Business"
                   />
                 </div>
@@ -104,6 +109,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/new-businesses-registered-number-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing New Businesses Registered"
                   />
                 </div>
@@ -127,6 +133,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/new-businesses-registration-density-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing New Businesses Registration Density"
                   />
                 </div>
@@ -149,6 +156,7 @@ function BusinessRegistration({ standardInfo, countryURLCase }) {
                   <Image
                     src="/images/cost-of-business-start-up-procedures-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Cost of Business Start-Up Procedures"
                   />
                 </div>

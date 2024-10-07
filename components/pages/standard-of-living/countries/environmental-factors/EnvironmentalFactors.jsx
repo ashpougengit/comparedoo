@@ -38,6 +38,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -48,6 +49,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -60,6 +62,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                     <Image
                       src={`/images/${country1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country1URLCase}`}
                     />
                   </div>
@@ -72,6 +75,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                     <Image
                       src={`/images/${country1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country1URLCase}`}
                     />
                   </div>
@@ -84,6 +88,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                     <Image
                       src={`/images/${country2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${country2URLCase}`}
                     />
                   </div>
@@ -97,6 +102,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                     <Image
                       src={`/images/${country2URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${country2URLCase}`}
                     />
                   </div>
@@ -117,6 +123,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                   <Image
                     src="/images/agricultural-land-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Agricultural Land available in any specific country"
                   />
                 </div>
@@ -154,6 +161,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                   <Image
                     src="/images/forest-area-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Forest Area available in any specific country"
                   />
                 </div>
@@ -189,6 +197,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                   <Image
                     src="/images/co2-emissions-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total CO2 Emissions from any specific country"
                   />
                 </div>
@@ -225,6 +234,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                   <Image
                     src="/images/access-to-electricity-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the access of electricity in any specific country"
                   />
                 </div>
@@ -263,6 +273,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                   <Image
                     src="/images/access-to-internet-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the access of internet in any specific country"
                   />
                 </div>
@@ -301,6 +312,7 @@ function EnvironmentalFactors({ country1StandardInfo, country2StandardInfo, coun
                   <Image
                     src="/images/fresh-water-withdrawals-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the annual freshwater withdrawals from any specific country"
                   />
                 </div>

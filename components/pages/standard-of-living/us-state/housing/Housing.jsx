@@ -29,8 +29,9 @@ function Housing({ standardInfo, stateURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -38,8 +39,9 @@ function Housing({ standardInfo, stateURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -50,8 +52,9 @@ function Housing({ standardInfo, stateURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -63,8 +66,9 @@ function Housing({ standardInfo, stateURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -85,6 +89,7 @@ function Housing({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/total-housing-units-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Total Housing Units percentage in any specific country or state"
                   />
                 </div>
@@ -107,6 +112,7 @@ function Housing({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/median-gross-rent-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Median Gross Rent percentage in any specific country or state"
                   />
                 </div>
@@ -129,6 +135,7 @@ function Housing({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/homeownership-rate-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Homeownership Rate percentage in any specific country or state"
                   />
                 </div>
@@ -151,6 +158,7 @@ function Housing({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/average-family-size-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Average Family Size in any specific country or state"
                   />
                 </div>
@@ -171,6 +179,7 @@ function Housing({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/married-couple-household-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Married Couple Household percentage in any specific country or state"
                   />
                 </div>
@@ -193,6 +202,7 @@ function Housing({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/male-householder-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Male Householder (No Spouse) percentage in any specific country or state"
                   />
                 </div>
@@ -215,6 +225,7 @@ function Housing({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/female-householder-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Female Householder (No Spouse) percentage in any specific country or state"
                   />
                 </div>

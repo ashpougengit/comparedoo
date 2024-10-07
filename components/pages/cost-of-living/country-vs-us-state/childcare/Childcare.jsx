@@ -89,6 +89,7 @@ function Childcare({
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -99,6 +100,7 @@ function Childcare({
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -111,6 +113,7 @@ function Childcare({
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -123,6 +126,7 @@ function Childcare({
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -135,6 +139,7 @@ function Childcare({
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -147,7 +152,8 @@ function Childcare({
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
-                       fill 
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -164,6 +170,7 @@ function Childcare({
                   <Image
                     src="/images/children-jeans-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Children Jeans"
                   />
                 </div>
@@ -200,6 +207,7 @@ function Childcare({
                   <Image
                     src="/images/children-sneakers-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Children Normal Sneakers"
                   />
                 </div>
@@ -236,6 +244,7 @@ function Childcare({
                   <Image
                     src="/images/children-winter-coat-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Children's Winter Coat"
                   />
                 </div>
@@ -270,6 +279,7 @@ function Childcare({
                   <Image
                     src="/images/day-care-infant-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Daycare for Infant"
                   />
                 </div>
@@ -304,6 +314,7 @@ function Childcare({
                   <Image
                     src="/images/day-care-toddler-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Daycare for Toddler"
                   />
                 </div>
@@ -338,6 +349,7 @@ function Childcare({
                   <Image
                     src="/images/children-care-for-sick-days-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Childcare for Sick Days"
                   />
                 </div>
@@ -374,6 +386,7 @@ function Childcare({
                   <Image
                     src="/images/early-childhood-education-programs-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Early Childhood Education Programs"
                   />
                 </div>
@@ -410,6 +423,7 @@ function Childcare({
                   <Image
                     src="/images/extra-curricular-activities-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Extra Curricular Activities"
                   />
                 </div>
@@ -444,6 +458,7 @@ function Childcare({
                   <Image
                     src="/images/summer-camp-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Describing Summer Camp"
                   />
                 </div>

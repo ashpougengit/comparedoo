@@ -32,8 +32,9 @@ function Employment({ standardInfo, stateURLCase }) {
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -41,8 +42,9 @@ function Employment({ standardInfo, stateURLCase }) {
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -53,8 +55,9 @@ function Employment({ standardInfo, stateURLCase }) {
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${stateURLCase}`}
                     />
                   </div>
@@ -66,8 +69,9 @@ function Employment({ standardInfo, stateURLCase }) {
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${stateURLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${stateURLCase}`}
                     />
                   </div>
@@ -87,6 +91,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/agriculture-forestry-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Agriculture, Forestry and Fishing Sectors jobs available in any specific country or state"
                   />
                 </div>
@@ -109,6 +114,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/construction-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Construction Sector workers percentage in any specific country or state"
                   />
                 </div>
@@ -129,6 +135,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/manufacturing-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Manufacturing Sector workers percentage in any specific country or state"
                   />
                 </div>
@@ -148,6 +155,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/transportation-and-warehousing-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Transportation and Warehousing Sectors workers percentage in any specific country or state"
                   />
                 </div>
@@ -170,6 +178,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/information-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total IT and Information Sectors workers percentage in any specific country or state"
                   />
                 </div>
@@ -190,6 +199,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/arts-and-entertainment-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Arts and Entertainment workers percentage in any specific country or state"
                   />
                 </div>
@@ -211,6 +221,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/education-and-healthcare-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Education and Healthcare Sectors workers percentage in any specific country or state"
                   />
                 </div>
@@ -232,6 +243,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/real-estate-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Finance and Real Estate Sectors workers percentage in any specific country or state"
                   />
                 </div>
@@ -254,6 +266,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/wholesale-trade-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Wholesale Trade workers percentage in any specific country or state"
                   />
                 </div>
@@ -274,6 +287,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/retail-trade-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Retail Trade workers percentage in any specific country or state"
                   />
                 </div>
@@ -294,6 +308,7 @@ function Employment({ standardInfo, stateURLCase }) {
                   <Image
                     src="/images/public-administration-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total Public Administration workers percentage in any specific country or state"
                   />
                 </div>

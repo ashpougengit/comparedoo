@@ -34,8 +34,9 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -43,8 +44,9 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -56,8 +58,9 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${state1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${state1URLCase}`}
                     />
                   </div>
@@ -69,8 +72,9 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${state1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${state1URLCase}`}
                     />
                   </div>
@@ -82,8 +86,9 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${state2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${state2URLCase}`}
                     />
                   </div>
@@ -96,8 +101,9 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${state2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${state2URLCase}`}
                     />
                   </div>
@@ -118,6 +124,7 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <Image
                     src="/images/total-registered-physicians-states-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Total Registered Physicians of any specific country or state"
                   />
                 </div>
@@ -149,6 +156,7 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <Image
                     src="/images/total-registered-nurses-states-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Total Registered Nurses of any specific country or state"
                   />
                 </div>
@@ -176,6 +184,7 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <Image
                     src="/images/available-hospital-beds-states-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Available Hospital Beds of any specific country or state"
                   />
                 </div>
@@ -203,6 +212,7 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <Image
                     src="/images/disability-percentage-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Disability Percentage of any specific country or state"
                   />
                 </div>
@@ -229,6 +239,7 @@ function Health({ state1StandardInfo, state2StandardInfo, state1URLCase, state2U
                   <Image
                     src="/images/population-without-health-insurance-coverage-states-images.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing Population Without Health Insurance Coverage of any specific country or state"
                   />
                 </div>

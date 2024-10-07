@@ -35,8 +35,9 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image representing an indicator"
                     />
                   </div>
@@ -46,8 +47,9 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt="Image illustrating an indicator"
                     />
                   </div>
@@ -59,8 +61,9 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <div className="first-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${slug1URLCase}`}
                     />
                   </div>
@@ -72,8 +75,9 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <div className="first-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug1URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${slug1URLCase}`}
                     />
                   </div>
@@ -85,8 +89,9 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <div className="second-entity-map-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-map-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Pictorial representation of map of ${slug2URLCase}`}
                     />
                   </div>
@@ -99,8 +104,9 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <div className="second-entity-flag-pages-comparison">
                     <Image
                       src={`/images/${slug2URLCase}-flag-small.png`}
-                      layout="fill"
-                      objectFit="contain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                       alt={`Image illustrating the flag of ${slug2URLCase}`}
                     />
                   </div>
@@ -123,6 +129,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <Image
                     src="/images/place-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of place of any country"
                   />
                 </div>
@@ -141,6 +148,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <Image
                     src="/images/current-time-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current time of any specific country"
                   />
                 </div>
@@ -159,6 +167,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <Image
                     src="/images/current-weather-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current weather of any specific place in a country"
                   />
                 </div>
@@ -168,7 +177,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <>
                     {slug1CurrentWeather}
                     <span>
-                      {slug1WeatherImage && <Image src={`/images/${slug1WeatherImage}.png`} height='50' width='50' />}
+                      {slug1WeatherImage && <Image src={`/images/${slug1WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${slug1CurrentWeather} in ${slug1Place}`} />}
                     </span>
 
                   </>
@@ -179,7 +188,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <>
                     {slug2CurrentWeather}
                     <span>
-                      {slug2WeatherImage && <Image src={`/images/${slug2WeatherImage}.png`} height='50' width='50' />}
+                      {slug2WeatherImage && <Image src={`/images/${slug2WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${slug2CurrentWeather} in ${slug2Place}`} />}
                     </span>
 
                   </>
@@ -194,6 +203,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <Image
                     src="/images/current-temperature-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current temperature of any specific place in a country"
                   />
                 </div>
@@ -213,6 +223,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <Image
                     src="/images/wind-speed-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Speed of Wind Flowing of any specific place in a country"
                   />
                 </div>
@@ -233,6 +244,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <Image
                     src="/images/humidity-image.png"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of Humidity of any specific place in a country"
                   />
                 </div>
