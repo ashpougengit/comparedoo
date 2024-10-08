@@ -177,7 +177,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <div className='flex-weather'>
                     {slug1CurrentWeather}
                     <span>
-                      {slug1WeatherImage && <Image src={`/images/${slug1WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${slug1CurrentWeather} in ${slug1Place}`} />}
+                      {slug1WeatherImage && <Image src={`/images/${slug1WeatherImage}.png`} height='40' width='40' alt={`Visual representation of ${slug1CurrentWeather} in ${slug1Place}`} />}
                     </span>
 
                   </div>
@@ -188,7 +188,7 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
                   <div className='flex-weather'>
                     {slug2CurrentWeather}
                     <span>
-                      {slug2WeatherImage && <Image src={`/images/${slug2WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${slug2CurrentWeather} in ${slug2Place}`} />}
+                      {slug2WeatherImage && <Image src={`/images/${slug2WeatherImage}.png`} height='40' width='40' alt={`Visual representation of ${slug2CurrentWeather} in ${slug2Place}`} />}
                     </span>
 
                   </div>

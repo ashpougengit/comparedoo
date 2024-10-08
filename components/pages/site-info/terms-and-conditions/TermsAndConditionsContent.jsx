@@ -60,7 +60,7 @@ function TermsAndConditionsContent() {
 
                 <h2>9. Contact Us</h2>
                 <p>If you have any questions about these Terms, please contact us at:</p>
-                <p>Comparedoo.com<br />[comparedoo@gmail.com]</p>
+                <p>Comparedoo.com<br />[info.comparedoo@gmail.com]</p>
 
                 <p>By using Comparedoo.com, you acknowledge that you have read and understand these Terms and agree to be bound by
                     them.</p>

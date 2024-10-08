@@ -73,7 +73,7 @@ function AboutUsContent() {
                 <h2>Contact Us</h2>
                 <p>If you have any questions, feedback, or suggestions, we&apos;d love to hear from you. Please feel free to reach out to
                     us at:</p>
-                <p>Comparedoo.com<br />[comparedoo@gmail.com]</p>
+                <p>Comparedoo.com<br />[icomparedoo@gmail.comnfo.]</p>
 
                 <p>Thank you for choosing Comparedoo.com as your trusted source for location comparisons. We look forward to helping
                     you make informed decisions!</p>

@@ -8,6 +8,7 @@ function Weather({ country, weatherInfo, countryURLCase }) {
   const currentTemperature = weatherInfo?.currentTemperature
   const windSpeed = `${weatherInfo?.windSpeed}, ${weatherInfo?.windDegree}`
   const humidity = weatherInfo?.humidity
+  const weatherImage = weatherInfo?.weatherImage
 
   return (
     <>
@@ -134,7 +135,15 @@ function Weather({ country, weatherInfo, countryURLCase }) {
                     </div>
                   </td>
                   <td className="current-weather-answer-first-entity all-indicator-answers">
-                    {currentWeather ?? 'Yet to Update'}
+                    {currentWeather ? (
+                      <div className='flex-weather'>
+                        {currentWeather}
+                        <span>
+                          {weatherImage && <Image src={`/images/${weatherImage}.png`} height='40' width='40' alt={`Visual representation of ${currentWeather} in ${place}`} />}
+                        </span>
+
+                      </div>
+                    ) : 'Yet to Update'}
                   </td>
                 </tr>
 

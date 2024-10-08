@@ -60,7 +60,7 @@ function TopDescription({ state1, state2, costTimes, moreOrLess }) {
             We always try to give you the latest data, but sometimes mistakes
             might occur. If you believe some content on our site is not up to
             date, please let us know by emailing us at{' '}
-            <span className="emailAddress">comparedoo@gmail.com</span>
+            <span className="emailAddress">info.comparedoo@gmail.com</span>
           </p>
         </div>
       </div>

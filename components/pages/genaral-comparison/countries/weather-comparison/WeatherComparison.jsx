@@ -168,7 +168,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <div className='flex-weather'>
                     {country1CurrentWeather}
                     <span>
-                      {country1WeatherImage && <Image src={`/images/${country1WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${country1CurrentWeather} in ${country1Place}`} />}
+                      {country1WeatherImage && <Image src={`/images/${country1WeatherImage}.png`} height='40' width='40' alt={`Visual representation of ${country1CurrentWeather} in ${country1Place}`} />}
                     </span>
 
                   </div>
@@ -179,7 +179,7 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
                   <div className='flex-weather'>
                     {country2CurrentWeather}
                     <span>
-                      {country2WeatherImage && <Image src={`/images/${country2WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${country2CurrentWeather} in ${country2Place}`} />}
+                      {country2WeatherImage && <Image src={`/images/${country2WeatherImage}.png`} height='40' width='40' alt={`Visual representation of ${country2CurrentWeather} in ${country2Place}`} />}
                     </span>
 
                   </div>

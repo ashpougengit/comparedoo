@@ -101,7 +101,7 @@ const baseUrl = 'http://localhost:3000'; // change base url along with http
 // Static routes to include in the sitemap
 const continents = ['africa', 'antartica', 'asia', 'europe', 'north-america', 'oceania', 'south-america'];
 const siteInfo = ['about-us', 'contact-us', 'cookie-policy', 'privacy-policy', 'terms-and-conditions'];
-const staticPages = [...continents, ...siteInfo, 'knowledgebase', 'menu-bar'];
+const staticPages = [...continents, ...siteInfo, 'knowledgebase'];
 
 // Generate sitemap URLs for each static route
 const staticRoutes = staticPages.map((route) => ({

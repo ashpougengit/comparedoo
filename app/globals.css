@@ -38,6 +38,7 @@ body {
   justify-content: space-around;
 
   margin: 3rem 0;
+  border: 1px solid black;
 }
 
 .logo {
@@ -74,6 +75,22 @@ body {
 
 .hamburger-icon {
   cursor: pointer;
+  display: none;
+}
+
+.hamburger-icon img {
+  display: block;
+}
+
+@media screen and (max-width: 1130px) {
+  .hamburger-icon {
+    cursor: pointer;
+    display: block;
+  }
+
+  .nav-menus.open {
+    display: flex;
+  }
 }
 
 .nav-menus ul li {
@@ -733,7 +750,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 
 .first-entity-flag-pages-comparison,
@@ -749,7 +765,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 .three-tabs-links-image {
   width: 3.5rem;
@@ -1369,9 +1384,9 @@ td.four-rem-height-td {
 
 .population-comparison-layout {
   display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
   gap: 2rem;
   font-size: 2.4rem;
   background-color: #f7f7f7;
@@ -1380,13 +1395,13 @@ td.four-rem-height-td {
   padding: 4rem 2rem;
 }
 
-.population-chart{
+.population-chart {
   width: 70rem;
   height: 40rem;
 }
 
 @media (max-width: 830px) {
-  .population-chart{
+  .population-chart {
     width: 85vw;
     height: 60vh;
   }
@@ -1430,7 +1445,6 @@ td.four-rem-height-td {
   white-space: normal;
   color: #004aad;
   font-weight: 700;
-  border: 1px solid red;
 }
 
 .first-entity-map-population-comparison img,
@@ -1670,10 +1684,6 @@ td.four-rem-height-td {
   }
 }
 
-.nav-menus.open {
-  display: flex;
-}
-
 .country-map-name-flag img {
   object-fit: contain;
   width: 6rem;
@@ -1893,12 +1903,8 @@ td.four-rem-height-td {
       align-items: center;
     } */
 
-  .nav-menus.open {
-    display: flex;
-  }
-
   /* Turn the hamburger lines into an "X" */
-  .hamburger-menu.open span:nth-child(1) {
+  /* .hamburger-menu.open span:nth-child(1) {
     transform: rotate(45deg) translate(0.8rem, 0.8rem);
   }
 
@@ -1908,7 +1914,7 @@ td.four-rem-height-td {
 
   .hamburger-menu.open span:nth-child(3) {
     transform: rotate(-45deg) translate(0.8rem, -0.8rem);
-  }
+  } */
 
   .nav-menus ul {
     flex-direction: column;
@@ -1922,12 +1928,35 @@ td.four-rem-height-td {
   display: flex;
 }
 
+/* ******************Hamburger Menu********************* */
 .hamburger-menu {
   padding: 3rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  color: #000;
+  background-color: #fff;
+  z-index: 99999;
+  overflow-y: auto; /* Enables vertical scrolling inside the menu */
+}
+
+.close-menu {
+  display: none;
+}
+
+.content-list {
+  list-style-type: none;
+}
+
+.no-scroll {
+  overflow: hidden; /* Disables scrolling on the entire page */
 }
 
 .divider {
   border-top: 0.3rem solid #000;
+  margin-top: 2rem;
 }
 
 .menu-items {
@@ -1935,8 +1964,15 @@ td.four-rem-height-td {
   padding-top: 1rem;
 }
 
+.close-button{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
 /* Turn the hamburger lines into an "X" */
-.hamburger-menu.open span:nth-child(1) {
+/* .hamburger-menu.open span:nth-child(1) {
   transform: rotate(45deg) translate(0.8rem, 0.8rem);
 }
 
@@ -1946,7 +1982,7 @@ td.four-rem-height-td {
 
 .hamburger-menu.open span:nth-child(3) {
   transform: rotate(-45deg) translate(0.8rem, -0.8rem);
-}
+} */
 
 /* ................................................. index.html code starts here ................... */
 /* ................................................. index.html code starts here ................... */
@@ -3001,8 +3037,6 @@ td.four-rem-height-td {
     gap: 4rem;
   }
 
-  
-
   .first-entity-globe,
   .first-entity-map,
   .first-entity-flag,
@@ -3026,7 +3060,6 @@ td.four-rem-height-td {
   .maps-flags-emblem img {
     object-fit: contain;
     width: 33rem;
-    
   }
 }
 
@@ -3262,31 +3295,23 @@ td.four-rem-height-td {
     height: auto;
     padding: 2rem 0;
   }
-
 }
 
 @media screen and (max-width: 900px) {
-  .population-comparison-layout {    
-    width: 98%;  
+  .population-comparison-layout {
+    width: 98%;
   }
 
   .first-entity-population-comparison,
   .second-entity-population-comparison {
-   
     width: 95%;
-
   }
-
 }
 
 @media screen and (max-width: 750px) {
   .first-entity-population-comparison,
   .second-entity-population-comparison {
-      
-   
   }
-
- 
 }
 
 @media screen and (max-width: 500px) {

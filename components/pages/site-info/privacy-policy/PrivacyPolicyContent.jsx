@@ -83,14 +83,14 @@ function PrivacyPolicyContent() {
 
                 <h3>Access and Update</h3>
                 <p>You have the right to access and update your personal information. You can do so by contacting us at
-                    &quot;comparedoo@gmail.com&quot;.</p>
+                    &quot;info.comparedoo@gmail.com&quot;.</p>
 
                 <h3> Opt-Out</h3>
                 <p>You may opt-out of receiving promotional communications from us by following the unsubscribe instructions provided
                     in those communications or by contacting us directly.</p>
 
                 <h3> Data Deletion</h3>
-                <p>You may request that we delete your personal information by contacting us at &quot;comparedoo@gmail.com&quot;. We will take
+                <p>You may request that we delete your personal information by contacting us at &quot;info.comparedoo@gmail.com&quot;. We will take
                     reasonable steps to delete your information, except where we are required to retain it for legal purposes.</p>
 
                 <h2>6. Children&apos;s Privacy</h2>
@@ -105,7 +105,7 @@ function PrivacyPolicyContent() {
 
                 <h2>8. Contact Us</h2>
                 <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-                <p>Comparedoo.com<br />&quot;comparedoo@gmail.com&quot;</p>
+                <p>Comparedoo.com<br />&quot;info.comparedoo@gmail.com&quot;</p>
 
                 <p>By using Comparedoo.com, you acknowledge that you have read and understand this Privacy Policy and agree to its
                     terms and conditions.</p>
