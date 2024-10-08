@@ -165,24 +165,24 @@ async function WeatherComparison({ country1, country2, country1WeatherInfo, coun
               </td>
               <td className="current-weather-answer-first-entity all-indicator-answers">
                 {country1CurrentWeather ? (
-                  <>
+                  <div className='flex-weather'>
                     {country1CurrentWeather}
                     <span>
                       {country1WeatherImage && <Image src={`/images/${country1WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${country1CurrentWeather} in ${country1Place}`} />}
                     </span>
 
-                  </>
+                  </div>
                 ) : 'Yet to Update'}
               </td>
               <td className="current-weather-answer-second-entity all-indicator-answers">
                 {country2CurrentWeather ? (
-                  <>
+                  <div className='flex-weather'>
                     {country2CurrentWeather}
                     <span>
                       {country2WeatherImage && <Image src={`/images/${country2WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${country2CurrentWeather} in ${country2Place}`} />}
                     </span>
 
-                  </>
+                  </div>
                 ) : 'Yet to Update'}
               </td>
             </tr>

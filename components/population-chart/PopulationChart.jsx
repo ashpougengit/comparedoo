@@ -129,7 +129,7 @@ const PopulationChart = ({ popInfo, ariaLabel }) => {
   };
 
   return (
-    <div style={{ width: '60rem', height: '40rem', margin: 'auto' }}>
+    <div className='population-chart'>
       <Line data={chartData} options={chartOptions} aria-label={ariaLabel} />
     </div>
   );

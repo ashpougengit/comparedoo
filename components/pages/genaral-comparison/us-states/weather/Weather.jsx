@@ -175,24 +175,24 @@ function Weather({ state1, state2, state1WeatherInfo, state2WeatherInfo, state1U
               </td>
               <td className="current-weather-answer-first-entity all-indicator-answers">
                 {state1CurrentWeather ? (
-                  <>
+                  <div className='flex-weather'>
                     {state1CurrentWeather}
                     <span>
                       {state1WeatherImage && <Image src={`/images/${state1WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${state1CurrentWeather} in ${state1Place}`} />}
                     </span>
 
-                  </>
+                  </div>
                 ) : 'Yet to Update'}
               </td>
               <td className="current-weather-answer-second-entity all-indicator-answers">
                 {state2CurrentWeather ? (
-                  <>
+                  <div className='flex-weather'>
                     {state2CurrentWeather}
                     <span>
                       {state2WeatherImage && <Image src={`/images/${state2WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${state2CurrentWeather} in ${state2Place}`} />}
                     </span>
 
-                  </>
+                  </div>
                 ) : 'Yet to Update'}
               </td>
             </tr>

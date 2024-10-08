@@ -174,24 +174,24 @@ function Weather({ slug1, slug2, slug1WeatherInfo, slug2WeatherInfo, slug1URLCas
               </td>
               <td className="current-weather-answer-first-entity all-indicator-answers">
                 {slug1CurrentWeather ? (
-                  <>
+                  <div className='flex-weather'>
                     {slug1CurrentWeather}
                     <span>
                       {slug1WeatherImage && <Image src={`/images/${slug1WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${slug1CurrentWeather} in ${slug1Place}`} />}
                     </span>
 
-                  </>
+                  </div>
                 ) : 'Yet to Update'}
               </td>
               <td className="current-weather-answer-second-entity all-indicator-answers">
                 {slug2CurrentWeather ? (
-                  <>
+                  <div className='flex-weather'>
                     {slug2CurrentWeather}
                     <span>
                       {slug2WeatherImage && <Image src={`/images/${slug2WeatherImage}.png`} height='50' width='50' alt={`Visual representation of ${slug2CurrentWeather} in ${slug2Place}`} />}
                     </span>
 
-                  </>
+                  </div>
                 ) : 'Yet to Update'}
               </td>
             </tr>

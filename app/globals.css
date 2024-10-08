@@ -44,7 +44,7 @@ body {
   width: 30rem;
   height: 5rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -334,13 +334,14 @@ body {
   width: 30rem;
   height: 15rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .heading-second img {
+  object-fit: contain;
   width: 30rem;
   height: 15rem;
   margin: auto auto;
@@ -351,13 +352,14 @@ body {
     width: 30rem;
     height: 15rem;
     position: relative;
-    object-fit: contain;
+
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .heading-second img {
+    object-fit: contain;
     width: 25rem;
     height: 12.5rem;
     margin: auto auto;
@@ -563,6 +565,7 @@ body {
 }
 
 .individual-country-vs-others-map-name-flag img {
+  object-fit: contain;
   width: 6rem;
   height: 6rem;
 }
@@ -572,7 +575,7 @@ body {
   width: 8rem;
   height: 6rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -580,6 +583,7 @@ body {
 
 .individual-country-first-entity-map img,
 .individual-country-second-entity-map img {
+  object-fit: contain;
   width: 6rem;
   height: 6rem;
   margin: auto auto;
@@ -652,7 +656,7 @@ body {
   width: 50rem;
   height: 8.33rem;
   position: relative;
-  object-fit: contain;
+
   margin: auto auto;
   display: flex;
   align-items: center;
@@ -664,7 +668,7 @@ body {
     width: 30rem;
     height: 5rem;
     position: relative;
-    object-fit: contain;
+
     margin: auto auto;
     display: flex;
     align-items: center;
@@ -672,6 +676,7 @@ body {
   }
 
   .footer-logo img {
+    object-fit: contain;
     width: 30rem;
     height: 5rem;
   }
@@ -705,36 +710,52 @@ body {
   width: 5rem;
   height: 5rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .first-entity-map-pages-comparison,
-.first-entity-flag-pages-comparison,
+/* .first-entity-flag-pages-comparison, */
 .second-entity-map-pages-comparison,
-.second-entity-flag-pages-comparison,
+/* .second-entity-flag-pages-comparison, */
 .right-indicator,
 .left-indicator,
-.first-entity-flag-population-comparison,
+/* .first-entity-flag-population-comparison, */
 .first-entity-map-population-comparison,
-.second-entity-map-population-comparison,
-.second-entity-flag-population-comparison {
+.second-entity-map-population-comparison
+/* .second-entity-flag-population-comparison*/ {
   width: 8rem;
   height: 5rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid red;
 }
 
+.first-entity-flag-pages-comparison,
+.second-entity-flag-pages-comparison,
+.first-entity-flag-population-comparison,
+.second-entity-flag-population-comparison {
+  width: 8rem;
+  height: 5rem;
+  /* width: 6rem ;
+  height: 4.28rem; */
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+}
 .three-tabs-links-image {
   width: 3.5rem;
   height: 3.5rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -748,7 +769,7 @@ body {
   width: 50rem;
   height: 50rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -760,7 +781,7 @@ body {
   width: 6rem;
   height: 6rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -771,7 +792,7 @@ body {
   width: 8rem;
   height: 8rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -783,7 +804,7 @@ body {
   width: 90rem;
   height: 18rem;
   position: relative;
-  object-fit: contain;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -892,6 +913,7 @@ body {
 }
 
 .three-tabs-links-image img {
+  object-fit: contain;
   width: 3.5rem;
   height: 3.5rem;
 }
@@ -958,6 +980,13 @@ body {
   margin: 1rem auto 3rem auto;
 
   padding: 4rem 2rem;
+}
+
+.flex-weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .indicators-first-entity-and-second-entity-div1,
@@ -1032,6 +1061,7 @@ td.four-rem-height-td {
 }
 
 .basic-information-images img {
+  object-fit: contain;
   width: 5rem !important;
   height: 5rem;
 
@@ -1108,6 +1138,7 @@ td.four-rem-height-td {
 .second-entity-map-pages-comparison img,
 .right-indicator img,
 .left-indicator img {
+  object-fit: contain;
   width: 5rem !important;
   height: 5rem;
   margin: auto auto;
@@ -1115,6 +1146,7 @@ td.four-rem-height-td {
 
 .first-entity-flag-pages-comparison img,
 .second-entity-flag-pages-comparison img {
+  object-fit: contain;
   width: 5rem !important;
   height: 3.28rem;
   margin: auto auto;
@@ -1178,6 +1210,7 @@ td.four-rem-height-td {
 }
 
 .age-distribution-images img {
+  object-fit: contain;
   width: 6rem;
   height: 6rem;
 }
@@ -1232,6 +1265,7 @@ td.four-rem-height-td {
 }
 
 .maps-flags-emblem img {
+  object-fit: contain;
   width: 30rem;
   height: 30rem;
 }
@@ -1306,7 +1340,7 @@ td.four-rem-height-td {
   height: 30rem;
   display: flex;
   position: relative;
-  object-fit: contain;
+
   align-items: center;
   justify-content: center;
   gap: 3rem;
@@ -1334,15 +1368,28 @@ td.four-rem-height-td {
 /* //////////////////////////////// POPULATION COMPARISON //////////////////////////// */
 
 .population-comparison-layout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
   gap: 2rem;
   font-size: 2.4rem;
   background-color: #f7f7f7;
   width: 95%;
   margin: auto;
   padding: 4rem 2rem;
+}
+
+.population-chart{
+  width: 70rem;
+  height: 40rem;
+}
+
+@media (max-width: 830px) {
+  .population-chart{
+    width: 85vw;
+    height: 60vh;
+  }
 }
 
 .first-entity-population-comparison,
@@ -1358,7 +1405,7 @@ td.four-rem-height-td {
   background-color: white;
 
   /* width: 65%; */
-  width: 50%;
+  width: 70%;
 
   height: auto;
   padding: 2rem 0;
@@ -1377,16 +1424,18 @@ td.four-rem-height-td {
 
 .first-entity-name-population-comparison,
 .second-entity-name-population-comparison {
-  width: 100%;
+  width: 50%;
   text-align: center;
   font-size: 2rem;
   white-space: normal;
   color: #004aad;
   font-weight: 700;
+  border: 1px solid red;
 }
 
 .first-entity-map-population-comparison img,
 .second-entity-map-population-comparison img {
+  object-fit: contain;
   width: 5rem !important;
   height: 5rem;
   margin: auto auto;
@@ -1394,6 +1443,7 @@ td.four-rem-height-td {
 
 .first-entity-flag-population-comparison img,
 .second-entity-flag-population-comparison img {
+  object-fit: contain;
   width: 5rem !important;
   height: 3.28rem;
   margin: auto auto;
@@ -1410,7 +1460,7 @@ td.four-rem-height-td {
   font-weight: 700;
 }
 
-/* .population-growth-graph img {
+/* .population-growth-graph img { object-fit: contain;
     width: 30rem;
     padding: 2rem 1rem;
   } */
@@ -1494,6 +1544,7 @@ td.four-rem-height-td {
 
 .first-entity-map-for-pages img,
 .first-entity-flag-for-pages img {
+  object-fit: contain;
   width: 5rem;
 }
 
@@ -1510,6 +1561,7 @@ td.four-rem-height-td {
 }
 
 .continent-map img {
+  object-fit: contain;
   width: 100%;
 }
 
@@ -1623,6 +1675,7 @@ td.four-rem-height-td {
 }
 
 .country-map-name-flag img {
+  object-fit: contain;
   width: 6rem;
 }
 
@@ -1668,6 +1721,7 @@ td.four-rem-height-td {
 }
 
 .individual-country-globe-map-flag-emblem img {
+  object-fit: contain;
   width: 40rem;
 }
 
@@ -1791,7 +1845,6 @@ td.four-rem-height-td {
   width: 35rem;
   height: 28rem;
   position: relative;
-  object-fit: contain;
 }
 
 .knowledgebase-link h2 {
@@ -2168,6 +2221,7 @@ td.four-rem-height-td {
   }
 
   .continent-map img {
+    object-fit: contain;
     width: 90%;
   }
 }
@@ -2188,6 +2242,7 @@ td.four-rem-height-td {
   }
 
   .country-map-name-flag img {
+    object-fit: contain;
     width: 5rem;
   }
 
@@ -2221,6 +2276,7 @@ td.four-rem-height-td {
   }
 
   .individual-country-globe-map-flag-emblem img {
+    object-fit: contain;
     width: 35rem;
   }
 }
@@ -2234,6 +2290,7 @@ td.four-rem-height-td {
   }
 
   .individual-country-globe-map-flag-emblem img {
+    object-fit: contain;
     width: 40rem;
   }
 
@@ -2410,6 +2467,7 @@ td.four-rem-height-td {
   }
 
   .individual-country-vs-others-map-name-flag img {
+    object-fit: contain;
     width: 4rem;
   }
 
@@ -2424,7 +2482,7 @@ td.four-rem-height-td {
     width: 100%;
     height: auto;
     position: relative;
-    object-fit: contain;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2450,6 +2508,7 @@ td.four-rem-height-td {
   }
 
   .individual-country-globe-map-flag-emblem img {
+    object-fit: contain;
     width: 100%;
   }
 }
@@ -2477,6 +2536,7 @@ td.four-rem-height-td {
   }
 
   .individual-country-globe-map-flag-emblem img {
+    object-fit: contain;
     width: 100%;
   }
 }
@@ -2495,6 +2555,7 @@ td.four-rem-height-td {
   }
 
   .individual-country-globe-map-flag-emblem img {
+    object-fit: contain;
     width: 100%;
   }
 }
@@ -2508,6 +2569,7 @@ td.four-rem-height-td {
   }
 
   .individual-country-globe-map-flag-emblem img {
+    object-fit: contain;
     width: 100%;
   }
 }
@@ -2722,6 +2784,7 @@ td.four-rem-height-td {
 
 @media screen and (max-width: 430px) {
   .knowledgebase-thumbnail-image img {
+    object-fit: contain;
     width: 100%;
   }
 }
@@ -2845,6 +2908,7 @@ td.four-rem-height-td {
 
 @media screen and (max-width: 1400px) {
   .maps-flags-emblem img {
+    object-fit: contain;
     width: 25rem;
   }
 }
@@ -2867,6 +2931,7 @@ td.four-rem-height-td {
   }
 
   .maps-flags-emblem img {
+    object-fit: contain;
     width: 30rem;
   }
 
@@ -2910,6 +2975,7 @@ td.four-rem-height-td {
 
 @media screen and (max-width: 850px) {
   .maps-flags-emblem img {
+    object-fit: contain;
     width: 25rem;
   }
 }
@@ -2935,9 +3001,7 @@ td.four-rem-height-td {
     gap: 4rem;
   }
 
-  .maps-flags-emblem img {
-    width: 33rem;
-  }
+  
 
   .first-entity-globe,
   .first-entity-map,
@@ -2947,8 +3011,8 @@ td.four-rem-height-td {
   .second-entity-map,
   .second-entity-flag,
   .second-entity-emblem {
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
     display: flex;
 
     align-items: center;
@@ -2957,6 +3021,12 @@ td.four-rem-height-td {
     flex-direction: column;
     text-align: center;
     padding-top: 1rem;
+  }
+
+  .maps-flags-emblem img {
+    object-fit: contain;
+    width: 33rem;
+    
   }
 }
 
@@ -2968,6 +3038,7 @@ td.four-rem-height-td {
   }
 
   .maps-flags-emblem img {
+    object-fit: contain;
     width: 100%;
   }
 }
@@ -2980,6 +3051,7 @@ td.four-rem-height-td {
   }
 
   .maps-flags-emblem img {
+    object-fit: contain;
     width: 100%;
   }
 }
@@ -3081,10 +3153,12 @@ td.four-rem-height-td {
   .second-entity-flag-pages-comparison img,
   .right-indicator img,
   .left-indicator img {
+    object-fit: contain;
     width: 4rem !important;
   }
 
   .age-distribution-images img {
+    object-fit: contain;
     width: 6rem;
   }
 }
@@ -3096,6 +3170,7 @@ td.four-rem-height-td {
   .second-entity-flag-pages-comparison img,
   .right-indicator img,
   .left-indicator img {
+    object-fit: contain;
     width: 4rem !important;
   }
 
@@ -3105,6 +3180,7 @@ td.four-rem-height-td {
   }
 
   .basic-information-images img {
+    object-fit: contain;
     width: 4rem !important;
   }
 
@@ -3124,9 +3200,10 @@ td.four-rem-height-td {
 
 @media screen and (max-width: 1200px) {
   .population-comparison-layout {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     gap: 3rem;
     font-size: 2.4rem;
     background-color: #f7f7f7;
@@ -3147,7 +3224,7 @@ td.four-rem-height-td {
 
     background-color: white;
     /* width: 60rem; */
-    width: 45%;
+    width: 70%;
 
     height: auto;
     padding: 2rem 0;
@@ -3186,9 +3263,30 @@ td.four-rem-height-td {
     padding: 2rem 0;
   }
 
-  .population-growth-graph img {
-    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .population-comparison-layout {    
+    width: 98%;  
   }
+
+  .first-entity-population-comparison,
+  .second-entity-population-comparison {
+   
+    width: 95%;
+
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  .first-entity-population-comparison,
+  .second-entity-population-comparison {
+      
+   
+  }
+
+ 
 }
 
 @media screen and (max-width: 500px) {
@@ -3196,6 +3294,7 @@ td.four-rem-height-td {
   .first-entity-flag-population-comparison img,
   .second-entity-map-population-comparison img,
   .second-entity-flag-population-comparison img {
+    object-fit: contain;
     width: 4rem !important;
   }
 
@@ -3355,10 +3454,10 @@ td.four-rem-height-td {
   width: 60rem;
   height: 60rem;
   position: relative;
-  object-fit: contain;
 }
 
 .error-image img {
+  object-fit: contain;
   width: 60rem;
   height: 60rem;
   margin: auto auto;
@@ -3376,6 +3475,7 @@ td.four-rem-height-td {
 
 @media screen and (max-width: 600px) {
   .error-image img {
+    object-fit: contain;
     width: 95%;
     height: auto;
     margin: auto auto;
