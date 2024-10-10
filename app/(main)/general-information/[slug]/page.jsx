@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner";
 import GeneralInfoCountry from "@/components/pages/general-info/country/GeneralInfoCountry";
 import GeneralInfoUSState from "@/components/pages/general-info/us-state/GeneralInfoUSState";
@@ -73,11 +75,6 @@ export async function generateMetadata({ params }) {
 
 async function GeneralInfoPage({ params }) {
     const { slug } = params;
-
-    // if (slug.length > 1) {
-    //     return <Error404 />
-    //   }
-
     const slugArr = [slug]
 
     let decodedSlug1;
@@ -85,7 +82,6 @@ async function GeneralInfoPage({ params }) {
     try {
         [decodedSlug1] = decodeAndValidateSlugs(slugArr);
     } catch (error) {
-        // return <p>Error: {error.message}</p>;
         return <Error404 />
     }
     const entity1 = titleCased(decodedSlug1);
@@ -123,7 +119,6 @@ async function GeneralInfoPage({ params }) {
             </>
         );
     } catch (error) {
-        // return <p>Error: {error}</p>;
         return <Error404 />
     }
 }
@@ -140,7 +135,7 @@ const PageTitle = ({ entity }) => (
 const PublishInfo = ({ formattedDate }) => (
     <>
         <div className="published">
-            <p><b>Published: </b> Monday, 8th July 2024</p>
+            <p><b>Published: </b> Thursday, 10th October 2024</p>
         </div>
         <div className="updated">
             <b>Recently Updated:</b> <span className="updated-timer">{formattedDate}</span>
@@ -162,7 +157,6 @@ const renderContent = (entity, generalInfo, weatherInfo, listForLinks) => {
         } else {
             return <h1 className='entry-title' >  Unable to fetch data </h1>
         }
-        // return <p>Error: Unable to fetch all data.</p>;
     } catch (error) {
         return <Error404 />
     }

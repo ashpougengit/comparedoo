@@ -1,9 +1,11 @@
+export const dynamic = 'force-dynamic';
+
 import { allCountries } from "@/lib/array-list/allCountriesList";
 import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner";
-import GeneralComparisonCountries from "@/components/pages/genaral-comparison/countries/GeneralComparisonCountries";
+import GeneralComparisonCountries from "@/components/pages/general-comparison/countries/GeneralComparisonCountries";
 import { USStates } from "@/lib/array-list/allUSStates";
-import GeneralComparisonUSStates from "@/components/pages/genaral-comparison/us-states/GeneralComparisonUSStates";
-import CountryVsUSStateGeneral from "@/components/pages/genaral-comparison/country-vs-us-state/CountryVsUSStateGeneral";
+import GeneralComparisonUSStates from "@/components/pages/general-comparison/us-states/GeneralComparisonUSStates";
+import CountryVsUSStateGeneral from "@/components/pages/general-comparison/country-vs-us-state/CountryVsUSStateGeneral";
 import { fetchWeatherInfoSequentially } from "@/lib/weather/weather";
 import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 import { titleCased } from "@/lib/format/format";
@@ -83,19 +85,16 @@ async function GeneralComparison({ params }) {
         [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
 
     } catch (error) {
-        // return <p>Error: {error.message}</p>;
         return <Error404 />
     }
 
     const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
 
     if (!allEntities.includes(titleCased(decodedSlug2))) {
-        // return <p>Error: Enter two places to compare</p>
         return <Error404 />
     }
 
     if ([entity1, entity2].includes('United States') && USStates.includes(entity1 === 'United States' ? entity2 : entity1)) {
-        // return <p>Error: Cannot compare a U.S. state with the United States itself.</p>;
         return <Error404 />
     }
 
@@ -178,7 +177,7 @@ const PageTitle = ({ entity1, entity2 }) => (
 const PublishInfo = ({ formattedDate }) => (
     <>
         <div className="published">
-            <p><b>Published: </b> Monday, 8th July 2024</p>
+            <p><b>Published: </b> Thursday, 10th October 2024</p>
         </div>
         <div className="updated">
             <b>Recently Updated:</b> <span className="updated-timer">{formattedDate}</span>

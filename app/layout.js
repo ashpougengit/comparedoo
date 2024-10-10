@@ -1,4 +1,4 @@
-import { Nunito_Sans } from 'next/font/google';
+import { Nunito_Sans, Poppins } from 'next/font/google';
 import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
 import './globals.css'
@@ -7,11 +7,18 @@ import ScrollToTopBottom from '@/components/scroll-to-top-bottom/ScrollToTopBott
 import NetworkStatus from '@/components/network-status/NetworkStatus';
 import Script from 'next/script';
 import CookieBanner from '@/components/cookie-banner/CookieBanner';
+export const revalidate = 2592000; // whole app's layout for 30 days 
 
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '700']
+  // weight: ['500']
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '700'],
 });
 
 // generate Metadata
@@ -68,7 +75,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/images/favicon-image-comparedoo.png" type="image/png" />
       </head>
 
-      <body className={nunitoSans.className}>
+      <body className={`${nunitoSans.className}`}>
 
         {/* Google Tag Manager (noscript) Start */}
         <noscript>
@@ -86,7 +93,7 @@ export default function RootLayout({ children }) {
         {children}
 
         <CookieBanner />
-        
+
         <ScrollToTopBottom />
 
         <Footer />

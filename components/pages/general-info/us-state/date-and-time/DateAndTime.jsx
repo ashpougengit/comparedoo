@@ -131,7 +131,7 @@ function DateAndTime({ generalInfo, weatherInfo, stateURLCase }) {
                 <div className="all-indicators">Current Timezone</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/current-total-timezones-image.png"
+                    src="/images/current-timezone-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current timezone of any specific country"

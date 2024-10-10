@@ -5,32 +5,17 @@
 - h1: Geographical factors (absent in single state general info page )
 ........................................................................
 
-- Failed to find font override values for font `Nunito Sans`+++++++++++++**************
-
 - Standard of living(top description calculation)     +++++++++++++**************
 
-- check all country names  (also count in all description pages)                           +++++++++++++**************
+- check all country names  (also count in all description pages) ++++++**********
 
-- revalidate                                          +++++++++++++**************
-
-- weather images                                      ///////////////////////////
-
-- <a href="mailto:info.comparedoo@gmail.com" className="email-link"> not working in contact-us
-
-- georgia-usa-us-state-map-small.png image missing in ComparisonLinks.jsx
-
-- change last para of indicator page
-
-- check georgia-usa-us-state-map-small.png
-
+- Internet TLD of antarctica
 ============================== // change base url ==============================
 
  fill
   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
 
 - Delete unnecessary files
-
-- robots.txt
 
 ====================================
 

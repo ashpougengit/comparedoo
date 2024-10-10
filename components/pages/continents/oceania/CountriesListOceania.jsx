@@ -19,7 +19,7 @@ function CountriesListOceania() {
             There are total of
             <strong>
               <span className="number-of-countries-in-the-given-continent">
-                {' '}15{' '}
+                {' '}14{' '}
               </span>
             </strong>
             countries in

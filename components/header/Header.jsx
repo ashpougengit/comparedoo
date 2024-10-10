@@ -57,7 +57,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link className="next-link-header" href="/antartica">
+                <Link className="next-link-header" href="/antarctica">
                   Antarctica
                 </Link>
               </li>

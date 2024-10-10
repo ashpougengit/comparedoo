@@ -19,7 +19,7 @@ function CountriesListAsia() {
             There are total of
             <strong>
               <span className="number-of-countries-in-the-given-continent">
-                {' '}49{' '}
+                {' '}48{' '}
               </span>
             </strong>
             countries in

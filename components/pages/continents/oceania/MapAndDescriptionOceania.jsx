@@ -30,7 +30,7 @@ function MapAndDescriptionOceania() {
             <tr>
               <td className="continent-indicators">Total Countries</td>
               <td className="total-countries-answer-continent continent-indicator-answers">
-                15 as per United Nations{' '}
+                14 as per United Nations{' '}
               </td>
             </tr>
             <tr>

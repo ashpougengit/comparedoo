@@ -197,27 +197,6 @@ async function KnowledgeBase({ params }) {
       });
     }
 
-    // 'currencyName(symbol)'
-    // let currencySymbol, currencyDetails;
-    // if (indicator === 'currencyName') {
-    //   currencySymbol = await fetchIndicatorInfo(
-    //     'country',
-    //     'currencySymbol',
-    //     indicatorType
-    //   );
-    //   currencyDetails = indicatorInfo.map((currencyData) => {
-    //     const symbolData = currencySymbol.find(
-    //       (symbol) => symbol.country === currencyData.country
-    //     );
-
-    //     return {
-    //       country: currencyData.country,
-    //       currencyName: currencyData.currencyName,
-    //       currencySymbol: symbolData ? symbolData.currencySymbol : null,
-    //     };
-    //   });
-    // }
-
     let currencySymbol, currencyDetails;
     if (indicator === 'currencyName' || indicator === 'unitValueInUSD') {
       currencySymbol = await fetchIndicatorInfo(
@@ -335,7 +314,7 @@ async function KnowledgeBase({ params }) {
               We always try to give you the latest data, but sometimes mistakes
               might occur. If you believe some content on our site is not up to
               date, please let us know by emailing us at
-              <span className="emailAddress">info.comparedoo@gmail.com</span>
+              <span className="emailAddress"><a href="mailto:info.comparedoo@gmail.com" className="emailAddress">info.comparedoo@gmail.com</a></span>
             </p>
           </div>
         </div>
@@ -488,8 +467,8 @@ async function KnowledgeBase({ params }) {
               </strong>
             </p>
             <p>
-              For more side-by-side comparsion between Countries, States and
-              Cities, you can use the search box above or click the links below.
+              For more side-by-side comparsion between Countries, States and Cities, you can use the search box above,
+              and for knowledgebase content, click the links below.
             </p>
             <p>
               The Comparedoo.com family sincerely appreciates your time with us.

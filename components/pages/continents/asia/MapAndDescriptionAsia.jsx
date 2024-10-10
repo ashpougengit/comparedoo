@@ -29,7 +29,7 @@ function MapAndDescriptionAsia() {
             <tr>
               <td className="continent-indicators">Total Countries</td>
               <td className="total-countries-answer-continent continent-indicator-answers">
-                49 as per United Nations{' '}
+                48 as per United Nations{' '}
               </td>
             </tr>
             <tr>

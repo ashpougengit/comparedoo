@@ -86,14 +86,12 @@ async function CostComparison({ params }) {
     [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
   } catch (error) {
     console.error(error.message);
-    // return <p>Error message: {error.message}</p>;
     return <Error404 />
   }
 
   const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
 
   if ([entity1, entity2].includes('United States') && USStates.includes(entity1 === 'United States' ? entity2 : entity1)) {
-    // return <p>Error: Cannot compare a U.S. state with the United States itself.</p>;
     return <Error404 />
   }
 
@@ -145,7 +143,6 @@ async function CostComparison({ params }) {
     );
   } catch (error) {
     console.log(error);
-    // return <p>Error: Unable to fetch data.</p>;
     return <Error404 />
   }
 }
@@ -169,7 +166,7 @@ const PageTitle = ({ entity1, entity2 }) => (
 const PublishInfo = ({ formattedDate }) => (
   <>
     <div className="published">
-      <p><b>Published: </b> Monday, 8th July 2024</p>
+      <p><b>Published: </b> Thursday, 10th October 2024</p>
     </div>
     <div className="updated">
       <b>Recently Updated:</b> <span className="updated-timer">{formattedDate}</span>
@@ -201,7 +198,6 @@ const renderContent = ({ slug, entity1, entity2, entity1CostInfo, entity2CostInf
     }
   }
 
-  // return <p>Error: Unable to fetch all data.</p>;
   return <Error404 />
 }
 

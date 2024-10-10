@@ -39,7 +39,7 @@ function HamburgerMenu({ isOpen, handleToggle }) {
                 <li><Link href={'/europe'} onClick={() => { handleToggle() }}>Europe</Link></li>
                 <li><Link href={'/asia'} onClick={() => { handleToggle() }}>Asia</Link></li>
                 <li><Link href={'/africa'} onClick={() => { handleToggle() }}>Africa</Link></li>
-                <li><Link href={'/antartica'} onClick={() => { handleToggle() }}>Antartica</Link></li>
+                <li><Link href={'/antarctica'} onClick={() => { handleToggle() }}>Antarctica</Link></li>
             </ul>
         </div>
     );
