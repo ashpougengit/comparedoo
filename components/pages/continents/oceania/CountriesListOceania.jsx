@@ -37,7 +37,7 @@ function CountriesListOceania() {
           const urlCasedCountry = toURLFormat(country);
 
           return (
-            <Link href={`/general-information/${urlCasedCountry}`} key={index}>
+            <Link className='comparison-links-continent' href={`/general-information/${urlCasedCountry}`} key={index}>
               <div className="country-map-name-flag">
                 <div className="country-map">
                   <Image

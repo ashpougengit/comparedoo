@@ -131,7 +131,7 @@ async function GeneralInfoPage({ params }) {
 const PageTitle = ({ entity }) => (
     <div className="meta-title-primary-heading">
         <h1 className='entry-title' >
-            <span className="first-entity-name-individual-country">{entity}</span>
+            <span className="first-entity-name-individual-country">{entity}{' '}</span>
             (General Information)
         </h1>
     </div>

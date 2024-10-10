@@ -170,7 +170,7 @@ async function GeneralComparison({ params }) {
 const PageTitle = ({ entity1, entity2 }) => (
     <div className="meta-title-primary-heading">
         <h1 className='entry-title' >
-            <span className='first-entity-name-pages-paragraph'>{entity1}</span> vs <span className='second-entity-name-pages-paragraph'>{entity2}</span> (Statistical Comparison)
+            <span className='first-entity-name-pages-paragraph'>{entity1}</span> vs <span className='second-entity-name-pages-paragraph'>{entity2}{' '}</span> (Statistical Comparison)
         </h1>
     </div>
 );

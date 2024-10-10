@@ -1,4 +1,5 @@
 import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
+import { formatNumberWithCommas } from "@/lib/format/format"
 import Image from "next/image"
 
 function BasicInfo({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2URLCase }) {
@@ -125,7 +126,7 @@ function BasicInfo({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2
                 <div className="all-indicators">Official Name</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/country-name-image.png"
+                    src="/images/official-name-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of official name of any country"
@@ -166,7 +167,7 @@ function BasicInfo({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2
                 <div className="all-indicators">Landlocked Status</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/landlocked-image.png"
+                    src="/images/landlocked-status-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting whether the status is landlocked or not."
@@ -404,10 +405,10 @@ function BasicInfo({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state2
                 </div>
               </td>
               <td className="largest-city-of-state-answer-first-entity all-indicator-answers">
-                {state1LargestCity ?? 'Yet to Update'}
+                {state1LargestCity ? formatNumberWithCommas(state1LargestCity) : 'Yet to Update'}
               </td>
               <td className="largest-city-of-state-answer-second-entity all-indicator-answers">
-                {state2LargestCity ?? 'Yet to Update'}
+                {state2LargestCity ? formatNumberWithCommas(state2LargestCity) : 'Yet to Update'}
               </td>
             </tr>
 

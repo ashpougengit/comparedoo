@@ -11,6 +11,7 @@ import CookieBanner from '@/components/cookie-banner/CookieBanner';
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
   display: 'swap',
+  weight: ['400', '500', '700']
 });
 
 // generate Metadata

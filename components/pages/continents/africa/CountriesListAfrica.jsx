@@ -37,7 +37,7 @@ function CountriesListAfrica() {
           const urlCasedCountry = toURLFormat(country);
 
           return (
-            <Link
+            <Link className='comparison-links-continent'
               href={`/general-information/${urlCasedCountry}`}
               key={index}
             >

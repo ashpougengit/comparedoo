@@ -116,7 +116,7 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="all-indicators">Official Name</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/country-name-image.png"
+                    src="/images/official-name-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of official name of any country"
@@ -157,7 +157,7 @@ function BasicInfo({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="all-indicators">Landlocked Status</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/landlocked-image.png"
+                    src="/images/landlocked-status-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting whether the status is landlocked or not."

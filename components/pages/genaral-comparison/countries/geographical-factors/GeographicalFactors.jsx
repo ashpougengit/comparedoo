@@ -1,6 +1,7 @@
 import React from 'react'
 import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner'
 import Image from 'next/image'
+import { formatNumberWithCommas } from '@/lib/format/format'
 
 function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country1URLCase, country2URLCase }) {
     const country1 = country1GeneralInfo.country
@@ -115,26 +116,11 @@ function GeographicalFactors({ country1GeneralInfo, country2GeneralInfo, country
                                         alt="Visual representation of the Largest City of any country" />
                                 </div>
                             </td>
-                            <td className="largest-city-answer-first-entity all-indicator-answers">{country1LargestCity ?? 'Yet to Update'}</td>
-                            <td className="largest-city-answer-second-entity all-indicator-answers">{country2LargestCity ?? 'Yet to Update'}</td>
+                            <td className="largest-city-answer-first-entity all-indicator-answers">{country1LargestCity ? formatNumberWithCommas(country1LargestCity) : 'Yet to Update'}</td>
+                            <td className="largest-city-answer-second-entity all-indicator-answers">{country2LargestCity ? formatNumberWithCommas(country2LargestCity) : 'Yet to Update'}</td>
 
                         </tr>
 
-                        {/* <tr>
-                            <td className="basic-info">
-                                <div className="all-indicators">
-                                    Smallest City
-                                </div>
-                                <div className="basic-information-images">
-                                    <Image src="/images/smallest-city-image.png"  fill
-  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"   
-alt="Visual representation of the Smallest City of any country" />
-                                </div>
-                            </td>
-                            <td className="smallest-city-answer-first-entity all-indicator-answers">Warsaw</td>
-                            <td className="smallest-city-answer-second-entity all-indicator-answers">Lisbon</td>
-
-                        </tr> */}
                         <tr>
                             <td className="basic-info">
                                 <div className="all-indicators">
@@ -161,14 +147,14 @@ alt="Visual representation of the Smallest City of any country" />
                                     Official Languages
                                 </div>
                                 <div className="basic-information-images">
-                                    <Image src="/images/official-language-image.png"
+                                    <Image src="/images/official-languages-image.png"
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         alt="Image depicting the official languages of any specific country" />
                                 </div>
                             </td>
-                            <td className="official-languages-answer-first-entity all-indicator-answers">{country1OfficialLanguages ?? 'Yet to Update'}</td>
-                            <td className="official-languages-answer-second-entity all-indicator-answers">{country2OfficialLanguages ?? 'Yet to Update'}</td>
+                            <td className="official-languages-answer-first-entity all-indicator-answers">{country1OfficialLanguages ? formatNumberWithCommas(country1OfficialLanguages) : 'Yet to Update'}</td>
+                            <td className="official-languages-answer-second-entity all-indicator-answers">{country2OfficialLanguages ? formatNumberWithCommas(country2OfficialLanguages) : 'Yet to Update'}</td>
 
                         </tr>
 

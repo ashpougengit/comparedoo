@@ -42,16 +42,16 @@ function HumanDevelopment({
     <>
       <AdsHeaderBanner />
 
-      <div class="economic-factors-comparison">
-        <h2 class="pages-h2">Human Development Factors Comparison</h2>
+      <div className="economic-factors-comparison">
+        <h2 className="pages-h2">Human Development Factors Comparison</h2>
       </div>
-      <div class="economic-factors-comparison-div2">
-        <table class="indicators-first-entity-and-second-entity-div1">
+      <div className="economic-factors-comparison-div2">
+        <table className="indicators-first-entity-and-second-entity-div1">
           <thead>
-            <tr class="first-tr">
+            <tr className="first-tr">
               <th>
-                <div class="heading-map-name-flag">
-                  <div class="right-indicator">
+                <div className="heading-map-name-flag">
+                  <div className="right-indicator">
                     <Image
                       src="/images/indicators-right-image.png"
                       fill
@@ -59,8 +59,8 @@ function HumanDevelopment({
                       alt="Image representing an indicator"
                     />
                   </div>
-                  <div class="indicator-text">Indicators</div>
-                  <div class="left-indicator">
+                  <div className="indicator-text">Indicators</div>
+                  <div className="left-indicator">
                     <Image
                       src="/images/indicators-left-image.png"
                       fill
@@ -127,13 +127,13 @@ function HumanDevelopment({
           </thead>
           <tbody>
             <tr>
-              <td class="basic-info">
-                <div class="all-indicators">
-                  <div class="hdi-text">
+              <td className="basic-info">
+                <div className="all-indicators">
+                  <div className="hdi-text">
                     Human Development Index (HDI) ({lastYear})
                   </div>
                 </div>
-                <div class="basic-information-images">
+                <div className="basic-information-images">
                   <Image
                     src="/images/hdi-image.png"
                     fill
@@ -142,22 +142,22 @@ function HumanDevelopment({
                   />
                 </div>
               </td>
-              <td class="hdi-answer-first-entity all-indicator-answers">
+              <td className="hdi-answer-first-entity all-indicator-answers">
                 {slug1HDI ?? 'Yet to Update'}
               </td>
-              <td class="hdi-answer-second-entity all-indicator-answers">
+              <td className="hdi-answer-second-entity all-indicator-answers">
                 {slug2HDI ?? 'Yet to Update'}
               </td>
             </tr>
             <tr>
-              <td class="basic-info">
-                <div class="all-indicators">
-                  <div class="literacy-rate-text">
+              <td className="basic-info">
+                <div className="all-indicators">
+                  <div className="literacy-rate-text">
                     Literacy Rate
                     <br />({lastYear})
                   </div>
                 </div>
-                <div class="basic-information-images">
+                <div className="basic-information-images">
                   <Image
                     src="/images/literacy-rate-image.png"
                     fill
@@ -166,13 +166,13 @@ function HumanDevelopment({
                   />
                 </div>
               </td>
-              <td class="literacy-rate-answer-first-entity all-indicator-answers">
+              <td className="literacy-rate-answer-first-entity all-indicator-answers">
                 {slug1LiteracyRate
                   ? `${slug1LiteracyRate} % (15 years+ above
                                 age)`
                   : 'Yet to Update'}
               </td>
-              <td class="literacy-rate-answer-second-entity all-indicator-answers">
+              <td className="literacy-rate-answer-second-entity all-indicator-answers">
                 {slug2LiteracyRate
                   ? `${slug2LiteracyRate} % (15 years+ above
                                 age)`
@@ -180,14 +180,14 @@ function HumanDevelopment({
               </td>
             </tr>
             <tr>
-              <td class="basic-info">
-                <div class="all-indicators">
-                  <div class="life-expectancy-ratio-text">
+              <td className="basic-info">
+                <div className="all-indicators">
+                  <div className="life-expectancy-ratio-text">
                     Life Expectancy Ratio
                   </div>
-                  <div class="life-expectancy-ratio-year">({lastYear})</div>
+                  <div className="life-expectancy-ratio-year">({lastYear})</div>
                 </div>
-                <div class="basic-information-images">
+                <div className="basic-information-images">
                   <Image
                     src="/images/life-expectancy-ratio-image.png"
                     fill
@@ -196,41 +196,41 @@ function HumanDevelopment({
                   />
                 </div>
               </td>
-              <td class="life-expectancy-ratio-answer-first-entity all-indicator-answers">
+              <td className="life-expectancy-ratio-answer-first-entity all-indicator-answers">
                 {slug1LifeExpectancyRatio
                   ? `${slug1LifeExpectancyRatio} years`
                   : 'Yet to Update'}
               </td>
-              <td class="life-expectancy-ratio-answer-second-entity all-indicator-answers">
+              <td className="life-expectancy-ratio-answer-second-entity all-indicator-answers">
                 {slug2LifeExpectancyRatio
                   ? `${slug2LifeExpectancyRatio} years`
                   : 'Yet to Update'}
               </td>
             </tr>
             <tr>
-              <td class="basic-info">
-                <div class="all-indicators">
-                  <div class="poverty-ratio-text">
+              <td className="basic-info">
+                <div className="all-indicators">
+                  <div className="poverty-ratio-text">
                     Poverty Ratio
                     <br />({lastYear})
                   </div>
                 </div>
-                <div class="basic-information-images">
+                <div className="basic-information-images">
                   <Image
-                    src="/images/poverty-headcount-image.png"
+                    src="/images/poverty-ratio-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Poverty Rate of any specific country or state"
                   />
                 </div>
               </td>
-              <td class="poverty-ratio-answer-first-entity all-indicator-answers">
+              <td className="poverty-ratio-answer-first-entity all-indicator-answers">
                 {slug1PovertyRatio
                   ? `${slug1PovertyRatio} % of total
                                 Population`
                   : 'Yet to Update'}
               </td>
-              <td class="poverty-ratio-answer-second-entity all-indicator-answers">
+              <td className="poverty-ratio-answer-second-entity all-indicator-answers">
                 {slug2PovertyRatio
                   ? `${slug2PovertyRatio} % of total
                                 Population`
@@ -238,14 +238,14 @@ function HumanDevelopment({
               </td>
             </tr>
             <tr>
-              <td class="basic-info">
-                <div class="all-indicators">
-                  <div class="employment-rate-text">
+              <td className="basic-info">
+                <div className="all-indicators">
+                  <div className="employment-rate-text">
                     Employment Rate
                     <br />({lastYear})
                   </div>
                 </div>
-                <div class="basic-information-images">
+                <div className="basic-information-images">
                   <Image
                     src="/images/employment-rate-image.png"
                     fill
@@ -254,13 +254,13 @@ function HumanDevelopment({
                   />
                 </div>
               </td>
-              <td class="unemployment-rate-answer-first-entity all-indicator-answers">
+              <td className="unemployment-rate-answer-first-entity all-indicator-answers">
                 {slug1EmploymentRate
                   ? `${slug1EmploymentRate} % of
                                 total labor force`
                   : 'Yet to Update'}
               </td>
-              <td class="unemployment-rate-answer-second-entity all-indicator-answers">
+              <td className="unemployment-rate-answer-second-entity all-indicator-answers">
                 {slug2EmploymentRate
                   ? `${slug2EmploymentRate} % of
                                 total labor force`
@@ -270,8 +270,8 @@ function HumanDevelopment({
           </tbody>
         </table>
       </div>
-      <div class="paragraph-for-pages-below-table">
-        <div class="para-for-pages-single-div">
+      <div className="paragraph-for-pages-below-table">
+        <div className="para-for-pages-single-div">
           <p>
             <strong>The Human Development Index (HDI) </strong>
             is a measure used to assess the overall well-being and quality of
@@ -288,7 +288,7 @@ function HumanDevelopment({
               <p>
                 The life expectancy ratio at birth in
                 <strong>
-                  <span class="first-entity-name-pages-paragraph">
+                  <span className="first-entity-name-pages-paragraph">
                     {' '}
                     {slug1}
                   </span>
@@ -297,7 +297,7 @@ function HumanDevelopment({
                 is{' '}
                 <strong>
                   [
-                  <span class="life-expectancy-ratio-answer-first-entity">
+                  <span className="life-expectancy-ratio-answer-first-entity">
                     {' '}
                     {slug1LifeExpectancyRatio} years{' '}
                   </span>
@@ -305,7 +305,7 @@ function HumanDevelopment({
                 </strong>
                 whereas the life expectancy ratio at birth in
                 <strong>
-                  <span class="second-entity-name-pages-paragraph">
+                  <span className="second-entity-name-pages-paragraph">
                     {' '}
                     {slug2}{' '}
                   </span>
@@ -313,7 +313,7 @@ function HumanDevelopment({
                 is{' '}
                 <strong>
                   [
-                  <span class="life-expectancy-ratio-answer-first-entity">
+                  <span className="life-expectancy-ratio-answer-first-entity">
                     {' '}
                     {slug2LifeExpectancyRatio} years{' '}
                   </span>
@@ -324,7 +324,7 @@ function HumanDevelopment({
                 <p>
                   As per the data, a person born and lived in
                   <strong>
-                    <span class="first-entity-name-pages-paragraph">
+                    <span className="first-entity-name-pages-paragraph">
                       {' '}
                       {slug1}{' '}
                     </span>
@@ -332,18 +332,18 @@ function HumanDevelopment({
                   is expected to live{' '}
                   <strong>
                     [
-                    <span class="life-expectancy-ratio-age-calculation">
+                    <span className="life-expectancy-ratio-age-calculation">
                       {' '}
                       {lifeDifference}{' '}
                     </span>
                     years ]{' '}
                   </strong>
-                  <span class="more-or-less-life-expectancy-calculation">
+                  <span className="more-or-less-life-expectancy-calculation">
                     {moreOrLess}{' '}
                   </span>
                   than a person born and lived in
                   <strong>
-                    <span class="second-entity-name-pages-paragraph">
+                    <span className="second-entity-name-pages-paragraph">
                       {' '}
                       {slug2}
                     </span>

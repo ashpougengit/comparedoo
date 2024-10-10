@@ -2,8 +2,6 @@
 
 - slug/image.png(url returned in console)
 
-- List of Total Timezones of All Countries/states(<br />)
-
 - h1: Geographical factors (absent in single state general info page )
 ........................................................................
 
@@ -11,22 +9,21 @@
 
 - Standard of living(top description calculation)     +++++++++++++**************
 
-- check all country names                             +++++++++++++**************
+- check all country names  (also count in all description pages)                           +++++++++++++**************
 
 - revalidate                                          +++++++++++++**************
-
-- state vs state > general info > pictorial representation   ////////////////////
 
 - weather images                                      ///////////////////////////
 
 - <a href="mailto:info.comparedoo@gmail.com" className="email-link"> not working in contact-us
 
+- georgia-usa-us-state-map-small.png image missing in ComparisonLinks.jsx
+
+- change last para of indicator page
+
+- nicknames.png, timezone-summer.png, unit-value-in-usd.png georgia-usa-us-state-map-small.png
+
 ============================== // change base url ==============================
-
-- adjust cursor pointer in read here in knowledgebase ///////////////////////////
-
-- {slug1WeatherImage}.png`} height='50' width='50' /> change to   fill
- sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
 
  fill
   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
@@ -34,6 +31,7 @@
 - Delete unnecessary files
 
 - robots.txt
+
 ====================================
 
 Final Summary:

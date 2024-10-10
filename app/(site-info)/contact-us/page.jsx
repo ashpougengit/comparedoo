@@ -49,7 +49,7 @@ async function ContactUs() {
             <SearchBox userCountry={userCountry} />
             <div className="last-paragraph-of-the-page">
                 <div className="last-para-single-div">
-                    <p>If you have any questions, feedback, or inquiries, feel free to reach out to us at <a href="mailto:info.comparedoo@gmail.com" className="email-link">info.comparedoo@gmail.com</a>. We’re here to help and would love to hear from you! Simply drop us an email, and we’ll get back to you as soon as possible. Your communication matters to us.</p>
+                    <p>If you have any questions, feedback, or inquiries, feel free to reach out to us at <a href="mailto:info.comparedoo@gmail.com" className="emailAddress">info.comparedoo@gmail.com</a>. We’re here to help and would love to hear from you! Simply drop us an email, and we’ll get back to you as soon as possible. Your communication matters to us.</p>
                 </div>
             </div >
         </>

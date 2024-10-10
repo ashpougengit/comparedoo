@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 function PrivacyPolicyContent() {
     return (
@@ -105,10 +106,18 @@ function PrivacyPolicyContent() {
 
                 <h2>8. Contact Us</h2>
                 <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-                <p>Comparedoo.com<br />&quot;info.comparedoo@gmail.com&quot;</p>
+                <p>Comparedoo.com<br />&quot;<a href="mailto:info.comparedoo@gmail.com" className="emailAddress">info.comparedoo@gmail.com</a>&quot;</p>
 
                 <p>By using Comparedoo.com, you acknowledge that you have read and understand this Privacy Policy and agree to its
                     terms and conditions.</p>
+                    <p>You can click the following links to know better about our site operation policies.</p>
+                
+                <p>
+                    <Link href="/terms-and-conditions">Terms and Conditions</Link> <br />
+                    <Link href="/about-us">About comparedoo.com</Link><br />
+                    <Link href="/cookie-policy">Cookie Policy</Link><br />
+                    <Link href="/contact-us">Contact Us</Link>
+                </p>
             </div>
         </>
     )

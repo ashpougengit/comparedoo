@@ -76,8 +76,8 @@ async function StandardComparison({ params }) {
 
     if (slug.length > 2) {
         return <Error404 />
-      }
-      
+    }
+
     let decodedSlug1, decodedSlug2;
 
     try {
@@ -146,7 +146,7 @@ const PageTitle = ({ entity1, entity2 }) => (
     <div className="meta-title-primary-heading">
         {entity1 && entity2 ? (
             <h1 className='entry-title' >
-                <span className='first-entity-name-pages-paragraph'>{entity1}</span> vs <span className='second-entity-name-pages-paragraph'>{entity2}</span> (Standard of Living)
+                <span className='first-entity-name-pages-paragraph'>{entity1}</span> vs <span className='second-entity-name-pages-paragraph'>{entity2}{' '}</span> (Standard of Living)
             </h1>
         ) : (
             <h1 className='entry-title' >

@@ -104,9 +104,6 @@ async function KnowledgebaseHome() {
             </Link>
           </div>
         ))}
-      </div>
-
-      <div className="knowledgebase-container">
         {commonIndicators.map((indicator, index) => (
           <div className="knowledgebase-div" key={index}>
             <div className="knowledgebase-thumbnail-image">
@@ -122,7 +119,7 @@ async function KnowledgebaseHome() {
               <h2>
                 List of all Countries&apos;{' '}
                 <span className="knowledgebase-indicator">
-                  {camelToTitleCase(indicator)}
+                  {camelToTitleCase(indicator) === 'Unemployment Percentage Of Total Labour Force' ? 'Unemployment Percentage' : camelToTitleCase(indicator)}
                 </span>
               </h2>
             </div>
@@ -135,9 +132,6 @@ async function KnowledgebaseHome() {
             </Link>
           </div>
         ))}
-      </div>
-
-      <div className="knowledgebase-container">
         {commonIndicators.map((indicator, index) => (
           <div className="knowledgebase-div" key={index}>
             <div className="knowledgebase-thumbnail-image">
@@ -153,7 +147,7 @@ async function KnowledgebaseHome() {
               <h2>
                 List of all US States&apos;{' '}
                 <span className="knowledgebase-indicator">
-                  {camelToTitleCase(indicator)}
+                  {camelToTitleCase(indicator) === 'Unemployment Percentage Of Total Labour Force' ? 'Unemployment Percentage' : camelToTitleCase(indicator)}
                 </span>
               </h2>
             </div>
@@ -166,9 +160,6 @@ async function KnowledgebaseHome() {
             </Link>
           </div>
         ))}
-      </div>
-
-      <div className="knowledgebase-container">
         {statesUniqueIndicators.map((indicator, index) => (
           <div className="knowledgebase-div" key={index}>
             <div className="knowledgebase-thumbnail-image">

@@ -14,8 +14,7 @@ function AllCountriesAntartica() {
         {allCountries.map((country, index) => {
           const urlCasedCountry = toURLFormat(country);
           return (
-            <Link
-              className="next-link-country"
+            <Link className="next-link-country comparison-links-continent"
               href={`/general-information/${urlCasedCountry}`}
               key={index}
             >

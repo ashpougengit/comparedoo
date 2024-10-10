@@ -17,25 +17,25 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
 
     return (
         <>
-            <div class="economic-factors-comparison">
-                <h2 class="pages-h2">Economic Factors Comparison</h2>
+            <div className="economic-factors-comparison">
+                <h2 className="pages-h2">Economic Factors Comparison</h2>
             </div>
 
             {/* ......... Economic Factors Comparison first table Here  ......... */}
-            <div class="economic-factors-comparison-div1">
-                <table class="indicators-first-entity-and-second-entity-div1">
+            <div className="economic-factors-comparison-div1">
+                <table className="indicators-first-entity-and-second-entity-div1">
                     <thead>
-                        <tr class="first-tr">
+                        <tr className="first-tr">
                             <th>
-                                <div class="heading-map-name-flag">
-                                    <div class="right-indicator">
+                                <div className="heading-map-name-flag">
+                                    <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
                                             fill
                                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing an indicator" />
                                     </div>
-                                    <div class="indicator-text">Indicators</div>
-                                    <div class="left-indicator">
+                                    <div className="indicator-text">Indicators</div>
+                                    <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
                                             fill
@@ -99,71 +99,71 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="gdp-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="gdp-text">
                                         Gross Domestic Product (GDP)
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/gdp-image.png"
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing the total Gross Domestic Product of any specific country or state" />
                                 </div>
                             </td>
-                            <td class="gdp-answer-first-entity all-indicator-answers">
+                            <td className="gdp-answer-first-entity all-indicator-answers">
                                 {slug1GDPNominalStr ?? 'Yet to Update'}
                             </td>
-                            <td class="gdp-answer-second-entity all-indicator-answers">
+                            <td className="gdp-answer-second-entity all-indicator-answers">
                                 {slug2GDPNominalStr ?? 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="gdp-per-capita-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="gdp-per-capita-text">
                                         GDP Per Capita
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/gdp-per-capita-image.png"
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing the total Gross Domestic Product Per Capita of any specific country or state" />
                                 </div>
                             </td>
-                            <td class="gdp-per-capita-answer-first-entity all-indicator-answers">
+                            <td className="gdp-per-capita-answer-first-entity all-indicator-answers">
                                 {slug1GDPPerCapita ? `${formatNumberWithCommas(slug1GDPPerCapita)} USD` : 'Yet to Update'}
                             </td>
-                            <td class="gdp-per-capita-answer-second-entity all-indicator-answers">
+                            <td className="gdp-per-capita-answer-second-entity all-indicator-answers">
                                 {slug2GDPPerCapita ? `${formatNumberWithCommas(slug2GDPPerCapita)} USD` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="gini-ratio-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="gini-ratio-text">
                                         GINI Ratio
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/gini-ratio-image.png"
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing the total GINI Ratio or GINI Coefficient of any specific country or state" />
                                 </div>
                             </td>
-                            <td class="gini-ratio-answer-first-entity all-indicator-answers">
+                            <td className="gini-ratio-answer-first-entity all-indicator-answers">
                                 {slug1GINI ? (slug1GINI > 1 ? (slug1GINI / 100).toFixed(2) : slug1GINI) : 'Yet to Update'}
                             </td>
-                            <td class="gini-ratio-answer-second-entity all-indicator-answers">
+                            <td className="gini-ratio-answer-second-entity all-indicator-answers">
                                 {slug2GINI ? (slug2GINI > 1 ? (slug2GINI / 100).toFixed(2) : slug2GINI) : 'Yet to Update'}
                             </td>
                         </tr>
@@ -173,8 +173,8 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
 
             <AdsHeaderBanner />
 
-            <div class="paragraph-for-pages-below-table">
-                <div class="para-for-pages-single-div">
+            <div className="paragraph-for-pages-below-table">
+                <div className="para-for-pages-single-div">
                     <p>
                         <strong>Gross Domestic Product (GDP) </strong>
                         is a measure of the total value of all goods and services produced

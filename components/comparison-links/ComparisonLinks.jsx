@@ -13,15 +13,15 @@ function ComparisonLinks({ entity, listForLinks, pageType }) {
   };
 
   filteredEntity = specialEntities[filteredEntity] || filteredEntity;
-
+  const entityURL = toURLFormat(filteredEntity);
   const isCountry = allCountries.includes(entity)
 
   return (
     <>
       <div className="individual-country-vs-others-list-boxes-grids">
         {listForLinks.map((value) => {
-          const entityURL = toURLFormat(filteredEntity);
           const valueURL = toURLFormat(value);
+          const isValueCountry = allCountries.includes(value)
 
           return (
             <Link
@@ -54,7 +54,7 @@ function ComparisonLinks({ entity, listForLinks, pageType }) {
                 </div>
                 <div className="individual-country-second-entity-map">
                   <Image
-                    src={`/images/${isCountry ? `${valueURL}` : `${valueURL}-us-state`
+                    src={`/images/${isValueCountry ? `${valueURL}` : `${valueURL}-us-state`
                       }-map-small.png`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

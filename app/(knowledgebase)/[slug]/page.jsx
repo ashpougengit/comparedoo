@@ -55,7 +55,7 @@ export async function generateMetadata({ params }) {
   }
 
   const isCountry = slug.includes('countries');
-  const trimmedSlug = slug.replace(/of-all(countries|us-states)/, '');
+  const trimmedSlug = slug.replace(/-of-all-(countries|us-states)/, '');
   const indicator = toCamelCase(trimmedSlug);
   const titleCasedIndicator = camelToTitleCase(indicator, isCountry);
 
@@ -134,7 +134,8 @@ async function KnowledgeBase({ params }) {
   }
 
   const isCountry = slug.includes('countries');
-  const trimmedSlug = slug.replace(/of-all(countries|us-states)/, '');
+  const trimmedSlug = slug.replace(/-of-all-(countries|us-states)/, '');
+
   let indicator = toCamelCase(trimmedSlug);
 
   if (
@@ -313,7 +314,7 @@ async function KnowledgeBase({ params }) {
               We always try to give you the latest data, but sometimes mistakes
               might occur. If you believe some content on our site is not up to
               date, please let us know by emailing us at
-              <span className="emailAddress">comparedoo@gmail.com</span>
+              <span className="emailAddress">info.comparedoo@gmail.com</span>
             </p>
           </div>
         </div>
@@ -367,7 +368,7 @@ async function KnowledgeBase({ params }) {
                         <div className="heading-map-name-flag">
                           <div className="first-entity-map-pages-comparison">
                             <Image
-                              src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
+                              src={`/images/${trimmedSlug === 'state-animal' ? 'national-animal' : trimmedSlug === 'state-bird' ? 'national-bird' : trimmedSlug === 'state-flower' ? 'national-flower' : trimmedSlug === 'state-sport' ? 'national-sport' : trimmedSlug === 'state-colors' ? 'national-colors' : trimmedSlug === 'official-websites' ? 'internet-tld' : trimmedSlug === 'state-anthem-native' ? 'national-anthem-native' : trimmedSlug === 'state-anthem-english' ? 'national-anthem-english' : trimmedSlug}-image.png`}
                               fill
                               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
@@ -381,7 +382,7 @@ async function KnowledgeBase({ params }) {
 
                           <div className="first-entity-flag-pages-comparison">
                             <Image
-                              src={`/images/${trimmedSlug}-image-for-knowledgebase.png`}
+                              src={`/images/${trimmedSlug === 'state-animal' ? 'national-animal' : trimmedSlug === 'state-bird' ? 'national-bird' : trimmedSlug === 'state-flower' ? 'national-flower' : trimmedSlug === 'state-sport' ? 'national-sport' : trimmedSlug === 'state-colors' ? 'national-colors' : trimmedSlug === 'official-websites' ? 'internet-tld' : trimmedSlug === 'state-anthem-native' ? 'national-anthem-native' : trimmedSlug === 'state-anthem-english' ? 'national-anthem-english' : trimmedSlug}-image.png`}
                               fill
                               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               alt={`Image representing the ${titleCasedIndicator} of all ${isCountry ? 'Countries' : 'US States'
@@ -416,9 +417,6 @@ async function KnowledgeBase({ params }) {
                             </div>
                           </td>
                           <td className="afghanistan-AF-data">
-                            {/* {
-                              obj[indicator] ? `${formatNumberWithCommas(obj[indicator])} ${indicatorValueType(indicator, isCountry)}` : 'Yet to Update'
-                            } */}
                             {obj[realIndicator] ? (
                               <>
                                 {indicator === 'majorReligion'
@@ -433,11 +431,13 @@ async function KnowledgeBase({ params }) {
                                     : realIndicator === 'HDI' ||
                                       realIndicator === 'unitValueInUSD'
                                       ? obj[realIndicator]
-                                      : `${formatNumberWithCommas(obj[realIndicator])} 
-                                  ${indicatorValueType(
-                                        realIndicator,
-                                        isCountry
-                                      )}`}
+                                      : (
+                                        <>
+                                          {formatNumberWithCommas(obj[realIndicator])}{" "}
+                                          {indicatorValueType(realIndicator, isCountry)}
+                                        </>
+                                      )
+                                }
                               </>
                             ) : (
                               'Yet to Update'
@@ -486,10 +486,10 @@ async function KnowledgeBase({ params }) {
                   }`}
                 key={index}
               >
-                <div class="individual-country-vs-others-map-name-flag">
+                <div className="individual-country-vs-others-map-name-flag">
                   <div className="first-entity-map-pages-comparison">
                     <Image
-                      src={`/images/${toURLFormat(value)}-image.png`}
+                      src={`/images/${toURLFormat(value) === 'state-animal' ? 'national-animal' : toURLFormat(value) === 'state-bird' ? 'national-bird' : toURLFormat(value) === 'state-flower' ? 'national-flower' : toURLFormat(value) === 'state-sport' ? 'national-sport' : toURLFormat(value) === 'state-colors' ? 'national-colors' : toURLFormat(value) === 'official-websites' ? 'internet-tld' : toURLFormat(value) === 'state-anthem-native' ? 'national-anthem-native' : toURLFormat(value) === 'state-anthem-english' ? 'national-anthem-english' : toURLFormat(value)}-image.png`}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       alt={`Image representing the ${camelToTitleCase(
@@ -499,18 +499,7 @@ async function KnowledgeBase({ params }) {
                   </div>
 
                   <div className="first-entity-name-pages-comparison">
-                    {camelToTitleCase(value)}
-                  </div>
-
-                  <div className="first-entity-flag-pages-comparison">
-                    <Image
-                      src={`/images/${toURLFormat(value)}-image.png`}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      alt={`Image representing the ${camelToTitleCase(
-                        value
-                      )} of all ${isCountry ? 'Countries' : 'US States'}`}
-                    />
+                    {`${camelToTitleCase(value)} of all ${isCountry ? 'Countries' : 'US States'}`}
                   </div>
                 </div>
               </Link>

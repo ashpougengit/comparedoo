@@ -1,5 +1,5 @@
 import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
-import { determineCurrentTimezone, renderTimezones } from "@/lib/date-and-time/dateAndTime";
+import { determineCurrentTimezone, renderLineBreak } from "@/lib/date-and-time/dateAndTime";
 import Image from "next/image";
 
 function DateAndTime({ generalInfo, weatherInfo, stateURLCase }) {
@@ -115,7 +115,7 @@ function DateAndTime({ generalInfo, weatherInfo, stateURLCase }) {
                 <div className="all-indicators">Timezones</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/timezone-image.png"
+                    src="/images/total-timezones-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of timezones of any specific country"
@@ -123,7 +123,7 @@ function DateAndTime({ generalInfo, weatherInfo, stateURLCase }) {
                 </div>
               </td>
               <td className="timezones-first-entity all-indicator-answers">
-                {renderTimezones(totalTimezonesArray) ?? 'Yet to Update'}
+                {renderLineBreak(totalTimezonesArray) ?? 'Yet to Update'}
               </td>
             </tr>
             <tr>
@@ -131,7 +131,7 @@ function DateAndTime({ generalInfo, weatherInfo, stateURLCase }) {
                 <div className="all-indicators">Current Timezone</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/current-timezone-image.png"
+                    src="/images/current-total-timezones-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current timezone of any specific country"
@@ -139,7 +139,7 @@ function DateAndTime({ generalInfo, weatherInfo, stateURLCase }) {
                 </div>
               </td>
               <td className="current-timezone-answer-first-entity all-indicator-answers">
-                {renderTimezones(currentTimezoneArray) ?? 'Yet to Update'}
+                {renderLineBreak(currentTimezoneArray) ?? 'Yet to Update'}
               </td>
             </tr>
             <tr>

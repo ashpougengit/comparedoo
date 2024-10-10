@@ -121,7 +121,7 @@ function GeographicalFactors({ generalInfo, countryURLCase }) {
                 <div className="all-indicators">Official Languages</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/official-language-image.png"
+                    src="/images/official-languages-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting the official languages of any specific country"

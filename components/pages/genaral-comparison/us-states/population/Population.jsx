@@ -186,7 +186,7 @@ function Population({ state1GeneralInfo, state2GeneralInfo, state1URLCase, state
                 <div className="all-indicators">Total Population</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/total-population-image.png"
+                    src="/images/population-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of area in Square Mile"

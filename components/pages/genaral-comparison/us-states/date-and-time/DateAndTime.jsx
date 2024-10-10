@@ -1,5 +1,5 @@
 import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
-import { determineCurrentTimezone, renderTimezones } from "@/lib/date-and-time/dateAndTime";
+import { determineCurrentTimezone, renderLineBreak } from "@/lib/date-and-time/dateAndTime";
 import Image from "next/image";
 
 function DateAndTime({ state1WeatherInfo, state2WeatherInfo, state1GeneralInfo, state2GeneralInfo, timeDifference, aheadOrBehind, state1URLCase, state2URLCase }) {
@@ -162,7 +162,7 @@ function DateAndTime({ state1WeatherInfo, state2WeatherInfo, state1GeneralInfo, 
                 <div className="all-indicators">Timezones</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/timezone-image.png"
+                    src="/images/total-timezones-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of timezones of any specific country"
@@ -170,11 +170,11 @@ function DateAndTime({ state1WeatherInfo, state2WeatherInfo, state1GeneralInfo, 
                 </div>
               </td>
               <td className="timezones-first-entity all-indicator-answers">
-                {renderTimezones(state1TotalTimezonesArray) ??
+                {renderLineBreak(state1TotalTimezonesArray) ??
                   'Yet to Update'}
               </td>
               <td className="timezones-second-entity all-indicator-answers">
-                {renderTimezones(state2TotalTimezonesArray) ??
+                {renderLineBreak(state2TotalTimezonesArray) ??
                   'Yet to Update'}
               </td>
             </tr>
@@ -184,7 +184,7 @@ function DateAndTime({ state1WeatherInfo, state2WeatherInfo, state1GeneralInfo, 
                 <div className="all-indicators">Current Timezone</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/current-timezone-image.png"
+                    src="/images/current-total-timezones-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Visual representation of current timezone of any specific country"
@@ -192,11 +192,11 @@ function DateAndTime({ state1WeatherInfo, state2WeatherInfo, state1GeneralInfo, 
                 </div>
               </td>
               <td className="current-timezone-answer-first-entity all-indicator-answers">
-                {renderTimezones(state1CurrentTimezone.split('<br />')) ??
+                {renderLineBreak(state1CurrentTimezone.split('<br />')) ??
                   'Yet to Update'}
               </td>
               <td className="current-timezone-answer-second-entity all-indicator-answers">
-                {renderTimezones(state2CurrentTimezone.split('<br />')) ??
+                {renderLineBreak(state2CurrentTimezone.split('<br />')) ??
                   'Yet to Update'}
               </td>
             </tr>

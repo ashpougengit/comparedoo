@@ -1,5 +1,6 @@
 import AdsHeaderBanner from "@/components/ads/AdsHeaderBanner"
 import { USStates } from "@/lib/array-list/allUSStates"
+import { formatNumberWithCommas } from "@/lib/format/format"
 import Image from "next/image"
 
 function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, slug2URLCase }) {
@@ -130,10 +131,10 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 </div>
               </td>
               <td className="largest-city-answer-first-entity all-indicator-answers">
-                {slug1LargestCity ?? 'Yet to Update'}
+                {slug1LargestCity ? formatNumberWithCommas(slug1LargestCity) : 'Yet to Update'}
               </td>
               <td className="largest-city-answer-second-entity all-indicator-answers">
-                {slug2LargestCity ?? 'Yet to Update'}
+                {slug2LargestCity ? formatNumberWithCommas(slug2LargestCity) : 'Yet to Update'}
               </td>
             </tr>
 
@@ -162,7 +163,7 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 <div className="all-indicators">Official Languages</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/official-language-image.png"
+                    src="/images/official-languages-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image depicting the official languages of any specific country"
@@ -170,10 +171,10 @@ function Geography({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLC
                 </div>
               </td>
               <td className="official-languages-answer-first-entity all-indicator-answers">
-                {slug1OfficialLanguages ?? 'Yet to Update'}
+                {slug1OfficialLanguages ? formatNumberWithCommas(slug1OfficialLanguages) : 'Yet to Update'}
               </td>
               <td className="official-languages-answer-second-entity all-indicator-answers">
-                {slug2OfficialLanguages ?? 'Yet to Update'}
+                {slug2OfficialLanguages ? formatNumberWithCommas(slug2OfficialLanguages) : 'Yet to Update'}
               </td>
             </tr>
 

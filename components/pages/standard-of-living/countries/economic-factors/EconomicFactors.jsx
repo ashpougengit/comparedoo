@@ -609,7 +609,7 @@ function EconomicFactors({
                 </div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/poverty-headcount-image.png"
+                    src="/images/poverty-ratio-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the Poverty Rate of any specific country"

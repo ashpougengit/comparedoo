@@ -192,7 +192,7 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                 </div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/square-km-image.png"
+                    src="/images/area-in-sq-km-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of area in Square Kilometers"
@@ -232,7 +232,7 @@ function Size({ slug1, slug2, slug1GeneralInfo, slug2GeneralInfo, slug1URLCase, 
                 <div className="all-indicators">Area in Square Mile</div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/square-mile-image.png"
+                    src="/images/area-in-sq-mile-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Illustration of area in Square Mile"

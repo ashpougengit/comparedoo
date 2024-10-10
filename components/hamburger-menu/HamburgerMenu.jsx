@@ -32,11 +32,14 @@ function HamburgerMenu({ isOpen, handleToggle }) {
 
             <hr className="divider" />
             <ul className="content-list">
-                <li><Link href={'/oceania'} onClick={() => { handleToggle() }}>Oceania</Link></li>
-                <li><Link href={'/africa'} onClick={() => { handleToggle() }}>Africa</Link></li>
                 <li><Link href={'/knowledgebase'} onClick={() => { handleToggle() }}>Knowledgebase</Link></li>
-                <li><Link href={'/asia'} onClick={() => { handleToggle() }}>Asia</Link></li>
+                <li><Link href={'/north-america'} onClick={() => { handleToggle() }}>North America</Link></li>
                 <li><Link href={'/south-america'} onClick={() => { handleToggle() }}>South America</Link></li>
+                <li><Link href={'/oceania'} onClick={() => { handleToggle() }}>Oceania</Link></li>
+                <li><Link href={'/europe'} onClick={() => { handleToggle() }}>Europe</Link></li>
+                <li><Link href={'/asia'} onClick={() => { handleToggle() }}>Asia</Link></li>
+                <li><Link href={'/africa'} onClick={() => { handleToggle() }}>Africa</Link></li>
+                <li><Link href={'/antartica'} onClick={() => { handleToggle() }}>Antartica</Link></li>
             </ul>
         </div>
     );

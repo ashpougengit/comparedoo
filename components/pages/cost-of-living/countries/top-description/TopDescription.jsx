@@ -54,7 +54,7 @@ function TopDescription({ country1, country2, costTimes, moreOrLess }) {
             We always try to give you the latest data, but sometimes mistakes
             might occur. If you think some content on our site is not updated,
             please let us know by emailing us at:{' '}
-            <span className="emailAddress">info.comparedoo@gmail.com</span>
+            <a href="mailto:info.comparedoo@gmail.com" className="emailAddress">info.comparedoo@gmail.com</a>
           </p>
         </div>
       </div>

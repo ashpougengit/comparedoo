@@ -18,23 +18,23 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
         <>
             <AdsHeaderBanner />
 
-            <div class="economic-factors-comparison">
-                <h2 class="pages-h2">Environmental Factors Comparison</h2>
+            <div className="economic-factors-comparison">
+                <h2 className="pages-h2">Environmental Factors Comparison</h2>
             </div>
-            <div class="import-export-factors-comparison-div1">
-                <table class="indicators-first-entity-and-second-entity-div1">
+            <div className="import-export-factors-comparison-div1">
+                <table className="indicators-first-entity-and-second-entity-div1">
                     <thead>
-                        <tr class="first-tr">
+                        <tr className="first-tr">
                             <th>
-                                <div class="heading-map-name-flag">
-                                    <div class="right-indicator">
+                                <div className="heading-map-name-flag">
+                                    <div className="right-indicator">
                                         <Image
                                             src="/images/indicators-right-image.png"
                                             fill
                                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing an indicator" />
                                     </div>
-                                    <div class="indicator-text">Indicators</div>
-                                    <div class="left-indicator">
+                                    <div className="indicator-text">Indicators</div>
+                                    <div className="left-indicator">
                                         <Image
                                             src="/images/indicators-left-image.png"
                                             fill
@@ -98,15 +98,15 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="environmental-factors-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="environmental-factors-text">
                                         Access to Internet
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/access-to-internet-states-image.png"
                                         fill
@@ -114,24 +114,24 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                                 </div>
                             </td>
                             <td
-                                class="environmental-factors-answer-first-entity all-indicator-answers">
+                                className="environmental-factors-answer-first-entity all-indicator-answers">
                                 {slug1AccessToInternet ? `${slug1AccessToInternet} %` : 'Yet to Update'}
                             </td>
                             <td
-                                class="environmental-factors-answer-second-entity all-indicator-answers">
+                                className="environmental-factors-answer-second-entity all-indicator-answers">
                                 {slug2AccessToInternet ? `${slug2AccessToInternet} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="environmental-factors-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="environmental-factors-text">
                                         Access to Electricity
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/access-to-electricity-states-image.png"
                                         fill
@@ -139,24 +139,24 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                                 </div>
                             </td>
                             <td
-                                class="environmental-factors-answer-first-entity all-indicator-answers">
+                                className="environmental-factors-answer-first-entity all-indicator-answers">
                                 {slug1AccessToElectricity ? `${slug1AccessToElectricity} %` : 'Yet to Update'}
                             </td>
                             <td
-                                class="environmental-factors-answer-second-entity all-indicator-answers">
+                                className="environmental-factors-answer-second-entity all-indicator-answers">
                                 {slug2AccessToElectricity ? `${slug2AccessToElectricity} %` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="environmental-factors-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="environmental-factors-text">
                                         Total Forest Area
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/forest-area-states-image.png"
                                         fill
@@ -164,24 +164,24 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                                 </div>
                             </td>
                             <td
-                                class="environmental-factors-answer-first-entity all-indicator-answers">
+                                className="environmental-factors-answer-first-entity all-indicator-answers">
                                 {slug1ForestArea ? `${formatNumberWithCommas(slug1ForestArea)} Square Kilometers` : 'Yet to Update'}
                             </td>
                             <td
-                                class="environmental-factors-answer-second-entity all-indicator-answers">
+                                className="environmental-factors-answer-second-entity all-indicator-answers">
                                 {slug2ForestArea ? `${formatNumberWithCommas(slug2ForestArea)} Square Kilometers` : 'Yet to Update'}
                             </td>
                         </tr>
                         <tr>
-                            <td class="basic-info">
-                                <div class="all-indicators">
-                                    <div class="environmental-factors-text">
+                            <td className="basic-info">
+                                <div className="all-indicators">
+                                    <div className="environmental-factors-text">
                                         Agricultural Land
                                         <br />
                                         ({lastYear})
                                     </div>
                                 </div>
-                                <div class="basic-information-images">
+                                <div className="basic-information-images">
                                     <Image
                                         src="/images/agricultural-land-states-image.png"
                                         fill
@@ -189,11 +189,11 @@ function Environment({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1
                                 </div>
                             </td>
                             <td
-                                class="environmental-factors-answer-first-entity all-indicator-answers">
+                                className="environmental-factors-answer-first-entity all-indicator-answers">
                                 {slug1AgriculturalLand ? `${formatNumberWithCommas(slug1AgriculturalLand)} Square Kilometers` : 'Yet to Update'}
                             </td>
                             <td
-                                class="environmental-factors-answer-second-entity all-indicator-answers">
+                                className="environmental-factors-answer-second-entity all-indicator-answers">
                                 {slug2AgriculturalLand ? `${formatNumberWithCommas(slug2AgriculturalLand)} Square Kilometers` : 'Yet to Update'}
                             </td>
                         </tr>
