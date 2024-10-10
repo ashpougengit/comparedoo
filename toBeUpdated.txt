@@ -21,7 +21,7 @@
 
 - change last para of indicator page
 
-- nicknames.png, timezone-summer.png, unit-value-in-usd.png georgia-usa-us-state-map-small.png
+- check georgia-usa-us-state-map-small.png
 
 ============================== // change base url ==============================
 

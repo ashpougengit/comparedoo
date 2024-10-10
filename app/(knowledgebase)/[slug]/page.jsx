@@ -198,21 +198,42 @@ async function KnowledgeBase({ params }) {
     }
 
     // 'currencyName(symbol)'
-    let currencySymbol, currencyNameAndSymbol;
-    if (indicator === 'currencyName') {
+    // let currencySymbol, currencyDetails;
+    // if (indicator === 'currencyName') {
+    //   currencySymbol = await fetchIndicatorInfo(
+    //     'country',
+    //     'currencySymbol',
+    //     indicatorType
+    //   );
+    //   currencyDetails = indicatorInfo.map((currencyData) => {
+    //     const symbolData = currencySymbol.find(
+    //       (symbol) => symbol.country === currencyData.country
+    //     );
+
+    //     return {
+    //       country: currencyData.country,
+    //       currencyName: currencyData.currencyName,
+    //       currencySymbol: symbolData ? symbolData.currencySymbol : null,
+    //     };
+    //   });
+    // }
+
+    let currencySymbol, currencyDetails;
+    if (indicator === 'currencyName' || indicator === 'unitValueInUSD') {
       currencySymbol = await fetchIndicatorInfo(
         'country',
         'currencySymbol',
         indicatorType
       );
-      currencyNameAndSymbol = indicatorInfo.map((currencyData) => {
+      currencyDetails = indicatorInfo.map((currencyData) => {
         const symbolData = currencySymbol.find(
           (symbol) => symbol.country === currencyData.country
         );
 
         return {
           country: currencyData.country,
-          currencyName: currencyData.currencyName,
+          currencyName: indicator === 'currencyName' ? currencyData.currencyName : '',
+          unitValueInUSD: indicator === 'unitValueInUSD' ? currencyData.unitValueInUSD : '',
           currencySymbol: symbolData ? symbolData.currencySymbol : null,
         };
       });
@@ -250,8 +271,8 @@ async function KnowledgeBase({ params }) {
     const sourceArray =
       indicator === 'majorReligion'
         ? majorReligionWithPercentage
-        : indicator === 'currencyName'
-          ? currencyNameAndSymbol
+        : indicator === 'currencyName' || indicator === 'unitValueInUSD'
+          ? currencyDetails
           : indicatorInfo;
     const dividedArrays = Array.from(
       { length: Math.ceil(sourceArray?.length / chunkSize) },
@@ -428,10 +449,9 @@ async function KnowledgeBase({ params }) {
                                   )} (${obj['majorReligionPercentage']}%)`
                                   : indicator === 'currencyName'
                                     ? `${obj[realIndicator]} (${obj['currencySymbol']})`
-                                    : realIndicator === 'HDI' ||
-                                      realIndicator === 'unitValueInUSD'
+                                    : realIndicator === 'HDI'
                                       ? obj[realIndicator]
-                                      : (
+                                      : realIndicator === 'unitValueInUSD' ? `1 ${obj['currencySymbol']} = ${obj[realIndicator]} USD` : (
                                         <>
                                           {formatNumberWithCommas(obj[realIndicator])}{" "}
                                           {indicatorValueType(realIndicator, isCountry)}
