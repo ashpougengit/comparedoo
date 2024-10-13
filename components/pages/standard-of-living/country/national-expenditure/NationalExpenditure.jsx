@@ -192,7 +192,7 @@ function NationalExpenditure({ standardInfo, countryURLCase }) {
                 </div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/international-tourism-image.png"
+                    src="/images/number-of-international-tourists-arrival-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image representing the International Tourism Expenditure of any specific country"

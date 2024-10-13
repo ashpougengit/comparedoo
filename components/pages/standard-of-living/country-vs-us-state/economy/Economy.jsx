@@ -109,7 +109,7 @@ function Economy({ slug1, slug2, slug1StandardInfo, slug2StandardInfo, slug1URLC
                                 </div>
                                 <div className="basic-information-images">
                                     <Image
-                                        src="/images/gdp-image.png"
+                                        src="/images/gdp-nominal-image.png"
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Image representing the total Gross Domestic Product of any specific country or state" />
                                 </div>

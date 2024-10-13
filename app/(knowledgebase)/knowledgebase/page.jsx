@@ -7,7 +7,7 @@ import {
   statesUniqueIndicators,
 } from '@/lib/array-list/indicators';
 import { convertToISODate, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
-import { camelToTitleCase, titleCased, toURLFormat } from '@/lib/format/format';
+import { camelToTitleCase, toTitleCase, toURLFormat } from '@/lib/format/format';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -83,7 +83,7 @@ async function KnowledgebaseHome() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`/images/${toURLFormat(indicator)}-country-thumbnail.png`}
-                alt={`${titleCased(indicator)} Country Thumbnail Image`}
+                alt={`${toTitleCase(indicator)} Country Thumbnail Image`}
               />
             </div>
 
@@ -111,7 +111,7 @@ async function KnowledgebaseHome() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`/images/${toURLFormat(indicator)}-country-thumbnail.png`}
-                alt={`${titleCased(indicator)} Country Thumbnail Image`}
+                alt={`${toTitleCase(indicator)} Country Thumbnail Image`}
               />
             </div>
 
@@ -119,7 +119,7 @@ async function KnowledgebaseHome() {
               <h2>
                 List of all Countries&apos;{' '}
                 <span className="knowledgebase-indicator">
-                  {camelToTitleCase(indicator) === 'Unemployment Percentage Of Total Labour Force' ? 'Unemployment Percentage' : camelToTitleCase(indicator)}
+                  {camelToTitleCase(indicator) === 'Unemployment Percentage of Total Labour Force' ? 'Unemployment Percentage' : camelToTitleCase(indicator)}
                 </span>
               </h2>
             </div>
@@ -139,7 +139,7 @@ async function KnowledgebaseHome() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`/images/${toURLFormat(indicator)}-state-thumbnail.png`}
-                alt={`${titleCased(indicator)} US State Thumbnail Image`}
+                alt={`${toTitleCase(indicator)} US State Thumbnail Image`}
               />
             </div>
 
@@ -147,7 +147,7 @@ async function KnowledgebaseHome() {
               <h2>
                 List of all US States&apos;{' '}
                 <span className="knowledgebase-indicator">
-                  {camelToTitleCase(indicator) === 'Unemployment Percentage Of Total Labour Force' ? 'Unemployment Percentage' : camelToTitleCase(indicator)}
+                  {camelToTitleCase(indicator) === 'Unemployment Percentage of Total Labour Force' ? 'Unemployment Percentage' : camelToTitleCase(indicator)}
                 </span>
               </h2>
             </div>
@@ -167,7 +167,7 @@ async function KnowledgebaseHome() {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 src={`/images/${toURLFormat(indicator)}-state-thumbnail.png`}
-                alt={`${titleCased(indicator)} US State Thumbnail Image`}
+                alt={`${toTitleCase(indicator)} US State Thumbnail Image`}
               />
             </div>
 

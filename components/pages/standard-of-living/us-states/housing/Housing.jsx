@@ -210,7 +210,7 @@ function Housing({ state1StandardInfo, state2StandardInfo, state1URLCase, state2
                 </div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/average-family-size-states-images.png"
+                    src="/images/average-family-size-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting Average Family Size in any specific country or state"

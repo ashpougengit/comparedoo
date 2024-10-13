@@ -47,26 +47,26 @@ const USStateStandardData = JSON.parse(USStateStandardRawData);
 
 function manageZerosAfterDecimal(num) {
   if (Number.isInteger(num)) {
-      return num;
+    return num;
   }
 
   // If the number is a floating-point number and its integer part is greater than 0
   if (Math.floor(num) > 0) {
-      return num.toFixed(2);
+    return num.toFixed(2);
   }
 
   // If the integer part is 0 and it's a floating-point number
   // Check for significant digits after decimal, starting from .toFixed(2) to .toFixed(6)
   for (let i = 2; i <= 6; i++) {
-      const fixedValue = num.toFixed(i);
+    const fixedValue = num.toFixed(i);
 
-      // If the fixed value has significant digits (i.e., not just zeros after decimal)
-      if (!/^0\.0+$/.test(fixedValue)) {
-          // Ensure the value doesn't have trailing zeros for small decimals
-          if (parseFloat(fixedValue) > 0) {
-              return fixedValue;  // Return the valid fixed decimal
-          }
+    // If the fixed value has significant digits (i.e., not just zeros after decimal)
+    if (!/^0\.0+$/.test(fixedValue)) {
+      // Ensure the value doesn't have trailing zeros for small decimals
+      if (parseFloat(fixedValue) > 0) {
+        return fixedValue;  // Return the valid fixed decimal
       }
+    }
   }
 
   return 0;

@@ -132,7 +132,7 @@ function EnvironmentalFactors({ standardInfo, countryURLCase }) {
                 </div>
                 <div className="basic-information-images">
                   <Image
-                    src="/images/co2-emissions-image.png"
+                    src="/images/co2-emission-image.png"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     alt="Image Depicting the total CO2 Emissions from any specific country"

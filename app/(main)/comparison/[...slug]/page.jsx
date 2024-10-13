@@ -8,7 +8,7 @@ import GeneralComparisonUSStates from "@/components/pages/general-comparison/us-
 import CountryVsUSStateGeneral from "@/components/pages/general-comparison/country-vs-us-state/CountryVsUSStateGeneral";
 import { fetchWeatherInfoSequentially } from "@/lib/weather/weather";
 import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
-import { titleCased } from "@/lib/format/format";
+import { toTitleCase } from "@/lib/format/format";
 import { fetchCountryGeneralInfo, fetchHealthExpenditurePercentage, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
 import { calculateTimeDifference, convertToISODate, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
@@ -29,8 +29,8 @@ export async function generateMetadata({ params }) {
 
     try {
         const [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
-        const title = allEntities.includes(titleCased(decodedSlug2)) ? `${titleCased(decodedSlug1)} vs ${titleCased(decodedSlug2)} (Statistical Comparison)` : 'Error'
-        const description = allEntities.includes(titleCased(decodedSlug2)) ? `Discover the comparsion between ${titleCased(decodedSlug1)} and ${titleCased(decodedSlug2)} in this article, highlighting general comparison, cost of living and quality of life.` : 'Enter two places to compare'
+        const title = allEntities.includes(toTitleCase(decodedSlug2)) ? `${toTitleCase(decodedSlug1)} vs ${toTitleCase(decodedSlug2)} (Statistical Comparison)` : 'Error'
+        const description = allEntities.includes(toTitleCase(decodedSlug2)) ? `Discover the comparsion between ${toTitleCase(decodedSlug1)} and ${toTitleCase(decodedSlug2)} in this article, highlighting general comparison, cost of living and quality of life.` : 'Enter two places to compare'
         const formattedDate = getFormattedDate()
         const dateModified = convertToISODate(formattedDate)
 
@@ -88,9 +88,9 @@ async function GeneralComparison({ params }) {
         return <Error404 />
     }
 
-    const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
+    const [entity1, entity2] = [toTitleCase(decodedSlug1), toTitleCase(decodedSlug2)]
 
-    if (!allEntities.includes(titleCased(decodedSlug2))) {
+    if (!allEntities.includes(toTitleCase(decodedSlug2))) {
         return <Error404 />
     }
 

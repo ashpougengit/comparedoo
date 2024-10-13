@@ -1,8 +1,8 @@
-import classes from './loading.module.css';
+import Loading from "@/components/loading/Loading";
 
 function LoadingPage() {
     return (
-        <div className={classes.loadingCircle}></div>
+        <Loading />
     );
 }
 

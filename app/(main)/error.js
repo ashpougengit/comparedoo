@@ -1,10 +1,11 @@
 'use client'
 
+import Error404 from "@/components/error/Error404"
+
 function Error({ error }) {
   return (
     <main>
-      <h1 className='entry-title' >An error occured!</h1>
-      <p>{error}</p>
+      <Error404 />
     </main>
   )
 }

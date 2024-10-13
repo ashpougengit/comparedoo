@@ -11,7 +11,7 @@ import { USStates } from "@/lib/array-list/allUSStates";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import { fetchCountryCostInfo, fetchCurrencyInfo, fetchPropertyAndIncomeTaxInfo, fetchUSStateCostInfo } from "@/lib/database/fetch";
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
-import { titleCased } from "@/lib/format/format";
+import { toTitleCase } from "@/lib/format/format";
 import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 
 
@@ -28,9 +28,9 @@ export async function generateMetadata({ params }) {
 
   try {
     const [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
-    const title = decodedSlug1 && decodedSlug2 ? `${titleCased(decodedSlug1)} vs ${titleCased(decodedSlug2)} (Cost of Living)` : `Cost of Living in ${titleCased(decodedSlug1)} (Updated: ${currentYear})`
+    const title = decodedSlug1 && decodedSlug2 ? `${toTitleCase(decodedSlug1)} vs ${toTitleCase(decodedSlug2)} (Cost of Living)` : `Cost of Living in ${toTitleCase(decodedSlug1)} (Updated: ${currentYear})`
       ;
-    const description = decodedSlug1 && decodedSlug2 ? `Explore the cost of living comparison between ${titleCased(decodedSlug1)} and ${titleCased(decodedSlug2)}, highlighting key differences in housing, food, transportation and lifestyle expenses.` : `Get insights into the cost of living in ${titleCased(decodedSlug1)}, covering expenses like housing, fooding, transportation and health factors. 
+    const description = decodedSlug1 && decodedSlug2 ? `Explore the cost of living comparison between ${toTitleCase(decodedSlug1)} and ${toTitleCase(decodedSlug2)}, highlighting key differences in housing, food, transportation and lifestyle expenses.` : `Get insights into the cost of living in ${toTitleCase(decodedSlug1)}, covering expenses like housing, fooding, transportation and health factors. 
 `;
     const formattedDate = getFormattedDate()
     const dateModified = convertToISODate(formattedDate)
@@ -89,7 +89,7 @@ async function CostComparison({ params }) {
     return <Error404 />
   }
 
-  const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
+  const [entity1, entity2] = [toTitleCase(decodedSlug1), toTitleCase(decodedSlug2)]
 
   if ([entity1, entity2].includes('United States') && USStates.includes(entity1 === 'United States' ? entity2 : entity1)) {
     return <Error404 />

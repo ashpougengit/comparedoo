@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { allEntities } from '@/lib/array-list/allEntitiesList';
 import { allCountries } from '@/lib/array-list/allCountriesList';
 import { USStates } from '@/lib/array-list/allUSStates';
-import { titleCased, toURLFormat } from '@/lib/format/format';
+import { toTitleCase, toURLFormat } from '@/lib/format/format';
 import Loading from '../loading/Loading';
 import Image from 'next/image';
 
@@ -155,7 +155,7 @@ export default function SearchBox({ userCountry = null, slug1 = null, slug2 = nu
               {(isSlug1 || isSlug2) ? (
                 <Image
                   src={`/images/${toURLFormat(value1 || slug1)}-map-small.png`}
-                  alt={`Image illustrating the map of ${titleCased(value1 || slug1)}`}
+                  alt={`Image illustrating the map of ${toTitleCase(value1 || slug1)}`}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -164,7 +164,7 @@ export default function SearchBox({ userCountry = null, slug1 = null, slug2 = nu
               ) : userCountry ? (
                 <Image
                   src={`/images/${toURLFormat(userCountry)}-map-small.png`}
-                  alt={`Image illustrating the map of ${titleCased(userCountry)}`}
+                  alt={`Image illustrating the map of ${toTitleCase(userCountry)}`}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -268,7 +268,7 @@ export default function SearchBox({ userCountry = null, slug1 = null, slug2 = nu
               {isSlug2 && slug2 !== '' ? (
                 <Image
                   src={`/images/${toURLFormat(value2)}-map-small.png`}
-                  alt={`Image illustrating the map of ${titleCased(value2)}`}
+                  alt={`Image illustrating the map of ${toTitleCase(value2)}`}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

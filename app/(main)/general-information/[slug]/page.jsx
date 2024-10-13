@@ -6,7 +6,7 @@ import GeneralInfoUSState from "@/components/pages/general-info/us-state/General
 import { allCountries } from "@/lib/array-list/allCountriesList";
 import { USStates } from "@/lib/array-list/allUSStates";
 import { fetchWeatherInfo } from "@/lib/weather/weather";
-import { titleCased } from "@/lib/format/format";
+import { toTitleCase } from "@/lib/format/format";
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
 import { fetchCountryGeneralInfo, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
@@ -18,7 +18,7 @@ import { allEntities } from "@/lib/array-list/allEntitiesList";
 // generateMetadata function
 export async function generateMetadata({ params }) {
     const { slug } = params;
-    const decodedSlug = titleCased(slug)
+    const decodedSlug = toTitleCase(slug)
 
     try {
         let title, description
@@ -84,7 +84,7 @@ async function GeneralInfoPage({ params }) {
     } catch (error) {
         return <Error404 />
     }
-    const entity1 = titleCased(decodedSlug1);
+    const entity1 = toTitleCase(decodedSlug1);
 
     const isSlug1Country = allCountries.includes(entity1);
     try {

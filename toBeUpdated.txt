@@ -10,13 +10,16 @@
 - check all country names  (also count in all description pages) ++++++**********
 
 - Internet TLD of antarctica
+
+- dollarizedCountries.js
+
+- rain.png, snow.png
 ============================== // change base url ==============================
 
  fill
   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-
-- Delete unnecessary files
-
+====================================
+- remove unnecessary dependencies, optimize code
 ====================================
 
 Final Summary:

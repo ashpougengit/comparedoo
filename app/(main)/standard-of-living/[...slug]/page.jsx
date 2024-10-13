@@ -7,7 +7,7 @@ import CountryVsUSStateStandard from "@/components/pages/standard-of-living/coun
 import StandardOfLivingCountry from "@/components/pages/standard-of-living/country/StandardOfLivingCountry";
 import StandardOfLivingUSState from "@/components/pages/standard-of-living/us-state/StandardOfLivingUSState";
 import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
-import { titleCased } from "@/lib/format/format";
+import { toTitleCase } from "@/lib/format/format";
 import { fetchCountryStandardInfo, fetchUSStateStandardInfo } from "@/lib/database/fetch";
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
@@ -27,8 +27,8 @@ export async function generateMetadata({ params }) {
 
     try {
         const [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
-        const title = decodedSlug1 && decodedSlug2 ? `${titleCased(decodedSlug1)} vs ${titleCased(decodedSlug2)} (Standard of Living)` : `Standard of Living in ${titleCased(decodedSlug1)} (Updated: ${currentYear})`;
-        const description = decodedSlug1 && decodedSlug2 ? `Find out how the standard of living differs between ${titleCased(decodedSlug1)} and ${titleCased(decodedSlug2)}, focusing on income, healthcare, education, and quality of life.` : `Explore the standard of living in ${titleCased(decodedSlug1)} highlighting income, healthcare, education, and quality of life.
+        const title = decodedSlug1 && decodedSlug2 ? `${toTitleCase(decodedSlug1)} vs ${toTitleCase(decodedSlug2)} (Standard of Living)` : `Standard of Living in ${toTitleCase(decodedSlug1)} (Updated: ${currentYear})`;
+        const description = decodedSlug1 && decodedSlug2 ? `Find out how the standard of living differs between ${toTitleCase(decodedSlug1)} and ${toTitleCase(decodedSlug2)}, focusing on income, healthcare, education, and quality of life.` : `Explore the standard of living in ${toTitleCase(decodedSlug1)} highlighting income, healthcare, education, and quality of life.
 `;
         const formattedDate = getFormattedDate()
         const dateModified = convertToISODate(formattedDate)
@@ -86,7 +86,7 @@ async function StandardComparison({ params }) {
         return <Error404 />
     }
 
-    const [entity1, entity2] = [titleCased(decodedSlug1), titleCased(decodedSlug2)]
+    const [entity1, entity2] = [toTitleCase(decodedSlug1), toTitleCase(decodedSlug2)]
 
     if ([entity1, entity2].includes('United States') && USStates.includes(entity1 === 'United States' ? entity2 : entity1)) {
         return <Error404 />

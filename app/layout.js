@@ -7,7 +7,7 @@ import ScrollToTopBottom from '@/components/scroll-to-top-bottom/ScrollToTopBott
 import NetworkStatus from '@/components/network-status/NetworkStatus';
 import Script from 'next/script';
 import CookieBanner from '@/components/cookie-banner/CookieBanner';
-export const revalidate = 2592000; // whole app's layout for 30 days 
+export const revalidate = 2592000; // whole app's layout, for 30 days 
 
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
