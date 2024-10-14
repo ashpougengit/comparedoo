@@ -15,7 +15,7 @@ html {
 body {
   line-height: 2.6rem;
   color: #000;
-  font-family: 'Nunito Sans','Poppins', sans-serif;
+  font-family: 'Nunito Sans', 'Poppins', sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -2561,7 +2561,6 @@ td.four-rem-height-td {
   .individual-country-globe-image,
   .individual-country-map-image {
     width: 100%;
-    height: auto;
     position: relative;
 
     display: flex;

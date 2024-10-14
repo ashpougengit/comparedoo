@@ -103,8 +103,25 @@ async function StandardComparison({ params }) {
             fetchData(entity2, isSlug2Country ? allCountries : USStates, isSlug2Country ? fetchCountryStandardInfo : fetchUSStateStandardInfo)
         ]);
 
+        // const sumSelectedValues = (data, keys) => {
+        //     return keys.reduce((total, key) => total + (data[key] || 0), 0);
+        // };
         const sumSelectedValues = (data, keys) => {
-            return keys.reduce((total, key) => total + (data[key] || 0), 0);
+            return keys.reduce((total, key) => {
+                let value = data[key] || 0;
+
+                // Convert HDI to percentage
+                if (key === 'HDI') {
+                    value *= 100; // Multiply HDI by 100
+                }
+
+                // Convert GDPPerCapita to percentage using the global average
+                if (key === 'GDPPerCapita') {
+                    value = (value / 13138.33) * 100; // Divide by global average and multiply by 100
+                }
+
+                return total + value;
+            }, 0);
         };
         // List of keys to sum up
         const keysToSum = ['HDI', 'literacyRate', 'lifeExpectancyRatio', 'GDPPerCapita', 'accessToInternet', 'accessToElectricity'];
@@ -116,7 +133,7 @@ async function StandardComparison({ params }) {
             standardTimes = entity1Total > entity2Total ? (entity1Total / entity2Total).toFixed(2) : (entity2Total / entity1Total).toFixed(2)
             betterOrLesser = entity1Total > entity2Total ? 'better' : 'lesser'
         }
-
+        
         const formattedDate = getFormattedDate();
 
         const pageType = 'standard-of-living'
