@@ -2,43 +2,17 @@ import PrivacyPolicyContent from '@/components/pages/site-info/privacy-policy/Pr
 import SearchBox from '@/components/search-box/SearchBox'
 import { getCountryByIP } from '@/lib/array-list/allCountriesList'
 import { convertToISODate, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime'
+import { getJsonLd } from '@/lib/helper'
+import Script from 'next/script'
+
+const title = 'Privacy Policy (Comparedoo.com)'
+const description = 'Review our Privacy Policy to understand how we collect, use, and protect your information.'
 
 // generateMetadata function
 export async function generateMetadata() {
-    const title = 'Privacy Policy (Comparedoo.com)'
-    const description = 'Review our Privacy Policy to understand how we collect, use, and protect your information.'
-    const formattedDate = getFormattedDate()
-    const dateModified = convertToISODate(formattedDate)
-
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": `${title}`,
-        "publisher": {
-            "@type": "Organization",
-            "name": "Comparedoo.com",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.comparedoo.com/comparedoo-logo"
-            }
-        },
-        "datePublished": `${datePublished}`,
-        "dateModified": `${dateModified}`,
-        "description": `${description}`
-    }
-
     return {
         title,
-        description,
-        // Inject the JSON-LD script in metadata
-        additionalMetaTags: [
-            {
-                tagName: 'script',
-                innerHTML: JSON.stringify(jsonLd),
-                type: 'application/ld+json',
-                key: 'jsonld',
-            },
-        ],
+        description
     }
 }
 
@@ -46,9 +20,20 @@ async function PrivacyPolicy() {
     const formattedDate = getFormattedDate()
     const userCountry = await getCountryByIP()
 
+    const dateModified = convertToISODate(formattedDate)
+
+    const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
     return (
         <>
             <SearchBox userCountry={userCountry} />
+
+            <Script
+                id="json-ld"
+                type="application/ld+json"
+                strategy="beforeInteractive"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             <div className="meta-title-primary-heading">
                 <h1 className='entry-title' >

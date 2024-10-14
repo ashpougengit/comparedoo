@@ -8,45 +8,19 @@ import {
 } from '@/lib/array-list/indicators';
 import { convertToISODate, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
 import { camelToTitleCase, toTitleCase, toURLFormat } from '@/lib/format/format';
+import { getJsonLd } from '@/lib/helper';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
+
+const title = 'Knowledgebase Articles'
+const description = 'In this section of the website, you will get to read various knowledgeable articles explained in the listicle form.'
 
 // generateMetadata function
 export async function generateMetadata() {
-  const title = 'Knowledgebase Articles'
-  const description = 'In this section of the website, you will get to read various knowledgeable articles explained in the listicle form.'
-  const formattedDate = getFormattedDate()
-  const dateModified = convertToISODate(formattedDate)
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": `${title}`,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Comparedoo.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.comparedoo.com/comparedoo-logo"
-      }
-    },
-    "datePublished": `${datePublished}`,
-    "dateModified": `${dateModified}`,
-    "description": `${description}`
-  }
-
   return {
     title,
-    description,
-    // Inject the JSON-LD script in metadata
-    additionalMetaTags: [
-      {
-        tagName: 'script',
-        innerHTML: JSON.stringify(jsonLd),
-        type: 'application/ld+json',
-        key: 'jsonld',
-      },
-    ],
+    description
   }
 }
 
@@ -54,11 +28,22 @@ async function KnowledgebaseHome() {
   const formattedDate = getFormattedDate();
   const userCountry = await getCountryByIP();
 
+  const dateModified = convertToISODate(formattedDate)
+
+  const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
   return (
     <>
       <AdsHeaderBanner />
 
       <SearchBox userCountry={userCountry} />
+
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <div className="meta-title-primary-heading">
         <h1 className='entry-title' >Knowledgebase Articles</h1>

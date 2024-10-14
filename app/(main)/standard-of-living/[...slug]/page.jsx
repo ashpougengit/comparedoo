@@ -6,13 +6,14 @@ import StandardOfLivingUSStates from "@/components/pages/standard-of-living/us-s
 import CountryVsUSStateStandard from "@/components/pages/standard-of-living/country-vs-us-state/CountryVsUSStateStandard";
 import StandardOfLivingCountry from "@/components/pages/standard-of-living/country/StandardOfLivingCountry";
 import StandardOfLivingUSState from "@/components/pages/standard-of-living/us-state/StandardOfLivingUSState";
-import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
+import { checkCountry, decodeAndValidateSlugs, fetchData, getJsonLd } from "@/lib/helper";
 import { toTitleCase } from "@/lib/format/format";
 import { fetchCountryStandardInfo, fetchUSStateStandardInfo } from "@/lib/database/fetch";
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
 import Error404 from "@/components/error/Error404";
+import Script from "next/script";
 
 // generateMetadata function
 export async function generateMetadata({ params }) {
@@ -30,38 +31,10 @@ export async function generateMetadata({ params }) {
         const title = decodedSlug1 && decodedSlug2 ? `${toTitleCase(decodedSlug1)} vs ${toTitleCase(decodedSlug2)} (Standard of Living)` : `Standard of Living in ${toTitleCase(decodedSlug1)} (Updated: ${currentYear})`;
         const description = decodedSlug1 && decodedSlug2 ? `Find out how the standard of living differs between ${toTitleCase(decodedSlug1)} and ${toTitleCase(decodedSlug2)}, focusing on income, healthcare, education, and quality of life.` : `Explore the standard of living in ${toTitleCase(decodedSlug1)} highlighting income, healthcare, education, and quality of life.
 `;
-        const formattedDate = getFormattedDate()
-        const dateModified = convertToISODate(formattedDate)
-
-        const jsonLd = {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": `${title}`,
-            "publisher": {
-                "@type": "Organization",
-                "name": "Comparedoo.com",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.comparedoo.com/comparedoo-logo"
-                }
-            },
-            "datePublished": `${datePublished}`,
-            "dateModified": `${dateModified}`,
-            "description": `${description}`
-        }
 
         return {
             title,
-            description,
-            // Inject the JSON-LD script in metadata
-            additionalMetaTags: [
-                {
-                    tagName: 'script',
-                    innerHTML: JSON.stringify(jsonLd),
-                    type: 'application/ld+json',
-                    key: 'jsonld',
-                },
-            ],
+            description
         }
     } catch (error) {
         return {
@@ -133,16 +106,29 @@ async function StandardComparison({ params }) {
             standardTimes = entity1Total > entity2Total ? (entity1Total / entity2Total).toFixed(2) : (entity2Total / entity1Total).toFixed(2)
             betterOrLesser = entity1Total > entity2Total ? 'better' : 'lesser'
         }
-        
+
         const formattedDate = getFormattedDate();
 
         const pageType = 'standard-of-living'
         const listForLinks = getListForLinks(slug, isSlug1Country, isSlug2Country, pageType)
 
+        const title = decodedSlug1 && decodedSlug2 ? `${toTitleCase(decodedSlug1)} vs ${toTitleCase(decodedSlug2)} (Standard of Living)` : `Standard of Living in ${toTitleCase(decodedSlug1)} (Updated: ${currentYear})`;
+        const description = decodedSlug1 && decodedSlug2 ? `Find out how the standard of living differs between ${toTitleCase(decodedSlug1)} and ${toTitleCase(decodedSlug2)}, focusing on income, healthcare, education, and quality of life.` : `Explore the standard of living in ${toTitleCase(decodedSlug1)} highlighting income, healthcare, education, and quality of life.
+`;
+        const dateModified = convertToISODate(formattedDate)
+
+        const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
         return (
             <>
                 <SearchBox slug1={checkCountry(entity1)} slug2={checkCountry(entity2)} />
                 <AdsHeaderBanner />
+                <Script
+                    id="json-ld"
+                    type="application/ld+json"
+                    strategy="beforeInteractive"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 <PageTitle entity1={entity1} entity2={entity2} />
                 <PublishInfo formattedDate={formattedDate} />
                 {renderContent({ slug, entity1, entity2, entity1StandardInfo, entity2StandardInfo, value1, value2, standardTimes, betterOrLesser, listForLinks })}

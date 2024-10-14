@@ -4,43 +4,17 @@ import MapAndDescriptionAfrica from '@/components/pages/continents/africa/MapAnd
 import SearchBox from '@/components/search-box/SearchBox';
 import { getCountryByIP } from '@/lib/array-list/allCountriesList';
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
+import { getJsonLd } from '@/lib/helper';
+import Script from 'next/script';
+
+const title = `List of All Countries in Africa (Updated: ${currentYear})`
+const description = 'A complete list of countries in Africa, including basic data on their geography, population, and capitals.'
 
 // generateMetadata function
 export async function generateMetadata() {
-  const title = `List of All Countries in Africa (Updated: ${currentYear})`
-  const description = 'A complete list of countries in Africa, including basic data on their geography, population, and capitals.'
-  const formattedDate = getFormattedDate()
-  const dateModified = convertToISODate(formattedDate)
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": `${title}`,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Comparedoo.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.comparedoo.com/comparedoo-logo"
-      }
-    },
-    "datePublished": `${datePublished}`,
-    "dateModified": `${dateModified}`,
-    "description": `${description}`
-  }
-
   return {
     title,
-    description,
-    // Inject the JSON-LD script in metadata
-    additionalMetaTags: [
-      {
-        tagName: 'script',
-        innerHTML: JSON.stringify(jsonLd),
-        type: 'application/ld+json',
-        key: 'jsonld',
-      },
-    ],
+    description
   }
 }
 
@@ -48,11 +22,22 @@ async function Africa() {
   const formattedDate = getFormattedDate()
   const userCountry = await getCountryByIP()
 
+  const dateModified = convertToISODate(formattedDate)
+
+  const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
   return (
     <>
       <SearchBox userCountry={userCountry} />
 
       <AdsHeaderBanner />
+
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <div className="meta-title-primary-heading">
         <h1 className='entry-title' >

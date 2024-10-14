@@ -1,54 +1,38 @@
 import Hero from "@/components/hero/Hero";
 import PopularComparison from "@/components/popular-comparison/PopularComparison";
-import ScrollProgressBar from "@/components/scroll-progress-bar/ScrollProgressBar";
 import SearchBox from "@/components/search-box/SearchBox";
 import { getCountryByIP } from "@/lib/array-list/allCountriesList";
 import { convertToISODate, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
+import { getJsonLd } from "@/lib/helper";
+import Script from "next/script";
+
+const title = 'Comparedoo.com'
+const description = 'Comparedoo, Countries - Cities - States, Comparetoo!'
 
 // generateMetadata function
 export async function generateMetadata() {
-  const title = 'Comparedoo.com'
-  const description = 'Comparedoo, Countries - Cities - States, Comparetoo!'
-  const formattedDate = getFormattedDate()
-  const dateModified = convertToISODate(formattedDate)
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": `${title}`,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Comparedoo.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.comparedoo.com/comparedoo-logo"
-      }
-    },
-    "datePublished": `${datePublished}`,
-    "dateModified": `${dateModified}`,
-    "description": `${description}`
-  }
-
   return {
     title,
-    description,
-    // Inject the JSON-LD script in metadata
-    additionalMetaTags: [
-      {
-        tagName: 'script',
-        innerHTML: JSON.stringify(jsonLd),
-        type: 'application/ld+json',
-        key: 'jsonld',
-      },
-    ],
+    description
   }
 }
 
 export default async function HomePage() {
   const userCountry = await getCountryByIP()
 
+  const formattedDate = getFormattedDate()
+  const dateModified = convertToISODate(formattedDate)
+
+  const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
   return (
     <>
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
       <SearchBox userCountry={userCountry} />
       <PopularComparison userCountry={userCountry} />

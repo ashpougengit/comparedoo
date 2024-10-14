@@ -8,12 +8,13 @@ import { USStates } from "@/lib/array-list/allUSStates";
 import { fetchWeatherInfo } from "@/lib/weather/weather";
 import { toTitleCase } from "@/lib/format/format";
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
-import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
+import { checkCountry, decodeAndValidateSlugs, fetchData, getJsonLd } from "@/lib/helper";
 import { fetchCountryGeneralInfo, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
 import Error404 from "@/components/error/Error404";
 import { allEntities } from "@/lib/array-list/allEntitiesList";
+import Script from "next/script";
 
 // generateMetadata function
 export async function generateMetadata({ params }) {
@@ -32,38 +33,9 @@ export async function generateMetadata({ params }) {
             }
         }
 
-        const formattedDate = getFormattedDate()
-        const dateModified = convertToISODate(formattedDate)
-
-        const jsonLd = {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": `${title}`,
-            "publisher": {
-                "@type": "Organization",
-                "name": "Comparedoo.com",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.comparedoo.com/comparedoo-logo"
-                }
-            },
-            "datePublished": `${datePublished}`,
-            "dateModified": `${dateModified}`,
-            "description": `${description}`
-        }
-
         return {
             title,
-            description,
-            // Inject the JSON-LD script in metadata
-            additionalMetaTags: [
-                {
-                    tagName: 'script',
-                    innerHTML: JSON.stringify(jsonLd),
-                    type: 'application/ld+json',
-                    key: 'jsonld',
-                },
-            ],
+            description
         }
     } catch (error) {
         return {
@@ -109,10 +81,31 @@ async function GeneralInfoPage({ params }) {
         const pageType = 'general-information'
         const listForLinks = getListForLinks(slugArr, isSlug1Country, null, pageType)
 
+        let title, description
+        if (allEntities.includes(entity1)) {
+            title = `General Information About ${entity1} (Updated: ${currentYear})`;
+            description = `In this article, you will get to read about ${entity1}, highlighting general information, cost of living and quality of life.`;
+        } else {
+            return {
+                title: 'Error',
+                description: 'Invalid URL. Please check the path and try again.',
+            }
+        }
+
+        const dateModified = convertToISODate(formattedDate)
+
+        const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
         return (
             <>
                 <SearchBox slug1={checkCountry(entity1)} slug2='' />
                 <AdsHeaderBanner />
+                <Script
+                    id="json-ld"
+                    type="application/ld+json"
+                    strategy="beforeInteractive"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 <PageTitle entity={entity1} />
                 <PublishInfo formattedDate={formattedDate} />
                 {renderContent(entity1, generalInfo, weatherInfo, listForLinks)}

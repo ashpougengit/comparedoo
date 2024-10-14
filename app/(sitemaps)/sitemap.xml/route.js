@@ -96,7 +96,7 @@ export function chunkArray(array, size) {
 }
 ///////////////////////////////////////
 // Base URL
-const baseUrl = 'http://localhost:3000'; // change base url along with http
+const baseUrl = 'https://comparedoo.com'; // change base url along with http
 
 // Static routes to include in the sitemap
 const continents = ['africa', 'antarctica', 'asia', 'europe', 'north-america', 'oceania', 'south-america'];

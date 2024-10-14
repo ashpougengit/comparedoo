@@ -1,47 +1,22 @@
 import AdsHeaderBanner from '@/components/ads/AdsHeaderBanner'
 import AllCountriesAntarctica from '@/components/pages/continents/antarctica/AllCountriesAntarctica'
+import AllUSStates from '@/components/pages/continents/antarctica/AllUSStates';
 import InterestingFactsAntarctica from '@/components/pages/continents/antarctica/InterestingFactsAntarctica'
 import MapAndDescriptionAntarctica from '@/components/pages/continents/antarctica/MapAndDescriptionAntarctica'
 import SearchBox from '@/components/search-box/SearchBox';
 import { getCountryByIP } from '@/lib/array-list/allCountriesList';
 import { convertToISODate, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
+import { getJsonLd } from '@/lib/helper';
+import Script from 'next/script';
+
+const title = `Interesting Facts about Antarctica`
+const description = 'Uncover intriguing facts about Antarctica, from its icy landscapes to the rare species that inhabit it.'
 
 // generateMetadata function
 export async function generateMetadata() {
-    const title = `Interesting Facts about Antarctica`
-    const description = 'Uncover intriguing facts about Antarctica, from its icy landscapes to the rare species that inhabit it.'
-    const formattedDate = getFormattedDate()
-    const dateModified = convertToISODate(formattedDate)
-
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": `${title}`,
-        "publisher": {
-            "@type": "Organization",
-            "name": "Comparedoo.com",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.comparedoo.com/comparedoo-logo"
-            }
-        },
-        "datePublished": `${datePublished}`,
-        "dateModified": `${dateModified}`,
-        "description": `${description}`
-    }
-
     return {
         title,
-        description,
-        // Inject the JSON-LD script in metadata
-        additionalMetaTags: [
-            {
-                tagName: 'script',
-                innerHTML: JSON.stringify(jsonLd),
-                type: 'application/ld+json',
-                key: 'jsonld',
-            },
-        ],
+        description
     }
 }
 
@@ -49,11 +24,22 @@ async function Antarctica() {
     const formattedDate = getFormattedDate()
     const userCountry = await getCountryByIP()
 
+    const dateModified = convertToISODate(formattedDate)
+
+    const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
     return (
         <>
             <SearchBox userCountry={userCountry} />
 
             <AdsHeaderBanner />
+
+            <Script
+                id="json-ld"
+                type="application/ld+json"
+                strategy="beforeInteractive"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             <div className="meta-title-primary-heading">
                 <h1 className='entry-title' >
@@ -73,6 +59,8 @@ async function Antarctica() {
             <InterestingFactsAntarctica />
 
             <AllCountriesAntarctica />
+
+            <AllUSStates />
 
         </>
     )

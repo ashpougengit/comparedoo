@@ -7,7 +7,7 @@ import { USStates } from "@/lib/array-list/allUSStates";
 import GeneralComparisonUSStates from "@/components/pages/general-comparison/us-states/GeneralComparisonUSStates";
 import CountryVsUSStateGeneral from "@/components/pages/general-comparison/country-vs-us-state/CountryVsUSStateGeneral";
 import { fetchWeatherInfoSequentially } from "@/lib/weather/weather";
-import { checkCountry, decodeAndValidateSlugs, fetchData } from "@/lib/helper";
+import { checkCountry, decodeAndValidateSlugs, fetchData, getJsonLd } from "@/lib/helper";
 import { toTitleCase } from "@/lib/format/format";
 import { fetchCountryGeneralInfo, fetchHealthExpenditurePercentage, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
 import { calculateTimeDifference, convertToISODate, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
@@ -15,6 +15,7 @@ import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
 import { allEntities } from "@/lib/array-list/allEntitiesList";
 import Error404 from "@/components/error/Error404";
+import Script from "next/script";
 
 // generateMetadata function
 export async function generateMetadata({ params }) {
@@ -31,38 +32,10 @@ export async function generateMetadata({ params }) {
         const [decodedSlug1, decodedSlug2] = decodeAndValidateSlugs(slug);
         const title = allEntities.includes(toTitleCase(decodedSlug2)) ? `${toTitleCase(decodedSlug1)} vs ${toTitleCase(decodedSlug2)} (Statistical Comparison)` : 'Error'
         const description = allEntities.includes(toTitleCase(decodedSlug2)) ? `Discover the comparsion between ${toTitleCase(decodedSlug1)} and ${toTitleCase(decodedSlug2)} in this article, highlighting general comparison, cost of living and quality of life.` : 'Enter two places to compare'
-        const formattedDate = getFormattedDate()
-        const dateModified = convertToISODate(formattedDate)
-
-        const jsonLd = {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": `${title}`,
-            "publisher": {
-                "@type": "Organization",
-                "name": "Comparedoo.com",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://www.comparedoo.com/comparedoo-logo"
-                }
-            },
-            "datePublished": `${datePublished}`,
-            "dateModified": `${dateModified}`,
-            "description": `${description}`
-        }
 
         return {
             title,
-            description,
-            // Inject the JSON-LD script in metadata
-            additionalMetaTags: [
-                {
-                    tagName: 'script',
-                    innerHTML: JSON.stringify(jsonLd),
-                    type: 'application/ld+json',
-                    key: 'jsonld',
-                },
-            ],
+            description
         }
     } catch (error) {
         return {
@@ -147,13 +120,27 @@ async function GeneralComparison({ params }) {
         const pageType = 'comparison'
         const listForLinks = getListForLinks(slug, isSlug1Country, isSlug2Country, pageType)
 
+        // Prepare JSON-LD data
+        const title = allEntities.includes(toTitleCase(decodedSlug2)) ? `${toTitleCase(decodedSlug1)} vs ${toTitleCase(decodedSlug2)} (Statistical Comparison)` : 'Error'
+        const description = allEntities.includes(toTitleCase(decodedSlug2)) ? `Discover the comparsion between ${toTitleCase(decodedSlug1)} and ${toTitleCase(decodedSlug2)} in this article, highlighting general comparison, cost of living and quality of life.` : 'Enter two places to compare'
+        const dateModified = convertToISODate(formattedDate)
+        const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
         return (
             <>
                 <SearchBox slug1={checkCountry(entity1)} slug2={checkCountry(entity2)} />
                 <AdsHeaderBanner />
+                <Script
+                    id="json-ld"
+                    type="application/ld+json"
+                    strategy="beforeInteractive"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
                 <PageTitle entity1={entity1} entity2={entity2} />
                 <PublishInfo formattedDate={formattedDate} />
                 {renderContent({ slug, entity1, entity2, entity1GeneralInfo, entity2GeneralInfo, entity1WeatherInfo, entity2WeatherInfo, timeDifference, aheadOrBehind, entity1CurrentHealthExpenditurePercentage, entity2CurrentHealthExpenditurePercentage, value1, value2, listForLinks })}
+
+
             </>
         )
 

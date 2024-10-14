@@ -1,19 +1,8 @@
 - Threetabs sticky on back scroll
-
-- slug/image.png(url returned in console)
-
-- h1: Geographical factors (absent in single state general info page )
 ........................................................................
+- dateModified":"2024-10-13"
 
-- Standard of living(top description calculation)     +++++++++++++**************
-
-- check all country names  (also count in all description pages) ++++++**********
-
-- Internet TLD of antarctica
-
-- dollarizedCountries.js
-
-- rain.png, snow.png
+-Make jsonLd DRY
 ============================== // change base url ==============================
 
  fill

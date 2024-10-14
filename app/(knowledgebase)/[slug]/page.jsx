@@ -26,6 +26,8 @@ import Link from 'next/link';
 import SearchBox from '@/components/search-box/SearchBox';
 import { getCountryByIP } from '@/lib/array-list/allCountriesList';
 import Error404 from '@/components/error/Error404';
+import Script from 'next/script';
+import { getJsonLd } from '@/lib/helper';
 
 // generateMetadata function
 export async function generateMetadata({ params }) {
@@ -76,38 +78,10 @@ export async function generateMetadata({ params }) {
     const description = isCountry
       ? `Discover the ${titleCasedIndicator} worldwide. In this article, you can find a comprehensive list of ${titleCasedIndicator} of all countries in the world.`
       : `In this article, you can find a comprehensive list of ${titleCasedIndicator} of all 50 states in the United States of America.`;
-    const formattedDate = getFormattedDate();
-    const dateModified = convertToISODate(formattedDate);
-
-    const jsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: `${title}`,
-      publisher: {
-        '@type': 'Organization',
-        name: 'Comparedoo.com',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://www.comparedoo.com/comparedoo-logo',
-        },
-      },
-      datePublished: `${datePublished}`,
-      dateModified: `${dateModified}`,
-      description: `${description}`,
-    };
 
     return {
       title,
-      description,
-      // Inject the JSON-LD script in metadata
-      additionalMetaTags: [
-        {
-          tagName: 'script',
-          innerHTML: JSON.stringify(jsonLd),
-          type: 'application/ld+json',
-          key: 'jsonld',
-        },
-      ],
+      description
     };
   } catch (error) {
     return createErrorMetadata(
@@ -268,11 +242,28 @@ async function KnowledgeBase({ params }) {
 
     const userCountry = await getCountryByIP();
 
+    const title = `${titleCasedIndicator} of All ${isCountry ? 'Countries' : 'US States'
+      } (Updated: ${currentYear})`;
+    const description = isCountry
+      ? `Discover the ${titleCasedIndicator} worldwide. In this article, you can find a comprehensive list of ${titleCasedIndicator} of all countries in the world.`
+      : `In this article, you can find a comprehensive list of ${titleCasedIndicator} of all 50 states in the United States of America.`;
+
+    const dateModified = convertToISODate(formattedDate);
+
+    const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
     return (
       <>
         <SearchBox userCountry={userCountry} />
 
         <AdsHeaderBanner />
+
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
 
         <div className="meta-title-primary-heading">
           <h1 className="entry-title">

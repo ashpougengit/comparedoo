@@ -57,7 +57,7 @@ function MapAndDescriptionAntarctica() {
 
                         <tr>
                             <td className="continent-indicators">Internet TLD</td>
-                            <td className="internet-tld-continent continent-indicator-answers">.africa</td>
+                            <td className="internet-tld-continent continent-indicator-answers">.aq</td>
 
                         </tr>
 

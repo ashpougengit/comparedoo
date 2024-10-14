@@ -42,6 +42,11 @@ function Footer() {
                 Cookie Policy
               </Link>
             </li>
+            <li>
+              <Link className="next-link-footer" href="/sitemap.xml">
+                Sitemap
+              </Link>
+            </li>
           </ul>
         </div>
 

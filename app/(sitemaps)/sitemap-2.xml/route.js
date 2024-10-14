@@ -2,7 +2,7 @@ import { allRoutes, chunkArray } from "../sitemap.xml/route";
 export const dynamic = 'force-static'; // Ensure it's statically generated
 
 // Import all the routes and the base URL
-const baseUrl = 'http://localhost:3000'; // change base url along with http
+const baseUrl = 'https://comparedoo.com'; // change base url along with http
 
 // Chunk the routes as you did in the main sitemap
 const chunkedRoutes = chunkArray(allRoutes, 40000);
