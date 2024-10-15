@@ -1,9 +1,6 @@
 - Threetabs sticky on back scroll
 ........................................................................
 
-- georgia-usa-us-state-map-medium.png ra georgia-usa-us-state-flag-medium.png
-============================== // change base url ==============================
-
  fill
   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
   
