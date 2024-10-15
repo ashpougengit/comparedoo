@@ -28,7 +28,7 @@ async function Africa() {
 
   return (
     <>
-    
+
       <SearchBox userCountry={userCountry} />
 
       <AdsHeaderBanner />
@@ -47,7 +47,7 @@ async function Africa() {
       </div>
 
       <div className="published">
-        <p><b>Published: </b> Thursday, 10th October 2024</p>
+        <p><b>Published: </b> Tuesday, 15th October 2024</p>
       </div>
       <div className="updated">
         <b>Recently Updated:</b> <span className="updated-timer">{formattedDate}</span>

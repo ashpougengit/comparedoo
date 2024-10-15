@@ -52,7 +52,7 @@ async function KnowledgebaseHome() {
       <div className="published">
         <p>
           <b>Published: </b>
-          Thursday, 10th October 2024
+          Tuesday, 15th October 2024
         </p>
       </div>
       <div className="updated">
