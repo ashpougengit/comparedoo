@@ -133,7 +133,7 @@ async function GeneralComparison({ params }) {
                 <Script
                     id="json-ld"
                     type="application/ld+json"
-                    strategy="beforeInteractive"
+
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
                 <PageTitle entity1={entity1} entity2={entity2} />

@@ -28,6 +28,7 @@ async function Africa() {
 
   return (
     <>
+    
       <SearchBox userCountry={userCountry} />
 
       <AdsHeaderBanner />
@@ -35,7 +36,7 @@ async function Africa() {
       <Script
         id="json-ld"
         type="application/ld+json"
-        strategy="beforeInteractive"
+        key="schema"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 

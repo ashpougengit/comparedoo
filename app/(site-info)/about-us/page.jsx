@@ -31,7 +31,7 @@ async function AboutUs() {
             <Script
                 id="json-ld"
                 type="application/ld+json"
-                strategy="beforeInteractive"
+
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
 

@@ -11,4 +11,4 @@ Final Summary:
 ~ 196 values: 38220 distinct ordered pairs.
 ~ 196 vs 50 values: 19500 distinct ordered pairs.(without USA)
 ~ 50 values: 2450 distinct ordered pairs.
-~ allRoutes:181351(sitemap.xml) 38220*3 + 19500*3 + 2450*3 + 196*3 + 50*3 + 89 + 14= 181351 urls
+~ allRoutes:181351(sitemap.xml): 38220*3 + 19500*3 + 2450*3 + 196*3 + 50*3 + 89 + 14= 181351 urls

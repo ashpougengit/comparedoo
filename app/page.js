@@ -30,7 +30,7 @@ export default async function HomePage() {
       <Script
         id="json-ld"
         type="application/ld+json"
-        strategy="beforeInteractive"
+
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
