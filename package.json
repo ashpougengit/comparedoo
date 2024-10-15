@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.7.4",
     "better-sqlite3": "^11.1.2",
     "chart.js": "^4.4.3",
     "moment-timezone": "^0.5.45",
