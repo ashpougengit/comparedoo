@@ -1,8 +1,7 @@
 - Threetabs sticky on back scroll
 ........................................................................
-- dateModified":"2024-10-13"
 
--Make jsonLd DRY
+- georgia-usa-us-state-map-medium.png ra georgia-usa-us-state-flag-medium.png
 ============================== // change base url ==============================
 
  fill
