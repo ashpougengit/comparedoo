@@ -82,7 +82,7 @@ async function GeneralComparison({ params }) {
             fetchData(entity1, isSlug1Country ? allCountries : USStates, isSlug1Country ? fetchCountryGeneralInfo : fetchUSStateGeneralInfo),
             fetchData(entity2, isSlug2Country ? allCountries : USStates, isSlug2Country ? fetchCountryGeneralInfo : fetchUSStateGeneralInfo)
         ]).catch(() => [null, null])
-
+        console.log('entity1GeneralInfo: ', entity1GeneralInfo);
         let entity1CurrentHealthExpenditurePercentage, entity2CurrentHealthExpenditurePercentage
         if (isSlug1Country && isSlug2Country) {
             [entity1CurrentHealthExpenditurePercentage, entity2CurrentHealthExpenditurePercentage] = await Promise.all([
