@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: 'standalone',
     trailingSlash: false, // Add this to remove trailing slashes from URLs
     async headers(){
         return [
