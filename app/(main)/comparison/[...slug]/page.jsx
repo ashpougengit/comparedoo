@@ -81,7 +81,7 @@ async function GeneralComparison({ params }) {
     console.log('value1: ', value1);
     console.log('value2: ', value2);
     
-    const demo1GeneralInfo = fetchCountryGeneralInfo(entity1)
+    const demo1GeneralInfo = await fetchCountryGeneralInfo(entity1)
     console.log('demo1GeneralInfo: ', demo1GeneralInfo);
 
     try {
