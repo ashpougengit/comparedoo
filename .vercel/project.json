@@ -1,0 +1,9 @@
+{
+    "projectId": "prj_YGGSupqfB84mZPZj6dYBLn4tl2Ka",
+    "orgId": "comparedoo",
+    "settings": {
+      "buildCommand": "npm run build",
+      "outputDirectory": ".next",
+      "framework": "nextjs"
+    }
+  }
