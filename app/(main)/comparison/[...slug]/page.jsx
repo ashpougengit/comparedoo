@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
 
 async function GeneralComparison({ params }) {
     const { slug } = params
-
+    console.log('slug: ', slug);
     if (slug.length > 2) {
         return <Error404 />
     }
@@ -60,8 +60,11 @@ async function GeneralComparison({ params }) {
     } catch (error) {
         return <Error404 />
     }
-
+    console.log('decodedSlug1: ', decodedSlug1);
+    console.log('decodedSlug2: ', decodedSlug2);
     const [entity1, entity2] = [toTitleCase(decodedSlug1), toTitleCase(decodedSlug2)]
+    console.log('entity1: ', entity1);
+    console.log('entity2: ', entity2);
 
     if (!allEntities.includes(toTitleCase(decodedSlug2))) {
         return <Error404 />
@@ -75,7 +78,8 @@ async function GeneralComparison({ params }) {
     const isSlug2Country = slug.length === 2 && allCountries.includes(entity2);
     const value1 = isSlug1Country ? 'country' : 'state'
     const value2 = isSlug2Country ? 'country' : 'state'
-
+    console.log('value1: ', value1);
+    console.log('value2: ', value2);
 
     try {
         const [entity1GeneralInfo, entity2GeneralInfo] = await Promise.all([
