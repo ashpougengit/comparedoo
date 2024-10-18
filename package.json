@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "cp public/comparedoo.db /tmp/ && echo 'File copied to /tmp' || echo 'File not copied'"
+    "postbuild": "cp comparedoo.db /tmp/ && echo 'File copied to /tmp' || echo 'File not copied'"
   },
   "dependencies": {
     "better-sqlite3": "^11.1.2",
