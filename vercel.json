@@ -1,9 +1,0 @@
-{
-  "functions": {},
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    }
-  },
-  "includeFiles": ["comparedoo.db"]
-}
