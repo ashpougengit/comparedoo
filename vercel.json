@@ -1,6 +1,6 @@
 {
     "functions": {
-      "comparison/[...slug]": {
+      "api/**/*.js": {
         "includeFiles": "comparedoo.db"
       }
     }
