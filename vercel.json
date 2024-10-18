@@ -1,7 +1,7 @@
 {
     "functions": {
       "app/(main)/comparison/[...slug]/page.js": {
-        "includeFiles": "comparedoo.db"
+        "includeFiles": "public/db/comparedoo.db"
       }
     }
   }
