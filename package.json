@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "cp comparedoo.db /tmp/"
+    "postbuild": "cp public/comparedoo.db /tmp/"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.7.4",
