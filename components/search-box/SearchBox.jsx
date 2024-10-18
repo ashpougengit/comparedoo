@@ -220,7 +220,7 @@ export default function SearchBox({ userCountry = null, slug1 = null, slug2 = nu
                 }
               >
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns="https://www.w3.org/2000/svg"
                   viewBox="0 -960 960 960"
                 >
                   <path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z" />
@@ -324,7 +324,7 @@ export default function SearchBox({ userCountry = null, slug1 = null, slug2 = nu
                 }
               >
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns="https://www.w3.org/2000/svg"
                   viewBox="0 -960 960 960"
                 >
                   <path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z" />

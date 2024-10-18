@@ -1,6 +1,11 @@
 - Threetabs sticky on back scroll
 
 ........................................................................
+- <svg
+                  xmlns="https://www.w3.org/2000/svg"
+                  viewBox="0 -960 960 960"
+                > (http to https converted in searchbox)
+........................................................................
 
 Final Summary:
 ~ staticPages:  14

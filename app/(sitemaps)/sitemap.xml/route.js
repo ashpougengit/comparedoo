@@ -161,7 +161,7 @@ export async function GET(request) {
   if (request.url.endsWith('/sitemap.xml')) {
     return new Response(
       `<?xml version="1.0" encoding="UTF-8"?>
-       <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+       <sitemapindex xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
          ${sitemapIndex}
        </sitemapindex>`,
       {
@@ -182,7 +182,7 @@ export async function GET(request) {
     if (selectedRoutes) {
       return new Response(
         `<?xml version="1.0" encoding="UTF-8"?>
-         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+         <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
            ${selectedRoutes
           .map(
             (route) => `
