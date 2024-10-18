@@ -1,8 +1,7 @@
 {
-    "functions": {
-      "api/*": {
-        "includeFiles": "comparedoo.db"
-      }
+  "functions": {
+    "comparison/[...slug]/page.jsx": {
+      "includeFiles": "comparedoo.db"
     }
   }
-  
+}
