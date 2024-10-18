@@ -10,14 +10,14 @@
     "postbuild": "cp public/comparedoo.db /tmp/ && echo 'File copied to /tmp' || echo 'File not copied'"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^5.7.4",
     "better-sqlite3": "^11.1.2",
     "chart.js": "^4.4.3",
     "moment-timezone": "^0.5.45",
     "next": "^14.2.15",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "vercel": "^37.9.0"
   },
   "devDependencies": {
     "eslint": "^8",
