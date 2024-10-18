@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "comparison/[...slug]": {
+        "includeFiles": "comparedoo.db"
+      }
+    }
+  }
+  
