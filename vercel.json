@@ -1,6 +1,6 @@
 {
   "functions": {
-    "comparison/[...slug]/page.jsx": {
+    "index": {
       "includeFiles": "comparedoo.db"
     }
   }
