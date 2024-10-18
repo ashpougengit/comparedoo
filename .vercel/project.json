@@ -10,5 +10,10 @@
     "api/**/*.js": {
       "includeFiles": "public/comparedoo.db"
     }
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_DB_PATH": "public/comparedoo.db"
+    }
   }
 }
