@@ -1,8 +1,8 @@
 {
-    "functions": {
-      "app/(main)/comparison/[...slug]/page.js": {
-        "includeFiles": "public/db/comparedoo.db"
-      }
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
     }
-  }
-  
+  },
+  "includeFiles": ["public/db/comparedoo.db"]
+}
