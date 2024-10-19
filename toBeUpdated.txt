@@ -5,6 +5,14 @@
                   xmlns="https://www.w3.org/2000/svg"
                   viewBox="0 -960 960 960"
                 > (http to https converted in searchbox)
+
+- remove "postbuild" from package.json
+
+- populationGrowthAnnual of cuba, croatia is returned 0.0000
+
+- HDI of Sri Lanka is 0.71
+
+- http://localhost:3000/standard-of-living/czech-republic/georgia-(usa)(while routing through three tabs)
 ........................................................................
 
 Final Summary:
