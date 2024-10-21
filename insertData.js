@@ -666,7 +666,7 @@ const insertMany = async (stmt, data, tableDefinition, db) => {
     try {
         await db.query('BEGIN');  // Begin the transaction
 
-        for (const row of data) {"************"
+        for (const row of data) {
             const values = Object.entries(row).map(([key, value]) => {
                 if (key === 'HDI' || key === 'unitValueInUSD') {
                     return parseFloat(value) || null;
