@@ -98,7 +98,8 @@ async function GeneralComparison({ params }) {
             entity1CurrentHealthExpenditurePercentage = entity1CurrentHealthExpenditurePercentage.currentHealthExpenditurePercentage
             entity2CurrentHealthExpenditurePercentage = entity2CurrentHealthExpenditurePercentage.currentHealthExpenditurePercentage
         }
-
+        console.log('entity1CurrentHealthExpenditurePercentage: ', entity1CurrentHealthExpenditurePercentage);
+        console.log('entity2CurrentHealthExpenditurePercentage: ', entity2CurrentHealthExpenditurePercentage);
         // Helper function to determine ISO code parts
         const getISOInfo = (isoCode) => {
             return isoCode.includes('US-')
@@ -109,10 +110,16 @@ async function GeneralComparison({ params }) {
         // Extract the ISO codes
         const entity1ISO = entity1GeneralInfo.ISO3166Code;
         const entity2ISO = entity2GeneralInfo.ISO3166Code;
+        console.log('entity1ISO: ', entity1ISO);
+        console.log('entity2ISO: ', entity2ISO);
 
         // Destructure ISO information using the helper function
         const { country: entity1Country, region: entity1Region } = getISOInfo(entity1ISO);
         const { country: entity2Country, region: entity2Region } = getISOInfo(entity2ISO);
+        console.log('entity1Country: ', entity1Country);
+        console.log('entity1Region: ', entity1Region);
+        console.log('entity2Country: ', entity2Country);
+        console.log('entity2Region: ', entity2Region);
 
         // Fetch weather information sequentially
         const [entity1WeatherInfo, entity2WeatherInfo] = await fetchWeatherInfoSequentially(
@@ -120,7 +127,13 @@ async function GeneralComparison({ params }) {
             entity2GeneralInfo.capitalCity, entity2Country, entity2Region
         );
 
+        console.log('entity1WeatherInfo: ', entity1WeatherInfo);
+        console.log('entity2WeatherInfo: ', entity2WeatherInfo);
+
         const { timeDifference, aheadOrBehind } = calculateTimeDifference(entity1WeatherInfo, entity2WeatherInfo);
+
+        console.log('timeDifference: ', timeDifference);
+        console.log('aheadOrBehind: ', aheadOrBehind);
 
         const formattedDate = getFormattedDate()
 
