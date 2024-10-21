@@ -82,6 +82,8 @@ async function CostComparison({ params }) {
       isSlug2Country ? fetchData(entity2, allCountries, fetchCurrencyInfo) : Promise.resolve(null)
     ])
     console.log('entity1CostInfo: ', entity1CostInfo);
+    console.log('entity1CurrencyInfo: ', entity1CurrencyInfo);
+    console.log('entity2CurrencyInfo: ', entity2CurrencyInfo);
 
     const totalCost = obj => Object.values(obj)
       .slice(2)
