@@ -80,7 +80,7 @@ async function GeneralComparison({ params }) {
     const value2 = isSlug2Country ? 'country' : 'state'
     console.log('value1: ', value1);
     console.log('value2: ', value2);
-    
+
     const demo1GeneralInfo = await fetchCountryGeneralInfo(entity1)
     console.log('demo1GeneralInfo: ', demo1GeneralInfo);
 
@@ -184,7 +184,7 @@ const PageTitle = ({ entity1, entity2 }) => (
 const PublishInfo = ({ formattedDate }) => (
     <>
         <div className="published">
-            <p><b>Published: </b> Tuesday, 15th October 2024</p>
+            <p><b>Published: </b> Tuesday, 22th October 2024</p>
         </div>
         <div className="updated">
             <b>Recently Updated:</b> <span className="updated-timer">{formattedDate}</span>
