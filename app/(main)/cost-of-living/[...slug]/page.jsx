@@ -81,9 +81,6 @@ async function CostComparison({ params }) {
       isSlug1Country ? fetchData(entity1, allCountries, fetchCurrencyInfo) : Promise.resolve(null),
       isSlug2Country ? fetchData(entity2, allCountries, fetchCurrencyInfo) : Promise.resolve(null)
     ])
-    console.log('entity1CostInfo: ', entity1CostInfo);
-    console.log('entity1CurrencyInfo: ', entity1CurrencyInfo);
-    console.log('entity2CurrencyInfo: ', entity2CurrencyInfo);
 
     const totalCost = obj => Object.values(obj)
       .slice(2)
@@ -156,7 +153,7 @@ const PageTitle = ({ entity1, entity2 }) => (
 const PublishInfo = ({ formattedDate }) => (
   <>
     <div className="published">
-      <p><b>Published: </b> Tuesday, 22th October 2024</p>
+      <p><b>Published: </b> Monday, 21th October 2024</p>
     </div>
     <div className="updated">
       <b>Recently Updated:</b> <span className="updated-timer">{formattedDate}</span>

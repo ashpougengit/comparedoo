@@ -280,7 +280,7 @@ async function KnowledgeBase({ params }) {
         <div className="published">
           <p>
             <b>Published: </b>
-            Monday, 7th September 2024
+            Monday, 21th October 2024
           </p>
         </div>
         <div className="updated">

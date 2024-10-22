@@ -13,6 +13,8 @@
 - HDI of Sri Lanka is 0.71
 
 - http://localhost:3000/standard-of-living/czech-republic/georgia-(usa)(while routing through three tabs)
+
+- update fresh modified date for meta data
 ........................................................................
 
 Final Summary:

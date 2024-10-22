@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
 
 async function GeneralComparison({ params }) {
     const { slug } = params
-    console.log('slug: ', slug);
+
     if (slug.length > 2) {
         return <Error404 />
     }
@@ -60,11 +60,8 @@ async function GeneralComparison({ params }) {
     } catch (error) {
         return <Error404 />
     }
-    console.log('decodedSlug1: ', decodedSlug1);
-    console.log('decodedSlug2: ', decodedSlug2);
+
     const [entity1, entity2] = [toTitleCase(decodedSlug1), toTitleCase(decodedSlug2)]
-    console.log('entity1: ', entity1);
-    console.log('entity2: ', entity2);
 
     if (!allEntities.includes(toTitleCase(decodedSlug2))) {
         return <Error404 />
@@ -78,18 +75,15 @@ async function GeneralComparison({ params }) {
     const isSlug2Country = slug.length === 2 && allCountries.includes(entity2);
     const value1 = isSlug1Country ? 'country' : 'state'
     const value2 = isSlug2Country ? 'country' : 'state'
-    console.log('value1: ', value1);
-    console.log('value2: ', value2);
 
     const demo1GeneralInfo = await fetchCountryGeneralInfo(entity1)
-    console.log('demo1GeneralInfo: ', demo1GeneralInfo);
 
     try {
         const [entity1GeneralInfo, entity2GeneralInfo] = await Promise.all([
             fetchData(entity1, isSlug1Country ? allCountries : USStates, isSlug1Country ? fetchCountryGeneralInfo : fetchUSStateGeneralInfo),
             fetchData(entity2, isSlug2Country ? allCountries : USStates, isSlug2Country ? fetchCountryGeneralInfo : fetchUSStateGeneralInfo)
         ]).catch(() => [null, null])
-        console.log('entity1GeneralInfo: ', entity1GeneralInfo);
+
         let entity1CurrentHealthExpenditurePercentage, entity2CurrentHealthExpenditurePercentage
         if (isSlug1Country && isSlug2Country) {
             [entity1CurrentHealthExpenditurePercentage, entity2CurrentHealthExpenditurePercentage] = await Promise.all([
@@ -98,8 +92,7 @@ async function GeneralComparison({ params }) {
             entity1CurrentHealthExpenditurePercentage = entity1CurrentHealthExpenditurePercentage.currentHealthExpenditurePercentage
             entity2CurrentHealthExpenditurePercentage = entity2CurrentHealthExpenditurePercentage.currentHealthExpenditurePercentage
         }
-        console.log('entity1CurrentHealthExpenditurePercentage: ', entity1CurrentHealthExpenditurePercentage);
-        console.log('entity2CurrentHealthExpenditurePercentage: ', entity2CurrentHealthExpenditurePercentage);
+
         // Helper function to determine ISO code parts
         const getISOInfo = (isoCode) => {
             return isoCode.includes('US-')
@@ -110,16 +103,10 @@ async function GeneralComparison({ params }) {
         // Extract the ISO codes
         const entity1ISO = entity1GeneralInfo.ISO3166Code;
         const entity2ISO = entity2GeneralInfo.ISO3166Code;
-        console.log('entity1ISO: ', entity1ISO);
-        console.log('entity2ISO: ', entity2ISO);
 
         // Destructure ISO information using the helper function
         const { country: entity1Country, region: entity1Region } = getISOInfo(entity1ISO);
         const { country: entity2Country, region: entity2Region } = getISOInfo(entity2ISO);
-        console.log('entity1Country: ', entity1Country);
-        console.log('entity1Region: ', entity1Region);
-        console.log('entity2Country: ', entity2Country);
-        console.log('entity2Region: ', entity2Region);
 
         // Fetch weather information sequentially
         const [entity1WeatherInfo, entity2WeatherInfo] = await fetchWeatherInfoSequentially(
@@ -127,13 +114,7 @@ async function GeneralComparison({ params }) {
             entity2GeneralInfo.capitalCity, entity2Country, entity2Region
         );
 
-        console.log('entity1WeatherInfo: ', entity1WeatherInfo);
-        console.log('entity2WeatherInfo: ', entity2WeatherInfo);
-
         const { timeDifference, aheadOrBehind } = calculateTimeDifference(entity1WeatherInfo, entity2WeatherInfo);
-
-        console.log('timeDifference: ', timeDifference);
-        console.log('aheadOrBehind: ', aheadOrBehind);
 
         const formattedDate = getFormattedDate()
 
@@ -184,7 +165,7 @@ const PageTitle = ({ entity1, entity2 }) => (
 const PublishInfo = ({ formattedDate }) => (
     <>
         <div className="published">
-            <p><b>Published: </b> Tuesday, 22th October 2024</p>
+            <p><b>Published: </b> Monday, 21th October 2024</p>
         </div>
         <div className="updated">
             <b>Recently Updated:</b> <span className="updated-timer">{formattedDate}</span>
