@@ -87,6 +87,7 @@ async function GeneralInfoPage({ params }) {
             body: JSON.stringify({ entity1CapitalCity, entity1Country, entity1Region})
         });
         const { weatherInfo } = await weatherResponse.json();
+        console.log('weatherInfoObject: ', weatherInfo);
         const [entity1WeatherInfo] = weatherInfo;
         console.log('weatherInfo: ', entity1WeatherInfo);
 
