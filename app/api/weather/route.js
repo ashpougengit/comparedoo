@@ -1,5 +1,5 @@
+import { Capitalize, toURLFormat } from '@/lib/format/format';
 import moment from 'moment-timezone';
-import { Capitalize, toURLFormat } from '../format/format';
 import { NextResponse } from 'next/server';
 
 const weatherApiKey = process.env.WEATHER_API_KEY;
