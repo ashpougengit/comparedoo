@@ -125,7 +125,6 @@ async function GeneralComparison({ params }) {
         });
         const { weatherInfo } = await weatherResponse.json();
         const [entity1WeatherInfo, entity2WeatherInfo] = weatherInfo;
-        // const { entity1WeatherInfo, entity2WeatherInfo } = await weatherResponse.json();
 
         const { timeDifference, aheadOrBehind } = calculateTimeDifference(entity1WeatherInfo, entity2WeatherInfo);
 

@@ -117,11 +117,11 @@ const fetchWeatherInfo = async (city, countryCode, stateCode = '', retries = 3, 
     }
 };
 
-const fetchWeatherInfoSequentially = async (city1, country1Code, city1Code, city2, country2Code, city2Code) => {
+const fetchWeatherInfoSequentially = async (city1='', country1Code='', city1Code='', city2='', country2Code='', city2Code='') => {
     const entity1WeatherInfo = await fetchWeatherInfo(city1, country1Code, city1Code);
     await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for 2000 mili-second due to openweather api limitation     
     const entity2WeatherInfo = await fetchWeatherInfo(city2, country2Code, city2Code);
-    return [entity1WeatherInfo, entity2WeatherInfo];
+    return [entity1WeatherInfo || null, entity2WeatherInfo || null];
 };
 
 export async function POST(request) {

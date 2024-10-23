@@ -5,7 +5,6 @@ import GeneralInfoCountry from "@/components/pages/general-info/country/GeneralI
 import GeneralInfoUSState from "@/components/pages/general-info/us-state/GeneralInfoUSState";
 import { allCountries } from "@/lib/array-list/allCountriesList";
 import { USStates } from "@/lib/array-list/allUSStates";
-import { fetchWeatherInfo } from "@/lib/weather/weather";
 import { toTitleCase } from "@/lib/format/format";
 import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
 import { checkCountry, decodeAndValidateSlugs, fetchData, getJsonLd } from "@/lib/helper";
@@ -75,7 +74,20 @@ async function GeneralInfoPage({ params }) {
         const { country, region } = getISOInfo(generalInfo.ISO3166Code);
 
         // Fetch weather information sequentially
-        const weatherInfo = await fetchWeatherInfo(generalInfo.capitalCity, country, region);
+        // const weatherInfo = await fetchWeatherInfo(generalInfo.capitalCity, country, region);
+
+        const entity1CapitalCity = generalInfo.capitalCity
+        const weatherResponse = await fetch(`${process.env.BASE_URL}/api/weather`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-internal-request': process.env.INTERNAL_API_TOKEN,
+            },
+            cache: 'no-store',
+            body: JSON.stringify({ entity1CapitalCity, entity1Country, entity1Region})
+        });
+        const { weatherInfo } = await weatherResponse.json();
+        const [entity1WeatherInfo] = weatherInfo;
 
         const formattedDate = getFormattedDate();
         const pageType = 'general-information'
@@ -108,7 +120,7 @@ async function GeneralInfoPage({ params }) {
                 />
                 <PageTitle entity={entity1} />
                 <PublishInfo formattedDate={formattedDate} />
-                {renderContent(entity1, generalInfo, weatherInfo, listForLinks)}
+                {renderContent(entity1, generalInfo, entity1WeatherInfo, listForLinks)}
             </>
         );
     } catch (error) {
