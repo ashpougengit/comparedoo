@@ -122,8 +122,9 @@ async function GeneralComparison({ params }) {
             },
             body: JSON.stringify({ entity1CapitalCity, entity1Country, entity1Region, entity2CapitalCity, entity2Country, entity2Region })
         });
-
-        const { entity1WeatherInfo, entity2WeatherInfo } = await weatherResponse.json();
+        const { weatherInfo } = await weatherResponse.json();
+        const [entity1WeatherInfo, entity2WeatherInfo] = weatherInfo;
+        // const { entity1WeatherInfo, entity2WeatherInfo } = await weatherResponse.json();
 
         const { timeDifference, aheadOrBehind } = calculateTimeDifference(entity1WeatherInfo, entity2WeatherInfo);
 
