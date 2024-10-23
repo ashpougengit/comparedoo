@@ -84,7 +84,7 @@ async function GeneralInfoPage({ params }) {
                 'x-internal-request': process.env.INTERNAL_API_TOKEN,
             },
             cache: 'no-store',
-            body: JSON.stringify({ entity1CapitalCity, entity1Country, entity1Region})
+            body: JSON.stringify({ entity1CapitalCity, country, region})
         });
         const { weatherInfo } = await weatherResponse.json();
         console.log('weatherInfoObject: ', weatherInfo);
