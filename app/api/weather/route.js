@@ -15,7 +15,6 @@ const weatherImages = ['clear-sky', 'clouds', 'broken-clouds', 'overcast-clouds'
 // Function to find the most suitable weather image based on the description
 const getWeatherImage = (description) => {
     const formattedDescription = description.toLowerCase().replace(/\s+/g, '-');
-    console.log('description: ', description);
 
     //  Check for an exact match in weatherImages
     let weatherImage = weatherImages.find(image => image === formattedDescription);
