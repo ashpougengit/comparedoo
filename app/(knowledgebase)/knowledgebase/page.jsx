@@ -6,7 +6,7 @@ import {
   countriesUniqueIndicators,
   statesUniqueIndicators,
 } from '@/lib/array-list/indicators';
-import { convertToISODate, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
+import { convertToISODate, datePublished } from '@/lib/date-and-time/dateAndTime';
 import { camelToTitleCase, toTitleCase, toURLFormat } from '@/lib/format/format';
 import { getJsonLd } from '@/lib/helper';
 import Image from 'next/image';

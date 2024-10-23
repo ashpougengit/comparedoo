@@ -9,7 +9,7 @@ import StandardOfLivingUSState from "@/components/pages/standard-of-living/us-st
 import { checkCountry, decodeAndValidateSlugs, fetchData, getJsonLd } from "@/lib/helper";
 import { toTitleCase } from "@/lib/format/format";
 import { fetchCountryStandardInfo, fetchUSStateStandardInfo } from "@/lib/database/fetch";
-import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
+import { convertToISODate, currentYear, datePublished } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
 import Error404 from "@/components/error/Error404";

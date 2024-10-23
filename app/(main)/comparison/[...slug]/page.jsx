@@ -6,11 +6,10 @@ import GeneralComparisonCountries from "@/components/pages/general-comparison/co
 import { USStates } from "@/lib/array-list/allUSStates";
 import GeneralComparisonUSStates from "@/components/pages/general-comparison/us-states/GeneralComparisonUSStates";
 import CountryVsUSStateGeneral from "@/components/pages/general-comparison/country-vs-us-state/CountryVsUSStateGeneral";
-import { fetchWeatherInfoSequentially } from "@/lib/weather/weather";
 import { checkCountry, decodeAndValidateSlugs, fetchData, getJsonLd } from "@/lib/helper";
 import { toTitleCase } from "@/lib/format/format";
 import { fetchCountryGeneralInfo, fetchHealthExpenditurePercentage, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
-import { calculateTimeDifference, convertToISODate, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
+import { calculateTimeDifference, convertToISODate, datePublished } from "@/lib/date-and-time/dateAndTime";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import SearchBox from "@/components/search-box/SearchBox";
 import { allEntities } from "@/lib/array-list/allEntitiesList";

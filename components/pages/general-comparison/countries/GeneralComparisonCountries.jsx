@@ -12,8 +12,7 @@ import ThreeTabs from '@/components/three-tabs/ThreeTabs';
 import CountriesBasicInfoTable from './countries-basic-info-table/CountriesBasicInfoTable';
 import GeographicalFactors from './geographical-factors/GeographicalFactors';
 import LastParagraph from './last-paragraph/LastParagraph';
-import { getFormattedDate } from '@/lib/date-and-time/dateAndTime';
-import { convertLatLongToDecimal } from '@/lib/helper';
+// import { convertLatLongToDecimal } from '@/lib/helper';
 import ComparisonLinks from '@/components/comparison-links/ComparisonLinks';
 import { toURLFormat } from '@/lib/format/format';
 

@@ -1,7 +1,7 @@
 import PrivacyPolicyContent from '@/components/pages/site-info/privacy-policy/PrivacyPolicyContent'
 import SearchBox from '@/components/search-box/SearchBox'
 import { getCountryByIP } from '@/lib/array-list/allCountriesList'
-import { convertToISODate, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime'
+import { convertToISODate, datePublished } from '@/lib/date-and-time/dateAndTime'
 import { getJsonLd } from '@/lib/helper'
 import Script from 'next/script'
 

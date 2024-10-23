@@ -6,7 +6,7 @@ import GeneralInfoUSState from "@/components/pages/general-info/us-state/General
 import { allCountries } from "@/lib/array-list/allCountriesList";
 import { USStates } from "@/lib/array-list/allUSStates";
 import { toTitleCase } from "@/lib/format/format";
-import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
+import { convertToISODate, currentYear, datePublished } from "@/lib/date-and-time/dateAndTime";
 import { checkCountry, decodeAndValidateSlugs, fetchData, getJsonLd } from "@/lib/helper";
 import { fetchCountryGeneralInfo, fetchUSStateGeneralInfo } from "@/lib/database/fetch";
 import { getListForLinks } from "@/lib/array-list/randomList";

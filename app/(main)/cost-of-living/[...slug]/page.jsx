@@ -10,7 +10,7 @@ import { allCountries } from "@/lib/array-list/allCountriesList";
 import { USStates } from "@/lib/array-list/allUSStates";
 import { getListForLinks } from "@/lib/array-list/randomList";
 import { fetchCountryCostInfo, fetchCurrencyInfo, fetchPropertyAndIncomeTaxInfo, fetchUSStateCostInfo } from "@/lib/database/fetch";
-import { convertToISODate, currentYear, datePublished, getFormattedDate } from "@/lib/date-and-time/dateAndTime";
+import { convertToISODate, currentYear, datePublished } from "@/lib/date-and-time/dateAndTime";
 import { toTitleCase } from "@/lib/format/format";
 import { checkCountry, decodeAndValidateSlugs, fetchData, getJsonLd } from "@/lib/helper";
 import Script from "next/script";
