@@ -120,6 +120,7 @@ async function GeneralComparison({ params }) {
                 'Content-Type': 'application/json',
                 'x-internal-request': process.env.INTERNAL_API_TOKEN,
             },
+            cache: 'no-store',
             body: JSON.stringify({ entity1CapitalCity, entity1Country, entity1Region, entity2CapitalCity, entity2Country, entity2Region })
         });
         const { weatherInfo } = await weatherResponse.json();
