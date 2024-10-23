@@ -5,7 +5,7 @@ import InterestingFactsAntarctica from '@/components/pages/continents/antarctica
 import MapAndDescriptionAntarctica from '@/components/pages/continents/antarctica/MapAndDescriptionAntarctica'
 import SearchBox from '@/components/search-box/SearchBox';
 import { getCountryByIP } from '@/lib/array-list/allCountriesList';
-import { convertToISODate, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
+import { convertToISODate, datePublished } from '@/lib/date-and-time/dateAndTime';
 import { getJsonLd } from '@/lib/helper';
 import Script from 'next/script';
 
@@ -21,12 +21,18 @@ export async function generateMetadata() {
 }
 
 async function Antarctica() {
-    const formattedDate = getFormattedDate()
-    const userCountry = await getCountryByIP()
+    const dateResponse = await fetch(`${process.env.BASE_URL}/api/date`, {
+        headers: {
+            'x-internal-request': process.env.INTERNAL_API_TOKEN
+        },
+        cache: 'no-store'
+    });
+    const { formattedDate } = await dateResponse.json();
 
     const dateModified = convertToISODate(formattedDate)
-
     const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+
+    const userCountry = await getCountryByIP()
 
     return (
         <>

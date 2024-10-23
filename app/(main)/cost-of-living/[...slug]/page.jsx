@@ -99,7 +99,13 @@ async function CostComparison({ params }) {
       fetchPropertyAndIncomeTaxInfo(location2Type, entity2)
     ])
 
-    const formattedDate = getFormattedDate();
+    const dateResponse = await fetch(`${process.env.BASE_URL}/api/date`, {
+      headers: {
+        'x-internal-request': process.env.INTERNAL_API_TOKEN
+      },
+      cache: 'no-store'
+    });
+    const { formattedDate } = await dateResponse.json();
 
     const pageType = 'cost-of-living'
     const listForLinks = getListForLinks(slug, isSlug1Country, isSlug2Country, pageType)

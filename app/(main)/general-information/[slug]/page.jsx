@@ -73,9 +73,6 @@ async function GeneralInfoPage({ params }) {
         // Destructure ISO information using the helper function
         const { country, region } = getISOInfo(generalInfo.ISO3166Code);
 
-        // Fetch weather information sequentially
-        // const weatherInfo = await fetchWeatherInfo(generalInfo.capitalCity, country, region);
-
         const entity1CapitalCity = generalInfo.capitalCity
         const weatherResponse = await fetch(`${process.env.BASE_URL}/api/weather`, {
             method: 'POST',
@@ -84,14 +81,19 @@ async function GeneralInfoPage({ params }) {
                 'x-internal-request': process.env.INTERNAL_API_TOKEN,
             },
             cache: 'no-store',
-            body: JSON.stringify({ entity1CapitalCity, country, region})
+            body: JSON.stringify({ entity1CapitalCity, country, region })
         });
         const { weatherInfo } = await weatherResponse.json();
-        console.log('weatherInfoObject: ', weatherInfo);
         const [entity1WeatherInfo] = weatherInfo;
-        console.log('weatherInfo: ', entity1WeatherInfo);
 
-        const formattedDate = getFormattedDate();
+        const dateResponse = await fetch(`${process.env.BASE_URL}/api/date`, {
+            headers: {
+                'x-internal-request': process.env.INTERNAL_API_TOKEN
+            },
+            cache: 'no-store'
+        });
+        const { formattedDate } = await dateResponse.json();
+        
         const pageType = 'general-information'
         const listForLinks = getListForLinks(slugArr, isSlug1Country, null, pageType)
 

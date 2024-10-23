@@ -18,8 +18,7 @@ import {
 import {
   convertToISODate,
   currentYear,
-  datePublished,
-  getFormattedDate,
+  datePublished
 } from '@/lib/date-and-time/dateAndTime';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -238,7 +237,13 @@ async function KnowledgeBase({ params }) {
       isCountry
     );
 
-    const formattedDate = getFormattedDate();
+    const dateResponse = await fetch(`${process.env.BASE_URL}/api/date`, {
+      headers: {
+        'x-internal-request': process.env.INTERNAL_API_TOKEN
+      },
+      cache: 'no-store'
+    });
+    const { formattedDate } = await dateResponse.json();
 
     const userCountry = await getCountryByIP();
 

@@ -107,7 +107,13 @@ async function StandardComparison({ params }) {
             betterOrLesser = entity1Total > entity2Total ? 'better' : 'lesser'
         }
 
-        const formattedDate = getFormattedDate();
+        const dateResponse = await fetch(`${process.env.BASE_URL}/api/date`, {
+            headers: {
+                'x-internal-request': process.env.INTERNAL_API_TOKEN
+            },
+            cache: 'no-store'
+        });
+        const { formattedDate } = await dateResponse.json();
 
         const pageType = 'standard-of-living'
         const listForLinks = getListForLinks(slug, isSlug1Country, isSlug2Country, pageType)

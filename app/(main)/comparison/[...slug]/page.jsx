@@ -106,12 +106,6 @@ async function GeneralComparison({ params }) {
         const { country: entity1Country, region: entity1Region } = getISOInfo(entity1ISO);
         const { country: entity2Country, region: entity2Region } = getISOInfo(entity2ISO);
 
-        // Fetch weather information sequentially
-        // const [entity1WeatherInfo, entity2WeatherInfo] = await fetchWeatherInfoSequentially(
-        //     entity1GeneralInfo.capitalCity, entity1Country, entity1Region,
-        //     entity2GeneralInfo.capitalCity, entity2Country, entity2Region
-        // );
-
         const entity1CapitalCity = entity1GeneralInfo.capitalCity
         const entity2CapitalCity = entity2GeneralInfo.capitalCity
         const weatherResponse = await fetch(`${process.env.BASE_URL}/api/weather`, {
@@ -128,7 +122,13 @@ async function GeneralComparison({ params }) {
 
         const { timeDifference, aheadOrBehind } = calculateTimeDifference(entity1WeatherInfo, entity2WeatherInfo);
 
-        const formattedDate = getFormattedDate()
+        const dateResponse = await fetch(`${process.env.BASE_URL}/api/date`, {
+            headers: {
+                'x-internal-request': process.env.INTERNAL_API_TOKEN
+            },
+            cache: 'no-store'
+        });
+        const { formattedDate } = await dateResponse.json();
 
         const pageType = 'comparison'
         const listForLinks = getListForLinks(slug, isSlug1Country, isSlug2Country, pageType)
@@ -152,8 +152,6 @@ async function GeneralComparison({ params }) {
                 <PageTitle entity1={entity1} entity2={entity2} />
                 <PublishInfo formattedDate={formattedDate} />
                 {renderContent({ slug, entity1, entity2, entity1GeneralInfo, entity2GeneralInfo, entity1WeatherInfo, entity2WeatherInfo, timeDifference, aheadOrBehind, entity1CurrentHealthExpenditurePercentage, entity2CurrentHealthExpenditurePercentage, value1, value2, listForLinks })}
-
-
             </>
         )
 

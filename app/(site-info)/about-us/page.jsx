@@ -17,12 +17,17 @@ export async function generateMetadata() {
 }
 
 async function AboutUs() {
-    const formattedDate = getFormattedDate()
-    const userCountry = await getCountryByIP()
-
-    const dateModified = convertToISODate(formattedDate)
-
+    const dateResponse = await fetch(`${process.env.BASE_URL}/api/date`, {
+        headers: {
+            'x-internal-request': process.env.INTERNAL_API_TOKEN
+        },
+        cache: 'no-store'
+    });
+    const { formattedDate } = await dateResponse.json();   
+    const dateModified = convertToISODate(formattedDate)    
     const jsonLd = getJsonLd(title, datePublished, dateModified, description)
+    
+    const userCountry = await getCountryByIP()
 
     return (
         <>

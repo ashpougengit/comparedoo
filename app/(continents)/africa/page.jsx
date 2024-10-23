@@ -3,7 +3,7 @@ import CountriesListAfrica from '@/components/pages/continents/africa/CountriesL
 import MapAndDescriptionAfrica from '@/components/pages/continents/africa/MapAndDescriptionAfrica'
 import SearchBox from '@/components/search-box/SearchBox';
 import { getCountryByIP } from '@/lib/array-list/allCountriesList';
-import { convertToISODate, currentYear, datePublished, getFormattedDate } from '@/lib/date-and-time/dateAndTime';
+import { convertToISODate, currentYear, datePublished } from '@/lib/date-and-time/dateAndTime';
 import { getJsonLd } from '@/lib/helper';
 import Script from 'next/script';
 
@@ -26,7 +26,6 @@ async function Africa() {
     cache: 'no-store'
   });
   const { formattedDate } = await dateResponse.json(); 
-  // const formattedDate = getFormattedDate()
 
   const dateModified = convertToISODate(formattedDate)
   const jsonLd = getJsonLd(title, datePublished, dateModified, description)

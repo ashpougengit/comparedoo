@@ -94,9 +94,10 @@ export function chunkArray(array, size) {
   }
   return chunked;
 }
+
 ///////////////////////////////////////
-// Base URL
-const baseUrl = 'https://comparedoo.com'; // change base url along with http
+
+const baseUrl = process.env.BASE_URL;
 
 // Static routes to include in the sitemap
 const continents = ['africa', 'antarctica', 'asia', 'europe', 'north-america', 'oceania', 'south-america'];
