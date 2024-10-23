@@ -76,8 +76,6 @@ async function GeneralComparison({ params }) {
     const value1 = isSlug1Country ? 'country' : 'state'
     const value2 = isSlug2Country ? 'country' : 'state'
 
-    const demo1GeneralInfo = await fetchCountryGeneralInfo(entity1)
-
     try {
         const [entity1GeneralInfo, entity2GeneralInfo] = await Promise.all([
             fetchData(entity1, isSlug1Country ? allCountries : USStates, isSlug1Country ? fetchCountryGeneralInfo : fetchUSStateGeneralInfo),
@@ -109,10 +107,23 @@ async function GeneralComparison({ params }) {
         const { country: entity2Country, region: entity2Region } = getISOInfo(entity2ISO);
 
         // Fetch weather information sequentially
-        const [entity1WeatherInfo, entity2WeatherInfo] = await fetchWeatherInfoSequentially(
-            entity1GeneralInfo.capitalCity, entity1Country, entity1Region,
-            entity2GeneralInfo.capitalCity, entity2Country, entity2Region
-        );
+        // const [entity1WeatherInfo, entity2WeatherInfo] = await fetchWeatherInfoSequentially(
+        //     entity1GeneralInfo.capitalCity, entity1Country, entity1Region,
+        //     entity2GeneralInfo.capitalCity, entity2Country, entity2Region
+        // );
+
+        const entity1CapitalCity = entity1GeneralInfo.capitalCity
+        const entity2CapitalCity = entity2GeneralInfo.capitalCity
+        const weatherResponse = await fetch(`${process.env.BASE_URL}/api/weather`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-internal-request': process.env.INTERNAL_API_TOKEN,
+            },
+            body: JSON.stringify({ entity1CapitalCity, entity1Country, entity1Region, entity2CapitalCity, entity2Country, entity2Region })
+        });
+
+        const { entity1WeatherInfo, entity2WeatherInfo } = await weatherResponse.json();
 
         const { timeDifference, aheadOrBehind } = calculateTimeDifference(entity1WeatherInfo, entity2WeatherInfo);
 
