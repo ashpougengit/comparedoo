@@ -88,6 +88,7 @@ async function GeneralInfoPage({ params }) {
         });
         const { weatherInfo } = await weatherResponse.json();
         const [entity1WeatherInfo] = weatherInfo;
+        console.log('weatherInfo: ', entity1WeatherInfo);
 
         const formattedDate = getFormattedDate();
         const pageType = 'general-information'
