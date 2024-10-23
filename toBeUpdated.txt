@@ -18,6 +18,8 @@
 
 - Mist Visual representation of Mist in New Delhi(weather image)
   Haze Visual representation of Haze in New Delhi
+
+- pictorial representation of big size map of nepal
 ........................................................................
 
 Final Summary:
