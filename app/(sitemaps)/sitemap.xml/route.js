@@ -168,6 +168,7 @@ export async function GET(request) {
       {
         headers: {
           'Content-Type': 'application/xml',
+          'Cache-Control': 'no-store',
         },
       }
     );
@@ -196,6 +197,7 @@ export async function GET(request) {
         {
           headers: {
             'Content-Type': 'application/xml',
+            'Cache-Control': 'no-store',
           },
         }
       );
